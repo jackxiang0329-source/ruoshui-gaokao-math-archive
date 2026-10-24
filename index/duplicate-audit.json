@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "policy": "A group is not merged merely because its duplicate_group is populated. Only confirmed_same_problem supports eventual logical deduplication, and provenance records remain intact.",
+  "summary": {
+    "groups": 21,
+    "confirmed_same_problem": 6,
+    "confirmed_variant": 1,
+    "unverified": 14,
+    "grouped_source_records": 42
+  },
+  "groups": [
+    {
+      "duplicate_group": "2010-liaoning-variant",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2010-liaoning_science-q21",
+        "2010-liaoning_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_science.tex#L590",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_liberal.tex#L491"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2010-newcurriculum-derivative-variant",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2010-new_curriculum_science-q21",
+        "2010-new_curriculum_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/new_curriculum_science.tex#L691",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/new_curriculum_liberal.tex#L559"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2010-shaanxi-common",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2010-shaanxi_science-q23",
+        "2010-shaanxi_liberal-q23"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2010-shandong-variant",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2010-shandong_science-q22",
+        "2010-shandong_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shandong_science.tex#L603",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shandong_liberal.tex#L528"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2011-anhui-common",
+      "status": "confirmed_same_problem",
+      "n_records": 2,
+      "member_ids": [
+        "2011-anhui_science-q16",
+        "2011-anhui_liberal-q18"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/anhui_science.tex#L362",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/anhui_liberal.tex#L447"
+      ],
+      "evidence": "文理卷 f(x)=e^x/(1+ax²)、两小问的数学要求均相同；已完成共同独立数学证明"
+    },
+    {
+      "duplicate_group": "2011-newcurriculum-derivative-common",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2011-new_curriculum_science-q21",
+        "2011-new_curriculum_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex#L583",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex#L473"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2011-shaanxi-function-common",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2011-shaanxi_science-q23",
+        "2011-shaanxi_liberal-q23"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L605",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L642"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2011-shaanxi-tangent-common",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2011-shaanxi_science-q21",
+        "2011-shaanxi_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L521",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L538"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2012-beijing-derivative-variant",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2012-beijing_science-q18",
+        "2012-beijing_liberal-q18"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_science.tex#L482",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_liberal.tex#L378"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2012-guangdong-variant",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2012-guangdong_science-q21",
+        "2012-guangdong_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/guangdong_science.tex#L375",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/guangdong_liberal.tex#L594"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2012-shaanxi-common",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2012-shaanxi_science-q23",
+        "2012-shaanxi_liberal-q23"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_science.tex#L584",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_liberal.tex#L410"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2012-shandong-common",
+      "status": "confirmed_variant",
+      "n_records": 2,
+      "member_ids": [
+        "2012-shandong_science-q22",
+        "2012-shandong_liberal-q22"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shandong_science.tex#L751",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shandong_liberal.tex#L446"
+      ],
+      "evidence": "前两问相近，但文科第三问定义 g(x)=x f'(x)，理科第三问定义 g(x)=(x²+x) f'(x)，因此不是相同题目"
+    },
+    {
+      "duplicate_group": "2013-sichuan-common",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2013-sichuan_science-q21",
+        "2013-sichuan_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_science.tex#L595",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_liberal.tex#L484"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2014-anhui-common",
+      "status": "confirmed_same_problem",
+      "n_records": 2,
+      "member_ids": [
+        "2014-anhui_science-q18",
+        "2014-anhui_liberal-q20"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_science.tex#L279",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_liberal.tex#L628"
+      ],
+      "evidence": "文理卷 f(x)=1+(1+a)x−x²−x³、两小问完全对应；文科版本解答末尾存在缺失"
+    },
+    {
+      "duplicate_group": "2014-fujian-common",
+      "status": "confirmed_same_problem",
+      "n_records": 2,
+      "member_ids": [
+        "2014-fujian_science-q20",
+        "2014-fujian_liberal-q22"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/fujian_science.tex#L440",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/fujian_liberal.tex#L398"
+      ],
+      "evidence": "文理卷 f(x)=e^x−ax，三小问相同；仅 LaTeX 间距和指数括号写法不同"
+    },
+    {
+      "duplicate_group": "2014-hubei-common",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2014-hubei_science-q22",
+        "2014-hubei_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_science.tex#L586",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_liberal.tex#L493"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2014-sichuan-common",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2014-sichuan_science-q21",
+        "2014-sichuan_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_science.tex#L840",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_liberal.tex#L442"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2016-national1-derivative-variant",
+      "status": "unverified",
+      "n_records": 2,
+      "member_ids": [
+        "2016-national_paper_1_science-q21",
+        "2016-national_paper_1_liberal-q21"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_science.tex#L633",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_liberal.tex#L400"
+      ],
+      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+    },
+    {
+      "duplicate_group": "2017-beijing-derivative-common",
+      "status": "confirmed_same_problem",
+      "n_records": 2,
+      "member_ids": [
+        "2017-beijing_science-q19",
+        "2017-beijing_liberal-q20"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2017/beijing_science.tex#L486",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2017/beijing_liberal.tex#L389"
+      ],
+      "evidence": "文理卷 f(x)=e^x cos x−x、切线和区间最值两问相同；LaTeX π 的书写略有差异"
+    },
+    {
+      "duplicate_group": "2019-beijing-derivative-common",
+      "status": "confirmed_same_problem",
+      "n_records": 2,
+      "member_ids": [
+        "2019-beijing_science-q19",
+        "2019-beijing_liberal-q20"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/beijing_science.tex#L408",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/beijing_liberal.tex#L372"
+      ],
+      "evidence": "文理卷三次函数切线、区间上下界和最优参数三问相同；符号绝对值写法不同"
+    },
+    {
+      "duplicate_group": "2020-ng-derivative-1",
+      "status": "confirmed_same_problem",
+      "n_records": 2,
+      "member_ids": [
+        "2020-new_gaokao_paper_1-q21",
+        "2020-new_gaokao_paper_2-q22"
+      ],
+      "source_urls": [
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2020/new_gaokao_paper_1.tex#L333",
+        "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2020/new_gaokao_paper_2.tex#L359"
+      ],
+      "evidence": "两份新高考卷的指数对数函数及切线面积、参数范围两问相同；排版符号不同"
+    }
+  ]
+}
