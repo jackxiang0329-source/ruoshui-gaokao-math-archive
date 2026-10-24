@@ -1,9 +1,9 @@
 {
   "date": "2026-10-24",
   "method": "Compare mirror/<id>/path Git blob SHA against fixed upstream commit tree",
-  "full": 4,
+  "full": 6,
   "expected": 7222,
-  "verified": 265,
+  "verified": 539,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -36,9 +36,9 @@
     {
       "id": "gaokao-math-corpus",
       "expected": 207,
-      "verified": 36,
-      "missing": 171,
-      "complete": false
+      "verified": 207,
+      "missing": 0,
+      "complete": true
     },
     {
       "id": "2024-china-gaokao-math",
@@ -71,9 +71,9 @@
     {
       "id": "math-atlas",
       "expected": 110,
-      "verified": 7,
-      "missing": 103,
-      "complete": false
+      "verified": 110,
+      "missing": 0,
+      "complete": true
     },
     {
       "id": "mathex",
@@ -88,5 +88,5 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "Counts are exact SHA matches of real files in mirror/ on main, not submodule pointers. This is partial; binary files and many TeX files still missing."
+  "note": "Physically imported objects only: verify exact upstream Git Blob SHA for each mirror/ path. Full mirror 6/11. Binary files >1MB may be uncopyable through the connector; GitHub Actions runner failed before steps."
 }
