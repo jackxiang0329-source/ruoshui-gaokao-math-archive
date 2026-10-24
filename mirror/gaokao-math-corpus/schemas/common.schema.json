@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/gaokao_math_library/schemas/common.schema.json",
+  "title": "Common Schema Definitions",
+  "$defs": {
+    "item_type": {
+      "enum": [
+        "mcq_single_answer",
+        "mcq_multiple_answers",
+        "fill_blank",
+        "solution"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "needs_review",
+        "approved"
+      ]
+    },
+    "annotation_status": {
+      "enum": [
+        "not_started",
+        "draft",
+        "needs_review",
+        "approved"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
