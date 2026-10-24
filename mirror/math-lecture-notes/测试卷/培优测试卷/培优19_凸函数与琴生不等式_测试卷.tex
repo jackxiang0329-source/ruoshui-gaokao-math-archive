@@ -1,0 +1,194 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·凸函数与琴生不等式}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{（#1 分）}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 培优专题·凸函数与琴生不等式 测试卷}\\[0.5em]
+{\large 总分：150分 \quad 时间：120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题意。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item 函数 $f(x)=x^2$ 在区间 $(-\infty,+\infty)$ 上是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 凸函数
+\item 凹函数
+\item 既凸又凹
+\item 既不凸也不凹
+\end{enumerate}
+
+\item 函数 $f(x)=\ln x$ 在 $(0,+\infty)$ 上是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 凸函数
+\item 凹函数
+\item 既凸又凹
+\item 需要进一步判断
+\end{enumerate}
+
+\item 若 $f(x)$ 在区间 $I$ 上是凸函数，则琴生不等式为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f\left(\dfrac{x_1+x_2+\cdots+x_n}{n}\right)\leq \dfrac{f(x_1)+f(x_2)+\cdots+f(x_n)}{n}$
+\item $f\left(\dfrac{x_1+x_2+\cdots+x_n}{n}\right)\geq \dfrac{f(x_1)+f(x_2)+\cdots+f(x_n)}{n}$
+\item $f(x_1+x_2+\cdots+x_n)\leq f(x_1)+f(x_2)+\cdots+f(x_n)$
+\item $f(x_1 x_2\cdots x_n)\leq f(x_1)f(x_2)\cdots f(x_n)$
+\end{enumerate}
+
+\item 函数 $f(x)=e^x$ 在 $(-\infty,+\infty)$ 上是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 凸函数
+\item 凹函数
+\item 既凸又凹
+\item 非凸非凹
+\end{enumerate}
+
+\item 利用凸函数的性质，可证 AM-GM 不等式的方法是取 $f(x)=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $x^2$（凸函数）
+\item $\ln x$（凹函数）
+\item $e^x$（凸函数）
+\item $\frac{1}{x}$（凸函数，$x>0$）
+\end{enumerate}
+
+\item 函数 $f(x)=|x|$ 是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 凸函数
+\item 凹函数
+\item 既凸又凹
+\item 非凸非凹
+\end{enumerate}
+
+\item 加权琴生不等式：若 $f$ 为凸函数，$\lambda_i>0$，$\sum\lambda_i=1$，则 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f\left(\sum\lambda_i x_i\right)\leq \sum\lambda_i f(x_i)$
+\item $f\left(\sum\lambda_i x_i\right)\geq \sum\lambda_i f(x_i)$
+\item $f\left(\sum\lambda_i x_i\right)= \sum\lambda_i f(x_i)$
+\item 以上均不对
+\end{enumerate}
+
+\item 若 $f''(x)>0$ 在区间 $I$ 上恒成立，则 $f(x)$ 在 $I$ 上是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 凸函数
+\item 凹函数
+\item 需要进一步判断
+\item 可能凸可能凹
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题意，全部选对得5分，部分选对得2分，有选错得0分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 关于凸函数的等价定义，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f$ 在区间 $I$ 上是凸函数当且仅当对任意 $x_1,x_2\in I$，$\lambda\in[0,1]$，有 $f(\lambda x_1+(1-\lambda)x_2)\leq \lambda f(x_1)+(1-\lambda)f(x_2)$
+\item 若 $f$ 二阶可导，则 $f$ 为凸函数当且仅当 $f''(x)\geq 0$
+\item 凸函数的图像上任意两点的连线在图像上方或与图像重合
+\item 凸函数在其定义域内必为单调函数
+\end{enumerate}
+
+\item 利用琴生不等式可以证明的不等式包括 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 算术-几何平均不等式（AM-GM）
+\item 柯西不等式
+\item 幂平均不等式
+\item 调和-几何-算术平均不等式
+\end{enumerate}
+
+\item 关于幂函数 $f(x)=x^p$（$x>0$）的凸凹性，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 当 $p>1$ 或 $p<0$ 时，$f(x)=x^p$ 是凸函数
+\item 当 $0<p<1$ 时，$f(x)=x^p$ 是凹函数
+\item 当 $p=1$ 时，$f(x)=x$ 既凸又凹
+\item 当 $p=2$ 时，$f(x)=x^2$ 是凹函数
+\end{enumerate}
+
+\item 关于凸函数与不等式的联系，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 由 $\ln x$ 是凹函数可得 $\ln\dfrac{x_1+x_2}{2}\geq\dfrac{\ln x_1+\ln x_2}{2}$
+\item 由此可推得 $\dfrac{x_1+x_2}{2}\geq\sqrt{x_1 x_2}$（$x_1,x_2>0$）
+\item 由 $f(x)=x^2$ 的凸性可得 $\left(\dfrac{x_1+x_2}{2}\right)^2\leq\dfrac{x_1^2+x_2^2}{2}$
+\item 凸函数的不等式方法不能推广到多个变量
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 利用 $f(x)=x^2$ 的凸性和琴生不等式，对 $a,b,c\in\mathbb{R}$ 有 $\dfrac{a^2+b^2+c^2}{3}\geq$ \underline{\hspace{3cm}}。\score{5}
+
+\item 利用 $f(x)=-\ln x$ 的凸性（注意 $\ln x$ 是凹函数），由琴生不等式可得对正实数 $a_1,a_2,\ldots,a_n$ 有 $\dfrac{a_1+a_2+\cdots+a_n}{n}\geq$ \underline{\hspace{3cm}}。\score{5}
+
+\item 函数 $f(x)=x\ln x$（$x>0$）的二阶导数 $f''(x)=$ \underline{\hspace{2cm}}，故 $f(x)$ 在 $(0,+\infty)$ 上是 \underline{\hspace{2cm}} 函数。\score{5}
+
+\item 利用 $f(x)=-\sqrt{x}$ 的凸性（$\sqrt{x}$ 是凹函数），由琴生不等式可得对正实数 $a_1,a_2,\ldots,a_n$ 有 $\dfrac{\sqrt{a_1}+\sqrt{a_2}+\cdots+\sqrt{a_n}}{n}\leq$ \underline{\hspace{3cm}}。\score{5}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item （10分）证明：函数 $f(x)=x^p$（$x>0$）当 $p>1$ 时是凸函数，并利用琴生不等式证明：对正实数 $a_1,a_2,\ldots,a_n$，有
+\[\left(\frac{a_1+a_2+\cdots+a_n}{n}\right)^p \leq \frac{a_1^p+a_2^p+\cdots+a_n^p}{n}.\]
+\score{10}
+
+\item （12分）利用凸函数方法证明：对任意正实数 $a,b,c$，有
+\[\frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}\geq \frac{3}{2}.\]
+\score{12}
+
+\item （12分）利用琴生不等式证明幂平均不等式：设 $a_1,a_2,\ldots,a_n>0$，$r>s$，则
+\[\left(\frac{a_1^r+a_2^r+\cdots+a_n^r}{n}\right)^{1/r}\geq \left(\frac{a_1^s+a_2^s+\cdots+a_n^s}{n}\right)^{1/s}.\]
+\score{12}
+
+\item （12分）利用凸函数方法证明：对 $\triangle ABC$，有
+\[\sin A+\sin B+\sin C\leq \frac{3\sqrt{3}}{2}.\]
+（提示：$\sin x$ 在 $(0,\pi)$ 上是凹函数。）
+\score{12}
+
+\item （12分）设 $a_1,a_2,\ldots,a_n$ 为正实数，$p,q>0$，$\dfrac{1}{p}+\dfrac{1}{q}=1$。利用凸函数方法证明赫尔德不等式：
+\[\sum_{i=1}^n a_i b_i \leq \left(\sum_{i=1}^n a_i^p\right)^{1/p}\left(\sum_{i=1}^n b_i^q\right)^{1/q}.\]
+\score{12}
+
+\item （12分）证明加权琴生不等式：设 $f$ 为区间 $I$ 上的凸函数，$\lambda_1,\lambda_2,\ldots,\lambda_n>0$ 且 $\lambda_1+\lambda_2+\cdots+\lambda_n=1$，则对 $x_1,x_2,\ldots,x_n\in I$，有
+\[f(\lambda_1 x_1+\lambda_2 x_2+\cdots+\lambda_n x_n)\leq \lambda_1 f(x_1)+\lambda_2 f(x_2)+\cdots+\lambda_n f(x_n).\]
+并由此推导出普通琴生不等式（取 $\lambda_i=\dfrac{1}{n}$）。\score{12}
+
+\end{enumerate}
+
+\end{document}

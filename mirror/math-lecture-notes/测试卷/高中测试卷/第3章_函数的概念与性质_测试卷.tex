@@ -1,0 +1,236 @@
+% ============================================================
+% 测试卷 — 第3章 函数的概念与性质
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\definecolor{mainblue}{RGB}{41, 98, 168}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{2025-2026学年度·第3章测试卷}}
+\fancyhead[R]{\small\textcolor{mainblue}{数学（必修第一册）}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 第3章\quad 函数的概念与性质\quad 测试卷}\\[6pt]
+{\normalsize 数学（必修第一册）}\\[4pt]
+{\small 考试时间：120分钟\quad 满分：150分}
+\end{center}
+
+\vspace{2pt}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+题号 & 一 & 二 & 三 & 总分 \\ \hline
+得分 & & & & \\ \hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\noindent\textbf{注意事项：}
+\begin{enumerate}[leftmargin=2em]
+  \item 答题前，请在答题卡上填写姓名、班级和考号。
+  \item 选择题请用2B铅笔在答题卡上涂黑对应选项。
+  \item 非选择题请用黑色签字笔在答题卡指定区域作答。
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 一、单项选择题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 一、单项选择题}（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）
+
+\vspace{6pt}
+
+\begin{enumerate}
+\item 函数 $f(x)=\dfrac{1}{\sqrt{x-1}}$ 的定义域为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $[1,+\infty)$ \quad \item $(1,+\infty)$ \quad \item $[0,+\infty)$ \quad \item $(0,+\infty)$
+  \end{enumerate}
+
+\item 下列函数中，与 $y=x$ 相同的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $y=\sqrt{x^2}$ \quad \item $y=(\sqrt{x})^2$ \quad \item $y=\dfrac{x^2}{x}$ \quad \item $y=\sqrt[3]{x^3}$
+  \end{enumerate}
+
+\item 已知 $f(x)=\begin{cases} x^2, & x\geq 0 \\ -x, & x<0 \end{cases}$，则 $f(f(-2))$ 的值为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $4$ \quad \item $-4$ \quad \item $2$ \quad \item $-2$
+  \end{enumerate}
+
+\item 函数 $f(x)=x^2-2x+3$ 在区间 $[0,3]$ 上的值域为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $[2,6]$ \quad \item $[3,6]$ \quad \item $[2,3]$ \quad \item $[1,6]$
+  \end{enumerate}
+
+\item 下列函数中，既是奇函数又在 $(0,+\infty)$ 上单调递增的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $y=x^2$ \quad \item $y=x^3$ \quad \item $y=|x|$ \quad \item $y=\dfrac{1}{x}$
+  \end{enumerate}
+
+\item 已知函数 $f(x)$ 是定义在 $\mathbb{R}$ 上的偶函数，且在 $[0,+\infty)$ 上单调递增，则下列不等式成立的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $f(-3)>f(2)$ \quad \item $f(-2)>f(3)$
+    \item $f(-1)>f(0)$ \quad \item $f(2)<f(-3)$
+  \end{enumerate}
+
+\item 函数 $f(x)=\dfrac{x}{x^2+1}$ 的图象关于（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $x$ 轴对称 \quad \item $y$ 轴对称
+    \item 原点对称 \quad \item 直线 $y=x$ 对称
+  \end{enumerate}
+
+\item 已知函数 $f(x)$ 在 $\mathbb{R}$ 上单调递减，且 $f(2a-1)>f(a+1)$，则 $a$ 的取值范围为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $a<2$ \quad \item $a>2$ \quad \item $a<\dfrac{1}{2}$ \quad \item $a>0$
+  \end{enumerate}
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 二、多项选择题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 二、多项选择题}（本大题共4小题，每小题5分，共20分。全部选对得5分，部分选对得2分，有选错的得0分。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item 下列函数中，是奇函数的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $y=x^3$
+    \item $y=2x+1$
+    \item $y=x+\dfrac{1}{x}$
+    \item $y=x^2\sin x$
+  \end{enumerate}
+
+\item 关于函数 $f(x)=\dfrac{1}{x}$，下列说法正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $f(x)$ 的定义域为 $\{x\mid x\neq 0\}$
+    \item $f(x)$ 是奇函数
+    \item $f(x)$ 在 $(0,+\infty)$ 上单调递减
+    \item $f(x)$ 的值域为 $\mathbb{R}$
+  \end{enumerate}
+
+\item 已知函数 $f(x)$ 是定义在 $\mathbb{R}$ 上的偶函数，当 $x\geq 0$ 时，$f(x)=x^2-2x$，则（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $f(-1)=f(1)$
+    \item $f(-1)=-1$
+    \item $f(x)$ 在 $(-\infty,-1]$ 上单调递减
+    \item $f(x)$ 的最小值为 $-1$
+  \end{enumerate}
+
+\item 下列关于函数单调性的说法正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 若 $f(x)$ 在区间 $[a,b]$ 上单调递增，在 $[b,c]$ 上单调递增，则 $f(x)$ 在 $[a,c]$ 上单调递增
+    \item 若 $f(x)$ 在区间 $[a,b]$ 上单调递增，则 $f(x)$ 在该区间上的最大值为 $f(b)$
+    \item 若 $f(x)$ 是奇函数且在 $(0,+\infty)$ 上单调递增，则 $f(x)$ 在 $(-\infty,0)$ 上也单调递增
+    \item 若 $f(x)$ 在 $[a,b]$ 上的最大值为 $f(a)$，则 $f(x)$ 在 $[a,b]$ 上单调递减
+  \end{enumerate}
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 三、填空题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 三、填空题}（本大题共4小题，每小题5分，共20分。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item 已知 $f(x)=2x-3$，则 $f(2a+1)=$ \underline{\hspace{3cm}}。
+
+\item 函数 $f(x)=\sqrt{4-x^2}$ 的定义域为 \underline{\hspace{3cm}}。
+
+\item 已知 $f(x)$ 是定义在 $\mathbb{R}$ 上的奇函数，且 $f(2)=3$，则 $f(-2)=$ \underline{\hspace{2cm}}。
+
+\item 若函数 $f(x)=x^2+2(a-1)x+2$ 在区间 $(-\infty,4]$ 上单调递减，则实数 $a$ 的取值范围为 \underline{\hspace{3cm}}。
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 四、解答题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 四、解答题}（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item[17.]（本小题10分）\\
+求下列函数的定义域：
+\begin{enumerate}[(1)]
+  \item $f(x)=\dfrac{\sqrt{x+2}}{x-1}$；
+  \item $f(x)=\sqrt{2x+1}+\sqrt{3-x}$。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[18.]（本小题12分）\\
+已知函数 $f(x)=x+\dfrac{1}{x}$。
+\begin{enumerate}[(1)]
+  \item 判断 $f(x)$ 的奇偶性，并证明；
+  \item 证明 $f(x)$ 在区间 $(1,+\infty)$ 上单调递增。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[19.]（本小题12分）\\
+已知函数 $f(x)=\begin{cases} x^2-1, & x\geq 0 \\ 1-x^2, & x<0 \end{cases}$。
+\begin{enumerate}[(1)]
+  \item 求 $f(f(-1))$ 的值；
+  \item 画出函数 $f(x)$ 的大致图象，并写出其值域。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[20.]（本小题12分）\\
+已知函数 $f(x)$ 是定义在 $[-2,2]$ 上的偶函数，且当 $0\leq x\leq 2$ 时，$f(x)=x^2-2x$。
+\begin{enumerate}[(1)]
+  \item 求当 $-2\leq x<0$ 时 $f(x)$ 的解析式；
+  \item 求 $f(x)$ 在 $[-2,2]$ 上的最大值和最小值。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[21.]（本小题12分）\\
+已知 $f(x)$ 是定义在 $(0,+\infty)$ 上的函数，对任意的 $x,y\in(0,+\infty)$，都有 $f(xy)=f(x)+f(y)$，且当 $x>1$ 时，$f(x)>0$。
+\begin{enumerate}[(1)]
+  \item 求 $f(1)$ 的值；
+  \item 证明 $f(x)$ 在 $(0,+\infty)$ 上单调递增。
+\end{enumerate}
+
+\vspace{7cm}
+
+\item[22.]（本小题12分）\\
+已知函数 $f(x)=ax^2+bx+c$（$a>0$）满足 $f(0)=1$，$f(-1)=0$，且对任意 $x\in\mathbb{R}$，$f(x)-x\geq 0$ 恒成立。
+\begin{enumerate}[(1)]
+  \item 求 $a$、$b$、$c$ 的值；
+  \item 设 $g(x)=f(x)-kx$ 在 $[1,+\infty)$ 上的最小值为 $h(k)$，求 $h(k)$ 的表达式。
+\end{enumerate}
+
+\vspace{7cm}
+\end{enumerate}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本试卷仅供教学参考}
+\end{center}
+
+\end{document}

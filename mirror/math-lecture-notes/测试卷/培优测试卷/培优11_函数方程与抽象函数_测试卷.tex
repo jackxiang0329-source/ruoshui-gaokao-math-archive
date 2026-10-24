@@ -1,0 +1,219 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·函数方程与抽象函数}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{(#1分)}}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{培优专题测试卷·函数方程与抽象函数}
+
+\normalsize
+考试时间：120分钟\quad 满分：150分
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{一、单选题（本大题共8小题，每小题5分，共40分。在每小题给出的四个选项中，只有一项是符合题目要求的。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item 设 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x+y) = f(x) + f(y)$ 且 $f(1) = 2$，则 $f(3) = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $4$
+\item $5$
+\item $6$
+\item $8$
+\end{enumerate}
+
+\item 设 $f: \mathbb{R}^+ \to \mathbb{R}^+$ 满足 $f(xy) = f(x) + f(y)$ 且 $f(2) = 1$，则 $f(8) = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $2$
+\item $3$
+\item $4$
+\item $6$
+\end{enumerate}
+
+\item 已知 $f(x)$ 是定义在 $\mathbb{R}$ 上的奇函数，且满足 $f(x+2) = -f(x)$，若 $f(1) = 1$，则 $f(2025) = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $-1$
+\item $0$
+\item $1$
+\item $2$
+\end{enumerate}
+
+\item 设函数 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x+y) = f(x)f(y)$ 且 $f(1) = 2$，则 $\dfrac{f(2)}{f(1)} + \dfrac{f(3)}{f(2)} + \dfrac{f(4)}{f(3)} = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $4$
+\item $6$
+\item $8$
+\item $12$
+\end{enumerate}
+
+\item 已知 $f(x)$ 满足 $f(x) + f\left(\dfrac{x-1}{x}\right) = 1 + x$（$x \neq 0, 1$），则 $f(2) = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{3}{2}$
+\item $\dfrac{5}{2}$
+\item $2$
+\item $\dfrac{7}{2}$
+\end{enumerate}
+
+\item 设 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x+y) + f(x-y) = 2f(x)f(y)$，$f(0) \neq 0$，则 $f(0) = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $0$
+\item $1$
+\item $-1$
+\item $\pm 1$
+\end{enumerate}
+
+\item 已知 $f(x)$ 是定义在 $(0, +\infty)$ 上的函数，满足 $f(xy) = xf(y) + yf(x)$，$f(2) = 1$，则 $f\left(\dfrac{1}{2}\right) = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $-\dfrac{1}{4}$
+\item $-\dfrac{1}{2}$
+\item $\dfrac{1}{4}$
+\item $\dfrac{1}{2}$
+\end{enumerate}
+
+\item 设 $f(x)$ 为定义在 $\mathbb{R}$ 上的函数，满足 $f(x+y) = f(x) + f(y) + xy$，$f(1) = 1$，则 $f(10) = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $45$
+\item $55$
+\item $100$
+\item $110$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{二、多选题（本大题共4小题，每小题5分，共20分。在每小题给出的选项中，有多项符合题目要求。全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item 设 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x+y) = f(x) + f(y)$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f(0) = 0$
+\item $f(-x) = -f(x)$
+\item $f(nx) = nf(x)$（$n \in \mathbb{Z}$）
+\item 若 $f$ 连续，则 $f(x) = kx$（$k$ 为常数）
+\end{enumerate}
+
+\item 已知 $f(x)$ 满足 $f(x+y) = f(x)f(y)$，$f(1) = 2$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f(0) = 1$
+\item $f(x) > 0$ 对所有 $x$ 成立
+\item $f(-1) = \dfrac{1}{2}$
+\item $f(x) = 2^x$
+\end{enumerate}
+
+\item 设 $f: \mathbb{R}^+ \to \mathbb{R}$ 满足 $f(xy) = f(x) + f(y)$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f(1) = 0$
+\item $f\left(\dfrac{1}{x}\right) = -f(x)$
+\item $f(x^n) = nf(x)$
+\item $f(x) = \log_a x$（$a > 0$ 且 $a \neq 1$）
+\end{enumerate}
+
+\item 设 $f(x)$ 是定义在 $\mathbb{R}$ 上的函数，满足 $f(x+T) = f(x)$（$T > 0$），则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f(x)$ 是周期函数
+\item $f(nx)$ 的周期为 $\dfrac{T}{n}$
+\item $f\left(\dfrac{x}{n}\right)$ 的周期为 $nT$
+\item 若 $f$ 还满足 $f(-x) = f(x)$，则 $f$ 的最小正周期不超过 $T$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item 设 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x+y) = f(x) + f(y)$，$f(1) = 3$，则 $f(5) + f(-3) = $ \underline{\hspace{2cm}}。\score{5}
+
+\item 已知 $f(x)$ 满足 $f(x) - 2f\left(\dfrac{1}{x}\right) = x$，则 $f(2) = $ \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $f(x)$ 是定义在 $\mathbb{R}$ 上的偶函数，满足 $f(x+1) = -f(x)$，$f(0) = 2$，则 $f(7.5) = $ \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $f(x)$ 满足 $f(x+y) = f(x) + f(y) + 2xy$，$f(1) = 1$，则 $f(n) = $ \underline{\hspace{3cm}}（$n \in \mathbb{N}^*$）。\score{5}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item （10分）设 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x+y) = f(x) + f(y)$。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$f(0) = 0$，$f(-x) = -f(x)$；
+\item 证明：$f(nx) = nf(x)$ 对所有 $n \in \mathbb{Z}$ 成立；
+\item 若 $f$ 在 $x = 0$ 处连续，证明：$f(x) = f(1) \cdot x$。
+\end{enumerate}
+
+\item （12分）设 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x+y) + f(x-y) = 2f(x)f(y)$，$f(0) \neq 0$。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$f(0) = 1$；
+\item 证明：$f(x)$ 是偶函数；
+\item 若 $f(1) = a$，求 $f(2)$ 和 $f(3)$（用 $a$ 表示）；
+\item 若 $|f(1)| < 1$，证明：$|f(x)| \leqslant 1$ 对所有 $x$ 成立。
+\end{enumerate}
+
+\item （12分）设 $f: \mathbb{R}^+ \to \mathbb{R}$ 满足 $f(xy) = f(x) + f(y)$，$f$ 在 $(0, +\infty)$ 上单调递增。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$f(1) = 0$；
+\item 证明：$f\left(\dfrac{x}{y}\right) = f(x) - f(y)$；
+\item 若 $f(2) = 1$，解不等式 $f(x) + f(x-3) \leqslant 2$。
+\end{enumerate}
+
+\item （12分）设 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x+y) = f(x) + f(y) + xy(x+y)$。
+\begin{enumerate}[label=(\arabic*)]
+\item 设 $g(x) = f(x) - \dfrac{x^3}{3}$，证明：$g(x+y) = g(x) + g(y)$；
+\item 若 $f(1) = 1$，求 $f(x)$ 的表达式（$x \in \mathbb{Q}$）；
+\item 若 $f$ 在 $\mathbb{R}$ 上连续，求 $f(x)$ 的表达式。
+\end{enumerate}
+
+\item （12分）设 $f: \mathbb{R} \to \mathbb{R}$ 满足 $f(x^2 - y^2) = (x - y)[f(x) + f(y)]$。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$f(0) = 0$；
+\item 证明：$f(x)$ 是奇函数；
+\item 证明：$f(x+y) = f(x) + f(y)$；
+\item 若 $f(1) = 1$，求 $f(x)$。
+\end{enumerate}
+
+\item （12分）设 $f: (0, +\infty) \to \mathbb{R}$ 满足：对任意 $x, y > 0$，
+$$f\left(\frac{x+y}{2}\right) \leqslant \frac{f(x) + f(y)}{2}$$
+且 $f(x) \leqslant x$ 对所有 $x > 0$ 成立。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$f$ 是下凸函数；
+\item 证明：$f(x) \leqslant x$ 可以加强为 $f(x) \leqslant \dfrac{x+f(1)}{2}$；
+\item 若 $f(1) = 1$，证明：$f(x) = x$ 对所有 $x > 0$ 成立。
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
