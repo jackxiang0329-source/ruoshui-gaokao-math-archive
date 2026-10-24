@@ -1,0 +1,299 @@
+\section[1977年高考数学试卷(黑龙江)理科]{1977年普通高等学校招生考试（黑龙江卷）\\\Huge{理科数学}}
+
+\begin{questions}
+	\question 解答下列各题:
+	\begin{parts}
+		\part[6] 解方程:$\sqrt{3x+4} = 4$.
+			\begin{solution}
+				\begin{cenum}
+					\item 方程两边平方得:
+					      \begin{equation*}
+						      3x + 4 = 16
+					      \end{equation*}
+					\item 移项整理得
+					      \begin{align*}
+						      3x & = 12 \\
+						      x  & = 4
+					      \end{align*}
+
+				\end{cenum}
+			\end{solution}
+		\part[6] 解不等式:$|x| < 5$.
+			\begin{solution}
+				\begin{math}
+					-5 < x < 5
+				\end{math}
+
+			\end{solution}
+		\part[6] 已知正三角形的外接圆半径为$6\sqrt{3}$cm,求它的边长.
+			\begin{solution}
+				\begin{center}
+					\begin{tikzpicture}[scale=.3]
+						\tkzDefPoints{0/0/O, 6sqrt(3)/0/A}
+						\tkzDefPoint(90:6sqrt(3)){B}
+						\tkzDefPoint(210:6sqrt(3)){C}
+						\tkzDefPoint(330:6sqrt(3)){D}
+						\tkzDefLine[orthogonal=through O](B,C) \tkzGetPoint{x}
+						\tkzInterLL(O,x)(B,C) \tkzGetPoint{E}
+
+						\tkzDrawCircle(O,A)
+						\tkzDrawPolygon(B,C,D)
+						\tkzDrawPoint(O)
+						\tkzLabelPoint[below right](O){$O$}
+						\tkzDrawSegments(B,O C,O O,E)
+
+						\tkzMarkSegment[dim={$6\sqrt{3}$, 16pt, right=6pt}, mark=](B,O)
+						\tkzMarkAngle[size=2](C,B,O)
+						\tkzLabelAngle[pos=3.5](C,B,O){$30^\circ$}
+						\tkzLabelPoint[left](E){$E$}
+						\tkzLabelPoint[above](B){$B$}
+					\end{tikzpicture}
+				\end{center}
+				可以计算出$BE=\cos\ang{30}BO=9$,则正三角形的边长为$18$.
+			\end{solution}
+
+	\end{parts}
+
+	\question 计算下列各题:
+	\begin{parts}
+		\part[6] $\sqrt{m^2 - 2ma + a^2} $
+			\begin{solution}
+				\begin{align*}
+					\sqrt{m^2 - 2ma + a^2} & = \sqrt{(m-a)^2} \\
+					                       & = |m-a|
+				\end{align*}
+			\end{solution}
+
+		\part[6] $\cos\ang{78}\cdot\cos\ang{3} + \cos\ang{12}\cdot\sin\ang{3}$.
+			\begin{solution}
+				\begin{align*}
+					\cos\ang{78} & = \cos(\ang{90} - \ang{12})                           \\
+					             & = \cos\ang{90}\cos\ang{12} + \sin\ang{90}\sin\ang{12} \\
+					             & = \sin\ang{12}
+				\end{align*}
+				代入原式得:
+				\begin{align*}
+					\cos\ang{78}\cdot\cos\ang{3} + \cos\ang{12}\cdot\sin\ang{3}
+					 & = \sin\ang{12}\cos\ang{3} + \cos\ang{12}\sin\ang{3}  \\
+					 & = \sin\ang{15}                                       \\
+					 & = \sin(\ang{45} -\ang{30})                           \\
+					 & = \sin\ang{45}\cos\ang{30} -\cos\ang{45}\sin\ang{30} \\
+					 & = \frac{\sqrt{2}(\sqrt{3}-1)}{4}
+				\end{align*}
+			\end{solution}
+		\part[6] $\arcsin\left(\cos\dfrac\pi6\right)$.
+			\begin{solution}
+				\begin{align*}
+					\arcsin\left(\cos\dfrac\pi6\right) & = \arcsin(\dfrac{\sqrt{3}}2) \\
+					                                   & = \frac{\pi}{3}
+				\end{align*}
+			\end{solution}
+	\end{parts}
+	\question 解下列各题:
+	\begin{parts}
+		\part[8] 解方程: $3^{x+1} - 9^{\frac{x}{2}} = 18$.
+			\begin{solution}
+				\begin{align*}
+					3^{x+1} - 9^{\frac{x}{2}}        & = 18 \\
+					3\cdot 3^x - (3^2)^{\frac{x}{2}} & = 18 \\
+					3^x                              & = 9  \\
+					x                                & = 2
+				\end{align*}
+			\end{solution}
+		\part[8] 求数列$2,4,8,16,\cdots $前十项的和.
+			\begin{solution}
+				\begin{align*}
+					S_n    & = a_1\frac{1-q^n}{1-q}, (q=2, a_1=2) \\
+					S_{10} & = 2\cdot\frac{1-2^{10}}{1-2}         \\
+					       & = 2^{11} - 2                         \\
+					       & = 2046
+				\end{align*}
+			\end{solution}
+	\end{parts}
+
+	\question 解下列各题:
+	\begin{parts}
+		\part[8] 圆锥的高为\qty{6}{\cm},母线和底面半径的夹角为$30^\circ$,求它的侧面积.
+			\begin{solution}
+				根据题目中提供的信息可计算得底面半径为$r = 6\sqrt{3}$,母线的长度为$l = 12$,则侧面积为
+				\begin{equation*}
+					S = \pi r l = \qty[parse-numbers=false]{72\sqrt{3}}{\cm}
+				\end{equation*}
+			\end{solution}
+		\part[8] 求过点$(1,4)$且与直线$2x - 5y + 3 = 0$垂直的直线方程.
+			\begin{solution}
+				直线$2x - 5y + 3 + 0$的斜率$k=\frac25$,则与之垂直的直线的斜率为$-\frac52$.
+
+				设所求直线方程为$y =
+					-\frac52x+b$, 并将点$(1,4)$代入得$b = \frac{13}{2}$.
+				所以直线方程为:$2y + 5x - 13 = 0$.
+			\end{solution}
+	\end{parts}
+
+	\question[8] 如果$\triangle{ABC}$的$\angle{A}$的平分线交$BC$于$D$,交它的外接圆于$E$,那么$AB\cdot AC = AD \cdot AE$.
+	\begin{center}
+		\begin{tikzpicture}
+			\tkzDefPoints{0/0/A, 3/0/B, 2.5/2.5/C}
+			\tkzDefLine[bisector](B,A,C) \tkzGetPoint{x}
+			\tkzDefCircle(A,B,C) \tkzGetPoint{O}
+			\tkzInterLL(A,x)(B,C) \tkzGetPoint{D}
+			\tkzInterLC(A,x)(O,A) \tkzGetSecondPoint{E}
+
+			\tkzDrawPolygon(A,B,C)
+			\tkzDrawCircle(O,A)
+			\tkzDrawSegment(A,E)
+
+			\tkzLabelPoint[left](A){$A$}
+			\tkzLabelPoint[right](B){$B$}
+			\tkzLabelPoint[above](C){$C$}
+			\tkzLabelPoint[above left](D){$D$}
+			\tkzLabelPoint[right](E){$E$}
+
+		\end{tikzpicture}
+	\end{center}
+	\begin{proofsolution}
+		\begin{center}
+			\begin{tikzpicture}
+				\tkzDefPoints{0/0/A, 3/0/B, 2.5/2.5/C}
+				\tkzDefLine[bisector](B,A,C) \tkzGetPoint{x}
+				\tkzDefCircle(A,B,C) \tkzGetPoint{O}
+				\tkzInterLL(A,x)(B,C) \tkzGetPoint{D}
+				\tkzInterLC(A,x)(O,A) \tkzGetSecondPoint{E}
+
+				\tkzDrawPolygon(A,B,C)
+				\tkzDrawCircle(O,A)
+				\tkzDrawSegment(A,E)
+
+				\tkzLabelPoint[left](A){$A$}
+				\tkzLabelPoint[right](B){$B$}
+				\tkzLabelPoint[above](C){$C$}
+				\tkzLabelPoint[above left](D){$D$}
+				\tkzLabelPoint[right](E){$E$}
+
+				\tkzDrawSegments[red, dashed](C,E E,B)
+
+			\end{tikzpicture}
+		\end{center}
+
+		\begin{cenum}
+			\item 作辅助线$CE$和$BE$
+			\item
+			      \begin{align*}
+				       & \because \overset{\frown}{CE}\text{对应圆周角}\angle{CAE}\text{和}\angle{CBE} \\
+				       & \therefore \angle{CAE} = \angle{CBE}                                    \\
+				       & \because \angle{CDA} = \angle{EDB}                                      \\
+				       & \therefore \triangle{CAD} \sim \triangle{EBD}
+			      \end{align*}
+			\item
+			      \begin{align*}
+				       & \because\overset{\frown}{BE}对应圆周角\angle{BAE} = \angle{BCE} \\
+				       & \therefore\angle{BAE} = \angle{EAC}                        \\
+				       & \because \angle{BAE} = \angle{BAC}                         \\
+				       & \therefore\overset{\frown}{CE} = \overset{\frown}{BE}      \\
+				       & \therefore\angle{BCE} = \angle{CBE}                        \\
+				       & \therefore\angle{EBD} = \angle{BAE}                        \\
+				       & \because\angle{BEA} = \angle{AEB}                          \\
+				       & \therefore\triangle{EBD} \sim \triangle{EAB}               \\
+				       & \therefore\triangle{EAB} \sim \triangle{CAD}               \\
+				       & \therefore\dfrac{AC}{AE}={AD}{AB}                          \\
+				       & \therefore AC\cdot AB = AD\cdot AE
+			      \end{align*}
+		\end{cenum}
+	\end{proofsolution}
+	\question[8]
+	前进大队响应毛主席关于\enquote{绿化祖国}的伟大号召,1975年造林$200$亩,又知1975年到1977年三年内共造林$728$亩,求后两年造林面积的年平均增长率是多少？
+	\begin{solution}
+		设年平均增长率为$q$,根据等比数列求和公式
+		\begin{equation*}
+			S_n = a_0\frac{1-q^n}{1-q} (a_0 = 200, n = 3, S_3 = 728)
+		\end{equation*}
+
+		代入得:
+		\begin{equation*}
+			728 = 200 \frac{1-q^3}{1-q} = 200 \frac{(1-q)(1 + q + q^2)}{1-q} = 200(1 + q + q^2)
+		\end{equation*}
+		化简得:
+		\begin{align*}
+			25q^2 + 25q - 66  & = 0 \\
+			(5q - 6)(5q + 11) & = 0 \\
+		\end{align*}
+		因为$q > 0$所以$q=1.2$,故年平均增长率为\qty{20}{\percent}.
+	\end{solution}
+
+	\question[8] 解方程:
+	\begin{math}
+		\lg(2^x + 2x - 16) = x(1-\lg5)
+	\end{math}.
+	\begin{solution}
+		\begin{align*}
+			\lg(2^x + 2x - 16) & = x(\lg10 - \lg5) \\
+			                   & = x\lg2           \\
+			                   & = \lg2^x          \\
+			2^x + 2x - 16      & = 2^x             \\
+			2x - 16            & = 0               \\
+			x                  & = 8
+		\end{align*}
+	\end{solution}
+
+	\question[8] 已知三角形的三边成等差数列,周长为$80$cm,面积为$54$cm$^2$,求三边的长.
+	\begin{solution}
+		由三边成等差数列,可得中间长度的边长为$12$cm,设另外两边分别为$(12+x)$cm和$(12-x)$cm.由海伦公式可得面积为:
+		\begin{equation*}
+			S = \sqrt{p(p-a)(p-b)(p-c)} = 54\; \text{其中} p = \frac{36}{2} = 18
+		\end{equation*}
+		代入可得:
+		\begin{align*}
+			S = \sqrt{18(18 - 12 + x)(18 - 12 - x)(18 - 12)} & = 54           \\
+			\sqrt{18\cdot 6 (36-x^2)}                        & = 54           \\
+			18\cdot 6 (36- x^2)                              & = 54^2         \\
+			x^2                                              & = 9            \\
+			x                                                & = \qty{3}{\cm}
+		\end{align*}
+		则三条边分别是\qty{9}{\cm}, \qty{12}{\cm}和\qty{15}{\cm}.
+	\end{solution}
+
+	\begin{center}
+		\large\bf 附加题
+	\end{center}
+
+	\question
+	如图,$AP$表示发动机的连杆,$OA$表示它的曲柄.当$A$在圆上作圆周运动时,$P$在$x$轴上作直线运动,求$P$点的横坐标.为什么当$\alpha$是直角时,$\angle{P}$是最大？
+
+	\begin{center}
+		\begin{tikzpicture}
+			\tkzInit[xmax=4, xmin=0]
+			\tkzDrawX
+			\tkzDefPoints{0/0/O, 3/0/P, 1/1.5/A}
+
+			\tkzDrawCircle(O,A)
+			\tkzDrawSegment(O,A)
+			\tkzMarkAngle[size=.5](P,O,A)
+			\tkzLabelAngle(P,O,A){$\alpha$}
+
+			\tkzDrawSegment(A,P)
+			\tkzLabelSegment[above](A,P){$l$}
+			\tkzLabelSegment[left](O,A){$R$}
+
+			\tkzLabelPoint(O){$O$}
+			\tkzLabelPoint(P){$P$}
+			\tkzLabelPoint[above](A){$A$}
+		\end{tikzpicture}
+	\end{center}
+	\begin{solution}
+		根据三角关系有$\sin\alpha = \dfrac{l}{OP}$,所以有$OP =
+			\dfrac{l}{\sin\alpha}$,即$P$点的横坐标为$\dfrac{l}{\sin\alpha}$
+
+		另有$\sin\angle{P} = \dfrac{R}{OP} =
+			\dfrac{R\sin\alpha}{l}$,可以得出在$\alpha$为直角时$\sin\angle{P}$有最大值,即$\angle{P}$有最大值.
+	\end{solution}
+	\question 求曲线$y=\sin{x}$在$[0,\pi]$上的曲边梯形绕$x$轴旋转一周所形成的旋转体的体积.
+	\begin{solution}
+		\begin{align*}
+			V & = \int_0^{\pi}\pi \sin^2{x}\ud{x}                              \\
+			  & = \pi\int_0^{\pi}\frac{1-\cos{2x}}{2}\ud{x}                    \\
+			  & = \pi(\left[\frac{x}{2}\right]_0^{\pi} - \frac12[\sin(2x)]_0^{\pi}) \\
+			  & = \frac{\pi^2}{2}
+		\end{align*}
+	\end{solution}
+
+\end{questions}

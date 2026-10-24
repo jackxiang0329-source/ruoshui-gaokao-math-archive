@@ -1,0 +1,750 @@
+\section[1977年高考数学试卷(福建卷)理科]{1977年普通高等学校招生考试(福建卷)\\\Huge{理科数学}}
+
+\begin{questions}
+	\question
+	\begin{parts}
+		\part[4] 计算: \( 5 - 3 \times \left[(-3\frac38)^{-\frac13} + 1031 \times (0.25 - 2^{-2})\right] \div 9^0 \).
+			\begin{solution}
+				\begin{align*}
+					\text{原式} & = 5 - 3 \times \left[ (-3\frac38)^{-\frac13} + 1031 \times 0 \right] \div 1 \\
+					            & = 5 - 3 \times (-\frac{8}{27})^{\frac13}                                    \\
+					            & = 5 - \sqrt[3]{3^3 \times (-\frac{8}{27}})                                  \\
+					            & = 5 + 2                                                                     \\
+					            & = 7
+				\end{align*}
+			\end{solution}
+
+		\part[4] \( y = \dfrac{\cos{160^\circ} - \cos{170^\circ}}{\tan{155^\circ}} \)的值是正的还是负的？为什么？
+			\begin{solution}
+				\begin{center}
+					\begin{tikzpicture}
+						\begin{axis}[
+								xmin=-1, xmax=2.5*pi,
+								ymin=-2, ymax=2,
+								legend entries={$\cos{x}$, $\tan{x}$},
+								title=$\cos{x}$和$\tan{x}$的函数图像,
+								title style={anchor=north, yshift=-6cm}
+							]
+							\addplot[domain=0:2*pi, color=blue, thick]{cos(deg(x))};
+							\addplot[domain=0:2*pi, color=red, thick]{tan(deg(x))};
+						\end{axis}
+					\end{tikzpicture}
+				\end{center}
+
+				\begin{enumerate}[label=\protect\circled{\arabic*}]
+					\item 余弦函数在第二象限单调递减,所以$\cos\ang{160} - \cos\ang{170} > 0$;
+					\item 正切函数在第二象限小于零,所以$\tan\ang{155} < 0$;
+					\item 综上,$y<0$.
+				\end{enumerate}
+			\end{solution}
+
+		\part[4] 求函数 \( y = \dfrac{\lg(2-x)}{\sqrt{x-1}} \)的定义域.
+			\begin{solution}
+				根据题意有
+				\begin{math}
+					\begin{cases}
+						2 - x > 0 \\
+						x - 1 > 0,
+					\end{cases}
+				\end{math}
+				则函数的定义域为 \( 1 < x < 2 \)
+			\end{solution}
+		\part[4]
+			\begin{minipage}[t]{0.5\textwidth}
+				如图,在梯形 \( ABCD \)中, \( DM = MP = PA, MN \parallel PQ \parallel AB \), \( DC = 2\text{cm}, AB = 3.5\text{cm} \),求 \( MN \)和 \( PQ \)的长.
+			\end{minipage}\hspace{5em}
+			\begin{tikzpicture}[baseline=(current bounding box.center)]
+				\tkzDefPoints{0/0/A, 3/0/B, 0.5/3/D, 2.5/3/C}
+				\tkzDefPointOnLine[pos={1/3}](A,D)\tkzGetPoint{P}
+				\tkzDefPointOnLine[pos={2/3}](A,D)\tkzGetPoint{M}
+				\tkzDefPointOnLine[pos={1/3}](C,B)\tkzGetPoint{N}
+				\tkzDefPointOnLine[pos={2/3}](C,B)\tkzGetPoint{Q}
+
+				\tkzDrawPolygon(A,B,C,D)
+				\tkzDrawSegments(P,Q M,N)
+
+				\tkzLabelSegment[above](D,C){$2$cm}
+				\tkzLabelSegment[below](A,B){$3.5$cm}
+
+				\tkzLabelPoints[left](D,M,P,A)
+				\tkzLabelPoints[right](C,N,Q,B)
+
+			\end{tikzpicture}
+
+			\begin{solution}
+				根据梯形的性质有:
+				\begin{equation*}
+					\begin{cases}
+						DC + PQ = 2MN \\
+						MN + AB = 2PQ
+					\end{cases}
+				\end{equation*}
+				计算得:
+				\begin{equation*}
+					MN = 2.5\text{cm}, PQ = 3\text{cm}.
+				\end{equation*}
+			\end{solution}
+		\part[4] 已经 \( \lg3=0.4771, \lg{x}=-3.5229 \),求 \( x \).
+			\begin{solution}
+				\begin{align*}
+					 & \because \lg3                              = 0.4771                   \\
+					 & \therefore \lg{\frac{3}{10}}               = \lg3 - \lg10 = -0.5229   \\
+					 & \text{另有} \lg0.001                       = -3                       \\
+					 & \text{则} \lg(0.001 \times \frac{3}{10} )  = -3 + (-0.5229) = -3.5229 \\
+					 & \therefore x = \frac{3}{10000}
+				\end{align*}
+			\end{solution}
+		\part[4] 求 \(\displaystyle \lim_{x\to1}\frac{x-1}{x^2-3x+2} \).
+			\begin{solution}
+				\begin{align*}
+					\lim_{x\to1}\frac{x-1}{x^2 - 3x + 2} & = \lim_{x\to1}\frac{x-1}{(x-2)(x-1)} \\
+					                                     & = \lim_{x\to1}\frac{1}{x-2}          \\
+					                                     & = -1
+				\end{align*}
+			\end{solution}
+		\part[4] 解方程: \( \sqrt{4x+1} - 2x + 1 = 0 \).
+			\begin{solution}
+				\begin{enumerate}[label=\protect\circled{\arabic*}]
+					\item 移项得:
+					      \begin{equation*}
+						      \sqrt{4x+1} = 2x - 1
+					      \end{equation*}
+
+					\item 两边平方得:
+					      \begin{equation*}
+						      4x + 1 = 4x^2 - 4x + 1
+					      \end{equation*}
+
+					\item 整理得:
+					      \begin{equation*}
+						      4x^2 -8x = 0
+					      \end{equation*}
+
+					\item 提取同类项得:
+					      \begin{equation*}
+						      4x(x-2) = 0
+					      \end{equation*}
+
+					\item 则
+					      \begin{equation*}
+						      x_1 = 0, x_2 = 2
+					      \end{equation*}
+
+					\item 代入验算 \( x_1 = 0  \)不符合条件,所以解为 \( x=2 \).
+
+				\end{enumerate}
+			\end{solution}
+		\part[4] 化简: \( \displaystyle \frac{a^{2n+1} - 6a^{2n} + 9a^{2n-1}}{a^{n+1} - 4a^n + 3a^{n-1}} \).
+			\begin{solution}
+				\begin{align*}
+					\frac{a^{2n+1} - 6a^{2n} + 9a^{2n-1}}{a^{n+1} - 4a^n + 3a^{n-1}} & = \frac{a^{2n-1}(a^2 - 6a + 9)}{a^{n-1}(a^2-4a+3)}
+					\\
+					                                                                 & = \frac{a^n(a-3)^2}{(a-1)(a-3)}
+					\\
+					                                                                 & = \frac{a^n(a-3)}{a-1}
+				\end{align*}
+			\end{solution}
+		\part[4] 求函数 \( y = 2 - 5x - 3x^2 \)的极值.
+			\begin{solution}
+				\begin{enumerate}[label=\protect\circled{\arabic*}]
+					\item 对函数求导
+					      \begin{equation*}
+						      \frac{\text{d}y}{\text{d}x} = -5 - 6x
+					      \end{equation*}
+					\item 则有 \( x = -\frac56 \)时函数有极值.
+					\item 将 \( x = -\frac56 \)代入函数,得到极值:
+					      \begin{equation*}
+						      y = 2 - 5(-\frac56) - 3(-\frac56)^2 = \frac{49}{12}
+					      \end{equation*}
+
+				\end{enumerate}
+			\end{solution}
+		\part[4] 画出下面 \( V \)形铁块的三视图(只要画草图)
+			\begin{center}
+				\tdplotsetmaincoords{80}{130}
+				\begin{tikzpicture}[tdplot_main_coords, scale=1]
+					\coordinate(A) at (0,0);
+					\coordinate(B) at (6,0);
+					\coordinate(C) at (6,2);
+					\coordinate(D) at (0,2);
+					\coordinate(A1) at (0,0,4);
+					\coordinate(B1) at (6,0,4);
+					\coordinate(C1) at (6,2,4);
+					\coordinate(D1) at (0,2,4);
+					\coordinate(A2) at (1,0,4);
+					\coordinate(B2) at (5,0,4);
+					\coordinate(C2) at (5,2,4);
+					\coordinate(D2) at (1,2,4);
+					\coordinate(A3) at (2,0,3);
+					\coordinate(B3) at (4,0,3);
+					\coordinate(C3) at (4,2,3);
+					\coordinate(D3) at (2,2,3);
+					\coordinate(A4) at (2,0,1);
+					\coordinate(B4) at (4,0,1);
+					\coordinate(C4) at (4,2,1);
+					\coordinate(D4) at (2,2,1);
+
+					\draw[dashed] (B) -- (A) -- (D) (A) -- (A1) (A3) -- (A4) -- (B4) -- (B3) -- (B2) (B3) -- (C3) (B4)
+					-- (C4);
+					\draw(B) -- (C) -- (D) ;
+					\draw(B) -- (B1) (C) -- (C1) (D) -- (D1);
+					\draw(B1) -- (C1) -- (C2) -- (C3) -- (C4) -- (D4) -- (D3) -- (D2) -- (D1) -- (A1) -- (A2) -- (A3)
+					(B2) -- (B1) (A4) -- (D4);
+					\draw(B2) -- (C2) (A3) -- (D3) (A2) -- (D2);
+				\end{tikzpicture}
+			\end{center}
+
+			\begin{solution}
+
+				\tdplotsetmaincoords{0}{0}
+				\begin{tikzpicture}[tdplot_main_coords, scale=1]
+					\coordinate(A) at (0,0);
+					\coordinate(B) at (6,0);
+					\coordinate(C) at (6,2);
+					\coordinate(D) at (0,2);
+					\coordinate(A1) at (0,0,4);
+					\coordinate(B1) at (6,0,4);
+					\coordinate(C1) at (6,2,4);
+					\coordinate(D1) at (0,2,4);
+					\coordinate(A2) at (1,0,4);
+					\coordinate(B2) at (5,0,4);
+					\coordinate(C2) at (5,2,4);
+					\coordinate(D2) at (1,2,4);
+					\coordinate(A3) at (2,0,3);
+					\coordinate(B3) at (4,0,3);
+					\coordinate(C3) at (4,2,3);
+					\coordinate(D3) at (2,2,3);
+					\coordinate(A4) at (2,0,1);
+					\coordinate(B4) at (4,0,1);
+					\coordinate(C4) at (4,2,1);
+					\coordinate(D4) at (2,2,1);
+
+					\draw (B) -- (A) -- (D) (A) -- (A1) (A3) -- (A4) -- (B4) -- (B3) -- (B2) (B3) -- (C3) (B4)
+					-- (C4);
+					\draw(B) -- (C) -- (D) ;
+					\draw(B) -- (B1) (C) -- (C1) (D) -- (D1);
+					\draw(B1) -- (C1) -- (C2) -- (C3) -- (C4) -- (D4) -- (D3) -- (D2) -- (D1) -- (A1) -- (A2) -- (A3)
+					(B2) -- (B1) (A4) -- (D4);
+					\draw(B2) -- (C2) (A3) -- (D3) (A2) -- (D2);
+				\end{tikzpicture}
+
+				\tdplotsetmaincoords{90}{0}
+				\begin{tikzpicture}[tdplot_main_coords, scale=1]
+					\coordinate(A) at (0,0);
+					\coordinate(B) at (6,0);
+					\coordinate(C) at (6,2);
+					\coordinate(D) at (0,2);
+					\coordinate(A1) at (0,0,4);
+					\coordinate(B1) at (6,0,4);
+					\coordinate(C1) at (6,2,4);
+					\coordinate(D1) at (0,2,4);
+					\coordinate(A2) at (1,0,4);
+					\coordinate(B2) at (5,0,4);
+					\coordinate(C2) at (5,2,4);
+					\coordinate(D2) at (1,2,4);
+					\coordinate(A3) at (2,0,3);
+					\coordinate(B3) at (4,0,3);
+					\coordinate(C3) at (4,2,3);
+					\coordinate(D3) at (2,2,3);
+					\coordinate(A4) at (2,0,1);
+					\coordinate(B4) at (4,0,1);
+					\coordinate(C4) at (4,2,1);
+					\coordinate(D4) at (2,2,1);
+
+					\draw(B) -- (A) -- (D) (A) -- (A1) (A3) -- (A4) -- (B4) -- (B3) -- (B2);
+					\draw(B) -- (C) -- (D) ;
+					\draw(B) -- (B1) (C) -- (C1) (D) -- (D1);
+					\draw(B1) -- (C1) -- (C2) -- (C3) -- (C4) -- (D4) -- (D3) -- (D2) -- (D1) -- (A1) -- (A2) -- (A3)
+					(B2) -- (B1);
+					\draw(B2) -- (C2) (A3) -- (D3) (A2) -- (D2);
+				\end{tikzpicture}
+				\tdplotsetmaincoords{90}{90}
+				\begin{tikzpicture}[tdplot_main_coords, scale=1]
+					\coordinate(A) at (0,0);
+					\coordinate(B) at (6,0);
+					\coordinate(C) at (6,2);
+					\coordinate(D) at (0,2);
+					\coordinate(A1) at (0,0,4);
+					\coordinate(B1) at (6,0,4);
+					\coordinate(C1) at (6,2,4);
+					\coordinate(D1) at (0,2,4);
+					\coordinate(A2) at (1,0,4);
+					\coordinate(B2) at (5,0,4);
+					\coordinate(C2) at (5,2,4);
+					\coordinate(D2) at (1,2,4);
+					\coordinate(A3) at (2,0,3);
+					\coordinate(B3) at (4,0,3);
+					\coordinate(C3) at (4,2,3);
+					\coordinate(D3) at (2,2,3);
+					\coordinate(A4) at (2,0,1);
+					\coordinate(B4) at (4,0,1);
+					\coordinate(C4) at (4,2,1);
+					\coordinate(D4) at (2,2,1);
+
+					\draw(B) -- (A) -- (D) (A) -- (A1) (A3) -- (A4) -- (B4) -- (B3) -- (B2);
+					\draw(B) -- (C) -- (D) ;
+					\draw(B) -- (B1) (C) -- (C1) (D) -- (D1);
+					\draw(B1) -- (C1) -- (C2) -- (C3) -- (C4) -- (D4) -- (D3) -- (D2) -- (D1) -- (A1) -- (A2) -- (A3)
+					(B2) -- (B1);
+					% \draw(B2) -- (C2) (A3) -- (D3) (A2) -- (D2);
+				\end{tikzpicture}
+
+			\end{solution}
+	\end{parts}
+	\question
+	\begin{parts}
+		\part[6] 解不等式: \( \dfrac{x^2 - x - 6}{x^2 + 2x + 2} < 0 \).
+			\begin{solution}
+				\begin{enumerate}[label=\protect\circled{\arabic*}]
+					\item 化简得:
+					      \begin{equation*}
+						      \frac{x^2 - x - 6}{x^2 + 2x + 2}  = \frac{(x-3)(x+2)}{(x+1)^2 + 1}
+					      \end{equation*}
+
+					\item 因为分母
+					      \begin{equation*}
+						      (x+1)^2 + 1 > 0
+					      \end{equation*}
+
+					\item 所以有
+					      \begin{equation*}
+						      (x-3)(x+2) < 0
+					      \end{equation*}
+
+					\item 因此有
+					      \begin{equation*}
+						      -2 < x < 3
+					      \end{equation*}
+				\end{enumerate}
+			\end{solution}
+
+		\part[6] 证明: \( \dfrac{2\cos\theta - \sin2\theta}{2\cos\theta + \sin2\theta} = \tan^2\left(\dfrac{90^\circ -
+				\theta}{2}\right) \).
+			\begin{proofsolution}
+				\begin{enumerate}[label=\protect\circled{\arabic*}]
+					\item 首先,根据倍角公式 \( \sin2\theta = 2\sin\theta\cos\theta \) 来化简等式的左边:
+					      \begin{align*}
+						      \frac{2\cos\theta - \sin2\theta}{2\cos\theta + \sin2\theta}
+						       & = \frac{2\cos\theta - 2\sin\theta\cos\theta}{2\cos\theta + 2\sin\theta\cos\theta} \\
+						       & = \frac{1-\sin\theta}{1+\sin\theta} \tag{a}
+					      \end{align*}
+					\item 然后,结合半角公式 \( \tan\dfrac{\theta}{2} = \dfrac{\sin\theta}{1+\cos\theta} \)
+					      来化简等式的右边:
+					      \begin{align*}
+						      \tan^2\left(\dfrac{90^\circ - \theta}{2}\right)
+						       & = \left(\frac{\sin(90^\circ-\theta)}{1+\cos(90^\circ-\theta)}\right)^2 \tag{b}
+					      \end{align*}
+					\item 利用差角公式 \( \sin(\alpha-\beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta \) 及 \(
+					      \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta \) 进一步化简式(b):
+					      \begin{align*}
+						      \left(\frac{\sin(90^\circ-\theta)}{1+\cos(90^\circ-\theta)}\right)^2
+						       & = \left(\frac{\sin90^\circ\cos\theta -
+							      \cos90^\circ\sin\theta}{1+\cos90^\circ\cos\theta + \sin90^\circ\sin\theta}\right)^2
+						      \\
+						       & = \left(\frac{\cos\theta}{1+\sin\theta}\right)^2 \\
+						       & = \frac{\cos^2\theta}{(1+\sin\theta)^2}          \\
+						       & = \frac{1-\sin^2\theta}{(1+\sin\theta)^2}        \\
+						       & = \frac{1-\sin\theta}{1+\sin\theta} \tag{c}
+					      \end{align*}
+					\item 综上,由(a) = (c),原式成立.
+				\end{enumerate}
+			\end{proofsolution}
+		\part[6]
+			某中学革命师生自己动手油漆一个直径为$1.2$米的地球仪,如果第平方米面积需要油漆$150$克,问共需油漆多少克？(答案保留整数.)
+			\begin{solution}
+				\begin{enumerate}[label=\protect\circled{\arabic*}]
+					\item 球体的面积公式为:
+					      \begin{equation*}
+						      A = 4\pi r^2
+					      \end{equation*}
+					\item  代入$r=1.2\div 2 = 0.6$得:
+					      \begin{equation*}
+						      A = 4\times 3.14 \times 0.6^2 = \qty{4.5216}{\meter\squared}
+					      \end{equation*}
+					\item 则共需油漆
+					      \begin{equation*}
+						      4.5216 \times 150 = 678.24 \approx \qty{679}{\gram}
+					      \end{equation*}
+				\end{enumerate}
+
+			\end{solution}
+		\part[6]
+			某农机厂开展\enquote{工业学大庆}运动,在十月份生产拖拉机$1000$台,这样,一月至十月的产量恰好完成全年生产任务.工人同志为了加速农业机械化,计划在年底前再生产$2310$台,求十一月、十二月平均每月增长率.
+
+			\begin{solution}
+				\begin{enumerate}[label=\protect\circled{\arabic*}]
+					\item 设每月的平均增长率为$x$,则有
+					      \begin{equation*}
+						      1000(1+x) + 1000(1+x)^2 = 2310
+					      \end{equation*}
+					\item	对式子进行化简:
+					      \begin{align*}
+						      1000(1+x) + 1000(1+x)^2 & = 1000 + 1000x + 1000 + 2000x + 1000x^2 \\
+						                              & = 2000 + 3000x + 1000x^2                \\
+						                              & = 2310
+					      \end{align*}
+					\item 进一步化简得:
+					      \begin{align*}
+						      1000x^2 +3000x - 310  & = 0 \\
+						      (10x + 31)(100x - 10) & = 0
+					      \end{align*}
+					\item 计算得 $x_1=-3.1(\text{舍去}), x_2=0.1$,即增长率为\qty{10}{\percent}.
+				\end{enumerate}
+
+			\end{solution}
+	\end{parts}
+	\question[6] 在半径为$R$的圆内接正六边形内,依次连续各边的中点,得一正六边形,又在这一正六边形内,再依次连结各边的中点,又得一正六边形,这样无限地继续下去,求:
+	\begin{enumerate}[label=(\arabic*)]
+		\item 前$n$个正六边形的周长之和$S_n$；
+		\item 所有这些正六边形的周长之和$S$.
+	\end{enumerate}
+	\begin{solution}
+		\begin{enumerate}[label=\protect\circled{\arabic{*}}]
+			\item 半径为$R$的圆的内接正六边形的边长也为$R$,所以第一个正六边形的边长为$6R$.
+			\item 以第一个正六边形的边的中点连接而成的第二个正六边形的边长,根据三角关系得到边长为\\$\dfrac{\sqrt{3}}{2}R$,则边长为$3\sqrt{3}R$
+			\item 则前$n$个正六边形的周长之和为:
+			      \begin{align*}
+				      S_n & = 6R + 3\sqrt{3}R + \cdots +  (\frac{\sqrt{3}}{2})^{n-1}R               \\
+				          & = 12\frac{1-(\frac{\sqrt{3}}{2})^n}{2-\sqrt{3}}R                        \\
+				          & = 12(2+\sqrt{3})\left[ 1 - \left( \frac{\sqrt{3}}{2} \right)^n \right]R
+			      \end{align*}
+			\item 所有这些正六边形的周长之和:
+			      \begin{align*}
+				      S & = \lim_{n\to\infty}12(2+\sqrt{3})\left[ 1 - \left( \frac{\sqrt{3}}{2} \right)^n \right]R \\
+				        & = 12(2+\sqrt{3})R
+			      \end{align*}
+		\end{enumerate}
+	\end{solution}
+
+	\question[6] 动点$P(x,y)$到两定点$A(-3,0)$和$B(3,0)$的距离的比等于$2$,求动点$P$的轨迹方程,并说明这轨迹是什么图形.
+	\begin{solution}
+		\begin{enumerate}[label=\protect\circled{\arabic{*}}]
+			\item
+			      由题意得:
+			      \begin{equation*}
+				      \sqrt{(x+3)^2 + y^2} = 2\sqrt{(x-3)^2 + y^2}
+			      \end{equation*}
+			\item
+			      方程两边平方得:
+			      \begin{equation*}
+				      x^2 + 6x + 9 + y^2 = 4x^2 - 24x + 36 + 4y^2
+			      \end{equation*}
+			\item 进一步整理得$P$的轨迹方程:
+			      \begin{equation*}
+				      (x-5)^2 + y^2 = 16
+			      \end{equation*}
+			\item 这个轨迹是圆心在$(5,0)$,直径为$4$的圆.
+		\end{enumerate}
+	\end{solution}
+
+	\question[8] 某大队在农田基本建设的规划中,要测定被障碍物隔开的两点$A,
+		P$之间的距离,他们土法上马,在障碍物的两侧,选取两点$B$和$C$(如图),测得$AB=AC=50$m,$ \angle{BAC}=60^\circ,
+		\angle{ABP}=120^\circ, \angle{ACP}=135^\circ$,求$A$和$P$之间的距离.(答案可用最简根式表示).
+
+	\begin{center}
+		\begin{tikzpicture}[scale=1.5]
+			\tkzDefPoint(0,0){A}
+			\tkzDefShiftPointCoord[A](30:2){C}
+			\tkzDefShiftPointCoord[A](-30:2){B}
+			\tkzDefPoint(4,0.3){P}
+			\tkzInterLL(A,P)(B,C) \tkzGetPoint{D}
+
+			\tkzDrawPolygon(A,B,P,C)
+			\tkzDrawSegments[dashed](A,P B,C)
+			\tkzDrawEllipse[fill=gray!50, draw=gray!50](D,.3,.2,35)
+
+			\tkzMarkAngle[size=0.3](B,A,C)
+			\tkzLabelAngle[pos=.5](B,A,C){\ang{60}}
+
+			\tkzLabelPoint[left](A){$A$}
+			\tkzLabelPoint[below](B){$B$}
+			\tkzLabelPoint[above](C){$C$}
+			\tkzLabelPoint[right](P){$P$}
+
+		\end{tikzpicture}
+	\end{center}
+	\begin{solution}
+		\begin{center}
+			\begin{tikzpicture}[scale=1.5]
+				\tkzDefPoint(0,0){A}
+				\tkzDefShiftPointCoord[A](30:2){C}
+				\tkzDefShiftPointCoord[A](-30:2){B}
+				\tkzDefPoint(4,0.3){P}
+				\tkzInterLL(A,P)(B,C) \tkzGetPoint{D}
+				\tkzDefLine[orthogonal=through C](B,P) \tkzGetPoint{x}
+				\tkzInterLL(B,P)(C,x) \tkzGetPoint{E}
+				\tkzInterLL(A,P)(C,E) \tkzGetPoint{O}
+
+				\tkzDrawPolygon(A,B,P,C)
+				\draw[fill=gray!50] (D) ellipse[x radius=0.3, y radius=0.2];
+				\tkzDrawSegments[dashed](A,P B,C)
+				\tkzDrawSegment[red, dashed](C,E)
+				\tkzDrawPoint(O)
+
+				\tkzLabelAngle[pos=.8](E,C,P){$45^\circ$}
+				\tkzMarkAngle[size=.5, mark=s|](E,C,P)
+				\tkzMarkRightAngle[red](C,E,P)
+
+				\tkzMarkAngle[size=.5, mark=s|](C,P,E)
+				\tkzLabelAngle[pos=.8](C,P,E){$45^\circ$}
+
+				\tkzMarkAngle[size=.4](B,C,E)
+				\tkzLabelAngle[pos=.6](B,C,E){$30^\circ$}
+				\tkzMarkRightAngle[red](A,C,E)
+
+				\tkzMarkAngle[size=0.3](B,A,C)
+				\tkzLabelAngle[pos=.5](B,A,C){\ang{60}}
+
+				\tkzMarkAngle[size=0.3](P,B,A)
+				\tkzLabelAngle[pos=.5](P,B,A){\ang{120}}
+
+				\tkzLabelPoint[left](A){$A$}
+				\tkzLabelPoint[below](B){$B$}
+				\tkzLabelPoint[above](C){$C$}
+				\tkzLabelPoint[right](P){$P$}
+				\tkzLabelPoint[below](E){$E$}
+				\tkzLabelPoint[above right](O){$O$}
+
+				\tkzLabelSegment[above left](A,C){$x$}
+				\tkzLabelSegment[below left](A,B){$x$}
+				\tkzLabelSegment[below right](B,E){$\frac{x}{2}$}
+				\tkzLabelSegment[below right](E,P){$\frac{\sqrt{3}}{2}x$}
+			\end{tikzpicture}
+		\end{center}
+		\begin{enumerate}[label=\protect\circled{\arabic*}, noitemsep]
+			\item 为了书写方便,将$AC$的长度记为$x$
+			\item 由于 \( AB=AC\)且\( \angle{BAC}=60^\circ \),得 \( \triangle{ABC}是等边三角形 \),并有 \( BC=AB=AC=x \)
+			\item 从$C$点作垂线到$BP$并与$BP$,垂足记为$E$,$CE$与$AP$交于$O$点
+			\item 由 \( \angle{BAC}=60^\circ, \angle{ACP}=135^\circ, \angle{ABP}=120^\circ \)得$\angle{CPB}=45^\circ$
+			\item 则有 \( \angle{ECP} = 45^\circ, \angle{BCE}=30^\circ \)
+			\item 由 \( \angle{ACB}=60^\circ, \angle{BCE}=30^\circ \)得 \( \angle{ACO}=90^\circ \)
+			\item 在 直角\( \triangle{BCE} \)中,有 \( BE=\frac{BC}{2} = \frac{x}{2}, CE=\frac{\sqrt{3}}{2}BC =
+			      \frac{\sqrt{3}}{2}x \)
+			\item 在等腰直角三角形 \( \triangle{EPC} \)中,有 \( EP = EC = \frac{\sqrt{3}}{2}x \)
+			\item 对于 \( \triangle{ACO} \)和 \( \triangle{PEO} \),因为 \( \angle{ACO} = \angle{PEO} = 90^\circ,
+			      \angle{AOC} = \angle{POE} \),所以 \( \triangle{AOC} \sim \triangle{POE} \)
+
+			      根据相似三角形的性质有:
+			      \begin{align*}
+				      \frac{AC}{EP}                 & = \frac{CO}{OE} = \frac{AO}{OP}                     \\
+				      \frac{x}{\frac{\sqrt{3}}{2}x} & = \frac{CO}{OE} = \frac{AO}{OP}= \frac{2}{\sqrt{3}} \\
+			      \end{align*}
+			\item 因为 \( CE=\frac{\sqrt{3}}{2}x \),则有 \( CO = (2\sqrt{3} - 3)x, OE = \frac{6 - 3\sqrt{3}}{2}x \)
+			\item \( AO = \sqrt{AC^2 + CO^2} = \sqrt{x^2 + (2\sqrt{3} - 3)^2x^2} = \sqrt{22 - 12\sqrt{3}}x \)
+			\item 因为$OP=\dfrac{\sqrt{3}}{2}AO$,所以有:
+			      \begin{align*}
+				      AP & = AO + OP                                     \\
+				         & = (1+\frac{\sqrt{3}}{2})AO                    \\
+				         & = \frac{2+\sqrt{3}}{2}\sqrt{22 - 12\sqrt{3}}x \\
+				         & = \frac{\sqrt{10 + 4\sqrt{3}}}{2}x            \\
+				         & = 25\sqrt{10 + 4\sqrt{3}}
+			      \end{align*}
+			\item 故$A,P$两点间的距离为$25\sqrt{10+4\sqrt{3}}\unit{\meter}$.
+		\end{enumerate}
+		\begin{minipage}{\textwidth}
+			\color{blue!50!green}
+			\begin{enumerate}[label=\protect\circled{\arabic*}]
+				\item 在上面的解法中计算得到$BP=BE+EP=\dfrac{1+\sqrt{3}}{2}x$后,直接利用余弦定理计算$AP$:
+				      \begin{align*}
+					      AP^2 & = AB^2 + BP^2 - 2AB\cdot BP\cos\ang{120}                                                     \\
+					           & = x^2 + \left( \frac{1+\sqrt{3}}{2}x \right)^2 - 2x\cdot\frac{1+\sqrt{3}}{2}x\cdot(-\frac12) \\
+					           & = \frac{8+2\sqrt{3}}{4}x^2 + \frac{2+2\sqrt{3}}{4}x^2                                        \\
+					           & = \frac{10+4\sqrt{3}}{4}x^2
+				      \end{align*}
+				\item 所以$A,P$两点为之间的距离为$25\sqrt{10+4\sqrt{3}}\unit{\meter}$.
+			\end{enumerate}
+		\end{minipage}
+
+	\end{solution}
+
+	\question[8] 已知双曲线 \( \frac{x^2}{24\tan\alpha} - \frac{y^2}{16\cot\alpha} = 1 (\alpha\text{为锐角})\)和圆 \( (x-m)^2 +
+	y^2 = r^2 \)相切于点 \( A(4\sqrt{3},4) \),求 \( \alpha, m, r \)的值.
+	\begin{solution}
+		\begin{enumerate}[label=\protect\circled{\arabic*}, noitemsep]
+			\item 将点 	\( A(4\sqrt{3}, 4) \)代入双曲线方程得:
+			      \begin{equation*}
+				      \frac{(4\sqrt{3})^2}{24\tan\alpha} - \frac{4^2}{16\cot\alpha} = 1
+			      \end{equation*}
+
+			      进一步化简得:
+			      \begin{equation*}
+				      \frac{2}{\tan\alpha} - \frac{1}{\cot\alpha} = 1
+			      \end{equation*}
+			      设 $\tan\alpha=x$,则有:
+			      \begin{align*}
+				      2\cdot\frac1x - x = 1 \\
+				      x^2 +x - 2 = 0        \\
+				      (x+2)(x-1) = 0        \\
+			      \end{align*}
+			      因为$\alpha$是锐角,所以 $x=1$,即 \( \alpha=45^\circ \).
+			\item 将点 \( A(4\sqrt{3}, 4) \)代入圆方程得:
+			      \begin{equation*}
+				      (4\sqrt{3} - m)^2 + 4^2 = r^2 \tag{a}
+			      \end{equation*}
+			\item 双曲线与圆在 $A$点相切,所以其切线斜率相同.
+			      \begin{enumerate}[label=\alph*., noitemsep]
+				      \item 求解双曲线在$A$点的切线的斜率
+
+				            对双曲线求偏导:
+				            \begin{equation*}
+					            \frac{2x}{24\tan\alpha} - \frac{2y}{16\cot\alpha}\cdot\frac{\text{d}y}{\text{d} x} = 0
+				            \end{equation*}
+				            解得:
+				            \begin{equation*}
+					            \frac{\text{d}y}{\text{d}x} = \frac{\frac{x}{12\tan\alpha}}{\frac{y}{8\cot\alpha}}
+					            = \frac{8\cot\alpha\cdot x}{12\tan\alpha\cdot y} = \frac{2x}{3y}
+				            \end{equation*}
+				            点 \( A(4\sqrt{3},4) \)的切线斜率为:
+				            \begin{equation*}
+					            k_1 = \frac{2\cdot4\sqrt{3}}{3\cdot4} =
+					            \frac{2\sqrt{3}}{3}
+				            \end{equation*}
+				      \item 求解圆在$A$点的法线的斜率
+
+				            对圆求偏导:
+				            \begin{equation*}
+					            2(x-m) + 2y\frac{\text{d}y}{\text{d}x} = 0
+				            \end{equation*}
+
+				            点$A(4\sqrt{3},4)$处的切线斜率为:
+				            \begin{equation*}
+					            k_2 = -\frac{4\sqrt{3} - m}{4}
+				            \end{equation*}
+
+				      \item 因为 \( k_1 = k_2 \),所以有
+				            \begin{align*}
+					            -\frac{4\sqrt{3} - m }{4} = \frac{2\sqrt{3}}{3}
+				            \end{align*}
+				            解得:
+				            \begin{equation*}
+					            m = \frac{20\sqrt{3}}{3}
+				            \end{equation*}
+
+			      \end{enumerate}
+
+			\item 将 \( m = \dfrac{20\sqrt{3}}{3} \)代入式(a)得:
+			      \begin{equation*}
+				      r = \sqrt{\dfrac{112}{3}}=\dfrac43\sqrt{21}
+			      \end{equation*}
+
+		\end{enumerate}
+	\end{solution}
+
+	\question[8] 设数列 $1,2,4, \cdots$前$n$项和是$S_n = a + bn + cn^2 +
+		dn^3$,求这数列的通项$a_n$的公式,并确定$a,b,c,d$的值.
+	\begin{solution}
+		\begin{enumerate}[label=\protect\circled{\arabic*}]
+			\item 根据题目中的条件有:
+			      \begin{align}
+				      S_1 & = a + b + c + d      = 1 \\
+				      S_2 & = a + 2b + 4c + 8d   = 3 \\
+				      S_3 & = a + 3b + 9c + 27d  = 7
+			      \end{align}
+			      $S_2 - S_1$得
+			      \begin{equation}
+				      b + 3c + 7d =2
+			      \end{equation}
+			      $S_3 - S_2$得
+			      \begin{equation}
+				      b + 5c + 19d = 4
+			      \end{equation}
+			      式(5)- 式(4)得
+			      \begin{align}
+				      2c + 12d & = 2 \nonumber \\
+				      c + 6d   & = 1
+			      \end{align}
+			      将式(6)代入$S_1$得
+			      \begin{equation}
+				      a+b = 5d
+			      \end{equation}
+			      将式(6)代入式(4)得
+			      \begin{equation}
+				      b+c = 5d
+			      \end{equation}
+			      根据式(7)和式(8)得
+			      \begin{equation}
+				      a = c
+				      \label{eq:a=c}
+			      \end{equation}
+			      在$n>1$时有
+			      \begin{align}
+				      a_n & = S_n - S_{n-1} \nonumber                                           \\
+				          & = a + bn + cn^2 + dn^3 - a - b(n-1) - c(n-1)^2 - d(n-1)^3 \nonumber \\
+				          & = b + c(2n-1) + d(3n^2 - 3n + 1)
+			      \end{align}
+			      而此式也需要满足$n=1$,代入得
+			      \begin{equation}
+				      a_1 = b+c+d
+			      \end{equation}
+			      而$S_1= a_1$,所以
+			      \begin{equation}
+				      a= 0
+			      \end{equation}
+			      因为$a=c$,所以
+			      \begin{equation}
+				      c = 0
+			      \end{equation}
+			      从$c+6d=1$得
+			      \begin{equation}
+				      d = \frac16
+			      \end{equation}
+			      根据式(7)和式(12)得:
+			      \begin{equation}
+				      b = \frac56
+			      \end{equation}
+
+			\item $a_n$的通项公式为:
+			      \begin{equation*}
+				      a_n = \frac12n^2 - \frac12n + 1
+			      \end{equation*}
+
+		\end{enumerate}
+
+	\end{solution}
+	\begin{center}
+		\section*{附加题}
+	\end{center}
+	\question 求函数 $y = \ue^{-2x}\sin\left(5x+\dfrac{\pi}{4}\right)$的导数.
+	\begin{solution}
+		\begin{align*}
+			y' & =  (\ue^{-2x})'\sin\left(5x + \frac{\pi}{4}\right) + \ue^{-2x}\sin'\left(5x +
+			\frac{\pi}{4}\right)                                                               \\
+			   & = -2\ue^{-2x}\sin\left(5x+\frac{\pi}{4}\right) +
+			5\ue^{-2x}\cos\left(5x+\frac{\pi}{4}\right)                                        \\
+			   & = \ue^{-2x}\left[-2\sin\left(5x + \frac{\pi}{4}\right) + 5\cos\left(5x +
+			\frac{\pi}{4}\right)\right]                                                        \\
+			   & = \ue^{-2x}\left[-2\sin5x\cos\frac{\pi}{4} - 2\cos5x\sin\frac{\pi}{4} +
+			5\cos(5x)\cos(\frac{\pi}{4}) - 5\sin(5x)\sin(\frac{\pi}{4})\right]                 \\
+			   & = -\frac{\sqrt{2}}{2}\ue^{-2x}[7\sin(5x) - 3\cos(5x)]                         \\
+			   & = -\frac{\sqrt{2}}{2}\ue^{-2x}\cdot \sqrt{58}\sin({5x-\arctan{\frac37}})      \\
+			   & = -\sqrt{29}\ue^{-2x}\sin(5x-\arctan\frac37)
+		\end{align*}
+	\end{solution}
+
+	\question 求定积分:$\int_0^1\left(x\ue^{x^2} + x^2\ue^x\right)\ud{x}$
+	\begin{solution}
+		\begin{enumerate}[label=\protect\circled{\arabic*}]
+			\item 根据和差积分法则有:
+			      \begin{equation*}
+				      \int_0^1\left(x\ue^{x^2} + x^2\ue^2\right)\ud{x}  = \int_0^1(x\ue^{x^2})\,\ud{x} + \int_0^1(x^2\ue^x)\,\ud{x}
+			      \end{equation*}
+			\item 先求解 $\int_0^1(x\ue^{x^2})\,\ud{x} $,设 $u=x^2$,则有$\ud{u}=2x\ud{x}$,则有
+			      \begin{align*}
+				      \int_0^1(x\ue^{x^2})\ud{x} & = \frac12\int_0^1\ue^u\ud{u} \\
+				                                 & = \frac12(\ue-1)
+			      \end{align*}
+			\item 再来求解 $\int_0^1(x^2\ue^x)\,\ud{x}$
+			      \begin{align*}
+				      \int_0^1(x^2\ue^x)\,\ud{x} & = \int_0^1 x^2\ud{\ue^x}                                    \\
+				                                 & = \left[x^2\ue^x\right]_0^1 - \int_0^1\ue^x\,\ud{x}^2       \\
+				                                 & = \ue - \int_0^12x\,\ud{\ue^x}                              \\
+				                                 & = \ue - \left[ 2x\ue^x \right]_0^1 + \int_0^1\ue^x\,\ud{2x} \\
+				                                 & = \ue-2
+			      \end{align*}
+			\item 将两部分加起来得到总的积分值:
+			      \begin{equation*}
+				      \frac12(\ue-1) + \ue - 2 = \frac32\ue - \frac52
+			      \end{equation*}
+		\end{enumerate}
+	\end{solution}
+\end{questions}

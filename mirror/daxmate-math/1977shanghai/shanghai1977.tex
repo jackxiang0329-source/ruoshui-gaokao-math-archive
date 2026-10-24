@@ -1,0 +1,175 @@
+%!tex program = lualatex
+\documentclass[answers]{exam}
+\input{../mathheader.tex}
+\usepackage[lua]{tkz-euclide}
+
+\begin{document}
+\begin{center}
+	\textbf{1977普通高等学校招生考试（上海卷）}
+
+	\textbf{\Huge 理科数学}
+\end{center}
+\begin{questions}
+	\question
+	\begin{enumerate}[label=(\arabic*)]
+		\item 化简：
+		      \begin{math} \displaystyle
+			      \left(\frac{a}{a+b} - \frac{a^2}{a^2 + 2ab + b^2}\right) \div \left(\frac{a}{a+b} - \frac{a^2}{a^2 - b^2}\right)
+		      \end{math}.
+		      \begin{solution}
+			      \begin{align*}
+				      \left(\frac{a}{a+b} - \frac{a^2}{a^2 + 2ab + b^2}\right) \div \left(\frac{a}{a+b} - \frac{a^2}{a^2 - b^2}\right)
+				       & = \left[ \frac{a(a+b)}{(a+b)^2} - \frac{a^2}{(a+b)^2} \right] \div \frac{a(a-b) - a^2}{a^2-b^2}
+				      \\
+				       & = \frac{ab}{(a+b)^2} \cdot \frac{a^2 - b^2}{-ab}                                                \\
+				       & = \frac{b-a}{a+b}
+			      \end{align*}
+		      \end{solution}
+		\item 计算：
+		      \begin{math}
+			      \displaystyle
+			      \frac12\lg25+\lg2 - \lg\sqrt{0.1} - \log_29 \times \log_32.
+		      \end{math}
+		      \begin{solution}
+			      \begin{align*}
+				       & = \frac12\lg5^2 + \lg2 - \lg(10)^{-\frac12} - \log_23^2 \times \log_32 \\
+				       & = \lg5 + \lg2 + \frac12 - 2 \log_23 \times \log_32                     \\
+				       & = \frac32 - 2 \cdot \frac{\ln3}{\ln2}\cdot \frac{\ln2}{\ln3}           \\
+				       & = \frac12
+			      \end{align*}
+		      \end{solution}
+		\item $\sqrt{-1} = i$，验算$i$是否方程$2x^4 + 3x^3 - 3x^2 + 3x - 5 = 0$的解。
+		      \begin{solution}
+			      将$i$代入方程得：
+			      \begin{align*}
+				      2i^4 + 3i^3 - 3x^2 + 3x - 5 & = 2 - 3i + 3  + 3i - 5 \\
+				                                  & = 0
+			      \end{align*}
+			      所以$i$是原方程的解。
+		      \end{solution}
+		\item 求证：$\displaystyle
+			      \frac{\sin\left(\frac{\pi}{4} + \theta \right)}{\sin \left( \frac{\pi}{4} - \theta \right)} +
+			      \frac{\cos\left(\frac{\pi}{4} + \theta \right)}{\cos \left( \frac{\pi}{4} - \theta \right)} =
+			      \frac{2}{\cos2\theta}
+		      $.
+		      \begin{solution}
+			      根据和角公式
+			      \[
+				      \begin{array}{l}
+					      \sin(\alpha+\beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta, \\
+					      \cos(\alpha+\beta)=\cos\alpha\cos\beta - \sin\alpha\sin\beta
+				      \end{array}
+			      \]
+			      及差角公式$$
+				      \begin{array}{l}
+					      \sin(\alpha-\beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta, \\
+					      \cos(\alpha-\beta)=\cos\alpha\cos\beta + \sin\alpha\sin\beta
+				      \end{array}
+			      $$来化简等式的左边得：
+			      \begin{align*}
+				       & = 	\frac{\sin\frac{\pi}{4}\cos\theta +
+					      \cos\frac{\pi}{4}\sin\theta}{\sin\frac{\pi}{4}\cos\theta-\cos\frac{\pi}{4}\sin\theta} +
+				      \frac{\cos\frac{\pi}{4}\cos\theta - \sin\frac{\pi}{4}\sin\theta}{\cos\frac{\pi}{4}\cos\theta +
+				      \sin\frac{\pi}{4}\sin\theta}                                                              \\
+				       & =
+				      \frac{\sin\theta + \cos\theta}{\cos\theta - \sin\theta} + \frac{\cos\theta -
+				      \sin\theta}{\cos\theta + \sin\theta}                                                      \\
+				       & =
+				      \frac{1 + 2\sin\theta\cos\theta + 1 - 2\sin\theta\cos\theta}{\cos^2\theta - \sin^2\theta} \\
+				       & = \frac{2}{\cos2\theta}
+			      \end{align*}
+			      因此原式成立。
+		      \end{solution}
+	\end{enumerate}
+	\question 在$\triangle{ABC}$中，$\angle{C}$的平分线交$AB$于$D$，过$D$作$BC$的平行线交$AC$于$E$，已知$BC=a, AC=b$，求$DE$的长。
+
+	\begin{figure}[htbp]
+		\centering
+		\begin{tikzpicture}
+			\tkzDefPoints{0/0/A, 3/0/C, 2/2.5/B}
+			\tkzDefLine[bisector](B,C,A) \tkzGetPoint{x}
+			\tkzInterLL(C,x)(A,B) \tkzGetPoint{D}
+			\tkzDefLine[parallel=through D](B,C) \tkzGetPoint{x}
+			\tkzInterLL(D,x)(A,C) \tkzGetPoint{E}
+
+			\tkzDrawPolygon(A,B,C)
+			\tkzDrawSegments(D,E D,C)
+
+			\tkzLabelPoints[below](A,E,C)
+			\tkzLabelPoints[above left](D,B)
+		\end{tikzpicture}
+	\end{figure}
+
+	\begin{solution}
+		\begin{align*}
+			 & \because \angle{ACD} = \angle{BCD}                  \\
+			 & \therefore AD = BD                                  \\
+			 & \because DE \parallel BC                            \\
+			 & \therefore
+			\begin{array}{l}
+				AE = EC \\
+				\dfrac{DE}{BC} = \dfrac{AE}{AC}
+			\end{array}                         \\
+			 & \therefore DE = BC\frac{\frac{1}{2}a}{a} = \frac12b
+		\end{align*}
+	\end{solution}
+	\pagebreak
+	\question
+	已知圆$A$的直径为$2\sqrt{3}$，圆$B$的直径为$4-2\sqrt{3}$，圆$C$的直径为$2$，圆$A$与圆$B$外切，圆$A$又与圆$C$外切，$\angle{A}=60^\circ$，求$BC$及$\angle{C}$。
+
+	\begin{figure*}[ht]
+		\centering
+		\begin{tikzpicture}
+			\tkzDefPoints{{sqrt(3)}/0/A, {sqrt(3)-2}/0/B, 0/0/O}
+			\tkzDefShiftPoint[A](120:{sqrt(3)+1}){C}
+			\tkzDefLine[orthogonal=through C](B,A) \tkzGetPoint{x}
+			\tkzInterLL(C,x)(A,B) \tkzGetPoint{D}
+			\tkzInterLC(A,C)(A,O) \tkzGetSecondPoint{x}
+
+			\tkzDrawCircles(A,O B,O)
+			\tkzDrawCircle(C,x)
+			\tkzDrawPolygon(A,B,C)
+
+			\tkzLabelPoints(B,A,D)
+			\tkzLabelPoint[above](C){$C$}
+			\tkzMarkAngle[size=.5](C,A,B)
+			\tkzLabelAngle(C,A,B){$60^\circ$}
+
+			\tkzDrawSegment[dashed](C,D)
+		\end{tikzpicture}
+	\end{figure*}
+
+	\begin{solution}
+		由题意得：
+		\begin{align*}
+			AB & = 2            \\
+			AC & = 1 + \sqrt{3}
+		\end{align*}
+		由余弦定理有：
+		\begin{align*}
+			BC^2 & = AB^2 + AC^2 - 2\cdot AB \cdot AC \cdot \cos60^\circ           \\
+			     & = 4 + 2\sqrt{3} + 4 - 2\cdot 2 \cdot (1+\sqrt{3}) \cdot \frac12 \\
+			     & = 6
+		\end{align*}
+		所以
+		\begin{equation*}
+			BC = \sqrt{6}
+		\end{equation*}
+
+		再由余弦定理有：
+		\begin{align*}
+			\cos{C} & = \frac{AC^2 + BC^2 - AB^2}{2AC\cdot BC}                            \\
+			        & = \frac{(1+\sqrt{3})^2 + (\sqrt{6})^2 - 2^2}{2(1+\sqrt{3})\sqrt{6}} \\
+			        & = \frac{4 + 2\sqrt{3} + 6 - 4}{2\sqrt{2}(3+\sqrt{3})}               \\
+			        & = \frac{2(3+\sqrt{3})}{2\sqrt{2}(3+\sqrt{3})}                       \\
+			        & = \frac{\sqrt{2}}{2}
+		\end{align*}
+		所以有：
+		\begin{equation*}
+			\angle{C} = 45^\circ
+		\end{equation*}
+	\end{solution}
+
+\end{questions}
+
+\end{document}

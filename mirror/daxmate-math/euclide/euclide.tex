@@ -1,0 +1,224 @@
+%!tex program = lualatex
+\documentclass[answers]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ctex}
+\usepackage[lua]{tkz-euclide}
+\usetikzlibrary{patterns}
+\newcommand\tkzDrawXY[0]{\tkzDrawX\tkzDrawY}
+	\tkzInit[xmax=5, ymax=5, xmin=-5, ymin=-5]
+	\tkzSetUpLine[teal]
+	\tkzSetUpLabel[teal]
+	\tkzSetUpPoint[fill=black]
+
+\begin{document}
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 3/0/B}
+	\tkzDefEquilateral(A,B) \tkzGetPoint{C}
+	\tkzDrawPolygon(A,B,C)
+\end{tikzpicture}
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 3/0/B, 3/2/C, 0/2/D}
+
+	\tkzDrawPolygon(A,B,C,D)
+	\tkzDrawSegments(A,C B,D)
+\end{tikzpicture}
+\begin{tikzpicture}
+	\tkzDefPoint(0,0){O}
+	% 计算五边形的顶点 (起始角度从90°)
+	\tkzDefPoint(90:2){A}   % 第一个点在90°
+	\tkzDefPoint(162:2){B}  % 第二个点在162°
+	\tkzDefPoint(234:2){C}  % 第三个点在234°
+	\tkzDefPoint(306:2){D}  % 第四个点在306°
+	\tkzDefPoint(18:2){E}   % 第五个点在18°
+
+	\tkzDrawPolygon(A,B,C,D,E)
+	\tkzDrawSegments(A,C A,D B,E B,D C,E)
+
+	\tkzAutoLabelPoints[center=O](A,B,C,D,E)
+\end{tikzpicture}
+\vskip 2cm
+\begin{tikzpicture}
+	\tkzDefPoint(0,0){O}
+	% 计算五边形的顶点 (起始角度从90°)
+	\tkzDefPoint(0:2){A}   % 第一个点在90°
+	\tkzDefPoint(60:2){B}  % 第二个点在162°
+	\tkzDefPoint(120:2){C}  % 第三个点在234°
+	\tkzDefPoint(180:2){D}  % 第四个点在306°
+	\tkzDefPoint(240:2){E}   % 第五个点在18°
+	\tkzDefPoint(300:2){F}   % 第五个点在18°
+
+	\tkzDrawPolygon(A,B,C,D,E,F)
+	\tkzDrawSegments(A,C A,D B,E B,D C,E C,F B,F E,A D,F)
+
+	\tkzAutoLabelPoints[center=O](A,B,C,D,E,F)
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw (0,0) rectangle (1,1);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw[scale=0.8] (0,0) rectangle +(1,1);
+	\draw[scale=0.8] (0,1) rectangle +(1,1);
+	\draw[scale=0.8] (1,0) rectangle +(1,1);
+\end{tikzpicture}
+\begin{tikzpicture}
+	% 定义正方形的大小和间隔
+	\def\squareSize{1} % 正方形边长
+	\def\gap{0.2}      % 正方形之间的间隔
+
+	% 绘制第1行 (1个正方形)
+	\draw (0,3*\squareSize + 3*\gap) rectangle (\squareSize,4*\squareSize + 3*\gap);
+
+	% 绘制第2行 (2个正方形)
+	\draw (0,2*\squareSize + 2*\gap) rectangle (\squareSize,3*\squareSize + 2*\gap);
+	\draw (\squareSize + \gap,2*\squareSize + 2*\gap) rectangle (2*\squareSize + \gap,3*\squareSize + 2*\gap);
+
+	% 绘制第3行 (3个正方形)
+	\draw (0,\squareSize + \gap) rectangle (\squareSize,\squareSize*2 + \gap);
+	\draw (\squareSize + \gap,\squareSize + \gap) rectangle (2*\squareSize + \gap,2*\squareSize + \gap);
+	\draw (2*\squareSize + 2*\gap,\squareSize + \gap) rectangle (3*\squareSize + 2*\gap,2*\squareSize + \gap);
+
+	% 绘制第4行 (4个正方形)
+	\draw (0,0) rectangle (\squareSize,\squareSize);
+	\draw (\squareSize + \gap,0) rectangle (2*\squareSize + \gap,\squareSize);
+	\draw (2*\squareSize + 2*\gap,0) rectangle (3*\squareSize + 2*\gap,\squareSize);
+	\draw (3*\squareSize + 3*\gap,0) rectangle (4*\squareSize + 3*\gap,\squareSize);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 0.5/1/B}
+	\tkzDefPoint(1,0){C}
+	\tkzDefLine[parallel=through C](A,B) \tkzGetPoint{D}
+
+	\tkzDrawSegment[thick, Stealth-Stealth, add=1 and 1, gray](A,B)
+	\tkzDrawSegment[thick, -Stealth, add=0 and 1](A,B)
+	\tkzDrawPoints(A,B)
+	\tkzLabelPoints[left](A,B)
+	\tkzDrawSegment[thick, Stealth-Stealth, add=1 and 1, gray](D,C)
+	\tkzDrawSegment[thick, -Stealth, add=0 and 1](D,C)
+	\tkzDrawPoints(C,D)
+	\tkzLabelPoints[left](C,D)
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=.6]
+	\foreach \p in {-10,...,10}{
+			\tkzDefPoint(\p,0){P_\p}
+			\tkzDrawPoint[shape=cross, thick, teal](P_\p)
+			\tkzLabelPoint[below=5pt, font=\tiny](P_\p){$\p$}
+		}
+	\tkzDefPoints{-7/0/A, -2/0/B, 0/0/C, 2/0/D, 5/0/E, 9/0/F}
+	\tkzDrawSegment[thick, add= .1 and .1, Latex-Latex](P_-10,P_10)
+	\tkzDrawPoints[color=teal, fill=teal, size=5](A,B,C,D,E,F)
+	\tkzLabelPoints[above=3pt](A,B,C,D,E,F)
+
+	\tkzDefPoint(-4.5,-5){B'}
+	\tkzDrawArc[color=magenta!80, thick](B',B)(A)
+	\draw[thick, color=green] (B) .. controls(-1.5, .5) and (-.5, .5) .. (C);
+	\draw (C) .. controls(1, .5) .. (D);
+	\draw (D) .. controls(3.5, .5) .. (E);
+	\draw (E) .. controls(7, .5) .. (F);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/B, 3/0/C, -1/0/A, 4/0/D}
+	\tkzDefEquilateral(B,C) \tkzGetPoint{E}
+
+	\tkzDrawPolygon(A,B,C,D,E)
+	\tkzDrawSegments(B,E C,E)
+
+	\tkzMarkSegments[mark=s||](B,E C,E)
+	\tkzMarkSegments[mark=s|](A,B C,D)
+
+	\tkzMarkAngles[size=0.2](E,B,A D,C,E)
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=30]
+	\tkzDefPoints{0/0/A, 3/0/B}
+	\tkzDefEquilateral(A,B) \tkzGetPoint{C}
+
+	\tkzDrawPolygon(A,B,C)
+	\tkzFindAngle(C,B,A) \tkzGetAngle{angleABC}
+	\edef\angleABC{\fpeval{\angleABC}}
+	\tkzMarkAngle[size=.5](C,B,A)
+	\tkzLabelAngle(C,B,A){$\angleABC^\circ$}
+
+\end{tikzpicture}
+
+\pagebreak
+
+\begin{questions}
+	\question
+	已知半圆的半径为$5$,
+	\begin{figure}[htbp]
+		\begin{center}
+			\begin{tikzpicture}
+				% \tkzInit[ymin=0]
+				% \tkzDrawXY
+				\tkzDefPoint(0,0){O}
+				\tkzDefPoint(3,0){A}
+				\tkzDefPoint(-3,0){B}
+				\tkzDefPoint(-1,0){P}
+				\tkzDefShiftPointCoord[P](45:1){p1}
+				\tkzInterLC(P,p1)(O,A) \tkzGetFirstPoint{Q}
+				\tkzDefShiftPointCoord[P](135:1){p2}
+				\tkzInterLC(P,p2)(O,A) \tkzGetFirstPoint{T}
+				\tkzDefLine[orthogonal=through T](O,B) \tkzGetPoint{c}
+				\tkzInterLL(T,c)(O,B) \tkzGetPoint{C}
+				\tkzDefLine[orthogonal=through Q](O,A) \tkzGetPoint{d}
+				\tkzInterLL(Q,d)(O,A) \tkzGetPoint{D}
+
+				\tkzDrawSemiCircle(O,A)
+				\tkzDrawSegment(A,B)
+				\draw[pattern=north east lines, pattern color=black!10] (P) rectangle (Q);
+				\draw[pattern=north east lines, pattern color=black!10] (P) rectangle (T);
+				\tkzDrawSegment[dim={$b$, -.5cm, below=2mm }](C,P)
+				\tkzDrawSegment[dim={$a$, -.5cm, below=2mm }](P,D)
+				\tkzDrawSegment[dim={$x$, -.2cm,}](P,O)
+				\tkzDrawSegments[red, thick](O,T O,Q)
+				\tkzLabelSegment[fill=white](O,T){$r$}
+				\tkzLabelSegment[fill=white](O,Q){$r$}
+				% \tkzDrawPoints(O,A,B,P,Q,T)
+				% \tkzLabelPoints[below](O,A,B)
+				% \tkzLabelPoints[left](T)
+				% \tkzLabelPoints[above](Q)
+			\end{tikzpicture}
+			\caption{}
+		\end{center}
+	\end{figure}
+	求阴影部分面积.
+
+	\begin{solution}
+		令两个正方形的边长分别为 \( a, b \),如图所示.
+
+		则阴影部分的面积为 \( a^2 + b^2 \).
+
+		根据图形有
+		\begin{math}
+			\begin{cases}
+				(b+x)^2 + b^2 = r^2 \\
+				(a-x)^2 + a^2 = r^2
+			\end{cases}
+		\end{math}
+
+		两式相减得:
+		\begin{align*}
+			b^2 + 2bx + b^2 - a^2 + 2ax - a^2 & = 0 \\
+			2b^2 + 2(a+b)x - 2a^2             & = 0 \\
+			(a+b)(a-b) - (a+b)x               & = 0 \\
+			(a+b)(a-b-x)                      & = 0 \\
+		\end{align*}
+		由 \( a+b > 0 \),可得:
+		\[
+			x = a - b.
+		\]
+
+		将 \( x \) 代入原方程 \( (b+x)^2 + b^2 = r^2 \),验证后得到最终阴影部分的面积为:
+		\[
+			\boxed{a^2 + b^2 = r^2 = 25}.
+		\]
+
+		则阴影部分的为 \( 25 \).
+
+	\end{solution}
+\end{questions}
+\end{document}
