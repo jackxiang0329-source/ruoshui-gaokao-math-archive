@@ -51,3 +51,15 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 ## 许可证
 
 上游保持独立许可，不能把整个聚合库声称为一个统一许可证。部分原仓库存在许可声明不完整或第三方素材权利不明确的情况，详见 [sources.json](sources.json)。
+
+
+## 题目级导数索引（第二轮）
+
+已在 [2023—2026 年题目级导数索引](index/DERIVATIVE_PROBLEMS_2023_2026.md) 建立首批 **27 道**解答题位置与来源链接；其中 **2 道**完成独立数学质检，其余为来源定位或待进一步归类，不可误称“已验证正确”。
+
+- [27 道题目的 CSV](index/derivative-problems-2023-2026.csv)
+- [独立核验两题的 Markdown 解答](derivative/reviewed/2024-two-proofs.md)
+- [可独立 XeLaTeX 编译的源码](derivative/reviewed/2024-two-proofs.tex)
+- [全文 LaTeX 逐题扫描程序](scripts/scan_derivative_questions.py)，在递归克隆完成后扫描上游试卷，输出 `index/derivative-machine-candidates.csv` 与 `index/DERIVATIVE_MACHINE.md`。这些结果只属于 **机器候选**，不是数学验证通过。
+
+> 同步工作流的首次 GitHub Actions 运行在分配 Runner 前失败，未能确认自动同步正常。已手工通过 Git Trees API 写入文件级索引和 2023—2026 的题目级初筛索引。
