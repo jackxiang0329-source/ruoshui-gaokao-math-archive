@@ -12,11 +12,10 @@
 | 2014 安徽文科第20题、理科第18题（同题） | [完整参数分类及上游解析问题](2014-anhui-common-q.md) | [TeX](2014-anhui-common-q.tex) |
 | 2019 全国Ⅱ卷文科第21题 | [证明](2019-national2-liberal-q21.md) | [TeX](2019-national2-liberal-q21.tex) |
 | 2024 新高考Ⅰ卷第18题与Ⅱ卷第16题 | [两道独立证明](2024-two-proofs.md) | [合订源码](2024-two-proofs.tex) |
-
-| 2023 全国乙卷文科第20题 | [证明](2023-national-b-liberal-q20.md) | 尚未整理独立 TeX |
-| 2023 新高考Ⅰ卷第19题 | [证明](2023-new-gaokao-1-q19.md) | 尚未整理独立 TeX |
-| 2025 上海卷第19题 | [证明](2025-shanghai-q19.md) | 尚未整理独立 TeX |
-| 2025 全国Ⅱ卷第18题 | [证明及链式法则勘误](2025-national2-q18.md) | 尚未整理独立 TeX |
+| 2023 全国乙卷文科第20题 | [证明](2023-national-b-liberal-q20.md) | [TeX](2023-national-b-liberal-q20.tex) |
+| 2023 新高考Ⅰ卷第19题 | [证明](2023-new-gaokao-1-q19.md) | [TeX](2023-new-gaokao-1-q19.tex) |
+| 2025 上海卷第19题 | [证明](2025-shanghai-q19.md) | [TeX](2025-shanghai-q19.tex) |
+| 2025 全国Ⅱ卷第18题 | [证明及链式法则勘误](2025-national2-q18.md) | [TeX](2025-national2-q18.tex) |
 
 [2025 北京卷第20题标号审计](2025-beijing-q20-transcription-audit.md) 不计入上述 15 条数学核验。
 

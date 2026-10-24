@@ -74,8 +74,8 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 - [已完成数学证明与可独立编译源码目录](derivative/reviewed/README.md)
 - [数学复核溯源和重复索引自动一致性检查](scripts/validate_review_traceability.py)
 - [第六轮质检报告](metadata/ROUND_06_REPORT.md)
-- [2023 全国乙卷文科第20题完整证明](derivative/reviewed/2023-national-b-liberal-q20.md) / [2023 新高考Ⅰ卷第19题证明](derivative/reviewed/2023-new-gaokao-1-q19.md)
-- [2025 上海卷第19题证明](derivative/reviewed/2025-shanghai-q19.md) / [2025 全国Ⅱ卷第18题证明](derivative/reviewed/2025-national2-q18.md)
+- [2023 全国乙卷文科第20题完整证明](derivative/reviewed/2023-national-b-liberal-q20.md) / [TeX](derivative/reviewed/2023-national-b-liberal-q20.tex) / [2023 新高考Ⅰ卷第19题证明](derivative/reviewed/2023-new-gaokao-1-q19.md) / [TeX](derivative/reviewed/2023-new-gaokao-1-q19.tex)
+- [2025 上海卷第19题证明](derivative/reviewed/2025-shanghai-q19.md) / [TeX](derivative/reviewed/2025-shanghai-q19.tex) / [2025 全国Ⅱ卷第18题证明](derivative/reviewed/2025-national2-q18.md) / [TeX](derivative/reviewed/2025-national2-q18.tex)
 - [2025 北京卷第20题转录顺序冲突审计](derivative/reviewed/2025-beijing-q20-transcription-audit.md)：暂不升格数学核验
 - [第七轮审校报告](metadata/ROUND_07_REPORT.md)
 - [机器扫描候选](scripts/scan_derivative_questions.py)、[索引一致性脚本](scripts/validate_question_index.py)、[第五轮报告](metadata/ROUND_05_REPORT.md)
