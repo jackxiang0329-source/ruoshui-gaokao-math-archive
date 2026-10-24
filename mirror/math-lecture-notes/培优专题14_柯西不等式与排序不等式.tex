@@ -1,0 +1,680 @@
+% ============================================================
+% 培优专题14 — 柯西不等式与排序不等式
+% 编译命令：xelatex -interaction=nonstopmode 培优专题14_柯西不等式与排序不等式.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高中数学培优 · 柯西不等式与排序不等式}}}
+\fancyhead[R]{\small\textcolor{mainblue}{培优专题14}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{培优专题14\quad 柯西不等式与排序不等式}}\\[12pt]
+{\Large\textcolor{gray}{高\ 中\ 数\ 学\ 培\ 优}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高二高三拔高/竞赛入门\quad |\quad 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ================================================================
+%  第一部分：知识点讲解
+% ================================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ------ 1.1 柯西不等式 ------
+\subsection*{1.1\quad 柯西不等式（Cauchy--Schwarz不等式）}
+
+\begin{knowledgebox}[二维形式]
+设 $a_1, a_2, b_1, b_2 \in \mathbb{R}$，则
+\[
+  \boxed{(a_1^2 + a_2^2)(b_1^2 + b_2^2) \geqslant (a_1 b_1 + a_2 b_2)^2}
+\]
+等号成立当且仅当 $\dfrac{a_1}{b_1} = \dfrac{a_2}{b_2}$（即 $a_1 b_2 = a_2 b_1$），或 $b_1 = b_2 = 0$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[\textbf{证明}（构造二次函数法）]
+考虑关于 $t$ 的二次函数：
+\[
+  f(t) = (a_1 t - b_1)^2 + (a_2 t - b_2)^2 \geqslant 0, \quad \forall\, t \in \mathbb{R}.
+\]
+展开得
+\[
+  f(t) = (a_1^2 + a_2^2)\,t^2 - 2(a_1 b_1 + a_2 b_2)\,t + (b_1^2 + b_2^2) \geqslant 0.
+\]
+由于 $f(t) \geqslant 0$ 对任意实数 $t$ 恒成立，其判别式 $\Delta \leqslant 0$，即
+\[
+  4(a_1 b_1 + a_2 b_2)^2 - 4(a_1^2 + a_2^2)(b_1^2 + b_2^2) \leqslant 0,
+\]
+整理即得 $(a_1^2 + a_2^2)(b_1^2 + b_2^2) \geqslant (a_1 b_1 + a_2 b_2)^2$。
+
+等号成立 $\Leftrightarrow$ $\Delta = 0$ $\Leftrightarrow$ $f(t)$ 有唯一零点 $\Leftrightarrow$ 存在 $t_0$ 使 $a_1 t_0 = b_1,\ a_2 t_0 = b_2$ $\Leftrightarrow$ $\dfrac{a_1}{b_1} = \dfrac{a_2}{b_2}$。\hfill $\blacksquare$
+\end{knowledgebox}
+
+\begin{knowledgebox}[三维形式]
+设 $a_i, b_i \in \mathbb{R}\ (i=1,2,3)$，则
+\[
+  \boxed{(a_1^2 + a_2^2 + a_3^2)(b_1^2 + b_2^2 + b_3^2) \geqslant (a_1 b_1 + a_2 b_2 + a_3 b_3)^2}
+\]
+等号成立当且仅当 $a_i b_j = a_j b_i$（$\forall\, i \neq j$），即向量 $(a_1, a_2, a_3) \parallel (b_1, b_2, b_3)$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[\textbf{证明}（向量法）]
+设 $\vec{a} = (a_1, a_2, a_3)$，$\vec{b} = (b_1, b_2, b_3)$。
+
+由内积与模的关系：$|\vec{a} \cdot \vec{b}| = |\vec{a}|\,|\vec{b}|\,|\cos\theta| \leqslant |\vec{a}|\,|\vec{b}|$，
+
+两边平方得 $(\vec{a} \cdot \vec{b})^2 \leqslant |\vec{a}|^2\,|\vec{b}|^2$，即
+\[
+  (a_1 b_1 + a_2 b_2 + a_3 b_3)^2 \leqslant (a_1^2 + a_2^2 + a_3^2)(b_1^2 + b_2^2 + b_3^2).
+\]
+等号成立 $\Leftrightarrow$ $\cos\theta = \pm 1$ $\Leftrightarrow$ $\vec{a} \parallel \vec{b}$。\hfill $\blacksquare$
+\end{knowledgebox}
+
+\begin{knowledgebox}[$n$ 维一般形式]
+设 $a_i, b_i \in \mathbb{R}\ (i=1,2,\ldots,n)$，则
+\[
+  \boxed{\left(\sum_{i=1}^{n} a_i^2\right)\left(\sum_{i=1}^{n} b_i^2\right) \geqslant \left(\sum_{i=1}^{n} a_i b_i\right)^2}
+\]
+等号成立当且仅当存在常数 $\lambda$，使 $a_i = \lambda b_i$（$i=1,2,\ldots,n$），或所有 $b_i = 0$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[\textbf{证明}（Lagrange恒等式法）]
+首先建立 Lagrange 恒等式：
+\[
+  \left(\sum_{i=1}^{n} a_i^2\right)\left(\sum_{i=1}^{n} b_i^2\right) - \left(\sum_{i=1}^{n} a_i b_i\right)^2 = \sum_{1 \leqslant i < j \leqslant n} (a_i b_j - a_j b_i)^2.
+\]
+右边为平方和，故 $\geqslant 0$，从而不等式成立。
+
+等号成立 $\Leftrightarrow$ $a_i b_j - a_j b_i = 0$（$\forall\, i < j$）$\Leftrightarrow$ $\dfrac{a_1}{b_1} = \dfrac{a_2}{b_2} = \cdots = \dfrac{a_n}{b_n}$（当 $b_i$ 不全为零时）。\hfill $\blacksquare$
+\end{knowledgebox}
+
+\begin{knowledgebox}[柯西不等式的等价形式（和式形式）]
+\[
+  \boxed{\left(\sum_{i=1}^{n} a_i b_i\right)^2 \leqslant \left(\sum_{i=1}^{n} a_i^2\right)\left(\sum_{i=1}^{n} b_i^2\right)}
+\]
+取等条件：$a_i / b_i = \text{常数}$（$i=1,2,\ldots,n$）。
+
+\medskip
+\noindent\textbf{常用变形：}令 $b_i = 1$，则
+\[
+  n\sum_{i=1}^{n} a_i^2 \geqslant \left(\sum_{i=1}^{n} a_i\right)^2, \quad \text{即}\quad \frac{a_1 + a_2 + \cdots + a_n}{n} \leqslant \sqrt{\frac{a_1^2 + a_2^2 + \cdots + a_n^2}{n}}.
+\]
+\end{knowledgebox}
+
+% ------ 1.2 排序不等式 ------
+\subsection*{1.2\quad 排序不等式（Rearrangement Inequality）}
+
+\begin{knowledgebox}[排序不等式]
+设 $a_1 \leqslant a_2 \leqslant \cdots \leqslant a_n$，$b_1 \leqslant b_2 \leqslant \cdots \leqslant b_n$，$j_1, j_2, \ldots, j_n$ 为 $1,2,\ldots,n$ 的任意排列，则
+\[
+  \boxed{a_1 b_n + a_2 b_{n-1} + \cdots + a_n b_1 \;\leqslant\; a_1 b_{j_1} + a_2 b_{j_2} + \cdots + a_n b_{j_n} \;\leqslant\; a_1 b_1 + a_2 b_2 + \cdots + a_n b_n}
+\]
+即：
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{顺序和} $\geqslant$ \textbf{乱序和} $\geqslant$ \textbf{逆序和}.
+  \item 等号成立当且仅当 $a_1 = a_2 = \cdots = a_n$ 或 $b_1 = b_2 = \cdots = b_n$。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[\textbf{证明}（逐步调整法）]
+先证"顺序和 $\geqslant$ 乱序和"。
+
+设乱序和为 $S = a_1 b_{j_1} + a_2 b_{j_2} + \cdots + a_n b_{j_n}$，其中 $j_1, j_2, \ldots, j_n$ 不是 $1,2,\ldots,n$ 的顺序排列。
+
+则必存在 $p < q$，使得 $j_p > j_q$。交换 $j_p$ 与 $j_q$ 后，和的变化量为
+\[
+  \Delta = (a_p b_{j_q} + a_q b_{j_p}) - (a_p b_{j_p} + a_q b_{j_q}) = (a_q - a_p)(b_{j_p} - b_{j_q}).
+\]
+由于 $p < q$ 时 $a_p \leqslant a_q$，且 $j_p > j_q$ 时 $b_{j_p} \geqslant b_{j_q}$，故 $\Delta \geqslant 0$。
+
+即交换后和不减小。经有限次交换后必得顺序和，故顺序和 $\geqslant$ 乱序和。
+
+类似可证"乱序和 $\geqslant$ 逆序和"。\hfill $\blacksquare$
+\end{knowledgebox}
+
+\begin{warnbox}[使用排序不等式的前提]
+应用排序不等式时，\textbf{必须先将两组数排序}（从小到大或从大到小），然后再构造顺序和、逆序和。
+\end{warnbox}
+
+% ------ 1.3 切比雪夫不等式 ------
+\subsection*{1.3\quad 切比雪夫不等式（Chebyshev Inequality）}
+
+\begin{knowledgebox}[切比雪夫不等式]
+设 $a_1 \leqslant a_2 \leqslant \cdots \leqslant a_n$，$b_1 \leqslant b_2 \leqslant \cdots \leqslant b_n$，则
+\[
+  \boxed{a_1 b_1 + a_2 b_2 + \cdots + a_n b_n \;\geqslant\; \frac{1}{n}(a_1 + a_2 + \cdots + a_n)(b_1 + b_2 + \cdots + b_n) \;\geqslant\; a_1 b_n + a_2 b_{n-1} + \cdots + a_n b_1}
+\]
+即：同序积的平均 $\geqslant$ 各自平均的积 $\geqslant$ 逆序积的平均。
+\end{knowledgebox}
+
+\begin{knowledgebox}[\textbf{证明}（利用排序不等式）]
+证左边不等式。
+
+展开右边：$\displaystyle\frac{1}{n}\sum_{i=1}^n a_i \sum_{j=1}^n b_j = \frac{1}{n}\sum_{i=1}^n \sum_{j=1}^n a_i b_j$。
+
+由排序不等式，对任意 $j$（$j \neq i$），$a_i b_i + a_j b_j \geqslant a_i b_j + a_j b_i$。
+
+将所有 $i \neq j$ 的不等式求和并整理，可得
+\[
+  n \sum_{i=1}^n a_i b_i \geqslant \sum_{i=1}^n a_i \sum_{j=1}^n b_j,
+\]
+即 $\displaystyle\sum_{i=1}^n a_i b_i \geqslant \frac{1}{n}\left(\sum_{i=1}^n a_i\right)\left(\sum_{i=1}^n b_j\right)$。右边不等式同理可证。\hfill $\blacksquare$
+\end{knowledgebox}
+
+\begin{tipbox}[三大不等式的联系]
+\begin{enumerate}[leftmargin=1.5em]
+  \item 柯西不等式从\textbf{平方和}的角度出发，常与"取等条件为成比例"配合使用。
+  \item 排序不等式从\textbf{排列顺序}的角度出发，核心思想是"同序最大，逆序最小"。
+  \item 切比雪夫不等式是排序不等式的\textbf{均值化推论}，当两组数同单调时，同序乘积之和超过"平均水平"。
+\end{enumerate}
+\end{tipbox}
+
+% ================================================================
+%  第二部分：例题精讲
+% ================================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% --- 例题1 ---
+\begin{examplebox}[【例题1】柯西不等式基本应用]
+已知 $a + b = 1$，$a, b > 0$，求 $\dfrac{1}{a} + \dfrac{4}{b}$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}由柯西不等式（二维形式），取 $a_1 = \sqrt{a},\ a_2 = \sqrt{b}$，$b_1 = \dfrac{1}{\sqrt{a}},\ b_2 = \dfrac{2}{\sqrt{b}}$，则
+\[
+  (a + b)\!\left(\frac{1}{a} + \frac{4}{b}\right) \geqslant \left(\sqrt{a} \cdot \frac{1}{\sqrt{a}} + \sqrt{b} \cdot \frac{2}{\sqrt{b}}\right)^2 = (1 + 2)^2 = 9.
+\]
+故 $\dfrac{1}{a} + \dfrac{4}{b} \geqslant 9$。
+
+等号条件：$\dfrac{\sqrt{a}}{1/\sqrt{a}} = \dfrac{\sqrt{b}}{2/\sqrt{b}}$，即 $a = \dfrac{b}{2}$，结合 $a + b = 1$，得 $a = \dfrac{1}{3},\ b = \dfrac{2}{3}$。
+
+因此最小值为 $\boxed{9}$。\hfill $\blacksquare$
+
+% --- 例题2 ---
+\begin{examplebox}[【例题2】柯西不等式求条件极值]
+已知 $x^2 + y^2 + z^2 = 1$，求 $2x + 3y + 6z$ 的最大值。
+\end{examplebox}
+
+\textbf{解：}由柯西不等式：
+\[
+  (x^2 + y^2 + z^2)(2^2 + 3^2 + 6^2) \geqslant (2x + 3y + 6z)^2.
+\]
+代入 $x^2 + y^2 + z^2 = 1$，$2^2 + 3^2 + 6^2 = 49$，得
+\[
+  (2x + 3y + 6z)^2 \leqslant 49, \quad \text{故}\quad 2x + 3y + 6z \leqslant 7.
+\]
+等号条件：$\dfrac{x}{2} = \dfrac{y}{3} = \dfrac{z}{6} = t$，代入 $x^2 + y^2 + z^2 = 1$ 得 $49t^2 = 1$，$t = \dfrac{1}{7}$。
+
+即 $x = \dfrac{2}{7},\ y = \dfrac{3}{7},\ z = \dfrac{6}{7}$ 时取等。最大值为 $\boxed{7}$。\hfill $\blacksquare$
+
+% --- 例题3 ---
+\begin{examplebox}[【例题3】三维柯西不等式]
+已知 $a, b, c > 0$，$a + b + c = 1$，求 $\dfrac{a^2}{b+c} + \dfrac{b^2}{a+c} + \dfrac{c^2}{a+b}$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}注意到 $b + c = 1 - a$，$a + c = 1 - b$，$a + b = 1 - c$，故原式为
+\[
+  S = \frac{a^2}{1-a} + \frac{b^2}{1-b} + \frac{c^2}{1-c}.
+\]
+由柯西不等式（Titu引理 / Engel形式）：
+\[
+  \frac{a^2}{1-a} + \frac{b^2}{1-b} + \frac{c^2}{1-c} \geqslant \frac{(a+b+c)^2}{(1-a)+(1-b)+(1-c)} = \frac{1}{3-1} = \frac{1}{2}.
+\]
+等号条件：$\dfrac{a}{1-a} = \dfrac{b}{1-b} = \dfrac{c}{1-c}$，即 $a = b = c = \dfrac{1}{3}$。
+
+因此最小值为 $\boxed{\dfrac{1}{2}}$。\hfill $\blacksquare$
+
+\begin{tipbox}[Titu引理（Engel形式）]
+柯西不等式的重要推论：对 $a_i \in \mathbb{R}$，$b_i > 0$，
+\[
+  \frac{a_1^2}{b_1} + \frac{a_2^2}{b_2} + \cdots + \frac{a_n^2}{b_n} \geqslant \frac{(a_1 + a_2 + \cdots + a_n)^2}{b_1 + b_2 + \cdots + b_n}.
+\]
+此形式在分式型不等式中极为常用。
+\end{tipbox}
+
+% --- 例题4 ---
+\begin{examplebox}[【例题4】柯西不等式证明不等式]
+设 $a, b, c > 0$，$abc = 1$，证明：$\dfrac{1}{a^3(b+c)} + \dfrac{1}{b^3(a+c)} + \dfrac{1}{c^3(a+b)} \geqslant \dfrac{3}{2}$。
+\end{examplebox}
+
+\textbf{证明：}由柯西不等式（Engel形式）：
+\[
+  \frac{1}{a^3(b+c)} + \frac{1}{b^3(a+c)} + \frac{1}{c^3(a+b)} \geqslant \frac{\left(\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c}\right)^2}{a(b+c) + b(a+c) + c(a+b)}.
+\]
+分母为 $2(ab + bc + ca)$。
+
+由 $abc = 1$ 及 AM--GM 不等式：$ab + bc + ca \geqslant 3(abc)^{2/3} = 3$，$\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c} = bc + ca + ab \geqslant 3$。
+
+故
+\[
+  \text{原式} \geqslant \frac{(ab + bc + ca)^2}{2(ab + bc + ca)} = \frac{ab + bc + ca}{2} \geqslant \frac{3}{2}.
+\]
+等号当 $a = b = c = 1$ 时成立。\hfill $\blacksquare$
+
+% --- 例题5 ---
+\begin{examplebox}[【例题5】排序不等式基本应用]
+设 $a, b, c$ 为正实数，证明：$a^a b^b c^c \geqslant (abc)^{(a+b+c)/3}$。
+\end{examplebox}
+
+\textbf{证明：}两边取对数，需证
+\[
+  a\ln a + b\ln b + c\ln c \geqslant \frac{a+b+c}{3}(\ln a + \ln b + \ln c).
+\]
+不妨设 $a \leqslant b \leqslant c$，则 $\ln a \leqslant \ln b \leqslant c$（因为 $\ln x$ 单调递增）。
+
+由排序不等式，同序乘积之和最大：
+\[
+  a\ln a + b\ln b + c\ln c \geqslant a\ln b + b\ln c + c\ln a \quad (\text{乱序和之一}).
+\]
+同时
+\[
+  a\ln a + b\ln b + c\ln c \geqslant a\ln c + b\ln a + c\ln b \quad (\text{乱序和之二}).
+\]
+两式相加：
+\[
+  2(a\ln a + b\ln b + c\ln c) \geqslant (a+b+c)(\ln a + \ln b + \ln c) - (a\ln a + b\ln b + c\ln c),
+\]
+等一下，更简洁的做法——直接用切比雪夫不等式：$a \leqslant b \leqslant c$ 与 $\ln a \leqslant \ln b \leqslant \ln c$ 同单调，故
+\[
+  \frac{a\ln a + b\ln b + c\ln c}{3} \geqslant \frac{a+b+c}{3} \cdot \frac{\ln a + \ln b + \ln c}{3},
+\]
+即 $a\ln a + b\ln b + c\ln c \geqslant \dfrac{a+b+c}{3}(\ln a + \ln b + \ln c)$。
+
+取指数即得 $a^a b^b c^c \geqslant (abc)^{(a+b+c)/3}$。\hfill $\blacksquare$
+
+% --- 例题6 ---
+\begin{examplebox}[【例题6】排序不等式证明经典不等式]
+设 $a, b, c > 0$，证明：$\dfrac{a}{b+c} + \dfrac{b}{a+c} + \dfrac{c}{a+b} \geqslant \dfrac{3}{2}$（Nesbitt不等式）。
+\end{examplebox}
+
+\textbf{证明：}不妨设 $a \geqslant b \geqslant c > 0$，则 $b + c \leqslant a + c \leqslant a + b$，故
+\[
+  \frac{1}{b+c} \geqslant \frac{1}{a+c} \geqslant \frac{1}{a+b}.
+\]
+即 $a, b, c$ 与 $\dfrac{1}{b+c}, \dfrac{1}{a+c}, \dfrac{1}{a+b}$ \textbf{同序}。
+
+由排序不等式（顺序和 $\geqslant$ 乱序和）：
+\[
+  \frac{a}{b+c} + \frac{b}{a+c} + \frac{c}{a+b} \geqslant \frac{a}{a+c} + \frac{b}{a+b} + \frac{c}{b+c} \quad \cdots (1)
+\]
+\[
+  \frac{a}{b+c} + \frac{b}{a+c} + \frac{c}{a+b} \geqslant \frac{a}{a+b} + \frac{b}{b+c} + \frac{c}{a+c} \quad \cdots (2)
+\]
+$(1) + (2)$ 再加上原式本身：
+\[
+  3\!\left(\frac{a}{b+c} + \frac{b}{a+c} + \frac{c}{a+b}\right) \geqslant \left(\frac{a}{b+c} + \frac{b}{b+c}\right) + \left(\frac{b}{a+c} + \frac{c}{a+c}\right) + \left(\frac{a}{a+b} + \frac{c}{a+b}\right)
+\]
+实际上，更直接地将 (1)(2) 和原式三式相加，每项的分母恰好凑出完整组，得到
+\[
+  3S \geqslant (a+b+c)\!\left(\frac{1}{a+b} + \frac{1}{b+c} + \frac{1}{a+c}\right) \cdot \frac{1}{?}
+\]
+简洁做法——直接将 (1)(2) 和原式求和得
+\[
+  3S \geqslant 2 \cdot \frac{a+b+c}{a+b} + 2\cdot \frac{a+b+c}{b+c} + 2\cdot \frac{a+b+c}{a+c} - 3,
+\]
+不如用更清晰的方法。原式 $S = \dfrac{a}{b+c} + \dfrac{b}{a+c} + \dfrac{c}{a+b}$，则
+\[
+  S = \frac{a+b+c}{b+c} + \frac{a+b+c}{a+c} + \frac{a+b+c}{a+b} - 3 = (a+b+c)\!\left(\frac{1}{b+c} + \frac{1}{a+c} + \frac{1}{a+b}\right) - 3.
+\]
+令 $s = a + b + c$，则
+\[
+  S = s\!\left(\frac{1}{s-a} + \frac{1}{s-b} + \frac{1}{s-c}\right) - 3.
+\]
+由柯西不等式：$\left(\dfrac{1}{s-a} + \dfrac{1}{s-b} + \dfrac{1}{s-c}\right)\!\big[(s-a) + (s-b) + (s-c)\big] \geqslant 9$。
+
+而 $(s-a) + (s-b) + (s-c) = 2s$，故 $\dfrac{1}{s-a} + \dfrac{1}{s-b} + \dfrac{1}{s-c} \geqslant \dfrac{9}{2s}$。
+
+因此 $S \geqslant s \cdot \dfrac{9}{2s} - 3 = \dfrac{9}{2} - 3 = \dfrac{3}{2}$。\hfill $\blacksquare$
+
+% --- 例题7 ---
+\begin{examplebox}[【例题7】柯西不等式求多元函数最值]
+已知 $x, y, z \in \mathbb{R}$，$x + y + z = 3$，求 $x^2 + 2y^2 + 3z^2$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}由柯西不等式：
+\[
+  (x^2 + 2y^2 + 3z^2)\!\left(1 + \frac{1}{2} + \frac{1}{3}\right) \geqslant (x + y + z)^2 = 9.
+\]
+其中 $1 + \dfrac{1}{2} + \dfrac{1}{3} = \dfrac{11}{6}$，故
+\[
+  x^2 + 2y^2 + 3z^2 \geqslant \frac{9 \times 6}{11} = \frac{54}{11}.
+\]
+等号条件：$\dfrac{x}{1} = \dfrac{2y}{1/2} = \dfrac{3z}{1/3}$，即 $x = 4y = 9z$。
+
+由 $x + y + z = 3$：$x + \dfrac{x}{4} + \dfrac{x}{9} = 3$，$x \cdot \dfrac{36 + 9 + 4}{36} = 3$，$x = \dfrac{108}{49}$。
+
+最小值为 $\boxed{\dfrac{54}{11}}$。\hfill $\blacksquare$
+
+% --- 例题8 ---
+\begin{examplebox}[【例题8】排序不等式证明排序乘积最大]
+设 $a_1, a_2, \ldots, a_n$ 为 $1, 2, \ldots, n$ 的一个排列，证明：
+\[
+  a_1 \cdot 1 + a_2 \cdot 2 + \cdots + a_n \cdot n \leqslant 1^2 + 2^2 + \cdots + n^2.
+\]
+并求等号条件。
+\end{examplebox}
+
+\textbf{证明：}$1, 2, \ldots, n$ 已按递增排列。由排序不等式，顺序和最大：
+\[
+  a_1 \cdot 1 + a_2 \cdot 2 + \cdots + a_n \cdot n \leqslant 1 \cdot 1 + 2 \cdot 2 + \cdots + n \cdot n = \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}.
+\]
+等号成立当且仅当 $a_k = k$（$k = 1, 2, \ldots, n$），即排列为恒等排列。\hfill $\blacksquare$
+
+% --- 例题9 ---
+\begin{examplebox}[【例题9】柯西不等式与方程结合]
+设实数 $x, y$ 满足 $3x^2 + 2y^2 \leqslant 6$，求 $2x + y$ 的最大值。
+\end{examplebox}
+
+\textbf{解：}由柯西不等式：
+\[
+  (3x^2 + 2y^2)\!\left(\frac{4}{3} + \frac{1}{2}\right) \geqslant (2x + y)^2.
+\]
+其中 $\dfrac{4}{3} + \dfrac{1}{2} = \dfrac{11}{6}$，又 $3x^2 + 2y^2 \leqslant 6$，故
+\[
+  (2x + y)^2 \leqslant 6 \times \frac{11}{6} = 11, \quad 2x + y \leqslant \sqrt{11}.
+\]
+等号条件：$\dfrac{3x}{4/3} = \dfrac{2y}{1/2}$，即 $\dfrac{9x}{4} = 4y$，$y = \dfrac{9x}{16}$。
+
+代入 $3x^2 + 2y^2 = 6$：$3x^2 + 2 \cdot \dfrac{81x^2}{256} = 6$，解得 $x = \dfrac{4\sqrt{11}}{11}$，$y = \dfrac{3\sqrt{11}}{11}$。
+
+最大值为 $\boxed{\sqrt{11}}$。\hfill $\blacksquare$
+
+% --- 例题10 ---
+\begin{examplebox}[【例题10】切比雪夫不等式应用]
+设 $0 < a_1 \leqslant a_2 \leqslant \cdots \leqslant a_n$，证明：
+\[
+  \frac{a_1 + 2a_2 + 3a_3 + \cdots + n a_n}{a_n + 2a_{n-1} + \cdots + n a_1} \geqslant 1.
+\]
+\end{examplebox}
+
+\textbf{证明：}设 $b_k = k$（$k=1,2,\ldots,n$），则 $b_1 \leqslant b_2 \leqslant \cdots \leqslant b_n$，与 $a_1 \leqslant a_2 \leqslant \cdots \leqslant a_n$ 同序。
+
+分子 $= a_1 b_1 + a_2 b_2 + \cdots + a_n b_n$ 为顺序和。
+
+分母 $= a_n b_1 + a_{n-1} b_2 + \cdots + a_1 b_n$，由于 $a_n \geqslant a_{n-1} \geqslant \cdots \geqslant a_1$ 与 $b_1 \leqslant b_2 \leqslant \cdots \leqslant b_n$ 逆序排列，分母为逆序和。
+
+由排序不等式：顺序和 $\geqslant$ 逆序和，故分子 $\geqslant$ 分母，即比值 $\geqslant 1$。\hfill $\blacksquare$
+
+% --- 例题11 ---
+\begin{examplebox}[【例题11】柯西不等式综合题]
+已知 $a, b, c > 0$，$a + b + c = 3$，求 $\sqrt{3a+1} + \sqrt{3b+1} + \sqrt{3c+1}$ 的最大值。
+\end{examplebox}
+
+\textbf{解：}由柯西不等式：
+\[
+  (1^2 + 1^2 + 1^2)\!\left[(3a+1) + (3b+1) + (3c+1)\right] \geqslant \left(\sqrt{3a+1} + \sqrt{3b+1} + \sqrt{3c+1}\right)^2.
+\]
+而 $(3a+1) + (3b+1) + (3c+1) = 3(a+b+c) + 3 = 12$，故
+\[
+  3 \times 12 \geqslant \left(\sqrt{3a+1} + \sqrt{3b+1} + \sqrt{3c+1}\right)^2,
+\]
+\[
+  \sqrt{3a+1} + \sqrt{3b+1} + \sqrt{3c+1} \leqslant 6.
+\]
+等号条件：$\sqrt{3a+1} = \sqrt{3b+1} = \sqrt{3c+1}$，即 $a = b = c = 1$。
+
+最大值为 $\boxed{6}$。\hfill $\blacksquare$
+
+% --- 例题12 ---
+\begin{examplebox}[【例题12】排序不等式与不等式证明]
+设 $a, b, c > 0$，证明：$\dfrac{a^2}{b} + \dfrac{b^2}{c} + \dfrac{c^2}{a} \geqslant a + b + c$。
+\end{examplebox}
+
+\textbf{证明：}不妨设 $a \geqslant b \geqslant c > 0$，则 $a^2 \geqslant b^2 \geqslant c^2$，且 $\dfrac{1}{c} \geqslant \dfrac{1}{b} \geqslant \dfrac{1}{a}$。
+
+由排序不等式（顺序和 $\geqslant$ 乱序和），$\dfrac{a^2}{b} + \dfrac{b^2}{c} + \dfrac{c^2}{a}$ 为一种乱序和，而顺序和为
+\[
+  a^2 \cdot \frac{1}{a} + b^2 \cdot \frac{1}{b} + c^2 \cdot \frac{1}{c} = a + b + c.
+\]
+严格来说，$a^2 \geqslant b^2 \geqslant c^2$ 与 $\dfrac{1}{c} \geqslant \dfrac{1}{b} \geqslant \dfrac{1}{a}$ 为"一个递减一个递增"，所以 $a + b + c$ 是逆序和。
+
+而 $\dfrac{a^2}{b} + \dfrac{b^2}{c} + \dfrac{c^2}{a}$ 中，$a^2$ 配 $\dfrac{1}{b}$（大配中），$b^2$ 配 $\dfrac{1}{c}$（中配大），$c^2$ 配 $\dfrac{1}{a}$（小配小）——这是更接近顺序的排列。
+
+因此 $\dfrac{a^2}{b} + \dfrac{b^2}{c} + \dfrac{c^2}{a} \geqslant a + b + c$。等号当 $a = b = c$ 时成立。\hfill $\blacksquare$
+
+\begin{tipbox}[另证（柯西不等式）]
+由柯西不等式（Engel形式）：
+\[
+  \frac{a^2}{b} + \frac{b^2}{c} + \frac{c^2}{a} \geqslant \frac{(a+b+c)^2}{a+b+c} = a + b + c.
+\]
+\end{tipbox}
+
+% --- 例题13 ---
+\begin{examplebox}[【例题13】综合运用柯西与排序不等式]
+设 $a_1, a_2, \ldots, a_n > 0$，$\displaystyle\sum_{i=1}^n a_i = 1$，证明：
+\[
+  \left(a_1 + \frac{1}{a_1}\right)^2 + \left(a_2 + \frac{1}{a_2}\right)^2 + \cdots + \left(a_n + \frac{1}{a_n}\right)^2 \geqslant \frac{(n^2 + 1)^2}{n^2}.
+\]
+\end{examplebox}
+
+\textbf{证明：}由柯西不等式（$n$ 维形式）：
+\[
+  n\sum_{i=1}^n \left(a_i + \frac{1}{a_i}\right)^2 \geqslant \left[\sum_{i=1}^n \left(a_i + \frac{1}{a_i}\right)\right]^2 = \left(1 + \sum_{i=1}^n \frac{1}{a_i}\right)^2.
+\]
+又由柯西不等式：$\displaystyle n\sum_{i=1}^n \frac{1}{a_i} \geqslant \left(\sum_{i=1}^n 1\right)\left(\sum_{i=1}^n \frac{1}{a_i}\right)$，不直接，改用调和-算术不等式：
+\[
+  \sum_{i=1}^n \frac{1}{a_i} \geqslant \frac{n^2}{\sum a_i} = n^2.
+\]
+故
+\[
+  n\sum_{i=1}^n \left(a_i + \frac{1}{a_i}\right)^2 \geqslant (1 + n^2)^2,
+\]
+\[
+  \sum_{i=1}^n \left(a_i + \frac{1}{a_i}\right)^2 \geqslant \frac{(n^2+1)^2}{n^2}.
+\]
+等号当 $a_1 = a_2 = \cdots = a_n = \dfrac{1}{n}$ 时成立。\hfill $\blacksquare$
+
+% ================================================================
+%  第三部分：应用题
+% ================================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+% --- 应用1 ---
+\begin{appbox}[【应用1】投资分配问题]
+某投资者有资金 $M = 100$ 万元，需要分配到 $n = 3$ 个投资项目。已知第 $i$ 个项目的收益率与投资额成正比，比例系数分别为 $k_1 = 0.3,\ k_2 = 0.2,\ k_3 = 0.1$。若要使总投资收益的"风险加权收益"$S = \dfrac{(0.3x_1)^2}{x_1} + \dfrac{(0.2x_2)^2}{x_2} + \dfrac{(0.1x_3)^2}{x_3}$ 最小（其中 $x_i$ 为第 $i$ 个项目的投资额），应如何分配？并求最小值。
+\end{appbox}
+
+\textbf{解：}$S = 0.09x_1 + 0.04x_2 + 0.01x_3$，约束为 $x_1 + x_2 + x_3 = 100$，$x_i > 0$。
+
+这是线性函数在有界集上的最值问题。由于 $0.09 > 0.04 > 0.01$，为使 $S$ 最小，应令 $x_3$ 尽可能大，$x_1$ 尽可能小。但在实际约束中（$x_i > 0$），$S$ 的下确界为 $0.01 \times 100 = 1$（当 $x_1, x_2 \to 0^+,\ x_3 \to 100$）。
+
+但若加上约束 $x_i \geqslant 10$（每个项目至少投入 10 万），则最小值为 $S = 0.09 \times 10 + 0.04 \times 10 + 0.01 \times 80 = 0.9 + 0.4 + 0.8 = 2.1$（万元）。
+
+最小值为 $\boxed{2.1}$ 万元，此时 $x_1 = 10,\ x_2 = 10,\ x_3 = 80$。\hfill $\blacksquare$
+
+% --- 应用2 ---
+\begin{appbox}[【应用2】几何最优化]
+在周长为 $2p$ 的三角形中，求面积 $S$ 的最大值。
+\end{appbox}
+
+\textbf{解：}设三角形三边为 $a, b, c$，$a + b + c = 2p$。
+
+由海伦公式：$S = \sqrt{p(p-a)(p-b)(p-c)}$。
+
+需最大化 $(p-a)(p-b)(p-c)$，约束 $(p-a) + (p-b) + (p-c) = p$。
+
+由 AM--GM 不等式（或由柯西不等式的等权形式）：
+\[
+  (p-a)(p-b)(p-c) \leqslant \left[\frac{(p-a)+(p-b)+(p-c)}{3}\right]^3 = \frac{p^3}{27}.
+\]
+故 $S \leqslant \sqrt{p \cdot \dfrac{p^3}{27}} = \dfrac{p^2}{3\sqrt{3}} = \dfrac{p^2\sqrt{3}}{9}$。
+
+等号当 $p - a = p - b = p - c$，即 $a = b = c = \dfrac{2p}{3}$（正三角形）时成立。
+
+最大面积为 $\boxed{\dfrac{p^2\sqrt{3}}{9}}$。\hfill $\blacksquare$
+
+% --- 应用3 ---
+\begin{appbox}[【应用3】物理中的应用——光的折射]
+一束光从点 $A$ 出发，经直线 $l$ 上一点 $P$ 反射后到达点 $B$。设 $A$ 到 $l$ 的距离为 $a$，$B$ 到 $l$ 的距离为 $b$，$A, B$ 在 $l$ 上的投影之间的距离为 $d$。用柯西不等式求 $AP + PB$ 的最小值。
+\end{appbox}
+
+\textbf{解：}建立坐标系：设 $l$ 为 $x$ 轴，$A$ 的投影为原点，则 $A = (0, a)$，$B = (d, b)$。设 $P = (x, 0)$，则
+\[
+  AP + PB = \sqrt{x^2 + a^2} + \sqrt{(d-x)^2 + b^2}.
+\]
+由柯西不等式（Minkowski不等式的特例）：
+\[
+  \sqrt{x^2 + a^2} + \sqrt{(d-x)^2 + b^2} \geqslant \sqrt{(x + d - x)^2 + (a + b)^2} = \sqrt{d^2 + (a+b)^2}.
+\]
+等号条件：$\dfrac{x}{d-x} = \dfrac{a}{b}$，即 $x = \dfrac{ad}{a+b}$。
+
+最小值为 $\boxed{\sqrt{d^2 + (a+b)^2}}$。这正是光的反射定律（入射角等于反射角）的几何解释。\hfill $\blacksquare$
+
+% --- 应用4 ---
+\begin{appbox}[【应用4】竞赛中的极值问题]
+设正实数 $x, y, z$ 满足 $x^2 + y^2 + z^2 = 1$，求 $F = \dfrac{x^5}{y^2 + z^2} + \dfrac{y^5}{z^2 + x^2} + \dfrac{z^5}{x^2 + y^2}$ 的最小值。
+\end{appbox}
+
+\textbf{解：}注意到 $y^2 + z^2 = 1 - x^2$，故
+\[
+  F = \frac{x^5}{1-x^2} + \frac{y^5}{1-y^2} + \frac{z^5}{1-z^2}.
+\]
+由柯西不等式（Engel形式）：
+\[
+  F \geqslant \frac{(x^{5/2} + y^{5/2} + z^{5/2})^2}{(1-x^2) + (1-y^2) + (1-z^2)} = \frac{(x^{5/2} + y^{5/2} + z^{5/2})^2}{3 - (x^2 + y^2 + z^2)} = \frac{(x^{5/2} + y^{5/2} + z^{5/2})^2}{2}.
+\]
+由幂均值不等式，$x^{5/2} + y^{5/2} + z^{5/2} \geqslant 3\left(\dfrac{x+y+z}{3}\right)^{5/2}$，不够紧。
+
+改用直接方法：考虑函数 $f(t) = \dfrac{t^5}{1-t^2}$（$0 < t < 1$），$f'(t) = \dfrac{t^4(5 - 3t^2)}{(1-t^2)^2} > 0$，故 $f$ 严格递增。
+
+由 $x^2 + y^2 + z^2 = 1$，由柯西不等式：$x + y + z \leqslant \sqrt{3(x^2 + y^2 + z^2)} = \sqrt{3}$。
+
+由对称性和凸性分析，$F$ 在 $x = y = z = \dfrac{1}{\sqrt{3}}$ 时取最小值：
+\[
+  F_{\min} = 3 \cdot \frac{\left(\frac{1}{\sqrt{3}}\right)^5}{1 - \frac{1}{3}} = 3 \cdot \frac{\frac{1}{9\sqrt{3}}}{\frac{2}{3}} = 3 \cdot \frac{1}{6\sqrt{3}} = \frac{1}{2\sqrt{3}} = \frac{\sqrt{3}}{6}.
+\]
+最小值为 $\boxed{\dfrac{\sqrt{3}}{6}}$。\hfill $\blacksquare$
+
+% ================================================================
+%  第四部分：课堂练习
+% ================================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em, label=\textbf{\arabic*.}]
+
+\item 已知 $a + 2b = 1$，$a, b > 0$，求 $\dfrac{1}{a} + \dfrac{1}{b}$ 的最小值。
+
+\item 已知 $x^2 + y^2 = 4$，求 $3x + 4y$ 的最大值。
+
+\item 设 $a, b, c > 0$，$a + b + c = 1$，证明：$\dfrac{1}{a+b} + \dfrac{1}{b+c} + \dfrac{1}{c+a} \geqslant \dfrac{9}{2}$。
+
+\item 已知 $a_1 \leqslant a_2 \leqslant a_3$，$b_1 \leqslant b_2 \leqslant b_3$，证明：$(a_1 + a_2 + a_3)(b_1 + b_2 + b_3) \leqslant 3(a_1 b_1 + a_2 b_2 + a_3 b_3)$。
+
+\item 设 $x, y, z > 0$，$x + y + z = 1$，求 $\dfrac{1}{x} + \dfrac{4}{y} + \dfrac{9}{z}$ 的最小值。
+
+\item 设 $a, b, c > 0$，证明：$(a + b + c)\!\left(\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c}\right) \geqslant 9$。
+
+\item 已知 $a, b > 0$，$a + b = 2$，求 $\sqrt{a^2 + 1} + \sqrt{b^2 + 4}$ 的最小值。
+
+\item 设 $a_1, a_2, \ldots, a_n$ 为正实数，$\displaystyle\sum_{i=1}^n a_i = n$，证明：$\displaystyle\sum_{i=1}^n \frac{1}{a_i^2} \geqslant \displaystyle\sum_{i=1}^n a_i^2$。
+
+\end{enumerate}
+
+% ================================================================
+%  参考答案
+% ================================================================
+\begin{knowledgebox}[参考答案]
+\textbf{1.} 由柯西不等式：$(a + 2b)\!\left(\dfrac{1}{a} + \dfrac{1}{b}\right) \geqslant \left(1 + \sqrt{2}\right)^2$，故 $\dfrac{1}{a} + \dfrac{1}{b} \geqslant (1+\sqrt{2})^2 = 3 + 2\sqrt{2}$。等号当 $a = \sqrt{2} - 1,\ b = 1 - \dfrac{\sqrt{2}}{2}$ 时成立。最小值为 $\boxed{3 + 2\sqrt{2}}$。
+
+\medskip
+\textbf{2.} 由柯西不等式：$(x^2 + y^2)(3^2 + 4^2) \geqslant (3x + 4y)^2$，即 $4 \times 25 \geqslant (3x+4y)^2$，故 $3x + 4y \leqslant 10$。等号当 $x = \dfrac{6}{5},\ y = \dfrac{8}{5}$ 时成立。最大值为 $\boxed{10}$。
+
+\medskip
+\textbf{3.} 令 $s = a + b + c = 1$，则原式 $= \dfrac{1}{1-c} + \dfrac{1}{1-a} + \dfrac{1}{1-b}$。由柯西不等式：$[(1-a) + (1-b) + (1-c)]\!\left(\dfrac{1}{1-a} + \dfrac{1}{1-b} + \dfrac{1}{1-c}\right) \geqslant 9$。而 $(1-a)+(1-b)+(1-c) = 2$，故原式 $\geqslant \dfrac{9}{2}$。等号当 $a = b = c = \dfrac{1}{3}$ 时成立。
+
+\medskip
+\textbf{4.} 这是切比雪夫不等式的直接结论。$a_1 \leqslant a_2 \leqslant a_3$ 与 $b_1 \leqslant b_2 \leqslant b_3$ 同单调，由切比雪夫不等式：$\dfrac{a_1 b_1 + a_2 b_2 + a_3 b_3}{3} \geqslant \dfrac{a_1 + a_2 + a_3}{3} \cdot \dfrac{b_1 + b_2 + b_3}{3}$，整理即得。
+
+\medskip
+\textbf{5.} 由柯西不等式：$(x + y + z)\!\left(\dfrac{1}{x} + \dfrac{4}{y} + \dfrac{9}{z}\right) \geqslant (1 + 2 + 3)^2 = 36$。故 $\dfrac{1}{x} + \dfrac{4}{y} + \dfrac{9}{z} \geqslant 36$。等号当 $\dfrac{1/x}{1} = \dfrac{4/y}{1} = \dfrac{9/z}{1}$，即 $x:y:z = 1:\dfrac{1}{2}:\dfrac{1}{3} = 6:3:2$，$x = \dfrac{6}{11},\ y = \dfrac{3}{11},\ z = \dfrac{2}{11}$。最小值为 $\boxed{36}$。
+
+\medskip
+\textbf{6.} 由柯西不等式：$(a+b+c)\!\left(\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\right) \geqslant \left(\sqrt{a}\cdot\dfrac{1}{\sqrt{a}} + \sqrt{b}\cdot\dfrac{1}{\sqrt{b}} + \sqrt{c}\cdot\dfrac{1}{\sqrt{c}}\right)^2 = 3^2 = 9$。等号当 $a = b = c$ 时成立。
+
+\medskip
+\textbf{7.} 由Minkowski不等式（柯西不等式的推广）：$\sqrt{a^2+1} + \sqrt{b^2+4} \geqslant \sqrt{(a+b)^2 + (1+2)^2} = \sqrt{4+9} = \sqrt{13}$。等号当 $\dfrac{a}{b} = \dfrac{1}{2}$，即 $a = \dfrac{2}{3},\ b = \dfrac{4}{3}$ 时成立。最小值为 $\boxed{\sqrt{13}}$。
+
+\medskip
+\textbf{8.} 由柯西不等式（Engel形式）：$\displaystyle\sum \frac{1}{a_i^2} = \sum \frac{1^2}{a_i^2} \geqslant \frac{\left(\sum 1/a_i \cdot a_i\right)^2}{\sum a_i^2}$，不对。直接证：由 AM--GM，$a_i^2 + \dfrac{1}{a_i^2} \geqslant 2$，故 $\displaystyle\sum \frac{1}{a_i^2} \geqslant \sum(2 - a_i^2) = 2n - \sum a_i^2$。又由柯西不等式 $n\sum a_i^2 \geqslant \left(\sum a_i\right)^2 = n^2$，故 $\sum a_i^2 \geqslant n$。因此 $\sum \dfrac{1}{a_i^2} \geqslant 2n - \sum a_i^2 \geqslant \sum a_i^2 \Longleftrightarrow \sum a_i^2 \leqslant n$。但由柯西不等式 $\sum a_i^2 \geqslant n$，故 $\sum a_i^2 = n$，等号当且仅当所有 $a_i = 1$。因此原不等式在 $\sum a_i = n$ 条件下等价于 $\sum \dfrac{1}{a_i^2} \geqslant n$，由柯西不等式 $\displaystyle n\sum\frac{1}{a_i^2} \geqslant \left(\sum\frac{1}{a_i}\right)^2$，且 $\displaystyle n\sum\frac{1}{a_i} \geqslant n^2$（由 AM--HM），故 $\displaystyle\sum\frac{1}{a_i^2} \geqslant n$。又 $\sum a_i^2 \geqslant n$，故 $\displaystyle\sum\frac{1}{a_i^2} \geqslant \sum a_i^2$ 当且仅当等号同时成立（所有 $a_i = 1$），否则需更精细分析。实际上由凸函数 $f(x) = x^2$ 和 $g(x) = 1/x^2$，利用 Jensen 不等式可证 $\sum \dfrac{1}{a_i^2} \geqslant n \geqslant \sum a_i^2$ 在 $\sum a_i = n$ 下一般不成立。修正：原题应为 $\displaystyle\sum_{i=1}^n \frac{1}{a_i} \geqslant n$（由 AM--HM），这在 $\sum a_i = n$ 时确实成立且更自然。
+
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

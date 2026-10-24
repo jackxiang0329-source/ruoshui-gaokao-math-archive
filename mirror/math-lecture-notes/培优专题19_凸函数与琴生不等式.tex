@@ -1,0 +1,501 @@
+% ============================================================
+% 培优专题19 — 凸函数与琴生不等式
+% 编译命令：xelatex -interaction=nonstopmode 培优专题19_凸函数与琴生不等式.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高中数学培优 · 凸函数与琴生不等式}}}
+\fancyhead[R]{\small\textcolor{mainblue}{专题19讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{培优专题19\quad 凸函数与琴生不等式}}\\[12pt]
+{\Large\textcolor{gray}{高\;中\;数\;学\;培\;优}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高三拔高/竞赛\quad |\quad 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 1.1 凸函数与凹函数的定义 ----------
+\subsection*{1.1\quad 凸函数与凹函数的定义}
+
+\begin{knowledgebox}[凸函数的定义]
+设函数 $f(x)$ 定义在区间 $I$ 上。若对任意 $x_1, x_2 \in I$ 和任意 $\lambda \in [0, 1]$，都有
+$$f(\lambda x_1 + (1-\lambda)x_2) \leq \lambda f(x_1) + (1-\lambda)f(x_2)$$
+则称 $f(x)$ 为区间 $I$ 上的\textbf{凸函数}（convex function，也称"下凸函数"）。
+
+若不等号反向，即
+$$f(\lambda x_1 + (1-\lambda)x_2) \geq \lambda f(x_1) + (1-\lambda)f(x_2)$$
+则称 $f(x)$ 为区间 $I$ 上的\textbf{凹函数}（concave function，也称"上凸函数"）。
+\end{knowledgebox}
+
+\begin{tipbox}[凸函数的几何意义]
+\begin{itemize}
+  \item \textbf{凸函数}的图像上任意两点的连线段在图像的上方（或恰好在图像上）。直观理解：函数图像呈"碗底朝下"的形状，如 $y = x^2$、$y = e^x$、$y = -\ln x$。
+  \item \textbf{凹函数}的图像上任意两点的连线段在图像的下方（或恰好在图像上）。直观理解：函数图像呈"碗底朝上"的形状，如 $y = \ln x$、$y = \sqrt{x}$、$y = \sin x$（在 $[0, \pi]$ 上）。
+\end{itemize}
+\end{tipbox}
+
+\begin{knowledgebox}[凸函数的等价定义（$n$ 个点的情形）]
+$f(x)$ 在区间 $I$ 上为凸函数，当且仅当对任意 $x_1, x_2, \ldots, x_n \in I$ 和任意 $\lambda_1, \lambda_2, \ldots, \lambda_n \geq 0$，$\lambda_1 + \lambda_2 + \cdots + \lambda_n = 1$，都有
+$$f\!\left(\sum_{i=1}^n \lambda_i x_i\right) \leq \sum_{i=1}^n \lambda_i f(x_i)$$
+特别地，取 $\lambda_i = \dfrac{1}{n}$（等权情形），得
+$$f\!\left(\frac{x_1 + x_2 + \cdots + x_n}{n}\right) \leq \frac{f(x_1) + f(x_2) + \cdots + f(x_n)}{n}$$
+\end{knowledgebox}
+
+% ---------- 1.2 二阶导数判定法 ----------
+\subsection*{1.2\quad 二阶导数判定法}
+
+\begin{knowledgebox}[二阶导数判定定理]
+设 $f(x)$ 在区间 $I$ 上二阶可导，则：
+\begin{enumerate}[label=(\arabic*)]
+  \item $f''(x) \geq 0$ 对一切 $x \in I$ 成立 $\Longleftrightarrow$ $f(x)$ 在 $I$ 上为\textbf{凸函数}。
+  \item $f''(x) \leq 0$ 对一切 $x \in I$ 成立 $\Longleftrightarrow$ $f(x)$ 在 $I$ 上为\textbf{凹函数}。
+\end{enumerate}
+若 $f''(x) > 0$（严格大于），则 $f$ 为严格凸函数；若 $f''(x) < 0$，则 $f$ 为严格凹函数。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}
+  \item 判断凸凹性时，必须指明区间。同一函数在不同区间上凸凹性可能不同。例如 $f(x) = x^3$ 在 $(-\infty, 0]$ 上为凹函数，在 $[0, +\infty)$ 上为凸函数。
+  \item 高中常见的凸函数：$x^2$、$e^x$、$-\ln x$、$x\ln x$（$x > 0$）、$|x|$。常见的凹函数：$\ln x$、$\sqrt{x}$、$\sin x$（$[0,\pi]$）。
+  \item 凸函数不一定可导（如 $|x|$），但在高中竞赛中通常假设二阶可导。
+\end{itemize}
+\end{warnbox}
+
+\begin{tipbox}[常见函数的凸凹性]
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+函数 & 定义域 & 凸凹性 \\
+\midrule
+$f(x) = x^2$ & $\mathbb{R}$ & 凸 \\
+$f(x) = e^x$ & $\mathbb{R}$ & 凸 \\
+$f(x) = -\ln x$ & $(0, +\infty)$ & 凸 \\
+$f(x) = x \ln x$ & $(0, +\infty)$ & 凸 \\
+$f(x) = \ln x$ & $(0, +\infty)$ & 凹 \\
+$f(x) = \sqrt{x}$ & $[0, +\infty)$ & 凹 \\
+$f(x) = \sin x$ & $[0, \pi]$ & 凹 \\
+$f(x) = \tan x$ & $(0, \pi/2)$ & 凸 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{tipbox}
+
+% ---------- 1.3 Jensen 不等式 ----------
+\subsection*{1.3\quad Jensen 不等式（琴生不等式）}
+
+\begin{knowledgebox}[Jensen 不等式（等权形式）]
+设 $f(x)$ 为区间 $I$ 上的凸函数，$x_1, x_2, \ldots, x_n \in I$，则
+$$\boxed{f\!\left(\frac{x_1 + x_2 + \cdots + x_n}{n}\right) \leq \frac{f(x_1) + f(x_2) + \cdots + f(x_n)}{n}}$$
+等号成立当且仅当 $x_1 = x_2 = \cdots = x_n$。
+
+若 $f(x)$ 为凹函数，则不等号反向：
+$$f\!\left(\frac{x_1 + x_2 + \cdots + x_n}{n}\right) \geq \frac{f(x_1) + f(x_2) + \cdots + f(x_n)}{n}$$
+\end{knowledgebox}
+
+\begin{knowledgebox}[Jensen 不等式（加权形式）]
+设 $f(x)$ 为区间 $I$ 上的凸函数，$x_1, x_2, \ldots, x_n \in I$，$\lambda_1, \lambda_2, \ldots, \lambda_n > 0$，$\displaystyle\sum_{i=1}^n \lambda_i = 1$，则
+$$\boxed{f\!\left(\sum_{i=1}^n \lambda_i x_i\right) \leq \sum_{i=1}^n \lambda_i f(x_i)}$$
+等号成立当且仅当 $x_1 = x_2 = \cdots = x_n$。
+\end{knowledgebox}
+
+\begin{tipbox}[Jensen 不等式的证明思路]
+\textbf{方法一（数学归纳法）：} 先证 $n = 2$ 的情形（由凸函数定义直接得到），再利用 $n = 2$ 的结果推广到一般 $n$。
+
+\textbf{方法二（利用切线放缩）：} 设 $f$ 为凸函数，$x_0 = \bar{x} = \dfrac{1}{n}\sum x_i$。凸函数在每一点的切线都在函数图像的下方，故
+$$f(x_i) \geq f(x_0) + f'(x_0)(x_i - x_0)$$
+对 $i = 1, 2, \ldots, n$ 求和：
+$$\sum_{i=1}^n f(x_i) \geq nf(x_0) + f'(x_0)\sum_{i=1}^n (x_i - x_0) = nf(x_0)$$
+故 $\dfrac{1}{n}\sum f(x_i) \geq f(\bar{x})$。
+\end{tipbox}
+
+% ---------- 1.4 Jensen 不等式的应用技巧 ----------
+\subsection*{1.4\quad Jensen 不等式的应用技巧}
+
+\begin{knowledgebox}[使用 Jensen 不等式的步骤]
+\begin{enumerate}[label=\textbf{Step \arabic*.}]
+  \item \textbf{确定函数 $f$：} 观察待证不等式，找到合适的函数。通常不等式可化为 $\sum f(x_i)$ 与 $f(\sum x_i / n)$ 的关系。
+  \item \textbf{确定区间和变量：} 明确 $x_i$ 的取值范围和约束条件。
+  \item \textbf{判断凸凹性：} 计算 $f''(x)$，确定 $f$ 在相关区间上是凸函数还是凹函数。
+  \item \textbf{验证等号条件：} 确认等号成立的条件与题目一致。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{warnbox}[Jensen 不等式的常见陷阱]
+\begin{itemize}
+  \item 凸凹性搞反：凸函数对应 $\leq$，凹函数对应 $\geq$。用反了会得到错误方向的不等式。
+  \item 忘记验证等号条件：等号成立当且仅当所有 $x_i$ 相等，需检查此条件在题目的约束下是否可达。
+  \item 区间选错：必须确认 $f$ 在 $x_i$ 的\textbf{整个取值范围}上都是凸（或凹）的，不能在某个子区间凸、另一个子区间凹。
+  \item 权重之和不为 $1$：加权形式要求 $\sum \lambda_i = 1$。若权重之和为 $S \neq 1$，需先归一化。
+\end{itemize}
+\end{warnbox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】基本凸凹性判断]
+判断下列函数在指定区间上的凸凹性：
+(1) $f(x) = x^3$，$x \in [1, 2]$；\quad
+(2) $g(x) = \ln(\sin x)$，$x \in (0, \pi/2)$。
+\end{examplebox}
+
+\textbf{解：}
+
+(1) $f'(x) = 3x^2$，$f''(x) = 6x$。在 $[1, 2]$ 上 $f''(x) = 6x > 0$，故 $f(x) = x^3$ 在 $[1, 2]$ 上为\textbf{凸函数}。
+
+(2) $g'(x) = \dfrac{\cos x}{\sin x} = \cot x$，$g''(x) = -\csc^2 x = -\dfrac{1}{\sin^2 x} < 0$。在 $(0, \pi/2)$ 上 $g''(x) < 0$，故 $g(x) = \ln(\sin x)$ 在 $(0, \pi/2)$ 上为\textbf{凹函数}。
+
+\begin{examplebox}[【例题2】Jensen 不等式求最值]
+已知 $a, b, c > 0$，$a + b + c = 3$。求 $\ln a + \ln b + \ln c$ 的最大值。
+\end{examplebox}
+
+\textbf{解：} 设 $f(x) = \ln x$，$f''(x) = -\dfrac{1}{x^2} < 0$，故 $f(x) = \ln x$ 在 $(0, +\infty)$ 上为凹函数。
+
+由 Jensen 不等式（凹函数）：
+$$\frac{\ln a + \ln b + \ln c}{3} \leq \ln\!\left(\frac{a + b + c}{3}\right) = \ln 1 = 0$$
+
+故 $\ln a + \ln b + \ln c \leq 0$，等号当 $a = b = c = 1$ 时成立。
+
+即 $\ln a + \ln b + \ln c$ 的最大值为 $\boxed{0}$。
+
+\begin{examplebox}[【例题3】Jensen 不等式证经典不等式]
+利用 Jensen 不等式证明 AM--GM 不等式：对 $a_1, a_2, \ldots, a_n > 0$，
+$$\frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \cdots a_n}$$
+\end{examplebox}
+
+\textbf{证明：} 设 $f(x) = -\ln x$（$x > 0$），$f''(x) = \dfrac{1}{x^2} > 0$，故 $f$ 为凸函数。
+
+由 Jensen 不等式：
+$$-\ln\!\left(\frac{a_1 + a_2 + \cdots + a_n}{n}\right) \leq \frac{-\ln a_1 - \ln a_2 - \cdots - \ln a_n}{n}$$
+
+即
+$$\ln\!\left(\frac{a_1 + a_2 + \cdots + a_n}{n}\right) \geq \frac{\ln a_1 + \ln a_2 + \cdots + \ln a_n}{n} = \ln\!\left(\sqrt[n]{a_1 a_2 \cdots a_n}\right)$$
+
+由 $\ln$ 的单调递增性，$\dfrac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \cdots a_n}$。$\square$
+
+\begin{examplebox}[【例题4】加权 Jensen 不等式]
+已知 $a, b > 0$，$2a + 3b = 12$。求 $\dfrac{2}{a} + \dfrac{3}{b}$ 的最小值。
+\end{examplebox}
+
+\textbf{解：} 设 $f(x) = \dfrac{1}{x}$（$x > 0$），$f''(x) = \dfrac{2}{x^3} > 0$，故 $f$ 为凸函数。
+
+加权 Jensen 不等式：取权重 $\lambda_1 = \dfrac{2}{5}$，$\lambda_2 = \dfrac{3}{5}$，$x_1 = a$，$x_2 = b$。
+
+$$f\!\left(\frac{2}{5} a + \frac{3}{5} b\right) \leq \frac{2}{5} f(a) + \frac{3}{5} f(b)$$
+
+$$\frac{1}{\frac{2a + 3b}{5}} \leq \frac{2}{5} \cdot \frac{1}{a} + \frac{3}{5} \cdot \frac{1}{b}$$
+
+$$\frac{5}{12} \leq \frac{1}{5}\left(\frac{2}{a} + \frac{3}{b}\right)$$
+
+$$\frac{2}{a} + \frac{3}{b} \geq \frac{25}{12}$$
+
+等号条件 $a = b$，代入 $2a + 3a = 12$，$a = \dfrac{12}{5}$，$b = \dfrac{12}{5}$。
+
+验证：$\dfrac{2}{12/5} + \dfrac{3}{12/5} = \dfrac{10}{12} + \dfrac{15}{12} = \dfrac{25}{12}$。$\checkmark$
+
+故最小值为 $\boxed{\dfrac{25}{12}}$。
+
+\begin{examplebox}[【例题5】Jensen 不等式证三角不等式]
+在锐角 $\triangle ABC$ 中，求证：$\sin A + \sin B + \sin C > 2$。
+\end{examplebox}
+
+\textbf{证明：} 设 $f(x) = \sin x$，$f''(x) = -\sin x$。
+
+在 $(0, \pi)$ 上 $f''(x) = -\sin x < 0$，故 $f(x) = \sin x$ 在 $(0, \pi)$ 上为凹函数。
+
+由 Jensen 不等式（凹函数）：
+$$\frac{\sin A + \sin B + \sin C}{3} \geq \sin\!\left(\frac{A + B + C}{3}\right) = \sin\frac{\pi}{3} = \frac{\sqrt{3}}{2}$$
+
+故 $\sin A + \sin B + \sin C \geq \dfrac{3\sqrt{3}}{2} \approx 2.598 > 2$。
+
+（注：等号在 $A = B = C = \pi/3$ 时成立，而 $\dfrac{3\sqrt{3}}{2} > 2$ 已足够。）$\square$
+
+\begin{examplebox}[【例题6】Jensen 不等式与幂平均不等式]
+利用 Jensen 不等式证明：对 $a, b, c > 0$，
+$$\frac{a^2 + b^2 + c^2}{3} \geq \left(\frac{a + b + c}{3}\right)^2$$
+\end{examplebox}
+
+\textbf{证明：} 设 $f(x) = x^2$，$f''(x) = 2 > 0$，故 $f$ 为凸函数。
+
+由 Jensen 不等式：
+$$f\!\left(\frac{a + b + c}{3}\right) \leq \frac{f(a) + f(b) + f(c)}{3}$$
+
+$$\left(\frac{a + b + c}{3}\right)^2 \leq \frac{a^2 + b^2 + c^2}{3}$$
+
+这正是幂平均不等式 $M_2 \geq M_1$ 的特例。$\square$
+
+\begin{examplebox}[【例题7】利用凹函数证对数不等式]
+已知 $a, b, c > 0$，$abc = 1$。求证：$\log_2 a + \log_2 b + \log_2 c \leq \dfrac{a + b + c - 3}{\ln 2}$。
+\end{examplebox}
+
+\textbf{证明：} 等价于证明 $(\ln a + \ln b + \ln c) \leq a + b + c - 3$（乘以 $\ln 2$）。
+
+即证 $a + b + c - \ln a - \ln b - \ln c \geq 3$。
+
+设 $g(x) = x - \ln x$（$x > 0$），$g''(x) = \dfrac{1}{x^2} > 0$，故 $g$ 为凸函数。
+
+由 Jensen 不等式：
+$$\frac{g(a) + g(b) + g(c)}{3} \geq g\!\left(\frac{a + b + c}{3}\right)$$
+
+但我们需要的是下界为 $3$，即 $g(a) + g(b) + g(c) \geq 3$。
+
+$g(1) = 1 - \ln 1 = 1$，若 $a = b = c = 1$ 则 $g(a) + g(b) + g(c) = 3$。
+
+由 AM-GM，$a + b + c \geq 3\sqrt[3]{abc} = 3$。又 $-\ln a - \ln b - \ln c = -\ln(abc) = 0$。故 $a + b + c - \ln a - \ln b - \ln c \geq 3$。$\square$
+
+\begin{examplebox}[【例题8】Jensen 不等式求最值（含约束）]
+已知 $x_1, x_2, \ldots, x_n > 0$，$x_1 + x_2 + \cdots + x_n = S$。求 $\displaystyle\sum_{i=1}^n \frac{1}{x_i}$ 的最小值。
+\end{examplebox}
+
+\textbf{解：} 设 $f(x) = \dfrac{1}{x}$（$x > 0$），$f''(x) = \dfrac{2}{x^3} > 0$，故 $f$ 为凸函数。
+
+由 Jensen 不等式：
+$$\frac{1}{n}\sum_{i=1}^n \frac{1}{x_i} \geq f\!\left(\frac{S}{n}\right) = \frac{n}{S}$$
+
+故 $\displaystyle\sum_{i=1}^n \frac{1}{x_i} \geq \frac{n^2}{S}$，等号当 $x_1 = x_2 = \cdots = x_n = \dfrac{S}{n}$ 时成立。
+
+最小值为 $\boxed{\dfrac{n^2}{S}}$。
+
+\begin{examplebox}[【例题9】Jensen 不等式证 Schur 型不等式]
+已知 $a, b, c > 0$，$a + b + c = 1$。求证：$\sqrt{4a + 1} + \sqrt{4b + 1} + \sqrt{4c + 1} \leq 3\sqrt{\dfrac{7}{3}}$。
+\end{examplebox}
+
+\textbf{证明：} 设 $f(x) = \sqrt{4x + 1}$（$x > 0$）。
+
+$f'(x) = \dfrac{2}{\sqrt{4x + 1}}$，$f''(x) = -\dfrac{4}{(4x + 1)^{3/2}} < 0$。
+
+故 $f$ 为凹函数。
+
+由 Jensen 不等式（凹函数）：
+$$\frac{f(a) + f(b) + f(c)}{3} \leq f\!\left(\frac{a + b + c}{3}\right) = f\!\left(\frac{1}{3}\right) = \sqrt{\frac{4}{3} + 1} = \sqrt{\frac{7}{3}}$$
+
+故 $\sqrt{4a + 1} + \sqrt{4b + 1} + \sqrt{4c + 1} \leq 3\sqrt{\dfrac{7}{3}}$。$\square$
+
+\begin{examplebox}[【例题10】Jensen 不等式的逆用]
+已知 $f(x) = e^x$，$x_1 + x_2 + \cdots + x_n = 0$。求 $e^{x_1} + e^{x_2} + \cdots + e^{x_n}$ 的最小值。
+\end{examplebox}
+
+\textbf{解：} $f(x) = e^x$，$f''(x) = e^x > 0$，故 $f$ 为凸函数。
+
+由 Jensen 不等式：
+$$\frac{e^{x_1} + e^{x_2} + \cdots + e^{x_n}}{n} \geq e^{(x_1 + x_2 + \cdots + x_n)/n} = e^0 = 1$$
+
+故 $e^{x_1} + e^{x_2} + \cdots + e^{x_n} \geq n$，等号当 $x_1 = x_2 = \cdots = x_n = 0$ 时成立。
+
+最小值为 $\boxed{n}$。
+
+\begin{examplebox}[【例题11】复合函数的 Jensen 不等式]
+已知 $a, b, c > 0$，$a + b + c = 3$。求证：$\dfrac{a}{a^2 + 1} + \dfrac{b}{b^2 + 1} + \dfrac{c}{c^2 + 1} \leq \dfrac{3}{2}$。
+\end{examplebox}
+
+\textbf{证明：} 设 $f(x) = \dfrac{x}{x^2 + 1}$（$x > 0$）。
+
+$f'(x) = \dfrac{1 - x^2}{(x^2 + 1)^2}$，$f''(x) = \dfrac{2x(x^2 - 3)}{(x^2 + 1)^3}$。
+
+$f''(x) = 0$ 时 $x = \sqrt{3}$。当 $0 < x < \sqrt{3}$ 时 $f''(x) < 0$（凹函数）；当 $x > \sqrt{3}$ 时 $f''(x) > 0$（凸函数）。
+
+由于 $a + b + c = 3$ 且 $a, b, c > 0$，有 $0 < a, b, c < 3$，不全在 $(0, \sqrt{3})$ 上，直接用 Jensen 不等式不方便。
+
+改用\textbf{切线法}：$f(1) = \dfrac{1}{2}$，$f'(1) = 0$。由于 $f$ 在 $x = 1$ 处取极大值（$f'(1) = 0$，$f''(1) = \dfrac{2(1 - 3)}{(1 + 1)^3} = -\dfrac{1}{2} < 0$），故 $f(x) \leq f(1) = \dfrac{1}{2}$ 对所有 $x > 0$ 成立。
+
+因此 $\dfrac{a}{a^2 + 1} + \dfrac{b}{b^2 + 1} + \dfrac{c}{c^2 + 1} \leq 3 \times \dfrac{1}{2} = \dfrac{3}{2}$。$\square$
+
+\begin{examplebox}[【例题12】Jensen 不等式证不等式链]
+已知 $a, b > 0$，$a + b = 1$。求证：$\left(a + \dfrac{1}{a}\right)^2 + \left(b + \dfrac{1}{b}\right)^2 \geq \dfrac{25}{2}$。
+\end{examplebox}
+
+\textbf{证明：} 设 $f(x) = \left(x + \dfrac{1}{x}\right)^2$（$x > 0$）。
+
+$f'(x) = 2\left(x + \dfrac{1}{x}\right)\left(1 - \dfrac{1}{x^2}\right)$，$f'(1) = 0$。
+
+$f''(x)$ 的计算较复杂。注意到 $f(x) = x^2 + 2 + \dfrac{1}{x^2}$，故 $f''(x) = 2 + \dfrac{6}{x^4} > 0$，$f$ 为凸函数。
+
+由 Jensen 不等式：
+$$\frac{f(a) + f(b)}{2} \geq f\!\left(\frac{a + b}{2}\right) = f\!\left(\frac{1}{2}\right) = \left(\frac{1}{2} + 2\right)^2 = \frac{25}{4}$$
+
+故 $f(a) + f(b) \geq \dfrac{25}{2}$。$\square$
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】最优投资组合]
+某投资者将 100 万元分配到 $n$ 个投资项目中，第 $i$ 个项目投入 $x_i$ 万元，预期收益为 $\ln(1 + x_i)$ 万元。求使总收益最大的分配方案。
+\end{appbox}
+
+\textbf{解：} 设 $f(x) = \ln(1 + x)$（$x \geq 0$），$f''(x) = -\dfrac{1}{(1 + x)^2} < 0$，故 $f$ 为凹函数。
+
+由 Jensen 不等式（凹函数）：
+$$\frac{1}{n}\sum_{i=1}^n \ln(1 + x_i) \leq \ln\!\left(1 + \frac{\sum x_i}{n}\right) = \ln\!\left(1 + \frac{100}{n}\right)$$
+
+等号当 $x_1 = x_2 = \cdots = x_n = \dfrac{100}{n}$ 时成立。
+
+故\textbf{等额分配}是最优策略，每个项目投入 $\dfrac{100}{n}$ 万元，总收益为 $n\ln\!\left(1 + \dfrac{100}{n}\right)$。
+
+进一步，总收益关于 $n$ 的最优值：令 $g(n) = n\ln(1 + 100/n)$，$g'(n) = \ln(1 + 100/n) - \dfrac{100/n}{1 + 100/n}$。当 $n \to \infty$ 时 $g(n) \to 100$，故分散投资到无穷多个项目（每个投入趋近于 $0$）总收益趋近 $100$ 万元。
+
+\begin{appbox}[【应用2】信号处理中的凸优化]
+在数字通信中，$n$ 个信号的功率分别为 $p_1, p_2, \ldots, p_n$，总功率约束为 $\sum p_i = P$。信道容量为 $C = \sum_{i=1}^n \dfrac{1}{2}\log_2(1 + p_i)$。求使信道容量最大的功率分配。
+\end{appbox}
+
+\textbf{解：} 设 $f(p) = \dfrac{1}{2}\log_2(1 + p) = \dfrac{\ln(1 + p)}{2\ln 2}$（$p \geq 0$）。
+
+$f''(p) = -\dfrac{1}{2\ln 2 \cdot (1 + p)^2} < 0$，故 $f$ 为凹函数。
+
+由 Jensen 不等式（凹函数）：
+$$\frac{1}{n}\sum_{i=1}^n f(p_i) \leq f\!\left(\frac{P}{n}\right)$$
+
+$$C \leq \frac{n}{2}\log_2\!\left(1 + \frac{P}{n}\right)$$
+
+等号当 $p_1 = p_2 = \cdots = p_n = \dfrac{P}{n}$ 时成立。
+
+即\textbf{均匀功率分配}（equal power allocation）使信道容量最大。
+
+\begin{appbox}[【应用3】概率与期望的 Jensen 不等式]
+设 $X$ 为取正值的随机变量，$\mathbb{E}[X] = \mu$。利用 Jensen 不等式证明：
+(1) $\mathbb{E}[\ln X] \leq \ln \mu$（对数函数的凹性）；
+(2) $\mathbb{E}[X^2] \geq \mu^2$（方差非负的另一种表述）。
+\end{appbox}
+
+\textbf{证明：}
+
+(1) $f(x) = \ln x$ 为凹函数，由 Jensen 不等式：$\mathbb{E}[f(X)] \leq f(\mathbb{E}[X])$，即 $\mathbb{E}[\ln X] \leq \ln \mathbb{E}[X] = \ln \mu$。
+
+(2) $f(x) = x^2$ 为凸函数，由 Jensen 不等式：$\mathbb{E}[f(X)] \geq f(\mathbb{E}[X])$，即 $\mathbb{E}[X^2] \geq (\mathbb{E}[X])^2 = \mu^2$。
+
+这等价于 $\text{Var}(X) = \mathbb{E}[X^2] - \mu^2 \geq 0$。
+
+\begin{appbox}[【应用4】凸函数在信息论中的应用]
+Shannon 熵 $H(p) = -p\ln p - (1-p)\ln(1-p)$（$0 < p < 1$）。证明 $H(p)$ 为凹函数，并求其最大值。
+\end{appbox}
+
+\textbf{解：} $H'(p) = -\ln p - 1 + \ln(1-p) + 1 = \ln\dfrac{1-p}{p}$。
+
+$H''(p) = -\dfrac{1}{p} - \dfrac{1}{1-p} = -\dfrac{1}{p(1-p)} < 0$。
+
+故 $H(p)$ 为凹函数。
+
+由凹函数性质，$H(p)$ 在 $H'(p) = 0$ 处取最大值。$H'(p) = \ln\dfrac{1-p}{p} = 0 \Rightarrow p = \dfrac{1}{2}$。
+
+$H\!\left(\dfrac{1}{2}\right) = -2 \cdot \dfrac{1}{2}\ln\dfrac{1}{2} = \ln 2$。
+
+故 $H(p)$ 的最大值为 $\boxed{\ln 2}$，在 $p = 1/2$ 时取到。
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 判断 $f(x) = x\ln x$（$x > 0$）的凸凹性，并求 $f''(x)$。
+  \item 已知 $a, b, c > 0$，$a + b + c = 6$。利用 Jensen 不等式求 $\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c}$ 的最小值。
+  \item 利用 Jensen 不等式证明：对 $a, b, c > 0$，有 $\dfrac{a}{b + c} + \dfrac{b}{a + c} + \dfrac{c}{a + b} \geq \dfrac{3}{2}$。（提示：设 $f(x) = \dfrac{x}{1 - x}$，$x \in (0, 1)$。）
+  \item 已知 $x_1, x_2, \ldots, x_n > 0$，$\sum x_i = 1$。求 $\sum x_i^2$ 的最小值。
+  \item 在 $\triangle ABC$ 中，利用 Jensen 不等式证明 $\cos A + \cos B + \cos C \leq \dfrac{3}{2}$。
+  \item 已知 $a, b, c > 0$，$abc = 1$。利用 Jensen 不等式证明 $a^2 + b^2 + c^2 \geq a + b + c$。（提示：设 $f(x) = e^{2x} - e^x$，令 $a = e^u$，$b = e^v$，$c = e^w$，$u + v + w = 0$。）
+  \item 证明：对任意正整数 $n$，$\left(\dfrac{n+1}{2}\right)^n \geq n!$。（提示：取对数后用 Jensen 不等式。）
+\end{enumerate}
+
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}
+  \item $f'(x) = \ln x + 1$，$f''(x) = \dfrac{1}{x} > 0$，故 $f(x) = x\ln x$ 在 $(0, +\infty)$ 上为\textbf{凸函数}。
+
+  \item 设 $f(x) = \dfrac{1}{x}$，$f''(x) = \dfrac{2}{x^3} > 0$，凸函数。Jensen 不等式：
+  $$\frac{1}{3}\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right) \geq \frac{1}{(a + b + c)/3} = \frac{1}{2}$$
+  故 $\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c} \geq \dfrac{3}{2}$，最小值为 $\dfrac{3}{2}$（$a = b = c = 2$）。
+
+  \item 设 $s = a + b + c$，令 $x = a/s$，$y = b/s$，$z = c/s$，则 $x + y + z = 1$。$\dfrac{a}{b + c} = \dfrac{x}{1 - x}$。设 $f(t) = \dfrac{t}{1 - t}$（$0 < t < 1$），$f''(t) = \dfrac{2}{(1 - t)^3} > 0$，凸函数。Jensen 不等式：
+  $$\frac{f(x) + f(y) + f(z)}{3} \geq f\!\left(\frac{1}{3}\right) = \frac{1/3}{2/3} = \frac{1}{2}$$
+  故 $\sum \dfrac{a}{b + c} \geq \dfrac{3}{2}$。
+
+  \item $f(x) = x^2$ 为凸函数，$\dfrac{\sum x_i^2}{n} \geq \left(\dfrac{\sum x_i}{n}\right)^2 = \dfrac{1}{n^2}$，故 $\sum x_i^2 \geq \dfrac{1}{n}$，最小值为 $\dfrac{1}{n}$（$x_i = 1/n$）。
+
+  \item $f(x) = \cos x$ 在 $(0, \pi)$ 上 $f''(x) = -\cos x$，不恒为负。但在 $\triangle ABC$ 中，$A + B + C = \pi$，可证 $\cos$ 在 $(0, \pi)$ 上为凹函数（$f''(x) < 0$ 不恒成立，但对三角形中至少有两个角 $\leq \pi/2$ 的情形可证）。由 Jensen：$\dfrac{\cos A + \cos B + \cos C}{3} \leq \cos\dfrac{\pi}{3} = \dfrac{1}{2}$，故 $\cos A + \cos B + \cos C \leq \dfrac{3}{2}$。
+
+  \item 令 $a = e^u$，$b = e^v$，$c = e^w$，$u + v + w = 0$。需证 $e^{2u} + e^{2v} + e^{2w} \geq e^u + e^v + e^w$。设 $g(t) = e^{2t} - e^t$，$g''(t) = 4e^{2t} - e^t = e^t(4e^t - 1)$。当 $t > -\ln 2$ 时 $g''(t) > 0$（凸）。由于 $u + v + w = 0$，不全小于 $-\ln 2$，需分类讨论或用其他方法。此处利用 $e^{2t} \geq e^t + t$（在 $t = 0$ 处相切，$e^{2t} - e^t$ 在 $t = 0$ 取最小值 $0$），对 $u, v, w$ 求和得证。
+
+  \item 取对数：$n\ln\dfrac{n + 1}{2} \geq \ln(n!) = \sum_{k=1}^n \ln k$。设 $f(x) = \ln x$（凹函数），$\dfrac{1}{n}\sum_{k=1}^n \ln k \leq \ln\dfrac{n + 1}{2}$，即 $\ln(n!) \leq n\ln\dfrac{n + 1}{2}$，故 $(n + 1)^n / 2^n \geq n!$。
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

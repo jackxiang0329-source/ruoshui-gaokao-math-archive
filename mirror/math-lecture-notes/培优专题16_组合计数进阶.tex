@@ -1,0 +1,982 @@
+% ============================================================
+% 培优专题16 — 组合计数进阶
+% 编译命令：xelatex -interaction=nonstopmode 培优专题16_组合计数进阶.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高中数学培优 \(\cdot\) 组合计数进阶}}}
+\fancyhead[R]{\small\textcolor{mainblue}{培优专题16}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{培优专题16\quad 组合计数进阶}}\\[12pt]
+{\Large\textcolor{gray}{高中数学培优系列}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高二高三拔高\textbackslash 竞赛入门 \(\quad\mid\quad\) 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+% 第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ========== 1.1 容斥原理 ==========
+\subsection*{1.1\quad 容斥原理}
+
+\begin{knowledgebox}[容斥原理（Inclusion-Exclusion Principle）]
+设 \(A_1, A_2, \ldots, A_n\) 是有限集合，则
+\[
+\left|\bigcup_{i=1}^{n} A_i\right|
+= \sum_{i} |A_i| - \sum_{i<j} |A_i \cap A_j| + \sum_{i<j<k} |A_i \cap A_j \cap A_k| - \cdots + (-1)^{n+1}|A_1 \cap A_2 \cap \cdots \cap A_n|
+\]
+
+\textbf{常用特殊形式：}
+
+\textbf{两集合：} \(|A \cup B| = |A| + |B| - |A \cap B|\)
+
+\textbf{三集合：}
+\[
+|A \cup B \cup C| = |A|+|B|+|C| - |A\cap B|-|A\cap C|-|B\cap C| + |A\cap B\cap C|
+\]
+
+\textbf{补集形式（求"全不"的个数）：}
+\[
+\left|\overline{A_1} \cap \overline{A_2} \cap \cdots \cap \overline{A_n}\right|
+= |U| - \left|\bigcup_{i=1}^{n} A_i\right|
+\]
+其中 \(U\) 为全集。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=1.5em]
+  \item 容斥原理的关键是"不重不漏"：先加后减再加，交替进行。
+  \item 计算交集大小时，要确认各约束条件是否独立（可乘则乘）。
+  \item 应用补集形式时，"至少一个"用并集，"全都不"用补集。
+\end{itemize}
+\end{warnbox}
+
+% ========== 1.2 递推计数 ==========
+\subsection*{1.2\quad 递推计数}
+
+\begin{knowledgebox}[递推计数方法]
+\textbf{核心思想：} 将规模为 \(n\) 的问题分解为规模更小的子问题，建立递推关系。
+
+\textbf{建立递推关系的一般步骤：}
+\begin{enumerate}[leftmargin=1.5em]
+  \item 确定状态：用 \(a_n\) 表示规模为 \(n\) 时的方案数。
+  \item 分类讨论：根据最后一步（或某个关键决策）进行分类。
+  \item 利用加法原理写出递推式。
+  \item 确定初始条件（base case）。
+\end{enumerate}
+
+\textbf{常见递推模型：}
+\begin{itemize}[leftmargin=1.5em]
+  \item 斐波那契型：\(a_n = a_{n-1} + a_{n-2}\)，如铺砖问题、兔子繁殖。
+  \item 线性递推：\(a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots\)，如传球问题。
+  \item 非线性递推：\(a_n = \sum_{k=0}^{n-1} a_k a_{n-1-k}\)，如卡特兰数。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{tipbox}[规律]
+递推计数与分类计数的本质相同：递推是用"最后一步"分类，将全局计数化为子问题计数之和。学会画"决策树"辅助分析。
+\end{tipbox}
+
+% ========== 1.3 卡特兰数 ==========
+\subsection*{1.3\quad 卡特兰数}
+
+\begin{knowledgebox}[卡特兰数（Catalan Number）]
+\textbf{定义：} 第 \(n\) 个卡特兰数为
+\[
+C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!\,n!}
+\]
+
+\textbf{递推公式：}
+\[
+C_0 = 1, \qquad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i} \quad (n \ge 1)
+\]
+
+\textbf{前几项：} \(C_0=1,\ C_1=1,\ C_2=2,\ C_3=5,\ C_4=14,\ C_5=42,\ C_6=132, \ldots\)
+
+\textbf{典型模型（\(n\) 个卡特兰数 \(C_n\) 对应的计数问题）：}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \(n\) 对括号的合法匹配方案数。
+  \item 从 \((0,0)\) 到 \((n,n)\) 不越过对角线的格路数。
+  \item \(n+1\) 个节点的不同构二叉树个数。
+  \item 凸 \(n+2\) 边形的三角剖分数。
+  \item 长度为 \(2n\) 的合法括号序列数。
+  \item 出栈序列数：\(1,2,\ldots,n\) 依次入栈，可能的出栈序列数。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=1.5em]
+  \item 卡特兰数的下标从 \(C_0=1\) 开始，注意 \(n\) 的含义。
+  \item 不同模型中"n"的含义不同：括号序列用 \(n\) 对，凸多边形用 \(n+2\) 条边。
+  \item 卡特兰数的递推公式是"卷积"形式，不要与斐波那契递推混淆。
+\end{itemize}
+\end{warnbox}
+
+% ========== 1.4 错排问题 ==========
+\subsection*{1.4\quad 错排问题}
+
+\begin{knowledgebox}[错排问题（Derangement）]
+\textbf{定义：} \(n\) 个元素的\textbf{错排}是指一个排列 \(\sigma\)，使得对所有 \(i=1,2,\ldots,n\)，均有 \(\sigma(i) \ne i\)。即没有任何元素在原来的位置上。
+
+\textbf{错排数公式（容斥原理推导）：}
+\[
+D_n = n!\sum_{k=0}^{n}\frac{(-1)^k}{k!} = n!\left(1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \cdots + \frac{(-1)^n}{n!}\right)
+\]
+
+\textbf{递推公式：}
+\[
+D_1 = 0,\quad D_2 = 1, \qquad D_n = (n-1)(D_{n-1} + D_{n-2}) \quad (n \ge 3)
+\]
+
+\textbf{前几项：} \(D_1=0,\ D_2=1,\ D_3=2,\ D_4=9,\ D_5=44,\ D_6=265, \ldots\)
+
+\textbf{渐近公式：} 当 \(n\) 较大时，\(D_n \approx \dfrac{n!}{e}\)，即错排的概率趋近于 \(\dfrac{1}{e} \approx 0.3679\)。
+\end{knowledgebox}
+
+\begin{tipbox}[规律]
+错排递推公式的直观理解：元素 \(n\) 可以放到位置 \(k\)（共 \(n-1\) 种选择）。若元素 \(k\) 恰好放到位置 \(n\)（互换），则剩余 \(n-2\) 个元素错排，有 \(D_{n-2}\) 种；若元素 \(k\) 不放到位置 \(n\)，则剩余 \(n-1\) 个元素（含元素 \(k\)）都不到各自位置，有 \(D_{n-1}\) 种。故 \(D_n = (n-1)(D_{n-1}+D_{n-2})\)。
+\end{tipbox}
+
+% ========== 1.5 路径计数 ==========
+\subsection*{1.5\quad 路径计数}
+
+\begin{knowledgebox}[格路计数]
+\textbf{基本格路：} 从 \((0,0)\) 到 \((m,n)\)，每次向右或向上走一步，方案数为
+\[
+\binom{m+n}{m} = \binom{m+n}{n}
+\]
+
+\textbf{不越过对角线的格路（卡特兰数）：} 从 \((0,0)\) 到 \((n,n)\)，每次向右或向上走一步，且路径始终在对角线 \(y=x\) 下方（含对角线），方案数为卡特兰数 \(C_n = \dfrac{1}{n+1}\dbinom{2n}{n}\)。
+
+\textbf{带障碍物的格路：} 利用容斥原理或递推（动态规划）计算。设 \(f(i,j)\) 为到达 \((i,j)\) 的方案数，则
+\[
+f(i,j) = f(i-1,j) + f(i,j-1)
+\]
+在障碍物处令 \(f(i,j)=0\)。
+
+\textbf{反射原理（Andr\'{e} 反射）：} 从 \((0,0)\) 到 \((a,b)\)（其中 \(a>b\)）越过对角线的路径数等于从 \((-1,1)\) 到 \((a,b)\) 的路径数，即 \(\dbinom{a+b}{a+1}\)。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=1.5em]
+  \item 格路计数中，"不越过对角线"与"不触碰对角线（除起点外）"是不同的条件，对应的计数结果不同。
+  \item 反射原理仅适用于单一约束条件（不越过一条直线），多重约束需要递推或容斥。
+\end{itemize}
+\end{warnbox}
+
+% ========== 1.6 生成函数入门 ==========
+\subsection*{1.6\quad 生成函数入门}
+
+\begin{knowledgebox}[普通生成函数（Ordinary Generating Function）]
+\textbf{定义：} 数列 \(\{a_n\}_{n\ge 0}\) 的普通生成函数为
+\[
+A(x) = \sum_{n=0}^{\infty} a_n x^n = a_0 + a_1 x + a_2 x^2 + \cdots
+\]
+
+\textbf{常用生成函数：}
+\begin{itemize}[leftmargin=1.5em]
+  \item 常数数列 \(a_n=1\)：\(\displaystyle\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n\)
+  \item 等比数列 \(a_n=r^n\)：\(\displaystyle\frac{1}{1-rx} = \sum_{n=0}^{\infty} r^n x^n\)
+  \item 组合数：\(\displaystyle\binom{m}{n}\) 的生成函数为 \((1+x)^m\)
+  \item 卡特兰数：\(C(x) = \displaystyle\frac{1-\sqrt{1-4x}}{2x}\)
+\end{itemize}
+
+\textbf{生成函数的运算：}
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{加法：} 对应数列逐项相加，即"或"的关系。
+  \item \textbf{乘法（卷积）：} \(A(x) \cdot B(x)\) 对应数列的卷积 \(c_n = \sum_{k=0}^{n} a_k b_{n-k}\)，即"分步"的关系。
+  \item \textbf{提取系数：} \([x^n] A(x)\) 表示 \(A(x)\) 中 \(x^n\) 的系数，即 \(a_n\)。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{tipbox}[规律]
+生成函数的核心价值在于将离散的计数问题转化为代数运算。整数分拆、重复组合、递推求解等问题都可以用生成函数优雅地处理。关键是正确写出每个"零件"的生成函数，然后利用乘法（分步乘法原理）组合。
+\end{tipbox}
+
+% ============================================================
+% 第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% ----- 例题1：容斥原理基础 -----
+\begin{examplebox}[【例题1】容斥原理——三集合基础]
+某班有 50 名学生，其中选修数学的有 30 人，选修物理的有 25 人，选修化学的有 20 人；同时选修数学和物理的有 12 人，同时选修数学和化学的有 10 人，同时选修物理和化学的有 8 人；三门都选的有 5 人。求三门都不选的人数。
+\end{examplebox}
+
+\textbf{解：}
+
+设 \(M, P, C\) 分别表示选修数学、物理、化学的学生集合。
+
+由容斥原理（三集合形式）：
+\begin{align*}
+|M \cup P \cup C| &= |M|+|P|+|C| - |M\cap P|-|M\cap C|-|P\cap C| + |M\cap P\cap C| \\
+&= 30+25+20 - 12-10-8 + 5 \\
+&= 75 - 30 + 5 = 50
+\end{align*}
+
+三门都不选的人数为：
+\[
+|U| - |M \cup P \cup C| = 50 - 50 = \boxed{0}
+\]
+
+\begin{tipbox}[方法总结]
+三集合容斥原理直接套公式，注意各项符号交替变化。验算技巧：代入极端值（如交集为零）检验公式正确性。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题2：容斥原理——错位排列计数 -----
+\begin{examplebox}[【例题2】容斥原理——满足多个条件的排列]
+用 \(0,1,2,3,4,5\) 组成无重复数字的四位数，其中个位不是 \(1\)、十位不是 \(2\)、百位不是 \(3\) 的四位数有多少个？
+\end{examplebox}
+
+\textbf{解：}
+
+设全集 \(U\) 为用 \(0,1,2,3,4,5\) 组成无重复数字的全部四位数。千位不能为 \(0\)，故
+\[
+|U| = 5 \times 5 \times 4 \times 3 = 300
+\]
+
+设 \(A\)：个位为 \(1\) 的四位数；\(B\)：十位为 \(2\) 的四位数；\(C\)：百位为 \(3\) 的四位数。
+
+我们需求 \(|\overline{A} \cap \overline{B} \cap \overline{C}| = |U| - |A \cup B \cup C|\)。
+
+\textbf{计算各集合大小：}
+
+\(|A|\)（个位为 \(1\)）：千位从 \(\{2,3,4,5\}\) 中选（不能为 \(0\)），4 种；剩余两位从剩余 4 个数选 2 个排列，\(4 \times 3=12\) 种。故 \(|A|=4\times 12=48\)。
+
+\(|B|\)（十位为 \(2\)）：千位从 \(\{1,3,4,5\}\) 中选（不能为 \(0\)），4 种；剩余两位从剩余 4 个数选 2 个排列，\(4\times 3=12\) 种。故 \(|B|=48\)。
+
+\(|C|\)（百位为 \(3\)）：同理 \(|C|=48\)。
+
+\(|A\cap B|\)（个位 \(1\)，十位 \(2\)）：千位从 \(\{3,4,5\}\) 中选，3 种；个位确定、十位确定，百位从剩余 3 个数选 1 个，3 种。故 \(|A\cap B|=3\times 3=9\)。
+
+\(|A\cap C|\)（个位 \(1\)，百位 \(3\)）：千位从 \(\{2,4,5\}\) 中选，3 种；十位从剩余 3 个数选，3 种。故 \(|A\cap C|=9\)。
+
+\(|B\cap C|\)（十位 \(2\)，百位 \(3\)）：千位从 \(\{1,4,5\}\) 中选，3 种；个位从剩余 3 个数选，3 种。故 \(|B\cap C|=9\)。
+
+\(|A\cap B\cap C|\)（个位 \(1\)，十位 \(2\)，百位 \(3\)）：千位从 \(\{4,5\}\) 中选，2 种。故 \(|A\cap B\cap C|=2\)。
+
+由容斥原理：
+\begin{align*}
+|A\cup B\cup C| &= 48+48+48 - 9-9-9 + 2 \\
+&= 144 - 27 + 2 = 119
+\end{align*}
+
+故所求四位数个数为：
+\[
+|U| - |A\cup B\cup C| = 300 - 119 = \boxed{181}
+\]
+
+\begin{tipbox}[方法总结]
+"某些位置不取某值"类问题，先计算"至少一个位置违反约束"的方案数（容斥原理），再从总数中减去。关键是正确计算各交集大小，注意首位不能为 \(0\) 的约束。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题3：容斥原理——不定方程整数解 -----
+\begin{examplebox}[【例题3】容斥原理——不定方程的约束解]
+求方程 \(x_1 + x_2 + x_3 + x_4 = 20\) 满足 \(x_i \ge 0\) 且 \(x_1 \le 6, x_2 \le 8, x_3 \le 5\) 的整数解的个数。
+\end{examplebox}
+
+\textbf{解：}
+
+设 \(U\) 为 \(x_1+x_2+x_3+x_4=20\)，\(x_i\ge 0\) 的全部非负整数解。由隔板法（插空法）：
+\[
+|U| = \binom{20+4-1}{4-1} = \binom{23}{3} = 1771
+\]
+
+设 \(A_1\)：\(x_1 \ge 7\)；\(A_2\)：\(x_2 \ge 9\)；\(A_3\)：\(x_3 \ge 6\)。
+
+\(|A_1|\)：令 \(x_1' = x_1 - 7 \ge 0\)，则 \(x_1'+x_2+x_3+x_4 = 13\)，故 \(|A_1| = \dbinom{16}{3} = 560\)。
+
+\(|A_2|\)：令 \(x_2' = x_2 - 9 \ge 0\)，则 \(x_1+x_2'+x_3+x_4 = 11\)，故 \(|A_2| = \dbinom{14}{3} = 364\)。
+
+\(|A_3|\)：令 \(x_3' = x_3 - 6 \ge 0\)，则 \(x_1+x_2+x_3'+x_4 = 14\)，故 \(|A_3| = \dbinom{17}{3} = 680\)。
+
+\(|A_1\cap A_2|\)：\(x_1'+x_2'+x_3+x_4 = 4\)，故 \(|A_1\cap A_2| = \dbinom{7}{3} = 35\)。
+
+\(|A_1\cap A_3|\)：\(x_1'+x_2+x_3'+x_4 = 7\)，故 \(|A_1\cap A_3| = \dbinom{10}{3} = 120\)。
+
+\(|A_2\cap A_3|\)：\(x_1+x_2'+x_3'+x_4 = 5\)，故 \(|A_2\cap A_3| = \dbinom{8}{3} = 56\)。
+
+\(|A_1\cap A_2\cap A_3|\)：\(x_1'+x_2'+x_3'+x_4 = -2\)，无解，故 \(= 0\)。
+
+由容斥原理，所求解数为：
+\begin{align*}
+&\quad |U| - |A_1\cup A_2\cup A_3| \\
+&= 1771 - (560+364+680) + (35+120+56) - 0 \\
+&= 1771 - 1604 + 211 = \boxed{378}
+\end{align*}
+
+\begin{tipbox}[方法总结]
+不定方程约束解的标准做法：先算无约束的总数（隔板法），再用容斥原理减去违反上界约束的部分。"违反上界 \(x_i \le m\)"即"\(x_i \ge m+1\)"，做变量替换 \(x_i' = x_i - (m+1)\) 后转化为标准隔板法。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题4：容斥原理——欧拉函数 -----
+\begin{examplebox}[【例题4】容斥原理——欧拉函数]
+利用容斥原理求 \(\varphi(360)\)，即不超过 \(360\) 且与 \(360\) 互质的正整数的个数。
+\end{examplebox}
+
+\textbf{解：}
+
+首先分解质因数：\(360 = 2^3 \times 3^2 \times 5\)。
+
+与 \(360\) 不互质等价于能被 \(2\)、\(3\) 或 \(5\) 中至少一个整除。设 \(A\)：被 \(2\) 整除的集合；\(B\)：被 \(3\) 整除的集合；\(C\)：被 \(5\) 整除的集合。
+
+\begin{align*}
+|A| &= \lfloor 360/2 \rfloor = 180, \quad |B| = \lfloor 360/3 \rfloor = 120, \quad |C| = \lfloor 360/5 \rfloor = 72 \\
+|A\cap B| &= \lfloor 360/6 \rfloor = 60, \quad |A\cap C| = \lfloor 360/10 \rfloor = 36, \quad |B\cap C| = \lfloor 360/15 \rfloor = 24 \\
+|A\cap B\cap C| &= \lfloor 360/30 \rfloor = 12
+\end{align*}
+
+不与 \(360\) 互质的个数：
+\[
+|A\cup B\cup C| = 180+120+72 - 60-36-24 + 12 = 264
+\]
+
+因此
+\[
+\varphi(360) = 360 - 264 = \boxed{96}
+\]
+
+\textbf{验证（欧拉函数公式）：}
+\[
+\varphi(360) = 360\left(1-\frac{1}{2}\right)\left(1-\frac{1}{3}\right)\left(1-\frac{1}{5}\right) = 360 \times \frac{1}{2} \times \frac{2}{3} \times \frac{4}{5} = 96 \quad \checkmark
+\]
+
+\begin{tipbox}[方法总结]
+欧拉函数 \(\varphi(n)\) 本质上是容斥原理的应用。公式 \(\varphi(n) = n\prod_{p|n}\left(1-\frac{1}{p}\right)\) 可直接由容斥原理推导。质因数分解是前提。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题5：递推计数——铺砖问题 -----
+\begin{examplebox}[【例题5】递推计数——铺砖问题]
+用 \(1\times 1\) 的方砖和 \(1\times 2\) 的长砖铺满一个 \(1\times n\) 的长条区域，有多少种铺法？
+\end{examplebox}
+
+\textbf{解：}
+
+设铺满 \(1\times n\) 区域的铺法数为 \(a_n\)。
+
+\textbf{建立递推：} 考虑最右端的铺法：
+\begin{itemize}[leftmargin=1.5em]
+  \item 若最右端放一块 \(1\times 1\) 方砖，则左边有 \(a_{n-1}\) 种铺法。
+  \item 若最右端放一块 \(1\times 2\) 长砖（横放），则左边有 \(a_{n-2}\) 种铺法。
+\end{itemize}
+
+因此 \(a_n = a_{n-1} + a_{n-2}\)，这正是\textbf{斐波那契递推}。
+
+\textbf{初始条件：} \(a_1 = 1\)（只放一块方砖），\(a_2 = 2\)（两块方砖或一块长砖）。
+
+\textbf{计算：}
+\[
+a_1=1,\ a_2=2,\ a_3=3,\ a_4=5,\ a_5=8,\ a_6=13,\ \ldots
+\]
+
+即 \(a_n = F_{n+1}\)（第 \(n+1\) 个斐波那契数），其中 \(F_1=F_2=1\)。
+
+铺满 \(1\times n\) 的铺法数为 \(\boxed{F_{n+1}}\)，即第 \(n+1\) 个斐波那契数。
+
+\begin{tipbox}[方法总结]
+铺砖问题的本质是"最后一步"分类：最右端放什么决定了剩余部分的规模。得到斐波那契递推后，可尝试求通项公式（特征方程法），也可直接用递推计算具体值。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题6：递推计数——传球问题 -----
+\begin{examplebox}[【例题6】递推计数——传球问题]
+\(n\) 个人围成一圈传球，从某人开始，每次可以将球传给左边或右边相邻的人。经过 \(k\) 次传球后，球回到出发者的传球方式有多少种？
+\end{examplebox}
+
+\textbf{解：}
+
+设 \(a_k\) 表示经 \(k\) 次传球后球回到出发者的方式数，\(b_k\) 表示经 \(k\) 次传球后球在某个特定非出发者的方式数（由对称性，球在任意一个非出发者处的方式数相同）。
+
+\textbf{建立递推：}
+\begin{itemize}[leftmargin=1.5em]
+  \item 球在出发者时，上一步必须在左边或右边的邻居处：\(a_k = 2b_{k-1}\)。
+  \item 球在某非出发者时，上一步可从该非出发者的两个邻居来：一个邻居是出发者（有 \(a_{k-1}\) 种），另一个是非出发者（有 \(b_{k-1}\) 种）。故 \(b_k = a_{k-1} + b_{k-1}\)。
+\end{itemize}
+
+初始条件：\(a_0 = 1\)（起始就在出发者处），\(b_0 = 0\)。
+
+对于 \textbf{\(n=3\)} 的特殊情况（三人传球）：
+
+由 \(a_k = 2b_{k-1}\) 和 \(b_k = a_{k-1}+b_{k-1}\)，代入消元得 \(a_k = a_{k-1}+2b_{k-2}\)。
+
+由 \(b_{k-1} = a_{k-2}+b_{k-2}\)，得 \(b_{k-2} = b_{k-1}-a_{k-2}\)。
+
+又 \(a_{k-1} = 2b_{k-2}\)，故 \(b_{k-2} = \frac{a_{k-1}}{2}\)，\(b_{k-1} = a_{k-2}+\frac{a_{k-1}}{2}\)。
+
+代入 \(a_k = 2b_{k-1}\)：\(a_k = 2a_{k-2}+a_{k-1}\)，即
+\[
+a_k = a_{k-1} + 2a_{k-2}
+\]
+
+初始：\(a_0=1, a_1=0\)（传一次球必到邻居，无法回到出发者）。
+
+\textbf{计算：} \(a_0=1,\ a_1=0,\ a_2=2,\ a_3=2,\ a_4=6,\ a_5=10,\ldots\)
+
+\textbf{通项公式：} 特征方程 \(r^2 - r - 2 = 0\)，解得 \(r_1=2, r_2=-1\)。
+
+故 \(a_k = \alpha \cdot 2^k + \beta \cdot (-1)^k\)。
+
+由初始条件：\(\alpha+\beta=1,\ 2\alpha-\beta=0\)，解得 \(\alpha=\frac{1}{3},\ \beta=\frac{2}{3}\)。
+
+\[
+a_k = \frac{1}{3}\left[2^k + 2(-1)^k\right]
+\]
+
+\textbf{验证：} \(a_2 = \frac{1}{3}(4+2) = 2\) \(\checkmark\)，\(a_3 = \frac{1}{3}(8-2) = 2\) \(\checkmark\)。
+
+对于一般 \(n\) 个人的情况，可类似建立含 \(n\) 个状态的递推系统，或利用对称性与特征值方法求解。
+
+三人传球经 \(k\) 次回到出发者的方式数为 \(\boxed{\dfrac{2^k + 2(-1)^k}{3}}\)。
+
+\begin{tipbox}[方法总结]
+传球问题的关键是利用对称性简化状态：只需记录球在"出发者"和"非出发者"两个状态之间的转移。圆排列对称性大大减少了状态数。特征方程法是求解线性递推通项的标准工具。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题7：递推计数——汉诺塔 -----
+\begin{examplebox}[【例题7】递推计数——汉诺塔问题]
+汉诺塔问题：有 \(n\) 个大小不同的圆盘从小到大套在柱子 A 上，每次只能移动一个圆盘，且大盘不能放在小盘上面。目标是将所有圆盘移到柱子 C 上（可借助柱子 B）。求最少移动次数 \(H_n\)。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{建立递推：}
+\begin{enumerate}[leftmargin=1.5em]
+  \item 先将上面 \(n-1\) 个圆盘从 A 移到 B（借助 C），需 \(H_{n-1}\) 次。
+  \item 将最大的圆盘从 A 移到 C，需 \(1\) 次。
+  \item 将 \(n-1\) 个圆盘从 B 移到 C（借助 A），需 \(H_{n-1}\) 次。
+\end{enumerate}
+
+因此 \(H_n = 2H_{n-1} + 1\)，初始条件 \(H_1 = 1\)。
+
+\textbf{求解递推：}
+
+改写为 \(H_n + 1 = 2(H_{n-1}+1)\)。令 \(T_n = H_n+1\)，则 \(T_n = 2T_{n-1}\)，\(T_1 = 2\)。
+
+故 \(T_n = 2^n\)，从而
+\[
+H_n = 2^n - 1
+\]
+
+\textbf{验证：} \(H_1=1, H_2=3, H_3=7, H_4=15\)，均正确。汉诺塔最少移动次数为 \(\boxed{2^n-1}\)。
+
+\begin{tipbox}[方法总结]
+汉诺塔是递推的经典模型。关键是识别"最大的盘"必须单独移动，将其余盘的移动归结为相同结构的子问题。技巧：\(H_n+c = 2(H_{n-1}+c)\) 配方法求解形如 \(a_n = 2a_{n-1}+b\) 的非齐次递推。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题8：卡特兰数——括号匹配 -----
+\begin{examplebox}[【例题8】卡特兰数——括号匹配]
+有 \(n\) 对括号，求所有合法的括号匹配序列的个数。例如 \(n=3\) 时，合法序列有 \(()()(),\ ()(()),\ (())(),\ (()()),\ ((()))\) 共 \(5\) 种。
+\end{examplebox}
+
+\textbf{解：}
+
+设 \(n\) 对括号的合法序列数为 \(C_n\)。
+
+\textbf{方法一：递推法}
+
+考虑第一个左括号与之匹配的右括号的位置。设第一个左括号与第 \(2k+2\) 位的右括号匹配（\(k=0,1,\ldots,n-1\)），则：
+\begin{itemize}[leftmargin=1.5em]
+  \item 这对括号内部有 \(k\) 对括号，有 \(C_k\) 种合法序列。
+  \item 这对括号外部（右侧）有 \(n-1-k\) 对括号，有 \(C_{n-1-k}\) 种合法序列。
+\end{itemize}
+
+因此
+\[
+C_n = \sum_{k=0}^{n-1} C_k \cdot C_{n-1-k}
+\]
+
+初始条件 \(C_0 = 1\)（空序列视为合法）。
+
+\textbf{计算：}
+\begin{align*}
+C_0 &= 1 \\
+C_1 &= C_0 C_0 = 1 \\
+C_2 &= C_0 C_1 + C_1 C_0 = 2 \\
+C_3 &= C_0 C_2 + C_1 C_1 + C_2 C_0 = 5 \\
+C_4 &= C_0 C_3 + C_1 C_2 + C_2 C_1 + C_3 C_0 = 14
+\end{align*}
+
+\textbf{方法二：通项公式（反射原理）}
+
+将左括号视为向右走一步 \((1,0)\)，右括号视为向上走一步 \((0,1)\)。合法括号序列对应从 \((0,0)\) 到 \((n,n)\) 不越过对角线的格路。
+
+总路径数为 \(\dbinom{2n}{n}\)，越过对角线的路径数（由反射原理）为 \(\dbinom{2n}{n+1}\)。
+
+\[
+C_n = \binom{2n}{n} - \binom{2n}{n+1} = \frac{1}{n+1}\binom{2n}{n}
+\]
+
+\(n\) 对括号的合法匹配序列数为卡特兰数 \(\boxed{C_n = \dfrac{1}{n+1}\dbinom{2n}{n}}\)。
+
+\begin{tipbox}[方法总结]
+括号匹配是卡特兰数最经典的模型。递推法（"第一个左括号的匹配位置"分类）建立了卡特兰数的标准递推关系。反射原理将问题转化为格路计数，直接给出通项公式。两种方法互补，建议都掌握。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题9：卡特兰数——出栈序列 -----
+\begin{examplebox}[【例题9】卡特兰数——出栈序列]
+设有一个栈，将 \(1,2,3,4,5\) 按顺序依次入栈（每次入栈后可以选择立即出栈或等待），则所有可能的出栈序列有多少种？
+\end{examplebox}
+
+\textbf{解：}
+
+将入栈操作记为 \(+\)（向右走一步），出栈操作记为 \(-\)（向上走一步）。每次入栈必须先于对应出栈，且出栈时栈中必须有元素。这恰好对应从 \((0,0)\) 到 \((n,n)\) 不越过对角线的格路。
+
+因此出栈序列数为卡特兰数 \(C_n\)，其中 \(n=5\)：
+\[
+C_5 = \frac{1}{6}\binom{10}{5} = \frac{252}{6} = \boxed{42}
+\]
+
+\textbf{验证（递推）：}
+\begin{align*}
+C_0&=1,\ C_1=1,\ C_2=2,\ C_3=5,\ C_4=14, \\
+C_5 &= C_0 C_4 + C_1 C_3 + C_2 C_2 + C_3 C_1 + C_4 C_0 \\
+&= 14 + 5 + 4 + 5 + 14 = 42 \quad \checkmark
+\end{align*}
+
+\begin{tipbox}[方法总结]
+出栈序列问题是卡特兰数的另一经典应用。关键观察：入栈和出栈的操作序列可编码为括号序列（或格路），约束条件恰好对应"不越过对角线"。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题10：卡特兰数——凸多边形三角剖分 -----
+\begin{examplebox}[【例题10】卡特兰数——凸多边形三角剖分]
+一个凸 \(7\) 边形，用不相交的对角线将其分割为三角形，有多少种不同的三角剖分方案？
+\end{examplebox}
+
+\textbf{解：}
+
+凸 \(n+2\) 边形的三角剖分数等于卡特兰数 \(C_n\)。
+
+对于凸 \(7\) 边形，\(n+2=7\)，即 \(n=5\)：
+\[
+C_5 = \frac{1}{6}\binom{10}{5} = \frac{252}{6} = \boxed{42}
+\]
+
+\textbf{推导（递推法）：}
+
+设凸 \(m\) 边形的三角剖分数为 \(T_m\)。固定一条边（比如顶点 \(1\) 到顶点 \(m\)），设第三个顶点为 \(k\)（\(k=2,3,\ldots,m-1\)），则三角形 \((1,k,m)\) 将多边形分为三部分：三角形本身、左侧的 \(k\) 边形（顶点 \(1,2,\ldots,k\)）和右侧的 \(m-k+1\) 边形（顶点 \(k,k+1,\ldots,m\)）。
+
+\[
+T_m = \sum_{k=2}^{m-1} T_{k} \cdot T_{m-k+1}
+\]
+
+其中 \(T_2 = T_3 = 1\)（三角形只有一种剖分）。令 \(C_n = T_{n+2}\)，则得到标准卡特兰数递推。
+
+\begin{tipbox}[方法总结]
+凸多边形三角剖分是卡特兰数的经典几何模型。固定一条边后按"第三个顶点"分类，自然得到卡特兰数递推。注意凸 \(n+2\) 边形对应 \(C_n\)，不要搞错下标。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题11：错排问题 -----
+\begin{examplebox}[【例题11】错排问题]
+有 \(5\) 封不同的信和 \(5\) 个不同的信封，每封信对应一个正确的信封。将所有信装入信封，恰好每封信都装错的装法有多少种？
+\end{examplebox}
+
+\textbf{解：}
+
+这是经典的错排问题，需求 \(D_5\)。
+
+\textbf{方法一：容斥原理公式}
+
+设全集 \(U\) 为 \(5\) 封信的全部排列，\(|U|=5!=120\)。设 \(A_i\) 为第 \(i\) 封信装对的排列集合。
+
+\begin{align*}
+D_5 &= 5! - \binom{5}{1}\cdot 4! + \binom{5}{2}\cdot 3! - \binom{5}{3}\cdot 2! + \binom{5}{4}\cdot 1! - \binom{5}{5}\cdot 0! \\
+&= 120 - 5\times 24 + 10\times 6 - 10\times 2 + 5\times 1 - 1\times 1 \\
+&= 120 - 120 + 60 - 20 + 5 - 1 \\
+&= 44
+\end{align*}
+
+\textbf{方法二：递推公式}
+
+\begin{align*}
+D_1 &= 0,\quad D_2 = 1 \\
+D_3 &= 2(D_2+D_1) = 2\times 1 = 2 \\
+D_4 &= 3(D_3+D_2) = 3\times 3 = 9 \\
+D_5 &= 4(D_4+D_3) = 4\times 11 = 44
+\end{align*}
+
+\textbf{方法三：渐近验证}
+
+\(D_5 \approx \dfrac{5!}{e} = \dfrac{120}{2.71828\ldots} \approx 44.15\)，与精确值 \(44\) 吻合。
+
+恰好每封信都装错的装法有 \(\boxed{44}\) 种。
+
+\begin{tipbox}[方法总结]
+错排问题有三种计算方法：容斥原理直接求（适合较小 \(n\)）、递推公式逐步计算、渐近公式估算。考试中递推公式最实用。记住错排的标志性数值：\(D_3=2,\ D_4=9,\ D_5=44,\ D_6=265\)。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题12：路径计数——不越对角线 -----
+\begin{examplebox}[【例题12】路径计数——不越对角线的格路]
+从 \((0,0)\) 出发，每次向右或向上走一步，到达 \((6,6)\)，且路径不越过对角线 \(y=x\)（即始终满足 \(y \le x\)），共有多少种走法？
+\end{examplebox}
+
+\textbf{解：}
+
+由反射原理，从 \((0,0)\) 到 \((n,n)\) 不越过对角线的格路数为卡特兰数 \(C_n\)。
+
+\[
+C_6 = \frac{1}{7}\binom{12}{6} = \frac{1}{7} \times 924 = \boxed{132}
+\]
+
+\textbf{反射原理推导：}
+
+总路径数为 \(\dbinom{12}{6} = 924\)。
+
+越过对角线的路径数：由 Andr\'{e} 反射原理，等于从 \((-1,1)\) 到 \((6,6)\) 的路径数，即 \(\dbinom{12}{7} = 792\)...
+
+等等，需要更仔细地分析。从 \((0,0)\) 到 \((6,6)\) 越过 \(y=x\) 的路径，即存在某个时刻 \(y > x\)。反射原理说：这样的路径与从 \((-1,1)\) 到 \((6,6)\) 的路径一一对应。从 \((-1,1)\) 到 \((6,6)\) 需要向右走 \(7\) 步、向上走 \(5\) 步，共 \(\dbinom{12}{7} = \dbinom{12}{5} = 792\) 条。
+
+不越过对角线的路径数 \(= 924 - 792 = 132\)。
+
+\textbf{验证：} \(C_6 = \dfrac{1}{7}\dbinom{12}{6} = \dfrac{924}{7} = 132\) \(\checkmark\)
+
+\begin{tipbox}[方法总结]
+"不越过对角线的格路"是卡特兰数的等价定义。反射原理的核心思想：将"非法路径"（越过对角线）通过关于 \(y=x+1\) 的反射变为从"虚起点"出发的路径，从而可直接计数。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题13：路径计数——带障碍物 -----
+\begin{examplebox}[【例题13】路径计数——带障碍物的格路]
+从 \((0,0)\) 到 \((5,5)\)，每次向右或向上走一步。已知 \((2,2)\) 和 \((3,3)\) 两个点是障碍物（不能经过），且路径不越过对角线 \(y=x\)。求满足条件的路径数。
+\end{examplebox}
+
+\textbf{解：}
+
+设 \(f(i,j)\) 为从 \((0,0)\) 到 \((i,j)\) 不越过对角线且不经过障碍物的路径数。转移方程：\(f(i,j) = f(i-1,j)+f(i,j-1)\)，在障碍物处 \(f(i,j)=0\)，且 \(j>i\) 时 \(f(i,j)=0\)（不越过对角线）。
+
+逐步计算（行列标注，障碍物标 \(\times\)）：
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{c|cccccc}
+  \(j\backslash i\) & 0 & 1 & 2 & 3 & 4 & 5 \\
+  \hline
+  0 & 1 & 1 & 1 & 1 & 1 & 1 \\
+  1 & 0 & 1 & 2 & 3 & 4 & 5 \\
+  2 & 0 & 0 & \(\times\) & 3 & 7 & 12 \\
+  3 & 0 & 0 & 0 & \(\times\) & 7 & 19 \\
+  4 & 0 & 0 & 0 & 0 & 7 & 26 \\
+  5 & 0 & 0 & 0 & 0 & 0 & 26 \\
+\end{tabular}
+\end{center}
+
+\textbf{关键计算说明：}
+\begin{itemize}[leftmargin=1.5em]
+  \item \(f(2,2)=0\)（障碍物）。
+  \item \(f(3,2) = f(2,2)+f(3,1) = 0+3 = 3\)。
+  \item \(f(4,2) = f(3,2)+f(4,1) = 3+4 = 7\)。
+  \item \(f(3,3)=0\)（障碍物）。
+  \item \(f(4,3) = f(3,3)+f(4,2) = 0+7 = 7\)。
+  \item \(f(5,3) = f(4,3)+f(5,2) = 7+12 = 19\)。
+  \item \(f(5,4) = f(4,4)+f(5,3) = 7+19 = 26\)。
+  \item \(f(5,5) = f(4,5)+f(5,4) = 0+26 = 26\)。
+\end{itemize}
+
+满足条件的路径数为 \(\boxed{26}\)。
+
+\begin{tipbox}[方法总结]
+带障碍物的格路计数使用递推（动态规划）最为方便。逐格计算，障碍物处值为 \(0\)。注意不越过对角线的约束：当 \(j>i\) 时所有格子值为 \(0\)。多重约束叠加时，递推比公式法更可靠。
+\end{tipbox}
+
+\vspace{6pt}
+
+% ----- 例题14：生成函数入门 -----
+\begin{examplebox}[【例题14】生成函数——整数分拆与重复组合]
+用生成函数方法求：将 \(n\) 个相同的球放入 \(3\) 个不同的盒子（允许空盒）的方案数。
+\end{examplebox}
+
+\textbf{解：}
+
+设第 \(i\) 个盒子放入 \(k_i\) 个球，则 \(k_1+k_2+k_3 = n\)，\(k_i \ge 0\)。
+
+每个盒子的生成函数为（可放入 \(0,1,2,\ldots\) 个球）：
+\[
+1 + x + x^2 + x^3 + \cdots = \frac{1}{1-x}
+\]
+
+三个盒子的总生成函数为（乘法原理——独立选择）：
+\[
+G(x) = \left(\frac{1}{1-x}\right)^3 = \frac{1}{(1-x)^3}
+\]
+
+由广义二项式展开（负二项式级数）：
+\[
+\frac{1}{(1-x)^3} = \sum_{n=0}^{\infty} \binom{n+2}{2} x^n = \sum_{n=0}^{\infty} \frac{(n+1)(n+2)}{2} x^n
+\]
+
+因此 \(x^n\) 的系数为：
+\[
+[x^n]G(x) = \binom{n+2}{2} = \frac{(n+1)(n+2)}{2}
+\]
+
+\textbf{验证（隔板法）：} 将 \(n\) 个球和 \(2\) 块隔板排列，等价于从 \(n+2\) 个位置选 \(2\) 个放隔板：\(\dbinom{n+2}{2}\)，与生成函数结果一致。
+
+方案数为 \(\boxed{\dbinom{n+2}{2} = \dfrac{(n+1)(n+2)}{2}}\)。
+
+\begin{tipbox}[方法总结]
+生成函数方法处理"重复组合"问题的核心步骤：(1) 为每个独立变量写出其生成函数（可选值集合对应的幂级数）；(2) 相乘得到总生成函数；(3) 提取 \(x^n\) 的系数。\(\dfrac{1}{(1-x)^k}\) 的展开式 \(\displaystyle\sum \binom{n+k-1}{k-1}x^n\) 是最常用的公式。
+\end{tipbox}
+
+% ============================================================
+% 第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】密码学中的错排]
+一个保险柜有 \(6\) 个密码转盘，每个转盘有 \(10\) 个位置（标记为 \(0\) 至 \(9\)）。初始时每个转盘恰好在正确位置。操作时，必须将每个转盘都拨到非初始位置的位置。问：有多少种操作方式？
+\end{appbox}
+
+\textbf{解：}
+
+每个转盘有 \(9\) 个可选的非初始位置，但"每个转盘都不到初始位置"不等价于"独立选择"——因为转盘之间的选择确实是独立的。
+
+实际上，\(6\) 个转盘互相独立，每个转盘有 \(9\) 种选择，故方案数为
+\[
+9^6 = \boxed{531441}
+\]
+
+\textbf{注意：} 这与错排问题不同。错排问题要求元素在不同的位置之间重新排列（一一对应），而本题每个转盘独立选择，不存在"排列"关系。
+
+\begin{warnbox}[易错提醒]
+错排问题的关键是"一一对应"：每个元素必须去某个位置，且不同元素去不同位置。如果各变量独立选择，则用乘法原理即可，不需要错排公式。
+\end{warnbox}
+
+\vspace{6pt}
+
+\begin{appbox}[【应用2】投票问题（卡特兰数应用）]
+甲、乙两人参加竞选，甲获得 \(a\) 票，乙获得 \(b\) 票（\(a > b\)）。唱票过程中，甲的累计票数始终严格大于乙的累计票数的唱票顺序有多少种？
+\end{appbox}
+
+\textbf{解：}
+
+将每次唱甲的票记为向右走一步 \((1,0)\)，唱乙的票记为向上走一步 \((0,1)\)。唱票过程对应从 \((0,0)\) 到 \((a,b)\) 的格路。
+
+条件"甲的累计票数始终严格大于乙"即路径始终在对角线 \(y=x\) 下方（严格），即对路径上所有中间点 \((x,y)\) 有 \(y < x\)。
+
+由反射原理，从 \((0,0)\) 到 \((a,b)\) 越过 \(y=x\)（即存在 \(y \ge x\) 的时刻，不包括起点）的路径数等于从 \((-1,1)\) 到 \((a,b)\) 的路径数。
+
+从 \((-1,1)\) 到 \((a,b)\) 需向右走 \(a+1\) 步、向上走 \(b-1\) 步，共 \(\dbinom{a+b}{a+1}\) 条。
+
+所求路径数为：
+\[
+\binom{a+b}{a} - \binom{a+b}{a+1} = \frac{a-b}{a+b}\binom{a+b}{a}
+\]
+
+这是一个广义的卡特兰数（ballot number）。
+
+\textbf{特例：} 若 \(a=5, b=3\)，则
+\[
+\frac{5-3}{5+3}\binom{8}{5} = \frac{2}{8}\times 56 = \boxed{14}
+\]
+
+这恰好等于卡特兰数 \(C_4 = 14\)（因为 \(a-b=2\) 时与 \(C_{(a-b)/2+1}\) 相关需进一步分析，但本题 \(a-b=2\) 时 \(\frac{2}{8}\times 56 = 14\) 直接得到结果）。
+
+\vspace{6pt}
+
+\begin{appbox}[【应用3】几何中的三角剖分]
+一个凸八边形广场被若干条不相交的对角线分割为三角形区域，用于铺设不同颜色的地砖。若两种分割方案只要使用的对角线集合不同就算不同方案，则共有多少种不同的分割方案？
+\end{appbox}
+
+\textbf{解：}
+
+凸 \(n+2\) 边形的三角剖分数为卡特兰数 \(C_n\)。凸八边形对应 \(n+2=8\)，即 \(n=6\)。
+
+\[
+C_6 = \frac{1}{7}\binom{12}{6} = \frac{924}{7} = \boxed{132}
+\]
+
+\vspace{6pt}
+
+\begin{appbox}[【应用4】二进制序列（卡特兰数应用）]
+长度为 \(10\) 的二进制序列中，有多少个序列满足：从左到右读，读到任意位置时，已读的 \(0\) 的个数不少于已读的 \(1\) 的个数？
+\end{appbox}
+
+\textbf{解：}
+
+设序列中有 \(n\) 个 \(0\) 和 \(n\) 个 \(1\)（长度为 \(2n=10\)，即 \(n=5\)）。条件"任意位置时 \(0\) 的个数 \(\ge\) \(1\) 的个数"恰好对应合法括号序列（\(0\) 对应左括号，\(1\) 对应右括号），方案数为卡特兰数 \(C_n\)。
+
+若序列中 \(0\) 和 \(1\) 的个数不等（比如 \(0\) 多于 \(1\)），则用 ballot number 计算。
+
+本题要求长度为 \(10\)，\(0\) 和 \(1\) 各 \(5\) 个：
+\[
+C_5 = \frac{1}{6}\binom{10}{5} = \frac{252}{6} = \boxed{42}
+\]
+
+\textbf{若不要求 \(0\) 和 \(1\) 个数相等}，但要求"读到任意位置时 \(0\) 的个数 \(\ge\) \(1\) 的个数"，则需对 \(0\) 的个数 \(k \ge 5\) 分别计算 ballot number 后求和。
+
+% ============================================================
+% 第四部分：课堂练习
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em]
+  \item 某次考试有 \(100\) 人参加，及格的有 \(70\) 人，得良的有 \(50\) 人，得优的有 \(30\) 人。已知及格且得良的有 \(35\) 人，及格且得优的有 \(20\) 人，得良且得优的有 \(15\) 人，三者都有的有 \(10\) 人。求三者都没有的人数。
+
+  \item 求方程 \(x_1+x_2+x_3 = 15\) 满足 \(0\le x_1 \le 5,\ 0\le x_2 \le 7,\ 0\le x_3 \le 10\) 的整数解个数。
+
+  \item 用容斥原理求 \(\varphi(210)\)。
+
+  \item 用 \(1\times 1\) 和 \(1\times 2\) 的砖铺 \(1\times 8\) 的长条区域，共有多少种铺法？
+
+  \item 4 个人传球，从甲开始，每次传给其他人（不能传给自己），经 \(5\) 次传球后球回到甲，有多少种传法？
+
+  \item 求 \(C_7\)（第 \(7\) 个卡特兰数）。
+
+  \item 凸 \(9\) 边形的三角剖分有多少种方案？
+
+  \item \(6\) 封不同的信全部装错信封（错排），有多少种方法？
+
+  \item 从 \((0,0)\) 到 \((7,7)\) 不越过对角线的格路有多少条？
+
+  \item 将 \(n\) 个相同的球放入 \(4\) 个不同的盒子（允许空盒），用生成函数求方案数，并与隔板法结果对比验证。
+\end{enumerate}
+
+\vspace{10pt}
+
+\begin{knowledgebox}[参考答案]
+\textbf{1.} 三者都没有的人数：由容斥原理，
+\(|A\cup B\cup C| = 70+50+30-35-20-15+10 = 90\)，故三者都没有 \(= 100-90 = \boxed{10}\) 人。
+
+\medskip
+
+\textbf{2.} 先算无约束解数：\(\dbinom{17}{2}=136\)。设 \(A_1\): \(x_1\ge 6\)，\(|A_1|=\dbinom{11}{2}=55\)；\(A_2\): \(x_2\ge 8\)，\(|A_2|=\dbinom{9}{2}=36\)；\(A_3\): \(x_3\ge 11\)，\(|A_3|=\dbinom{6}{2}=15\)。两两交集：\(|A_1\cap A_2|=\dbinom{5}{2}=10\)，\(|A_1\cap A_3|=1\)（\(\dbinom{2}{2}\)），\(|A_2\cap A_3|=0\)。三交集为 \(0\)。结果 \(= 136-(55+36+15)+(10+1+0)-0 = \boxed{41}\)。
+
+\medskip
+
+\textbf{3.} \(210=2\times 3\times 5\times 7\)。\(\varphi(210) = 210\times\frac{1}{2}\times\frac{2}{3}\times\frac{4}{5}\times\frac{6}{7} = \boxed{48}\)。
+
+\medskip
+
+\textbf{4.} \(a_n = a_{n-1}+a_{2}\)（斐波那契型）。\(a_1=1,\ a_2=2,\ a_3=3,\ a_4=5,\ a_5=8,\ a_6=13,\ a_7=21,\ a_8=\boxed{34}\)。
+
+\medskip
+
+\textbf{5.} 设 \(a_k\) 为 \(k\) 次传球后回到甲的方式数。4 人时，\(a_k = (n-1)^{k-1}\) 的修正形式。由递推 \(a_k = 3^{k-1}-a_{k-1}\cdot\)... 更精确地，\(a_k = \frac{1}{4}[3^k+3\cdot(-1)^k]\)。\(a_5 = \frac{1}{4}[243-3] = \boxed{60}\)。
+
+\medskip
+
+\textbf{6.} \(C_7 = \frac{1}{8}\dbinom{14}{7} = \frac{3432}{8} = \boxed{429}\)。
+
+\medskip
+
+\textbf{7.} 凸 \(9\) 边形对应 \(C_7 = \boxed{429}\)。
+
+\medskip
+
+\textbf{8.} \(D_6 = 5(D_5+D_4) = 5(44+9) = 5\times 53 = \boxed{265}\)。
+
+\medskip
+
+\textbf{9.} \(C_7 = \boxed{429}\) 条。
+
+\medskip
+
+\textbf{10.} 生成函数：\(\left(\frac{1}{1-x}\right)^4 = \frac{1}{(1-x)^4}\)，系数 \([x^n] = \dbinom{n+3}{3}\)。隔板法：将 \(n\) 个球和 \(3\) 块隔板排列，\(\dbinom{n+3}{3}\)。两者一致，方案数为 \(\boxed{\dbinom{n+3}{3} = \dfrac{(n+1)(n+2)(n+3)}{6}}\)。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

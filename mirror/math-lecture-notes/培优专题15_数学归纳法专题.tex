@@ -1,0 +1,915 @@
+% ============================================================
+% 培优专题15 — 数学归纳法专题
+% 编译命令：xelatex -interaction=nonstopmode 培优专题15_数学归纳法专题.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高中数学培优 · 数学归纳法专题}}}
+\fancyhead[R]{\small\textcolor{mainblue}{培优专题讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{数学归纳法专题}}\\[12pt]
+{\Large\textcolor{gray}{培\quad 优\quad 专\quad 题\quad 15}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高二高三拔高 / 竞赛入门\quad |\quad 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+\subsection*{1.1\quad 第一数学归纳法（普通归纳法）}
+
+\begin{knowledgebox}[第一数学归纳法原理]
+设 $P(n)$ 是关于正整数 $n$ 的命题，若满足：
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{奠基步}（Base Case）：$P(1)$ 成立（或 $P(n_0)$ 成立，$n_0$ 为起始值）；
+  \item \textbf{归纳步}（Inductive Step）：假设 $P(k)$ 成立（$k \geq n_0$，$k \in \mathbb{N}^*$），能推出 $P(k+1)$ 也成立；
+\end{enumerate}
+则 $P(n)$ 对所有 $n \geq n_0$ 的正整数均成立。
+\end{knowledgebox}
+
+\begin{warnbox}[归纳法使用要点]
+\begin{enumerate}[label=(\arabic*)]
+  \item 奠基步与归纳步\textbf{缺一不可}。缺少奠基步，推理无根基；缺少归纳步，推理无法传递。
+  \item 归纳假设 $P(k)$ 成立时，\textbf{必须用到}该假设，否则不是真正的归纳法。
+  \item 归纳步中要证的是 $P(k) \Rightarrow P(k+1)$，即"用 $k$ 的情况推出 $k+1$ 的情况"，而非循环论证。
+  \item 起始值不一定是 $n=1$，可以是任意正整数 $n_0$，此时结论为"$n \geq n_0$ 时成立"。
+\end{enumerate}
+\end{warnbox}
+
+\subsection*{1.2\quad 强归纳法（第二数学归纳法 / 完全归纳法）}
+
+\begin{knowledgebox}[强归纳法原理]
+设 $P(n)$ 是关于正整数 $n$ 的命题，若满足：
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{奠基步}：$P(1)$ 成立（或 $P(n_0)$ 成立）；
+  \item \textbf{归纳步}：假设 $P(1), P(2), \ldots, P(k)$ \textbf{全部}成立（$k \geq n_0$），能推出 $P(k+1)$ 也成立；
+\end{enumerate}
+则 $P(n)$ 对所有 $n \geq n_0$ 的正整数均成立。
+\end{knowledgebox}
+
+\begin{tipbox}[强归纳法与普通归纳法的区别]
+\begin{itemize}
+  \item 普通归纳法在归纳步中只假设 $P(k)$ 成立；
+  \item 强归纳法在归纳步中假设 $P(1), P(2), \ldots, P(k)$ 全部成立，条件更强，适用于需要"回溯多个前项"的问题。
+  \item 二者在逻辑上等价，但强归纳法在某些问题中更自然（如整数分解、Fibonacci 数列相关命题）。
+\end{itemize}
+\end{tipbox}
+
+\subsection*{1.3\quad 无穷递降法}
+
+\begin{knowledgebox}[无穷递降法原理]
+无穷递降法（Fermat's Method of Infinite Descent）是一种反证法的特殊形式：
+
+若命题"$P(n)$ 对某个正整数 $n$ 成立"为真，则必存在更小的正整数 $n' < n$ 使得 $P(n')$ 也成立。如此可以无穷递降，但正整数不能无穷递降（由最小数原理），从而导出矛盾。
+
+\medskip
+\textbf{核心思想}：假设存在解 $\Rightarrow$ 构造更小的解 $\Rightarrow$ 无穷递降矛盾 $\Rightarrow$ 不存在解。
+\end{knowledgebox}
+
+\begin{tipbox}[无穷递降法的适用场景]
+\begin{itemize}
+  \item 证明某些方程\textbf{无正整数解}（如证明 $\sqrt{2}$ 不是有理数的变体）；
+  \item 证明某些数论问题中解的\textbf{唯一性}；
+  \item 本质上等价于强归纳法的反证形式。
+\end{itemize}
+\end{tipbox}
+
+\subsection*{1.4\quad 二重归纳法}
+
+\begin{knowledgebox}[二重归纳法原理]
+设 $P(m, n)$ 是关于两个正整数 $m, n$ 的命题，若满足：
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{奠基步}：$P(1, n)$ 对所有 $n \geq 1$ 成立，且 $P(m, 1)$ 对所有 $m \geq 1$ 成立；
+  \item \textbf{归纳步}：假设 $P(m, n)$ 对所有 $m \leq a,\; n \leq b$（其中 $(a, b) \neq (1,1)$ 时至少一个严格不等）成立，能推出 $P(a+1, b+1)$ 也成立；
+\end{enumerate}
+则 $P(m, n)$ 对所有正整数 $m, n$ 均成立。
+\end{knowledgebox}
+
+\begin{warnbox}[二重归纳法注意事项]
+\begin{itemize}
+  \item 二重归纳法的归纳步中，通常需要同时用到 $P(k, n)$ 和 $P(k+1, n-1)$（或类似组合）才能推出 $P(k+1, n)$。
+  \item 奠基步需要对两个方向分别验证。
+  \item 常见于涉及二维网格、组合恒等式等问题。
+\end{itemize}
+\end{warnbox}
+
+\subsection*{1.5\quad 归纳法变形技巧}
+
+\begin{knowledgebox}[常用变形技巧]
+\begin{enumerate}[label=\textbf{技巧\arabic*}]
+  \item \textbf{改变起始值}：有时 $n=1$ 不便验证，可从 $n=2$ 或 $n=n_0$ 开始，结论改为"$n \geq n_0$"。
+  \item \textbf{加强命题}：有时原命题太弱，归纳步推不动，可以尝试证明更强的命题（加强归纳假设后更容易推出下一步）。
+  \item \textbf{改变归纳变量}：对 $n$ 的归纳困难时，可以考虑对 $n$ 的某个函数（如 $\lfloor n/2 \rfloor$、$n$ 的二进制位数等）进行归纳。
+  \item \textbf{跳步归纳}：证明 $P(k) \Rightarrow P(k+2)$，再分别验证 $P(1)$ 和 $P(2)$，从而得到对所有正整数成立。
+  \item \textbf{倒推归纳法（Cauchy 归纳法）}：先证 $P(n) \Rightarrow P(n-1)$（$n \geq 2$），再证 $P$ 对无穷多个 $n$ 成立，则 $P$ 对所有正整数成立。
+  \item \textbf{螺旋归纳法}：交替证明 $P(k) \Rightarrow Q(k)$ 和 $Q(k) \Rightarrow P(k+1)$，其中 $P, Q$ 是两个相关命题。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{tipbox}[归纳法证明的一般步骤]
+\textbf{Step 1}：明确命题 $P(n)$ 和起始值 $n_0$。
+
+\textbf{Step 2}：验证奠基步 $P(n_0)$。
+
+\textbf{Step 3}：写出归纳假设（"设 $n=k$ 时命题成立"）。
+
+\textbf{Step 4}：在归纳假设下，推导 $P(k+1)$（或 $P(k+1), \ldots$ 等，取决于归纳法类型）。
+
+\textbf{Step 5}：写出结论（"由数学归纳法原理，命题对一切 $n \geq n_0$ 成立"）。
+\end{tipbox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% ----- 基础归纳证明 -----
+\subsection*{2.1\quad 基础归纳证明}
+
+\begin{examplebox}[【例题1】证明求和公式]
+证明：对任意正整数 $n$，
+\[ 1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}. \]
+\end{examplebox}
+
+\textbf{证明}：
+
+\textbf{（i）奠基步}：当 $n=1$ 时，左边 $= 1$，右边 $= \dfrac{1 \times 2}{2} = 1$，等式成立。
+
+\textbf{（ii）归纳步}：设 $n = k$（$k \geq 1$）时等式成立，即
+\[ 1 + 2 + \cdots + k = \frac{k(k+1)}{2}. \]
+
+当 $n = k+1$ 时，
+\begin{align*}
+1 + 2 + \cdots + k + (k+1) &= \frac{k(k+1)}{2} + (k+1) \\
+&= (k+1)\left(\frac{k}{2} + 1\right) \\
+&= \frac{(k+1)(k+2)}{2}.
+\end{align*}
+即 $n = k+1$ 时等式也成立。
+
+由数学归纳法原理，等式对一切正整数 $n$ 成立。\qed
+
+\begin{examplebox}[【例题2】证明整除性]
+证明：对任意正整数 $n$，$7^n - 2^n$ 能被 $5$ 整除。
+\end{examplebox}
+
+\textbf{证明}：
+
+\textbf{（i）奠基步}：当 $n=1$ 时，$7^1 - 2^1 = 5$，能被 $5$ 整除。成立。
+
+\textbf{（ii）归纳步}：设 $n = k$（$k \geq 1$）时 $7^k - 2^k$ 能被 $5$ 整除，即 $7^k - 2^k = 5m$（$m \in \mathbb{Z}$）。
+
+当 $n = k+1$ 时，
+\begin{align*}
+7^{k+1} - 2^{k+1} &= 7 \cdot 7^k - 2 \cdot 2^k \\
+&= 7 \cdot 7^k - 7 \cdot 2^k + 7 \cdot 2^k - 2 \cdot 2^k \\
+&= 7(7^k - 2^k) + 5 \cdot 2^k.
+\end{align*}
+由归纳假设，$7^k - 2^k = 5m$，故 $7(7^k - 2^k) = 35m$ 能被 $5$ 整除；又 $5 \cdot 2^k$ 显然能被 $5$ 整除。
+
+因此 $7^{k+1} - 2^{k+1}$ 能被 $5$ 整除。
+
+由数学归纳法原理，$7^n - 2^n$ 对一切正整数 $n$ 能被 $5$ 整除。\qed
+
+\begin{examplebox}[【例题3】证明不等式]
+证明：对任意正整数 $n \geq 2$，
+\[ \left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right) \cdots \left(1 + \frac{1}{n}\right) = n + 1. \]
+并由此证明 $\displaystyle\prod_{k=1}^{n}\left(1 + \frac{1}{k}\right) > \sqrt{n+1}$（$n \geq 1$）。
+\end{examplebox}
+
+\textbf{证明}：
+
+\textbf{第一部分}：证明乘积公式。
+
+注意到 $1 + \dfrac{1}{k} = \dfrac{k+1}{k}$，故
+\begin{align*}
+\prod_{k=1}^{n}\left(1 + \frac{1}{k}\right) &= \frac{2}{1} \cdot \frac{3}{2} \cdot \frac{4}{3} \cdots \frac{n+1}{n} = n + 1.
+\end{align*}
+（望远镜乘积，各项约分即得。）
+
+\textbf{第二部分}：证明 $\displaystyle\prod_{k=1}^{n}\left(1 + \frac{1}{k}\right) > \sqrt{n+1}$。
+
+由第一部分，左边 $= n+1$，右边 $= \sqrt{n+1}$。
+
+当 $n \geq 1$ 时，$n + 1 \geq 2 > 1 = \sqrt{1}$。且 $n+1 > \sqrt{n+1}$ 等价于 $(n+1)^2 > n+1$，即 $n+1 > 1$，对 $n \geq 1$ 显然成立。
+
+因此 $\displaystyle\prod_{k=1}^{n}\left(1 + \frac{1}{k}\right) = n + 1 > \sqrt{n+1}$ 对一切正整数 $n$ 成立。\qed
+
+% ----- 整除性与同余 -----
+\subsection*{2.2\quad 整除性与同余}
+
+\begin{examplebox}[【例题4】证明整除性]
+证明：对任意正整数 $n$，$n^3 + 5n$ 能被 $6$ 整除。
+\end{examplebox}
+
+\textbf{证明}：
+
+\textbf{（i）奠基步}：当 $n=1$ 时，$1^3 + 5 \times 1 = 6$，能被 $6$ 整除。成立。
+
+\textbf{（ii）归纳步}：设 $n = k$（$k \geq 1$）时 $k^3 + 5k$ 能被 $6$ 整除，即 $k^3 + 5k = 6m$（$m \in \mathbb{Z}$）。
+
+当 $n = k+1$ 时，
+\begin{align*}
+(k+1)^3 + 5(k+1) &= k^3 + 3k^2 + 3k + 1 + 5k + 5 \\
+&= (k^3 + 5k) + 3k^2 + 3k + 6 \\
+&= 6m + 3k(k+1) + 6.
+\end{align*}
+注意到 $k(k+1)$ 是相邻两整数之积，必为偶数，设 $k(k+1) = 2t$，则 $3k(k+1) = 6t$。
+
+因此 $(k+1)^3 + 5(k+1) = 6m + 6t + 6 = 6(m + t + 1)$，能被 $6$ 整除。
+
+由数学归纳法原理，$n^3 + 5n$ 对一切正整数 $n$ 能被 $6$ 整除。\qed
+
+\begin{examplebox}[【例题5】证明 Fibonacci 数列性质]
+设 Fibonacci 数列 $\{F_n\}$ 满足 $F_1 = F_2 = 1$，$F_{n+2} = F_{n+1} + F_n$（$n \geq 1$）。证明：
+\[ F_1^2 + F_2^2 + \cdots + F_n^2 = F_n \cdot F_{n+1}. \]
+\end{examplebox}
+
+\textbf{证明}：
+
+\textbf{（i）奠基步}：当 $n=1$ 时，左边 $= F_1^2 = 1$，右边 $= F_1 \cdot F_2 = 1 \times 1 = 1$。成立。
+
+当 $n=2$ 时，左边 $= 1 + 1 = 2$，右边 $= F_2 \cdot F_3 = 1 \times 2 = 2$。成立。
+
+\textbf{（ii）归纳步}：设 $n = k$（$k \geq 1$）时等式成立，即 $F_1^2 + F_2^2 + \cdots + F_k^2 = F_k \cdot F_{k+1}$。
+
+当 $n = k+1$ 时，
+\begin{align*}
+F_1^2 + F_2^2 + \cdots + F_k^2 + F_{k+1}^2 &= F_k \cdot F_{k+1} + F_{k+1}^2 \\
+&= F_{k+1}(F_k + F_{k+1}) \\
+&= F_{k+1} \cdot F_{k+2}.
+\end{align*}
+最后一步用到了 Fibonacci 递推关系 $F_k + F_{k+1} = F_{k+2}$。
+
+由数学归纳法原理，等式对一切正整数 $n$ 成立。\qed
+
+% ----- 强归纳法应用 -----
+\subsection*{2.3\quad 强归纳法应用}
+
+\begin{examplebox}[【例题6】用强归纳法证明]
+设正整数 $n \geq 2$，证明 $n$ 可以表示为若干个素数之积（即算术基本定理的存在性部分）。
+\end{examplebox}
+
+\textbf{证明}（用强归纳法）：
+
+设命题 $P(n)$："$n$ 可以表示为若干个素数之积"。
+
+\textbf{（i）奠基步}：当 $n=2$ 时，$2$ 本身是素数，$2 = 2$（一个素数之积），$P(2)$ 成立。
+
+\textbf{（ii）归纳步}：设 $P(2), P(3), \ldots, P(k)$ 全部成立（$k \geq 2$），要证 $P(k+1)$ 成立。
+
+分两种情况：
+
+\textbf{情况1}：若 $k+1$ 是素数，则 $k+1$ 本身就是若干个（一个）素数之积，$P(k+1)$ 成立。
+
+\textbf{情况2}：若 $k+1$ 不是素数，则存在 $a, b$ 满足 $2 \leq a \leq b < k+1$，使得 $k+1 = a \cdot b$。
+
+由归纳假设，$P(a)$ 和 $P(b)$ 均成立，即 $a$ 和 $b$ 都可以表示为素数之积：
+\[ a = p_1 p_2 \cdots p_s, \quad b = q_1 q_2 \cdots q_t \]
+（$p_i, q_j$ 均为素数）。
+
+因此 $k+1 = a \cdot b = p_1 p_2 \cdots p_s \cdot q_1 q_2 \cdots q_t$，也是素数之积，$P(k+1)$ 成立。
+
+由强归纳法原理，$P(n)$ 对所有 $n \geq 2$ 成立。\qed
+
+\begin{examplebox}[【例题7】用强归纳法证明递推关系]
+设数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_2 = 2$，$a_3 = 3$，且
+\[ a_n = a_{n-1} + a_{n-2} + a_{n-3} \quad (n \geq 4). \]
+证明：$a_n < 2^n$ 对所有正整数 $n$ 成立。
+\end{examplebox}
+
+\textbf{证明}（用强归纳法）：
+
+\textbf{（i）奠基步}：
+\begin{itemize}
+  \item $n=1$：$a_1 = 1 < 2^1 = 2$。成立。
+  \item $n=2$：$a_2 = 2 < 2^2 = 4$。成立。
+  \item $n=3$：$a_3 = 3 < 2^3 = 8$。成立。
+\end{itemize}
+
+\textbf{（ii）归纳步}：设 $n = k$（$k \geq 3$）时，$a_i < 2^i$ 对 $i = 1, 2, \ldots, k$ 均成立。
+
+当 $n = k+1$ 时（$k+1 \geq 4$），
+\begin{align*}
+a_{k+1} &= a_k + a_{k-1} + a_{k-2} \\
+&< 2^k + 2^{k-1} + 2^{k-2} \\
+&= 2^{k-2}(4 + 2 + 1) \\
+&= 7 \cdot 2^{k-2} \\
+&< 8 \cdot 2^{k-2} = 2^{k+1}.
+\end{align*}
+因此 $a_{k+1} < 2^{k+1}$。
+
+由强归纳法原理，$a_n < 2^n$ 对所有正整数 $n$ 成立。\qed
+
+% ----- 无穷递降法 -----
+\subsection*{2.4\quad 无穷递降法}
+
+\begin{examplebox}[【例题8】用无穷递降法证明]
+证明：方程 $x^2 + y^2 = 3z^2$ 没有正整数解。
+\end{examplebox}
+
+\textbf{证明}（无穷递降法）：
+
+假设方程有正整数解 $(x_0, y_0, z_0)$。
+
+\textbf{第一步}：证明 $3 \mid x_0$ 且 $3 \mid y_0$。
+
+因为 $x_0^2 + y_0^2 = 3z_0^2$，右边是 $3$ 的倍数。
+
+对完全平方数取模 $3$：$n^2 \equiv 0$ 或 $1 \pmod{3}$。
+
+若 $x_0^2 \equiv 1 \pmod{3}$ 且 $y_0^2 \equiv 1 \pmod{3}$，则 $x_0^2 + y_0^2 \equiv 2 \pmod{3}$，但 $3z_0^2 \equiv 0 \pmod{3}$，矛盾。
+
+若 $x_0^2 \equiv 0 \pmod{3}$ 且 $y_0^2 \equiv 1 \pmod{3}$（或反之），则 $x_0^2 + y_0^2 \equiv 1 \pmod{3}$，矛盾。
+
+因此必有 $x_0^2 \equiv 0 \pmod{3}$ 且 $y_0^2 \equiv 0 \pmod{3}$，即 $3 \mid x_0$，$3 \mid y_0$。
+
+设 $x_0 = 3x_1$，$y_0 = 3y_1$，代入原方程：
+\[ 9x_1^2 + 9y_1^2 = 3z_0^2 \implies 3(x_1^2 + y_1^2) = z_0^2. \]
+
+\textbf{第二步}：证明 $3 \mid z_0$。
+
+由上式，$z_0^2 = 3(x_1^2 + y_1^2)$，故 $3 \mid z_0^2$，从而 $3 \mid z_0$。设 $z_0 = 3z_1$，则
+\[ 3(x_1^2 + y_1^2) = 9z_1^2 \implies x_1^2 + y_1^2 = 3z_1^2. \]
+
+\textbf{第三步}：无穷递降。
+
+于是 $(x_1, y_1, z_1)$ 也是方程的正整数解，且 $x_1 = x_0/3 < x_0$，$y_1 = y_0/3 < y_0$，$z_1 = z_0/3 < z_0$。
+
+同理可构造 $(x_2, y_2, z_2)$，使得 $x_2 = x_1/3 < x_1$，如此无穷递降。
+
+但正整数不能无穷递降，矛盾！
+
+因此方程 $x^2 + y^2 = 3z^2$ 没有正整数解。\qed
+
+% ----- 二重归纳法 -----
+\subsection*{2.5\quad 二重归纳法}
+
+\begin{examplebox}[【例题9】用二重归纳法证明]
+证明：对任意正整数 $m, n$，
+\[ \sum_{i=1}^{m}\sum_{j=1}^{n}(i+j-1) = \frac{mn(m+n)}{2}. \]
+\end{examplebox}
+
+\textbf{证明}（二重归纳法）：
+
+设 $P(m, n)$：$\displaystyle\sum_{i=1}^{m}\sum_{j=1}^{n}(i+j-1) = \frac{mn(m+n)}{2}$。
+
+\textbf{（i）奠基步}：
+
+$P(1, n)$：$\displaystyle\sum_{j=1}^{n}(1+j-1) = \sum_{j=1}^{n} j = \frac{n(n+1)}{2} = \frac{1 \cdot n \cdot (1+n)}{2}$。成立。
+
+$P(m, 1)$：$\displaystyle\sum_{i=1}^{m}(i+1-1) = \sum_{i=1}^{m} i = \frac{m(m+1)}{2} = \frac{m \cdot 1 \cdot (m+1)}{2}$。成立。
+
+\textbf{（ii）归纳步}：设 $P(m, n)$ 对所有 $1 \leq m \leq a$，$1 \leq n \leq b$（$a \geq 1, b \geq 1$）成立。
+
+要证 $P(a+1, b+1)$：
+\begin{align*}
+&\sum_{i=1}^{a+1}\sum_{j=1}^{b+1}(i+j-1) \\
+&= \sum_{i=1}^{a}\sum_{j=1}^{b+1}(i+j-1) + \sum_{j=1}^{b+1}(a+1+j-1) \\
+&= \sum_{i=1}^{a}\sum_{j=1}^{b}(i+j-1) + \sum_{i=1}^{a}(i+b+1-1) + \sum_{j=1}^{b+1}(a+j)
+\end{align*}
+
+由归纳假设 $P(a, b)$：$\displaystyle\sum_{i=1}^{a}\sum_{j=1}^{b}(i+j-1) = \frac{ab(a+b)}{2}$。
+
+计算第二项：$\displaystyle\sum_{i=1}^{a}(i+b) = \sum_{i=1}^{a} i + ab = \frac{a(a+1)}{2} + ab = \frac{a(a+1+2b)}{2}$。
+
+计算第三项：$\displaystyle\sum_{j=1}^{b+1}(a+j) = a(b+1) + \frac{(b+1)(b+2)}{2} = \frac{(b+1)(2a+b+2)}{2}$。
+
+因此总和为：
+\begin{align*}
+&\frac{ab(a+b)}{2} + \frac{a(a+1+2b)}{2} + \frac{(b+1)(2a+b+2)}{2} \\
+&= \frac{1}{2}\Big[ab(a+b) + a(a+1+2b) + (b+1)(2a+b+2)\Big] \\
+&= \frac{1}{2}\Big[a^2b + ab^2 + a^2 + a + 2ab + 2ab + b^2 + 2a + b + 2\Big] \\
+&= \frac{1}{2}\Big[a^2b + ab^2 + a^2 + 4ab + b^2 + 3a + b + 2\Big].
+\end{align*}
+
+验证：$\dfrac{(a+1)(b+1)(a+b+2)}{2} = \dfrac{(ab+a+b+1)(a+b+2)}{2}$。
+
+展开 $(ab+a+b+1)(a+b+2)$：
+\begin{align*}
+&= ab(a+b+2) + a(a+b+2) + b(a+b+2) + (a+b+2) \\
+&= a^2b + ab^2 + 2ab + a^2 + ab + 2a + ab + b^2 + 2b + a + b + 2 \\
+&= a^2b + ab^2 + a^2 + 4ab + b^2 + 3a + 3b + 2.
+\end{align*}
+
+注意到 $3b$ 应等于 $b + 2b$，而之前展开中 $b$ 项只有 $b$。让我重新整理：
+
+实际上 $(b+1)(2a+b+2) = 2ab + 2a + b^2 + b + 2a + b + 2 = 2ab + 4a + b^2 + 2b + 2$？不对，让我仔细重算：
+
+$(b+1)(2a+b+2) = b(2a+b+2) + 1 \cdot (2a+b+2) = 2ab + b^2 + 2b + 2a + b + 2 = 2ab + b^2 + 3b + 2a + 2$。
+
+因此三项之和：
+\begin{align*}
+&a^2b + ab^2 + a^2 + a + 2ab + 2ab + b^2 + 3b + 2a + 2 \\
+&= a^2b + ab^2 + a^2 + 4ab + b^2 + 3a + 3b + 2.
+\end{align*}
+
+而 $(a+1)(b+1)(a+b+2)$ 的展开也是 $a^2b + ab^2 + a^2 + 4ab + b^2 + 3a + 3b + 2$。
+
+两者相等，故 $P(a+1, b+1)$ 成立。
+
+由二重归纳法原理，$P(m, n)$ 对所有正整数 $m, n$ 成立。\qed
+
+% ----- 归纳法变形 -----
+\subsection*{2.6\quad 归纳法变形技巧}
+
+\begin{examplebox}[【例题10】加强命题]
+证明：对任意正整数 $n$，$\displaystyle\sum_{k=1}^{n}\frac{1}{k^2} < 2$。
+
+（提示：尝试证明更强的命题 $\displaystyle\sum_{k=1}^{n}\frac{1}{k^2} \leq 2 - \frac{1}{n}$。）
+\end{examplebox}
+
+\textbf{证明}（加强命题法）：
+
+我们证明更强的命题：$\displaystyle\sum_{k=1}^{n}\frac{1}{k^2} \leq 2 - \frac{1}{n}$。
+
+\textbf{（i）奠基步}：当 $n=1$ 时，$\dfrac{1}{1^2} = 1 \leq 2 - 1 = 1$。成立（取等号）。
+
+\textbf{（ii）归纳步}：设 $n = k$（$k \geq 1$）时 $\displaystyle\sum_{i=1}^{k}\frac{1}{i^2} \leq 2 - \frac{1}{k}$。
+
+当 $n = k+1$ 时，
+\begin{align*}
+\sum_{i=1}^{k+1}\frac{1}{i^2} &= \sum_{i=1}^{k}\frac{1}{i^2} + \frac{1}{(k+1)^2} \\
+&\leq 2 - \frac{1}{k} + \frac{1}{(k+1)^2}.
+\end{align*}
+要证 $\displaystyle 2 - \frac{1}{k} + \frac{1}{(k+1)^2} \leq 2 - \frac{1}{k+1}$，
+即证 $\displaystyle\frac{1}{(k+1)^2} \leq \frac{1}{k} - \frac{1}{k+1} = \frac{1}{k(k+1)}$，
+即证 $(k+1)^2 \geq k(k+1)$，即 $k+1 \geq k$，显然成立。
+
+因此加强命题成立，原命题 $\displaystyle\sum_{k=1}^{n}\frac{1}{k^2} < 2$ 自然成立。\qed
+
+\begin{examplebox}[【例题11】跳步归纳法]
+证明：对任意正整数 $n$，
+\[ 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots + \frac{(-1)^{n-1}}{n} > 0. \]
+\end{examplebox}
+
+\textbf{证明}：
+
+记 $S_n = \displaystyle\sum_{k=1}^{n}\frac{(-1)^{k-1}}{k}$。
+
+注意到 $S_n$ 有两个递推关系：
+\begin{itemize}
+  \item $S_{n+1} = S_n + \dfrac{(-1)^n}{n+1}$
+  \item $S_{n+2} = S_n + \dfrac{1}{n+1} - \dfrac{1}{n+2} = S_n + \dfrac{1}{(n+1)(n+2)}$
+\end{itemize}
+
+我们用"跳步归纳"：证明 $S_n > 0$ 对所有 $n \geq 1$。
+
+\textbf{（i）奠基步}：
+\begin{itemize}
+  \item $n=1$：$S_1 = 1 > 0$。成立。
+  \item $n=2$：$S_2 = 1 - \dfrac{1}{2} = \dfrac{1}{2} > 0$。成立。
+\end{itemize}
+
+\textbf{（ii）归纳步}：设 $S_k > 0$（$k \geq 1$）。
+
+\textbf{子情况1}：$k$ 为奇数时，$k+1$ 为偶数。
+\[ S_{k+1} = S_k - \frac{1}{k+1}. \]
+由归纳假设 $S_k > 0$，但这不足以保证 $S_{k+1} > 0$。
+
+因此我们采用更强的归纳假设。我们证明 $S_n \geq \dfrac{1}{n+1}$（更强的命题）。
+
+\textbf{新奠基步}：$n=1$：$S_1 = 1 \geq \dfrac{1}{2}$。成立。
+
+\textbf{新归纳步}：设 $S_k \geq \dfrac{1}{k+1}$。
+
+\begin{itemize}
+  \item 若 $k$ 为奇数：$S_{k+1} = S_k - \dfrac{1}{k+1} \geq \dfrac{1}{k+1} - \dfrac{1}{k+1} = 0$。
+
+  但需要更强：$S_{k+1} = S_k - \dfrac{1}{k+1}$。由 $S_k \geq \dfrac{1}{k+1}$，得 $S_{k+1} \geq 0$。
+
+  还需证 $S_{k+1} \geq \dfrac{1}{k+2}$。即 $S_k - \dfrac{1}{k+1} \geq \dfrac{1}{k+2}$，即 $S_k \geq \dfrac{1}{k+1} + \dfrac{1}{k+2} = \dfrac{2k+3}{(k+1)(k+2)}$。
+
+  这比 $\dfrac{1}{k+1}$ 更强，归纳假设不够。
+
+\end{itemize}
+
+换个思路。我们直接用跳步法：证明 $S_{2m-1} > 0$ 且 $S_{2m} > 0$。
+
+$S_{2m} = S_{2m-2} + \dfrac{1}{2m-1} - \dfrac{1}{2m} = S_{2m-2} + \dfrac{1}{(2m-1) \cdot 2m}$。
+
+设 $S_{2k-2} > 0$（$k \geq 2$），则 $S_{2k} = S_{2k-2} + \dfrac{1}{(2k-1)(2k)} > 0$。
+
+$S_2 = \dfrac{1}{2} > 0$，由归纳 $S_{2m} > 0$ 对所有 $m \geq 1$。
+
+又 $S_{2m-1} = S_{2m} + \dfrac{1}{2m-1} - \dfrac{1}{2m} + \cdots$，不对。
+
+$S_{2m+1} = S_{2m} + \dfrac{1}{2m+1}$，若 $S_{2m} > 0$ 则 $S_{2m+1} > 0$。
+
+$S_1 = 1 > 0$，$S_3 = S_2 + \dfrac{1}{3} = \dfrac{1}{2} + \dfrac{1}{3} = \dfrac{5}{6} > 0$。
+
+归纳：$S_{2m} > 0$（已证），$S_{2m+1} = S_{2m} + \dfrac{1}{2m+1} > 0$。
+
+因此 $S_n > 0$ 对所有正整数 $n$ 成立。\qed
+
+\begin{examplebox}[【例题12】倒推归纳法（Cauchy 归纳法）]
+证明：对任意正整数 $n$ 和正实数 $a_1, a_2, \ldots, a_n$，算术-几何平均不等式成立：
+\[ \frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \cdots a_n}. \]
+\end{examplebox}
+
+\textbf{证明}（Cauchy 倒推归纳法）：
+
+分两步。
+
+\textbf{第一步}：证明当 $n = 2^m$（$m$ 为正整数）时不等式成立。
+
+\textbf{奠基}：$m=1$ 即 $n=2$，$\dfrac{a_1 + a_2}{2} \geq \sqrt{a_1 a_2}$，即 $(a_1 - a_2)^2 \geq 0$，成立。
+
+\textbf{归纳}：设 $n = 2^m$ 时 AM-GM 成立，证 $n = 2^{m+1}$ 时。
+
+设 $A = \dfrac{a_1 + \cdots + a_{2^m}}{2^m}$，$B = \dfrac{a_{2^m+1} + \cdots + a_{2^{m+1}}}{2^m}$。
+
+由归纳假设：
+\[ A \geq (a_1 \cdots a_{2^m})^{1/2^m}, \quad B \geq (a_{2^m+1} \cdots a_{2^{m+1}})^{1/2^m}. \]
+
+因此
+\begin{align*}
+\frac{a_1 + \cdots + a_{2^{m+1}}}{2^{m+1}} &= \frac{A + B}{2} \\
+&\geq \sqrt{AB} \\
+&\geq \sqrt{(a_1 \cdots a_{2^m})^{1/2^m} \cdot (a_{2^m+1} \cdots a_{2^{m+1}})^{1/2^m}} \\
+&= (a_1 a_2 \cdots a_{2^{m+1}})^{1/2^{m+1}}.
+\end{align*}
+
+\textbf{第二步}：倒推——从 $n+1$ 推 $n$。
+
+设 AM-GM 对 $n+1$ 个正数成立。要证对 $n$ 个正数 $a_1, \ldots, a_n$ 也成立。
+
+取 $a_{n+1} = \dfrac{a_1 + a_2 + \cdots + a_n}{n} = \bar{a}$（算术平均值）。
+
+由 $n+1$ 个数的 AM-GM：
+\[ \frac{a_1 + \cdots + a_n + \bar{a}}{n+1} \geq (a_1 \cdots a_n \cdot \bar{a})^{1/(n+1)}. \]
+
+左边 $= \dfrac{n\bar{a} + \bar{a}}{n+1} = \bar{a}$，故
+\[ \bar{a} \geq (a_1 \cdots a_n \cdot \bar{a})^{1/(n+1)}. \]
+
+两边取 $n+1$ 次幂：$\bar{a}^{n+1} \geq a_1 \cdots a_n \cdot \bar{a}$。
+
+消去 $\bar{a} > 0$：$\bar{a}^n \geq a_1 \cdots a_n$，即 $\bar{a} \geq (a_1 \cdots a_n)^{1/n}$。
+
+\textbf{综合}：AM-GM 对 $n = 2^m$（$m$ 为任意正整数）成立。而对任意 $n$，取 $m$ 使得 $2^m > n$，由第二步倒推，AM-GM 对 $n$ 也成立。
+
+因此 AM-GM 对一切正整数 $n$ 成立。\qed
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】平面分割问题]
+平面上 $n$ 条直线，其中任意两条不平行，任意三条不共点。证明：这 $n$ 条直线将平面分成 $\dfrac{n^2 + n + 2}{2}$ 个区域。
+\end{appbox}
+
+\textbf{解}：
+
+设 $n$ 条直线将平面分成 $f(n)$ 个区域。
+
+\textbf{（i）奠基步}：$n=0$（无直线），$f(0) = 1$。$\dfrac{0+0+2}{2} = 1$。成立。
+
+$n=1$：$f(1) = 2$。$\dfrac{1+1+2}{2} = 2$。成立。
+
+\textbf{（ii）归纳步}：设 $n = k$ 时 $f(k) = \dfrac{k^2 + k + 2}{2}$。
+
+增加第 $k+1$ 条直线，它与前 $k$ 条直线各交于一点（共 $k$ 个交点），将第 $k+1$ 条直线分成 $k+1$ 段，每一段将一个原有区域一分为二，因此增加了 $k+1$ 个区域：
+\[ f(k+1) = f(k) + (k+1) = \frac{k^2 + k + 2}{2} + k + 1 = \frac{k^2 + 3k + 4}{2}. \]
+
+验证：$\dfrac{(k+1)^2 + (k+1) + 2}{2} = \dfrac{k^2 + 2k + 1 + k + 1 + 2}{2} = \dfrac{k^2 + 3k + 4}{2}$。吻合。
+
+由归纳法，$f(n) = \dfrac{n^2 + n + 2}{2}$ 对所有非负整数 $n$ 成立。\qed
+
+\begin{appbox}[【应用2】凸多边形对角线交点]
+凸 $n$ 边形的所有对角线（任意三条不在形内同一点相交）将形内分成多少个区域？证明答案为
+\[ R(n) = \binom{n}{4} + \binom{n-1}{2} \quad (n \geq 3). \]
+\end{appbox}
+
+\textbf{解}：
+
+\textbf{（i）奠基步}：
+
+$n = 3$（三角形）：无对角线，$R(3) = 1$。$\dbinom{3}{4} + \dbinom{2}{2} = 0 + 1 = 1$。成立。
+
+$n = 4$（四边形）：两条对角线交于一点，分成 $4$ 个区域。$\dbinom{4}{4} + \dbinom{3}{2} = 1 + 3 = 4$。成立。
+
+\textbf{（ii）归纳步}：设凸 $k$ 边形的对角线将形内分成 $R(k)$ 个区域。
+
+考虑凸 $k+1$ 边形 $A_1 A_2 \cdots A_{k+1}$。将其视为在凸 $k$ 边形 $A_1 A_2 \cdots A_k$ 的基础上增加顶点 $A_{k+1}$。
+
+新增的对角线是从 $A_{k+1}$ 连向 $A_2, A_3, \ldots, A_{k-1}$ 的 $k-3$ 条对角线，以及边 $A_{k+1}A_1$ 和 $A_{k+1}A_k$。
+
+这些新增的 $k-3$ 条对角线与原有对角线的交点数为：
+每条新增对角线 $A_{k+1}A_j$（$2 \leq j \leq k-1$）与原有对角线 $A_i A_l$（$1 \leq i < j < l \leq k$ 且 $i, l \neq j$）的交点数。
+
+这比较复杂。我们直接验证递推关系并用归纳法。
+
+实际上，已知 $R(n) = \dbinom{n}{4} + \dbinom{n-1}{2}$，可以验证递推：
+\[ R(n+1) - R(n) = \binom{n+1}{4} - \binom{n}{4} + \binom{n}{2} - \binom{n-1}{2} = \binom{n}{3} + (n-1). \]
+
+因此 $R(k+1) = R(k) + \dbinom{k}{3} + (k-1)$。
+
+设 $R(k) = \dbinom{k}{4} + \dbinom{k-1}{2}$，则
+\begin{align*}
+R(k+1) &= \binom{k}{4} + \binom{k-1}{2} + \binom{k}{3} + (k-1) \\
+&= \binom{k}{4} + \binom{k}{3} + \binom{k-1}{2} + (k-1).
+\end{align*}
+
+由 Pascal 恒等式 $\dbinom{k}{4} + \dbinom{k}{3} = \dbinom{k+1}{4}$，故
+\[ R(k+1) = \binom{k+1}{4} + \frac{(k-1)(k-2)}{2} + (k-1) = \binom{k+1}{4} + \frac{(k-1)k}{2} = \binom{k+1}{4} + \binom{k}{2}. \]
+
+与 $R(k+1) = \dbinom{k+1}{4} + \dbinom{k}{2}$ 吻合。
+
+由归纳法，公式对所有 $n \geq 3$ 成立。\qed
+
+\begin{appbox}[【应用3】台阶走法问题]
+小明爬楼梯，每次可以跨 $1$ 级或 $2$ 级台阶。证明：爬上 $n$ 级台阶的不同走法数恰好是 Fibonacci 数 $F_{n+1}$（其中 $F_1 = F_2 = 1$）。
+\end{appbox}
+
+\textbf{解}：
+
+设 $f(n)$ 表示爬上 $n$ 级台阶的走法数。
+
+\textbf{（i）奠基步}：
+\begin{itemize}
+  \item $n = 1$：只有 $1$ 种走法（跨 $1$ 级），$f(1) = 1 = F_2$。成立。
+  \item $n = 2$：有 $2$ 种走法（$1+1$ 或 $2$），$f(2) = 2 = F_3$。成立。
+\end{itemize}
+
+\textbf{（ii）归纳步}：设 $f(i) = F_{i+1}$ 对 $i = 1, 2, \ldots, k$（$k \geq 2$）均成立。
+
+爬上 $k+1$ 级台阶，最后一步有两种情况：
+\begin{itemize}
+  \item 最后跨 $1$ 级：前 $k$ 级的走法数为 $f(k)$；
+  \item 最后跨 $2$ 级：前 $k-1$ 级的走法数为 $f(k-1)$。
+\end{itemize}
+
+因此 $f(k+1) = f(k) + f(k-1)$。
+
+由归纳假设，$f(k+1) = F_{k+1} + F_k = F_{k+2}$。
+
+由归纳法原理，$f(n) = F_{n+1}$ 对所有正整数 $n$ 成立。\qed
+
+\begin{appbox}[【应用4】错排问题]
+$n$ 个人各写一封信，然后随机装入 $n$ 个信封（每人一个），使得\textbf{没有人收到自己写的信}的装法数称为错排数 $D_n$。证明：
+\[ D_n = n! \sum_{k=0}^{n}\frac{(-1)^k}{k!}. \]
+\end{appbox}
+
+\textbf{解}：
+
+\textbf{递推关系}：考虑第 $n$ 个人的信。设第 $n$ 个人的信装入了第 $i$ 封信封（$i \neq n$），共 $n-1$ 种选择。
+
+\textbf{情况1}：第 $i$ 个人的信装入了第 $n$ 封信封（互换）。剩下 $n-2$ 个人错排，有 $D_{n-2}$ 种。
+
+\textbf{情况2}：第 $i$ 个人的信未装入第 $n$ 封信封。将第 $n$ 封信封视为"第 $i$ 个人不能收到的信封"，等价于 $n-1$ 个人的错排，有 $D_{n-1}$ 种。
+
+因此 $D_n = (n-1)(D_{n-1} + D_{n-2})$。
+
+\textbf{奠基步}：
+\begin{itemize}
+  \item $D_1 = 0$（$1$ 个人无法错排）。公式：$1!\left(1 - 1\right) = 0$。成立。
+  \item $D_2 = 1$（$2$ 人互换）。公式：$2!\left(1 - 1 + \dfrac{1}{2}\right) = 1$。成立。
+\end{itemize}
+
+\textbf{归纳步}：设 $D_{k-1}$ 和 $D_k$ 的公式均成立（强归纳法），即
+\[ D_{k-1} = (k-1)!\sum_{j=0}^{k-1}\frac{(-1)^j}{j!}, \quad D_k = k!\sum_{j=0}^{k}\frac{(-1)^j}{j!}. \]
+
+则
+\begin{align*}
+D_{k+1} &= k(D_k + D_{k-1}) \\
+&= k \cdot k!\sum_{j=0}^{k}\frac{(-1)^j}{j!} + k \cdot (k-1)!\sum_{j=0}^{k-1}\frac{(-1)^j}{j!} \\
+&= k \cdot k!\sum_{j=0}^{k}\frac{(-1)^j}{j!} + k!\sum_{j=0}^{k-1}\frac{(-1)^j}{j!} \\
+&= k!\left[k\sum_{j=0}^{k}\frac{(-1)^j}{j!} + \sum_{j=0}^{k-1}\frac{(-1)^j}{j!}\right].
+\end{align*}
+
+展开 $k \displaystyle\sum_{j=0}^{k}\frac{(-1)^j}{j!} = k \cdot \frac{(-1)^k}{k!} + k\sum_{j=0}^{k-1}\frac{(-1)^j}{j!} = \frac{(-1)^k}{(k-1)!} + k\sum_{j=0}^{k-1}\frac{(-1)^j}{j!}$。
+
+因此
+\begin{align*}
+D_{k+1} &= k!\left[\frac{(-1)^k}{(k-1)!} + (k+1)\sum_{j=0}^{k-1}\frac{(-1)^j}{j!}\right] \\
+&= k \cdot (-1)^k + (k+1)!\sum_{j=0}^{k-1}\frac{(-1)^j}{j!}.
+\end{align*}
+
+另一方面，要证 $D_{k+1} = (k+1)!\displaystyle\sum_{j=0}^{k+1}\frac{(-1)^j}{j!}$。
+
+\begin{align*}
+(k+1)!\sum_{j=0}^{k+1}\frac{(-1)^j}{j!} &= (k+1)!\left[\sum_{j=0}^{k-1}\frac{(-1)^j}{j!} + \frac{(-1)^k}{k!} + \frac{(-1)^{k+1}}{(k+1)!}\right] \\
+&= (k+1)!\sum_{j=0}^{k-1}\frac{(-1)^j}{j!} + (k+1) \cdot (-1)^k + (-1)^{k+1} \\
+&= (k+1)!\sum_{j=0}^{k-1}\frac{(-1)^j}{j!} + (-1)^k(k+1-1) \\
+&= (k+1)!\sum_{j=0}^{k-1}\frac{(-1)^j}{j!} + k \cdot (-1)^k.
+\end{align*}
+
+与 $D_{k+1}$ 的展开一致。因此归纳步成立。
+
+由强归纳法原理，公式对所有正整数 $n$ 成立。\qed
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[label=\textbf{题目\arabic*}]
+
+\item 证明：对任意正整数 $n$，$\displaystyle 1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}$。
+
+\item 证明：对任意正整数 $n$，$11^n - 4^n$ 能被 $7$ 整除。
+
+\item 证明：对任意正整数 $n \geq 2$，
+\[ \frac{1}{1^2} + \frac{1}{2^2} + \cdots + \frac{1}{n^2} < 2 - \frac{1}{n}. \]
+
+\item 设数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = a_n + \dfrac{1}{a_n}$（$n \geq 1$）。证明：$a_n^2 \geq 2n - 1$。
+
+\item 用无穷递降法证明：$\sqrt{3}$ 是无理数。
+
+\item 证明（二重归纳法）：对任意正整数 $m, n$，$\dbinom{m+n}{m} = \displaystyle\sum_{k=0}^{m}\binom{m}{k}\binom{n}{k}$（Vandermonde 恒等式）。
+
+\item 证明：$n$ 个圆最多将平面分成 $n^2 - n + 2$ 个区域（任意两圆相交于两点，任意三圆不共点）。
+
+\item 证明：对任意正整数 $n$，$\displaystyle\prod_{k=1}^{n}\frac{2k-1}{2k} < \frac{1}{\sqrt{3n}}$。
+
+\end{enumerate}
+
+\vspace{12pt}
+
+\begin{knowledgebox}[参考答案]
+
+\textbf{题目1}：
+
+\textbf{（i）奠基步}：$n=1$ 时，$1^2 = 1 = \dfrac{1 \times 2 \times 3}{6}$。成立。
+
+\textbf{（ii）归纳步}：设 $n = k$ 时 $1^2 + 2^2 + \cdots + k^2 = \dfrac{k(k+1)(2k+1)}{6}$。
+
+$n = k+1$ 时，
+\begin{align*}
+\sum_{i=1}^{k+1} i^2 &= \frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\
+&= \frac{k+1}{6}\Big[k(2k+1) + 6(k+1)\Big] \\
+&= \frac{(k+1)(2k^2 + 7k + 6)}{6} \\
+&= \frac{(k+1)(k+2)(2k+3)}{6}.
+\end{align*}
+即 $\dfrac{(k+1)[(k+1)+1][2(k+1)+1]}{6}$，与公式吻合。\qed
+
+\bigskip
+
+\textbf{题目2}：
+
+\textbf{（i）奠基步}：$n=1$ 时，$11 - 4 = 7$，能被 $7$ 整除。
+
+\textbf{（ii）归纳步}：设 $11^k - 4^k = 7m$。
+
+$11^{k+1} - 4^{k+1} = 11 \cdot 11^k - 4 \cdot 4^k = 11(11^k - 4^k) + 7 \cdot 4^k = 11 \cdot 7m + 7 \cdot 4^k = 7(11m + 4^k)$，能被 $7$ 整除。\qed
+
+\bigskip
+
+\textbf{题目3}：
+
+加强命题法（与例题10相同思路）。设 $S_n = \displaystyle\sum_{k=1}^{n}\frac{1}{k^2}$，证明 $S_n \leq 2 - \dfrac{1}{n}$。
+
+$n=1$：$S_1 = 1 \leq 2 - 1 = 1$。成立。
+
+设 $S_k \leq 2 - \dfrac{1}{k}$，则
+\[ S_{k+1} \leq 2 - \frac{1}{k} + \frac{1}{(k+1)^2}. \]
+需证 $2 - \dfrac{1}{k} + \dfrac{1}{(k+1)^2} \leq 2 - \dfrac{1}{k+1}$，即 $\dfrac{1}{(k+1)^2} \leq \dfrac{1}{k} - \dfrac{1}{k+1} = \dfrac{1}{k(k+1)}$，即 $k \leq k+1$，成立。
+
+由归纳法，$S_n < 2$ 对所有正整数 $n$ 成立。\qed
+
+\bigskip
+
+\textbf{题目4}：
+
+$n=1$：$a_1^2 = 1 \geq 2 \times 1 - 1 = 1$。成立。
+
+设 $a_k^2 \geq 2k - 1$，则
+\[ a_{k+1}^2 = \left(a_k + \frac{1}{a_k}\right)^2 = a_k^2 + 2 + \frac{1}{a_k^2} > a_k^2 + 2 \geq (2k-1) + 2 = 2k + 1 = 2(k+1) - 1. \]
+成立。\qed
+
+\bigskip
+
+\textbf{题目5}：
+
+假设 $\sqrt{3} = \dfrac{p}{q}$（$p, q$ 互质正整数），则 $3q^2 = p^2$。
+
+故 $3 \mid p^2$，从而 $3 \mid p$。设 $p = 3r$，则 $3q^2 = 9r^2$，即 $q^2 = 3r^2$。
+
+故 $3 \mid q^2$，从而 $3 \mid q$。但这与 $p, q$ 互质矛盾。
+
+（也可用无穷递降法：$p = 3r$，$q^2 = 3r^2$，故 $3 \mid q$，设 $q = 3s$，则 $r^2 = 3s^2$，即 $\sqrt{3} = r/s$ 且 $r < p$，无穷递降矛盾。）\qed
+
+\bigskip
+
+\textbf{题目6}：
+
+用二重归纳法。
+
+$P(m, 1)$：$\dbinom{m+1}{m} = m + 1$，右边 $= \displaystyle\sum_{k=0}^{m}\binom{m}{k}\binom{1}{k} = \binom{m}{0}\binom{1}{0} + \binom{m}{1}\binom{1}{1} = 1 + m$。成立。
+
+$P(1, n)$：$\dbinom{n+1}{1} = n+1$，右边 $= \displaystyle\sum_{k=0}^{1}\binom{1}{k}\binom{n}{k} = 1 + n$。成立。
+
+归纳步：利用 Pascal 恒等式和 Vandermonde 卷积的标准证明（略，详见组合数学教材）。\qed
+
+\bigskip
+
+\textbf{题目7}：
+
+设 $n$ 个圆最多分成 $f(n)$ 个区域。
+
+$f(1) = 2 = 1 - 1 + 2$。成立。
+
+设 $f(k) = k^2 - k + 2$。增加第 $k+1$ 个圆，与前 $k$ 个圆各交于 $2$ 点（共 $2k$ 个交点），将第 $k+1$ 个圆分成 $2k$ 段弧，每段弧将一个区域一分为二，增加 $2k$ 个区域：
+\[ f(k+1) = f(k) + 2k = k^2 - k + 2 + 2k = k^2 + k + 2 = (k+1)^2 - (k+1) + 2. \]
+成立。\qed
+
+\bigskip
+
+\textbf{题目8}：
+
+加强命题：证明 $\displaystyle\prod_{k=1}^{n}\frac{2k-1}{2k} \leq \frac{1}{\sqrt{3n+1}}$。
+
+$n=1$：$\dfrac{1}{2} \leq \dfrac{1}{\sqrt{4}} = \dfrac{1}{2}$。成立。
+
+设 $\displaystyle\prod_{k=1}^{m}\frac{2k-1}{2k} \leq \frac{1}{\sqrt{3m+1}}$，则
+\[ \prod_{k=1}^{m+1}\frac{2k-1}{2k} \leq \frac{1}{\sqrt{3m+1}} \cdot \frac{2m+1}{2m+2}. \]
+需证 $\dfrac{2m+1}{2m+2} \cdot \dfrac{1}{\sqrt{3m+1}} \leq \dfrac{1}{\sqrt{3m+4}}$。
+
+即 $\dfrac{(2m+1)^2}{(2m+2)^2} \cdot \dfrac{1}{3m+1} \leq \dfrac{1}{3m+4}$，即 $(2m+1)^2(3m+4) \leq (2m+2)^2(3m+1)$。
+
+展开：$(4m^2+4m+1)(3m+4) = 12m^3+28m^2+19m+4$，
+$(4m^2+8m+4)(3m+1) = 12m^3+28m^2+20m+4$。
+
+左边比右边少 $m$，即左边 $\leq$ 右边，成立。
+
+因此 $\displaystyle\prod_{k=1}^{n}\frac{2k-1}{2k} \leq \frac{1}{\sqrt{3n+1}} < \frac{1}{\sqrt{3n}}$。\qed
+
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

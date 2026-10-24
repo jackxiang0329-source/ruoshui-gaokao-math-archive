@@ -1,0 +1,748 @@
+% !TEX program = xelatex
+\documentclass[12pt,a4paper]{ctexart}
+
+% === 宏包 ===
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontspec}
+
+% === CJK 字体 ===
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+% === 颜色定义 ===
+\definecolor{mainblue}{RGB}{0,82,155}
+\definecolor{accentred}{RGB}{192,42,42}
+\definecolor{accentgreen}{RGB}{34,139,34}
+\definecolor{accentorange}{RGB}{210,105,30}
+\definecolor{lightblue}{RGB}{230,240,255}
+\definecolor{lightgray}{RGB}{245,245,245}
+
+% === tcolorbox 样式 ===
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue,
+  colframe=mainblue,
+  fonttitle=\bfseries\large,
+  title={#1},
+  breakable,
+  arc=2mm,
+  boxrule=1pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=green!5,
+  colframe=accentgreen,
+  fonttitle=\bfseries,
+  title={#1},
+  breakable,
+  arc=2mm,
+  boxrule=1pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=red!5,
+  colframe=accentred,
+  fonttitle=\bfseries,
+  title={#1},
+  breakable,
+  arc=2mm,
+  boxrule=1pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=yellow!5,
+  colframe=accentorange,
+  fonttitle=\bfseries,
+  title={#1},
+  breakable,
+  arc=2mm,
+  boxrule=1pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=purple!5,
+  colframe=purple!70!black,
+  fonttitle=\bfseries,
+  title={#1},
+  breakable,
+  arc=2mm,
+  boxrule=1pt,
+  left=6pt,right=6pt,top=4pt,bottom=4pt
+}
+
+% === 页面样式 ===
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{高中数学培优}}
+\fancyhead[R]{\small\textcolor{mainblue}{函数方程与抽象函数}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\textcolor{mainblue}\headrulefill}}
+
+% === 文档信息 ===
+\title{%
+  \vspace{-1cm}
+  \textcolor{mainblue}{\rule{\textwidth}{1.5pt}}\\[6pt]
+  {\Huge\bfseries\textcolor{mainblue}{高中数学培优}}\\[4pt]
+  {\LARGE 函数方程与抽象函数}\\[4pt]
+  \textcolor{mainblue}{\rule{\textwidth}{1.5pt}}
+}
+\author{}
+\date{%
+  适用：高一至高三拔高 \quad | \quad 课时：3课时
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+%=================================================================
+%  第一部分：知识点讲解
+%=================================================================
+\section*{\textcolor{mainblue}{第一部分\quad 知识点讲解}}
+
+% ---------- 1.1 ----------
+\subsection*{1.1\quad 赋值法求函数方程}
+
+\begin{knowledgebox}[赋值法核心思想]
+赋值法是求解函数方程最基本、最常用的方法。其核心思想是：\textbf{对函数方程中的变量赋予特殊值}（如 $0,1,-1,x,-x$ 等），从而得到关于函数值的等式，逐步推导出函数的表达式或性质。
+
+\medskip
+\textbf{常见赋值策略：}
+\begin{enumerate}[label=(\arabic*)]
+  \item 令 $x=0$：常可得到 $f(0)$ 的值或建立 $f(0)$ 与其他值的关系。
+  \item 令 $y=0$ 或 $y=-x$：利用对称性得到 $f(-x)$ 与 $f(x)$ 的关系，从而判断奇偶性。
+  \item 令 $y=x$：得到 $f(2x)$ 或 $f(x^2)$ 的表达式。
+  \item 令 $y=1$：得到递推关系 $f(x+1)=g(f(x))$。
+  \item 令 $x=y$：利用对称性简化方程。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{tipbox}[赋值法使用技巧]
+\begin{enumerate}[label=(\arabic*)]
+  \item 赋值时应优先选择使方程简化的值（如 $0,1$）。
+  \item 多次赋值时注意逻辑顺序，通常先求 $f(0)$，再求 $f(1)$，逐步展开。
+  \item 若方程中含 $f(x+y)$ 与 $f(x-y)$，可分别令 $y=x$ 和 $y=-x$ 联立求解。
+  \item 赋值法常与函数性质（单调性、奇偶性）结合使用。
+\end{enumerate}
+\end{tipbox}
+
+\begin{examplebox}[例：赋值法基本应用]
+已知函数 $f:\mathbb{R}\to\mathbb{R}$ 满足 $f(x+y)=f(x)+f(y)+2xy$，且 $f(1)=1$，求 $f(x)$ 的表达式。
+
+\medskip
+\textbf{解：}令 $x=y=0$，得
+\[f(0)=f(0)+f(0)+0 \implies f(0)=0\]
+令 $y=1$，得
+\[f(x+1)=f(x)+f(1)+2x=f(x)+1+2x\]
+因此 $f(x+1)-f(x)=2x+1$。对 $x=0,1,2,\ldots,n-1$ 求和：
+\[f(n)-f(0)=\sum_{k=0}^{n-1}(2k+1)=n^2\]
+故 $f(n)=n^2$（$n\in\mathbb{N}$）。同理可验证对有理数 $f(x)=x^2$，由连续性知 $f(x)=x^2$。
+\end{examplebox}
+
+% ---------- 1.2 ----------
+\subsection*{1.2\quad 柯西方程 $f(x+y)=f(x)+f(y)$ 的解}
+
+\begin{knowledgebox}[柯西方程]
+\textbf{柯西方程（Cauchy Functional Equation）}：$f(x+y)=f(x)+f(y)$，$\forall x,y\in\mathbb{R}$。
+
+\medskip
+\textbf{基本结论：}
+\begin{enumerate}[label=(\arabic*)]
+  \item $f(0)=0$（令 $x=y=0$）。
+  \item $f(-x)=-f(x)$（令 $y=-x$），即 $f$ 为奇函数。
+  \item $f(nx)=nf(x)$，$\forall n\in\mathbb{Z}$（数学归纳法）。
+  \item $f\!\left(\dfrac{p}{q}\right)=\dfrac{p}{q}\,f(1)$，$\forall p,q\in\mathbb{Z}$，$q\ne0$。
+  \item 若 $f$ 连续（或单调，或在某点连续），则 $f(x)=kx$，其中 $k=f(1)$。
+\end{enumerate}
+
+\medskip
+\textbf{重要注记：}若不加连续性等条件，柯西方程存在\textbf{非线性解}（需要选择公理构造），但高中阶段一律默认函数具有良好的性质（连续、单调等），故解为 $f(x)=kx$。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[label=(\arabic*)]
+  \item 柯西方程 $f(x+y)=f(x)+f(y)$ 的解为 $f(x)=kx$，\textbf{不要}误认为是 $f(x)=kx+b$。因为 $f(0)=0$，故 $b=0$。
+  \item 类似地，$f(x+y)=f(x)\cdot f(y)$（指数型方程），若 $f$ 不恒为零且连续，则 $f(x)=a^x$（$a>0$，$a\ne1$）或 $f(x)\equiv0$。
+  \item $f(xy)=f(x)+f(y)$（对数型方程），若 $f$ 连续且定义在正实数上，则 $f(x)=k\ln x$。
+\end{enumerate}
+\end{warnbox}
+
+% ---------- 1.3 ----------
+\subsection*{1.3\quad 抽象函数的单调性、奇偶性判断}
+
+\begin{knowledgebox}[利用函数方程判断性质]
+\textbf{一、奇偶性判断：}
+
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{奇函数}：若 $f(x)+f(-x)=0$（或 $f(-x)=-f(x)$），则 $f$ 为奇函数。\\
+    常见来源：令函数方程中 $y=-x$，利用 $f(0)=0$ 得到。
+  \item \textbf{偶函数}：若 $f(x)-f(-x)=0$（或 $f(-x)=f(x)$），则 $f$ 为偶函数。\\
+    常见来源：令函数方程中 $y=-x$，利用 $f(0)$ 的特定值得到。
+\end{enumerate}
+
+\medskip
+\textbf{二、单调性判断：}
+
+\medskip
+设 $x_1>x_2$，则 $x_1-x_2>0$。若能从函数方程推导出
+\[f(x_1)-f(x_2)=f(x_1-x_2)\cdot g(\cdots)\]
+或类似形式，结合已知条件（如 $x>0$ 时 $f(x)>0$），即可判断 $f(x_1)-f(x_2)$ 的正负，从而确定单调性。
+
+\medskip
+\textbf{常用结论：}
+\begin{itemize}
+  \item 若 $f(x+y)=f(x)+f(y)$ 且 $x>0$ 时 $f(x)>0$，则 $f$ 在 $\mathbb{R}$ 上严格递增。
+  \item 若 $f(x+y)=f(x)\cdot f(y)$ 且 $f(x)>0$，$f(1)>1$，则 $f$ 在 $\mathbb{R}$ 上严格递增。
+\end{itemize}
+\end{knowledgebox}
+
+% ---------- 1.4 ----------
+\subsection*{1.4\quad 函数方程与导数结合}
+
+\begin{knowledgebox}[导数与函数方程]
+函数方程与导数结合的问题是高考压轴题和竞赛常见题型。核心思路：
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{构造辅助函数}：将函数方程变形，构造 $F(x)=f(x)-g(x)$ 等形式，利用 $F'(x)$ 的符号判断单调性。
+  \item \textbf{利用函数方程求导数值}：对函数方程两边关于某变量求导，代入特殊值。
+  \item \textbf{抽象函数不等式}：利用函数方程确定的单调性，将抽象不等式转化为自变量的不等式。
+\end{enumerate}
+
+\medskip
+\textbf{典型模式：}
+\begin{itemize}
+  \item 已知 $f'(x)>f(x)$，构造 $F(x)=\dfrac{f(x)}{e^x}$，则 $F'(x)=\dfrac{f'(x)-f(x)}{e^x}>0$，故 $F(x)$ 递增。
+  \item 已知 $xf'(x)+f(x)>0$，构造 $F(x)=xf(x)$，则 $F'(x)=xf'(x)+f(x)>0$。
+  \item 已知 $f'(x)\sin x-f(x)\cos x>0$，构造 $F(x)=\dfrac{f(x)}{\sin x}$。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{tipbox}[构造辅助函数的常用技巧]
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{条件形式} & \textbf{辅助函数} \\
+\hline
+$f'(x)+f(x)g'(x)>0$ & $F(x)=f(x)\cdot e^{g(x)}$ \\
+\hline
+$f'(x)-f(x)g'(x)>0$ & $F(x)=\dfrac{f(x)}{e^{g(x)}}$ \\
+\hline
+$xf'(x)+nf(x)>0$ & $F(x)=x^nf(x)$ \\
+\hline
+$f'(x)\sin x-f(x)\cos x>0$ & $F(x)=\dfrac{f(x)}{\sin x}$ \\
+\hline
+$f'(x)\cos x+f(x)\sin x>0$ & $F(x)=f(x)\cos x$ \\
+\hline
+$xf'(x)-f(x)>0$ & $F(x)=\dfrac{f(x)}{x}$（$x>0$） \\
+\hline
+\end{tabular}
+\end{center}
+\end{tipbox}
+
+% ---------- 1.5 ----------
+\subsection*{1.5\quad 常见抽象函数模型}
+
+\begin{knowledgebox}[三大类抽象函数模型]
+\textbf{一、指数型：} $f(x+y)=f(x)\cdot f(y)$
+
+\begin{itemize}
+  \item 模型：$f(x)=a^x$（$a>0$，$a\ne1$）或 $f(x)\equiv0$。
+  \item 性质：$f(0)=1$（若 $f\not\equiv0$）；$f(x)>0$；$f(-x)=\dfrac{1}{f(x)}$。
+  \item 单调性：$a>1$ 时递增，$0<a<1$ 时递减。
+\end{itemize}
+
+\medskip
+\textbf{二、对数型：} $f(xy)=f(x)+f(y)$（$x,y>0$）
+
+\begin{itemize}
+  \item 模型：$f(x)=\log_a x$（$a>0$，$a\ne1$）。
+  \item 性质：$f(1)=0$；$f\!\left(\dfrac{1}{x}\right)=-f(x)$；$f(x^n)=nf(x)$。
+  \item 单调性：$a>1$ 时递增，$0<a<1$ 时递减。
+\end{itemize}
+
+\medskip
+\textbf{三、三角型：}
+
+\begin{itemize}
+  \item 余弦型：$f(x+y)+f(x-y)=2f(x)f(y)$，模型 $f(x)=\cos(\omega x)$。
+  \item 正切型：$f(x+y)=\dfrac{f(x)+f(y)}{1-f(x)f(y)}$，模型 $f(x)=\tan(\omega x)$。
+  \item 正弦型：$f(x+y)=f(x)\sqrt{1-f(y)^2}+f(y)\sqrt{1-f(x)^2}$，模型 $f(x)=\sin(\omega x)$。
+\end{itemize}
+
+\medskip
+\textbf{四、线性型：} $f(x+y)=f(x)+f(y)$，模型 $f(x)=kx$（柯西方程）。
+\end{knowledgebox}
+
+
+%=================================================================
+%  第二部分：例题精讲
+%=================================================================
+\newpage
+\section*{\textcolor{mainblue}{第二部分\quad 例题精讲}}
+
+% ---------- 例1 ----------
+\begin{examplebox}[例1]
+设函数 $f:\mathbb{R}\to\mathbb{R}$ 满足 $f(x+y)=f(x)+f(y)+xy(x+y)$，且 $f(1)=1$，求 $f(x)$ 的表达式。
+
+\medskip
+\textbf{解：}
+
+令 $x=y=0$，得 $f(0)=f(0)+f(0)+0$，故 $f(0)=0$。
+
+令 $y=1$，得
+\[f(x+1)=f(x)+f(1)+x(x+1)=f(x)+1+x^2+x\]
+即
+\[f(x+1)-f(x)=x^2+x+1\]
+
+对 $x=0,1,2,\ldots,n-1$ 求和：
+\[f(n)-f(0)=\sum_{k=0}^{n-1}(k^2+k+1)=\frac{n(n-1)(2n-1)}{6}+\frac{n(n-1)}{2}+n\]
+
+设 $f(x)=\dfrac{x^3}{3}+g(x)$，代入原方程：
+\[\frac{(x+y)^3}{3}+g(x+y)=\frac{x^3}{3}+g(x)+\frac{y^3}{3}+g(y)+xy(x+y)\]
+展开 $(x+y)^3=x^3+3x^2y+3xy^2+y^3$，化简得：
+\[g(x+y)+x^2y+xy^2=g(x)+g(y)+xy(x+y)\]
+即 $g(x+y)=g(x)+g(y)$，故 $g$ 满足柯西方程，$g(x)=kx$。
+
+由 $f(1)=\dfrac{1}{3}+k=1$，得 $k=\dfrac{2}{3}$。
+
+因此 $\boxed{f(x)=\dfrac{x^3+2x}{3}}$。
+
+\medskip
+验证：$f(x+y)=\dfrac{(x+y)^3+2(x+y)}{3}$，$f(x)+f(y)+xy(x+y)=\dfrac{x^3+2x+y^3+2y}{3}+xy(x+y)=\dfrac{x^3+y^3+3xy(x+y)+2(x+y)}{3}=\dfrac{(x+y)^3+2(x+y)}{3}$。\checkmark
+\end{examplebox}
+
+% ---------- 例2 ----------
+\begin{examplebox}[例2]
+设 $f:\mathbb{R}\to\mathbb{R}$ 是连续函数，满足 $f(x+y)=f(x)\cdot f(y)$，且 $f(1)=2$。求 $f(x)$ 的表达式，并求 $f(0)$，$f(-2)$ 的值。
+
+\medskip
+\textbf{解：}
+
+令 $x=y=0$：$f(0)=f(0)^2$，故 $f(0)=0$ 或 $f(0)=1$。
+
+若 $f(0)=0$，则对任意 $x$，$f(x)=f(x+0)=f(x)\cdot f(0)=0$，即 $f\equiv0$，与 $f(1)=2$ 矛盾。故 $f(0)=1$。
+
+令 $y=-x$：$f(0)=f(x)\cdot f(-x)$，故 $f(-x)=\dfrac{1}{f(x)}$。
+
+由 $f(x+y)=f(x)f(y)$ 及连续性，$f$ 为指数函数。设 $f(x)=a^x$，由 $f(1)=a=2$，得
+\[\boxed{f(x)=2^x}\]
+
+故 $f(0)=1$，$f(-2)=2^{-2}=\dfrac{1}{4}$。
+\end{examplebox}
+
+% ---------- 例3 ----------
+\begin{examplebox}[例3]
+设 $f:\mathbb{R}\to\mathbb{R}$ 满足 $f(x+y)+f(x-y)=2f(x)f(y)$，且 $f(0)\ne0$，$f\!\left(\dfrac{\pi}{2}\right)=0$。证明 $f$ 是周期函数，并求其一个周期。
+
+\medskip
+\textbf{解：}
+
+令 $x=y=0$：$f(0)+f(0)=2f(0)^2$，即 $2f(0)=2f(0)^2$。因 $f(0)\ne0$，故 $f(0)=1$。
+
+令 $x=0$：$f(y)+f(-y)=2f(0)f(y)=2f(y)$，故 $f(-y)=f(y)$，即 $f$ 为偶函数。
+
+令 $y=\dfrac{\pi}{2}$：$f\!\left(x+\dfrac{\pi}{2}\right)+f\!\left(x-\dfrac{\pi}{2}\right)=2f(x)f\!\left(\dfrac{\pi}{2}\right)=0$。
+
+故 $f\!\left(x+\dfrac{\pi}{2}\right)=-f\!\left(x-\dfrac{\pi}{2}\right)$。
+
+将 $x$ 替换为 $x+\dfrac{\pi}{2}$：$f(x+\pi)+f(x)=0$，即 $f(x+\pi)=-f(x)$。
+
+再将 $x$ 替换为 $x+\pi$：$f(x+2\pi)+f(x+\pi)=0$，即 $f(x+2\pi)=-f(x+\pi)=f(x)$。
+
+因此 $f$ 是周期函数，$\boxed{T=2\pi}$ 是其一个周期。
+
+\medskip
+\textbf{注：}满足此方程的典型函数为 $f(x)=\cos x$。
+\end{examplebox}
+
+% ---------- 例4 ----------
+\begin{examplebox}[例4]
+设函数 $f(x)$ 在 $(0,+\infty)$ 上满足 $f(xy)=f(x)+f(y)$，且当 $x>1$ 时 $f(x)>0$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 求 $f(1)$ 的值；
+  \item 证明 $f(x)$ 在 $(0,+\infty)$ 上单调递增；
+  \item 若 $f(2)=1$，解不等式 $f(x)+f(x-2)\le3$。
+\end{enumerate}
+
+\medskip
+\textbf{解：}
+
+(1) 令 $x=y=1$：$f(1)=f(1)+f(1)=2f(1)$，故 $f(1)=0$。
+
+(2) 设 $0<x_1<x_2$，则 $\dfrac{x_2}{x_1}>1$，由已知 $f\!\left(\dfrac{x_2}{x_1}\right)>0$。
+
+又 $f(x_2)=f\!\left(x_1\cdot\dfrac{x_2}{x_1}\right)=f(x_1)+f\!\left(\dfrac{x_2}{x_1}\right)>f(x_1)$。
+
+故 $f(x)$ 在 $(0,+\infty)$ 上单调递增。
+
+(3) 由 $f(2)=1$，得 $f(4)=f(2)+f(2)=2$，$f(8)=f(4)+f(2)=3$。
+
+$f(x)+f(x-2)=f(x(x-2))\le3=f(8)$。
+
+由单调递增性，需满足：
+\[\begin{cases} x>0 \\ x-2>0 \\ x(x-2)\le8 \end{cases}\implies\begin{cases} x>2 \\ x^2-2x-8\le0 \end{cases}\implies\begin{cases} x>2 \\ -2\le x\le4 \end{cases}\]
+
+故 $\boxed{2<x\le4}$。
+\end{examplebox}
+
+% ---------- 例5 ----------
+\begin{examplebox}[例5]
+已知 $f(x)$ 是定义在 $\mathbb{R}$ 上的奇函数，当 $x>0$ 时 $f(x)=x^2-4x+3$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 求 $f(x)$ 在 $\mathbb{R}$ 上的完整表达式；
+  \item 求 $f(x)$ 的单调递增区间。
+\end{enumerate}
+
+\medskip
+\textbf{解：}
+
+(1) $f(x)$ 为奇函数，故 $f(0)=0$。
+
+当 $x<0$ 时，$-x>0$，故 $f(-x)=(-x)^2-4(-x)+3=x^2+4x+3$。
+
+由 $f(-x)=-f(x)$，得 $f(x)=-f(-x)=-(x^2+4x+3)=-x^2-4x-3$。
+
+因此：
+\[f(x)=\begin{cases} x^2-4x+3, & x>0 \\ 0, & x=0 \\ -x^2-4x-3, & x<0 \end{cases}\]
+
+(2) 当 $x>0$ 时，$f(x)=x^2-4x+3=(x-2)^2-1$，在 $(2,+\infty)$ 上递增。
+
+当 $x<0$ 时，$f(x)=-x^2-4x-3=-(x+2)^2+1$，在 $(-\infty,-2)$ 上递增。
+
+综合：$f(x)$ 的单调递增区间为 $\boxed{(-\infty,-2)}$ 和 $\boxed{(2,+\infty)}$。
+\end{examplebox}
+
+% ---------- 例6 ----------
+\begin{examplebox}[例6]
+已知 $f(x)$ 的定义域为 $\mathbb{R}$，对任意 $x,y\in\mathbb{R}$ 满足 $f(x+y)=f(x)+f(y)-1$，且当 $x>0$ 时 $f(x)>1$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 求 $f(0)$；
+  \item 证明 $f(x)$ 是 $\mathbb{R}$ 上的增函数；
+  \item 若 $f(4)=5$，解不等式 $f(3m^2-m-2)<3$。
+\end{enumerate}
+
+\medskip
+\textbf{解：}
+
+(1) 令 $x=y=0$：$f(0)=f(0)+f(0)-1$，故 $f(0)=1$。
+
+(2) 设 $x_1>x_2$，则 $x_1-x_2>0$，$f(x_1-x_2)>1$。
+
+\begin{align*}
+f(x_1)&=f(x_2+(x_1-x_2))=f(x_2)+f(x_1-x_2)-1\\
+&>f(x_2)+1-1=f(x_2)
+\end{align*}
+
+故 $f(x)$ 在 $\mathbb{R}$ 上单调递增。
+
+(3) 令 $y=x$：$f(2x)=2f(x)-1$。由 $f(4)=5$ 得 $f(2\cdot2)=2f(2)-1=5$，故 $f(2)=3$。
+
+$f(3m^2-m-2)<3=f(2)$，由单调递增性：
+\[3m^2-m-2<2\implies 3m^2-m-4<0\implies(3m-4)(m+1)<0\]
+
+故 $\boxed{-1<m<\dfrac{4}{3}}$。
+\end{examplebox}
+
+% ---------- 例7 ----------
+\begin{examplebox}[例7]
+已知 $f(x)$ 是定义在 $(0,+\infty)$ 上的函数，满足 $f(xy)=f(x)+f(y)$，$f(2)=1$，且当 $x>1$ 时 $f(x)>0$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 证明 $f(x)$ 是 $(0,+\infty)$ 上的增函数；
+  \item 解不等式 $f(x)-f\!\left(\dfrac{1}{x-3}\right)\le2$。
+\end{enumerate}
+
+\medskip
+\textbf{解：}
+
+(1) 令 $x=y=1$：$f(1)=2f(1)$，故 $f(1)=0$。
+
+令 $y=\dfrac{1}{x}$：$f(1)=f(x)+f\!\left(\dfrac{1}{x}\right)=0$，故 $f\!\left(\dfrac{1}{x}\right)=-f(x)$。
+
+设 $0<x_1<x_2$，则 $\dfrac{x_2}{x_1}>1$，$f\!\left(\dfrac{x_2}{x_1}\right)>0$。
+
+$f(x_2)=f\!\left(x_1\cdot\dfrac{x_2}{x_1}\right)=f(x_1)+f\!\left(\dfrac{x_2}{x_1}\right)>f(x_1)$。
+
+故 $f(x)$ 在 $(0,+\infty)$ 上单调递增。
+
+(2) $f(x)-f\!\left(\dfrac{1}{x-3}\right)=f(x)+f(x-3)=f(x(x-3))$。
+
+由 $f(2)=1$，$f(4)=f(2)+f(2)=2$，故不等式变为 $f(x(x-3))\le f(4)$。
+
+由单调递增性，需满足：
+\[\begin{cases} x>0 \\ x-3>0 \\ x(x-3)\le4 \end{cases}\implies\begin{cases} x>3 \\ x^2-3x-4\le0 \end{cases}\implies\begin{cases} x>3 \\ -1\le x\le4 \end{cases}\]
+
+故 $\boxed{3<x\le4}$。
+\end{examplebox}
+
+% ---------- 例8 ----------
+\begin{examplebox}[例8]
+已知 $f(x)$ 是定义在 $(-1,1)$ 上的奇函数，且在 $(-1,1)$ 上单调递减。若 $f(1-a)+f(1-a^2)<0$，求实数 $a$ 的取值范围。
+
+\medskip
+\textbf{解：}
+
+$f(x)$ 为奇函数，$f(1-a)+f(1-a^2)<0$ 等价于 $f(1-a)<-f(1-a^2)=f(a^2-1)$。
+
+$f(x)$ 在 $(-1,1)$ 上单调递减，故：
+\[\begin{cases} -1<1-a<1 \\ -1<a^2-1<1 \\ 1-a>a^2-1 \end{cases}\]
+
+由 $-1<1-a<1$ 得 $0<a<2$。
+
+由 $-1<a^2-1<1$ 得 $0<a^2<2$，即 $-\sqrt{2}<a<\sqrt{2}$ 且 $a\ne0$。
+
+由 $1-a>a^2-1$ 得 $a^2+a-2<0$，即 $(a+2)(a-1)<0$，故 $-2<a<1$。
+
+取交集：$\boxed{0<a<1}$。
+\end{examplebox}
+
+% ---------- 例9 ----------
+\begin{examplebox}[例9]
+设 $f(x)$ 在 $\mathbb{R}$ 上可导，且满足 $f'(x)>2f(x)$，$f(0)=1$。证明：当 $x>0$ 时 $f(x)>e^{2x}$。
+
+\medskip
+\textbf{解：}
+
+构造辅助函数 $F(x)=\dfrac{f(x)}{e^{2x}}$，则
+\[F'(x)=\frac{f'(x)e^{2x}-f(x)\cdot2e^{2x}}{e^{4x}}=\frac{f'(x)-2f(x)}{e^{2x}}\]
+
+由 $f'(x)>2f(x)$，得 $f'(x)-2f(x)>0$，故 $F'(x)>0$，即 $F(x)$ 在 $\mathbb{R}$ 上严格递增。
+
+$F(0)=\dfrac{f(0)}{e^0}=1$。
+
+当 $x>0$ 时，$F(x)>F(0)=1$，即 $\dfrac{f(x)}{e^{2x}}>1$，故 $\boxed{f(x)>e^{2x}}$。
+\end{examplebox}
+
+% ---------- 例10 ----------
+\begin{examplebox}[例10]
+已知 $f(x)$ 在 $(0,+\infty)$ 上满足 $2f(x)+xf'(x)>0$，且 $f(1)=0$。判断 $g(x)=x^2f(x)$ 在 $(0,+\infty)$ 上的单调性。
+
+\medskip
+\textbf{解：}
+
+$g(x)=x^2f(x)$，则
+\[g'(x)=2xf(x)+x^2f'(x)=x[2f(x)+xf'(x)]\]
+
+当 $x>0$ 时，$x>0$ 且 $2f(x)+xf'(x)>0$（已知条件），故 $g'(x)>0$。
+
+因此 $g(x)=x^2f(x)$ 在 $(0,+\infty)$ 上\textbf{严格单调递增}。
+
+\medskip
+\textbf{注：}此题的关键是识别 $g'(x)$ 的表达式恰好包含已知条件中的 $2f(x)+xf'(x)$。这也说明了构造辅助函数的重要性。
+\end{examplebox}
+
+% ---------- 例11 ----------
+\begin{examplebox}[例11]
+已知函数 $f(x)$ 在 $\mathbb{R}$ 上满足 $f(x+2)=\dfrac{1+f(x)}{1-f(x)}$，且 $f(1)=2+\sqrt{3}$。求 $f(2023)$ 的值。
+
+\medskip
+\textbf{解：}
+
+由递推关系：
+\[f(x+4)=f((x+2)+2)=\frac{1+f(x+2)}{1-f(x+2)}=\frac{1+\dfrac{1+f(x)}{1-f(x)}}{1-\dfrac{1+f(x)}{1-f(x)}}\]
+
+分子：$1+\dfrac{1+f(x)}{1-f(x)}=\dfrac{1-f(x)+1+f(x)}{1-f(x)}=\dfrac{2}{1-f(x)}$
+
+分母：$1-\dfrac{1+f(x)}{1-f(x)}=\dfrac{1-f(x)-1-f(x)}{1-f(x)}=\dfrac{-2f(x)}{1-f(x)}$
+
+故 $f(x+4)=\dfrac{2}{-2f(x)}=-\dfrac{1}{f(x)}$。
+
+进而 $f(x+8)=-\dfrac{1}{f(x+4)}=-\dfrac{1}{-\frac{1}{f(x)}}=f(x)$。
+
+故 $f(x)$ 以 $8$ 为周期。
+
+$2023=8\times252+7$，故 $f(2023)=f(7)$。
+
+$f(7)=f(3+4)=-\dfrac{1}{f(3)}$。
+
+$f(3)=f(1+2)=\dfrac{1+f(1)}{1-f(1)}=\dfrac{1+2+\sqrt{3}}{1-2-\sqrt{3}}=\dfrac{3+\sqrt{3}}{-1-\sqrt{3}}$
+
+化简：$\dfrac{3+\sqrt{3}}{-(1+\sqrt{3})}=\dfrac{(3+\sqrt{3})(1-\sqrt{3})}{-(1+\sqrt{3})(1-\sqrt{3})}=\dfrac{3-3\sqrt{3}+\sqrt{3}-3}{-(1-3)}=\dfrac{-2\sqrt{3}}{2}=-\sqrt{3}$
+
+故 $f(3)=-\sqrt{3}$。
+
+$f(7)=-\dfrac{1}{-\sqrt{3}}=\dfrac{1}{\sqrt{3}}=\dfrac{\sqrt{3}}{3}$。
+
+因此 $\boxed{f(2023)=\dfrac{\sqrt{3}}{3}}$。
+\end{examplebox}
+
+
+%=================================================================
+%  第三部分：应用题
+%=================================================================
+\newpage
+\section*{\textcolor{mainblue}{第三部分\quad 应用题}}
+
+% ---------- 应用1 ----------
+\begin{appbox}[应用题1]
+已知 $f(x)$ 在 $\mathbb{R}$ 上满足 $f(x+y)=f(x)+f(y)+2xy$，且 $f$ 在 $x=0$ 处连续，$f'(0)=1$。求 $f(x)$ 的表达式。
+
+\medskip
+\textbf{解：}
+
+令 $x=y=0$：$f(0)=2f(0)$，故 $f(0)=0$。
+
+令 $y=\Delta x$（$\Delta x\to0$）：
+\[f(x+\Delta x)=f(x)+f(\Delta x)+2x\Delta x\]
+\[\frac{f(x+\Delta x)-f(x)}{\Delta x}=\frac{f(\Delta x)}{\Delta x}+2x\]
+
+当 $\Delta x\to0$ 时，$\dfrac{f(\Delta x)-f(0)}{\Delta x}\to f'(0)=1$，故 $\dfrac{f(\Delta x)}{\Delta x}\to1$。
+
+因此 $f'(x)=1+2x$，积分得 $f(x)=x^2+x+C$。
+
+由 $f(0)=0$，得 $C=0$。故 $\boxed{f(x)=x^2+x}$。
+
+\medskip
+验证：$f(x+y)=(x+y)^2+(x+y)$，$f(x)+f(y)+2xy=x^2+x+y^2+y+2xy=(x+y)^2+(x+y)$。\checkmark
+\end{appbox}
+
+% ---------- 应用2 ----------
+\begin{appbox}[应用题2]
+设 $f(x)$ 在 $(0,+\infty)$ 上有定义，满足 $f(xy)=xf(y)+yf(x)$，且 $f(2)=1$。求 $f\!\left(\dfrac{1}{2}\right)$ 的值。
+
+\medskip
+\textbf{解：}
+
+令 $x=y=1$：$f(1)=f(1)+f(1)=2f(1)$，故 $f(1)=0$。
+
+令 $y=\dfrac{1}{x}$：$f(1)=xf\!\left(\dfrac{1}{x}\right)+\dfrac{1}{x}f(x)=0$。
+
+故 $xf\!\left(\dfrac{1}{x}\right)=-\dfrac{f(x)}{x}$，即 $f\!\left(\dfrac{1}{x}\right)=-\dfrac{f(x)}{x^2}$。
+
+令 $x=2$，$y=\dfrac{1}{2}$：$f(1)=2f\!\left(\dfrac{1}{2}\right)+\dfrac{1}{2}f(2)=0$。
+
+$2f\!\left(\dfrac{1}{2}\right)=-\dfrac{1}{2}$，故 $\boxed{f\!\left(\dfrac{1}{2}\right)=-\dfrac{1}{4}}$。
+
+\medskip
+\textbf{注：}此方程的一个解为 $f(x)=x\ln x$。验证：$f(xy)=xy\ln(xy)=xy(\ln x+\ln y)=y(x\ln x)+x(y\ln y)=xf(y)+yf(x)$。\checkmark
+\end{appbox}
+
+% ---------- 应用3 ----------
+\begin{appbox}[应用题3]
+已知 $f(x)$ 在 $\mathbb{R}$ 上可导，且 $f(x)+xf'(x)>0$ 对一切 $x$ 成立，$f(1)=2$。比较 $f(-1)$ 与 $-2$ 的大小。
+
+\medskip
+\textbf{解：}
+
+构造 $F(x)=xf(x)$，则 $F'(x)=f(x)+xf'(x)>0$。
+
+故 $F(x)$ 在 $\mathbb{R}$ 上严格递增。
+
+$F(1)=1\cdot f(1)=2$，$F(-1)=-f(-1)$。
+
+由 $F(-1)<F(1)$，得 $-f(-1)<2$，即 $f(-1)>-2$。
+
+因此 $\boxed{f(-1)>-2}$。
+\end{appbox}
+
+% ---------- 应用4 ----------
+\begin{appbox}[应用题4]
+设 $f(x)$ 是定义在 $\mathbb{R}$ 上的函数，满足 $f(x+1)=\dfrac{1+f(x)}{1-f(x)}$，$f(1)=2$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 求 $f(5)$ 的值；
+  \item 证明 $f(x)$ 是周期函数。
+\end{enumerate}
+
+\medskip
+\textbf{解：}
+
+(1) 逐步计算：
+\[f(2)=\frac{1+f(1)}{1-f(1)}=\frac{1+2}{1-2}=\frac{3}{-1}=-3\]
+\[f(3)=\frac{1+f(2)}{1-f(2)}=\frac{1+(-3)}{1-(-3)}=\frac{-2}{4}=-\frac{1}{2}\]
+\[f(4)=\frac{1+f(3)}{1-f(3)}=\frac{1-\frac{1}{2}}{1+\frac{1}{2}}=\frac{\frac{1}{2}}{\frac{3}{2}}=\frac{1}{3}\]
+\[f(5)=\frac{1+f(4)}{1-f(4)}=\frac{1+\frac{1}{3}}{1-\frac{1}{3}}=\frac{\frac{4}{3}}{\frac{2}{3}}=2\]
+
+故 $f(5)=2=f(1)$。
+
+(2) 由递推关系 $f(x+1)=\dfrac{1+f(x)}{1-f(x)}$，计算 $f(x+2)$：
+
+\[f(x+2)=\frac{1+f(x+1)}{1-f(x+1)}=\frac{1+\frac{1+f(x)}{1-f(x)}}{1-\frac{1+f(x)}{1-f(x)}}=\frac{\frac{1-f(x)+1+f(x)}{1-f(x)}}{\frac{1-f(x)-1-f(x)}{1-f(x)}}=\frac{2}{-2f(x)}=-\frac{1}{f(x)}\]
+
+$f(x+4)=-\dfrac{1}{f(x+2)}=-\dfrac{1}{-\frac{1}{f(x)}}=f(x)$。
+
+故 $f(x)$ 是周期函数，$\boxed{T=4}$ 为其一个周期。
+\end{appbox}
+
+
+%=================================================================
+%  第四部分：课堂练习
+%=================================================================
+\newpage
+\section*{\textcolor{mainblue}{第四部分\quad 课堂练习}}
+
+\begin{enumerate}[label=\textbf{题\arabic*.},leftmargin=2em]
+
+\item 已知 $f(x)$ 满足 $f(x+y)=f(x)+f(y)$，且 $f(1)=3$，求 $f(5)$ 的值。
+
+\medskip
+\textbf{答案：}$f(5)=5f(1)=15$。
+
+\bigskip
+
+\item 设 $f(x)$ 在 $\mathbb{R}$ 上满足 $f(x+y)=f(x)\cdot f(y)$，$f(1)=3$，求 $f(0)$ 和 $f(-1)$ 的值。
+
+\medskip
+\textbf{答案：}$f(0)=1$，$f(-1)=\dfrac{1}{3}$。
+
+\bigskip
+
+\item 已知 $f(x)$ 满足 $f(xy)=f(x)+f(y)$（$x,y>0$），$f(2)=1$，求 $f(32)$ 的值。
+
+\medskip
+\textbf{答案：}$f(32)=f(2^5)=5f(2)=5$。
+
+\bigskip
+
+\item 已知 $f(x)$ 在 $\mathbb{R}$ 上满足 $f(x+y)=f(x)+f(y)-1$，$f(3)=5$，$x>0$ 时 $f(x)>1$。求 $f(1)$ 的值。
+
+\medskip
+\textbf{答案：}$f(0)=1$，由 $f(x+1)=f(x)+f(1)-1$ 递推得 $f(3)=3f(1)-2=5$，故 $f(1)=\dfrac{7}{3}$。
+
+\bigskip
+
+\item 设 $f(x)$ 是定义在 $\mathbb{R}$ 上的奇函数，当 $x\ge0$ 时 $f(x)=2x-x^2$。求 $x<0$ 时 $f(x)$ 的表达式。
+
+\medskip
+\textbf{答案：}当 $x<0$ 时，$-x>0$，$f(-x)=2(-x)-(-x)^2=-2x-x^2$。由 $f(-x)=-f(x)$，得 $f(x)=-f(-x)=2x+x^2$。
+
+\bigskip
+
+\item 已知 $f(x)$ 在 $(0,+\infty)$ 上满足 $f(xy)=f(x)+f(y)$，$f(2)=a$，$f(3)=b$。用 $a,b$ 表示 $f(72)$。
+
+\medskip
+\textbf{答案：}$72=2^3\times3^2$，故 $f(72)=3f(2)+2f(3)=3a+2b$。
+
+\bigskip
+
+\item 设 $f(x)$ 在 $\mathbb{R}$ 上可导，$f'(x)<f(x)$，$f(0)=1$。证明：当 $x>0$ 时 $f(x)<e^x$。
+
+\medskip
+\textbf{答案：}令 $F(x)=\dfrac{f(x)}{e^x}$，则 $F'(x)=\dfrac{f'(x)-f(x)}{e^x}<0$。$F(0)=1$，当 $x>0$ 时 $F(x)<F(0)=1$，即 $f(x)<e^x$。
+
+\bigskip
+
+\item 已知 $f(x)$ 满足 $f(x+2)=-f(x)$，$f(0)=3$，$f(1)=-1$。求 $f(1)+f(2)+f(3)+\cdots+f(2024)$ 的值。
+
+\medskip
+\textbf{答案：}$f(x+4)=-f(x+2)=f(x)$，周期为 $4$。$f(0)=3$，$f(1)=-1$，$f(2)=-f(0)=-3$，$f(3)=-f(1)=1$，$f(4)=f(0)=3$。一个周期 $f(1)+f(2)+f(3)+f(4)=(-1)+(-3)+1+3=0$。共 $506$ 个完整周期，故 $\boxed{0}$。
+
+\end{enumerate}
+
+\vfill
+\begin{center}
+\textcolor{mainblue}{\rule{0.6\textwidth}{0.5pt}}\\[4pt]
+{\small 本讲结束，祝学习进步！}
+\end{center}
+
+\end{document}

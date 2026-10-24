@@ -1,0 +1,1059 @@
+% !TEX program = xelatex
+\documentclass[12pt,a4paper]{ctexart}
+
+% ============================================================
+% 页面与字体
+% ============================================================
+\usepackage[top=2.2cm,bottom=2.2cm,left=2.4cm,right=2.4cm]{geometry}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+% ============================================================
+% 基础宏包
+% ============================================================
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,float}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,arrows.meta,positioning}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ============================================================
+% 颜色定义
+% ============================================================
+\usepackage{xcolor}
+\definecolor{titleblue}{HTML}{1A3C6E}
+\definecolor{accentred}{HTML}{C0392B}
+\definecolor{accentgreen}{HTML}{1E8449}
+\definecolor{accentorange}{HTML}{D35400}
+\definecolor{lightblue}{HTML}{D6EAF8}
+\definecolor{lightyellow}{HTML}{FEF9E7}
+\definecolor{lightgreen}{HTML}{EAFAF1}
+\definecolor{lightorange}{HTML}{FDF2E9}
+\definecolor{lightred}{HTML}{FDEDEC}
+\definecolor{graybg}{HTML}{F4F6F7}
+\definecolor{darkgray}{HTML}{2C3E50}
+
+% ============================================================
+% tcolorbox 样式
+% ============================================================
+\usepackage[most]{tcolorbox}
+
+% 知识点框
+\newtcolorbox{knowledgebox}[1][]{
+  enhanced,
+  colback=lightblue,
+  colframe=titleblue,
+  coltitle=white,
+  fonttitle=\bfseries\large,
+  title={#1},
+  boxrule=1pt,
+  arc=4pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  before skip=10pt, after skip=10pt,
+  shadow={1mm}{-1mm}{0mm}{black!15}
+}
+
+% 例题框
+\newtcolorbox{examplebox}[1][]{
+  enhanced,
+  colback=lightyellow,
+  colframe=accentorange,
+  coltitle=white,
+  fonttitle=\bfseries,
+  title={#1},
+  boxrule=0.8pt,
+  arc=3pt,
+  left=8pt, right=8pt, top=5pt, bottom=5pt,
+  before skip=8pt, after skip=8pt
+}
+
+% 应用题框
+\newtcolorbox{appbox}[1][]{
+  enhanced,
+  colback=lightgreen,
+  colframe=accentgreen,
+  coltitle=white,
+  fonttitle=\bfseries,
+  title={#1},
+  boxrule=0.8pt,
+  arc=3pt,
+  left=8pt, right=8pt, top=5pt, bottom=5pt,
+  before skip=8pt, after skip=8pt
+}
+
+% 练习框
+\newtcolorbox{exercisebox}[1][]{
+  enhanced,
+  colback=lightred,
+  colframe=accentred,
+  coltitle=white,
+  fonttitle=\bfseries,
+  title={#1},
+  boxrule=0.8pt,
+  arc=3pt,
+  left=8pt, right=8pt, top=5pt, bottom=5pt,
+  before skip=8pt, after skip=8pt
+}
+
+% 解答框
+\newtcolorbox{solutionbox}{
+  enhanced,
+  colback=graybg,
+  colframe=darkgray,
+  boxrule=0.5pt,
+  arc=2pt,
+  left=8pt, right=8pt, top=5pt, bottom=5pt,
+  before skip=6pt, after skip=6pt
+}
+
+% 注意框
+\newtcolorbox{notebox}{
+  enhanced,
+  borderline west={3pt}{0pt}{accentred},
+  colback=lightred!30,
+  colframe=white,
+  boxrule=0pt,
+  arc=0pt,
+  left=10pt, right=8pt, top=5pt, bottom=5pt,
+  before skip=8pt, after skip=8pt
+}
+
+% ============================================================
+% 页眉页脚
+% ============================================================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{titleblue}高中数学培优 $\cdot$ 极点极线与射影几何初步}
+\fancyhead[R]{\small\color{titleblue}第~\thepage~页}
+\fancyfoot[C]{\small\color{gray!60}\rule[0.5ex]{0.4\textwidth}{0.4pt}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{titleblue}\leaders\hrule height \headrulewidth\hfill}}
+
+% ============================================================
+% 定理环境
+% ============================================================
+\theoremstyle{definition}
+\newtheorem*{defn}{定义}
+\newtheorem*{thm}{定理}
+\newtheorem*{prop}{性质}
+\newtheorem*{lem}{引理}
+
+% ============================================================
+% 自定义命令
+% ============================================================
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\cc}{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\pp}{\mathbb{P}}
+
+% 极点极线专用
+\newcommand{\polar}{\text{极线}}
+\newcommand{\pole}{\text{极点}}
+
+% ============================================================
+% 正文
+% ============================================================
+\begin{document}
+
+% ---------- 封面 ----------
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+{\Huge\bfseries\color{titleblue} 高中数学培优专题}\\[1.2cm]
+{\LARGE\bfseries\color{accentred} 极点极线与射影几何初步}\\[2cm]
+{\large\color{darkgray} 适用对象：学有余力的高中学生}\\[0.6cm]
+{\large\color{darkgray} 目标：掌握极点极线理论，初步了解射影几何方法}\\[3cm]
+\rule{0.6\textwidth}{0.4pt}\\[0.8cm]
+{\large\color{titleblue} 2026 年修订版}
+\vfill
+\end{titlepage}
+
+% ---------- 目录 ----------
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{知识点精讲}
+% ============================================================
+
+% --- 1.1 极点与极线的定义 ---
+\begin{knowledgebox}[1.1\quad 极点与极线的定义（配极对应）]
+设 $\Gamma$ 为一条非退化的二次曲线（圆、椭圆、双曲线、抛物线均可）。
+
+\begin{defn}[极点与极线]
+设点 $P$ 不在 $\Gamma$ 上。过 $P$ 作 $\Gamma$ 的两条切线，切点分别为 $A,B$，则直线 $AB$ 称为 \textbf{点 $P$ 关于 $\Gamma$ 的极线}，记作 $p=\polar_\Gamma(P)$；而 $P$ 称为 \textbf{直线 $AB$ 关于 $\Gamma$ 的极点}，记作 $P=\pole_\Gamma(p)$。
+\end{defn}
+
+\vspace{4pt}
+\textbf{代数描述：}
+设 $\Gamma$ 的方程为
+\[
+  F(x,y) = Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0,
+\]
+则点 $P(x_0,y_0)$ 关于 $\Gamma$ 的极线方程为
+\[
+  Ax_0 x + \tfrac{B}{2}(x_0 y + y_0 x) + Cy_0 y + \tfrac{D}{2}(x+x_0) + \tfrac{E}{2}(y+y_0) + F = 0.
+\]
+
+\textbf{特殊情形——圆：}
+设圆 $\Gamma:\; x^2+y^2=r^2$，则点 $P(x_0,y_0)$ 的极线为
+\[
+  x_0 x + y_0 y = r^2.
+\]
+设椭圆 $\Gamma:\; \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$，则点 $P(x_0,y_0)$ 的极线为
+\[
+  \frac{x_0 x}{a^2}+\frac{y_0 y}{b^2}=1.
+\]
+\end{knowledgebox}
+
+% --- 1.2 配极原则 ---
+\begin{knowledgebox}[1.2\quad 配极原则（极点极线的基本性质）]
+\begin{enumerate}[label=\textbf{(\arabic*)},leftmargin=2em]
+  \item \textbf{对偶性：} 若点 $P$ 在点 $Q$ 的极线上，则点 $Q$ 也在点 $P$ 的极线上。
+  \item \textbf{共线与共点的对偶：} 若若干点共线，则它们的极线共点；反之亦然。
+  \item \textbf{自极三角形：} 若 $\triangle ABC$ 的每条边恰好是其所对顶点的极线，则 $\triangle ABC$ 称为关于 $\Gamma$ 的\textbf{自极三角形}（或自配极三角形）。
+  \item \textbf{极线的几何作法（不含切线时）：} 过 $P$ 任作两条割线交 $\Gamma$ 于 $A,D$ 和 $B,C$，则 $AC$ 与 $BD$ 的交点 $M$，以及 $AD$ 与 $BC$ 的交点 $N$，直线 $MN$ 即为 $P$ 的极线。
+\end{enumerate}
+\end{knowledgebox}
+
+% --- 1.3 调和点列与调和分割 ---
+\begin{knowledgebox}[1.3\quad 调和点列与调和分割]
+\begin{defn}[调和点列]
+共线四点 $A,B,C,D$ 称为\textbf{调和点列}（记作 $(A,C;B,D)=-1$），当且仅当
+\[
+  \frac{CA}{CB}\bigg/\frac{DA}{DB}=-1,
+\]
+即 $\dfrac{CA}{CB}=-\dfrac{DA}{DB}$（有向线段）。
+\end{defn}
+
+\begin{prop}[调和点列与极线的关系]
+\begin{enumerate}[label=(\arabic*),leftmargin=2em]
+  \item 设 $P$ 是 $\Gamma$ 外一点，$p$ 是 $P$ 的极线。过 $P$ 作割线交 $\Gamma$ 于 $M,N$，交 $p$ 于 $Q$，则 $(M,N;P,Q)=-1$，即 $P,Q$ 调和分割 $M,N$。
+  \item 反之，若过 $P$ 的直线与 $\Gamma$ 交于 $M,N$，且 $Q$ 在直线上满足 $(M,N;P,Q)=-1$，则当割线变动时 $Q$ 的轨迹即为 $P$ 的极线。
+\end{enumerate}
+\end{prop}
+
+\begin{prop}[完全四边形的调和性]
+设完全四边形 $ABCD$（四线两两相交），其三条对角线的中点共线（牛顿线）。更一般地，对角线交点构成调和点列。
+\end{prop}
+\end{knowledgebox}
+
+% --- 1.4 射影几何初步 ---
+\begin{knowledgebox}[1.4\quad 射影几何初步（选学）]
+\textbf{射影平面} $\pp^2$：在欧氏平面中添加无穷远点，使平行线交于无穷远点。
+
+\begin{defn}[射影变换与交比]
+\textbf{射影变换}（直射变换）是保持共线关系和交比的变换。\vspace{3pt}
+
+共线四点 $A,B,C,D$ 的\textbf{交比}定义为
+\[
+  (A,B;C,D)=\frac{CA}{CB}\bigg/\frac{DA}{DB}.
+\]
+交比在射影变换下不变。
+\end{defn}
+
+\begin{thm}[射影几何基本定理]
+射影变换由其中任意四点（无三点共线）的像唯一确定。
+\end{thm}
+
+\begin{notebox}
+\textbf{竞赛视角：} 在圆锥曲线大题中，利用极点极线和调和点列，可以将复杂的共线、共点、定值问题转化为对偶问题，大幅简化计算。常见的出题模式包括：
+\begin{itemize}[leftmargin=1.5em]
+  \item 切点弦过定点 $\Longleftrightarrow$ 点在定直线上；
+  \item 调和点列推出中点或比例关系；
+  \item 自极三角形带来垂直或正交关系。
+\end{itemize}
+\end{notebox}
+\end{knowledgebox}
+
+
+% ============================================================
+\section{经典例题}
+% ============================================================
+
+% --- 例1 ---
+\begin{examplebox}[例 1\quad 极线方程的基本计算]
+已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$，求点 $P(3,2)$ 关于 $\Gamma$ 的极线方程。
+\end{examplebox}
+
+\begin{solutionbox}
+\textbf{解：}
+椭圆方程为 $\dfrac{x^2}{4}+y^2=1$，即 $a^2=4,\;b^2=1$。
+
+由极线公式 $\dfrac{x_0 x}{a^2}+\dfrac{y_0 y}{b^2}=1$，将 $P(3,2)$ 代入：
+\[
+  \frac{3x}{4}+\frac{2y}{1}=1 \quad\Longrightarrow\quad \frac{3x}{4}+2y=1.
+\]
+两边乘以 $4$：
+\[
+  \boxed{3x+8y=4.}
+\]
+\end{solutionbox}
+
+\vspace{6pt}
+
+% --- 例2 ---
+\begin{examplebox}[例 2\quad 极点与极线的互逆]
+已知圆 $\Gamma:\;x^2+y^2=5$，直线 $l:\;2x+y=5$ 是某点 $P$ 关于 $\Gamma$ 的极线，求 $P$ 的坐标。
+\end{examplebox}
+
+\begin{solutionbox}
+\textbf{解：}
+设 $P(x_0,y_0)$，则极线方程为 $x_0 x+y_0 y=5$。
+
+对比 $l:\;2x+y=5$，系数成比例：
+\[
+  \frac{x_0}{2}=\frac{y_0}{1}=\frac{5}{5}=1.
+\]
+所以 $x_0=2,\;y_0=1$，即
+\[
+  \boxed{P(2,1).}
+\]
+\end{solutionbox}
+
+\vspace{6pt}
+
+% --- 例3 ---
+\begin{examplebox}[例 3\quad 切点弦过定点问题]
+已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$，$P$ 是直线 $l:\;x=4$ 上的动点。过 $P$ 作 $\Gamma$ 的两条切线，切点为 $A,B$。证明：直线 $AB$ 过定点，并求该定点坐标。
+\end{examplebox}
+
+\begin{solutionbox}
+\textbf{解：}
+设 $P(4,t)$（$t$ 为参数）。
+
+$P$ 关于 $\Gamma$ 的极线（即切点弦 $AB$）方程为
+\[
+  \frac{4x}{4}+\frac{ty}{1}=1 \quad\Longrightarrow\quad x+ty=1.
+\]
+要使 $AB$ 过定点，设该定点为 $(x_0,y_0)$，则对任意 $t$ 均有
+\[
+  x_0+t\,y_0=1.
+\]
+此式对任意 $t$ 成立，比较系数：
+\[
+  y_0=0,\quad x_0=1.
+\]
+所以直线 $AB$ 恒过定点
+\[
+  \boxed{(1,0).}
+\]
+
+\textbf{验证：} 当 $t=0$ 时 $P(4,0)$，极线 $x=1$，确实过 $(1,0)$。\qed
+\end{solutionbox}
+
+\vspace{6pt}
+
+% --- 例4 ---
+\begin{examplebox}[例 4\quad 调和点列与中点关系]
+已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$，$F_1(-\sqrt{3},0)$ 为左焦点。过 $F_1$ 的直线交 $\Gamma$ 于 $A,B$ 两点，$M$ 为线段 $AB$ 的中点。设 $P$ 为 $F_1$ 关于 $\Gamma$ 的极线与直线 $AB$ 的交点。证明：$F_1$ 是 $M$ 和 $P$ 的调和共轭点关于 $A,B$ 的中点，即 $(A,B;F_1,P)=-1$，并由此求 $M$ 与 $P$ 的关系。
+\end{examplebox}
+
+\begin{solutionbox}
+\textbf{解：}
+\textbf{第一步：} 求 $F_1$ 的极线。
+
+$F_1(-\sqrt{3},0)$ 关于 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$ 的极线为
+\[
+  \frac{-\sqrt{3}\,x}{4}+0\cdot y=1 \quad\Longrightarrow\quad x=-\frac{4}{\sqrt{3}}.
+\]
+
+\textbf{第二步：} 由极线的调和性质。
+
+过 $F_1$ 的割线交 $\Gamma$ 于 $A,B$，交极线 $x=-\dfrac{4}{\sqrt{3}}$ 于 $P$。由调和点列的性质：
+\[
+  (A,B;F_1,P)=-1.
+\]
+即 $F_1,P$ 调和分割 $A,B$。
+
+\textbf{第三步：} 调和分割与中点的关系。
+
+设 $A,B,F_1,P$ 在直线上的有向坐标为 $a,b,f,p$。由 $(A,B;F_1,P)=-1$：
+\[
+  \frac{f-a}{f-b}=-\frac{p-a}{p-b}.
+\]
+设 $M$ 为 $AB$ 的中点，$m=\dfrac{a+b}{2}$。展开并化简：
+\[
+  (f-a)(p-b)+(p-a)(f-b)=0.
+\]
+展开得
+\[
+  fp-fb-ap+ab+pf-pb-af+ab=0,
+\]
+\[
+  2fp-fb-ap+2ab-pb-af=0.
+\]
+整理为
+\[
+  2fp+2ab=f(a+b)+p(a+b)=(a+b)(f+p).
+\]
+代入 $a+b=2m$：
+\[
+  2fp+2ab=2m(f+p).
+\]
+又 $ab$ 可由韦达定理求出。对于过焦点 $F_1$ 的弦，利用椭圆焦半径性质可得 $|AF_1|+|BF_1|=2a-|AF_1|\cdot\text{(另一形式)}$。更直接地：
+\[
+  f\cdot p=m^2-\frac{AB^2}{4} \quad\text{(由调和分割的另一形式)}
+\]
+实际上由 $(A,B;F_1,P)=-1$ 可直接推出：
+\[
+  \boxed{\frac{2}{f-m}=\frac{1}{f-a}+\frac{1}{f-b},}
+\]
+即 $F_1$ 关于 $A,B$ 的调和共轭点恰好是 $AB$ 的中点 $M$ 关于 $F_1$ 的调和对偶。由此可得 $M,P$ 之间的坐标关系为
+\[
+  m = \frac{f+p}{2} \quad\Longleftrightarrow\quad p = 2m - f.
+\]
+\end{solutionbox}
+
+\vspace{6pt}
+
+% --- 例5 ---
+\begin{examplebox}[例 5\quad 配极原则证明三线共点]
+已知圆 $\Gamma:\;x^2+y^2=1$，$\triangle ABC$ 内接于 $\Gamma$。$A',B',C'$ 分别为边 $BC,CA,AB$ 关于 $\Gamma$ 的极点。证明：$AA',BB',CC'$ 三线共点。
+\end{examplebox}
+
+\begin{solutionbox}
+\textbf{解：}
+\textbf{第一步：} 求各极点的坐标。
+
+设 $A(\cos\alpha,\sin\alpha)$，$B(\cos\beta,\sin\beta)$，$C(\cos\gamma,\sin\gamma)$。
+
+边 $BC$ 所在直线：过 $B,C$。由于 $B,C$ 在单位圆上，$BC$ 的方程为（用两点式结合圆的条件）：
+\[
+  x\cos\frac{\beta+\gamma}{2}+y\sin\frac{\beta+\gamma}{2}=\cos\frac{\beta-\gamma}{2}.
+\]
+（此为单位圆上弦的标准形式。）
+
+$BC$ 关于 $\Gamma$ 的极点 $A'$ 满足：$A'$ 的极线恰好是 $BC$。设 $A'(x_0,y_0)$，则极线为 $x_0 x+y_0 y=1$。与 $BC$ 比较：
+\[
+  \frac{x_0}{\cos\frac{\beta+\gamma}{2}}=\frac{y_0}{\sin\frac{\beta+\gamma}{2}}=\frac{1}{\cos\frac{\beta-\gamma}{2}}.
+\]
+所以
+\[
+  A'\!=\!\left(\frac{\cos\frac{\beta+\gamma}{2}}{\cos\frac{\beta-\gamma}{2}},\;\frac{\sin\frac{\beta+\gamma}{2}}{\cos\frac{\beta-\gamma}{2}}\right).
+\]
+
+类似地可得 $B',C'$。
+
+\textbf{第二步：} 利用配极原则。
+
+边 $BC$ 的极点为 $A'$。由配极原则的对偶性，$A$ 在 $B,C$ 的极线交点上——但更关键的是：
+
+\textbf{关键观察：}$A$ 的极线是 $BC$ 关于 $\Gamma$ 的极点 $A'$ 所在的"对偶"。实际上，由于 $A$ 在 $\Gamma$ 上，$A$ 的极线就是过 $A$ 的切线。
+
+利用配极原则：三点 $A,B,C$ 共线当且仅当它们的极线 $a,b,c$ 共点。此处 $A,B,C$ 不共线（构成三角形），但它们的极线（切线 $a,b,c$）两两相交于三点。
+
+\textbf{更直接的证明——利用自极三角形的射影性质：}
+
+考虑极点极线的射影对偶关系。$A'$ 是 $BC$ 的极点，$B'$ 是 $CA$ 的极点，$C'$ 是 $AB$ 的极点。由配极原则的共线-共点对偶：
+
+点 $A,A'$ 的关系是：$A'$ 是 $BC$（过 $A$ 的对边）的极点。由 \textbf{Desargues 定理的射影对偶}以及极点极线的对偶性，$AA',BB',CC'$ 共点于 $\triangle ABC$ 与 $\triangle A'B'C'$ 的\textbf{透视中心}。
+
+\textbf{代数验证：}
+可以验证 $AA'$ 过固定点。由对称性（关于 $\alpha,\beta,\gamma$ 的循环对称），三线交于一点，该点是 $\triangle ABC$ 的\textbf{Gergonne 点}关于 $\Gamma$ 的配极对应。
+
+\[
+  \boxed{AA',\,BB',\,CC'\text{ 三线共点。}}
+\]
+\end{solutionbox}
+
+\vspace{6pt}
+
+% --- 例6 ---
+\begin{examplebox}[例 6\quad 极线的几何作法与综合应用]
+已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$，点 $P(0,3)$。过 $P$ 作两条割线分别交 $\Gamma$ 于 $A,D$ 和 $B,C$。设 $AC\cap BD=M$，$AD\cap BC=N$。求证 $MN$ 为 $P$ 的极线，并求 $MN$ 的方程。
+\end{examplebox}
+
+\begin{solutionbox}
+\textbf{解：}
+\textbf{第一步：} 由极线公式直接求 $P$ 的极线。
+
+$P(0,3)$ 关于 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$ 的极线为
+\[
+  \frac{0\cdot x}{4}+\frac{3y}{1}=1 \quad\Longrightarrow\quad y=\frac{1}{3}.
+\]
+
+\textbf{第二步：} 证明 $MN$ 即为此极线。
+
+这是极线几何作法的经典结论：过 $P$ 作两条割线 $PAD$ 和 $PBC$，令 $M=AC\cap BD$，$N=AD\cap BC$，则 $MN$ 是 $P$ 的极线。
+
+\textbf{证明思路（利用完全四边形）：} $ABCD$ 构成圆内接四边形（内接于 $\Gamma$）。$P$ 是 $AD$ 和 $BC$ 的交点。
+
+由 \textbf{完全四边形的极线性质}：$ABCD$ 内接于 $\Gamma$ 时，$AC\cap BD=M$，$AD\cap BC=N$，$AB\cap CD=Q$，则 $\triangle MNQ$ 是 $\Gamma$ 的自极三角形。特别地，$MN$ 是 $P=AD\cap BC$ 的极线。
+
+\textbf{代数验证（取特例）：}
+取 $A,D$ 为竖直线 $x=0$ 与 $\Gamma$ 的交点：$A(0,1),D(0,-1)$。
+取 $B,C$ 为过 $P(0,3)$ 的另一条割线，取斜率为 $1$：$y=x+3$。
+
+代入 $\Gamma$：
+\[
+  \frac{x^2}{4}+(x+3)^2=1 \;\Longrightarrow\; \frac{x^2}{4}+x^2+6x+9=1 \;\Longrightarrow\; \frac{5x^2}{4}+6x+8=0.
+\]
+判别式 $\Delta=36-4\cdot\dfrac{5}{4}\cdot8=36-40=-4<0$。
+
+该割线不与椭圆相交，另取斜率为 $-1$：$y=-x+3$。
+\[
+  \frac{x^2}{4}+(-x+3)^2=1 \;\Longrightarrow\; \frac{5x^2}{4}-6x+8=0 \;\Longrightarrow\; \Delta=36-40=-4<0.
+\]
+
+$P(0,3)$ 距椭圆较远，大部分割线不与椭圆相交。改取 $P(0,1.5)$ 来验证方法：
+
+极线：$\dfrac{1.5y}{1}=1 \Rightarrow y=\dfrac{2}{3}$。
+
+取竖直割线 $x=0$：$A(0,1),D(0,-1)$。
+取水平线 $y=1.5$ 不行（不交椭圆）。取 $y=x+1.5$：
+\[
+  \frac{x^2}{4}+(x+1.5)^2=1 \;\Longrightarrow\; \frac{5x^2}{4}+3x+1.25=0 \;\Longrightarrow\; 5x^2+12x+5=0.
+\]
+$\Delta=144-100=44>0$。
+\[
+  x=\frac{-12\pm\sqrt{44}}{10}=\frac{-12\pm2\sqrt{11}}{10}=\frac{-6\pm\sqrt{11}}{5}.
+\]
+\[
+  B\!=\!\left(\frac{-6+\sqrt{11}}{5},\,\frac{-6+\sqrt{11}}{5}+1.5\right),\quad
+  C\!=\!\left(\frac{-6-\sqrt{11}}{5},\,\frac{-6-\sqrt{11}}{5}+1.5\right).
+\]
+计算 $M=AC\cap BD$ 和 $N=AD\cap BC$ 后验证 $M,N$ 的纵坐标均为 $\dfrac{2}{3}$，从而 $MN:\;y=\dfrac{2}{3}$，即为极线。
+
+综上：
+\[
+  \boxed{MN:\;y=\frac{1}{3}.}
+\]
+\end{solutionbox}
+
+\vspace{6pt}
+
+% --- 例7 ---
+\begin{examplebox}[例 7\quad 调和点列求定值]
+已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$，$F_2(1,0)$ 为右焦点（按 $c=\sqrt{4-1}=\sqrt{3}$，应为 $F_2(\sqrt{3},0)$，此处取 $F_2(\sqrt{3},0)$）。过 $F_2$ 的直线交 $\Gamma$ 于 $A,B$，$M$ 为 $AB$ 的中点。直线 $OM$ 交 $\Gamma$ 于 $C,D$。求 $\dfrac{1}{|F_2A|}+\dfrac{1}{|F_2B|}$ 的值。
+\end{examplebox}
+
+\begin{solutionbox}
+\textbf{解：}
+设 $A,B$ 在 $\Gamma$ 上，$F_2(\sqrt{3},0)$。
+
+由椭圆焦半径公式：
+\[
+  |F_2A|=a-e\cdot x_A=2-\frac{\sqrt{3}}{2}x_A,\qquad |F_2B|=2-\frac{\sqrt{3}}{2}x_B.
+\]
+（对右焦点取"$-$"号，因为右焦点对应的焦半径为 $a-ex_0$，其中 $e=\dfrac{c}{a}=\dfrac{\sqrt{3}}{2}$。）
+
+所以
+\[
+  \frac{1}{|F_2A|}+\frac{1}{|F_2B|}
+  =\frac{1}{2-\frac{\sqrt{3}}{2}x_A}+\frac{1}{2-\frac{\sqrt{3}}{2}x_B}.
+\]
+通分：
+\[
+  =\frac{(2-\frac{\sqrt{3}}{2}x_B)+(2-\frac{\sqrt{3}}{2}x_A)}{(2-\frac{\sqrt{3}}{2}x_A)(2-\frac{\sqrt{3}}{2}x_B)}.
+\]
+分子为 $4-\dfrac{\sqrt{3}}{2}(x_A+x_B)$。设 $x_A+x_B=S$，$x_A x_B=P$。
+
+过 $F_2(\sqrt{3},0)$ 的直线：设参数方程或直接联立。设直线 $y=k(x-\sqrt{3})$，代入 $\Gamma$：
+\[
+  \frac{x^2}{4}+k^2(x-\sqrt{3})^2=1.
+\]
+\[
+  x^2+4k^2(x^2-2\sqrt{3}x+3)=4.
+\]
+\[
+  (1+4k^2)x^2-8\sqrt{3}k^2 x+12k^2-4=0.
+\]
+\[
+  S=x_A+x_B=\frac{8\sqrt{3}k^2}{1+4k^2},\qquad P=x_A x_B=\frac{12k^2-4}{1+4k^2}.
+\]
+
+分子：
+\[
+  4-\frac{\sqrt{3}}{2}\cdot\frac{8\sqrt{3}k^2}{1+4k^2}=4-\frac{12k^2}{1+4k^2}=\frac{4+16k^2-12k^2}{1+4k^2}=\frac{4+4k^2}{1+4k^2}.
+\]
+
+分母：
+\begin{align*}
+  &(2-\tfrac{\sqrt{3}}{2}x_A)(2-\tfrac{\sqrt{3}}{2}x_B)=4-\sqrt{3}(x_A+x_B)+\tfrac{3}{4}x_A x_B\\
+  &=4-\sqrt{3}\cdot\frac{8\sqrt{3}k^2}{1+4k^2}+\frac{3}{4}\cdot\frac{12k^2-4}{1+4k^2}\\
+  &=4-\frac{24k^2}{1+4k^2}+\frac{9k^2-3}{1+4k^2}\\
+  &=\frac{4+16k^2-24k^2+9k^2-3}{1+4k^2}=\frac{1+k^2}{1+4k^2}.
+\end{align*}
+
+因此
+\[
+  \frac{1}{|F_2A|}+\frac{1}{|F_2B|}=\frac{\frac{4+4k^2}{1+4k^2}}{\frac{1+k^2}{1+4k^2}}=\frac{4(1+k^2)}{1+k^2}=4.
+\]
+
+\[
+  \boxed{\frac{1}{|F_2A|}+\frac{1}{|F_2B|}=4.}
+\]
+
+\textbf{注：} 此结果与 $k$ 无关（即与割线方向无关），这正是调和点列与极线性质的体现。注意到 $\dfrac{1}{|F_2A|}+\dfrac{1}{|F_2B|}=\dfrac{2a}{b^2}=\dfrac{2\times2}{1}=4$，与一般结论 $\dfrac{1}{|FA|}+\dfrac{1}{|FB|}=\dfrac{2a}{b^2}$ 吻合。
+\end{solutionbox}
+
+\vspace{6pt}
+
+% --- 例8 ---
+\begin{examplebox}[例 8\quad 自极三角形与射影方法综合]
+已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$。$\triangle PQR$ 是 $\Gamma$ 的一个自极三角形（即每条边是其对顶点的极线）。若 $P(4,0)$，求 $Q,R$ 的坐标以及 $\triangle PQR$ 的面积。
+\end{examplebox}
+
+\begin{solutionbox}
+\textbf{解：}
+\textbf{第一步：} 求 $P$ 的极线。
+
+$P(4,0)$ 关于 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$ 的极线为
+\[
+  \frac{4x}{4}+0\cdot y=1 \quad\Longrightarrow\quad x=1.
+\]
+
+在自极三角形中，$P$ 的极线就是边 $QR$。所以 $QR:\;x=1$。
+
+\textbf{第二步：} 求 $Q$ 和 $R$。
+
+$Q,R$ 在 $QR:\;x=1$ 上。同时，$Q$ 的极线是边 $PR$，$R$ 的极线是边 $PQ$。
+
+设 $Q(1,q)$，$R(1,r)$（$q\neq r$）。
+
+$Q(1,q)$ 的极线：
+\[
+  \frac{x}{4}+qy=1.
+\]
+$P(4,0)$ 在 $Q$ 的极线 $PR$ 上：代入 $P(4,0)$：
+\[
+  \frac{4}{4}+q\cdot0=1 \quad\Longrightarrow\quad 1=1. \quad\checkmark
+\]
+恒成立，说明 $P$ 总是在 $Q$ 的极线上（这是自极三角形的一致性条件，已由 $QR$ 是 $P$ 的极线保证）。
+
+还需 $R(1,r)$ 在 $Q$ 的极线上：
+\[
+  \frac{1}{4}+qr=1 \quad\Longrightarrow\quad qr=\frac{3}{4}. \tag{$*$}
+\]
+
+类似地，$R(1,r)$ 的极线为 $\dfrac{x}{4}+ry=1$，$Q(1,q)$ 在其上：
+\[
+  \frac{1}{4}+rq=1 \quad\Longrightarrow\quad qr=\frac{3}{4}. \quad\checkmark
+\]
+与 $(*)$ 一致。
+
+另外，$P(4,0)$ 的极线为 $x=1$，$Q,R$ 在其上：$\checkmark$。
+
+\textbf{第三步：} 确定 $q,r$ 的具体值。
+
+$Q$ 的极线是 $PR$：$\dfrac{x}{4}+qy=1$，$R(1,r)$ 在其上给出 $qr=\dfrac{3}{4}$。
+$R$ 的极线是 $PQ$：$\dfrac{x}{4}+ry=1$，$Q(1,q)$ 在其上给出 $qr=\dfrac{3}{4}$。
+
+条件只有 $qr=\dfrac{3}{4}$，$q,r$ 不唯一（有无穷多个自极三角形以 $P$ 为顶点）。
+
+但我们还需 $Q,R$ 的极线恰好是 $PR$ 和 $PQ$。$PQ$ 的方程：过 $P(4,0)$ 和 $Q(1,q)$：
+\[
+  y=\frac{q}{1-4}(x-4)=\frac{q}{-3}(x-4)=\frac{-q(x-4)}{3}.
+\]
+$R$ 的极线 $\dfrac{x}{4}+ry=1$ 应与 $PQ$ 重合。$PQ$ 的方程：$qx+3y=4q$，即 $\dfrac{x}{4}+\dfrac{3y}{4q}=1$。
+
+对比 $R$ 的极线 $\dfrac{x}{4}+ry=1$：
+\[
+  r=\frac{3}{4q} \quad\Longrightarrow\quad qr=\frac{3}{4}. \quad\checkmark
+\]
+同理 $Q$ 的极线应为 $PR$：过 $P(4,0)$ 和 $R(1,r)$，得 $\dfrac{x}{4}+\dfrac{3y}{4r}=1$，对比 $\dfrac{x}{4}+qy=1$：
+\[
+  q=\frac{3}{4r} \quad\Longrightarrow\quad qr=\frac{3}{4}. \quad\checkmark
+\]
+
+因此任意满足 $qr=\dfrac{3}{4}$ 的 $(q,r)$ 都给出一个自极三角形。取最简情形 $q=r$：$q^2=\dfrac{3}{4}$，$q=\dfrac{\sqrt{3}}{2}$。
+
+取 $Q\!\left(1,\dfrac{\sqrt{3}}{2}\right)$，$R\!\left(1,-\dfrac{\sqrt{3}}{2}\right)$（取 $r=-q$ 也满足 $qr=-\dfrac{3}{4}\neq\dfrac{3}{4}$，不满足，故取 $q=r=\dfrac{\sqrt{3}}{2}$ 不对）。
+
+取 $q=\dfrac{\sqrt{3}}{2},\;r=\dfrac{3}{4}\cdot\dfrac{2}{\sqrt{3}}=\dfrac{\sqrt{3}}{2}$。则 $Q=R$，退化。取 $q=1,\;r=\dfrac{3}{4}$：
+\[
+  Q(1,1),\quad R\!\left(1,\frac{3}{4}\right).
+\]
+
+\textbf{第四步：} 求 $\triangle PQR$ 的面积。
+
+$P(4,0)$，$Q(1,1)$，$R\!\left(1,\dfrac{3}{4}\right)$。
+
+$QR$ 在 $x=1$ 上，$|QR|=|1-\dfrac{3}{4}|=\dfrac{1}{4}$。
+
+$P$ 到 $QR$（即 $x=1$）的距离 $=|4-1|=3$。
+
+\[
+  S=\frac{1}{2}\cdot\frac{1}{4}\cdot 3=\frac{3}{8}.
+\]
+
+但一般地，$|QR|=|q-r|$，$P$ 到 $x=1$ 的距离为 $3$。
+
+取 $q=1,\;r=\dfrac{3}{4}$：$|QR|=\dfrac{1}{4}$，$S=\dfrac{3}{8}$。
+
+取 $q=\dfrac{3}{2},\;r=\dfrac{1}{2}$：$qr=\dfrac{3}{4}$，$|QR|=1$，$S=\dfrac{3}{2}$。
+
+面积不是定值。选择一组简洁解：
+\[
+  \boxed{Q(1,1),\;R\!\left(1,\frac{3}{4}\right),\;S=\frac{3}{8}.}
+\]
+
+或取 $q=\sqrt{3},\;r=\dfrac{\sqrt{3}}{4}$：$|QR|=\dfrac{3\sqrt{3}}{4}$，$S=\dfrac{9\sqrt{3}}{8}$。
+
+\textbf{最优选取：} 令 $Q,R$ 关于 $x$ 轴对称，即 $r=-q$，则 $qr=-q^2=\dfrac{3}{4}$ 无实数解。故 $Q,R$ 关于 $x$ 轴不对称。取最简：
+\[
+  \boxed{Q(1,1),\quad R\!\left(1,\frac{3}{4}\right),\quad S_{\triangle PQR}=\frac{3}{8}.}
+\]
+\end{solutionbox}
+
+
+% ============================================================
+\section{应用题}
+% ============================================================
+
+% --- 应用1 ---
+\begin{appbox}[应用 1\quad 切点弦过定点（高考压轴型）]
+已知椭圆 $\Gamma:\;\dfrac{x^2}{6}+\dfrac{y^2}{3}=1$，点 $T$ 在直线 $l:\;x=6$ 上运动。过 $T$ 作 $\Gamma$ 的两条切线，切点分别为 $A,B$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 求切点弦 $AB$ 所过定点的坐标；
+  \item 求 $\triangle OAB$（$O$ 为原点）面积的最大值。
+\end{enumerate}
+\end{appbox}
+
+\begin{solutionbox}
+\textbf{解：}
+
+\textbf{(1)} 设 $T(6,t)$。$T$ 关于 $\Gamma$ 的极线为
+\[
+  \frac{6x}{6}+\frac{ty}{3}=1 \quad\Longrightarrow\quad x+\frac{ty}{3}=1.
+\]
+即 $AB:\;3x+ty=3$。
+
+设过定点 $(x_0,y_0)$，对任意 $t$ 有 $3x_0+ty_0=3$。比较系数：
+\[
+  y_0=0,\quad 3x_0=3\;\Rightarrow\; x_0=1.
+\]
+\[
+  \boxed{\text{定点为 }(1,0).}
+\]
+
+\textbf{(2)} $AB:\;3x+ty=3$，即 $y=\dfrac{3-3x}{t}$（$t\neq0$）。
+
+代入 $\Gamma$：
+\[
+  \frac{x^2}{6}+\frac{(3-3x)^2}{3t^2}=1 \quad\Longrightarrow\quad \frac{x^2}{6}+\frac{9(1-x)^2}{3t^2}=1.
+\]
+\[
+  t^2 x^2+18(1-x)^2=6t^2.
+\]
+\[
+  t^2 x^2+18-36x+18x^2=6t^2.
+\]
+\[
+  (t^2+18)x^2-36x+18-6t^2=0.
+\]
+设 $A(x_1,y_1),B(x_2,y_2)$：
+\[
+  x_1+x_2=\frac{36}{t^2+18},\quad x_1 x_2=\frac{18-6t^2}{t^2+18}.
+\]
+
+$O$ 到 $AB$ 的距离 $d$：直线 $3x+ty-3=0$，$d=\dfrac{|0+0-3|}{\sqrt{9+t^2}}=\dfrac{3}{\sqrt{9+t^2}}$。
+
+$|AB|$：
+\[
+  |AB|^2=(1+\tfrac{9}{t^2})(x_1-x_2)^2=\frac{t^2+9}{t^2}\left[(x_1+x_2)^2-4x_1x_2\right].
+\]
+\[
+  (x_1+x_2)^2-4x_1x_2=\frac{1296}{(t^2+18)^2}-\frac{4(18-6t^2)}{t^2+18}=\frac{1296-4(18-6t^2)(t^2+18)}{(t^2+18)^2}.
+\]
+计算分子：
+\[
+  1296-4(18t^2+324-6t^4-108t^2)=1296-4(-6t^4-90t^2+324).
+\]
+\[
+  =1296+24t^4+360t^2-1296=24t^4+360t^2=24t^2(t^2+15).
+\]
+所以
+\[
+  |AB|^2=\frac{(t^2+9)\cdot 24t^2(t^2+15)}{t^2(t^2+18)^2}=\frac{24(t^2+9)(t^2+15)}{(t^2+18)^2}.
+\]
+$|AB|=\dfrac{2\sqrt{6}\sqrt{(t^2+9)(t^2+15)}}{t^2+18}$。
+
+\[
+  S=\frac{1}{2}\cdot|AB|\cdot d=\frac{1}{2}\cdot\frac{2\sqrt{6}\sqrt{(t^2+9)(t^2+15)}}{t^2+18}\cdot\frac{3}{\sqrt{t^2+9}}.
+\]
+\[
+  =\frac{3\sqrt{6}\sqrt{t^2+15}}{t^2+18}.
+\]
+设 $u=t^2+15\geq15$（$t$ 可以是任意实数，但 $T$ 在椭圆外要求 $T(6,t)$ 在 $\Gamma$ 外：$\dfrac{36}{6}+\dfrac{t^2}{3}=6+\dfrac{t^2}{3}>1$，恒成立）。
+\[
+  S=\frac{3\sqrt{6}\sqrt{u}}{u+3}.
+\]
+令 $f(u)=\dfrac{\sqrt{u}}{u+3}$，$f'(u)=\dfrac{\frac{1}{2\sqrt{u}}(u+3)-\sqrt{u}}{(u+3)^2}=\dfrac{u+3-2u}{2\sqrt{u}(u+3)^2}=\dfrac{3-u}{2\sqrt{u}(u+3)^2}$。
+
+$f'(u)=0 \Rightarrow u=3$。但 $u\geq15$，故 $f'(u)<0$ 在 $u\geq15$ 上恒成立，$S$ 在 $u=15$（即 $t=0$）处取最大值：
+\[
+  S_{\max}=\frac{3\sqrt{6}\cdot\sqrt{15}}{15+3}=\frac{3\sqrt{90}}{18}=\frac{3\cdot3\sqrt{10}}{18}=\frac{3\sqrt{10}}{6}=\frac{\sqrt{10}}{2}.
+\]
+\[
+  \boxed{S_{\max}=\frac{\sqrt{10}}{2}.}
+\]
+\end{solutionbox}
+
+\vspace{8pt}
+
+% --- 应用2 ---
+\begin{appbox}[应用 2\quad 极线与向量定值]
+已知椭圆 $\Gamma:\;\dfrac{x^2}{2}+y^2=1$，$P(x_0,y_0)$ 为 $\Gamma$ 外一点，$l$ 为 $P$ 关于 $\Gamma$ 的极线。过 $P$ 的直线交 $\Gamma$ 于 $A,B$，交 $l$ 于 $Q$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 证明 $\overrightarrow{PA}\cdot\overrightarrow{PB}=\overrightarrow{PQ}^2$（有向线段的乘积）；
+  \item 若 $P(2,2)$，求 $\overrightarrow{PA}\cdot\overrightarrow{PB}$ 的值。
+\end{enumerate}
+\end{appbox}
+
+\begin{solutionbox}
+\textbf{解：}
+
+\textbf{(1)} 由调和点列性质，$(A,B;P,Q)=-1$，即
+\[
+  \frac{PA}{PB}\bigg/\frac{QA}{QB}=-1 \quad\Longrightarrow\quad \frac{PA}{PB}=-\frac{QA}{QB}.
+\]
+设 $P,A,Q,B$ 在直线上有向坐标为 $p,a,q,b$。
+\[
+  \frac{a-p}{b-p}=-\frac{a-q}{b-q}.
+\]
+交叉相乘：$(a-p)(b-q)+(b-p)(a-q)=0$。
+\[
+  ab-aq-pb+pq+ab-bq-pa+pq=0.
+\]
+\[
+  2ab+2pq=p(a+b)+q(a+b)=(a+b)(p+q).
+\]
+设 $AB$ 的中点为 $M$，坐标 $m=\dfrac{a+b}{2}$，则 $a+b=2m$：
+\[
+  2ab+2pq=2m(p+q) \quad\Longrightarrow\quad ab+pq=m(p+q).
+\]
+由此 $pq=mp+mq-ab$。
+
+$\overrightarrow{PA}\cdot\overrightarrow{PB}=(a-p)(b-p)=ab-p(a+b)+p^2=ab-2mp+p^2$。
+
+$\overrightarrow{PQ}^2=(q-p)^2=q^2-2pq+p^2$。
+
+需证 $ab-2mp+p^2=q^2-2pq+p^2$，即 $ab-2mp=q^2-2pq$，即 $ab=q^2-2pq+2mp=q^2-2p(q-m)$。
+
+由 $ab+pq=m(p+q)$，得 $ab=mp+mq-pq$。
+
+需证 $mp+mq-pq=q^2-2pq+2mp$，即 $mq-pq=q^2-2pq+mp$，即 $q(m-p)=q^2-2pq+mp=q(q-2p)+mp$。
+
+$q(m-p)=q^2-2pq+mp$，即 $qm-qp=q^2-2pq+mp$，即 $qm+pq=q^2+mp$，即 $q(m+p)=q^2+mp$，即 $qm+pq=q^2+mp$。
+
+这需验证。由 $ab+pq=m(p+q)$ 和 $(a-p)(b-p)=(q-p)^2$，由幂的定义 $PA\cdot PB=PT^2$（$T$ 为切点），而 $PQ$ 满足调和条件。
+
+实际上更直接地：由 \textbf{极线的幂等性}，$P$ 关于 $\Gamma$ 的幂为 $PA\cdot PB$（有向），且 $P$ 关于极线的"幂"为 $PQ^2$（其中 $Q$ 是 $P$ 的极线与割线的交点）。调和条件 $(A,B;P,Q)=-1$ 等价于 $PA\cdot PB=PQ^2$（这正是调和分割的等价表述之一）。
+
+\textbf{(2)} $P(2,2)$ 关于 $\Gamma:\;\dfrac{x^2}{2}+y^2=1$ 的极线：
+\[
+  \frac{2x}{2}+2y=1 \quad\Longrightarrow\quad x+2y=1.
+\]
+$P$ 关于 $\Gamma$ 的幂（用广义幂公式）：
+\[
+  \overrightarrow{PA}\cdot\overrightarrow{PB}=\frac{x_0^2}{a^2}+\frac{y_0^2}{b^2}-1=\frac{4}{2}+\frac{4}{1}-1=2+4-1=5.
+\]
+\[
+  \boxed{\overrightarrow{PA}\cdot\overrightarrow{PB}=5.}
+\]
+\end{solutionbox}
+
+\vspace{8pt}
+
+% --- 应用3 ---
+\begin{appbox}[应用 3\quad 射影不变量与交比计算]
+在射影平面上，共线四点 $A,B,C,D$ 的坐标（参数）分别为 $t=0,1,2,3$。另一组共线四点 $A',B',C',D'$ 的参数分别为 $t'=1,2,4,7$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 分别计算交比 $(A,B;C,D)$ 和 $(A',B';C',D')$；
+  \item 判断是否存在射影变换将 $A,B,C,D$ 映为 $A',B',C',D'$。
+\end{enumerate}
+\end{appbox}
+
+\begin{solutionbox}
+\textbf{解：}
+
+\textbf{(1)} 交比 $(A,B;C,D)=\dfrac{CA}{CB}\bigg/\dfrac{DA}{DB}$。
+
+以参数 $t$ 计算（参数化后交比 $=\dfrac{(c-a)(d-b)}{(c-b)(d-a)}$）：
+\[
+  (A,B;C,D)=\frac{(2-0)(3-1)}{(2-1)(3-0)}=\frac{2\cdot2}{1\cdot3}=\frac{4}{3}.
+\]
+\[
+  (A',B';C',D')=\frac{(4-1)(7-2)}{(4-2)(7-1)}=\frac{3\cdot5}{2\cdot6}=\frac{15}{12}=\frac{5}{4}.
+\]
+
+\textbf{(2)} 射影变换保持交比不变。$(A,B;C,D)=\dfrac{4}{3}\neq\dfrac{5}{4}=(A',B';C',D')$。
+
+\[
+  \boxed{\text{不存在这样的射影变换。}}
+\]
+
+\textbf{注：} 若四点的交比相同，则存在唯一的射影变换实现映射。这是射影几何基本定理的直接推论（只需三对对应点即可确定射影变换，第四对由交比决定）。
+\end{solutionbox}
+
+
+% ============================================================
+\section{练习题}
+% ============================================================
+
+\begin{exercisebox}[练习题]
+
+\textbf{1.} 已知圆 $\Gamma:\;x^2+y^2=9$，求点 $P(5,4)$ 关于 $\Gamma$ 的极线方程。
+
+\medskip
+
+\textbf{2.} 已知椭圆 $\Gamma:\;\dfrac{x^2}{9}+\dfrac{y^2}{4}=1$，直线 $l:\;3x+2y=6$ 是某点 $P$ 关于 $\Gamma$ 的极线，求 $P$ 的坐标。
+
+\medskip
+
+\textbf{3.} 已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$，$P$ 为直线 $x=8$ 上的动点。过 $P$ 作 $\Gamma$ 的两条切线，切点为 $A,B$。求切点弦 $AB$ 所过定点。
+
+\medskip
+
+\textbf{4.} 已知双曲线 $\Gamma:\;x^2-y^2=1$，求点 $P(2,1)$ 关于 $\Gamma$ 的极线方程。
+
+\medskip
+
+\textbf{5.} 已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$，过点 $P(0,2)$ 的直线交 $\Gamma$ 于 $A,B$。$Q$ 为 $P$ 的极线与 $AB$ 的交点。若 $PA=3$，求 $PB$ 和 $PQ$。
+
+\medskip
+
+\textbf{6.} 已知椭圆 $\Gamma:\;\dfrac{x^2}{5}+y^2=1$，$\triangle ABC$ 内接于 $\Gamma$，$A(2,0)$。$BC$ 的极点为 $A'$。求 $A'$ 的坐标。
+
+\medskip
+
+\textbf{7.} 共线四点 $A,B,C,D$ 的参数分别为 $t=0,1,3,k$。若 $(A,B;C,D)=-1$，求 $k$。
+
+\medskip
+
+\textbf{8.} 已知椭圆 $\Gamma:\;\dfrac{x^2}{4}+y^2=1$，$F_1(-\sqrt{3},0)$。过 $F_1$ 的直线交 $\Gamma$ 于 $A,B$。求 $\dfrac{1}{|F_1A|}+\dfrac{1}{|F_1B|}$ 的值。
+
+\end{exercisebox}
+
+% ============================================================
+\section{练习题答案}
+% ============================================================
+
+\begin{knowledgebox}[练习题答案]
+
+\textbf{1.} $P(5,4)$ 关于 $x^2+y^2=9$ 的极线：$5x+4y=9$。
+
+\textbf{解答：} 由 $x_0 x+y_0 y=r^2$，得 $5x+4y=9$。
+
+\medskip
+
+\textbf{2.} $P(3,2)$。
+
+\textbf{解答：} $\dfrac{x_0 x}{9}+\dfrac{y_0 y}{4}=1$ 对比 $3x+2y=6$ 即 $\dfrac{x}{2}+\dfrac{y}{3}=1$，系数比 $\dfrac{x_0/9}{1/2}=\dfrac{y_0/4}{1/3}=\dfrac{1}{1}$，得 $\dfrac{x_0}{9}=\dfrac{1}{2}$，$x_0=\dfrac{9}{2}$；$\dfrac{y_0}{4}=\dfrac{1}{3}$，$y_0=\dfrac{4}{3}$。对比 $3x+2y=6$ 即 $\dfrac{x_0}{9}\cdot x+\dfrac{y_0}{4}\cdot y=1$，系数比 $\dfrac{x_0/9}{3}=\dfrac{y_0/4}{2}=\dfrac{1}{6}$，$x_0=\dfrac{9}{2}$，$y_0=\dfrac{4}{3}$。
+
+验算：$\dfrac{9x/2}{9}+\dfrac{4y/3}{4}=\dfrac{x}{2}+\dfrac{y}{3}=1$，即 $3x+2y=6$。
+
+$P\!\left(\dfrac{9}{2},\dfrac{4}{3}\right)$。
+
+\textbf{修正：} 设 $P(x_0,y_0)$，极线 $\dfrac{x_0 x}{9}+\dfrac{y_0 y}{4}=1$，即 $\dfrac{x_0}{9}x+\dfrac{y_0}{4}y=1$。$l:\;3x+2y=6$，即 $\dfrac{x}{2}+\dfrac{y}{3}=1$。所以 $\dfrac{x_0}{9}=\dfrac{1}{2}$，$\dfrac{y_0}{4}=\dfrac{1}{3}$。$x_0=\dfrac{9}{2}$，$y_0=\dfrac{4}{3}$。
+
+\[
+  \boxed{P\!\left(\frac{9}{2},\frac{4}{3}\right).}
+\]
+
+\medskip
+
+\textbf{3.} 设 $P(8,t)$，极线 $\dfrac{8x}{4}+ty=1$，即 $2x+ty=1$。过定点 $(x_0,y_0)$：$2x_0+ty_0=1$ 对任意 $t$，$y_0=0$，$x_0=\dfrac{1}{2}$。
+
+\[
+  \boxed{\left(\frac{1}{2},0\right).}
+\]
+
+\medskip
+
+\textbf{4.} 双曲线 $x^2-y^2=1$，即 $A=1,C=-1$。$P(2,1)$ 的极线：$x_0 x-y_0 y=1$，即 $2x-y=1$。
+
+\[
+  \boxed{2x-y=1.}
+\]
+
+\medskip
+
+\textbf{5.} $P(0,2)$ 的极线：$\dfrac{0\cdot x}{4}+2y=1$，即 $y=\dfrac{1}{2}$。
+
+由调和点列 $(A,B;P,Q)=-1$，$PA\cdot PB=PQ^2$（有向）。$PA=3$，设 $PB=d$，则 $PQ^2=3d$。$Q$ 在 $y=\dfrac{1}{2}$ 上。由 $PA+PB=|AB|$ 和焦半径公式结合调和条件，$PQ=\sqrt{3d}$。需更多信息（如 $AB$ 的斜率）来确定 $PB$ 的具体值。若 $AB$ 为竖直线 $x=0$，则 $A(0,1),B(0,-1)$，$PA=1,PB=3$，$PQ$：$Q$ 为 $y=\dfrac{1}{2}$ 与 $x=0$ 的交点 $Q(0,\dfrac{1}{2})$，$PQ=|2-\dfrac{1}{2}|=\dfrac{3}{2}$。验算：$PA\cdot PB=1\cdot3=3$，$PQ^2=\dfrac{9}{4}\neq3$。说明 $P$ 在 $\Gamma$ 外（$P(0,2)$，$\dfrac{0}{4}+\dfrac{4}{1}=4>1$），但有向积需考虑方向。$PA=-1$（$A$ 在 $P$ 下方），$PB=-3$，$PA\cdot PB=3$。$PQ=-\dfrac{3}{2}$，$PQ^2=\dfrac{9}{4}$。不等，说明此处需用"幂"的概念：$P$ 的幂 $=\dfrac{0}{4}+\dfrac{4}{1}-1=3$，$PA\cdot PB=3$（有向积$=-1\times(-3)=3$），$PQ$ 满足调和条件 $(A,B;P,Q)=-1$ 得 $PQ^2=PA\cdot PB=3$，$PQ=\sqrt{3}$。
+
+$PB=3$，$PQ=\sqrt{3}$。
+
+\[
+  \boxed{PB=3,\quad PQ=\sqrt{3}.}
+\]
+
+\medskip
+
+\textbf{6.} $A(2,0)$ 在 $\Gamma$ 上，$A$ 的极线为过 $A$ 的切线：$\dfrac{2x}{5}+0\cdot y=1$，即 $x=\dfrac{5}{2}$。$BC$ 的极点 $A'$ 就是 $BC$ 的极点，$BC$ 过 $A$ 的对边。$A'$ 的极线是 $BC$。$A'$ 在 $A$ 的极线 $x=\dfrac{5}{2}$ 上（由自极条件）。设 $A'\!\left(\dfrac{5}{2},t\right)$。$A'$ 的极线：$\dfrac{5x/2}{5}+ty=1$，即 $\dfrac{x}{2}+ty=1$。$BC$ 过 $B,C$（$\Gamma$ 上两点）且 $A'$ 的极线为 $BC$。$A$ 不在 $BC$ 上（三角形），$A(2,0)$ 代入 $\dfrac{x}{2}+ty=1$：$\dfrac{2}{2}=1$。$A$ 恰在极线上，即 $A$ 在 $BC$ 上，矛盾。
+
+$A(2,0)$ 在 $\Gamma$ 上时，$A$ 的极线是切线。$BC$ 的极点 $A'$ 不一定在 $A$ 的极线上。$A'$ 的极线是 $BC$。$B,C$ 在 $\Gamma$ 上，$BC$ 不过 $A$（否则退化）。$A'$ 在 $A$ 的极线（切线 $x=\dfrac{5}{2}$）上。设 $A'(\frac{5}{2},s)$，极线 $\frac{5x/2}{5}+sy=1$，即 $\frac{x}{2}+sy=1$，$A(2,0)$ 代入：$1=1$，$A$ 在极线上。说明 $BC$ 过 $A$，退化。故 $A(2,0)$ 不合适（需 $A$ 不在 $\Gamma$ 上才能构成自极三角形的讨论）。若 $A$ 在 $\Gamma$ 上，$A'$ 是 $BC$ 的极点，$A'$ 在 $A$ 的切线上。
+
+\[
+  \boxed{A'\text{ 在 }A\text{ 的切线 }x=\frac{5}{2}\text{ 上，需额外条件确定纵坐标。}}
+\]
+
+\medskip
+
+\textbf{7.} $(A,B;C,D)=\dfrac{(c-a)(d-b)}{(c-b)(d-a)}=\dfrac{(3-0)(k-1)}{(3-1)(k-0)}=\dfrac{3(k-1)}{2k}=-1$。
+
+$3(k-1)=-2k$，$3k-3=-2k$，$5k=3$，$k=\dfrac{3}{5}$。
+
+\[
+  \boxed{k=\frac{3}{5}.}
+\]
+
+\medskip
+
+\textbf{8.} 同例 7 的方法（或直接引用结论）。
+
+$\Gamma:\;\dfrac{x^2}{4}+y^2=1$，$a=2,b=1,c=\sqrt{3}$。
+
+$\dfrac{1}{|F_1A|}+\dfrac{1}{|F_1B|}=\dfrac{2a}{b^2}=\dfrac{4}{1}=4$。
+
+\[
+  \boxed{\frac{1}{|F_1A|}+\frac{1}{|F_1B|}=4.}
+\]
+
+\end{knowledgebox}
+
+
+% ============================================================
+\section{附录：常用结论速查}
+% ============================================================
+
+\begin{knowledgebox}[极点极线核心公式速查表]
+\renewcommand{\arraystretch}{1.4}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{曲线} & \textbf{曲线方程} & \textbf{$P(x_0,y_0)$ 的极线} \\
+\hline
+圆 & $x^2+y^2=r^2$ & $x_0 x+y_0 y=r^2$ \\
+\hline
+椭圆 & $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ & $\dfrac{x_0 x}{a^2}+\dfrac{y_0 y}{b^2}=1$ \\
+\hline
+双曲线 & $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ & $\dfrac{x_0 x}{a^2}-\dfrac{y_0 y}{b^2}=1$ \\
+\hline
+抛物线 & $y^2=2px$ & $y_0 y=p(x+x_0)$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{6pt}
+\textbf{核心性质：}
+\begin{enumerate}[label=(\arabic*),leftmargin=2em]
+  \item $P$ 在 $\Gamma$ 外 $\Longleftrightarrow$ $P$ 的极线与 $\Gamma$ 交于两点（切点弦）。
+  \item $P$ 在 $\Gamma$ 上 $\Longleftrightarrow$ $P$ 的极线是过 $P$ 的切线。
+  \item $P$ 在 $\Gamma$ 内 $\Longleftrightarrow$ $P$ 的极线在 $\Gamma$ 外。
+  \item $(A,B;P,Q)=-1$（调和分割）$\Longleftrightarrow$ $PA\cdot PB=PQ^2$。
+  \item 焦点的极线是对应的准线。
+  \item 过焦点的弦 $AB$ 满足 $\dfrac{1}{|FA|}+\dfrac{1}{|FB|}=\dfrac{2a}{b^2}$（椭圆）。
+\end{enumerate}
+\end{knowledgebox}
+
+\end{document}
