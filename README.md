@@ -55,11 +55,14 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 
 ## 题目级导数索引（第二轮）
 
-已在 [2023—2026 年题目级导数索引](index/DERIVATIVE_PROBLEMS_2023_2026.md) 建立首批 **27 道**解答题位置与来源链接；其中 **2 道**完成独立数学质检，其余为来源定位或待进一步归类，不可误称“已验证正确”。
+已经完成 [2020—2026 年 58 道题目级候选索引](index/DERIVATIVE_PROBLEMS_2020_2026.md)，覆盖 7 个年份。每条记录包括实际题号、原始 LaTeX 固定版本和可追溯的题目起始行。**54 项为核心导数方向，2 项为导数应用，2 项仍待进一步归类**。
 
-- [27 道题目的 CSV](index/derivative-problems-2023-2026.csv)
-- [独立核验两题的 Markdown 解答](derivative/reviewed/2024-two-proofs.md)
+目前只有其中 **2 道**已完成独立数学验证；其他题目仍处于“来源已确认、数学待核验”阶段。
+
+- [完整 58 项 CSV](index/derivative-problems-2020-2026.csv) / [JSON](index/derivative-problems-2020-2026.json)
+- [独立核验的 Markdown 解答](derivative/reviewed/2024-two-proofs.md)
 - [可独立 XeLaTeX 编译的源码](derivative/reviewed/2024-two-proofs.tex)
-- [全文 LaTeX 逐题扫描程序](scripts/scan_derivative_questions.py)，在递归克隆完成后扫描上游试卷，输出 `index/derivative-machine-candidates.csv` 与 `index/DERIVATIVE_MACHINE.md`。这些结果只属于 **机器候选**，不是数学验证通过。
+- [整套试卷逐题扫描脚本](scripts/scan_derivative_questions.py)：递归克隆上游后，生成机器候选 CSV，不能直接当成已确认数学答案。
+- [GitHub Actions 自动同步](.github/workflows/sync-upstream.yml)：多次运行均在分配 Runner 前失败，**自动化并未证明可用**；当前已提交的数据来自直接读取上游源码。
 
-> 同步工作流的首次 GitHub Actions 运行在分配 Runner 前失败，未能确认自动同步正常。已手工通过 Git Trees API 写入文件级索引和 2023—2026 的题目级初筛索引。
+2020 年新高考Ⅰ、Ⅱ卷出现疑似同题，已记录重复组，待题干与卷别进一步比对。原创证明不改变上游及第三方材料的许可证。
