@@ -1,0 +1,54 @@
+name: Build reviewed LaTeX PDFs (manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  xelatex:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+      - name: Compile independent solutions using XeLaTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          os: debian
+          root_file: |
+            derivative/reviewed/2010-anhui-liberal-q20.tex
+            derivative/reviewed/2010-beijing-science-q18.tex
+            derivative/reviewed/2011-anhui-derivative-common.tex
+            derivative/reviewed/2013-fujian-science-q17.tex
+            derivative/reviewed/2014-anhui-common-q.tex
+            derivative/reviewed/2014-chongqing-liberal-q19.tex
+            derivative/reviewed/2019-national2-liberal-q21.tex
+            derivative/reviewed/2023-national-b-liberal-q20.tex
+            derivative/reviewed/2023-new-gaokao-1-q19.tex
+            derivative/reviewed/2024-two-proofs.tex
+            derivative/reviewed/2025-national2-q18.tex
+            derivative/reviewed/2025-shanghai-q19.tex
+          latexmk_use_xelatex: true
+          continue_on_error: false
+      - name: Verify PDF completeness and push to repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          for tex in derivative/reviewed/*.tex; do
+            pdf="${tex%.tex}.pdf"
+            test -s "$pdf" || { echo "PDF missing: $pdf"; exit 1; }
+          done
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f derivative/reviewed/*.pdf
+          if ! git diff --cached --quiet; then
+            git commit -m 'build: publish verified-solution PDFs [skip ci]'
+            git push origin HEAD:main
+          else
+            echo 'All reviewed PDF files unchanged'
+          fi

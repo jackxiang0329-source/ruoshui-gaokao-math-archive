@@ -12,10 +12,11 @@
 git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive.git
 ```
 
-主仓库的 GitHub ZIP 下载 **不含子模块实体**。请使用上面的递归克隆命令，或在 GitHub 网页直接进入各个子模块仓库。首次克隆可能需要数 GB 空间。
+主仓库的 GitHub ZIP **包含本仓库 materials/ 下已实体入库的 TeX/PDF**，但**不包含 upstream/ 里的子模块实体**。请使用上面的递归克隆命令，或在 GitHub 网页直接进入各个子模块仓库。首次克隆可能需要数 GB 空间。
 
 ## 内容导航
 
+- **[已实体入库的 TeX + PDF（可直接下载）](materials/README.md)**：首批 6 套导数专题，6 份 TeX 与 6 份原始配套 PDF；全部为 Git 实体文件，非子模块。
 - **[高中导数大题](derivative/)**：单调性、极值、含参讨论、恒成立、隐零点、双零点、构造函数、零点个数。
 - **[历年高考真题](past-papers/)**：按年份、地区和卷种建立元数据；不擅自合并不同版本。
 - **[来源清单](sources.json)**：11 个上游项目的地址、默认分支、侧重点与许可核查结果。
