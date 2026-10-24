@@ -1,0 +1,44 @@
+% !TeX root = ../../elegantbook-cn.tex
+\section{等式}
+
+
+不含参函数求零点数量
+
+
+含参函数求零点数量
+
+
+
+含参函数已知零点数量求参数的范围
+
+
+隐零点
+
+零点找点
+
+\begin{center}
+\begin{tikzpicture}[x=2cm,y=1.1cm,>=stealth]
+    % 坐标轴
+    \draw[->] (-0.15,0) -- (3.2,0) node[right] {$x$};
+    \draw[->] (0,-0.65) -- (0,3.6) node[above] {$y$};
+    \node[below left] at (0,0) {$O$};
+
+    % 函数图像
+    \draw[blue,thick,smooth,domain=0.02:3,samples=150]
+        plot (\x,{\x*ln(\x)})
+        node[above left] {$y=x\ln x$};
+
+    % 最低点
+    \fill[red] ({1/exp(1)},{-1/exp(1)}) circle (1.4pt);
+    \draw[dashed,gray]
+        ({1/exp(1)},0) -- ({1/exp(1)},{-1/exp(1)});
+    \node[above] at ({1/exp(1)},0)
+        {$\frac{1}{\mathrm e}$};
+    \node[below] at ({1/exp(1)},{-1/exp(1)})
+        {$\left(\frac{1}{\mathrm e},-\frac{1}{\mathrm e}\right)$};
+
+    % 与x轴的交点
+    \fill[red] (1,0) circle (1.4pt);
+    \node[below] at (1,0) {$(1,0)$};
+\end{tikzpicture}
+\end{center}
