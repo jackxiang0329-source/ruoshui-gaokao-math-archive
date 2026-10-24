@@ -1,0 +1,13 @@
+work/*
+!work/.gitkeep
+
+build/*
+!build/.gitkeep
+
+dist/*
+!dist/.gitkeep
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
