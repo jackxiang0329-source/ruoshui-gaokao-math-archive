@@ -1,0 +1,155 @@
+\section[1978年高考数学试卷(备用卷)文理]{1978年普通高等学校招生考试(备用卷)\\\Huge{数学试卷}}
+\begin{questions}
+	\question
+	\begin{parts}
+		\part 分解因式:$x^2 - 2xy + y^2 + 2x - 2y - 3$.
+
+			\begin{solution}
+				\begin{align*}
+					 & = (x-y)^2 + 2(x-y) - 3 \\
+					 & = (x-y +3)(x-y-1)
+				\end{align*}
+			\end{solution}
+
+		\part 求$\sin\ang{30}-\tan\ang{0} + \cot\frac{\pi}{4} - \cos^2\frac{5\pi}{6}$.
+
+			\begin{solution}
+				\begin{align*}
+					 & = \frac12 - 0 + 1 - \left( -\frac{\sqrt{3}}{2} \right)^2 \\
+					 & = \frac34
+				\end{align*}
+			\end{solution}
+
+		\part 求函数$y=\frac{\lg(25-5^x)}{x+1}$的定义域.
+			\begin{solution}
+				\begin{math}
+					\begin{cases}
+						25-5^x > 0 \\
+						x + 1 \neq 0
+					\end{cases}
+				\end{math} \Rightarrow\quad
+				\begin{math}
+					\begin{cases}
+						x < 2 \\
+						x \neq - 1
+					\end{cases}
+				\end{math}
+
+				所以定义域为$\{x|x<2\,(x\neq-1)\}$
+
+			\end{solution}
+
+		\part 已知直圆锥体的底面半径等于\qty{1}{\cm},母线的长等于\qty{2}{\cm},求它的体积.
+
+			\begin{solution}
+				\begin{center}
+					\tdplotsetmaincoords{70}{0}
+					\begin{tikzpicture}[tdplot_main_coords, scale=2]
+						\begin{scope}[canvas is xy plane at z=0]
+							\draw (-1,0) coordinate(a) arc[start angle=180, end angle=360, radius=1cm];
+							\draw[dashed] (-1,0) to[out=90, in=90] (1,0) coordinate(b);
+						\end{scope}
+						\draw (1,0) --node[sloped, above]{$\qty{2}{\cm}$} (0,0,{sqrt(3)})coordinate(c) -- (-1,0);
+						\draw[dashed] (c) --node[left]{$h$} (0,0) --node[below]{$\qty{1}{\cm}$} (b);
+					\end{tikzpicture}
+				\end{center}
+				可以计算出$h=\sqrt{3}$,根据体积公式有：
+				\begin{align*}
+					V & = \frac13\pi r^2h                                             \\
+					  & = \frac13\pi\times1^2\times\sqrt{3}                           \\
+					  & = \qty[parse-numbers=false]{\frac{\sqrt{3}}{3}\pi}{\cm\cubed}
+				\end{align*}
+			\end{solution}
+
+		\part 计算: \begin{math}\displaystyle
+				10(2+\sqrt{5})^{-1} - \left( \frac1{500} \right)^{-\frac12} + 30 \left( \frac{125}{9} \right)^{\frac12}
+				\left( \frac{\sqrt{5}}{3} \right)^{\frac12}
+			\end{math}的值.
+
+			\begin{solution}
+				\begin{align*}
+					 & = 10(\sqrt{5} - 2) - 10\sqrt{5} + 30 \left( \frac{125\sqrt{5}}{27} \right)^{\frac12} \\
+					 & = -2 + 50 \left( \frac{5\sqrt{5}}{3} \right) ^ {\frac12}                             \\
+					 & = - 2 + 50  \sqrt[4]{\frac{125}{9}}
+				\end{align*}
+			\end{solution}
+	\end{parts}
+
+	\question 已知两数$x_1, x_2$满足条件:
+	\begin{penum}
+		\item 它们的和是等差数列$1,3,\cdots$的第$20$项;
+		\item 它们的积是等比数列$2,-6,\cdots$的前$4$项和,求根为$\frac{1}{x_1}, \frac{1}{x_2}$的方程.
+	\end{penum}
+
+	\begin{solution}
+		由题意可得\begin{math}
+			\begin{cases}
+				x_1 + x_2 = 39 \\
+				x_1x_2 = 2 -6 + 18 - 54 = -40
+			\end{cases}
+		\end{math},可以解得$x_1=40, x_2 = -1$,或者$x_1=-1, x_2 = 40$.
+
+		假设方程为$ax^2 + bx + c = 0$, 则有两个根之和为:
+		\begin{displaymath}
+			-\frac{b}{a} = \frac1{x_1} + \frac1{x_2} = -1 + \frac1{40} = -\frac{39}{40}
+		\end{displaymath}
+
+		两个根之积为:
+		\begin{displaymath}
+			\frac{c}{a} = -\frac{1}{40}
+		\end{displaymath}
+
+		将方程两边同除以$a$得:
+		\begin{displaymath}
+			x^2 + \frac{b}{a}x + \frac{c}{a} = 0
+		\end{displaymath}
+		代入可得方程为:
+		\begin{displaymath}
+			x^2 + \frac{39}{40} -\frac{1}{40} = 0
+		\end{displaymath}
+
+		即方程为:
+		\begin{displaymath}
+			40x^2 + 39x - 1=0
+		\end{displaymath}
+
+	\end{solution}
+
+	\question 已知: $\triangle{ABC}$的外接圆的切线$AD$交$BC$的延长线于$D$点,求证:\begin{math}
+		\frac{S_{\triangle{ABC}}}{S_{\triangle{ACD}}} = \frac{AB^2}{AC^2} = \frac{BD}{CD}.
+	\end{math}
+
+	\begin{solution}
+		\begin{center}
+			\begin{tikzpicture}[scale=.7]
+				\tkzSetUpLine[add= 0 and 0]
+				\coordinate (a) at (0,0);
+				\coordinate (b) at (3,0);
+				\coordinate (c) at (5,4);
+				\tkzDefCircle[circum](a,b,c) \tkzGetPoint{o}
+				\tkzDefLine[tangent at=a](o) \tkzGetPoint{x}
+				\tkzInterLL(a,x)(b,c) \tkzGetPoint{d}
+
+				\tkzDrawPolygon(a,b,c)
+				\tkzDrawCircle(o,a)
+				\tkzDrawLine(b,d)
+				\tkzDrawLine(a,d)
+				\tkzDrawPoints[fill=black](a,b,c,d,o)
+				\tkzLabelPoint(a){$A$}
+				\tkzLabelPoint[right](b){$B$}
+				\tkzLabelPoint[above](c){$C$}
+				\tkzLabelPoint[below](d){$D$}
+				\tkzLabelPoint[left](o){$O$}
+
+				% \tkzDrawLines[dashed](o,a o,c o,b)
+			\end{tikzpicture}
+		\end{center}
+
+		\triangle{ABC}与\triangle{ACD}同高,所以面积之比等于底边长之比,因此有:
+		\begin{displaymath}
+			\frac{S_{\triangle{ABC}}}{S_{\triangle{ACD}}} = \frac{BD}{CD}
+		\end{displaymath}
+
+	\end{solution}
+
+\end{questions}
