@@ -1,7 +1,12 @@
-# 已独立数学复核的题目
+# 已独立数学复核的导数题
 
-目前两道题：2024 新高考Ⅰ卷第18题与Ⅱ卷第16题。详见 [Markdown 解析](2024-two-proofs.md) 及 [可独立 XeLaTeX 编译的完整源码](2024-two-proofs.tex)。
+目前累计 **6 条来源记录，5 道不同题目**。其中 2011 年安徽文、理科为同一道题，保留两个卷别记录。
 
-对应 PDF 在本次会话的交付文件中已本地编译核验；**目前尚未作为二进制文件提交到 GitHub**。编译方式：`xelatex -interaction=nonstopmode -halt-on-error 2024-two-proofs.tex`，连续两轮。
+| 题目 | Markdown 证明 | TeX 源码 |
+|---|---|---|
+| 2010 安徽文科第 20 题 | [独立证明](2010-anhui-liberal-q20.md) | [源码](2010-anhui-liberal-q20.tex) |
+| 2011 安徽文科第 18 题及理科第 16 题 | [共同证明](2011-anhui-derivative-common.md) | [源码](2011-anhui-derivative-common.tex) |
+| 2019 全国Ⅱ卷文科第 21 题 | [独立证明](2019-national2-liberal-q21.md) | [源码](2019-national2-liberal-q21.tex) |
+| 2024 新高考Ⅰ卷第 18 题及Ⅱ卷第 16 题 | [两题证明](2024-two-proofs.md) | [源码](2024-two-proofs.tex) |
 
-原题文本与插图的转载许可不在本项目原创证明权限之内；请始终保留上游来源。后续新增题目需要独立核验，不能因来源已有解答就直接打上 `math-checked` 标签。
+数学复核通过并不代表编译通过。2024 两题的 PDF 曾在较早轮次本地双轮编译；**本轮没有运行任何编译或产生本地文件**。其他新 TeX 尚未实际编译。

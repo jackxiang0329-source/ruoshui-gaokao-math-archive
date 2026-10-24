@@ -1,0 +1,42 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\title{2010年安徽高考文科第20题：导数与极值}
+\author{三千弱水数学题库}
+\date{2026年10月24日}
+\begin{document}
+\maketitle
+\noindent\textbf{出处：}\url{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/anhui_liberal.tex#L426}
+
+设 $f(x)=\sin x-\cos x+x+1$，$0<x<2\pi$。
+
+\paragraph{驻点}
+\[
+f'(x)=\cos x+\sin x+1
+     =1+\sqrt{2}\sin\left(x+\frac{\pi}{4}\right).
+\]
+在 $(0,2\pi)$ 中解 $f'(x)=0$，得且仅得
+$x=\pi$、$x=3\pi/2$。
+
+\paragraph{单调性}
+在 $(0,\pi)$、$(\pi,3\pi/2)$、$(3\pi/2,2\pi)$
+三个区间中，导函数符号依次为正、负、正。
+因此函数在第一、第三区间严格递增，
+在第二区间严格递减。
+
+\paragraph{极值}
+函数在 $x=\pi$ 处取得严格极大值
+\[
+f(\pi)=\pi+2,
+\]
+在 $x=3\pi/2$ 处取得严格极小值
+\[
+f(3\pi/2)=\frac{3\pi}{2}.
+\]
+定义域端点不参与极值判断。
+
+\bigskip
+\noindent\textbf{质检说明：}数学推导独立验证通过；
+本源码尚未进行实际 XeLaTeX 编译。
+\end{document}
