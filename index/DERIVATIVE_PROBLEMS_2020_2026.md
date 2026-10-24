@@ -39,11 +39,11 @@
 | 2023 | 全国甲卷理科 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_a_science.tex#L537) | 含参函数单调性与恒成立 | core | 待独立核算 |
 | 2023 | 全国甲卷文科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_a_liberal.tex#L384) | 三角有理函数单调性与参数不等式 | core | 待独立核算 |
 | 2023 | 全国乙卷理科 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_b_science.tex#L346) | 对数函数切线、对称性与极值 | core | 待独立核算 |
-| 2023 | 全国乙卷文科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_b_liberal.tex#L246) | 对数函数切线与单调性 | core | 待独立核算 |
+| 2023 | 全国乙卷文科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_b_liberal.tex#L246) | 对数函数切线与单调性 | core | 已数学复核（[证明](../derivative/reviewed/2023-national-b-liberal-q20.md)） |
 | 2023 | 上海春季卷 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/shanghai_spring.tex#L304) | 三次函数控制函数优化 | needs-review | 待独立核算 |
 | 2023 | 上海卷 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/shanghai.tex#L348) | 对数曲线切线生成数列 | core | 待独立核算 |
 | 2023 | 天津卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/tianjin.tex#L532) | 对数函数切线与阶乘不等式 | core | 待独立核算 |
-| 2023 | 新高考Ⅰ卷 | [19](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/new_gaokao_paper_1.tex#L554) | 指数函数单调性与不等式证明 | core | 待独立核算 |
+| 2023 | 新高考Ⅰ卷 | [19](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/new_gaokao_paper_1.tex#L554) | 指数函数单调性与不等式证明 | core | 已数学复核（[证明](../derivative/reviewed/2023-new-gaokao-1-q19.md)） |
 | 2023 | 新高考Ⅱ卷 | [22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/new_gaokao_paper_2.tex#L527) | 三角不等式与含参函数极值 | core | 待独立核算 |
 | 2024 | 北京卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2024/beijing.tex#L351) | 对数函数切线、参数与面积 | core | 待独立核算 |
 | 2024 | 全国甲卷理科 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2024/national_paper_a_science.tex#L712) | 含参对数函数极值及恒成立 | core | 待独立核算 |
@@ -54,8 +54,8 @@
 | 2024 | 新高考Ⅱ卷 | [16](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2024/new_gaokao_paper_2.tex#L448) | 指数函数切线与负极小值参数 | core | 待独立核算 |
 | 2025 | 北京卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/beijing.tex#L432) | 对数导函数与切线及几何关系 | core | 待独立核算 |
 | 2025 | 全国Ⅰ卷 | [16](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/national_paper_1.tex#L633) | 数列生成多项式求导 | application | 待独立核算 |
-| 2025 | 全国Ⅱ卷 | [18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/national_paper_2.tex#L496) | 对数函数极值点与零点比较 | core | 待独立核算 |
-| 2025 | 上海卷 | [19](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/shanghai.tex#L381) | 含参对数函数极大值存在性 | core | 待独立核算 |
+| 2025 | 全国Ⅱ卷 | [18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/national_paper_2.tex#L496) | 对数函数极值点与零点比较 | core | 已数学复核（[证明](../derivative/reviewed/2025-national2-q18.md)） |
+| 2025 | 上海卷 | [19](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/shanghai.tex#L381) | 含参对数函数极大值存在性 | core | 已数学复核（[证明](../derivative/reviewed/2025-shanghai-q19.md)） |
 | 2025 | 天津卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/tianjin.tex#L327) | 对数平方函数切线与三零点 | core | 待独立核算 |
 | 2026 | 北京卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2026/beijing.tex#L422) | 指数函数切线、极值点与交点数 | core | 待独立核算 |
 | 2026 | 全国Ⅱ卷 | [19](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2026/national_paper_2.tex#L408) | 指数函数切线、平移参数不等式 | core | 待独立核算 |

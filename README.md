@@ -69,15 +69,19 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 - [2024 新高考Ⅰ、Ⅱ卷两题独立证明](derivative/reviewed/2024-two-proofs.md) / [TeX](derivative/reviewed/2024-two-proofs.tex)
 - [2010 北京理科第18题](derivative/reviewed/2010-beijing-science-q18.md)、[2013 福建理科第17题](derivative/reviewed/2013-fujian-science-q17.md)、[2014 重庆文科第19题](derivative/reviewed/2014-chongqing-liberal-q19.md) 的独立复核
 - [2014 安徽文理共同题：完整参数分类](derivative/reviewed/2014-anhui-common-q.md)，同时记录[上游解析缺失问题](metadata/quality-findings.json)
-- [11 条数学质检状态的溯源清单](metadata/review-provenance.json)
+- [15 条数学质检状态的溯源清单](metadata/review-provenance.json)
 - [疑似重复题复核索引：6 组同题、1 组变式、14 组待核查](index/DUPLICATE_AUDIT.md)
 - [已完成数学证明与可独立编译源码目录](derivative/reviewed/README.md)
 - [数学复核溯源和重复索引自动一致性检查](scripts/validate_review_traceability.py)
 - [第六轮质检报告](metadata/ROUND_06_REPORT.md)
+- [2023 全国乙卷文科第20题完整证明](derivative/reviewed/2023-national-b-liberal-q20.md) / [2023 新高考Ⅰ卷第19题证明](derivative/reviewed/2023-new-gaokao-1-q19.md)
+- [2025 上海卷第19题证明](derivative/reviewed/2025-shanghai-q19.md) / [2025 全国Ⅱ卷第18题证明](derivative/reviewed/2025-national2-q18.md)
+- [2025 北京卷第20题转录顺序冲突审计](derivative/reviewed/2025-beijing-q20-transcription-audit.md)：暂不升格数学核验
+- [第七轮审校报告](metadata/ROUND_07_REPORT.md)
 - [机器扫描候选](scripts/scan_derivative_questions.py)、[索引一致性脚本](scripts/validate_question_index.py)、[第五轮报告](metadata/ROUND_05_REPORT.md)
 
-共 **11 条来源记录**完成独立数学核验，实际对应 **9 道不同题目**（2011 安徽文理卷同题保留两份出处）。
-余下 237 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
+共 **15 条来源记录**完成独立数学核验，实际对应 **13 道不同题目**（2011 安徽文理卷同题保留两份出处）。
+余下 233 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
 
 本轮仅在 GitHub 写入源码、索引和质检文本，**不产生本地 PDF 或 ZIP**。
 新增的 TeX 尚未编译；GitHub Actions 曾在获得 Runner 前失败，自动同步未完成验收。

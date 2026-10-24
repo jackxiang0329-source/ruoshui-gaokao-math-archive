@@ -17,6 +17,40 @@
       "independent_proof": "derivative/reviewed/2014-anhui-common-q.md",
       "status": "confirmed-by-comparison",
       "upstream_modified": false
+    },
+    {
+      "id": "2026-10-24-national2-2025-derivative-sum-typo",
+      "source_id": "gaokao-math-problems-compilation",
+      "source_repo": "DxAThing/Gaokao-Math-Problems-Compilation",
+      "affected_record_id": "2025-national_paper_2-q18",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/national_paper_2.tex#L496",
+      "category": "solution-chain-rule-sign-typo",
+      "severity": "medium",
+      "scope": "Upstream solution to 2025 National II Q18, derivative of g(t)=f(x1+t)-f(x1-t)",
+      "observation": "An intermediate line writes g'(t)=f'(x1+t)-f'(x1-t), but the chain rule requires a PLUS sign. Subsequent source algebra actually uses the plus sign; this appears to be a local typo rather than an incorrect final inequality.",
+      "correct_condition": "g'(t)=f'(x1+t)+f'(x1-t)<0 for 0<t<x1; hence x1<x2<2x1.",
+      "independent_proof": "derivative/reviewed/2025-national2-q18.md",
+      "status": "confirmed-by-independent-derivation",
+      "upstream_modified": false
+    },
+    {
+      "id": "2026-10-24-beijing-2025-line-label-order",
+      "source_id": "gaokao-math-problems-compilation",
+      "source_repo": "DxAThing/Gaokao-Math-Problems-Compilation",
+      "affected_record_id": "2025-beijing-q20",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/beijing.tex#L432",
+      "category": "question-transcription-vs-answer-inconsistency",
+      "severity": "high",
+      "scope": "2025 Beijing Q20(3): upstream LaTeX statement lists l2,l1 but upstream algebra assumes l1,l2 for x1,x2.",
+      "observation": "The two opposite labeling orders yield intervals with opposite signs. Two public textual transcriptions display l1,l2 order, consistent with the upstream answer, but the authoritative original exam image has not been independently checked.",
+      "correct_condition": "If x1=l1-axis intercept and x2=l2-axis intercept, range is [(e²-1)/(e²+1),1); if the order is reversed, range is (-1,-(e²-1)/(e²+1)].",
+      "public_cross_checks": [
+        "https://kaosj.com/papers/2025/06/2025-beijing-gaokao-math-paper/",
+        "https://www.yeyulingfeng.com/wendang/166251.html"
+      ],
+      "independent_proof": "derivative/reviewed/2025-beijing-q20-transcription-audit.md",
+      "status": "source-inconsistency-confirmed-original-imaging-pending",
+      "upstream_modified": false
     }
   ]
 }

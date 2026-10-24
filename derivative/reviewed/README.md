@@ -1,6 +1,6 @@
 # 独立数学复核成果
 
-当前 **11 条来源记录**完成数学复核，按确认的同题关系归并，对应 **9 道不同题目**。具体 ID、来源链接与证明文件的一一对应关系由 [review-provenance.json](../../metadata/review-provenance.json) 管理。
+当前 **15 条来源记录**完成数学复核，按确认的同题关系归并，对应 **13 道不同题目**。具体 ID、来源链接与证明文件的一一对应关系由 [review-provenance.json](../../metadata/review-provenance.json) 管理。
 
 | 题目 | Markdown 独立证明 | LaTeX 源码 |
 |---|---|---|
@@ -13,4 +13,11 @@
 | 2019 全国Ⅱ卷文科第21题 | [证明](2019-national2-liberal-q21.md) | [TeX](2019-national2-liberal-q21.tex) |
 | 2024 新高考Ⅰ卷第18题与Ⅱ卷第16题 | [两道独立证明](2024-two-proofs.md) | [合订源码](2024-two-proofs.tex) |
 
-**状态区分：**上述数学内容标记为 `math-checked`；除了较早已编译过的 2024 两题，本轮新 TeX 均未进行实际 XeLaTeX 编译，不应标记为 `latex-compiled`。本轮未产生本地文件。
+| 2023 全国乙卷文科第20题 | [证明](2023-national-b-liberal-q20.md) | 尚未整理独立 TeX |
+| 2023 新高考Ⅰ卷第19题 | [证明](2023-new-gaokao-1-q19.md) | 尚未整理独立 TeX |
+| 2025 上海卷第19题 | [证明](2025-shanghai-q19.md) | 尚未整理独立 TeX |
+| 2025 全国Ⅱ卷第18题 | [证明及链式法则勘误](2025-national2-q18.md) | 尚未整理独立 TeX |
+
+[2025 北京卷第20题标号审计](2025-beijing-q20-transcription-audit.md) 不计入上述 15 条数学核验。
+
+**状态区分：**表内数学证明标记为 `math-checked`；除了较早已编译过的 2024 两题，本轮新 TeX 均未进行实际 XeLaTeX 编译，不应标记为 `latex-compiled`。本轮未产生本地文件。
