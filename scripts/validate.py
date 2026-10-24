@@ -16,7 +16,7 @@ for src in sources:
     ).stdout.strip()
     assert result == "https://github.com/" + src["repo"] + ".git", (path,result)
     assert (ROOT / path / ".git").exists(), "Submodule checkout missing: " + path
-for name in ("files.csv","derivative-candidates.csv","gaokao-candidates.csv"):
+for name in ("files.csv","derivative-candidates.csv","gaokao-candidates.csv","derivative-machine-candidates.csv"):
     with (ROOT / "index" / name).open(encoding="utf-8-sig",newline="") as stream:
         rows = list(csv.DictReader(stream))
     assert all(r["review_status"] == "unreviewed" for r in rows), name
