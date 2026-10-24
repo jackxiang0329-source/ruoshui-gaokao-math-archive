@@ -3,20 +3,20 @@
   "method": "Compare mirror/<id>/path Git blob SHA against fixed upstream commit tree",
   "full": 4,
   "expected": 7222,
-  "verified": 192,
+  "verified": 265,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
-      "verified": 0,
-      "missing": 373,
+      "verified": 10,
+      "missing": 363,
       "complete": false
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 0,
-      "missing": 5546,
+      "verified": 20,
+      "missing": 5526,
       "complete": false
     },
     {
@@ -36,8 +36,8 @@
     {
       "id": "gaokao-math-corpus",
       "expected": 207,
-      "verified": 0,
-      "missing": 207,
+      "verified": 36,
+      "missing": 171,
       "complete": false
     },
     {
@@ -71,8 +71,8 @@
     {
       "id": "math-atlas",
       "expected": 110,
-      "verified": 0,
-      "missing": 110,
+      "verified": 7,
+      "missing": 103,
       "complete": false
     },
     {
@@ -82,5 +82,11 @@
       "missing": 0,
       "complete": true
     }
-  ]
+  ],
+  "last_mirror_ci": {
+    "run_id": 40103091319,
+    "status": "failure",
+    "runner_steps_available": false
+  },
+  "note": "Counts are exact SHA matches of real files in mirror/ on main, not submodule pointers. This is partial; binary files and many TeX files still missing."
 }
