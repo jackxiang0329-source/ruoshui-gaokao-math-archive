@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "last_reviewed": "2026-10-24",
+  "policy": "Original projects remain separate Git submodules. Licenses do not become a single combined license. Source material may contain additional third-party rights.",
+  "repositories": [
+    {
+      "id": "math-lecture-notes",
+      "repo": "Dreamaker203/math-lecture-notes",
+      "branch": "main",
+      "category": "derivative-lectures",
+      "license": "MIT stated in README; root LICENSE absent",
+      "license_status": "review",
+      "notes": "导数压轴题全攻略 TeX/PDF，其他章节未必属于高考",
+      "initial_commit": "b89f6207bc5b84f501837ea6da3899799a8787d8"
+    },
+    {
+      "id": "gaokao-math-problems-compilation",
+      "repo": "DxAThing/Gaokao-Math-Problems-Compilation",
+      "branch": "main",
+      "category": "gaokao-tex",
+      "license": "CC-BY-SA-4.0 for eligible original contributions; upstream CC-BY-4.0",
+      "license_status": "verified-with-third-party-exceptions",
+      "notes": "大型 TeX 试题题库；PDF 可能位于 Releases",
+      "initial_commit": "f1ae169b58a75b3db6e35c670b3f0d5c78718188"
+    },
+    {
+      "id": "gaokaomath",
+      "repo": "deekur/gaokaomath",
+      "branch": "main",
+      "category": "gaokao-pdf",
+      "license": "CC-BY-4.0",
+      "license_status": "verified-with-third-party-exceptions",
+      "notes": "历年高考 PDF，试题与图片权利单独核实",
+      "initial_commit": "08179f1fc0a3300787155d92800ac82b57ee4118"
+    },
+    {
+      "id": "first-round-review",
+      "repo": "hbinfrog/first_round_review",
+      "branch": "main",
+      "category": "derivative-review",
+      "license": "LPPL-1.3c (root License)",
+      "license_status": "verified",
+      "notes": "高三复习、导数专题 TeX",
+      "initial_commit": "9eea8bd0f3e12c0ff95b9ba763d06d4da4f23b3b"
+    },
+    {
+      "id": "gaokao-math-corpus",
+      "repo": "TsubameHata/gaokao_math_corpus",
+      "branch": "master",
+      "category": "gaokao-md",
+      "license": "Not identified in repository root",
+      "license_status": "unknown",
+      "notes": "2021–2026 新高考结构化 MD/YAML 题面；无答案",
+      "initial_commit": "fb53cf48eeadf1520109f55a9852e9465ae1d6bd"
+    },
+    {
+      "id": "2024-china-gaokao-math",
+      "repo": "ajsadhotmail/2024-China-Gaokao-Math",
+      "branch": "main",
+      "category": "gaokao-tex",
+      "license": "Not identified in repository root",
+      "license_status": "unknown",
+      "notes": "2024 新高考 I 卷 TeX/PDF",
+      "initial_commit": "f3ef469f92981c662f1904a77c5adbd6b7531565"
+    },
+    {
+      "id": "gaokao-exam-template",
+      "repo": "shaodongtang/gaokao_exam",
+      "branch": "master",
+      "category": "latex-template",
+      "license": "Not identified in repository root",
+      "license_status": "unknown",
+      "notes": "试卷 LaTeX 样式和示例",
+      "initial_commit": "54932049810b24e85076cee6cb941f501923a00d"
+    },
+    {
+      "id": "mathpaper",
+      "repo": "Yan-Zero/MathPaper",
+      "branch": "main",
+      "category": "gaokao-tex",
+      "license": "Apache-2.0",
+      "license_status": "verified",
+      "notes": "往年试卷 TeX",
+      "initial_commit": "19585a8a6e1f09e326d1772f48a7cee0982228d8"
+    },
+    {
+      "id": "daxmate-math",
+      "repo": "daxmate/math",
+      "branch": "main",
+      "category": "gaokao-tex",
+      "license": "README encourages sharing; no standard root LICENSE",
+      "license_status": "review",
+      "notes": "历史试卷 TeX 和答案",
+      "initial_commit": "187878cf239f0e2bb45e92e22ee4a14a51afbc78"
+    },
+    {
+      "id": "math-atlas",
+      "repo": "sdmf6/math-atlas",
+      "branch": "master",
+      "category": "indexing-tool",
+      "license": "MIT",
+      "license_status": "verified",
+      "notes": "软件许可不涵盖未知试题权利",
+      "initial_commit": "b8022192c5cca91957cfd43babf02f49512e08b4"
+    },
+    {
+      "id": "mathex",
+      "repo": "SakurakaiCat/mathex",
+      "branch": "master",
+      "category": "exercise-book",
+      "license": "GPL-3.0",
+      "license_status": "verified",
+      "notes": "LaTeX 习题册，非导数主库",
+      "initial_commit": "bf687c88507e7ab5680d1af96b82ac0af812bea8"
+    }
+  ]
+}

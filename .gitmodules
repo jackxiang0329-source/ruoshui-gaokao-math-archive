@@ -1,0 +1,44 @@
+[submodule "upstream/math-lecture-notes"]
+	path = upstream/math-lecture-notes
+	url = https://github.com/Dreamaker203/math-lecture-notes.git
+	branch = main
+[submodule "upstream/gaokao-math-problems-compilation"]
+	path = upstream/gaokao-math-problems-compilation
+	url = https://github.com/DxAThing/Gaokao-Math-Problems-Compilation.git
+	branch = main
+[submodule "upstream/gaokaomath"]
+	path = upstream/gaokaomath
+	url = https://github.com/deekur/gaokaomath.git
+	branch = main
+[submodule "upstream/first-round-review"]
+	path = upstream/first-round-review
+	url = https://github.com/hbinfrog/first_round_review.git
+	branch = main
+[submodule "upstream/gaokao-math-corpus"]
+	path = upstream/gaokao-math-corpus
+	url = https://github.com/TsubameHata/gaokao_math_corpus.git
+	branch = master
+[submodule "upstream/2024-china-gaokao-math"]
+	path = upstream/2024-china-gaokao-math
+	url = https://github.com/ajsadhotmail/2024-China-Gaokao-Math.git
+	branch = main
+[submodule "upstream/gaokao-exam-template"]
+	path = upstream/gaokao-exam-template
+	url = https://github.com/shaodongtang/gaokao_exam.git
+	branch = master
+[submodule "upstream/mathpaper"]
+	path = upstream/mathpaper
+	url = https://github.com/Yan-Zero/MathPaper.git
+	branch = main
+[submodule "upstream/daxmate-math"]
+	path = upstream/daxmate-math
+	url = https://github.com/daxmate/math.git
+	branch = main
+[submodule "upstream/math-atlas"]
+	path = upstream/math-atlas
+	url = https://github.com/sdmf6/math-atlas.git
+	branch = master
+[submodule "upstream/mathex"]
+	path = upstream/mathex
+	url = https://github.com/SakurakaiCat/mathex.git
+	branch = master
