@@ -1,0 +1,38 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\title{2013 年福建高考理科第 17 题\\切线与含参函数极值}
+\date{2026 年 10 月 24 日}
+\begin{document}
+\maketitle
+\noindent\textbf{原题来源：}\url{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/fujian_science.tex#L356}
+
+设 $f_a(x)=x-a\ln x$，$x>0$，$a\in\mathbb R$。
+\[
+ f_a'(x)=1-\frac{a}{x}=\frac{x-a}{x}.
+\]
+\paragraph{当 $a=2$ 时的切线}
+在点 $x=1$ 处，
+$f_2(1)=1$、$f_2'(1)=-1$，
+所以切线为
+\[
+ \boxed{y-1=-(x-1)}\quad\text{即}\quad x+y-2=0.
+\]
+
+\paragraph{极值的充要分类}
+由于定义域中 $x>0$，导数分母为正：
+\begin{enumerate}
+\item 当 $a\le0$ 时，$x-a>0$，函数全域严格递增，
+不存在极值点。
+\item 当 $a>0$ 时，在 $(0,a)$ 导数为负，在
+$(a,+\infty)$ 导数为正，因而 $x=a$ 是唯一极小值点，
+极小值为
+\[
+ \boxed{f_a(a)=a-a\ln a}.
+\]
+在此情形也不存在极大值。
+\end{enumerate}
+\noindent\textbf{核验边界：}数学推导独立复核；
+新源码尚未实际编译。
+\end{document}
