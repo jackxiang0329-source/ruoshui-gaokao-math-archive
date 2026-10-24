@@ -67,10 +67,13 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 - [2011 安徽文、理科共同题独立证明](derivative/reviewed/2011-anhui-derivative-common.md) / [TeX](derivative/reviewed/2011-anhui-derivative-common.tex)
 - [2019 全国Ⅱ卷文科第21题独立证明](derivative/reviewed/2019-national2-liberal-q21.md) / [TeX](derivative/reviewed/2019-national2-liberal-q21.tex)
 - [2024 新高考Ⅰ、Ⅱ卷两题独立证明](derivative/reviewed/2024-two-proofs.md) / [TeX](derivative/reviewed/2024-two-proofs.tex)
+- [2010 北京理科第18题](derivative/reviewed/2010-beijing-science-q18.md)、[2013 福建理科第17题](derivative/reviewed/2013-fujian-science-q17.md)、[2014 重庆文科第19题](derivative/reviewed/2014-chongqing-liberal-q19.md) 的独立复核
+- [2014 安徽文理共同题：完整参数分类](derivative/reviewed/2014-anhui-common-q.md)，同时记录[上游解析缺失问题](metadata/quality-findings.json)
+- [11 条数学质检状态的溯源清单](metadata/review-provenance.json)
 - [机器扫描候选](scripts/scan_derivative_questions.py)、[索引一致性脚本](scripts/validate_question_index.py)、[第五轮报告](metadata/ROUND_05_REPORT.md)
 
-共 **6 条来源记录**完成独立数学核验，实际对应 **5 道不同题目**（2011 安徽文理卷同题保留两份出处）。
-余下 242 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
+共 **11 条来源记录**完成独立数学核验，实际对应 **9 道不同题目**（2011 安徽文理卷同题保留两份出处）。
+余下 237 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
 
 本轮仅在 GitHub 写入源码、索引和质检文本，**不产生本地 PDF 或 ZIP**。
 新增的 TeX 尚未编译；GitHub Actions 曾在获得 Runner 前失败，自动同步未完成验收。

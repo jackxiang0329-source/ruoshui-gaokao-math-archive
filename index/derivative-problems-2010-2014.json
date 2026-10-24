@@ -40,7 +40,7 @@
       "problem_number": 18,
       "type": "core",
       "topic": "含参对数二次函数切线与单调",
-      "stage": "source-identified",
+      "stage": "math-checked",
       "source_id": "gaokao-math-problems-compilation",
       "source_path": "content/2010/beijing_science.tex",
       "source_line": 352,
@@ -1180,7 +1180,7 @@
       "problem_number": 17,
       "type": "core",
       "topic": "含参对数函数切线与极值",
-      "stage": "source-identified",
+      "stage": "math-checked",
       "source_id": "gaokao-math-problems-compilation",
       "source_path": "content/2013/fujian_science.tex",
       "source_line": 356,
@@ -1480,7 +1480,7 @@
       "problem_number": 18,
       "type": "core",
       "topic": "含参三次函数单调与区间极值",
-      "stage": "source-identified",
+      "stage": "math-checked",
       "source_id": "gaokao-math-problems-compilation",
       "source_path": "content/2014/anhui_science.tex",
       "source_line": 279,
@@ -1495,7 +1495,7 @@
       "problem_number": 20,
       "type": "core",
       "topic": "含参三次函数单调与区间极值",
-      "stage": "source-identified",
+      "stage": "math-checked",
       "source_id": "gaokao-math-problems-compilation",
       "source_path": "content/2014/anhui_liberal.tex",
       "source_line": 628,
@@ -1540,7 +1540,7 @@
       "problem_number": 19,
       "type": "core",
       "topic": "对数有理函数切线、单调、极值",
-      "stage": "source-identified",
+      "stage": "math-checked",
       "source_id": "gaokao-math-problems-compilation",
       "source_path": "content/2014/chongqing_liberal.tex",
       "source_line": 560,
@@ -1908,5 +1908,6 @@
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/zhejiang_science.tex#L492",
       "duplicate_group": ""
     }
-  ]
+  ],
+  "version": 1
 }

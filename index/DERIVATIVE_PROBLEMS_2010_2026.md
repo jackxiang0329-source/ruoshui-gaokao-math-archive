@@ -1,6 +1,6 @@
 # 2010—2026 年高考导数题目级总索引
 
-**来源定位记录 248 条；其中数学独立核验 6 条。**
+**来源定位记录 248 条；其中数学独立核验 11 条。**
 
 记录保留题号、卷别、TeX 固定提交及源码行号，尚未穷尽所有省市卷；相似题保留各自来源，疑似同题和变式通过 `duplicate_group` 标记。
 
@@ -8,7 +8,7 @@
 |---:|---|---|---|---|
 | 2010 | 安徽卷理科 | [第 17 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/anhui_science.tex#L441) | 含参指数函数极值与指数不等式 | source-identified |
 | 2010 | 安徽卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/anhui_liberal.tex#L426) | 三角函数与线性函数之和的单调和极值 | math-checked |
-| 2010 | 北京卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/beijing_science.tex#L352) | 含参对数二次函数切线与单调 | source-identified |
+| 2010 | 北京卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/beijing_science.tex#L352) | 含参对数二次函数切线与单调 | math-checked |
 | 2010 | 北京卷文科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/beijing_liberal.tex#L434) | 三次函数导函数根与全局单调 | source-identified |
 | 2010 | 重庆卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/chongqing_science.tex#L389) | 分式对数函数切线与参数 | source-identified |
 | 2010 | 重庆卷文科 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/chongqing_liberal.tex#L354) | 奇函数约束下的三次函数导数与单调 | source-identified |
@@ -84,7 +84,7 @@
 | 2012 | 浙江卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/zhejiang_liberal.tex#L561) | 含参三次函数单调与区间估计 | source-identified |
 | 2013 | 北京卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/beijing_science.tex#L360) | 对数比值函数切线与切线下界 | source-identified |
 | 2013 | 重庆卷理科 | [第 17 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/chongqing_science.tex#L475) | 含参平方对数函数切线、单调与极值 | source-identified |
-| 2013 | 福建卷理科 | [第 17 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/fujian_science.tex#L356) | 含参对数函数切线与极值 | source-identified |
+| 2013 | 福建卷理科 | [第 17 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/fujian_science.tex#L356) | 含参对数函数切线与极值 | math-checked |
 | 2013 | 福建卷文科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/fujian_liberal.tex#L612) | 指数函数切线与极值及不等式 | source-identified |
 | 2013 | 广东卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/guangdong_science.tex#L379) | 指数二次函数单调与最值 | source-identified |
 | 2013 | 广东卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/guangdong_liberal.tex#L558) | 含参三次函数单调与闭区间最值 | source-identified |
@@ -104,11 +104,11 @@
 | 2013 | 新课标全国Ⅱ卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/new_curriculum_paper_2_liberal.tex#L597) | 指数二次函数极值与切线截距 | source-identified |
 | 2013 | 浙江卷理科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/zhejiang_science.tex#L401) | 含参三次函数切线与最大绝对值 | source-identified |
 | 2013 | 浙江卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/zhejiang_liberal.tex#L505) | 三次函数切线与含参最小值 | source-identified |
-| 2014 | 安徽卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_science.tex#L279) | 含参三次函数单调与区间极值 | source-identified · 待复核重复组 |
-| 2014 | 安徽卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_liberal.tex#L628) | 含参三次函数单调与区间极值 | source-identified · 待复核重复组 |
+| 2014 | 安徽卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_science.tex#L279) | 含参三次函数单调与区间极值 | math-checked · 待复核重复组 |
+| 2014 | 安徽卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_liberal.tex#L628) | 含参三次函数单调与区间极值 | math-checked · 待复核重复组 |
 | 2014 | 北京卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/beijing_science.tex#L411) | 三角函数商的导数与最佳界 | source-identified |
 | 2014 | 重庆卷理科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/chongqing_science.tex#L491) | 导函数偶性与双指数函数切线 | source-identified |
-| 2014 | 重庆卷文科 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/chongqing_liberal.tex#L560) | 对数有理函数切线、单调、极值 | source-identified |
+| 2014 | 重庆卷文科 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/chongqing_liberal.tex#L560) | 对数有理函数切线、单调、极值 | math-checked |
 | 2014 | 福建卷理科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/fujian_science.tex#L440) | 指数一次函数切线与极值及不等式 | source-identified · 待复核重复组 |
 | 2014 | 福建卷文科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/fujian_liberal.tex#L398) | 指数一次函数切线与极值及不等式 | source-identified · 待复核重复组 |
 | 2014 | 广东卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/guangdong_science.tex#L460) | 含参复合根式函数定义域和单调 | source-identified |

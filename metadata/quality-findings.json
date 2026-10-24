@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "findings": [
+    {
+      "id": "2026-10-24-anhui-2014-liberal-missing-cases",
+      "source_id": "gaokao-math-problems-compilation",
+      "source_repo": "DxAThing/Gaokao-Math-Problems-Compilation",
+      "affected_record_id": "2014-anhui_liberal-q20",
+      "other_related_record_id": "2014-anhui_science-q18",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_liberal.tex#L628",
+      "related_source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_science.tex#L279",
+      "category": "incomplete-solution",
+      "severity": "high",
+      "scope": "Upstream 2014 Anhui liberal source solution only; not a defect in the statement or science solution",
+      "observation": "After f(0)=1 and f(1)=a, source liberal solution ends with an isolated '1' rather than the complete minimizing-point parameter split.",
+      "correct_condition": "0<a<1 -> min at x=1; a=1 -> both x=0 and x=1; a>1 -> min at x=0.",
+      "independent_proof": "derivative/reviewed/2014-anhui-common-q.md",
+      "status": "confirmed-by-comparison",
+      "upstream_modified": false
+    }
+  ]
+}
