@@ -1,0 +1,37 @@
+name: Update upstream projects and file index
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/sync-upstream.yml"
+      - "sources.json"
+      - "scripts/**"
+permissions:
+  contents: write
+concurrency:
+  group: ruoshui-upstream-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out aggregator
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+          submodules: false
+      - name: Configure commit author
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Update submodules, generate indexes and validate
+        run: bash scripts/sync_sources.sh
+      - name: Push updated references and indexes
+        run: |
+          if git log origin/main..HEAD --oneline | grep -q .; then
+            git push origin HEAD:main
+          else
+            echo "No change to push."
+          fi
