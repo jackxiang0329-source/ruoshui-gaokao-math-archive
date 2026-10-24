@@ -1,5 +1,8 @@
 name: Mirror all 11 upstream repositories into Git files
 on:
+  push:
+    paths:
+      - '.github/workflows/mirror-all-upstream.yml'
   workflow_dispatch:
     inputs:
       source:
@@ -48,7 +51,7 @@ jobs:
       - name: Import complete source trees and their assets
         shell: bash
         env:
-          SOURCE: ${{ inputs.source }}
+          SOURCE: ${{ inputs.source || 'all' }}
         run: bash scripts/mirror_all_upstream.sh --source "$SOURCE"
       - name: Physical file summary
         shell: bash
