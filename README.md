@@ -53,17 +53,23 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 上游保持独立许可，不能把整个聚合库声称为一个统一许可证。部分原仓库存在许可声明不完整或第三方素材权利不明确的情况，详见 [sources.json](sources.json)。
 
 
-## 题目级导数索引（第二轮）
+## 题目级导数索引（2026-10-24）
 
-已经完成 [2020—2026 年 58 道题目级候选索引](index/DERIVATIVE_PROBLEMS_2020_2026.md)，覆盖 7 个年份。每条记录包括实际题号、原始 LaTeX 固定版本和可追溯的题目起始行。**54 项为核心导数方向，2 项为导数应用，2 项仍待进一步归类**。
+[**2010—2026 年题目级总索引：166 条**](index/DERIVATIVE_PROBLEMS_2010_2026.md)：
+2010—2014 年首批 45 条、2015—2019 年首批 63 条、2020—2026 年首批 58 条。
+这里是 **来源定位记录**，不是去重后的独立题目数，更不是已经审核正确的答案数。
 
-目前其中 **3 道**已完成独立数学验证；其他题目仍处于“来源已确认、数学待核验”阶段。
+- [主索引 CSV](index/derivative-problems-2010-2026.csv) / [JSON](index/derivative-problems-2010-2026.json)
+- [2010—2014 年来源记录](index/DERIVATIVE_PROBLEMS_2010_2014.md)
+- [2015—2019 年来源记录](index/DERIVATIVE_PROBLEMS_2015_2019.md)
+- [2020—2026 年来源记录](index/DERIVATIVE_PROBLEMS_2020_2026.md)
+- [2019 全国Ⅱ卷文科第21题：已独立核验的 MD](derivative/reviewed/2019-national2-liberal-q21.md) / [TeX](derivative/reviewed/2019-national2-liberal-q21.tex)
+- [2024 新高考Ⅰ、Ⅱ卷：两道已独立核验的 MD](derivative/reviewed/2024-two-proofs.md) / [TeX](derivative/reviewed/2024-two-proofs.tex)
+- [题目级全量扫描脚本](scripts/scan_derivative_questions.py) 与 [题目索引一致性校验](scripts/validate_question_index.py)
+- [第四轮导入与质检报告](metadata/ROUND_04_REPORT.md)
 
-- [完整 58 项 CSV](index/derivative-problems-2020-2026.csv) / [JSON](index/derivative-problems-2020-2026.json)
-- [独立核验的 Markdown 解答（2024 两题）](derivative/reviewed/2024-two-proofs.md)
-- [2019 全国Ⅱ卷文科第21题：唯一极值与倒数零点证明](derivative/reviewed/2019-national2-liberal-q21.md)
-- [可独立 XeLaTeX 编译的源码](derivative/reviewed/2024-two-proofs.tex)
-- [整套试卷逐题扫描脚本](scripts/scan_derivative_questions.py)：递归克隆上游后，生成机器候选 CSV，不能直接当成已确认数学答案。
-- [GitHub Actions 自动同步](.github/workflows/sync-upstream.yml)：多次运行均在分配 Runner 前失败，**自动化并未证明可用**；当前已提交的数据来自直接读取上游源码。
+**独立数学质检：3 道。** 其余 163 条尚未逐题完成数学核查。
+2010—2019 年先覆盖重点卷种，仍有省市卷别未穷尽。多卷相同题和变式使用 `duplicate_group` 保留溯源，当前没有盲目去重。
 
-2020 年新高考Ⅰ、Ⅱ卷出现疑似同题，已记录重复组，待题干与卷别进一步比对。原创证明不改变上游及第三方材料的许可证。
+GitHub Actions 同步工作流仍发生执行器分配前失败，目前不能宣称已通过自动同步验收。
+这一轮仅向 GitHub 提交索引、脚本和文字/TeX 源文件，**未生成或上传本地 PDF/ZIP**。

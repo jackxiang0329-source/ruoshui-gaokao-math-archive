@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper,UTF8]{ctexart}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\title{2019年全国Ⅱ卷（文科）第21题：导数与倒数零点}
+\author{三千弱水数学题库·独立复核}
+\date{2026年10月24日}
+\begin{document}
+\maketitle
+
+\noindent\textbf{出处：}2019年全国Ⅱ卷（文科）第21题。
+参见上游固定版本：
+\url{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_liberal.tex#L418}。
+
+\medskip
+考察函数
+\[
+  f(x)=(x-1)\ln x-x-1,\qquad x>0.
+\]
+
+\paragraph{一、唯一极值点。}
+定义域为 $(0,+\infty)$。求导得到
+\[
+ f'(x)=\ln x-\frac1x,\qquad
+ f''(x)=\frac{x+1}{x^2}>0 \quad(x>0).
+\]
+因此 $f'$ 在整个定义域上严格递增。又
+$f'(1)=-1<0$，$f'(e)=1-e^{-1}>0$。
+故存在唯一 $\alpha\in(1,e)$ 使 $f'(\alpha)=0$。
+于是 $f$ 在 $(0,\alpha)$ 上严格递减，在
+$(\alpha,+\infty)$ 上严格递增；$\alpha$ 是唯一极值点，
+且是严格极小值点。
+
+\paragraph{二、恰有两个实根。}
+注意 $f(1)=-2<0$，以及
+\[
+ \lim_{x\to0^+}f(x)=+\infty,
+ \qquad \lim_{x\to+\infty}f(x)=+\infty.
+\]
+结合连续性及前述严格单调性，在 $(0,1)$ 内有且仅有一个根
+$u$，在 $(\alpha,+\infty)$ 内有且仅有一个根 $v$；
+其余位置不存在零点。
+
+\paragraph{三、两根互为倒数。}
+对每个 $x>0$，直接计算
+\[
+ f\!\left(\frac1x\right)
+ =\left(\frac1x-1\right)\ln\frac1x-\frac1x-1
+ =\frac{(x-1)\ln x-x-1}{x}
+ =\frac{f(x)}{x}.
+\]
+故若 $f(u)=0$，则 $f(1/u)=0$。由 $0<u<1$，
+$1/u>1$，而在 $(1,\alpha]$ 上 $f<0$，
+故 $1/u=v$，因此
+\[
+ \boxed{uv=1}.
+\]
+
+\bigskip
+\noindent\textbf{核验状态：}数学证明已独立复核。
+本 TeX 源码尚未进行远端编译验收，不能标记为 \texttt{latex-compiled}。
+原始试题内容及图片的版权请遵守上游权利声明。
+\end{document}
