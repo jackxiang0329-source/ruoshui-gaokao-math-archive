@@ -1,6 +1,6 @@
 # 2010—2026 年高考导数大题：题目级总索引
 
-**合计 166 条来源定位记录，数学质检通过 2 条。**
+**合计 166 条来源定位记录，数学质检通过 3 条。**
 
 > 题号、文件路径、源码起始行与 SHA 来自上游真实 LaTeX；标签为人工初筛，不保证题目与答案的数学正确。多卷变体和疑似同题不去重计数。
 
@@ -108,7 +108,7 @@
 | 2019 | 全国Ⅰ卷理科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_1_science.tex#L287) | 正弦对数函数导函数极值与函数零点 | source-identified |
 | 2019 | 全国Ⅰ卷文科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_1_liberal.tex#L334) | 三角函数导函数的唯一零点与参数 | source-identified |
 | 2019 | 全国Ⅱ卷理科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_science.tex#L389) | 对数函数单调、零点与共切线 | source-identified |
-| 2019 | 全国Ⅱ卷文科 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_liberal.tex#L418) | 对数函数极值与互为倒数的零点 | source-identified |
+| 2019 | 全国Ⅱ卷文科 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_liberal.tex#L418) | 对数函数极值与互为倒数的零点 | math-checked |
 | 2019 | 全国Ⅲ卷理科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_3_science.tex#L316) | 三次函数含参单调与区间最值 | source-identified |
 | 2019 | 全国Ⅲ卷文科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_3_liberal.tex#L374) | 三次函数含参单调与最值差 | source-identified |
 | 2019 | 天津卷理科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/tianjin_science.tex#L317) | 指数三角函数导函数单调与估计 | source-identified |

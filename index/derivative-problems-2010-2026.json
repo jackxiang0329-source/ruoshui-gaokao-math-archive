@@ -1541,7 +1541,7 @@
       "problem_number": 21,
       "type": "core",
       "topic": "对数函数极值与互为倒数的零点",
-      "stage": "source-identified",
+      "stage": "math-checked",
       "source_id": "gaokao-math-problems-compilation",
       "source_path": "content/2019/national_paper_2_liberal.tex",
       "source_line": 418,

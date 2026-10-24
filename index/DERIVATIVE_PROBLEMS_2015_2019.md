@@ -62,7 +62,7 @@
 | 2019 | 江苏卷 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/jiangsu.tex#L208) | 三次函数及其导函数零点与极小值 | 待数学复核 |
 | 2019 | 全国Ⅰ卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_1_liberal.tex#L334) | 三角函数导函数的唯一零点与参数 | 待数学复核 |
 | 2019 | 全国Ⅰ卷理科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_1_science.tex#L287) | 正弦对数函数导函数极值与函数零点 | 待数学复核 |
-| 2019 | 全国Ⅱ卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_liberal.tex#L418) | 对数函数极值与互为倒数的零点 | 待数学复核 |
+| 2019 | 全国Ⅱ卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_liberal.tex#L418) | 对数函数极值与互为倒数的零点 | 数学独立复核见 [证明](../derivative/reviewed/2019-national2-liberal-q21.md) |
 | 2019 | 全国Ⅱ卷理科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_science.tex#L389) | 对数函数单调、零点与共切线 | 待数学复核 |
 | 2019 | 全国Ⅲ卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_3_liberal.tex#L374) | 三次函数含参单调与最值差 | 待数学复核 |
 | 2019 | 全国Ⅲ卷理科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_3_science.tex#L316) | 三次函数含参单调与区间最值 | 待数学复核 |

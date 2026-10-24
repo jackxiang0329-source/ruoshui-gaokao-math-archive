@@ -57,10 +57,11 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 
 已经完成 [2020—2026 年 58 道题目级候选索引](index/DERIVATIVE_PROBLEMS_2020_2026.md)，覆盖 7 个年份。每条记录包括实际题号、原始 LaTeX 固定版本和可追溯的题目起始行。**54 项为核心导数方向，2 项为导数应用，2 项仍待进一步归类**。
 
-目前只有其中 **2 道**已完成独立数学验证；其他题目仍处于“来源已确认、数学待核验”阶段。
+目前其中 **3 道**已完成独立数学验证；其他题目仍处于“来源已确认、数学待核验”阶段。
 
 - [完整 58 项 CSV](index/derivative-problems-2020-2026.csv) / [JSON](index/derivative-problems-2020-2026.json)
-- [独立核验的 Markdown 解答](derivative/reviewed/2024-two-proofs.md)
+- [独立核验的 Markdown 解答（2024 两题）](derivative/reviewed/2024-two-proofs.md)
+- [2019 全国Ⅱ卷文科第21题：唯一极值与倒数零点证明](derivative/reviewed/2019-national2-liberal-q21.md)
 - [可独立 XeLaTeX 编译的源码](derivative/reviewed/2024-two-proofs.tex)
 - [整套试卷逐题扫描脚本](scripts/scan_derivative_questions.py)：递归克隆上游后，生成机器候选 CSV，不能直接当成已确认数学答案。
 - [GitHub Actions 自动同步](.github/workflows/sync-upstream.yml)：多次运行均在分配 Runner 前失败，**自动化并未证明可用**；当前已提交的数据来自直接读取上游源码。
