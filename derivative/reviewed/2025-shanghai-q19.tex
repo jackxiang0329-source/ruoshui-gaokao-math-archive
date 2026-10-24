@@ -1,0 +1,52 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\title{2025年上海卷第19题：含参对数函数的极大值}
+\date{2026年10月24日}
+\begin{document}
+\maketitle
+\noindent\textbf{固定来源：}\url{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/shanghai.tex#L381}
+
+设
+\[
+ f_m(x)=x^2-(m+2)x+m\ln x,\quad x>0,\ m\in\mathbb R.
+\]
+\paragraph{一、求不等式解集}
+$f_m(1)=-m-1=0$ 导致 $m=-1$。
+此时 $f_{-1}(x)\le x^2-1$ 等价于
+$x+\ln x\ge1$。因为
+\[
+\frac{\mathrm d}{\mathrm dx}(x+\ln x)=1+\frac1x>0
+\quad(x>0)
+\]
+且 $1+\ln1=1$，故解集为
+\[
+\boxed{[1,+\infty)}.
+\]
+
+\paragraph{二、极大值存在的参数}
+求导并分解为
+\[
+f_m'(x)=\frac{(2x-m)(x-1)}{x}.
+\]
+\begin{enumerate}
+\item $m\le0$ 时，合法驻点仅 $x=1$，
+导数由负变正，仅有极小值。
+\item $0<m<2$ 时，$0<m/2<1$，
+导数正、负、正，在 $x=m/2$ 取得严格极大值。
+\item $m=2$ 时，$f_m'(x)=2(x-1)^2/x\ge0$，
+函数严格递增，没有极大值。
+\item $m>2$ 时，$1<m/2$，导数正、负、正，
+在 $x=1$ 取得严格极大值。
+\end{enumerate}
+故参数范围为
+\[
+\boxed{m\in(0,2)\cup(2,+\infty)}.
+\]
+特别注意 $m=2$ 的重驻点不是极值点。
+
+\bigskip
+\noindent\textbf{审校状态：}数学独立复核；
+新源码尚未实际编译。
+\end{document}

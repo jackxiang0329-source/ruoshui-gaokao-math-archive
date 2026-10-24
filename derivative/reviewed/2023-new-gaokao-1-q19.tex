@@ -1,0 +1,48 @@
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\title{2023年新高考Ⅰ卷第19题：指数函数与严格不等式}
+\date{2026年10月24日}
+\begin{document}
+\maketitle
+\noindent\textbf{固定来源：}\url{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/new_gaokao_paper_1.tex#L554}
+
+设
+\[
+f_a(x)=a(e^x+a)-x,\qquad x\in\mathbb R,\ a\in\mathbb R.
+\]
+\paragraph{一、单调性}
+$f_a'(x)=ae^x-1$。
+当 $a\le0$ 时，导数在 $\mathbb R$ 上严格负，
+$f_a$ 严格递减。
+当 $a>0$ 时，唯一驻点
+$x_*=-\ln a$，导数在其左侧为负、右侧为正。
+因此 $f_a$ 先严格递减后严格递增，且
+\[
+\min_{x\in\mathbb R}f_a(x)=f_a(-\ln a)
+=1+a^2+\ln a.
+\]
+
+\paragraph{二、证明全体 $x$ 上的严格不等式}
+当 $a>0$ 时，令
+\[
+h(a)=a^2-\ln a-\frac12,\qquad
+h'(a)=\frac{2a^2-1}{a}.
+\]
+由于导数由负变正，$h$ 在 $a=1/\sqrt2$ 处
+取得唯一全局最小值，且
+\[
+h(a)\ge h(1/\sqrt2)=\ln\sqrt2>0.
+\]
+所以对所有实数 $x$ 均有
+\[
+\boxed{f_a(x)\ge1+a^2+\ln a
+>2\ln a+\frac32}.
+\]
+不等式末端严格成立，包括函数自身取得极小值时。
+
+\bigskip
+\noindent\textbf{审校状态：}数学独立复核；
+新 TeX 尚未编译。
+\end{document}
