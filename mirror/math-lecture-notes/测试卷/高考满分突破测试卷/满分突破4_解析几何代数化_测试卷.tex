@@ -1,0 +1,198 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{高考数学满分突破·解析几何代数化}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 高考数学满分突破·解析几何代数化\quad 测试卷}\\[0.5em]
+{\large 满分150分\quad 考试时间120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）}
+
+\begin{enumerate}
+\item 椭圆$\dfrac{x^2}{9}+\dfrac{y^2}{4}=1$的离心率为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{\sqrt{5}}{3}$
+\item $\dfrac{2}{3}$
+\item $\dfrac{\sqrt{5}}{9}$
+\item $\dfrac{5}{9}$
+\end{enumerate}
+
+\item 双曲线$\dfrac{x^2}{4}-\dfrac{y^2}{3}=1$的渐近线方程为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $y=\pm\dfrac{\sqrt{3}}{2}x$
+\item $y=\pm\dfrac{2}{\sqrt{3}}x$
+\item $y=\pm\dfrac{3}{4}x$
+\item $y=\pm\dfrac{4}{3}x$
+\end{enumerate}
+
+\item 抛物线$y^2=4x$的焦点到准线的距离为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $4$
+\item $8$
+\end{enumerate}
+
+\item 已知椭圆$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的离心率为$\dfrac{1}{2}$，则$\dfrac{b}{a}$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{\sqrt{3}}{2}$
+\item $\dfrac{1}{2}$
+\item $\dfrac{1}{4}$
+\item $\dfrac{\sqrt{15}}{4}$
+\end{enumerate}
+
+\item 过点$(1,2)$且与直线$2x+y-1=0$平行的直线方程为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $2x+y-4=0$
+\item $2x+y+4=0$
+\item $x-2y+3=0$
+\item $x-2y-3=0$
+\end{enumerate}
+
+\item 设$F_1,F_2$为椭圆$\dfrac{x^2}{25}+\dfrac{y^2}{16}=1$的两个焦点，$P$为椭圆上一点，且$\angle F_1PF_2=60°$，则$\triangle F_1PF_2$的面积为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{16\sqrt{3}}{3}$
+\item $16\sqrt{3}$
+\item $8\sqrt{3}$
+\item $\dfrac{8\sqrt{3}}{3}$
+\end{enumerate}
+
+\item 已知直线$l:y=kx+1$与椭圆$\dfrac{x^2}{4}+y^2=1$有两个不同的交点，则$k$的取值范围是\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\left(-\dfrac{\sqrt{3}}{2},\dfrac{\sqrt{3}}{2}\right)$
+\item $\left(-\dfrac{\sqrt{2}}{2},\dfrac{\sqrt{2}}{2}\right)$
+\item $\left(-\dfrac{1}{2},\dfrac{1}{2}\right)$
+\item $\left(-\sqrt{3},\sqrt{3}\right)$
+\end{enumerate}
+
+\item 已知双曲线$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$（$a>0,b>0$）的一条渐近线方程为$y=\sqrt{3}x$，则该双曲线的离心率为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $2$
+\item $\sqrt{3}$
+\item $\dfrac{2\sqrt{3}}{3}$
+\item $\dfrac{\sqrt{3}}{2}$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\begin{enumerate}[start=9]
+\item 关于椭圆$\dfrac{x^2}{9}+\dfrac{y^2}{4}=1$，下列结论正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item 焦点在$x$轴上
+\item 长轴长为$6$
+\item 焦距为$2\sqrt{5}$
+\item 离心率为$\dfrac{\sqrt{5}}{3}$
+\end{enumerate}
+
+\item 设直线$l:y=kx+b$与圆$x^2+y^2=r^2$（$r>0$），下列说法正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item 直线与圆相切的充要条件是$d=r$（$d$为圆心到直线的距离）
+\item 直线与圆相交的充要条件是$d<r$
+\item 弦长公式为$|AB|=2\sqrt{r^2-d^2}$
+\item 当$b=0$时，直线必过原点
+\end{enumerate}
+
+\item 关于双曲线$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$（$a>0,b>0$），下列结论正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item 渐近线方程为$y=\pm\dfrac{b}{a}x$
+\item 离心率$e>1$
+\item 实轴长为$2a$
+\item 两渐近线的夹角$\theta$满足$\tan\dfrac{\theta}{2}=\dfrac{b}{a}$
+\end{enumerate}
+
+\item 关于抛物线$y^2=2px$（$p>0$），下列说法正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item 焦点为$\left(\dfrac{p}{2},0\right)$
+\item 准线方程为$x=-\dfrac{p}{2}$
+\item 通径长为$2p$
+\item 过焦点的弦长最小值为$2p$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\begin{enumerate}[start=13]
+\item 椭圆$\dfrac{x^2}{16}+\dfrac{y^2}{9}=1$的焦点坐标为\blank{4cm}。
+
+\item 过点$(2,1)$且与直线$x-2y+3=0$垂直的直线方程为\blank{4cm}。
+
+\item 双曲线$\dfrac{x^2}{4}-\dfrac{y^2}{5}=1$的焦距为\blank{2cm}。
+
+\item 已知$F$为抛物线$y^2=8x$的焦点，$A(1,2)$为抛物线上一点，则$|AF|=$ \blank{2cm}。
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\begin{enumerate}[start=17]
+\item （10分）已知椭圆$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的离心率为$\dfrac{\sqrt{3}}{2}$，且过点$(1,\dfrac{\sqrt{3}}{2})$。
+
+（1）求椭圆的方程；
+
+（2）若直线$l:y=kx+1$与该椭圆交于$A,B$两点，求弦$AB$的中点$M$的轨迹方程。
+
+\item （10分）已知双曲线$\dfrac{x^2}{4}-\dfrac{y^2}{3}=1$，$F_1,F_2$分别为左、右焦点。
+
+（1）求双曲线的渐近线方程；
+
+（2）若$P$为双曲线上一点，且$\angle F_1PF_2=90°$，求$\triangle F_1PF_2$的面积。
+
+\item （12分）已知抛物线$C:y^2=4x$的焦点为$F$，过$F$的直线$l$与抛物线交于$A,B$两点。
+
+（1）若$|AB|=8$，求直线$l$的方程；
+
+（2）设$O$为原点，证明：$\overrightarrow{OA}\cdot\overrightarrow{OB}$为定值；
+
+（3）求$|AB|$的最小值。
+
+\item （12分）已知椭圆$\dfrac{x^2}{4}+y^2=1$，设$A,B$为椭圆上两个不同的点。
+
+（1）若$AB$的中点为$M(1,\dfrac{1}{2})$，求直线$AB$的方程；
+
+（2）若$OA\perp OB$（$O$为原点），证明：$\dfrac{1}{|OA|^2}+\dfrac{1}{|OB|^2}$为定值。
+
+\item （13分）已知椭圆$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的离心率$e=\dfrac{\sqrt{2}}{2}$，且$a^2=2b^2$。
+
+（1）求椭圆的方程；
+
+（2）设直线$l:y=kx+m$与椭圆交于$A,B$两点，$M$为$AB$的中点，$O$为原点，若$OM\perp AB$，求$\triangle OAB$面积的最大值。
+
+\item （13分）在平面直角坐标系中，已知点$A(-1,0)$，$B(1,0)$，动点$P$满足$|PA|-|PB|=2$。
+
+（1）求点$P$的轨迹方程；
+
+（2）设$Q$为轨迹上一点，求$|QA|+|QB|$的最小值；
+
+（3）过点$B$作直线$l$与轨迹交于$M,N$两点，求$\overrightarrow{AM}\cdot\overrightarrow{AN}$的取值范围。
+\end{enumerate}
+
+\end{document}

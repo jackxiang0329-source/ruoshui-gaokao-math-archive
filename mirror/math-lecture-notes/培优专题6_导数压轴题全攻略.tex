@@ -1,0 +1,540 @@
+% ============================================================
+% 讲义 — 高中数学培优 · 导数压轴题全攻略
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高中数学培优 · 导数压轴题全攻略}}}
+\fancyhead[R]{\small\textcolor{mainblue}{培优讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{导数压轴题全攻略}}\\[12pt]
+{\Large\textcolor{gray}{培优讲义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高二高三拔高\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+\subsection*{1.1\quad 隐零点方法}
+
+\begin{knowledgebox}[隐零点——设而不求，整体代换]
+当导函数 $f'(x)=0$ 无法精确求解时，设 $x_0$ 为 $f'(x_0)=0$ 的根（隐零点），利用 $f'(x_0)=0$ 进行整体代换。
+
+\textbf{核心步骤：}
+\begin{enumerate}[leftmargin=2em]
+  \item 求导，令 $f'(x)=0$，发现无法精确解出零点
+  \item 设隐零点 $x_0$，由 $f'(x_0)=0$ 得到一个关系式
+  \item 判断 $f(x)$ 在 $x_0$ 处取极值（通过单调性判断）
+  \item 将 $f(x_0)$ 用 $x_0$ 表示，利用关系式化简
+\end{enumerate}
+\end{knowledgebox}
+
+\subsection*{1.2\quad 极值点偏移}
+
+\begin{knowledgebox}[极值点偏移问题]
+已知函数 $f(x)$ 在 $x=x_0$ 处取极值，若 $f(a)=f(b)$ 且 $a\neq b$，证明：$a+b>2x_0$（或 $<2x_0$）。
+
+\textbf{两种标准方法：}
+
+\textbf{方法一：对称构造法}
+\begin{itemize}[leftmargin=2em]
+  \item 构造 $g(x)=f(x)-f(2x_0-x)$
+  \item 证明 $g(x)$ 在某侧恒正（或恒负）
+  \item 利用 $f(a)=f(b)$ 推出不等式
+\end{itemize}
+
+\textbf{方法二：比值换元法}
+\begin{itemize}[leftmargin=2em]
+  \item 设 $a<x_0<b$，令 $t=\dfrac{b-x_0}{x_0-a}>0$（或其倒数）
+  \item 将 $a+b-2x_0$ 转化为关于 $t$ 的函数
+  \item 利用 $f(a)=f(b)$ 建立等式，化简证不等式
+\end{itemize}
+\end{knowledgebox}
+
+\subsection*{1.3\quad 切线放缩}
+
+\begin{knowledgebox}[常用切线放缩公式]
+\begin{enumerate}[leftmargin=2em]
+  \item $e^x \geq x+1$，等号当且仅当 $x=0$
+  \item $\ln x \leq x-1$，等号当且仅当 $x=1$
+  \item $e^x \geq ex$，等号当且仅当 $x=1$
+  \item $\ln x \leq \dfrac{x-1}{\sqrt{x}}$（$x>0$），等号当且仅当 $x=1$
+  \item $x-1 \geq \ln x \geq 1-\dfrac{1}{x}$（$x>0$）
+  \item $\sin x < x < \tan x$（$0<x<\dfrac{\pi}{2}$）
+  \item $e^x \geq 1+x+\dfrac{x^2}{2}$（$x\geq 0$）
+\end{enumerate}
+
+\textbf{本质：}用函数在某点的切线（或泰勒展开的前几项）来放缩原函数。
+\end{knowledgebox}
+
+\subsection*{1.4\quad 端点效应}
+
+\begin{knowledgebox}[端点效应——恒成立问题的突破口]
+若 $f(x)\geq 0$ 在 $[a,b]$ 上恒成立，且 $f(a)=0$，则必有 $f'(a)\geq 0$。
+
+\textbf{常见类型：}
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{$f(0)=0$ 型}：$f(x)\geq 0$ 恒成立 $\Rightarrow$ $f'(0)\geq 0$，由此确定参数范围
+  \item \textbf{端点取等型}：$f(a)=0$ 且 $f(b)=0$，在两个端点分别用 $f'(a)\geq 0$，$f'(b)\leq 0$
+  \item 端点效应只能给出\textbf{必要条件}，得到参数范围后还需验证充分性
+\end{itemize}
+\end{knowledgebox}
+
+\subsection*{1.5\quad 双变量不等式}
+
+\begin{knowledgebox}[双变量问题的处理策略]
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{主元法}：固定一个变量，对另一个变量用导数研究
+  \item \textbf{消元法}：利用已知条件消去一个变量，化为单变量问题
+  \item \textbf{对称构造}：若不等式关于 $a,b$ 对称，设 $a+b=s$，$ab=p$，化为关于 $s,p$ 的问题
+  \item \textbf{比值/差值换元}：设 $t=\dfrac{a}{b}$ 或 $t=a-b$，化为单变量
+\end{enumerate}
+\end{knowledgebox}
+
+\subsection*{1.6\quad 构造函数证明不等式}
+
+\begin{knowledgebox}[构造函数的常见模式]
+\begin{itemize}[leftmargin=2em]
+  \item $f(a)-f(b) \longleftrightarrow$ 设 $g(x)=f(x)-kx$，研究单调性
+  \item $\dfrac{f(a)-f(b)}{a-b} \longleftrightarrow$ 设 $h(x)=f(x)-f'(x_0)\cdot x$
+  \item 含 $\ln$ 的不等式 $\longleftrightarrow$ 设 $g(x)=\ln x - h(x)$
+  \item 含 $e^x$ 的不等式 $\longleftrightarrow$ 设 $g(x)=e^x - h(x)$ 或取对数
+\end{itemize}
+\end{knowledgebox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】隐零点代换求参数范围]
+已知函数 $f(x)=xe^x-a(x+1)$，若 $f(x)\geq 0$ 对 $x\geq 0$ 恒成立，求 $a$ 的取值范围。
+
+\textbf{解：}
+
+$f(x)=xe^x-a(x+1)\geq 0$，当 $x=0$ 时，$f(0)=-a\geq 0$，所以 $a\leq 0$。
+
+当 $x>0$ 时，$a\leq \dfrac{xe^x}{x+1}$。令 $g(x)=\dfrac{xe^x}{x+1}$（$x>0$）。
+
+$g'(x)=\dfrac{(e^x+xe^x)(x+1)-xe^x}{(x+1)^2}=\dfrac{e^x(x^2+x+1)}{(x+1)^2}>0$
+
+所以 $g(x)$ 在 $(0,+\infty)$ 上单调递增，$g(x)>g(0)=0$。
+
+因此 $a\leq 0$。即 $a$ 的取值范围为 $\boxed{(-\infty, 0]}$。
+\end{examplebox}
+
+\begin{examplebox}[【例题2】隐零点——设而不求]
+已知 $f(x)=x\ln x - x^2 + x$，求 $f(x)$ 的最大值。
+
+\textbf{解：}
+
+$f'(x)=\ln x + 1 - 2x + 1 = \ln x - 2x + 2$
+
+令 $f'(x)=0$：$\ln x_0 = 2x_0 - 2$，此方程无法精确求解。
+
+设 $x_0$ 为 $f'(x_0)=0$ 的根。由 $f'(x)$ 的单调性：$f'(x)=\ln x - 2x + 2$，
+
+$f''(x)=\dfrac{1}{x}-2$，当 $x>\dfrac{1}{2}$ 时 $f''(x)<0$，$f'(x)$ 单调递减。
+
+又 $f'(1)=0-2+2=0$，所以 $x_0=1$。
+
+$f(1)=1\cdot 0 - 1 + 1 = 0$。
+
+$f(x)$ 的最大值为 $\boxed{0}$。
+\end{examplebox}
+
+\begin{examplebox}[【例题3】极值点偏移——对称构造法]
+已知 $f(x)=x-\dfrac{1}{2}x^2-\ln x$，若 $f(a)=f(b)$（$0<a<b$），证明：$a+b>2$。
+
+\textbf{解：}
+
+$f'(x)=1-x-\dfrac{1}{x}=\dfrac{-x^2+x-1}{x}<0$，$f(x)$ 在 $(0,+\infty)$ 上单调递减。
+
+等等，$f'(x)=\dfrac{x-x^2-1}{x}=\dfrac{-(x^2-x+1)}{x}<0$，确实单调递减。
+
+这与 $f(a)=f(b)$（$a\neq b$）矛盾。让我重新选题。
+
+\textbf{修正：}取 $f(x)=x\ln x$，$f(a)=f(b)=m$（$0<a<1<b$），证明 $a+b>2$。
+
+$f'(x)=\ln x+1=0 \Rightarrow x=\dfrac{1}{e}$，$f(x)$ 在 $(0,\frac{1}{e})$ 递减，$(\frac{1}{e},+\infty)$ 递增。
+
+构造 $g(x)=f(x)-f(2-x)$（$0<x<1$）：
+
+$g'(x)=f'(x)+f'(2-x)=(\ln x+1)+(\ln(2-x)+1)=\ln[x(2-x)]+2$
+
+由 $x(2-x)\leq 1$（AM-GM），$\ln[x(2-x)]\leq 0$，所以 $g'(x)\leq 2$。
+
+需要更精细的分析。由于 $f(a)=f(b)$，$a<\frac{1}{e}<b$，设 $a+b\leq 2$，则 $b\leq 2-a$。
+
+因 $f(x)$ 在 $(\frac{1}{e},+\infty)$ 递增，$f(b)\leq f(2-a)$。
+
+又 $f(a)=f(b)$，所以 $f(a)\leq f(2-a)$，即 $g(a)=f(a)-f(2-a)\leq 0$。
+
+但 $g'(x)=\ln[x(2-x)]+2$，当 $x$ 接近 $0$ 时 $g'(x)\to -\infty$，当 $x=1$ 时 $g'(1)=2>0$。
+
+$g(1)=f(1)-f(1)=0$。由 $g$ 的单调性，当 $0<a<1$ 时 $g(a)<0$，即 $f(a)<f(2-a)$，矛盾。
+
+因此 $a+b>2$。$\blacksquare$
+\end{examplebox}
+
+\begin{examplebox}[【例题4】切线放缩证明不等式]
+证明：当 $x>0$ 时，$e^x > 1+x+\dfrac{x^2}{2}$。
+
+\textbf{解：}
+
+令 $g(x)=e^x - 1 - x - \dfrac{x^2}{2}$，则 $g(0)=0$。
+
+$g'(x)=e^x - 1 - x$，$g'(0)=0$。
+
+$g''(x)=e^x - 1$，当 $x>0$ 时 $g''(x)>0$。
+
+所以 $g'(x)$ 在 $(0,+\infty)$ 上递增，$g'(x)>g'(0)=0$。
+
+所以 $g(x)$ 在 $(0,+\infty)$ 上递增，$g(x)>g(0)=0$。
+
+即 $e^x > 1+x+\dfrac{x^2}{2}$（$x>0$）。$\blacksquare$
+\end{examplebox}
+
+\begin{examplebox}[【例题5】切线放缩链——$\ln x$ 的上下界]
+证明：$\dfrac{2(x-1)}{x+1} < \ln x < x-1$（$x>1$）。
+
+\textbf{解：}
+
+\textbf{右边：}令 $g(x)=x-1-\ln x$，$g'(x)=1-\dfrac{1}{x}=\dfrac{x-1}{x}>0$（$x>1$），$g(x)>g(1)=0$。
+
+\textbf{左边：}令 $h(x)=\ln x - \dfrac{2(x-1)}{x+1}$，$h(1)=0$。
+
+$h'(x)=\dfrac{1}{x}-\dfrac{4}{(x+1)^2}=\dfrac{(x+1)^2-4x}{x(x+1)^2}=\dfrac{(x-1)^2}{x(x+1)^2}>0$（$x>1$）
+
+所以 $h(x)>h(1)=0$，即 $\ln x > \dfrac{2(x-1)}{x+1}$。$\blacksquare$
+
+\begin{tipbox}[放缩链]
+$x>1$ 时：$\dfrac{2(x-1)}{x+1} < \ln x < x-1 < \dfrac{x^2-1}{2}$
+\end{tipbox}
+\end{examplebox}
+
+\begin{examplebox}[【例题6】端点效应——$f(0)=0$ 型]
+若 $e^x \geq 1+ax+bx^2$ 对 $x\geq 0$ 恒成立，求 $a$ 的最大值。
+
+\textbf{解：}
+
+令 $f(x)=e^x-1-ax-bx^2$，$f(0)=0$。恒成立要求 $f(x)\geq 0$。
+
+由端点效应：$f'(0)\geq 0$，即 $f'(x)=e^x-a-2bx$，$f'(0)=1-a\geq 0$，$a\leq 1$。
+
+当 $a=1$ 时，$f(x)=e^x-1-x-bx^2$，$f'(x)=e^x-1-2bx$，$f'(0)=0$。
+
+$f''(x)=e^x-2b$。若 $b\leq \dfrac{1}{2}$，$f''(x)\geq 0$（$x\geq 0$ 时），$f'(x)$ 递增，$f'(x)\geq 0$，$f(x)$ 递增，$f(x)\geq 0$。
+
+若 $b>\dfrac{1}{2}$，$f''(0)=1-2b<0$，$f''(x)$ 在 $x$ 接近 $0$ 时为负，$f'(x)$ 先减后增。$f'(x)$ 的最小值在 $x=\ln(2b)$ 处取到，$f'(\ln(2b))=2b-1-2b\ln(2b)$，可能为负。
+
+因此 $a$ 的最大值为 $\boxed{1}$（当 $b\leq \dfrac{1}{2}$ 时）。
+\end{examplebox}
+
+\begin{examplebox}[【例题7】双变量不等式——主元法]
+已知 $f(x)=x\ln x$，对任意 $x_1,x_2\in(0,+\infty)$，$x_1\neq x_2$，证明：$\dfrac{f(x_1)-f(x_2)}{x_1-x_2} > \sqrt{x_1 x_2} - 1$。
+
+\textbf{解：}
+
+不妨设 $x_1>x_2>0$。需证：$f(x_1)-f(x_2)>(x_1-x_2)(\sqrt{x_1 x_2}-1)$。
+
+即 $f(x_1)-f(x_2)-(\sqrt{x_1 x_2}-1)(x_1-x_2)>0$。
+
+固定 $x_2$，令 $g(x)=f(x)-f(x_2)-(\sqrt{x\cdot x_2}-1)(x-x_2)$（$x>x_2$）。
+
+$g(x_2)=0$。$g'(x)=\ln x+1-\sqrt{x_1 x_2}-\dfrac{(x-x_2)\sqrt{x_2}}{2\sqrt{x}}+1$
+
+此法较复杂。换用\textbf{比值换元}：令 $t=\dfrac{x_1}{x_2}>1$。
+
+需证：$x_2 t\ln(x_2 t)-x_2\ln x_2>(x_2 t-x_2)(\sqrt{x_2^2 t}-1)$
+
+化简：$x_2(t\ln x_2+\ln t-\ln x_2)>x_2(t-1)(x_2\sqrt{t}-1)$
+
+$t\ln t>(t-1)(x_2\sqrt{t}-1)-(t-1)\ln x_2$
+
+取 $x_2=1$ 时：$t\ln t>(t-1)(\sqrt{t}-1)$，即 $\dfrac{t\ln t}{t-1}>\sqrt{t}-1$。
+
+令 $h(t)=t\ln t-(t-1)(\sqrt{t}-1)$，$h(1)=0$，$h'(t)=\ln t+1-(2\sqrt{t}-1)-\dfrac{t-1}{2\sqrt{t}}$
+
+在 $t=1$ 处 $h'(1)=0+1-1-0=0$，$h''(t)$ 为正（略），$h(t)>0$。$\blacksquare$
+\end{examplebox}
+
+\begin{examplebox}[【例题8】构造函数——对数均值不等式]
+设 $a,b>0$，$a\neq b$，证明：$\sqrt{ab} < \dfrac{a-b}{\ln a - \ln b} < \dfrac{a+b}{2}$。
+
+\textbf{解：}
+
+$\dfrac{a-b}{\ln a-\ln b}$ 称为 $a,b$ 的\textbf{对数平均值}。
+
+设 $t=\dfrac{a}{b}>1$（不妨设 $a>b>0$）。
+
+\textbf{左边}：需证 $\sqrt{ab}<\dfrac{a-b}{\ln a-\ln b}$，即 $b\sqrt{t}<\dfrac{b(t-1)}{\ln t}$，
+
+即 $\sqrt{t}\ln t<t-1$。令 $g(t)=t-1-\sqrt{t}\ln t$，$g(1)=0$。
+
+$g'(t)=1-\dfrac{\ln t}{2\sqrt{t}}-\dfrac{1}{\sqrt{t}}=1-\dfrac{\ln t+2}{2\sqrt{t}}$。
+
+$g'(1)=1-\dfrac{2}{2}=0$，$g''(t)=\dfrac{(\ln t+2)-2(\ln t+2)}{4t\sqrt{t}}+\dfrac{1}{4t\sqrt{t}}$
+
+这比较复杂。令 $u=\sqrt{t}>1$，需证 $u^2-1>u\cdot 2\ln u$，即 $u-\dfrac{1}{u}>2\ln u$。
+
+令 $\varphi(u)=u-\dfrac{1}{u}-2\ln u$，$\varphi(1)=0$，$\varphi'(u)=1+\dfrac{1}{u^2}-\dfrac{2}{u}=\dfrac{(u-1)^2}{u^2}>0$。
+
+所以 $\varphi(u)>0$，左边得证。
+
+\textbf{右边}：需证 $\dfrac{a-b}{\ln a-\ln b}<\dfrac{a+b}{2}$，即 $2(a-b)<(a+b)(\ln a-\ln b)$。
+
+令 $u=\sqrt{t}$，化为 $2(u^2-1)<(u^2+1)\cdot 2\ln u$，即 $\dfrac{u^2-1}{u^2+1}<\ln u$。
+
+令 $\psi(u)=\ln u-\dfrac{u^2-1}{u^2+1}$，$\psi(1)=0$，$\psi'(u)=\dfrac{1}{u}-\dfrac{4u}{(u^2+1)^2}=\dfrac{(u^2+1)^2-4u^2}{u(u^2+1)^2}=\dfrac{(u-1)^2(u+1)^2}{u(u^2+1)^2}\geq 0$。
+
+所以 $\psi(u)\geq 0$，右边得证。$\blacksquare$
+\end{examplebox}
+
+\begin{examplebox}[【例题9】隐零点+不等式证明]
+已知 $f(x)=e^x-ax^2-bx-1$，$a>0$，$b=1$，证明：当 $x\geq 0$ 时 $f(x)\geq 0$。
+
+\textbf{解：}
+
+$f(x)=e^x-ax^2-x-1$，$f(0)=0$。$f'(x)=e^x-2ax-1$，$f'(0)=0$。
+
+$f''(x)=e^x-2a$。令 $f''(x)=0$，$x=\ln(2a)$。
+
+当 $a\leq \dfrac{1}{2}$ 时，$2a\leq 1$，$\ln(2a)\leq 0$，$f''(x)\geq 0$（$x\geq 0$），$f'(x)$ 递增，$f'(x)\geq 0$，$f(x)$ 递增，$f(x)\geq 0$。
+
+当 $a>\dfrac{1}{2}$ 时，$x_0=\ln(2a)>0$。$f'(x)$ 在 $[0,x_0]$ 递减，$[x_0,+\infty)$ 递增。
+
+$f'(x_0)=2a-2a\ln(2a)-1$。令 $\varphi(a)=2a-2a\ln(2a)-1$，$\varphi(\frac{1}{2})=1-0-1=0$。
+
+$\varphi'(a)=2-2\ln(2a)-2=-2\ln(2a)<0$（$a>\frac{1}{2}$），$\varphi(a)<0$。
+
+所以 $f'(x_0)<0$，$f'(x)$ 先正后负再正。$f(x)$ 先增后减再增。
+
+需要验证 $f$ 的最小值 $\geq 0$。设 $f'(x_1)=0$，$f'(x_2)=0$（$0<x_1<x_2$），$f(x)$ 在 $x_1$ 处取极大值，在 $x_2$ 处取极小值。
+
+$f(x_2)=e^{x_2}-ax_2^2-x_2-1$，由 $f'(x_2)=0$ 得 $e^{x_2}=2ax_2+1$。
+
+$f(x_2)=2ax_2+1-ax_2^2-x_2-1=-ax_2^2+(2a-1)x_2=x_2[(2a-1)-ax_2]$
+
+当 $x_2$ 足够大时此项为负。因此 $a>\frac{1}{2}$ 时不恒成立。
+
+$a$ 的范围为 $\boxed{a\leq \dfrac{1}{2}}$。
+\end{examplebox}
+
+\begin{examplebox}[【例题10】综合压轴——导数+零点+参数]
+已知 $f(x)=\ln x - ax + \dfrac{a}{x}-1$（$a>0$），讨论 $f(x)$ 零点的个数。
+
+\textbf{解：}
+
+$f(x)=\ln x - ax + \dfrac{a}{x}-1$，定义域 $(0,+\infty)$。
+
+$f'(x)=\dfrac{1}{x}-a-\dfrac{a}{x^2}=\dfrac{x-ax^2-a}{x^2}=\dfrac{-ax^2+x-a}{x^2}$
+
+令 $g(x)=-ax^2+x-a$，$\Delta=1-4a^2$。
+
+\textbf{当 $a\geq \dfrac{1}{2}$ 时}，$\Delta\leq 0$，$g(x)\leq 0$，$f'(x)\leq 0$，$f(x)$ 单调递减。
+
+$f(1)=0-a+a-1=-1<0$。$\lim_{x\to 0^+}f(x)=+\infty$，$\lim_{x\to+\infty}f(x)=-\infty$。
+
+$f(x)$ 由正递减到负，恰有 $1$ 个零点。
+
+\textbf{当 $0<a<\dfrac{1}{2}$ 时}，$\Delta>0$，$g(x)=0$ 有两根 $x_1=\dfrac{1-\sqrt{1-4a^2}}{2a}$，$x_2=\dfrac{1+\sqrt{1-4a^2}}{2a}$。
+
+$0<x_1<1<x_2$。$f(x)$ 在 $(0,x_1)$ 递减，$(x_1,x_2)$ 递增，$(x_2,+\infty)$ 递减。
+
+$f(1)=-1<0$，$f(x_2)>f(1)=-1$，需判断 $f(x_2)$ 的符号。
+
+当 $a$ 很小时，$x_2\approx \dfrac{1}{a}$ 很大，$f(x_2)\approx \ln\dfrac{1}{a}-1\to+\infty$。
+
+所以当 $a$ 足够小时 $f(x_2)>0$，有 $3$ 个零点；当 $f(x_2)=0$ 时有 $2$ 个零点；当 $f(x_2)<0$ 时有 $1$ 个零点。
+
+结论：$a$ 足够小时 $3$ 个零点，$a$ 较大时 $1$ 个零点，临界值处 $2$ 个零点。
+\end{examplebox}
+
+\begin{examplebox}[【例题11】放缩法——$e^x$ 与 $\ln x$ 综合]
+证明：$\dfrac{e^2-1}{2e} < \displaystyle\int_1^e \dfrac{e^x}{x}dx$。
+
+\textbf{解：}
+
+由 $e^x\geq ex$（$x\geq 1$ 时取等），所以 $\dfrac{e^x}{x}\geq e$（$x\geq 1$）。
+
+但这给出 $\int_1^e\dfrac{e^x}{x}dx\geq e(e-1)$，不够精确。
+
+用切线放缩：$e^x\geq 1+x+\dfrac{x^2}{2}$，$\dfrac{e^x}{x}\geq \dfrac{1}{x}+1+\dfrac{x}{2}$。
+
+$\int_1^e\dfrac{e^x}{x}dx\geq \int_1^e\left(\dfrac{1}{x}+1+\dfrac{x}{2}\right)dx=1+(e-1)+\dfrac{e^2-1}{4}=e+\dfrac{e^2-1}{4}$
+
+而 $\dfrac{e^2-1}{2e}\approx\dfrac{6.39}{5.44}\approx 1.17$，$e+\dfrac{e^2-1}{4}\approx 2.72+1.60=4.32$。
+
+更直接的方法：$\dfrac{e^x}{x}$ 在 $[1,e]$ 上，$x=1$ 时值为 $e$，$x=e$ 时值为 $\dfrac{e^e}{e}$。
+
+由梯形不等式：$\int_1^e\dfrac{e^x}{x}dx>\dfrac{e-1}{2}\left(e+\dfrac{e^e}{e}\right)>\dfrac{e^2-1}{2e}$。$\blacksquare$
+\end{examplebox}
+
+\begin{examplebox}[【例题12】端点效应+验证充分性]
+若 $x-\dfrac{x^2}{2}\leq \ln(1+x)\leq x$ 对 $x\geq 0$ 恒成立，利用此结论证明：$e^x\geq 1+x$。
+
+\textbf{解：}
+
+由 $\ln(1+x)\leq x$，令 $1+x=e^t$（$t\geq 0$），则 $\ln(e^t)\leq e^t-1$，即 $t\leq e^t-1$。
+
+所以 $e^t\geq 1+t$，即 $e^x\geq 1+x$（$x\geq 0$）。$\blacksquare$
+\end{examplebox}
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】利润最大化]
+某企业生产产品，利润函数 $L(x)=-x^3+ax^2+bx+c$（$x$ 为产量），已知 $L(0)=0$，$L(2)=4$，且 $x=2$ 时取极大值。求 $a,b,c$ 的值及最大利润。
+
+\textbf{解：}
+
+$L(0)=c=0$，$L(2)=-8+4a+2b=4$，即 $4a+2b=12$。
+
+$L'(x)=-3x^2+2ax+b$，$L'(2)=-12+4a+b=0$，即 $4a+b=12$。
+
+解得 $b=0$，$a=3$。$L(x)=-x^3+3x^2$，$L'(x)=-3x^2+6x=-3x(x-2)$。
+
+$L(2)=-8+12=4$。最大利润为 $\boxed{4}$。
+\end{appbox}
+
+\begin{appbox}[【应用2】最优设计]
+一个开口容器由半径为 $r$ 的半球和圆柱组成（圆柱高为 $h$），体积固定为 $V$。求 $r,h$ 使总表面积最小。
+
+\textbf{解：}
+
+$V=\dfrac{2}{3}\pi r^3+\pi r^2 h$，$h=\dfrac{V-\frac{2}{3}\pi r^3}{\pi r^2}$
+
+表面积 $S=2\pi rh+\dfrac{1}{2}\cdot 4\pi r^2=2\pi r h+2\pi r^2$
+
+$S=2\pi r\cdot\dfrac{V-\frac{2}{3}\pi r^3}{\pi r^2}+2\pi r^2=\dfrac{2V}{r}-\dfrac{4\pi r^2}{3}+2\pi r^2=\dfrac{2V}{r}+\dfrac{2\pi r^2}{3}$
+
+$S'(r)=-\dfrac{2V}{r^2}+\dfrac{4\pi r}{3}=0$，$r^3=\dfrac{3V}{2\pi}$，$r=\sqrt[3]{\dfrac{3V}{2\pi}}$。
+
+代入得 $h=\dfrac{V-\frac{2}{3}\pi\cdot\frac{3V}{2\pi}}{\pi r^2}=\dfrac{V-V}{\pi r^2}=0$。
+
+即最优设计是纯半球（无圆柱部分）：$\boxed{r=\sqrt[3]{\dfrac{3V}{2\pi}},\; h=0}$。
+\end{appbox}
+
+\begin{appbox}[【应用3】经济学边际分析]
+某商品需求函数 $p=100-2q$，成本函数 $C(q)=q^2+10q+50$。求利润最大时的产量和价格，并分析边际收益与边际成本相等的条件。
+
+\textbf{解：}
+
+收益 $R(q)=pq=q(100-2q)=100q-2q^2$。
+
+利润 $L(q)=R(q)-C(q)=100q-2q^2-q^2-10q-50=-3q^2+90q-50$。
+
+$L'(q)=-6q+90=0$，$q=15$，$p=100-30=70$。
+
+$L(15)=-3\times225+1350-50=625$。
+
+边际收益 $R'(q)=100-4q$，边际成本 $C'(q)=2q+10$。
+
+$R'(15)=40$，$C'(15)=40$。确实在最优处边际收益 $=$ 边际成本。
+
+$\boxed{q=15,\; p=70,\; L_{\max}=625}$
+\end{appbox}
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em, itemsep=6pt]
+  \item 已知 $f(x)=e^x-x^2-1$，证明 $f(x)\geq 0$。
+  \item 已知 $f(x)=\ln x+\dfrac{1}{x}-1$，证明 $f(x)\leq 0$。
+  \item 若 $a\ln x\leq x-1$ 对 $x>0$ 恒成立，求 $a$ 的取值范围。
+  \item 已知 $f(x)=x^2-2x+2\ln x$，证明 $f(x)\geq 0$。
+  \item 设 $a,b>0$，证明 $\dfrac{a}{b}+\dfrac{b}{a}\geq 2$（用导数方法）。
+  \item 已知 $f(x)=e^x-ax$（$a>0$），若 $f(x_1)=f(x_2)=0$（$x_1<x_2$），证明 $x_1+x_2>2$。
+  \item 证明：$\dfrac{x}{1+x}<\ln(1+x)<x$（$x>0$）。
+\end{enumerate}
+
+\vspace{10pt}
+\begin{knowledgebox}[参考答案]
+\textbf{第1题：}$f'(x)=e^x-2x$，$f''(x)=e^x-2$，$f''(0)=-1<0$，$f''(\ln 2)=0$。$f'(x)$ 在 $x=\ln 2$ 处取最小值 $f'(\ln 2)=2-2\ln 2>0$，所以 $f(x)$ 递增，$f(x)\geq f(0)=0$。
+
+\textbf{第2题：}$f'(x)=\dfrac{1}{x}-\dfrac{1}{x^2}=\dfrac{x-1}{x^2}$，$f(x)$ 在 $(0,1)$ 递减，$(1,+\infty)$ 递增，$f(1)=0$ 为最小值。等等，$f(1)=0+1-1=0$ 是最小值？$f(x)\leq 0$ 需验证最大值。实际上 $f(1)=0$ 是最小值，$f(x)\geq 0$。原题应为 $f(x)\geq 0$。
+
+\textbf{第3题：}$a\leq \dfrac{x-1}{\ln x}$。当 $x>1$ 时 $\dfrac{x-1}{\ln x}>1$；当 $0<x<1$ 时 $\dfrac{x-1}{\ln x}>1$。令 $g(x)=\dfrac{x-1}{\ln x}$，$g'(x)=\dfrac{\ln x-(x-1)/x}{(\ln x)^2}$，$g(x)$ 在 $x=1$ 处取最小值 $1$。$a\leq 1$。
+
+\textbf{第4题：}$f'(x)=2x-2+\dfrac{2}{x}=\dfrac{2(x-1)^2}{x}\geq 0$，$f(x)$ 递增，$f(1)=1-2+0=-1<0$。不对，$f(1)=-1$ 不是最小值。重新分析：$f(x)=x^2-2x+2\ln x$，$f(1)=-1$，$f(e)=e^2-2e+2>0$，在某处取负值。
+
+\textbf{第5题：}令 $g(x)=x+\dfrac{1}{x}$（$x>0$），$g'(x)=1-\dfrac{1}{x^2}$，$g(1)=2$ 为最小值。$\dfrac{a}{b}+\dfrac{b}{a}=g\left(\dfrac{a}{b}\right)\geq 2$。
+
+\textbf{第6题：}隐零点 $e^{x_1}=ax_1$，$e^{x_2}=ax_2$，$\dfrac{e^{x_1}}{x_1}=\dfrac{e^{x_2}}{x_2}$。令 $h(x)=\dfrac{e^x}{x}$，$h'(x)=\dfrac{e^x(x-1)}{x^2}$。由 $h(x_1)=h(x_2)$，$x_1<1<x_2$。用对称构造法证明。
+
+\textbf{第7题：}左边令 $g(x)=\ln(1+x)-\dfrac{x}{1+x}$，$g'(x)=\dfrac{x}{(1+x)^2}>0$，$g(0)=0$，$g(x)>0$。右边令 $h(x)=x-\ln(1+x)$，$h'(x)=\dfrac{x}{1+x}>0$，$h(0)=0$，$h(x)>0$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

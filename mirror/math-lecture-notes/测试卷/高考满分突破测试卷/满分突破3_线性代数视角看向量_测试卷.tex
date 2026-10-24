@@ -1,0 +1,200 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{高考数学满分突破·线性代数视角看向量}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 高考数学满分突破·线性代数视角看向量\quad 测试卷}\\[0.5em]
+{\large 满分150分\quad 考试时间120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）}
+
+\begin{enumerate}
+\item 已知向量$\vec{a}=(1,2)$，$\vec{b}=(x,-4)$，若$\vec{a}\parallel\vec{b}$，则$x$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $2$
+\item $-2$
+\item $8$
+\item $-8$
+\end{enumerate}
+
+\item 已知$|\vec{a}|=2$，$|\vec{b}|=3$，$\vec{a}\cdot\vec{b}=-3$，则$\vec{a}$与$\vec{b}$的夹角为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{\pi}{6}$
+\item $\dfrac{\pi}{3}$
+\item $\dfrac{2\pi}{3}$
+\item $\dfrac{5\pi}{6}$
+\end{enumerate}
+
+\item 设$\vec{a}=(1,1)$，$\vec{b}=(1,-1)$，$\vec{c}=(3,1)$，若$\vec{c}=\lambda\vec{a}+\mu\vec{b}$，则$\lambda+\mu$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+
+\item 在$\triangle ABC$中，$\overrightarrow{AB}=(2,3)$，$\overrightarrow{AC}=(1,k)$，若$\triangle ABC$为直角三角形，且$\angle A$为直角，则$k$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $-\dfrac{2}{3}$
+\item $\dfrac{2}{3}$
+\item $-\dfrac{3}{2}$
+\item $\dfrac{3}{2}$
+\end{enumerate}
+
+\item 已知$\vec{a}=(2,1)$，$\vec{b}=(-1,3)$，则$\vec{a}$在$\vec{b}$方向上的投影为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{1}{\sqrt{10}}$
+\item $\dfrac{1}{\sqrt{5}}$
+\item $\dfrac{1}{2}$
+\item $1$
+\end{enumerate}
+
+\item 设$O$为$\triangle ABC$所在平面内一点，若$\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}=\vec{0}$，则$O$为$\triangle ABC$的\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item 外心
+\item 内心
+\item 重心
+\item 垂心
+\end{enumerate}
+
+\item 已知向量$\vec{a}=(1,\sqrt{3})$，$|\vec{b}|=2$，$\vec{a}\cdot\vec{b}=2$，则$|\vec{a}-\vec{b}|$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $\sqrt{3}$
+\item $\sqrt{5}$
+\end{enumerate}
+
+\item 在平面直角坐标系中，已知$A(1,0)$，$B(0,1)$，$C(\cos\theta,\sin\theta)$，当$\overrightarrow{AC}\cdot\overrightarrow{BC}$取得最小值时，$\theta$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{\pi}{4}$
+\item $\dfrac{\pi}{3}$
+\item $\dfrac{3\pi}{4}$
+\item $\dfrac{5\pi}{4}$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\begin{enumerate}[start=9]
+\item 已知$\vec{a},\vec{b}$为非零向量，下列条件中能推出$\vec{a}\parallel\vec{b}$的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\vec{a}=2\vec{b}$
+\item $\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|$
+\item $\vec{a}\cdot\vec{b}=-|\vec{a}||\vec{b}|$
+\item $|\vec{a}+\vec{b}|=|\vec{a}|+|\vec{b}|$
+\end{enumerate}
+
+\item 下列关于向量运算的说法正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\vec{a}\cdot(\vec{b}\cdot\vec{c})=(\vec{a}\cdot\vec{b})\cdot\vec{c}$
+\item $(\vec{a}+\vec{b})\cdot(\vec{a}-\vec{b})=|\vec{a}|^2-|\vec{b}|^2$
+\item $|\vec{a}\cdot\vec{b}|\leq|\vec{a}||\vec{b}|$
+\item $|\vec{a}+\vec{b}|\leq|\vec{a}|+|\vec{b}|$
+\end{enumerate}
+
+\item 已知$\vec{e_1},\vec{e_2}$是平面内两个不共线的向量，$\vec{a}=2\vec{e_1}+\vec{e_2}$，$\vec{b}=\vec{e_1}-\vec{e_2}$，则下列结论正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\vec{a}+\vec{b}=3\vec{e_1}$
+\item $\vec{a}-\vec{b}=\vec{e_1}+2\vec{e_2}$
+\item $\vec{a}\cdot\vec{b}=|\vec{e_1}|^2-|\vec{e_2}|^2-\vec{e_1}\cdot\vec{e_2}$
+\item 若$\vec{e_1}\perp\vec{e_2}$且$|\vec{e_1}|=|\vec{e_2}|=1$，则$\vec{a}\cdot\vec{b}=1$
+\end{enumerate}
+
+\item 关于平面向量基本定理，下列说法正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item 平面内任意两个不共线的向量都可以作为基底
+\item 同一向量在不同基底下的坐标表示不同
+\item 若$\vec{a}=\lambda_1\vec{e_1}+\mu_1\vec{e_2}$，$\vec{b}=\lambda_2\vec{e_1}+\mu_2\vec{e_2}$，则$\vec{a}=\vec{b}$当且仅当$\lambda_1=\lambda_2$且$\mu_1=\mu_2$
+\item 零向量在任何基底下的坐标都是$(0,0)$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\begin{enumerate}[start=13]
+\item 已知$\vec{a}=(3,4)$，$\vec{b}=(1,2)$，则$\text{proj}_{\vec{b}}\vec{a}=$ \blank{4cm}。
+
+\item 在$\triangle ABC$中，$\overrightarrow{AB}=(2,1)$，$\overrightarrow{AC}=(4,k)$，若$A,B,C$三点共线，则$k=$ \blank{2cm}。
+
+\item 设$\vec{a}=(1,2)$，$\vec{b}=(m,1)$，若$\vec{a}+2\vec{b}$与$2\vec{a}-\vec{b}$平行，则$m=$ \blank{2cm}。
+
+\item 已知$|\vec{a}|=1$，$|\vec{b}|=2$，$\vec{a}$与$\vec{b}$的夹角为$\dfrac{\pi}{3}$，则$|2\vec{a}-\vec{b}|=$ \blank{2cm}。
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\begin{enumerate}[start=17]
+\item （10分）已知$\vec{a}=(2,1)$，$\vec{b}=(1,3)$，$\vec{c}=(3,5)$。
+
+（1）求$\vec{c}$在基底$\{\vec{a},\vec{b}\}$下的坐标；
+
+（2）设$\vec{d}=t\vec{a}+(1-t)\vec{b}$，求$|\vec{d}|$的最小值及对应的$t$值。
+
+\item （10分）在$\triangle ABC$中，$\overrightarrow{AB}\cdot\overrightarrow{AC}=8$，$\overrightarrow{BA}\cdot\overrightarrow{BC}=4$。
+
+（1）求$\overrightarrow{CA}\cdot\overrightarrow{CB}$的值；
+
+（2）若$|\overrightarrow{AB}|=4$，$|\overrightarrow{AC}|=4$，求$\overrightarrow{BC}$的长度。
+
+\item （12分）已知$\vec{a}=(\cos\alpha,\sin\alpha)$，$\vec{b}=(\cos\beta,\sin\beta)$。
+
+（1）证明：$|\vec{a}-\vec{b}|=2\left|\sin\dfrac{\alpha-\beta}{2}\right|$；
+
+（2）利用（1）的结论，推导$\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta$（两角差的余弦公式）。
+
+\item （12分）已知向量$\vec{a}=(1,0)$，$\vec{b}=(0,1)$，$\vec{c}=(\cos\theta,\sin\theta)$，其中$\theta\in[0,2\pi)$。
+
+（1）设$\vec{d}=\vec{c}-(\vec{c}\cdot\vec{a})\vec{a}-(\vec{c}\cdot\vec{b})\vec{b}$，求$|\vec{d}|$的值；
+
+（2）求$\vec{c}$在$\vec{a}+\vec{b}$方向上的投影长度，并求该投影长度的最大值；
+
+（3）若$|t\vec{a}+\vec{b}|\geq|\vec{c}|$对$\theta\in[0,2\pi)$恒成立，求$t$的取值范围。
+
+\item （13分）在平面直角坐标系中，已知$A(-1,0)$，$B(1,0)$，$P(x,y)$为平面上的动点，设$\overrightarrow{PA}\cdot\overrightarrow{PB}=S$。
+
+（1）当$S=0$时，求点$P$的轨迹方程；
+
+（2）当$S=-1$时，求点$P$的轨迹方程，并判断该轨迹与圆$x^2+y^2=4$的位置关系；
+
+（3）当$|PA|^2+|PB|^2=6$时，求点$P$的轨迹方程，并计算该轨迹的面积。
+
+\item （13分）已知两个非零向量$\vec{a},\vec{b}$满足$|\vec{a}|=2$，$|\vec{b}|=3$，$\vec{a}\cdot\vec{b}=-3$。
+
+（1）求$\vec{a}$与$\vec{b}$的夹角；
+
+（2）设$\vec{u}=\vec{a}+t\vec{b}$（$t\in\mathbb{R}$），求$|\vec{u}|$的最小值及对应的$t$值；
+
+（3）在（2）的条件下，若$\vec{v}=\vec{a}-\vec{b}$，求$\vec{u}$与$\vec{v}$的夹角$\theta$关于$t$的表达式，并求$\theta$的取值范围。
+\end{enumerate}
+
+\end{document}

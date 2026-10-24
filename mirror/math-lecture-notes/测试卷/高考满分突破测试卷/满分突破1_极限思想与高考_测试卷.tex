@@ -1,0 +1,198 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{高考数学满分突破·极限思想与高考}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 高考数学满分突破·极限思想与高考\quad 测试卷}\\[0.5em]
+{\large 满分150分\quad 考试时间120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）}
+
+\begin{enumerate}
+\item 已知数列$\{a_n\}$满足$a_1=1$，$a_{n+1}=\dfrac{a_n}{1+a_n}$，则$\lim\limits_{n\to\infty}na_n$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $0$
+\item $1$
+\item $\dfrac{1}{2}$
+\item $2$
+\end{enumerate}
+
+\item 设$f(x)=\dfrac{\sin x-x}{x^3}$，则$\lim\limits_{x\to 0}f(x)$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $-\dfrac{1}{6}$
+\item $0$
+\item $\dfrac{1}{6}$
+\item $1$
+\end{enumerate}
+
+\item 已知函数$f(x)=x^2-2x+3$在区间$[0,a]$上的值域为$[2,3]$，则$a$的取值范围是\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $[1,2]$
+\item $[0,2]$
+\item $[1,3]$
+\item $[2,3]$
+\end{enumerate}
+
+\item 设$a_n=\left(1+\dfrac{1}{n}\right)^{n+1}$，$b_n=\left(1+\dfrac{1}{n}\right)^{n}$，则$a_n$与$b_n$的大小关系为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $a_n > b_n$
+\item $a_n < b_n$
+\item $a_n = b_n$
+\item 不确定
+\end{enumerate}
+
+\item 已知$\lim\limits_{n\to\infty}\left(\dfrac{n^2+1}{n+1}-an-b\right)=0$，则$a+b$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $0$
+\item $1$
+\item $-1$
+\item $2$
+\end{enumerate}
+
+\item 设$f(x)=\begin{cases} \dfrac{\sin 2x}{x}, & x\neq 0 \\ a, & x=0 \end{cases}$在$x=0$处连续，则$a$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $0$
+\item $1$
+\item $2$
+\item $-2$
+\end{enumerate}
+
+\item 已知$a>0$，$b>0$，且$a+b=1$，则$\dfrac{1}{a}+\dfrac{1}{b}$的最小值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $2$
+\item $3$
+\item $4$
+\item $5$
+\end{enumerate}
+
+\item 设$x_n=\sqrt{2+\sqrt{2+\sqrt{2+\cdots}}}$（$n$层根号），则$\lim\limits_{n\to\infty}x_n$的值为\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $\sqrt{2}$
+\item $\dfrac{1+\sqrt{5}}{2}$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\begin{enumerate}[start=9]
+\item 下列极限中，值为$0$的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $\lim\limits_{n\to\infty}\dfrac{n}{2^n}$
+\item $\lim\limits_{n\to\infty}\dfrac{\sin n}{n}$
+\item $\lim\limits_{n\to\infty}\dfrac{n!}{n^n}$
+\item $\lim\limits_{n\to\infty}\left(1+\dfrac{1}{n}\right)^n$
+\end{enumerate}
+
+\item 关于函数极限，下列说法正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item 若$\lim\limits_{x\to x_0}f(x)$存在，则$f(x)$在$x_0$处有定义
+\item 若$f(x)$在$x_0$处连续，则$\lim\limits_{x\to x_0}f(x)=f(x_0)$
+\item $\lim\limits_{x\to 0}x\sin\dfrac{1}{x}=0$
+\item $\lim\limits_{x\to\infty}\left(1+\dfrac{1}{x}\right)^x=e$
+\end{enumerate}
+
+\item 已知数列$\{a_n\}$满足$a_1=1$，$a_{n+1}=a_n+\dfrac{1}{a_n}$，则下列结论正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item 数列$\{a_n\}$单调递增
+\item $a_n \to +\infty$（$n\to\infty$）
+\item $a_n^2 \approx 2n$（$n$充分大时）
+\item 数列$\{a_n\}$有界
+\end{enumerate}
+
+\item 设$S_n=\sum\limits_{k=1}^{n}\dfrac{1}{k(k+1)}$，则下列结论正确的有\blank{3cm}。
+\begin{enumerate}[label=\Alph*.]
+\item $S_n=\dfrac{n}{n+1}$
+\item $\lim\limits_{n\to\infty}S_n=1$
+\item $S_n=1-\dfrac{1}{n+1}$
+\item $S_n$单调递减
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\begin{enumerate}[start=13]
+\item $\lim\limits_{n\to\infty}\left(\dfrac{1}{1\times2}+\dfrac{1}{2\times3}+\cdots+\dfrac{1}{n(n+1)}\right)=$ \blank{3cm}。
+
+\item 已知$\lim\limits_{x\to 1}\dfrac{x^2+ax+b}{x-1}=3$，则$a=$ \blank{2cm}，$b=$ \blank{2cm}。
+
+\item 设$a_n=\dfrac{1}{n^2+n}$，则$\sum\limits_{k=1}^{n}a_k=$ \blank{3cm}。
+
+\item 若$\lim\limits_{n\to\infty}\dfrac{an^2+bn+c}{2n^2+3n+1}=\dfrac{1}{2}$，则$a=$ \blank{2cm}。
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\begin{enumerate}[start=17]
+\item （10分）已知数列$\{a_n\}$满足$a_1=1$，$a_{n+1}=\dfrac{a_n}{2+a_n}$（$n\in\mathbb{N}^*$）。
+
+（1）求数列$\{a_n\}$的通项公式；
+
+（2）求$\lim\limits_{n\to\infty}na_n$的值。
+
+\item （10分）已知函数$f(x)=\dfrac{e^x-1-x}{x^2}$（$x\neq 0$）。
+
+（1）利用泰勒展开（或洛必达法则），求$\lim\limits_{x\to 0}f(x)$的值；
+
+（2）判断$f(x)$在$x>0$时的单调性，并证明你的结论。
+
+\item （12分）设$a_n=\left(1+\dfrac{1}{n}\right)^n$（$n\in\mathbb{N}^*$）。
+
+（1）证明：数列$\{a_n\}$单调递增；
+
+（2）证明：数列$\{a_n\}$有上界（提示：利用二项式定理展开）；
+
+（3）由此说明$\lim\limits_{n\to\infty}a_n$存在，记为$e$，并估算$e$的值介于哪两个整数之间。
+
+\item （12分）在平面直角坐标系中，设点$P_n$的坐标为$\left(\dfrac{n}{n+1},\dfrac{n}{n+1}\right)$（$n=1,2,3,\ldots$）。
+
+（1）求$|OP_n|$（$O$为原点）的表达式，并求$\lim\limits_{n\to\infty}|OP_n|$的值；
+
+（2）设$A_n$为$\triangle OP_nP_{n+1}$的面积，求$\sum\limits_{k=1}^{n}A_k$的表达式，并求$\lim\limits_{n\to\infty}\sum\limits_{k=1}^{n}A_k$。
+
+\item （13分）已知$f(x)=\ln(1+x)-x+\dfrac{x^2}{2}$。
+
+（1）求$f(x)$的导数，并证明：当$x>0$时，$f(x)>0$；
+
+（2）利用（1）的结论，证明：$\left(1+\dfrac{1}{n}\right)^n < e < \left(1+\dfrac{1}{n}\right)^{n+1}$对一切正整数$n$成立。
+
+\item （13分）设$S_n=\sum\limits_{k=1}^{n}\dfrac{1}{k}$为调和级数的前$n$项和。
+
+（1）证明：$\ln(n+1) < S_n < 1+\ln n$（$n\geq 2$）；
+
+（2）利用（1）的结论，证明：$\lim\limits_{n\to\infty}\dfrac{S_n}{\ln n}=1$（即$S_n\sim\ln n$）；
+
+（3）定义$\gamma=\lim\limits_{n\to\infty}(S_n-\ln n)$（欧拉常数），估算$\gamma$介于哪两个正数之间（给出具体范围）。
+\end{enumerate}
+
+\end{document}
