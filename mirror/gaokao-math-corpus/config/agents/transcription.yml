@@ -1,0 +1,108 @@
+id: transcription_agent
+purpose: page_to_corpus_transcription
+stage: data_cleaning
+
+must_read:
+  - AGENTS.md
+  - docs/TRANSCRIPTION_RULES.md
+  - docs/DATA_FORMAT.md
+  - config/scope.yml
+  - config/status.yml
+
+input_policy:
+  expected_inputs:
+    - full_paper_page_images
+    - target_paper_directory
+    - optional_page_range_for_partial_rerun
+  source_assumption: 来源文件已由维护者检查，不区分来源类别。
+
+batch_dispatch_policy:
+  allowed: true
+  dispatcher: tools/transcribe_pages.py
+  default_model: gpt-5.5
+  default_reasoning_effort: low
+  proxy_policy: 继承代理环境变量；如环境变量不存在，可读取 Windows 系统代理；不得在仓库配置中保存本地代理地址。
+  image_order: natural_filename_order
+  images_per_exec: all_selected_pages
+  default_scope: whole_paper
+  partial_rerun_policy: 仅在维护者显式传入 start_page/end_page 时处理页面子集；否则一个 exec 处理整份试卷图片。
+  transcription_target: all_submitted_pages
+  page_count_policy: 不预设固定页数；按实际提交图片处理。
+
+write_policy:
+  direct_edit_target_files: true
+  final_response_should_not_repeat_full_item_text: true
+  allowed_outputs:
+    - corpus/papers/{year}/{volume}/paper.yml
+    - corpus/papers/{year}/{volume}/items/{nn}.md
+    - corpus/papers/{year}/{volume}/assets/{nn}-fig-{mm}.png
+    - corpus/papers/{year}/{volume}/assets/{nn}-table-{mm}.png
+
+numbering:
+  item_file_format: "{nn}.md"
+  item_id_format: "{year}-{volume}-{nn}"
+  asset_file_format:
+    figure: "{nn}-fig-{mm}.png"
+    table: "{nn}-table-{mm}.png"
+  width:
+    item_number: 2
+    asset_number: 2
+
+cross_page_policy:
+  on_detected_cross_page_without_context: mark_uncertain
+  on_detected_cross_page_with_submitted_pages: transcribe_continuously
+  error_code: cross_page_requires_relevant_pages
+  instruction: 默认整卷提交时, 可在已提交页面之间连续处理跨页题目；如果相关页面未提交且无法确认, 标记待确认, 不得猜测补全。
+
+title_policy:
+  source: generated_from_year_and_volume
+  format: "{year}年普通高等学校招生全国统一考试 数学 ({volume}卷)"
+  instruction: paper.yml 的 title 由年份和卷种生成；不要从页面 OCR 或社区排版标题读取。
+
+forbidden_content:
+  - answers
+  - solutions
+  - solution_steps
+  - recommended_methods
+  - difficulty
+  - knowledge_points
+  - manually_transcribed_points
+
+uncertainty_policy:
+  mark_inline_with: "[待确认：...]"
+  record_in_uncertain_notes: true
+  never_guess: true
+
+punctuation_policy:
+  style: western
+  applies_to:
+    - item_body
+    - options
+    - subquestions
+    - notes
+  instruction: 题目正文、选项和说明文字统一使用西文风格标点符号；数学公式按 LaTeX 习惯处理。
+
+latex_policy:
+  markdown_backslash: single
+  yaml_string_style: prefer_single_quoted_for_latex
+  instruction: Markdown 正文中的 LaTeX 命令使用单反斜杠；YAML 中含 LaTeX 的选项优先使用单引号字符串，不得把正文 LaTeX 写成双反斜杠。
+
+asset_crop_policy:
+  source: submitted_page_images
+  method: original_image_crop
+  command: uv run python tools/crop_asset.py SOURCE OUTPUT --box LEFT TOP RIGHT BOTTOM
+  coordinate_system: source_image_pixels
+  execution_policy: determine_one_box_then_run_once
+  figure_target: corpus/papers/{year}/{volume}/assets/{nn}-fig-{mm}.png
+  table_target: corpus/papers/{year}/{volume}/assets/{nn}-table-{mm}.png
+  include: 只包含题目所需图形或表格，以及理解该图表必需的标注、坐标轴、单位和图例。
+  exclude: 不包含整页、相邻题干、相邻选项、大段无关留白或页面页眉页脚。
+  crop_steps:
+    - 先在源页中定位图形或表格的大致区域。
+    - 再根据源图像像素坐标确定一个包含主体和适中边距的外接框。
+    - 使用固定的 crop_asset.py 命令执行一次裁剪；不要自行寻找截图工具或尝试其他裁剪 API。
+    - 在主体边界外加入适中边距；不需要追求大白边或绝对居中。
+    - 如果图形一侧贴近相邻文字, 可以使用非对称边距, 优先避免带入无关文字。
+    - 裁剪后必须目视检查；只有发现坐标或范围不合格时才修改坐标并重新执行。
+  verification: 裁剪后检查清晰度、完整性、编号对应关系、题面引用路径和是否含有无关文字。
+  uncertainty: 裁剪范围或图表内容无法确认时，在题目正文和 uncertain_notes 中标记待确认。

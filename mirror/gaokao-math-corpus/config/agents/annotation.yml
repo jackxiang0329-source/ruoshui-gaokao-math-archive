@@ -1,0 +1,35 @@
+id: annotation_agent
+purpose: coarse_item_annotation
+stage: descriptive_annotation
+
+must_read:
+  - AGENTS.md
+  - docs/REVIEW_WORKFLOW.md
+  - docs/DATA_FORMAT.md
+  - config/status.yml
+  - config/taxonomy/initial.yml
+
+preconditions:
+  required_status: approved
+
+allowed_annotation_fields:
+  - annotation.status
+  - annotation.problem_kind
+  - annotation.primary_knowledge_point
+  - annotation.notes
+
+forbidden_annotation_fields:
+  - annotation.difficulty
+  - annotation.solution_method
+  - annotation.ability_dimension
+  - annotation.form_feature
+  - annotation.secondary_knowledge_points
+  - annotation.similar_item_relations
+
+uncertainty_policy:
+  fallback_problem_kind: 待确认
+  fallback_primary_knowledge_point: 待确认
+  prefer_conservative_labeling: true
+
+review_policy:
+  status_semantics: review_method_is_not_distinguished

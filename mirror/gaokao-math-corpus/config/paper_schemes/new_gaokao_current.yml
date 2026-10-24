@@ -1,0 +1,51 @@
+id: new_gaokao_current
+series: national_new_gaokao
+title: 新高考全国卷现行结构
+years:
+  - 2024
+  - 2025
+  - 2026
+volumes:
+  - I
+  - II
+status: confirmed
+total_items: 19
+total_points: 150
+rules:
+  - type: mcq_single_answer
+    numbers:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    points: 5
+  - type: mcq_multiple_answers
+    numbers:
+      - 9
+      - 10
+      - 11
+    points: 6
+  - type: fill_blank
+    numbers:
+      - 12
+      - 13
+      - 14
+    points: 5
+  - type: solution
+    numbers:
+      - 15
+    points: 13
+  - type: solution
+    numbers:
+      - 16
+      - 17
+    points: 15
+  - type: solution
+    numbers:
+      - 18
+      - 19
+    points: 17

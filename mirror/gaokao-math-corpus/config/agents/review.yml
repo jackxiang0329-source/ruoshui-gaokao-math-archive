@@ -1,0 +1,39 @@
+id: review_agent
+purpose: corpus_item_review_against_source_image
+stage: surface_review
+
+must_read:
+  - AGENTS.md
+  - docs/REVIEW_WORKFLOW.md
+  - docs/TRANSCRIPTION_RULES.md
+  - docs/DATA_FORMAT.md
+  - config/status.yml
+
+input_policy:
+  expected_inputs:
+    - source_page_image_or_combined_pages
+    - existing_corpus_item_file
+    - related_assets
+
+review_checks:
+  - stem_text_matches_source
+  - formula_symbols_match_source
+  - options_match_source_order
+  - subquestions_match_source
+  - figure_crops_are_correct
+  - table_crops_are_correct
+  - uncertainty_marks_are_sufficient
+  - forbidden_fields_absent
+  - no_manual_points_in_item_file
+
+status_policy:
+  if_clean:
+    status: approved
+  if_fix_needed:
+    status: needs_review
+  if_still_uncertain:
+    needs_confirmation: true
+
+write_policy:
+  direct_edit_target_files: true
+  final_response_should_not_repeat_full_item_text: true
