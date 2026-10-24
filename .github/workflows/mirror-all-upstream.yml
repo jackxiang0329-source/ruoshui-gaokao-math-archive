@@ -1,0 +1,57 @@
+name: Mirror all 11 upstream repositories into Git files
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Select one pinned source, or all 11 repositories"
+        required: true
+        type: choice
+        options:
+          - all
+          - math-lecture-notes
+          - gaokao-math-problems-compilation
+          - gaokaomath
+          - first-round-review
+          - gaokao-math-corpus
+          - 2024-china-gaokao-math
+          - gaokao-exam-template
+          - mathpaper
+          - daxmate-math
+          - math-atlas
+          - mathex
+        default: all
+permissions:
+  contents: write
+concurrency:
+  group: ruoshui-full-mirror-main
+  cancel-in-progress: false
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+          submodules: false
+      - name: Verify manifest
+        shell: bash
+        run: |
+          python3 -c "import json; x=json.load(open('sources.json')); assert len(x['repositories']) == 11"
+      - name: Install tools
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y rsync git-lfs
+          git lfs install
+      - name: Import complete source trees and their assets
+        shell: bash
+        env:
+          SOURCE: ${{ inputs.source }}
+        run: bash scripts/mirror_all_upstream.sh --source "$SOURCE"
+      - name: Physical file summary
+        shell: bash
+        run: |
+          find mirror -type f | wc -l
+          du -sh mirror
