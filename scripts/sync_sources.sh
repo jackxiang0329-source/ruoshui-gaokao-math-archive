@@ -33,6 +33,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/scan_derivative_questions.py
 python3 scripts/validate.py
 python3 scripts/validate_question_index.py
+python3 scripts/validate_review_traceability.py
 git add .gitmodules upstream index
 if ! git diff --cached --quiet; then
     git commit -m "chore: synchronize upstream references and refresh indexes [skip ci]"

@@ -70,6 +70,10 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 - [2010 北京理科第18题](derivative/reviewed/2010-beijing-science-q18.md)、[2013 福建理科第17题](derivative/reviewed/2013-fujian-science-q17.md)、[2014 重庆文科第19题](derivative/reviewed/2014-chongqing-liberal-q19.md) 的独立复核
 - [2014 安徽文理共同题：完整参数分类](derivative/reviewed/2014-anhui-common-q.md)，同时记录[上游解析缺失问题](metadata/quality-findings.json)
 - [11 条数学质检状态的溯源清单](metadata/review-provenance.json)
+- [疑似重复题复核索引：6 组同题、1 组变式、14 组待核查](index/DUPLICATE_AUDIT.md)
+- [已完成数学证明与可独立编译源码目录](derivative/reviewed/README.md)
+- [数学复核溯源和重复索引自动一致性检查](scripts/validate_review_traceability.py)
+- [第六轮质检报告](metadata/ROUND_06_REPORT.md)
 - [机器扫描候选](scripts/scan_derivative_questions.py)、[索引一致性脚本](scripts/validate_question_index.py)、[第五轮报告](metadata/ROUND_05_REPORT.md)
 
 共 **11 条来源记录**完成独立数学核验，实际对应 **9 道不同题目**（2011 安徽文理卷同题保留两份出处）。
