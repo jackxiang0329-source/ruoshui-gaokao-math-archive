@@ -1,0 +1,54 @@
+%%% main.tex — 习题册控制器 %%%
+%%% 编译：latexmk -xelatex main.tex %%%
+
+\documentclass[12pt,a4paper,oneside]{ctexbook}
+
+%%% 页面布局（习题册：左窄右宽，留给右栏答题区）%%%
+\usepackage[left=1.5cm, right=1.5cm, top=2.5cm, bottom=2.5cm, headheight=25pt]{geometry}
+
+%%% 导言区模块 %%%
+\input{preamble/packages}
+\input{preamble/colors}
+\input{preamble/fonts}
+\input{preamble/macros}
+\input{preamble/environments}
+
+%%% 习题册专有：双栏答题区 %%%
+\usepackage{paracol}
+
+%%% 页眉页脚 %%%
+\newcommand{\booktitle}{高中数学之旅（习题集）}
+\input{preamble/pagestyle}
+
+\begin{document}
+
+%%% 封面 %%%
+\input{covers/cover-exercise}
+
+\pagenumbering{roman}
+\frontmatter
+\pagestyle{plain}
+\tableofcontents
+
+%%% 前言部分 %%%
+\input{covers/简介与版权声明}
+\input{covers/前言}
+\input{covers/关于作者}
+
+\mainmatter
+\pagestyle{fancy}
+
+%%% 各章内容 %%%
+\include{chapters/集合}
+\include{chapters/函数与导数}
+\include{chapters/向量}
+\include{chapters/立体几何}
+\include{chapters/解三角形}
+\include{chapters/圆锥曲线}
+\include{chapters/数列}
+\include{chapters/概率与统计}
+
+%%% 封底 %%%
+\input{covers/backcover-exercise}
+
+\end{document}

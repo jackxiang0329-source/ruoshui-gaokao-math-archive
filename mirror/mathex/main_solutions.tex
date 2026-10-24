@@ -1,0 +1,68 @@
+%%% main_solutions.tex — 答案册控制器 %%%
+%%% 编译：latexmk -xelatex main_solutions.tex %%%
+
+\documentclass[12pt,a4paper,oneside]{ctexbook}
+
+%%% 页面布局（答案册：左右对称）%%%
+\usepackage[left=2cm, right=2cm, top=2.5cm, bottom=2.5cm, headheight=25pt]{geometry}
+
+%%% 导言区模块 %%%
+\input{preamble/packages}
+\input{preamble/colors}
+\input{preamble/fonts}
+\input{preamble/macros}
+\input{preamble/environments}
+
+%%% 答案册：不需要 paracol 双栏，覆写为空操作 %%%
+\renewcommand{\startexercise}{}
+\renewcommand{\stopexercise}{}
+%%% \switchcolumn 来自 paracol，答案册不加载 paracol，需提供空定义 %%%
+\makeatletter
+\newcommand{\switchcolumn}{\@ifstar{@gobble}{}}%
+\makeatother
+
+%%% xsim 答案册模式：打印解析，不打印题目正文 %%%
+%%% xsim 的 print 开关是按类型分别设定的，键名格式为 <env>/print
+\xsimsetup{
+	choice/print=false,
+	choice-sol/print=true,
+	prob/print=false,
+	prob-sol/print=true,
+}
+
+%%% 页眉页脚 %%%
+\newcommand{\booktitle}{高中数学之旅（参考答案）}
+\input{preamble/pagestyle}
+
+\begin{document}
+
+%%% 封面 %%%
+\input{covers/cover-solutions}
+
+\pagenumbering{roman}
+\frontmatter
+\pagestyle{plain}
+\tableofcontents
+
+%%% 前言部分 %%%
+\input{covers/简介与版权声明}
+\input{covers/前言}
+\input{covers/关于作者}
+
+\mainmatter
+\pagestyle{fancy}
+
+%%% 各章内容（与习题册相同的章节文件，xsim 自动切换为打印解析）%%%
+\include{chapters/集合}
+\include{chapters/函数与导数}
+\include{chapters/向量}
+\include{chapters/立体几何}
+\include{chapters/解三角形}
+\include{chapters/圆锥曲线}
+\include{chapters/数列}
+\include{chapters/概率与统计}
+
+%%% 封底 %%%
+\input{covers/backcover-solutions}
+
+\end{document}
