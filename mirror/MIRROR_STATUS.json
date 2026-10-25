@@ -1,9 +1,10 @@
 {
   "date": "2026-10-25",
-  "method": "Compare mirror/<id>/path Git blob SHA against fixed upstream commit tree",
+  "method": "Compare SHA and Git mode for every mirror/<id>/<path> entry against the pinned upstream recursive Git tree; blob matching does not imply mathematics or rights review.",
   "full": 6,
   "expected": 7222,
-  "verified": 793,
+  "verified": 881,
+  "missing": 6341,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -22,8 +23,8 @@
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 199,
-      "missing": 583,
+      "verified": 287,
+      "missing": 495,
       "complete": false
     },
     {
@@ -84,9 +85,9 @@
     }
   ],
   "last_mirror_ci": {
-    "run_id": 40103091319,
+    "run_id": 40165208999,
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25: All 38 PDF files in upstream 2013 directory and all 20 in 2016 are now represented as SHA-matching physical Git blobs. 2023 Tianjin PDF remains missing (1,717,817 bytes, Contents API returns empty content); other mirrors remain partial."
+  "note": "2026-10-25: corrected actual SHA+mode counts. Added 1952-1957 and 1959-1965 (13 historical PDFs) and 2011 Shanghai spring PDF, all pinned Git blob matched. Repaired GKExam.sty mode to 120000. Four missing 2016 PDFs already present. 2023 Tianjin PDF remains absent."
 }
