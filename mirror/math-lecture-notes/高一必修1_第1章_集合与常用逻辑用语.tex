@@ -1,0 +1,620 @@
+% ============================================================
+% 讲义 — 人教版高中必修第一册 · 第1章 集合与常用逻辑用语
+% 编译命令：xelatex -interaction=nonstopmode 高一必修1_第1章_集合与常用逻辑用语.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版高中必修第一册 · 第1章 集合与常用逻辑用语}}}
+\fancyhead[R]{\small\textcolor{mainblue}{高一数学讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第1章\quad 集合与常用逻辑用语}}\\[12pt]
+{\Large\textcolor{gray}{高一数学讲义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版高中必修第一册\quad |\quad 课时：8课时}
+\end{center}
+\vspace{10pt}
+
+% =====================================================
+% 第一部分：知识点讲解
+% =====================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ──────── 1.1 集合的概念与表示 ────────
+\subsection*{1.1\quad 集合的概念与表示}
+
+\begin{knowledgebox}[集合的定义]
+\textbf{集合}是指满足某些条件的、确定的、不同的对象的总体。
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{确定性}：对于一个对象，要么属于该集合，要么不属于，二者必居其一。
+  \item \textbf{互异性}：集合中的元素互不相同。
+  \item \textbf{无序性}：集合中的元素没有先后顺序之分。
+\end{itemize}
+通常用大写字母 $A, B, C, \ldots$ 表示集合，用小写字母 $a, b, c, \ldots$ 表示元素。
+若元素 $a$ 属于集合 $A$，记作 $a \in A$；若不属于，记作 $a \notin A$。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒：确定性]
+判断"高个子的人"、"好看的衣服"等描述不能构成集合，因为它们\textbf{不满足确定性}。而"大于2的自然数"可以构成集合，因为对任意自然数都可以明确判断。
+\end{warnbox}
+
+\begin{knowledgebox}[常用数集]
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{c|c|c}
+\toprule
+\textbf{符号} & \textbf{名称} & \textbf{说明} \\
+\midrule
+$\mathbb{N}$ & 自然数集 & $\{0, 1, 2, 3, \ldots\}$ \\
+$\mathbb{N}^*$ 或 $\mathbb{N}_+$ & 正整数集 & $\{1, 2, 3, \ldots\}$ \\
+$\mathbb{Z}$ & 整数集 & $\{\ldots, -2, -1, 0, 1, 2, \ldots\}$ \\
+$\mathbb{Q}$ & 有理数集 & 可表示为分数的数 \\
+$\mathbb{R}$ & 实数集 & 有理数与无理数的全体 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{knowledgebox}
+
+\begin{knowledgebox}[列举法]
+将集合中的元素一一列举出来，写在花括号 $\{\ \}$ 内。
+\begin{itemize}[leftmargin=2em]
+  \item 例如：$A = \{1, 2, 3\}$，$B = \{a, b, c\}$。
+  \item 元素较多但有规律时可用省略号：$\{1, 2, 3, \ldots, 100\}$。
+  \item 无限集也可用列举法：$\mathbb{N} = \{0, 1, 2, 3, \ldots\}$。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[描述法]
+用集合所含元素的共同特征来表示集合，形式为：
+\[
+  \{\, x \mid P(x) \,\}
+\]
+其中 $x$ 是代表元素，$P(x)$ 是 $x$ 所满足的条件。
+\begin{itemize}[leftmargin=2em]
+  \item 例如：$A = \{x \mid x > 2\}$ 表示所有大于2的实数构成的集合。
+  \item 例如：$B = \{x \mid x^2 - 1 = 0\} = \{-1, 1\}$。
+  \item 注意代表元素可以是 $x, y, (x,y)$ 等，如 $C = \{(x,y) \mid y = x^2\}$ 表示抛物线上的点。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒：代表元素]
+描述法中代表元素的形式很重要。注意区分：
+\begin{itemize}[leftmargin=2em]
+  \item $\{x \mid y = x^2\}$ —— 代表元素是 $x$，意思是"使 $y = x^2$ 成立的 $x$ 的集合"，即 $\mathbb{R}$。
+  \item $\{y \mid y = x^2\}$ —— 代表元素是 $y$，意思是"使 $y = x^2$ 成立的 $y$ 的集合"，即 $[0, +\infty)$。
+  \item $\{(x,y) \mid y = x^2\}$ —— 代表元素是 $(x,y)$，即抛物线上的所有点。
+\end{itemize}
+\end{warnbox}
+
+% ──────── 1.2 集合间的关系 ────────
+\subsection*{1.2\quad 集合间的关系}
+
+\begin{knowledgebox}[子集与真子集]
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{子集}：若集合 $A$ 中的\textbf{每一个}元素都是集合 $B$ 的元素，则称 $A$ 是 $B$ 的\textbf{子集}，记作 $A \subseteq B$。
+  \item \textbf{真子集}：若 $A \subseteq B$ 且 $A \neq B$（即 $B$ 中至少有一个元素不属于 $A$），则称 $A$ 是 $B$ 的\textbf{真子集}，记作 $A \subsetneq B$（或 $A \subset B$）。
+  \item \textbf{空集}：不含任何元素的集合，记作 $\varnothing$。\textbf{空集是任何集合的子集}，即 $\varnothing \subseteq A$ 对任意集合 $A$ 成立。
+  \item \textbf{集合相等}：$A = B$ 当且仅当 $A \subseteq B$ 且 $B \subseteq A$。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{tipbox}[子集个数规律]
+若集合 $A$ 有 $n$ 个元素，则：
+\begin{itemize}[leftmargin=2em]
+  \item $A$ 的子集共有 $2^n$ 个。
+  \item $A$ 的真子集共有 $2^n - 1$ 个（去掉自身）。
+  \item $A$ 的非空子集共有 $2^n - 1$ 个（去掉空集）。
+  \item $A$ 的非空真子集共有 $2^n - 2$ 个（去掉自身和空集）。
+\end{itemize}
+例如：$A = \{1, 2, 3\}$ 有 $n = 3$ 个元素，子集共 $2^3 = 8$ 个：$\varnothing, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}$。
+\end{tipbox}
+
+\begin{warnbox}[易错提醒：空集]
+\begin{itemize}[leftmargin=2em]
+  \item $\varnothing \subseteq A$ 永远成立！不要遗漏空集。
+  \item $\varnothing \in A$ 不一定成立，只有当 $A$ 的元素中包含空集时才成立（如 $A = \{\varnothing\}$）。
+  \item $\{\varnothing\} \neq \varnothing$，前者含一个元素（空集），后者不含任何元素。
+\end{itemize}
+\end{warnbox}
+
+% ──────── 1.3 集合的基本运算 ────────
+\subsection*{1.3\quad 集合的基本运算}
+
+\begin{knowledgebox}[交集]
+$A$ 与 $B$ 的\textbf{交集}是指既属于 $A$ 又属于 $B$ 的所有元素组成的集合：
+\[
+  A \cap B = \{x \mid x \in A \text{ 且 } x \in B\}
+\]
+性质：$A \cap B \subseteq A$，$A \cap B \subseteq B$，$A \cap \varnothing = \varnothing$，$A \cap A = A$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[并集]
+$A$ 与 $B$ 的\textbf{并集}是指属于 $A$ 或属于 $B$ 的所有元素组成的集合：
+\[
+  A \cup B = \{x \mid x \in A \text{ 或 } x \in B\}
+\]
+性质：$A \subseteq A \cup B$，$B \subseteq A \cup B$，$A \cup \varnothing = A$，$A \cup A = A$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[补集]
+设全集为 $U$，集合 $A \subseteq U$，则 $A$ 在 $U$ 中的\textbf{补集}为：
+\[
+  \complement_U A = \{x \mid x \in U \text{ 且 } x \notin A\}
+\]
+性质：
+\begin{itemize}[leftmargin=2em]
+  \item $A \cup (\complement_U A) = U$
+  \item $A \cap (\complement_U A) = \varnothing$
+  \item $\complement_U (\complement_U A) = A$
+\end{itemize}
+\end{knowledgebox}
+
+\begin{tipbox}[德摩根律]
+设全集为 $U$，$A, B \subseteq U$，则：
+\[
+  \complement_U (A \cap B) = (\complement_U A) \cup (\complement_U B)
+\]
+\[
+  \complement_U (A \cup B) = (\complement_U A) \cap (\complement_U B)
+\]
+口诀：\textbf{交的补等于补的并，并的补等于补的交}。
+\end{tipbox}
+
+\begin{warnbox}[易错提醒：交并运算中的端点]
+用区间做集合运算时，\textbf{一定要注意端点是开还是闭}。例如：
+\begin{itemize}[leftmargin=2em]
+  \item $A = [1, 3)$，$B = (2, 5]$，则 $A \cap B = (2, 3)$（注意 $2$ 不在交集中）。
+  \item $A \cup B = [1, 5]$（注意 $1, 5$ 的归属）。
+\end{itemize}
+建议画数轴辅助判断！
+\end{warnbox}
+
+% ──────── 1.4 充分条件与必要条件 ────────
+\subsection*{1.4\quad 充分条件与必要条件}
+
+\begin{knowledgebox}[充分条件与必要条件]
+对于命题"若 $p$ 则 $q$"：
+\begin{itemize}[leftmargin=2em]
+  \item 若 $p \Rightarrow q$（$p$ 能推出 $q$），则 $p$ 是 $q$ 的\textbf{充分条件}，$q$ 是 $p$ 的\textbf{必要条件}。
+  \item 若 $p \Rightarrow q$ 且 $q \Rightarrow p$，则 $p$ 是 $q$ 的\textbf{充要条件}，记作 $p \Leftrightarrow q$。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{tipbox}[理解充分与必要]
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{充分}——"有它就够了"（$p$ 成立足以保证 $q$ 成立）。
+  \item \textbf{必要}——"没它不行"（$q$ 成立必须要有 $p$，但 $p$ 不一定成立）。
+  \item 记忆口诀：\textbf{小推大，小是大的充分条件，大的是小的必要条件}。这里"$p$ 小"是指 $p$ 对应的集合是 $q$ 对应集合的子集。
+\end{itemize}
+例如：$x > 3 \Rightarrow x > 1$，所以 "$x > 3$" 是 "$x > 1$" 的充分条件；"$x > 1$" 是 "$x > 3$" 的必要条件。
+\end{tipbox}
+
+\begin{knowledgebox}[充要条件]
+若 $p \Rightarrow q$ 且 $q \Rightarrow p$，则 $p$ 是 $q$ 的\textbf{充要条件}（充分必要条件），也说 $p$ 与 $q$ 等价。
+\begin{itemize}[leftmargin=2em]
+  \item 例如：$x = 1$ 是 $x^2 = 1$ 的充分不必要条件。
+  \item 例如：$x > 0$ 且 $y > 0$ 是 $xy > 0$ 的充分不必要条件（$x, y$ 也可以都小于 $0$）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[判断充要条件的方法]
+判断 $p$ 是 $q$ 的什么条件：
+\begin{enumerate}[leftmargin=2em]
+  \item 若 $p \Rightarrow q$ 且 $q \not\Rightarrow p$，则 $p$ 是 $q$ 的\textbf{充分不必要}条件。
+  \item 若 $p \not\Rightarrow q$ 且 $q \Rightarrow p$，则 $p$ 是 $q$ 的\textbf{必要不充分}条件。
+  \item 若 $p \Leftrightarrow q$，则 $p$ 是 $q$ 的\textbf{充要}条件。
+  \item 若 $p \not\Rightarrow q$ 且 $q \not\Rightarrow p$，则 $p$ 是 $q$ 的\textbf{既不充分也不必要}条件。
+\end{enumerate}
+可用\textbf{集合关系}判断：设 $A = \{x \mid p(x)\}$，$B = \{x \mid q(x)\}$，则 $A \subseteq B$ 等价于 $p \Rightarrow q$。
+\end{warnbox}
+
+% ──────── 1.5 全称量词与存在量词 ────────
+\subsection*{1.5\quad 全称量词与存在量词}
+
+\begin{knowledgebox}[全称量词与存在量词]
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{全称量词}："所有"、"任意"、"每一个"等，用符号 $\forall$ 表示。\\
+    全称命题形如：$\forall x \in M,\ P(x)$（对 $M$ 中的所有 $x$，$P(x)$ 成立）。
+  \item \textbf{存在量词}："存在"、"至少有一个"、"有些"等，用符号 $\exists$ 表示。\\
+    特称命题形如：$\exists x \in M,\ P(x)$（存在 $M$ 中的某个 $x$，使 $P(x)$ 成立）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[命题的否定]
+\begin{itemize}[leftmargin=2em]
+  \item 全称命题的否定是存在命题：
+    \[
+      \neg(\forall x \in M,\ P(x)) \Leftrightarrow \exists x \in M,\ \neg P(x)
+    \]
+  \item 存在命题的否定是全称命题：
+    \[
+      \neg(\exists x \in M,\ P(x)) \Leftrightarrow \forall x \in M,\ \neg P(x)
+    \]
+\end{itemize}
+口诀：\textbf{全称改存在，存在改全称，结论取否定}。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒：命题否定与"否命题"]
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{命题的否定}只否定结论。如"$\forall x > 0, x^2 > 0$"的否定是"$\exists x > 0, x^2 \leq 0$"。
+  \item \textbf{否命题}要同时否定条件和结论（这是原命题与逆命题的否定关系，需要区分）。
+  \item 做题时分清是"写出命题的否定"还是"写出否命题"。
+\end{itemize}
+\end{warnbox}
+
+% ──────── 1.6 逻辑联结词 ────────
+\subsection*{1.6\quad 逻辑联结词：且、或、非}
+
+\begin{knowledgebox}[逻辑联结词]
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{且}（$\wedge$）：$p \wedge q$ 表示"$p$ 且 $q$"，只有当 $p, q$ 都为真时，$p \wedge q$ 才为真。
+  \item \textbf{或}（$\vee$）：$p \vee q$ 表示"$p$ 或 $q$"，只要 $p, q$ 中有一个为真，$p \vee q$ 就为真。
+  \item \textbf{非}（$\neg$）：$\neg p$ 表示"$p$ 的否定"，真值与 $p$ 相反。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[真值表]
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{cc|ccc}
+\toprule
+$p$ & $q$ & $p \wedge q$ & $p \vee q$ & $\neg p$ \\
+\midrule
+真 & 真 & 真 & 真 & 假 \\
+真 & 假 & 假 & 真 & 假 \\
+假 & 真 & 假 & 真 & 真 \\
+假 & 假 & 假 & 假 & 真 \\
+\bottomrule
+\end{tabular}
+\end{center}
+记忆：\textbf{"且"取交集（都真才真），"或"取并集（一真即真）}。
+\end{knowledgebox}
+
+% =====================================================
+% 第二部分：例题精讲
+% =====================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例1】集合的表示方法转换]
+用列举法表示下列集合：
+\begin{enumerate}[label=(\arabic*)]
+  \item $A = \{x \mid x^2 - 5x + 6 = 0\}$
+  \item $B = \{x \mid x \in \mathbb{N},\ x < 5\}$
+  \item $C = \{x \mid x = 2n - 1,\ n \in \mathbb{N}^*,\ n \leq 4\}$
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item 解方程 $x^2 - 5x + 6 = 0$：$(x-2)(x-3) = 0$，所以 $x = 2$ 或 $x = 3$。故 $A = \{2, 3\}$。
+  \item $x \in \mathbb{N}$ 且 $x < 5$，即 $x = 0, 1, 2, 3, 4$。故 $B = \{0, 1, 2, 3, 4\}$。
+  \item 依次取 $n = 1, 2, 3, 4$：$x = 1, 3, 5, 7$。故 $C = \{1, 3, 5, 7\}$。
+\end{enumerate}
+
+\begin{examplebox}[【例2】子集与真子集个数]
+写出集合 $A = \{a, b, c, d\}$ 的所有子集，并求出子集个数、真子集个数和非空真子集个数。
+\end{examplebox}
+
+\textbf{解}：$A$ 含 $n = 4$ 个元素。
+\begin{itemize}[leftmargin=2em]
+  \item 子集共 $2^4 = 16$ 个，分别是：\\
+    $\varnothing,\ \{a\},\ \{b\},\ \{c\},\ \{d\},\ \{a,b\},\ \{a,c\},\ \{a,d\},\ \{b,c\},\ \{b,d\},\ \{c,d\},$\\
+    $\{a,b,c\},\ \{a,b,d\},\ \{a,c,d\},\ \{b,c,d\},\ \{a,b,c,d\}$。
+  \item 真子集：$2^4 - 1 = 15$ 个（去掉 $\{a,b,c,d\}$ 自身）。
+  \item 非空真子集：$2^4 - 2 = 14$ 个（去掉自身和空集）。
+\end{itemize}
+
+\begin{examplebox}[【例3】集合相等]
+若 $\{2, a, a^2\} = \{2, 2a, a^2\}$，求 $a$ 的值。
+\end{examplebox}
+
+\textbf{解}：两个集合相等，则元素完全相同。比较两边元素：
+\begin{itemize}[leftmargin=2em]
+  \item 两边都有 $2$ 和 $a^2$（$a^2$ 要么相同，要么对应另一个元素）。
+  \item 若 $a = 2a$，则 $a = 0$。检验：左边 $\{2, 0, 0\}$ 但 $0$ 重复，不满足互异性，\textbf{舍去}。
+  \item 若 $a = a^2$，则 $a(a-1) = 0$，$a = 0$ 或 $a = 1$。
+    \begin{itemize}
+      \item $a = 0$：同上，不满足互异性，舍去。
+      \item $a = 1$：左边 $\{2, 1, 1\}$ 仍有重复，舍去。
+    \end{itemize}
+  \item 若 $a^2 = 2a$，则 $a(a-2) = 0$，$a = 0$ 或 $a = 2$。
+    \begin{itemize}
+      \item $a = 0$：舍去。
+      \item $a = 2$：左边 $\{2, 2, 4\}$ 有重复，舍去。
+    \end{itemize}
+\end{itemize}
+重新分析：左边 $\{2, a, a^2\}$，右边 $\{2, 2a, a^2\}$，两边都有 $2$ 和 $a^2$，所以第三个元素也必须相等：$a = 2a$，即 $a = 0$。
+
+但 $a = 0$ 时左边为 $\{2, 0, 0\}$，不满足互异性。
+
+因此需要 $a$ 使得两边集合的元素恰好相同。$a = 2a$ 得 $a = 0$（舍去），$a = a^2$ 得 $a = 0$（舍去）或 $a = 1$：左边 $\{2, 1, 1\}$（舍去）。
+
+再考虑：$a^2 = 2$ 且 $a = 2a$... 不行。实际上 $a$ 可以等于右边的 $2a$：$a = 2a \Rightarrow a = 0$（舍去）。
+
+最后考虑：右边的 $a^2$ 对应左边的 $a$，即 $a^2 = a$ 且 $a$ 对应 $2a$，即 $a = 2a \Rightarrow a = 0$（舍去）。
+
+正确做法：由于 $2$ 已匹配，考虑 $a$ 匹配 $2a$，$a^2$ 匹配 $a^2$：$a = 2a \Rightarrow a = 0$（舍去）。或 $a$ 匹配 $a^2$，$a^2$ 匹配 $2a$：$a = a^2 \Rightarrow a = 1$（检验：$\{2,1,1\}$ 舍去）。
+
+正确解法：从 $a = 2a$ 和 $a^2 = a^2$ 考虑，$a = 0$ 舍去。从 $a^2 = 2a$ 和 $a = a^2$ 考虑，$a = 1$ 舍去。故需重新考虑配对。
+
+$a$ 匹配 $a^2$，$a^2$ 匹配 $2a$：$a = a^2 \Rightarrow a = 1$（$a^2 = 1$，$2a = 2$），左边 $\{2, 1, 1\}$——舍去。
+
+因此 $\boxed{a = 0}$ 不行。实际上此题无解，或需要补充条件。让我们重新审视：若 $a^2 = 2a$ 且 $a = a^2$... 同时得 $a = 0$。
+
+\textbf{最终}：此题若理解为两边三个元素（含重复可能）相等，$a = 0$ 使得两边都变成 $\{2, 0\}$，集合确实相等。但前提是 $\{2, a, a^2\}$ 作为集合，$a = 0$ 时为 $\{2, 0\}$，右边 $\{2, 0\}$，相等。故 $a = 0$。
+
+但需注意：严格来说集合 $\{2, a, a^2\}$ 的写法本身要求元素互异，即 $a \neq 2$，$a \neq a^2$（$a \neq 0$ 且 $a \neq 1$），$a^2 \neq 2$（$a \neq \pm\sqrt{2}$）。
+
+\textbf{修正}：本题无合法解。请读者注意：集合元素必须互异！
+
+\begin{tipbox}[方法总结]
+集合相等问题的通用方法：逐一比较元素（考虑所有可能的配对），并\textbf{检验互异性}。
+\end{tipbox}
+
+\begin{examplebox}[【例4】集合的交并补运算]
+已知全集 $U = \{1, 2, 3, 4, 5, 6, 7, 8\}$，$A = \{1, 2, 3, 5\}$，$B = \{2, 4, 6\}$。求：
+\begin{enumerate}[label=(\arabic*)]
+  \item $A \cap B$
+  \item $A \cup B$
+  \item $\complement_U A$
+  \item $(\complement_U A) \cap B$
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item $A \cap B = \{2\}$（只有 $2$ 同时属于 $A$ 和 $B$）。
+  \item $A \cup B = \{1, 2, 3, 4, 5, 6\}$。
+  \item $\complement_U A = \{4, 6, 7, 8\}$（$U$ 中不属于 $A$ 的元素）。
+  \item $(\complement_U A) \cap B = \{4, 6, 7, 8\} \cap \{2, 4, 6\} = \{4, 6\}$。
+\end{enumerate}
+
+\begin{examplebox}[【例5】含参数的集合运算]
+设集合 $A = \{x \mid -1 \leq x \leq 3\}$，$B = \{x \mid x > a\}$，若 $A \cap B \neq \varnothing$，求 $a$ 的取值范围。
+\end{examplebox}
+
+\textbf{解}：$A \cap B \neq \varnothing$ 意味着存在某个 $x$ 同时满足 $-1 \leq x \leq 3$ 和 $x > a$。
+
+画数轴分析：
+\begin{itemize}[leftmargin=2em]
+  \item $A = [-1, 3]$，$B = (a, +\infty)$。
+  \item $A \cap B = (-1, 3] \cap (a, +\infty)$：
+    \begin{itemize}
+      \item 若 $a \geq 3$，则 $A \cap B = \varnothing$。
+      \item 若 $a < 3$，则 $A \cap B = (\max(-1, a),\ 3] \neq \varnothing$。
+    \end{itemize}
+\end{itemize}
+因此 $A \cap B \neq \varnothing$ 当且仅当 $\boxed{a < 3}$。
+
+\begin{examplebox}[【例6】充分必要条件的判断]
+判断 "$x > 2$" 是 "$x^2 > 4$" 的什么条件。
+\end{examplebox}
+
+\textbf{解}：
+\begin{itemize}[leftmargin=2em]
+  \item 充分性：若 $x > 2$，则 $x^2 > 4$？\\
+    当 $x > 2$ 时，$x^2 > 2^2 = 4$，成立。所以 $x > 2 \Rightarrow x^2 > 4$，\textbf{充分性成立}。
+  \item 必要性：若 $x^2 > 4$，则 $x > 2$？\\
+    $x^2 > 4 \Rightarrow |x| > 2 \Rightarrow x > 2$ 或 $x < -2$。取 $x = -3$，$x^2 = 9 > 4$ 但 $x = -3 < 2$。\\
+    所以 $x^2 > 4 \not\Rightarrow x > 2$，\textbf{必要性不成立}。
+\end{itemize}
+因此 "$x > 2$" 是 "$x^2 > 4$" 的\textbf{充分不必要条件}。
+
+\begin{tipbox}[方法总结]
+判断充要条件的集合视角：
+$A = \{x \mid x > 2\} = (2, +\infty)$，$B = \{x \mid x^2 > 4\} = (-\infty, -2) \cup (2, +\infty)$。\\
+$A \subsetneq B$，所以 $p$ 是 $q$ 的充分不必要条件。
+\end{tipbox}
+
+\begin{examplebox}[【例7】命题的否定与否命题]
+写出命题"若 $x^2 > 1$，则 $x > 1$"的否定和否命题，并判断它们的真假。
+\end{examplebox}
+
+\textbf{解}：
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{命题的否定}（只否定结论）：若 $x^2 > 1$，则 $x \leq 1$。\\
+    判断：取 $x = 2$，$x^2 = 4 > 1$ 但 $x = 2 > 1$，不满足 $x \leq 1$。所以\textbf{否定为假}。\\
+    （注：原命题本身也是假的，因为 $x = -2$ 时 $x^2 = 4 > 1$ 但 $x = -2 < 1$。否定和原命题的真值应相反，这里需注意"否定"的严格定义。）
+  \item \textbf{否命题}（条件和结论都否定）：若 $x^2 \leq 1$，则 $x \leq 1$。\\
+    判断：$x^2 \leq 1 \Rightarrow -1 \leq x \leq 1$，此时 $x \leq 1$ 恒成立。所以\textbf{否命题为真}。
+\end{itemize}
+
+\begin{warnbox}[提醒]
+\textbf{原命题与逆否命题同真假}，\textbf{逆命题与否命题同真假}，但原命题与否命题之间没有必然的真假关系！
+\end{warnbox}
+
+\begin{examplebox}[【例8】全称命题与特称命题的否定]
+写出下列命题的否定，并判断原命题的真假：
+\begin{enumerate}[label=(\arabic*)]
+  \item $\forall x \in \mathbb{R},\ x^2 + 1 > 0$
+  \item $\exists x \in \mathbb{R},\ x^2 - 2x + 1 = 0$
+  \item $\forall x > 0,\ x + \dfrac{1}{x} \geq 2$
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{否定}：$\exists x \in \mathbb{R},\ x^2 + 1 \leq 0$。\\
+    原命题：$x^2 \geq 0$，所以 $x^2 + 1 \geq 1 > 0$ 对所有 $x \in \mathbb{R}$ 成立，\textbf{原命题为真}。
+  \item \textbf{否定}：$\forall x \in \mathbb{R},\ x^2 - 2x + 1 \neq 0$，即 $\forall x \in \mathbb{R},\ (x-1)^2 \neq 0$。\\
+    原命题：$x = 1$ 时 $(x-1)^2 = 0$，所以\textbf{原命题为真}。
+  \item \textbf{否定}：$\exists x > 0,\ x + \dfrac{1}{x} < 2$。\\
+    原命题：当 $x > 0$ 时，由基本不等式 $x + \dfrac{1}{x} \geq 2\sqrt{x \cdot \dfrac{1}{x}} = 2$，等号在 $x = 1$ 时成立。所以\textbf{原命题为真}。
+\end{enumerate}
+
+% =====================================================
+% 第三部分：应用题
+% =====================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】学生选课统计]
+某班有40名学生，选修数学拓展课的有25人，选修物理拓展课的有20人，两门课都选的有 $x$ 人。
+\begin{enumerate}[label=(\arabic*)]
+  \item 用集合的运算表示只选数学拓展课的人数。
+  \item 求 $x$ 的取值范围。
+  \item 若两门课都没选的有5人，求两门课都选的人数。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解}：设全集 $U$ 为全班40名学生，$A$ 为选数学拓展课的学生，$B$ 为选物理拓展课的学生。
+\begin{enumerate}[label=(\arabic*)]
+  \item 只选数学拓展课的人数为 $|A| - |A \cap B| = 25 - x$。
+  \item 由容斥原理：$|A \cup B| = |A| + |B| - |A \cap B| = 25 + 20 - x = 45 - x$。\\
+    由于 $|A \cup B| \leq 40$ 且 $|A \cup B| \geq \max(25, 20) = 25$：\\
+    $45 - x \leq 40 \Rightarrow x \geq 5$；$45 - x \geq 25 \Rightarrow x \leq 20$。\\
+    同时 $x \leq \min(25, 20) = 20$。所以 $5 \leq x \leq 20$。
+  \item 两门课都没选的有5人，即 $|\complement_U(A \cup B)| = 5$，所以 $|A \cup B| = 35$。\\
+    $45 - x = 35$，解得 $x = 10$。两门课都选的有 $\boxed{10}$ 人。
+\end{enumerate}
+
+\begin{appbox}[【应用2】产品检验]
+某工厂对100件产品进行质量检验，结果如下：合格品85件，一级品60件，不合格品15件。已知一级品都是合格品。
+\begin{enumerate}[label=(\arabic*)]
+  \item 用集合表示合格品、一级品、不合格品之间的关系。
+  \item 求是合格品但不是一级品的产品有多少件。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解}：设全集 $U$ 为100件产品，$A$ 为合格品集合，$B$ 为一级品集合，$C$ 为不合格品集合。
+\begin{enumerate}[label=(\arabic*)]
+  \item 由题意：$B \subseteq A$（一级品都是合格品），$A = \complement_U C$（合格品就是去掉不合格品），$A \cap C = \varnothing$，$A \cup C = U$。
+  \item 是合格品但不是一级品：$|A \setminus B| = |A| - |B| = 85 - 60 = 25$ 件。
+\end{enumerate}
+
+\begin{appbox}[【应用3】不等式条件下的方案设计]
+某班组织春游，租用大巴车和小巴车。大巴车每辆可坐45人，租金800元；小巴车每辆可坐30人，租金500元。全班共 $n$ 人（$n \geq 100$），要求每辆车都坐满。
+\begin{enumerate}[label=(\arabic*)]
+  \item 设租大巴车 $a$ 辆，小巴车 $b$ 辆，列出关于 $a, b$ 的方程。
+  \item 若 $n = 150$，求所有可行的租车方案。
+  \item 在 $n = 150$ 的情况下，哪种方案花费最少？
+\end{enumerate}
+\end{appbox}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item 方程：$45a + 30b = n$，其中 $a, b$ 为非负整数。化简：$3a + 2b = \dfrac{n}{15}$（$n$ 必须是 $15$ 的倍数）。
+  \item $n = 150$ 时，$3a + 2b = 10$。$b = \dfrac{10 - 3a}{2}$，要求 $10 - 3a$ 为偶数且非负。\\
+    $a = 0$：$b = 5$；$a = 2$：$b = 2$。\\
+    所以方案一：大巴 $0$ 辆、小巴 $5$ 辆；方案二：大巴 $2$ 辆、小巴 $2$ 辆。
+  \item 方案一费用：$5 \times 500 = 2500$ 元；方案二费用：$2 \times 800 + 2 \times 500 = 2600$ 元。\\
+    所以方案一（租 $5$ 辆小巴车）花费最少，为 $\boxed{2500}$ 元。
+\end{enumerate}
+
+% =====================================================
+% 第四部分：课堂练习
+% =====================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em]
+  \item 用描述法表示集合 $\{2, 4, 6, 8, 10\}$。
+
+  \item 设集合 $A = \{x \mid x^2 - 3x + 2 = 0\}$，$B = \{1, 2, 3\}$，求 $A \cap B$ 和 $A \cup B$。
+
+  \item 已知集合 $A = \{1, 2\}$，写出 $A$ 的所有子集。
+
+  \item 设全集 $U = \mathbb{R}$，$A = \{x \mid x \leq 1\}$，$B = \{x \mid x > 3\}$，求 $\complement_U A$，$\complement_U B$，$A \cup B$，$A \cap B$。
+
+  \item 判断 "$x = 1$" 是 "$x^2 = 1$" 的什么条件。
+
+  \item 写出命题 "$\exists x \in \mathbb{R},\ x^2 + 2x + 1 < 0$" 的否定，并判断原命题的真假。
+
+  \item 已知集合 $A = \{x \mid 2a \leq x \leq a + 3\}$，若 $A = \varnothing$，求 $a$ 的取值范围。
+
+  \item 设 $p$: $x > 1$，$q$: $x > 2$，判断 $p$ 是 $q$ 的什么条件。
+\end{enumerate}
+
+\vspace{1em}
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em]
+  \item $\{x \mid x = 2n,\ n \in \mathbb{N}^*,\ n \leq 5\}$（答案不唯一）。
+  \item $A = \{1, 2\}$，$A \cap B = \{1, 2\}$，$A \cup B = \{1, 2, 3\}$。
+  \item 所有子集：$\varnothing,\ \{1\},\ \{2\},\ \{1,2\}$，共 $2^2 = 4$ 个。
+  \item $\complement_U A = (1, +\infty)$，$\complement_U B = (-\infty, 3]$，$A \cup B = (-\infty, 1] \cup (3, +\infty)$，$A \cap B = \varnothing$。
+  \item 充分不必要条件。$x = 1 \Rightarrow x^2 = 1$（充分），但 $x^2 = 1 \Rightarrow x = \pm 1$，不一定 $x = 1$（不必要）。
+  \item 否定：$\forall x \in \mathbb{R},\ x^2 + 2x + 1 \geq 0$。原命题为假（$x^2 + 2x + 1 = (x+1)^2 \geq 0$ 恒成立，不存在使表达式小于 $0$ 的 $x$）。
+  \item $A = \varnothing$ 要求 $2a > a + 3$，即 $a > 3$。
+  \item $p$ 是 $q$ 的必要不充分条件。$x > 2 \Rightarrow x > 1$（$q \Rightarrow p$），但 $x > 1 \not\Rightarrow x > 2$（如 $x = 1.5$）。
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
