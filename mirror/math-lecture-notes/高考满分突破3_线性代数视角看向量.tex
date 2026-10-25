@@ -1,0 +1,403 @@
+% ============================================================
+% 高考数学满分突破 · 线性代数视角看向量
+% 编译命令：xelatex -interaction=nonstopmode 文件名.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高考满分突破 · 线性代数视角看向量}}}
+\fancyhead[R]{\small\textcolor{mainblue}{高三冲刺讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{高考数学满分突破}}\\[6pt]
+{\LARGE\bfseries\textcolor{mainblue}{线性代数视角看向量}}\\[12pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高三冲刺\quad |\quad 课时：2课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+%  第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 1.1 向量线性相关与线性无关 ----------
+\subsection*{1.1\quad 向量的线性相关与线性无关}
+
+\begin{knowledgebox}[核心概念]
+设 $\boldsymbol{a},\boldsymbol{b}$ 是平面上两个\textbf{非零向量}。
+\begin{itemize}[leftmargin=2em]
+  \item 若存在实数 $\lambda$ 使得 $\boldsymbol{b}=\lambda\boldsymbol{a}$，则称 $\boldsymbol{a},\boldsymbol{b}$ \textbf{线性相关}（即共线/平行）。
+  \item 若不存在这样的 $\lambda$，则称 $\boldsymbol{a},\boldsymbol{b}$ \textbf{线性无关}（即不共线）。
+\end{itemize}
+\end{knowledgebox}
+
+\noindent\textbf{平面向量基本定理}：若 $\boldsymbol{e}_1,\boldsymbol{e}_2$ 是平面上两个不共线（线性无关）的向量，则平面上\textbf{任意}向量 $\boldsymbol{a}$ 都可以唯一地表示为
+\[
+  \boldsymbol{a}=\lambda_1\boldsymbol{e}_1+\lambda_2\boldsymbol{e}_2,\quad \lambda_1,\lambda_2\in\mathbb{R}.
+\]
+此时 $\{\boldsymbol{e}_1,\boldsymbol{e}_2\}$ 称为平面的一组\textbf{基底}。
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[leftmargin=1.5em]
+  \item 零向量与任何向量都线性相关。
+  \item 判断两个向量是否共线，等价于判断它们是否线性相关。
+  \item 用基底表示向量时，表示法\textbf{唯一}——这是高考隐含条件的重要来源。
+\end{enumerate}
+\end{warnbox}
+
+% ---------- 1.2 投影与正交分解 ----------
+\subsection*{1.2\quad 投影与正交分解}
+
+\begin{knowledgebox}[向量的投影]
+设 $\boldsymbol{a},\boldsymbol{b}$ 为非零向量，夹角为 $\theta$，则：
+\begin{itemize}[leftmargin=2em]
+  \item $\boldsymbol{a}$ 在 $\boldsymbol{b}$ 方向上的\textbf{投影}（标量投影）：
+  \[
+    \text{proj}_{\boldsymbol{b}}\boldsymbol{a}=|\boldsymbol{a}|\cos\theta=\frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{b}|}.
+  \]
+  \item $\boldsymbol{a}$ 在 $\boldsymbol{b}$ 方向上的\textbf{投影向量}：
+  \[
+    \text{proj}_{\boldsymbol{b}}\boldsymbol{a}=\frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{b}|^2}\,\boldsymbol{b}.
+  \]
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[正交分解]
+将向量 $\boldsymbol{a}$ 沿两个互相垂直的方向 $\boldsymbol{e}_1\perp\boldsymbol{e}_2$ 分解：
+\[
+  \boldsymbol{a}=(\boldsymbol{a}\cdot\hat{\boldsymbol{e}}_1)\,\hat{\boldsymbol{e}}_1+(\boldsymbol{a}\cdot\hat{\boldsymbol{e}}_2)\,\hat{\boldsymbol{e}}_2,
+\]
+其中 $\hat{\boldsymbol{e}}_i=\dfrac{\boldsymbol{e}_i}{|\boldsymbol{e}_i|}$ 为单位向量。正交分解是坐标法的理论基础。
+\end{knowledgebox}
+
+% ---------- 1.3 向量空间视角 ----------
+\subsection*{1.3\quad 向量空间视角——高考中的高观点}
+
+\begin{knowledgebox}[向量空间的核心思想]
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{子空间}：过原点的直线是 $\mathbb{R}^2$ 的一维子空间；整个平面是二维子空间。
+  \item \textbf{线性组合的几何意义}：$\lambda\boldsymbol{a}+\mu\boldsymbol{b}$ 当 $\boldsymbol{a},\boldsymbol{b}$ 共线时仍在同一直线上；不共线时可到达平面上任意点。
+  \item \textbf{方程组视角}：求 $\lambda_1\boldsymbol{a}+\lambda_2\boldsymbol{b}=\boldsymbol{c}$ 的解，本质上是解一个二元一次方程组。解的存在性取决于 $\boldsymbol{a},\boldsymbol{b}$ 是否线性无关。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{tipbox}[规律总结]
+高考中"用基底表示向量"的题目，本质上就是解方程组。设 $\boldsymbol{a}=\lambda_1\boldsymbol{e}_1+\lambda_2\boldsymbol{e}_2$，列出关于 $\lambda_1,\lambda_2$ 的方程组即可。若 $\boldsymbol{e}_1,\boldsymbol{e}_2$ 不共线，方程组有唯一解。
+\end{tipbox}
+
+% ============================================================
+%  第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】基底表示与方程组]
+已知 $\boldsymbol{e}_1=(1,2),\boldsymbol{e}_2=(2,1)$，向量 $\boldsymbol{a}=(5,4)$，求实数 $\lambda,\mu$ 使得 $\boldsymbol{a}=\lambda\boldsymbol{e}_1+\mu\boldsymbol{e}_2$。
+\end{examplebox}
+
+\noindent\textbf{解}：由 $\lambda(1,2)+\mu(2,1)=(5,4)$ 得方程组
+\[
+  \begin{cases}\lambda+2\mu=5\\2\lambda+\mu=4\end{cases}
+  \;\Longrightarrow\;
+  \begin{cases}\lambda=1\\\mu=2\end{cases}.
+\]
+故 $\boldsymbol{a}=\boldsymbol{e}_1+2\boldsymbol{e}_2$。
+
+\begin{tipbox}[方法总结]
+基底表示就是解方程组，这是线性代数最基本的思想。高考中遇到"用 $\overrightarrow{AB},\overrightarrow{AC}$ 表示 $\overrightarrow{AP}$"这类问题，本质相同。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题2】投影向量的计算]
+已知 $\boldsymbol{a}=(3,4),\boldsymbol{b}=(1,0)$，求 $\boldsymbol{a}$ 在 $\boldsymbol{b}$ 方向上的投影向量。
+\end{examplebox}
+
+\noindent\textbf{解}：投影向量为
+\[
+  \frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{b}|^2}\,\boldsymbol{b}
+  =\frac{3\times1+4\times0}{1^2+0^2}\,(1,0)=(3,0).
+\]
+
+\begin{tipbox}[方法总结]
+投影向量公式 $\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{b}|^2}\boldsymbol{b}$ 的分母是 $|\boldsymbol{b}|^2$ 而非 $|\boldsymbol{b}|$，这是常见易错点。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题3】线性相关条件]
+已知 $\boldsymbol{a}=(1,k),\boldsymbol{b}=(k,4)$，若 $\boldsymbol{a}\parallel\boldsymbol{b}$，求 $k$ 的值。
+\end{examplebox}
+
+\noindent\textbf{解}：$\boldsymbol{a}\parallel\boldsymbol{b}$ 等价于 $\boldsymbol{a},\boldsymbol{b}$ 线性相关，即 $1\times4-k\times k=0$，解得 $k=\pm2$。
+
+\begin{warnbox}[易错提醒]
+共线条件用"交叉相乘相等"：$x_1y_2-x_2y_1=0$。不要遗漏 $k=-2$ 的情况。
+\end{warnbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题4】正交分解的应用]
+在 $\triangle ABC$ 中，$\overrightarrow{AB}=(2,3),\overrightarrow{AC}=(4,-1)$，点 $P$ 在 $BC$ 上且 $BP:PC=1:2$，求 $\overrightarrow{AP}$ 用 $\overrightarrow{AB},\overrightarrow{AC}$ 的表示。
+\end{examplebox}
+
+\noindent\textbf{解}：$\overrightarrow{AP}=\overrightarrow{AB}+\overrightarrow{BP}=\overrightarrow{AB}+\dfrac{1}{3}\overrightarrow{BC}=\overrightarrow{AB}+\dfrac{1}{3}(\overrightarrow{AC}-\overrightarrow{AB})=\dfrac{2}{3}\overrightarrow{AB}+\dfrac{1}{3}\overrightarrow{AC}$。
+
+代入坐标：$\overrightarrow{AP}=\dfrac{2}{3}(2,3)+\dfrac{1}{3}(4,-1)=\left(\dfrac{8}{3},\dfrac{5}{3}\right)$。
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题5】向量空间视角解存在性问题]
+已知 $\boldsymbol{a}=(1,0),\boldsymbol{b}=(0,1),\boldsymbol{c}=(2,3)$，是否存在实数 $\lambda,\mu$ 使得 $\boldsymbol{c}=\lambda\boldsymbol{a}+\mu\boldsymbol{b}$？若存在，求 $\lambda,\mu$。
+\end{examplebox}
+
+\noindent\textbf{解}：$\boldsymbol{a},\boldsymbol{b}$ 不共线，构成 $\mathbb{R}^2$ 的基底，因此对任意 $\boldsymbol{c}$ 存在唯一的 $\lambda,\mu$。直接读出 $\lambda=2,\mu=3$。
+
+\begin{tipbox}[高观点理解]
+这就是坐标法的本质：选取标准正交基 $\boldsymbol{i}=(1,0),\boldsymbol{j}=(0,1)$，任何向量的坐标就是它在这组基下的表示系数。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题6】向量共面条件（类比高考压轴）]
+已知平面向量 $\boldsymbol{a},\boldsymbol{b}$ 不共线，$\overrightarrow{OP}=(1-t)\boldsymbol{a}+t\boldsymbol{b}$（$t\in\mathbb{R}$），求点 $P$ 的轨迹。
+\end{examplebox}
+
+\noindent\textbf{解}：令 $\lambda=1-t,\mu=t$，则 $\lambda+\mu=1$。这正是 $A,B$ 两点连线的\textbf{参数方程}。当 $t$ 取遍所有实数时，$P$ 的轨迹是过 $A,B$ 两点的直线。
+
+\begin{tipbox}[规律总结]
+$\overrightarrow{OP}=\lambda\overrightarrow{OA}+\mu\overrightarrow{OB}$，当 $\lambda+\mu=1$ 时 $P$ 在直线 $AB$ 上；当 $\lambda+\mu=1$ 且 $\lambda,\mu\geq0$ 时 $P$ 在线段 $AB$ 上。这是高考中"三点共线"条件的线性代数本质。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题7】用基底证明几何关系]
+在 $\triangle ABC$ 中，$D$ 为 $BC$ 中点，$E$ 为 $AD$ 中点，用 $\overrightarrow{AB},\overrightarrow{AC}$ 表示 $\overrightarrow{BE}$。
+\end{examplebox}
+
+\noindent\textbf{解}：
+\[
+  \overrightarrow{AD}=\frac{1}{2}\overrightarrow{AB}+\frac{1}{2}\overrightarrow{AC},\quad
+  \overrightarrow{AE}=\frac{1}{2}\overrightarrow{AD}=\frac{1}{4}\overrightarrow{AB}+\frac{1}{4}\overrightarrow{AC}.
+\]
+\[
+  \overrightarrow{BE}=\overrightarrow{AE}-\overrightarrow{AB}=-\frac{3}{4}\overrightarrow{AB}+\frac{1}{4}\overrightarrow{AC}.
+\]
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题8】向量与不等式综合]
+已知 $|\boldsymbol{a}|=1,|\boldsymbol{b}|=2$，$\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角为 $60°$，求 $|2\boldsymbol{a}-\boldsymbol{b}|$。
+\end{examplebox}
+
+\noindent\textbf{解}：
+\[
+  |2\boldsymbol{a}-\boldsymbol{b}|^2=4|\boldsymbol{a}|^2-4\boldsymbol{a}\cdot\boldsymbol{b}+|\boldsymbol{b}|^2
+  =4\times1-4\times1\times2\times\cos60°+4=4-4+4=4.
+\]
+故 $|2\boldsymbol{a}-\boldsymbol{b}|=2$。
+
+\begin{tipbox}[方法总结]
+求向量模长的关键公式：$|\boldsymbol{v}|^2=\boldsymbol{v}\cdot\boldsymbol{v}$，将模长问题转化为数量积计算。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题9】向量分解与面积比]
+在 $\triangle ABC$ 中，$D$ 在 $BC$ 上且 $BD:DC=2:1$，$E$ 在 $AC$ 上且 $AE:EC=1:3$，$AD$ 与 $BE$ 交于点 $P$。求 $\dfrac{S_{\triangle ABP}}{S_{\triangle ABC}}$。
+\end{examplebox}
+
+\noindent\textbf{解}：设 $\overrightarrow{AB}=\boldsymbol{a},\overrightarrow{AC}=\boldsymbol{b}$。
+
+$D$ 在 $BC$ 上，$BD:DC=2:1$，故 $\overrightarrow{AD}=\dfrac{1}{3}\overrightarrow{AB}+\dfrac{2}{3}\overrightarrow{AC}=\dfrac{1}{3}\boldsymbol{a}+\dfrac{2}{3}\boldsymbol{b}$。
+
+$E$ 在 $AC$ 上，$AE:EC=1:3$，故 $\overrightarrow{AE}=\dfrac{1}{4}\overrightarrow{AC}=\dfrac{1}{4}\boldsymbol{b}$，即 $\overrightarrow{BE}=\overrightarrow{AE}-\overrightarrow{AB}=-\boldsymbol{a}+\dfrac{1}{4}\boldsymbol{b}$。
+
+设 $P$ 在 $AD$ 上：$\overrightarrow{AP}=t\overrightarrow{AD}=\dfrac{t}{3}\boldsymbol{a}+\dfrac{2t}{3}\boldsymbol{b}$。
+
+$P$ 在 $BE$ 上：$\overrightarrow{AP}=\overrightarrow{AB}+s\overrightarrow{BE}=(1-s)\boldsymbol{a}+\dfrac{s}{4}\boldsymbol{b}$。
+
+比较系数：$\dfrac{t}{3}=1-s,\;\dfrac{2t}{3}=\dfrac{s}{4}$。由第二个方程 $t=\dfrac{3s}{8}$，代入第一个：$\dfrac{s}{8}=1-s$，解得 $s=\dfrac{8}{9}$。
+
+$\overrightarrow{AP}=\dfrac{1}{9}\boldsymbol{a}+\dfrac{2}{9}\boldsymbol{b}$。
+
+面积比 $\dfrac{S_{\triangle ABP}}{S_{\triangle ABC}}=\dfrac{|\overrightarrow{AB}\times\overrightarrow{AP}|}{|\overrightarrow{AB}\times\overrightarrow{AC}|}=\left|\dfrac{2}{9}\right|=\dfrac{2}{9}$。
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题10】向量与函数综合]
+已知 $|\boldsymbol{a}|=1,|\boldsymbol{b}|=1$，$\boldsymbol{a}\cdot\boldsymbol{b}=0$，设 $\boldsymbol{c}=t\boldsymbol{a}+(1-t)\boldsymbol{b}$，求 $|\boldsymbol{c}|$ 的最小值。
+\end{examplebox}
+
+\noindent\textbf{解}：$\boldsymbol{a}\perp\boldsymbol{b}$，故
+\[
+  |\boldsymbol{c}|^2=t^2|\boldsymbol{a}|^2+(1-t)^2|\boldsymbol{b}|^2=t^2+(1-t)^2=2t^2-2t+1=2\!\left(t-\frac{1}{2}\right)^2+\frac{1}{2}.
+\]
+当 $t=\dfrac{1}{2}$ 时取最小值，$|\boldsymbol{c}|_{\min}=\dfrac{\sqrt{2}}{2}$。
+
+\begin{tipbox}[规律总结]
+当基底正交时，$|\lambda\boldsymbol{e}_1+\mu\boldsymbol{e}_2|^2=\lambda^2|\boldsymbol{e}_1|^2+\mu^2|\boldsymbol{e}_2|^2$，与直角坐标系下的距离公式完全一致。
+\end{tipbox}
+
+% ============================================================
+%  第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】力学中的向量分解]
+一个物体受到两个力 $\boldsymbol{F}_1$ 和 $\boldsymbol{F}_2$ 的作用，$|\boldsymbol{F}_1|=10\,\text{N}$，方向水平向右；$|\boldsymbol{F}_2|=10\,\text{N}$，方向与水平方向成 $120°$ 角。求合力 $\boldsymbol{F}=\boldsymbol{F}_1+\boldsymbol{F}_2$ 的大小和方向。
+\end{appbox}
+
+\noindent\textbf{解}：取水平向右为 $x$ 轴正方向。
+\[
+  \boldsymbol{F}_1=(10,0),\quad \boldsymbol{F}_2=(10\cos120°,10\sin120°)=(-5,5\sqrt{3}).
+\]
+\[
+  \boldsymbol{F}=(5,5\sqrt{3}),\quad |\boldsymbol{F}|=\sqrt{25+75}=10\,\text{N}.
+\]
+方向角 $\alpha=\arctan\dfrac{5\sqrt{3}}{5}=60°$，即合力与水平方向成 $60°$。
+
+\vspace{6pt}
+
+\begin{appbox}[【应用2】速度的正交分解]
+一条船在静水中的速度为 $5\,\text{m/s}$，河水流速为 $3\,\text{m/s}$，方向正东。船头指向正北。求船的实际速度大小和方向。
+\end{appbox}
+
+\noindent\textbf{解}：设正东为 $x$ 轴，正北为 $y$ 轴。水流速度 $\boldsymbol{v}_w=(3,0)$，船速 $\boldsymbol{v}_b=(0,5)$。
+\[
+  \boldsymbol{v}=\boldsymbol{v}_w+\boldsymbol{v}_b=(3,5),\quad |\boldsymbol{v}|=\sqrt{9+25}=\sqrt{34}\approx5.83\,\text{m/s}.
+\]
+方向：东偏北 $\arctan\dfrac{5}{3}\approx59°$。
+
+\vspace{6pt}
+
+\begin{appbox}[【应用3】向量与信号定位]
+三个信号站 $A,B,C$ 的坐标分别为 $(0,0),(6,0),(2,4)$（单位：km）。某目标 $P$ 满足 $\overrightarrow{AP}=\dfrac{1}{2}\overrightarrow{AB}+\dfrac{1}{3}\overrightarrow{AC}$，求目标 $P$ 的坐标及到原点的距离。
+\end{appbox}
+
+\noindent\textbf{解}：$\overrightarrow{AB}=(6,0),\overrightarrow{AC}=(2,4)$。
+\[
+  \overrightarrow{AP}=\frac{1}{2}(6,0)+\frac{1}{3}(2,4)=\left(3+\frac{2}{3},\frac{4}{3}\right)=\left(\frac{11}{3},\frac{4}{3}\right).
+\]
+目标 $P$ 的坐标为 $\left(\dfrac{11}{3},\dfrac{4}{3}\right)$，到原点距离为
+\[
+  |AP|=\sqrt{\left(\frac{11}{3}\right)^2+\left(\frac{4}{3}\right)^2}=\frac{\sqrt{121+16}}{3}=\frac{\sqrt{137}}{3}\approx3.9\,\text{km}.
+\]
+
+% ============================================================
+%  第四部分：课堂练习
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em]
+  \item 已知 $\boldsymbol{a}=(2,1),\boldsymbol{b}=(-1,3)$，求 $3\boldsymbol{a}+2\boldsymbol{b}$ 的坐标。
+
+  \item 已知 $\boldsymbol{a}=(1,\sqrt{3})$，求 $\boldsymbol{a}$ 在 $x$ 轴方向上的投影。
+
+  \item 已知 $\boldsymbol{a}=(2,-1),\boldsymbol{b}=(m,3)$，若 $\boldsymbol{a}\perp\boldsymbol{b}$，求 $m$ 的值。
+
+  \item 在 $\triangle ABC$ 中，$M$ 为 $BC$ 的中点，用 $\overrightarrow{AB},\overrightarrow{AC}$ 表示 $\overrightarrow{AM}$，并说明 $\overrightarrow{AM}=\dfrac{1}{2}(\overrightarrow{AB}+\overrightarrow{AC})$ 的几何意义。
+
+  \item 已知 $|\boldsymbol{a}|=3,|\boldsymbol{b}|=4,\boldsymbol{a}\cdot\boldsymbol{b}=-6$，求 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角。
+
+  \item 设 $\boldsymbol{a}=(1,2),\boldsymbol{b}=(2,1)$，若 $\boldsymbol{c}=\boldsymbol{a}+t\boldsymbol{b}$，当 $t$ 为何值时 $|\boldsymbol{c}|$ 最小？求此最小值。
+\end{enumerate}
+
+\vspace{12pt}
+
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}[leftmargin=2em]
+  \item $3\boldsymbol{a}+2\boldsymbol{b}=3(2,1)+2(-1,3)=(4,9)$。
+
+  \item $\boldsymbol{a}$ 在 $x$ 轴方向的投影为 $1$。
+
+  \item $\boldsymbol{a}\perp\boldsymbol{b}\Rightarrow 2m+(-1)\times3=0\Rightarrow m=\dfrac{3}{2}$。
+
+  \item $\overrightarrow{AM}=\overrightarrow{AB}+\overrightarrow{BM}=\overrightarrow{AB}+\dfrac{1}{2}\overrightarrow{BC}=\overrightarrow{AB}+\dfrac{1}{2}(\overrightarrow{AC}-\overrightarrow{AB})=\dfrac{1}{2}\overrightarrow{AB}+\dfrac{1}{2}\overrightarrow{AC}$。几何意义：三角形中线向量等于两邻边向量之和的一半。
+
+  \item $\cos\theta=\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}||\boldsymbol{b}|}=\dfrac{-6}{3\times4}=-\dfrac{1}{2}$，故 $\theta=120°$。
+
+  \item $|\boldsymbol{c}|^2=|\boldsymbol{a}+t\boldsymbol{b}|^2=|\boldsymbol{a}|^2+2t(\boldsymbol{a}\cdot\boldsymbol{b})+t^2|\boldsymbol{b}|^2=5+8t+5t^2=5\!\left(t+\dfrac{4}{5}\right)^2+\dfrac{9}{5}$。当 $t=-\dfrac{4}{5}$ 时，$|\boldsymbol{c}|_{\min}=\dfrac{3\sqrt{5}}{5}$。
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

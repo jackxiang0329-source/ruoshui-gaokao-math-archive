@@ -1,0 +1,383 @@
+% ============================================================
+% 高考数学满分突破系列 · 第1讲
+% 极限思想与高考
+% 编译命令：xelatex -interaction=nonstopmode 高考满分突破1_极限思想与高考.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高考数学满分突破 · 极限思想与高考}}}
+\fancyhead[R]{\small\textcolor{mainblue}{第1讲}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{极限思想与高考}}\\[12pt]
+{\Large\textcolor{gray}{高考数学满分突破\quad 第1讲}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高三冲刺\quad |\quad 课时：2课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+\subsection*{1.1\quad 数列极限的直观理解}
+
+\begin{knowledgebox}[定义]
+对于数列 $\{a_n\}$，若存在常数 $A$，使得当 $n$ 无限增大时，$a_n$ 无限趋近于 $A$，则称数列 $\{a_n\}$ 的极限为 $A$，记作
+\[
+\lim_{n \to \infty} a_n = A
+\]
+\end{knowledgebox}
+
+直观上理解，极限就是数列"想要到达但可能永远到不了"的那个值。例如：
+\[
+\lim_{n \to \infty} \frac{1}{n} = 0, \quad \lim_{n \to \infty} \frac{n+1}{n} = 1, \quad \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e
+\]
+
+\begin{tipbox}[高考中的直觉应用]
+高考不要求严格的 $\varepsilon$-$N$ 语言证明，但要求学生能直观判断数列的趋势。关键心法：\textbf{抓大头}——分子分母中最高次项决定极限值。
+\end{tipbox}
+
+\subsection*{1.2\quad 函数极限}
+
+\begin{knowledgebox}[函数极限的几种形式]
+\begin{enumerate}[leftmargin=2em]
+  \item $x \to +\infty$ 型：$\displaystyle\lim_{x \to +\infty} f(x) = A$
+  \item $x \to x_0$ 型：$\displaystyle\lim_{x \to x_0} f(x) = A$
+  \item 左右极限：$\displaystyle\lim_{x \to x_0^-} f(x)$ 与 $\displaystyle\lim_{x \to x_0^+} f(x)$
+\end{enumerate}
+函数在 $x_0$ 处极限存在的充要条件：左极限 $=$ 右极限。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+分段函数在分段点处的极限，必须分别求左极限和右极限，二者相等才存在。例如：
+\[
+f(x) = \begin{cases} x^2, & x < 1 \\ 2x - 1, & x \geq 1 \end{cases}
+\]
+$\lim_{x \to 1^-} f(x) = 1$，$\lim_{x \to 1^+} f(x) = 1$，故 $\lim_{x \to 1} f(x) = 1$（注意：极限存在不代表函数在该点连续）。
+\end{warnbox}
+
+\subsection*{1.3\quad 无穷递缩等比数列}
+
+\begin{knowledgebox}[定义与求和公式]
+公比 $|q| < 1$ 的无穷等比数列称为\textbf{无穷递缩等比数列}，其所有项之和为：
+\[
+S = \frac{a_1}{1 - q}, \quad |q| < 1
+\]
+\end{knowledgebox}
+
+这是高考中经常出现的考点。理解的关键在于：当 $|q| < 1$ 时，$q^n \to 0$，所以
+\[
+S_n = a_1 \cdot \frac{1 - q^n}{1 - q} \to \frac{a_1}{1 - q}
+\]
+
+\begin{tipbox}[高考常见题型]
+高考常以实际问题为背景考查无穷递缩等比数列，例如弹球反弹问题、面积分割问题等。核心在于识别首项 $a_1$ 和公比 $q$。
+\end{tipbox}
+
+\subsection*{1.4\quad 渐近线}
+
+\begin{knowledgebox}[渐近线的分类]
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{水平渐近线}：若 $\lim_{x \to +\infty} f(x) = b$ 或 $\lim_{x \to -\infty} f(x) = b$，则 $y = b$ 为水平渐近线。
+  \item \textbf{垂直渐近线}：若 $\lim_{x \to a} f(x) = \infty$，则 $x = a$ 为垂直渐近线。
+  \item \textbf{斜渐近线}：若 $\lim_{x \to \infty} [f(x) - (kx + b)] = 0$，则 $y = kx + b$ 为斜渐近线，其中 $k = \lim_{x \to \infty} \frac{f(x)}{x}$，$b = \lim_{x \to \infty} [f(x) - kx]$。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{warnbox}[高考中的渐近线]
+渐近线问题在近年高考中频繁出现，尤其是与导数结合的题目。分式函数、指数函数、对数函数的渐近线是重点。
+\end{warnbox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】用极限视角看高考数列题]
+已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = \dfrac{a_n}{a_n + 2}$，求通项公式并判断数列是否收敛。
+\end{examplebox}
+
+\textbf{解：}取倒数，令 $b_n = \dfrac{1}{a_n}$，则
+\[
+b_{n+1} = \frac{a_n + 2}{a_n} = 1 + \frac{2}{a_n} = 1 + 2b_n
+\]
+构造 $b_{n+1} + 1 = 2(b_n + 1)$，故 $\{b_n + 1\}$ 是公比为 $2$ 的等比数列，$b_n + 1 = 2 \cdot 2^{n-1} = 2^n$，得 $b_n = 2^n - 1$。
+
+因此 $a_n = \dfrac{1}{2^n - 1}$。由于 $\lim_{n \to \infty} a_n = 0$，数列收敛于 $0$。
+
+\begin{examplebox}[【例题2】判断收敛性]
+判断下列数列的极限是否存在，若存在则求出：
+\begin{enumerate}[leftmargin=2em]
+  \item $a_n = \dfrac{3n^2 + 2n - 1}{n^2 + 5}$
+  \item $a_n = \dfrac{(-1)^n}{n}$
+  \item $a_n = \sin\dfrac{n\pi}{2}$
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解：}
+\begin{enumerate}[leftmargin=2em]
+  \item 分子分母同除以 $n^2$：$\displaystyle\lim_{n \to \infty} \frac{3 + \frac{2}{n} - \frac{1}{n^2}}{1 + \frac{5}{n^2}} = 3$，极限存在，为 $3$。
+  \item $|a_n| = \dfrac{1}{n} \to 0$，由夹逼定理，$\lim_{n \to \infty} a_n = 0$，极限存在。
+  \item $a_n$ 在 $-1, 0, 1, 0, -1, \ldots$ 之间摆动，不趋近于任何常数，极限不存在。
+\end{enumerate}
+
+\begin{examplebox}[【例题3】渐近线问题（2023全国甲卷改编）]
+求函数 $f(x) = \dfrac{x^2}{x - 1}$ 的渐近线。
+\end{examplebox}
+
+\textbf{解：}
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{垂直渐近线}：$x = 1$ 时分母为零，$\lim_{x \to 1} f(x) = \infty$，故 $x = 1$ 为垂直渐近线。
+  \item \textbf{斜渐近线}：$k = \lim_{x \to \infty} \dfrac{f(x)}{x} = \lim_{x \to \infty} \dfrac{x}{x - 1} = 1$，
+  \[
+  b = \lim_{x \to \infty} [f(x) - x] = \lim_{x \to \infty} \frac{x^2 - x(x-1)}{x - 1} = \lim_{x \to \infty} \frac{x}{x - 1} = 1
+  \]
+  故斜渐近线为 $y = x + 1$。
+\end{itemize}
+
+\begin{examplebox}[【例题4】无穷递缩等比数列求和]
+一个弹性球从 $10$ 米高处自由落下，每次落地后反弹的高度是前一次的 $\dfrac{2}{5}$。求球从开始到最终静止所经过的总路程。
+\end{examplebox}
+
+\textbf{解：}球第一次下落 $10$ 米，此后每次弹起再落下构成无穷递缩等比数列。弹起的首项为 $10 \times \dfrac{2}{5} = 4$，公比 $q = \dfrac{2}{5}$。
+
+弹起再落下的总路程为 $2 \times \dfrac{4}{1 - \frac{2}{5}} = 2 \times \dfrac{4}{\frac{3}{5}} = 2 \times \dfrac{20}{3} = \dfrac{40}{3}$。
+
+总路程 $S = 10 + \dfrac{40}{3} = \dfrac{70}{3}$ 米。
+
+\begin{examplebox}[【例题5】极限视角下的递推数列]
+已知 $a_1 = 2$，$a_{n+1} = \sqrt{2 + a_n}$，证明数列 $\{a_n\}$ 收敛并求极限。
+\end{examplebox}
+
+\textbf{解：}
+\textbf{（1）证明有界性：}显然 $a_n > 0$。假设 $a_n < 3$，则 $a_{n+1} = \sqrt{2 + a_n} < \sqrt{5} < 3$。由数学归纳法，$a_n < 3$ 对所有 $n$ 成立。
+
+\textbf{（2）证明单调性：}$a_{n+1} - a_n = \sqrt{2 + a_n} - a_n = \dfrac{2 + a_n - a_n^2}{\sqrt{2 + a_n} + a_n} = \dfrac{(2 - a_n)(1 + a_n)}{\sqrt{2 + a_n} + a_n}$。
+
+当 $a_n < 2$ 时，$a_{n+1} > a_n$（递增）；当 $a_n = 2$ 时，$a_{n+1} = a_n = 2$。
+
+由于 $a_1 = 2$，故 $a_n = 2$ 对所有 $n$ 成立，极限为 $2$。
+
+\begin{tipbox}[方法总结]
+递推数列求极限的通用方法：设 $\lim_{n \to \infty} a_n = A$，对递推式两边取极限，解方程。但必须先证明极限存在（单调有界准则）。
+\end{tipbox}
+
+\begin{examplebox}[【例题6】函数极限与渐近线综合]
+已知函数 $f(x) = \dfrac{x^2 + ax + b}{x - 1}$，当 $x \to \infty$ 时有斜渐近线 $y = x + 3$，求 $a, b$ 的值。
+\end{examplebox}
+
+\textbf{解：}由斜渐近线条件：
+\[
+k = \lim_{x \to \infty} \frac{f(x)}{x} = \lim_{x \to \infty} \frac{x^2 + ax + b}{x(x-1)} = 1 \quad \checkmark
+\]
+\[
+b_0 = \lim_{x \to \infty} [f(x) - x] = \lim_{x \to \infty} \frac{x^2 + ax + b - x(x-1)}{x - 1} = \lim_{x \to \infty} \frac{(a+1)x + b}{x - 1} = a + 1
+\]
+令 $a + 1 = 3$，得 $a = 2$。$b$ 可取任意实数（渐近线条件不约束 $b$）。
+
+\begin{examplebox}[【例题7】极限与不等式放缩]
+证明：$\displaystyle\sum_{k=1}^{n} \frac{1}{k^2} < 2$。
+\end{examplebox}
+
+\textbf{解：}当 $k \geq 2$ 时，$\dfrac{1}{k^2} < \dfrac{1}{k(k-1)} = \dfrac{1}{k-1} - \dfrac{1}{k}$。因此
+\[
+\sum_{k=1}^{n} \frac{1}{k^2} = 1 + \sum_{k=2}^{n} \frac{1}{k^2} < 1 + \sum_{k=2}^{n} \left(\frac{1}{k-1} - \frac{1}{k}\right) = 1 + 1 - \frac{1}{n} = 2 - \frac{1}{n} < 2
+\]
+
+\begin{tipbox}[极限视角]
+$\displaystyle\sum_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6} \approx 1.645$（巴塞尔问题），所以部分和必然小于 $2$。极限直觉帮助我们选择放缩方向。
+\end{tipbox}
+
+\begin{examplebox}[【例题8】极限思想解决数列不等式]
+已知 $a_n = \left(1 + \dfrac{1}{n}\right)^n$，证明 $a_n < a_{n+1}$ 且 $a_n < 3$。
+\end{examplebox}
+
+\textbf{解：}\textbf{单调性}可用均值不等式证明。由 AM-GM 不等式：
+\[
+a_n = \left(1 + \frac{1}{n}\right)^n = \underbrace{\frac{n+1}{n} \cdot \frac{n+1}{n} \cdots \frac{n+1}{n}}_{n \text{ 个}} < \left(\frac{n \cdot \frac{n+1}{n} + 1}{n+1}\right)^{n+1} = \left(\frac{n+2}{n+1}\right)^{n+1}
+\]
+等等，更直接的做法是利用二项式展开：
+\[
+a_n = \sum_{k=0}^{n} \binom{n}{k} \frac{1}{n^k} = \sum_{k=0}^{n} \frac{1}{k!} \cdot \frac{n(n-1)\cdots(n-k+1)}{n^k}
+\]
+每一项中 $\dfrac{n(n-1)\cdots(n-k+1)}{n^k}$ 随 $n$ 增大而增大，且项数也增加，故 $a_n$ 单调递增。
+
+对于上界：$a_n < \displaystyle\sum_{k=0}^{n} \dfrac{1}{k!} < 1 + 1 + \dfrac{1}{2} + \dfrac{1}{6} + \cdots < 1 + \displaystyle\sum_{k=1}^{\infty} \dfrac{1}{2^{k-1}} = 1 + 2 = 3$。
+
+\begin{examplebox}[【例题9】极限在参数范围中的应用]
+若 $\displaystyle\lim_{x \to +\infty} \left(\frac{x^2 + 1}{x + 1} - ax - b\right) = 0$，求 $a, b$ 的值。
+\end{examplebox}
+
+\textbf{解：}$\dfrac{x^2 + 1}{x + 1} = \dfrac{(x+1)(x-1) + 2}{x + 1} = x - 1 + \dfrac{2}{x + 1}$。
+
+因此 $\dfrac{x^2 + 1}{x + 1} - ax - b = (1-a)x - (1+b) + \dfrac{2}{x+1}$。
+
+当 $x \to +\infty$ 时，要使极限为 $0$，须 $1 - a = 0$ 且 $-(1+b) = 0$，即 $a = 1$，$b = -1$。
+
+\begin{examplebox}[【例题10】极限视角看高考压轴数列]
+已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = a_n + \dfrac{1}{a_n}$，研究 $\{a_n\}$ 的增长速度。
+\end{examplebox}
+
+\textbf{解：}$a_{n+1}^2 = a_n^2 + 2 + \dfrac{1}{a_n^2} > a_n^2 + 2$，故 $a_n^2 > a_1^2 + 2(n-1) = 2n - 1$，即 $a_n > \sqrt{2n-1}$。
+
+又 $a_{n+1}^2 = a_n^2 + 2 + \dfrac{1}{a_n^2} < a_n^2 + 2 + \dfrac{1}{2n-1}$，累加得
+\[
+a_n^2 < 1 + 2(n-1) + \sum_{k=1}^{n-1} \frac{1}{2k-1} < 2n - 1 + \ln n
+\]
+因此 $a_n \sim \sqrt{2n}$（渐近等价），即 $a_n$ 的增长速度约为 $\sqrt{2n}$。
+
+\begin{tipbox}[极限直觉]
+$a_n \to \infty$，但增长很慢（类似 $\sqrt{n}$）。这种"极限直觉"在高考压轴题中帮助我们判断放缩方向和估计数量级。
+\end{tipbox}
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】药物浓度问题]
+某患者每天服用一片药物，药物在体内的残留率为 $\dfrac{1}{3}$（即每天结束时剩余前一天的 $\dfrac{1}{3}$）。每片药物使体内药物含量立即增加 $200$ mg。求长期服药后体内药物的稳定含量。
+\end{appbox}
+
+\textbf{解：}设第 $n$ 天服药后体内含量为 $C_n$，则
+\[
+C_{n+1} = \frac{1}{3} C_n + 200
+\]
+设稳定值为 $C$，则 $C = \dfrac{1}{3}C + 200$，解得 $C = 300$ mg。
+
+验证收敛性：$C_n - 300 = \dfrac{1}{3}(C_{n-1} - 300)$，故 $C_n - 300 = \left(\dfrac{1}{3}\right)^{n-1}(C_1 - 300) \to 0$。
+
+\begin{appbox}[【应用2】房贷还款模型]
+小张贷款 $100$ 万元，年利率 $4.8\%$（月利率 $0.4\%$），按月等额还款，共还 $30$ 年（$360$ 期）。利用极限思想说明：为何总利息远超本金。
+\end{appbox}
+
+\textbf{解：}设贷款额 $P$，月利率 $r = 0.004$，期数 $n = 360$，月还款额
+\[
+M = P \cdot \frac{r(1+r)^n}{(1+r)^n - 1}
+\]
+总还款额 $Mn = P \cdot \dfrac{nr(1+r)^n}{(1+r)^n - 1}$。
+
+当 $n$ 很大时，$(1+r)^n$ 巨大，$\dfrac{(1+r)^n}{(1+r)^n - 1} \approx 1$，故总还款 $\approx Prn = 100 \times 0.004 \times 360 = 144$ 万。
+
+利息约 $44$ 万，接近本金的 $44\%$。若利率更高或期限更长，利息占比更大——这就是复利的"极限效应"。
+
+\begin{appbox}[【应用3】传染病传播模型（SIR简化版）]
+某传染病初期，每个感染者每天传染 $0.3$ 人，同时每天有 $5\%$ 的感染者康复（获得免疫）。设总人口足够大，感染者比例为 $i(t)$，康复者比例为 $r(t)$，利用极限思想分析疫情的最终走向。
+\end{appbox}
+
+\textbf{解：}简化模型中，$\dfrac{di}{dt} = 0.3i(1-r-i) - 0.05i$。当 $i$ 很小时，$1 - r - i \approx 1$，$\dfrac{di}{dt} \approx (0.3 - 0.05)i = 0.25i > 0$，感染者增长。
+
+当 $i$ 增大到使 $0.3(1-r-i) = 0.05$ 时，即 $1 - r - i = \dfrac{1}{6}$ 时，增长率为零，达到峰值。此后感染者减少，最终 $i \to 0$。这就是疫情"自限性"的数学本质——极限为零。
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em]
+  \item 求极限：$\displaystyle\lim_{n \to \infty} \frac{2n^2 - 3n + 1}{5n^2 + n}$。
+
+  \item 求极限：$\displaystyle\lim_{n \to \infty} \left(\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{n(n+1)}\right)$。
+
+  \item 求函数 $f(x) = \dfrac{e^x}{1 + e^x}$ 的水平渐近线。
+
+  \item 无穷递缩等比数列的首项为 $3$，各项之和为 $4$，求公比。
+
+  \item 已知 $a_1 = 1$，$a_{n+1} = 1 + \dfrac{a_n}{1 + a_n}$，证明数列收敛并求极限。
+
+  \item 求函数 $f(x) = x \ln x$ 在 $x \to 0^+$ 时的极限。
+\end{enumerate}
+
+\vspace{20pt}
+
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}[leftmargin=2em]
+  \item 分子分母同除以 $n^2$：$\displaystyle\lim_{n \to \infty} \frac{2 - \frac{3}{n} + \frac{1}{n^2}}{5 + \frac{1}{n}} = \boxed{\dfrac{2}{5}}$
+
+  \item $\dfrac{1}{k(k+1)} = \dfrac{1}{k} - \dfrac{1}{k+1}$，裂项求和得 $1 - \dfrac{1}{n+1} \to \boxed{1}$
+
+  \item $\lim_{x \to +\infty} \dfrac{e^x}{1+e^x} = 1$，$\lim_{x \to -\infty} \dfrac{e^x}{1+e^x} = 0$。水平渐近线为 $\boxed{y = 0 \text{ 和 } y = 1}$
+
+  \item $\dfrac{3}{1-q} = 4$，解得 $\boxed{q = \dfrac{1}{4}}$
+
+  \item 设 $\lim a_n = A$，则 $A = 1 + \dfrac{A}{1+A}$，即 $A(1+A) = (1+A) + A$，$A^2 = A + 1$，$A = \dfrac{1+\sqrt{5}}{2}$（取正根）。可证单调有界，极限为 $\boxed{\dfrac{1+\sqrt{5}}{2}}$
+
+  \item $x \ln x = \dfrac{\ln x}{1/x}$，由洛必达法则：$\lim_{x \to 0^+} \dfrac{1/x}{-1/x^2} = \lim_{x \to 0^+} (-x) = \boxed{0}$
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

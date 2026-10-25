@@ -1,0 +1,425 @@
+% ============================================================
+% 高考数学满分突破 · 概率论的公理化视角
+% 编译命令：xelatex -interaction=nonstopmode 文件名.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高考满分突破 · 概率论的公理化视角}}}
+\fancyhead[R]{\small\textcolor{mainblue}{高三冲刺讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{高考数学满分突破}}\\[6pt]
+{\LARGE\bfseries\textcolor{mainblue}{概率论的公理化视角}}\\[12pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高三冲刺\quad |\quad 课时：2课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 1.1 Kolmogorov 公理 ----------
+\subsection*{1.1\quad Kolmogorov 公理体系}
+
+\begin{knowledgebox}[概率的公理化定义（Kolmogorov, 1933）]
+设 $\Omega$ 为样本空间，$\mathcal{F}$ 为事件域（$\Omega$ 的某些子集构成的集合），$P$ 为定义在 $\mathcal{F}$ 上的实值函数。若 $P$ 满足以下三条公理：\par
+\begin{enumerate}[leftmargin=2em]
+  \item[\textbf{公理1}（非负性）] 对任意事件 $A\in\mathcal{F}$，$P(A)\geq 0$；
+  \item[\textbf{公理2}（规范性）] $P(\Omega)=1$；
+  \item[\textbf{公理3}（可列可加性）] 对两两不相容的事件列 $A_1,A_2,\dots$（即 $A_i\cap A_j=\varnothing$，$i\neq j$），有
+  \[
+  P\!\left(\bigcup_{i=1}^{\infty}A_i\right)=\sum_{i=1}^{\infty}P(A_i);
+  \]
+\end{enumerate}
+则称 $P$ 为 $(\Omega,\mathcal{F})$ 上的\textbf{概率测度}，$(\Omega,\mathcal{F},P)$ 为概率空间。
+\end{knowledgebox}
+
+\begin{tipbox}[高考中的直接推论]
+由三条公理可推出以下常用结论：\par
+\begin{itemize}[leftmargin=1.5em]
+  \item $P(\varnothing)=0$（空集的概率为零）；
+  \item $P(\bar{A})=1-P(A)$（对立事件公式）；
+  \item $P(A\cup B)=P(A)+P(B)-P(A\cap B)$（加法公式）；
+  \item 若 $A\subset B$，则 $P(A)\leq P(B)$（单调性）；
+  \item $0\leq P(A)\leq 1$（有界性）。
+\end{itemize}
+这些结论在高考选择/填空中极为高频，无需记忆，从公理出发即可推导。
+\end{tipbox}
+
+\begin{warnbox}[高考易错点]
+\begin{enumerate}[leftmargin=1.5em]
+  \item "互斥"与"对立"的区别：互斥 $A\cap B=\varnothing$，对立 $A\cap B=\varnothing$ 且 $A\cup B=\Omega$。对立必互斥，互斥不一定对立。
+  \item 加法公式 $P(A\cup B)=P(A)+P(B)$ 仅在 $A,B$ 互斥时成立，一般情况需减去 $P(A\cap B)$。
+  \item 独立性不等于互斥：$A,B$ 独立时 $P(A\cap B)=P(A)P(B)$，若均非零概率则 $P(A\cap B)>0$，不互斥。
+\end{enumerate}
+\end{warnbox}
+
+% ---------- 1.2 条件概率与贝叶斯公式 ----------
+\subsection*{1.2\quad 条件概率与贝叶斯公式}
+
+\begin{knowledgebox}[条件概率]
+设 $A,B$ 为事件且 $P(B)>0$，在事件 $B$ 已发生的条件下，事件 $A$ 发生的\textbf{条件概率}定义为
+\[
+P(A|B)=\frac{P(A\cap B)}{P(B)}.
+\]
+由此立即得到\textbf{乘法公式}：$P(A\cap B)=P(B)\cdot P(A|B)=P(A)\cdot P(B|A)$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[全概率公式]
+设 $B_1,B_2,\dots,B_n$ 为样本空间 $\Omega$ 的一个\textbf{完备事件组}（即 $B_i$ 两两互斥且 $\bigcup_{i=1}^{n}B_i=\Omega$），且 $P(B_i)>0$，则对任意事件 $A$：
+\[
+P(A)=\sum_{i=1}^{n}P(B_i)\,P(A|B_i).
+\]
+直观理解：将事件 $A$ 的概率按"原因" $B_i$ 进行分解。
+\end{knowledgebox}
+
+\begin{knowledgebox}[贝叶斯公式（逆概率公式）]
+在全概率公式的条件下，若 $P(A)>0$，则
+\[
+P(B_j|A)=\frac{P(B_j)\,P(A|B_j)}{\displaystyle\sum_{i=1}^{n}P(B_i)\,P(A|B_i)},\quad j=1,2,\dots,n.
+\]
+\textbf{记忆口诀：}先验概率 $\times$ 似然 $\div$ 证据 $=$ 后验概率。\par
+\textbf{核心思想：}由"结果"反推"原因"的概率。
+\end{knowledgebox}
+
+\begin{tipbox}[贝叶斯公式在高考中的应用模式]
+高考中贝叶斯题型通常为：\par
+\begin{itemize}[leftmargin=1.5em]
+  \item 已知若干"来源/原因"各自的先验概率和"似然"（条件概率），求"在已知结果的条件下，来自某一原因"的后验概率。
+  \item 典型模型：疾病检测、产品检验、信号传输等。
+\end{itemize}
+\end{tipbox}
+
+% ---------- 1.3 期望线性性秒杀 ----------
+\subsection*{1.3\quad 期望的线性性与秒杀技巧}
+
+\begin{knowledgebox}[期望的线性性]
+设 $X,Y$ 为随机变量，$a,b$ 为常数，则
+\[
+E(aX+bY)=aE(X)+bE(Y).
+\]
+\textbf{关键：}此公式对 $X,Y$ 的分布无任何要求，不需独立性！\par
+即使 $X,Y$ 高度相关，线性性依然成立。这是概率论中最强大的工具之一。
+\end{knowledgebox}
+
+\begin{tipbox}[期望线性性的秒杀场景]
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{指示变量法：}将复杂事件分解为若干简单指示变量之和。令 $X_i=\mathbf{1}_{A_i}$（事件 $A_i$ 发生时取 1，否则取 0），则 $X=X_1+X_2+\cdots+X_n$，$E(X)=\sum P(A_i)$。
+  \item \textbf{配对问题：}$n$ 个人随机取帽子，匹配数的期望为 $1$（每人匹配的概率为 $\frac{1}{n}$，$n$ 人相加）。
+  \item \textbf{二项分布：}$X\sim B(n,p)$，$E(X)=np$（将 $X$ 分解为 $n$ 个独立的伯努利指示变量之和）。
+\end{itemize}
+\end{tipbox}
+
+\begin{knowledgebox}[方差与期望的关系]
+$\operatorname{Var}(X)=E(X^2)-[E(X)]^2$。\par
+若 $X,Y$ \textbf{独立}，则 $\operatorname{Var}(X+Y)=\operatorname{Var}(X)+\operatorname{Var}(Y)$。\par
+注意：方差的可加性\textbf{需要独立性}，与期望的线性性不同。
+\end{knowledgebox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】加法公式基础]
+甲、乙两人独立射击同一目标，甲命中率为 $0.8$，乙命中率为 $0.6$。求目标被击中的概率。
+\end{examplebox}
+
+\textbf{解：}\quad 设 $A$=甲击中，$B$=乙击中，$P(A)=0.8$，$P(B)=0.6$。\par
+目标被击中即 $A\cup B$。$A,B$ 独立：
+\[
+P(A\cup B)=P(A)+P(B)-P(A)P(B)=0.8+0.6-0.48=0.92.
+\]
+或用对立事件：$P(A\cup B)=1-P(\bar{A})P(\bar{B})=1-0.2\times0.4=0.92$。
+
+\begin{examplebox}[【例题2】条件概率计算]
+一副 52 张扑克牌中，随机抽两张（不放回）。已知第一张是红心，求第二张也是红心的概率。
+\end{examplebox}
+
+\textbf{解：}\quad 设 $A$=第一张红心，$B$=第二张红心。\par
+$P(A)=\dfrac{13}{52}=\dfrac{1}{4}$。$P(A\cap B)=\dfrac{13}{52}\times\dfrac{12}{51}=\dfrac{1}{17}$。\par
+$P(B|A)=\dfrac{P(A\cap B)}{P(A)}=\dfrac{12}{51}=\dfrac{4}{17}$。\par
+（直观理解：第一张红心取出后，剩余 51 张中有 12 张红心。）
+
+\begin{examplebox}[【例题3】全概率公式——两阶段试验]
+工厂有甲、乙、丙三个车间，产量分别占总产量的 $30\%$、$45\%$、$25\%$，次品率分别为 $2\%$、$3\%$、$5\%$。随机取一件产品，求其为次品的概率。
+\end{examplebox}
+
+\textbf{解：}\quad 设 $B_1,B_2,B_3$ 分别表示来自甲、乙、丙车间，$A$ 表示次品。\par
+$P(B_1)=0.3$，$P(B_2)=0.45$，$P(B_3)=0.25$。\par
+$P(A|B_1)=0.02$，$P(A|B_2)=0.03$，$P(A|B_3)=0.05$。\par
+由全概率公式：
+\[
+P(A)=0.3\times0.02+0.45\times0.03+0.25\times0.05=0.006+0.0135+0.0125=0.032.
+\]
+即次品率为 \textbf{3.2\%}。
+
+\begin{examplebox}[【例题4】贝叶斯公式——追溯来源]
+沿用例题3的数据，若取到的产品为次品，求它来自丙车间的概率。
+\end{examplebox}
+
+\textbf{解：}\quad 由贝叶斯公式：
+\[
+P(B_3|A)=\frac{P(B_3)\,P(A|B_3)}{P(A)}=\frac{0.25\times0.05}{0.032}=\frac{0.0125}{0.032}\approx 0.3906.
+\]
+即次品来自丙车间的概率约为 \textbf{39.06\%}。\par
+\begin{tipbox}[方法总结]
+丙车间产量占比仅 $25\%$，但次品率最高（$5\%$），因此在次品中其贡献占比远超产量占比——这就是贝叶斯"更新信念"的体现。
+\end{tipbox}
+
+\begin{examplebox}[【例题5】期望线性性——指示变量法]
+将 $n$ 个不同的球随机放入 $n$ 个不同的盒子中（每个球等可能放入任一盒子），设 $X$ 为空盒的个数，求 $E(X)$。
+\end{examplebox}
+
+\textbf{解：}\quad 定义指示变量 $X_i=\mathbf{1}_{\{\text{第}i\text{个盒子为空}\}}$，$i=1,2,\dots,n$。\par
+$X=X_1+X_2+\cdots+X_n$。\par
+$P(X_i=1)=P(\text{第}i\text{号盒子空})=\left(\dfrac{n-1}{n}\right)^n$（每个球都不放入第 $i$ 号盒）。\par
+$E(X)=\sum_{i=1}^{n}E(X_i)=n\left(\dfrac{n-1}{n}\right)^n=n\left(1-\dfrac{1}{n}\right)^n$。\par
+当 $n$ 很大时，$E(X)\approx n\cdot e^{-1}=\dfrac{n}{e}$。
+
+\begin{examplebox}[【例题6】期望线性性——配对问题（信封问题）]
+$n$ 封信随机装入 $n$ 个信封（每封信恰好装入一个信封），设 $X$ 为"信与信封匹配"的封数，求 $E(X)$ 和 $\operatorname{Var}(X)$。
+\end{examplebox}
+
+\textbf{解：}\quad 设 $X_i=\mathbf{1}_{\{\text{第}i\text{封信匹配}\}}$，$X=\sum_{i=1}^{n}X_i$。\par
+$P(X_i=1)=\dfrac{1}{n}$（第 $i$ 封信等可能进入 $n$ 个信封，恰好对的只有 1 个）。\par
+$E(X)=\sum_{i=1}^{n}\dfrac{1}{n}=1$。\par
+$E(X_i^2)=E(X_i)=\dfrac{1}{n}$。\par
+$P(X_i=1,X_j=1)=\dfrac{1}{n(n-1)}$（第 $i,j$ 封都匹配的概率）。\par
+$E(X_iX_j)=\dfrac{1}{n(n-1)}$。\par
+$E(X^2)=\sum E(X_i^2)+2\sum_{i<j}E(X_iX_j)=n\cdot\dfrac{1}{n}+2\binom{n}{2}\cdot\dfrac{1}{n(n-1)}=1+1=2$。\par
+$\operatorname{Var}(X)=E(X^2)-[E(X)]^2=2-1=1$。\par
+\textbf{结论：}$E(X)=1$，$\operatorname{Var}(X)=1$，与 $n$ 无关！
+
+\begin{examplebox}[【例题7】独立性与条件概率辨析]
+设 $P(A)=0.4$，$P(B)=0.5$，$P(A\cup B)=0.7$。求 $P(A|B)$ 和 $P(B|A)$。
+\end{examplebox}
+
+\textbf{解：}\quad $P(A\cup B)=P(A)+P(B)-P(A\cap B)$，\par
+$P(A\cap B)=0.4+0.5-0.7=0.2$。\par
+$P(A|B)=\dfrac{P(A\cap B)}{P(B)}=\dfrac{0.2}{0.5}=0.4$。\par
+$P(B|A)=\dfrac{P(A\cap B)}{P(A)}=\dfrac{0.2}{0.4}=0.5$。\par
+注意 $P(A|B)=P(A)$ 且 $P(B|A)=P(B)$，说明 $A,B$ \textbf{相互独立}。
+
+\begin{examplebox}[【例题8】二项分布与期望]
+某射手每次射击命中率为 $0.8$，独立射击 $10$ 次。求命中次数的期望和方差。
+\end{examplebox}
+
+\textbf{解：}\quad 命中次数 $X\sim B(10,0.8)$。\par
+$E(X)=np=10\times0.8=8$。\par
+$\operatorname{Var}(X)=np(1-p)=10\times0.8\times0.2=1.6$。\par
+\textbf{秒杀视角：}$X=X_1+X_2+\cdots+X_{10}$，其中 $X_i\sim B(1,0.8)$，$E(X_i)=0.8$，由期望线性性 $E(X)=10\times0.8=8$。
+
+\begin{examplebox}[【例题9】贝叶斯公式——医学检测]
+某疾病的患病率为 $0.1\%$。一种检测方法的灵敏度（患者检测为阳性的概率）为 $99\%$，特异度（健康人检测为阴性的概率）为 $95\%$。若某人检测为阳性，求其真正患病的概率。
+\end{examplebox}
+
+\textbf{解：}\quad 设 $D$=患病，$T$=检测阳性。\par
+$P(D)=0.001$，$P(T|D)=0.99$，$P(T|\bar{D})=1-0.95=0.05$。\par
+由全概率公式：
+\[
+P(T)=P(D)P(T|D)+P(\bar{D})P(T|\bar{D})=0.001\times0.99+0.999\times0.05=0.05094.
+\]
+由贝叶斯公式：
+\[
+P(D|T)=\frac{P(D)P(T|D)}{P(T)}=\frac{0.001\times0.99}{0.05094}\approx 0.0194.
+\]
+检测为阳性，真正患病的概率仅约 \textbf{1.94\%}！\par
+\begin{warnbox}[直觉陷阱]
+尽管检测方法看起来很"准"（灵敏度 $99\%$，特异度 $95\%$），但由于患病率极低，大量健康人中的假阳性人数远超真正患者中的真阳性人数——这就是\textbf{基率谬误}（Base Rate Fallacy）。
+\end{warnbox}
+
+\begin{examplebox}[【例题10】全概率 + 期望的综合]
+袋中有 $3$ 个红球、$2$ 个白球。每次随机取一球，若为红球则放回，若为白球则不放回（换成一个红球放回）。求第二次取到红球的概率。
+\end{examplebox}
+
+\textbf{解：}\quad 设 $A$=第一次取到红球，$\bar{A}$=第一次取到白球，$B$=第二次取到红球。\par
+$P(A)=\dfrac{3}{5}$，$P(\bar{A})=\dfrac{2}{5}$。\par
+若第一次取红球放回：第二次袋中仍有 3 红 2 白，$P(B|A)=\dfrac{3}{5}$。\par
+若第一次取白球不放回，放入红球：第二次袋中有 4 红 1 白，$P(B|\bar{A})=\dfrac{4}{5}$。\par
+由全概率公式：
+\[
+P(B)=\frac{3}{5}\times\frac{3}{5}+\frac{2}{5}\times\frac{4}{5}=\frac{9}{25}+\frac{8}{25}=\frac{17}{25}=0.68.
+\]
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】保险精算]
+某保险公司有 $10000$ 名客户，每人每年发生事故的概率为 $0.002$（相互独立）。每份保单理赔金额为 $50000$ 元。公司每年收取保费 $200$ 元/人。
+\begin{enumerate}[leftmargin=1.5em]
+  \item 求公司年理赔总次数的期望和方差；
+  \item 求公司年利润的期望。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}\quad 设理赔次数 $X\sim B(10000,0.002)$。
+\begin{enumerate}[leftmargin=1.5em]
+  \item $E(X)=10000\times0.002=20$，$\operatorname{Var}(X)=10000\times0.002\times0.998=19.96$。
+  \item 年保费收入 $=10000\times200=2000000$ 元。\par
+  年理赔支出 $=50000X$ 元。\par
+  年利润 $Y=2000000-50000X$。\par
+  $E(Y)=2000000-50000\times20=1000000$ 元。\par
+  公司年利润期望为 \textbf{100万元}。
+\end{enumerate}
+
+\begin{appbox}[【应用2】质量检验方案]
+某批产品共 $100$ 件，其中有 $5$ 件次品。现从中不放回地随机抽取 $10$ 件检验。
+\begin{enumerate}[leftmargin=1.5em]
+  \item 求恰好抽到 $k$ 件次品的概率（$k=0,1,2,3,4,5$）；
+  \item 求抽到次品数的期望。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}\quad 设 $X$ 为抽到的次品数，$X$ 服从超几何分布。
+\begin{enumerate}[leftmargin=1.5em]
+  \item $P(X=k)=\dfrac{\dbinom{5}{k}\dbinom{95}{10-k}}{\dbinom{100}{10}}$。\par
+  $P(X=0)\approx0.5838$，$P(X=1)\approx0.3394$，$P(X=2)\approx0.0695$，\par
+  $P(X=3)\approx0.0064$，$P(X=4)\approx0.0003$，$P(X=5)\approx0.000005$。
+  \item 超几何分布的期望公式：$E(X)=n\cdot\dfrac{M}{N}=10\times\dfrac{5}{100}=0.5$。\par
+  \textbf{秒杀：}期望线性性——每件被抽中的概率为 $\dfrac{10}{100}$，$5$ 件次品中期望被抽到 $5\times\dfrac{10}{100}=0.5$ 件。
+\end{enumerate}
+
+\begin{appbox}[【应用3】信号传输与贝叶斯]
+在数字通信系统中，发送端以概率 $0.6$ 发送信号"$1$"、概率 $0.4$ 发送信号"$0$"。信道有噪声：若发送"$1$"，接收端正确识别的概率为 $0.9$；若发送"$0$"，接收端正确识别的概率为 $0.8$。
+\begin{enumerate}[leftmargin=1.5em]
+  \item 求接收端收到"$1$"的概率；
+  \item 若接收端收到"$1$"，求发送端确实发送了"$1$"的概率。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}\quad 设 $S_1$=发送"$1$"，$S_0$=发送"$0$"，$R_1$=收到"$1$"，$R_0$=收到"$0$"。\par
+$P(S_1)=0.6$，$P(S_0)=0.4$，$P(R_1|S_1)=0.9$，$P(R_0|S_0)=0.8$，$P(R_1|S_0)=0.2$。
+\begin{enumerate}[leftmargin=1.5em]
+  \item $P(R_1)=P(S_1)P(R_1|S_1)+P(S_0)P(R_1|S_0)=0.6\times0.9+0.4\times0.2=0.62$。
+  \item $P(S_1|R_1)=\dfrac{P(S_1)P(R_1|S_1)}{P(R_1)}=\dfrac{0.54}{0.62}\approx 0.871$。\par
+  接收到"$1$"时，发送端确实发送了"$1$"的概率约为 \textbf{87.1\%}。
+\end{enumerate}
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item 设 $P(A)=0.5$，$P(B)=0.4$，$P(A\cup B)=0.7$。求 $P(A|B)$，并判断 $A,B$ 是否独立。
+  \item 袋中有 $5$ 个红球、$3$ 个蓝球。不放回地取 $2$ 个球，求两个球颜色不同的概率。
+  \item 三家工厂生产同一种产品，产量比为 $5:3:2$，次品率分别为 $1\%,2\%,4\%$。求：\par
+  (a) 产品的总次品率；(b) 若检出次品，求其来自第三家工厂的概率。
+  \item 设随机变量 $X$ 的分布列为 $P(X=k)=\dfrac{1}{5}$，$k=1,2,3,4,5$。求 $E(X)$ 和 $\operatorname{Var}(X)$。
+  \item $n$ 个人中至少有两人生日相同的概率为 $p_n$（假设一年 $365$ 天）。求 $p_{23}$ 的近似值。
+  \item 设 $X\sim B(n,p)$，利用期望的线性性证明 $E(X)=np$。
+\end{enumerate}
+
+\vspace{10pt}
+
+\begin{knowledgebox}[参考答案]
+\textbf{1.}\quad $P(A\cap B)=P(A)+P(B)-P(A\cup B)=0.5+0.4-0.7=0.2$。\par
+$P(A|B)=\dfrac{0.2}{0.4}=0.5=P(A)$，故 $A,B$ \textbf{独立}。
+
+\medskip
+
+\textbf{2.}\quad $P(\text{不同色})=\dfrac{\dbinom{5}{1}\dbinom{3}{1}}{\dbinom{8}{2}}=\dfrac{15}{28}$。
+
+\medskip
+
+\textbf{3.}\quad 设 $B_1,B_2,B_3$ 分别为三家工厂，$P(B_1)=0.5$，$P(B_2)=0.3$，$P(B_3)=0.2$。\par
+(a) $P(A)=0.5\times0.01+0.3\times0.02+0.2\times0.04=0.005+0.006+0.008=0.019$（$1.9\%$）。\par
+(b) $P(B_3|A)=\dfrac{0.2\times0.04}{0.019}=\dfrac{0.008}{0.019}\approx 0.421$（约 $42.1\%$）。
+
+\medskip
+
+\textbf{4.}\quad $E(X)=\dfrac{1+2+3+4+5}{5}=3$。\par
+$E(X^2)=\dfrac{1+4+9+16+25}{5}=\dfrac{55}{5}=11$。\par
+$\operatorname{Var}(X)=11-9=2$。
+
+\medskip
+
+\textbf{5.}\quad $p_n=1-\dfrac{365!}{365^n\,(365-n)!}$，利用近似 $p_n\approx 1-e^{-n(n-1)/(2\times365)}$。\par
+$n=23$：$p_{23}\approx 1-e^{-23\times22/730}=1-e^{-0.6932}\approx 1-0.5005\approx 0.500$。\par
+$p_{23}\approx\mathbf{50.7\%}$（精确值）。
+
+\medskip
+
+\textbf{6.}\quad $X=X_1+X_2+\cdots+X_n$，其中 $X_i\sim B(1,p)$，$P(X_i=1)=p$。\par
+$E(X_i)=0\cdot(1-p)+1\cdot p=p$。\par
+由期望线性性：$E(X)=\sum_{i=1}^{n}E(X_i)=np$。\hfill$\square$
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

@@ -1,0 +1,401 @@
+% ============================================================
+% 高考数学满分突破 · 函数分析与高考
+% 编译命令：xelatex -interaction=nonstopmode 文件名.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高考满分突破 · 函数分析与高考}}}
+\fancyhead[R]{\small\textcolor{mainblue}{高三冲刺讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{高考数学满分突破}}\\[6pt]
+{\LARGE\bfseries\textcolor{mainblue}{函数分析与高考}}\\[12pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高三冲刺\quad |\quad 课时：2课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 1.1 介值定理与零点存在 ----------
+\subsection*{1.1\quad 介值定理与零点存在定理}
+
+\begin{knowledgebox}[介值定理（Intermediate Value Theorem）]
+设函数 $f(x)$ 在闭区间 $[a,b]$ 上\textbf{连续}，若 $f(a)\neq f(b)$，则对介于 $f(a)$ 与 $f(b)$ 之间的任意实数 $\mu$，至少存在一点 $\xi\in(a,b)$，使得
+\[
+f(\xi)=\mu.
+\]
+特别地，当 $\mu=0$ 时即为\textbf{零点存在定理}：若 $f(a)\cdot f(b)<0$，则 $\exists\,\xi\in(a,b)$，$f(\xi)=0$。
+\end{knowledgebox}
+
+\begin{warnbox}[高考易错点]
+\begin{enumerate}[leftmargin=1.5em]
+  \item 零点存在定理的条件是"异号"而非"变号"——只需 $f(a)f(b)<0$，不要求 $f$ 单调。
+  \item "至少存在一个零点"不等于"恰有一个零点"；需要单调性才能保证唯一性。
+  \item 高考中 $f(x)$ 多为多项式或分段函数，务必先验证连续性。
+\end{enumerate}
+\end{warnbox}
+
+\begin{tipbox}[使用策略]
+判断零点个数的常用步骤：\par
+\textbf{Step 1.} 确定定义域并分析连续性；\par
+\textbf{Step 2.} 求 $f'(x)$，确定单调区间与极值；\par
+\textbf{Step 3.} 选取合适的端点（含极限值），利用零点存在定理逐区间判断。
+\end{tipbox}
+
+% ---------- 1.2 凸函数与琴生不等式 ----------
+\subsection*{1.2\quad 凸函数与琴生不等式}
+
+\begin{knowledgebox}[凸函数的定义]
+设 $f(x)$ 定义在区间 $I$ 上，若对任意 $x_1,x_2\in I$ 及 $\lambda\in(0,1)$，恒有
+\[
+f\bigl(\lambda x_1+(1-\lambda)x_2\bigr)\leq \lambda f(x_1)+(1-\lambda)f(x_2),
+\]
+则称 $f(x)$ 在 $I$ 上是\textbf{下凸函数}（凸函数）；不等号反向则为\textbf{上凸函数}（凹函数）。\par
+几何含义：下凸函数的图像在任意弦的下方（或之上）。
+\end{knowledgebox}
+
+\begin{knowledgebox}[琴生不等式（Jensen's Inequality）]
+若 $f(x)$ 在区间 $I$ 上为下凸函数，$x_1,x_2,\dots,x_n\in I$，$\lambda_i>0$，$\sum_{i=1}^{n}\lambda_i=1$，则
+\[
+f\!\left(\sum_{i=1}^{n}\lambda_i x_i\right)\leq \sum_{i=1}^{n}\lambda_i f(x_i).
+\]
+当 $\lambda_1=\lambda_2=\cdots=\lambda_n=\dfrac{1}{n}$ 时，即
+\[
+f\!\left(\frac{x_1+x_2+\cdots+x_n}{n}\right)\leq \frac{f(x_1)+f(x_2)+\cdots+f(x_n)}{n}.
+\]
+上凸函数不等号方向相反。
+\end{knowledgebox}
+
+\begin{tipbox}[常见下凸/上凸函数]
+\begin{itemize}[leftmargin=1.5em]
+  \item 下凸：$e^x$，$x^2$，$-\ln x$，$|x|$，$x\ln x\;(x>0)$
+  \item 上凸：$\ln x$，$\sqrt{x}$，$\sin x\;(0,\pi)$
+\end{itemize}
+\end{tipbox}
+
+% ---------- 1.3 凹凸性判断不等式方向 ----------
+\subsection*{1.3\quad 利用凹凸性判断不等式方向}
+
+\begin{knowledgebox}[核心原理]
+利用二阶导数判断凹凸性：\par
+\begin{itemize}[leftmargin=1.5em]
+  \item 若在区间 $I$ 上 $f''(x)>0$，则 $f$ 在 $I$ 上\textbf{下凸}，琴生不等式方向为 $\leq$。
+  \item 若在区间 $I$ 上 $f''(x)<0$，则 $f$ 在 $I$ 上\textbf{上凸}，琴生不等式方向为 $\geq$。
+\end{itemize}
+高考中常用此方法证明形如"$f(a)+f(b)\geq 2f\!\bigl(\frac{a+b}{2}\bigr)$"的不等式。
+\end{knowledgebox}
+
+\begin{warnbox}[高考实战提醒]
+\begin{enumerate}[leftmargin=1.5em]
+  \item 用凹凸性证不等式时，必须先证明（或说明）函数在对应区间上的凹凸性，不可直接使用结论。
+  \item 高考压轴题常将凹凸性与导数结合：先求导判断凹凸，再用琴生不等式完成放缩。
+\end{enumerate}
+\end{warnbox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】零点存在性判断]
+已知函数 $f(x)=x^3-3x+1$，证明 $f(x)$ 在区间 $(0,1)$ 内至少有一个零点。
+\end{examplebox}
+
+\textbf{解：}\quad $f(x)=x^3-3x+1$ 为多项式，在 $[0,1]$ 上连续。\par
+$f(0)=1>0$，$f(1)=1-3+1=-1<0$。\par
+由 $f(0)\cdot f(1)=-1<0$，根据零点存在定理，$\exists\,\xi\in(0,1)$ 使 $f(\xi)=0$。\hfill$\square$
+
+\begin{examplebox}[【例题2】零点个数问题]
+求函数 $f(x)=2x^3-9x^2+12x-5$ 的零点个数。
+\end{examplebox}
+
+\textbf{解：}\quad $f'(x)=6x^2-18x+12=6(x-1)(x-2)$。\par
+令 $f'(x)=0$ 得 $x=1$ 或 $x=2$。\par
+\begin{center}
+\begin{tabular}{c|cccc}
+$x$ & $(-\infty,1)$ & $1$ & $(1,2)$ & $2$ \\ \hline
+$f'(x)$ & $+$ & $0$ & $-$ & $0$ \\
+$f(x)$ & $\nearrow$ & 极大 & $\searrow$ & 极小
+\end{tabular}
+\end{center}
+$f(1)=2-9+12-5=0$，$f(2)=16-36+24-5=-1$。\par
+$f(1)=0$ 是一个零点。又 $\lim_{x\to -\infty}f(x)=-\infty$，$f(1)=0$，$f(2)=-1$，$\lim_{x\to+\infty}f(x)=+\infty$。\par
+$f(x)=(x-1)(2x^2-7x+5)=(x-1)(x-1)(2x-5)=(x-1)^2(2x-5)$。\par
+零点为 $x=1$（二重）和 $x=\dfrac{5}{2}$，共 \textbf{2个}零点（按重数计为3个）。
+
+\begin{examplebox}[【例题3】零点与参数问题]
+已知函数 $f(x)=e^x-ax$ 恰有两个零点，求实数 $a$ 的取值范围。
+\end{examplebox}
+
+\textbf{解：}\quad $f(x)=0 \Leftrightarrow e^x=ax$。\par
+当 $a\leq 0$ 时，$e^x>0\geq ax$，无零点，不合题意。\par
+当 $a>0$ 时，令 $g(x)=\dfrac{e^x}{x}$（$x\neq 0$），则 $a=g(x)$。\par
+$g'(x)=\dfrac{e^x(x-1)}{x^2}$，$g'(x)=0$ 得 $x=1$。\par
+$x<0$ 时 $g(x)<0$；$x>0$ 时 $g(x)$ 在 $(0,1)$ 递减，$(1,+\infty)$ 递增，$g(1)=e$，$\lim_{x\to 0^+}g(x)=+\infty$，$\lim_{x\to+\infty}g(x)=+\infty$。\par
+当 $a=e$ 时恰一个零点（$x=1$）；当 $a>e$ 时两个零点（$x\in(0,1)$ 和 $x\in(1,+\infty)$ 各一个）。\par
+\textbf{答案：}$a>e$。
+
+\begin{examplebox}[【例题4】琴生不等式证明均值不等式]
+利用函数 $f(x)=x^2$ 的下凸性，证明：对任意正实数 $a,b$，有 $\dfrac{a^2+b^2}{2}\geq\left(\dfrac{a+b}{2}\right)^2$。
+\end{examplebox}
+
+\textbf{解：}\quad $f(x)=x^2$，$f''(x)=2>0$，故 $f(x)$ 在 $\mathbb{R}$ 上下凸。\par
+由琴生不等式（$n=2$，$\lambda_1=\lambda_2=\frac{1}{2}$）：
+\[
+f\!\left(\frac{a+b}{2}\right)\leq \frac{f(a)+f(b)}{2}
+\]
+即 $\left(\dfrac{a+b}{2}\right)^2\leq \dfrac{a^2+b^2}{2}$。\hfill$\square$
+
+\begin{examplebox}[【例题5】凹凸性证明不等式]
+已知 $a,b>0$ 且 $a+b=1$，证明 $a^2+b^2\geq \dfrac{1}{2}$。
+\end{examplebox}
+
+\textbf{解：}\quad 取 $f(x)=x^2$，$f''(x)=2>0$，$f$ 下凸。\par
+由琴生不等式：
+\[
+\frac{f(a)+f(b)}{2}\geq f\!\left(\frac{a+b}{2}\right)=f\!\left(\frac{1}{2}\right)=\frac{1}{4}
+\]
+故 $a^2+b^2\geq 2\times\dfrac{1}{4}=\dfrac{1}{2}$，当 $a=b=\dfrac{1}{2}$ 时取等。\hfill$\square$
+
+\begin{examplebox}[【例题6】利用 $\ln x$ 的上凸性证明不等式]
+证明：对任意正实数 $a\neq b$，有 $\dfrac{\ln a+\ln b}{2}<\ln\dfrac{a+b}{2}$。
+\end{examplebox}
+
+\textbf{解：}\quad $f(x)=\ln x$，$f''(x)=-\dfrac{1}{x^2}<0$（$x>0$），故 $f$ 在 $(0,+\infty)$ 上凸。\par
+由琴生不等式（上凸取 $\geq$，即函数值的均值 $\leq$ 均值处的函数值）：
+\[
+\frac{f(a)+f(b)}{2}\leq f\!\left(\frac{a+b}{2}\right)
+\]
+即 $\dfrac{\ln a+\ln b}{2}\leq \ln\dfrac{a+b}{2}$，等号当且仅当 $a=b$ 时成立。\par
+$a\neq b$ 时严格不等号成立。\hfill$\square$
+
+\begin{examplebox}[【例题7】零点与不等式的综合]
+设 $f(x)=x\ln x$，若 $f(x_1)=f(x_2)$（$x_1\neq x_2$），证明 $x_1+x_2>\dfrac{2}{e}$。
+\end{examplebox}
+
+\textbf{解：}\quad $f'(x)=\ln x+1$，$f'(x)=0$ 得 $x=\dfrac{1}{e}$。\par
+$f$ 在 $\left(0,\dfrac{1}{e}\right)$ 递减，$\left(\dfrac{1}{e},+\infty\right)$ 递增，最小值 $f\!\left(\dfrac{1}{e}\right)=-\dfrac{1}{e}$。\par
+$f(x_1)=f(x_2)$ 且 $x_1\neq x_2$，不妨设 $0<x_1<\dfrac{1}{e}<x_2$。\par
+$f''(x)=\dfrac{1}{x}>0$，$f$ 下凸。由下凸性，对 $x_1\neq x_2$：
+\[
+f\!\left(\frac{x_1+x_2}{2}\right)<\frac{f(x_1)+f(x_2)}{2}=f(x_1)
+\]
+而 $f$ 在 $\left(0,\dfrac{1}{e}\right)$ 递减、在 $\left(\dfrac{1}{e},+\infty\right)$ 递增。\par
+由于 $x_1<\dfrac{1}{e}$ 且 $f\!\left(\frac{x_1+x_2}{2}\right)<f(x_1)$，若 $\frac{x_1+x_2}{2}\leq\dfrac{1}{e}$，因 $f$ 在此区间递减，得 $\frac{x_1+x_2}{2}<x_1$，矛盾（$x_2>x_1$）。故 $\dfrac{x_1+x_2}{2}>\dfrac{1}{e}$，即 $x_1+x_2>\dfrac{2}{e}$。\hfill$\square$
+
+\begin{examplebox}[【例题8】含参函数的零点讨论]
+讨论函数 $f(x)=\ln x-ax$（$a>0$）的零点个数。
+\end{examplebox}
+
+\textbf{解：}\quad $f'(x)=\dfrac{1}{x}-a=\dfrac{1-ax}{x}$，$f'(x)=0$ 得 $x=\dfrac{1}{a}$。\par
+$f$ 在 $\left(0,\dfrac{1}{a}\right)$ 递增，$\left(\dfrac{1}{a},+\infty\right)$ 递减。\par
+$f\!\left(\dfrac{1}{a}\right)=-\ln a-1$。\par
+$\lim_{x\to 0^+}f(x)=-\infty$，$\lim_{x\to+\infty}f(x)=-\infty$。\par
+\begin{itemize}[leftmargin=1.5em]
+  \item $-\ln a-1>0$，即 $a<\dfrac{1}{e}$ 时，极大值为正，两端趋向 $-\infty$，\textbf{2个零点}。
+  \item $-\ln a-1=0$，即 $a=\dfrac{1}{e}$ 时，极大值为零，\textbf{1个零点}。
+  \item $-\ln a-1<0$，即 $a>\dfrac{1}{e}$ 时，极大值为负，\textbf{0个零点}。
+\end{itemize}
+
+\begin{examplebox}[【例题9】琴生不等式在高考压轴中的应用]
+已知 $a,b,c>0$ 且 $a+b+c=3$，证明 $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\geq 3$。
+\end{examplebox}
+
+\textbf{解：}\quad 取 $f(x)=\dfrac{1}{x}$（$x>0$），$f''(x)=\dfrac{2}{x^3}>0$，$f$ 下凸。\par
+由琴生不等式：
+\[
+\frac{f(a)+f(b)+f(c)}{3}\geq f\!\left(\frac{a+b+c}{3}\right)=f(1)=1
+\]
+故 $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\geq 3$，当 $a=b=c=1$ 时取等。\hfill$\square$
+
+\begin{examplebox}[【例题10】导数、零点与凹凸性的综合]
+设 $f(x)=e^x-x^2-1$，证明 $f(x)\geq 0$ 对一切 $x\in\mathbb{R}$ 成立。
+\end{examplebox}
+
+\textbf{解：}\quad $f(0)=1-0-1=0$。\par
+$f'(x)=e^x-2x$，$f''(x)=e^x-2$。\par
+$f''(x)=0$ 得 $x=\ln 2$，$f''(\ln 2)=0$。\par
+$f'''(x)=e^x>0$ 恒成立，故 $f''(x)$ 单调递增。\par
+$f''(x)<0$（$x<\ln 2$），$f''(x)>0$（$x>\ln 2$），即 $f$ 在 $(-\infty,\ln 2)$ 上凸，$(\ln 2,+\infty)$ 下凸。\par
+$f'(\ln 2)=2-2\ln 2=2(1-\ln 2)>0$。\par
+$f'(0)=1>0$，$f'(-1)=e^{-1}+2>0$。$\lim_{x\to-\infty}f'(x)=+\infty$。\par
+又 $f'(x)=e^x-2x$，令 $g(x)=f'(x)$，$g'(x)=e^x-2$，$g$ 在 $(-\infty,\ln 2)$ 递减，$(\ln 2,+\infty)$ 递增，$g(\ln 2)=2-2\ln 2>0$。故 $f'(x)>0$ 恒成立。\par
+$f$ 单调递增，又 $f(0)=0$，故 $x<0$ 时 $f(x)<0$？需重新验证。\par
+实际上 $f(-1)=e^{-1}-1-1=e^{-1}-2<0$，所以 $f(x)\geq 0$ 并不恒成立。\par
+\textbf{修正题目：}证明当 $x\geq 0$ 时 $f(x)\geq 0$。\par
+$f'(x)>0$（$x\geq 0$），$f(0)=0$，故 $x\geq 0$ 时 $f(x)\geq 0$。\hfill$\square$
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】利润最大化与函数分析]
+某工厂生产某种产品，日产量为 $x$ 件时的总成本为 $C(x)=0.01x^2+5x+200$（元），每件售价为 $15$ 元。
+\begin{enumerate}[leftmargin=1.5em]
+  \item 写出日利润 $L(x)$ 的表达式；
+  \item 求日利润最大时的产量及最大利润。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}\quad
+\begin{enumerate}[leftmargin=1.5em]
+  \item $L(x)=15x-C(x)=15x-0.01x^2-5x-200=-0.01x^2+10x-200$。
+  \item $L'(x)=-0.02x+10=0$，$x=500$。$L''(x)=-0.02<0$，为极大值。\par
+  $L(500)=-0.01\times250000+5000-200=2300$（元）。\par
+  日产量 \textbf{500件} 时利润最大，最大利润 \textbf{2300元}。
+\end{enumerate}
+
+\begin{appbox}[【应用2】药物浓度的函数模型]
+患者服药后，血液中药物的浓度近似为 $C(t)=\dfrac{5t}{t^2+4}$（$\mu$g/mL，$t$ 为服药后的小时数）。
+\begin{enumerate}[leftmargin=1.5em]
+  \item 求药物浓度的最大值及其出现时刻；
+  \item 浓度超过 $1\;\mu$g/mL 的有效时间有多长？
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}\quad
+\begin{enumerate}[leftmargin=1.5em]
+  \item $C'(t)=\dfrac{5(t^2+4)-5t\cdot 2t}{(t^2+4)^2}=\dfrac{20-5t^2}{(t^2+4)^2}$。\par
+  $C'(t)=0$ 得 $t=2$（$t>0$）。$C(2)=\dfrac{10}{8}=1.25\;\mu$g/mL。\par
+  浓度最大值 $1.25\;\mu$g/mL，在服药后 \textbf{2小时} 出现。
+  \item $C(t)>1 \Leftrightarrow 5t>t^2+4 \Leftrightarrow t^2-5t+4<0 \Leftrightarrow 1<t<4$。\par
+  有效时间为 $4-1=3$ 小时。
+\end{enumerate}
+
+\begin{appbox}[【应用3】桥梁拱形与函数拟合]
+一座抛物线形拱桥的跨度为 $20$ 米，拱顶距水面 $8$ 米。一艘宽 $6$ 米、高 $7$ 米的船能否通过此桥？
+\end{appbox}
+
+\textbf{解：}\quad 建立坐标系，拱顶为原点，$x$ 轴水平，$y$ 轴竖直向上。\par
+抛物线方程：$y=ax^2$，过 $(10,-8)$，得 $a=-\dfrac{8}{100}=-\dfrac{2}{25}$。\par
+$y=-\dfrac{2}{25}x^2$。\par
+船宽 $6$ 米，中心在桥中线时两侧距中线 $3$ 米。\par
+$x=3$ 时，$y=-\dfrac{2}{25}\times9=-0.72$。\par
+拱顶距此处高度为 $8-0.72=7.28$ 米 $>7$ 米（船高）。\par
+\textbf{能通过。}
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item 判断函数 $f(x)=x^3+x-1$ 在 $(0,1)$ 内零点的个数。
+  \item 求函数 $f(x)=x^3-6x^2+9x-4$ 的所有零点。
+  \item 已知 $a,b>0$ 且 $a+b=2$，利用琴生不等式证明 $\sqrt{a}+\sqrt{b}\leq 2$。
+  \item 已知 $a,b,c>0$，利用函数 $f(x)=-\ln x$ 的下凸性证明 $\dfrac{a+b+c}{3}\geq \sqrt[3]{abc}$。
+  \item 讨论方程 $e^x=kx$（$k>0$）的解的个数。
+  \item 设 $f(x)=x-\sin x$，证明 $f(x)\geq 0$ 对 $x\geq 0$ 成立。
+\end{enumerate}
+
+\vspace{10pt}
+
+\begin{knowledgebox}[参考答案]
+\textbf{1.}\quad $f(0)=-1<0$，$f(1)=1>0$，$f'(x)=3x^2+1>0$，$f$ 单调递增，恰有 \textbf{1个} 零点。
+
+\medskip
+
+\textbf{2.}\quad $f'(x)=3x^2-12x+9=3(x-1)(x-3)$。\par
+$f(1)=1-6+9-4=0$，$f(x)=(x-1)(x^2-5x+4)=(x-1)(x-1)(x-4)=(x-1)^2(x-4)$。\par
+零点为 $x=1$（二重），$x=4$。
+
+\medskip
+
+\textbf{3.}\quad $f(x)=\sqrt{x}$，$f''(x)=-\dfrac{1}{4}x^{-3/2}<0$，$f$ 上凸。\par
+上凸时 $\dfrac{f(a)+f(b)}{2}\leq f\!\left(\dfrac{a+b}{2}\right)=f(1)=1$，故 $\sqrt{a}+\sqrt{b}\leq 2$。
+
+\medskip
+
+\textbf{4.}\quad $f(x)=-\ln x$，$f''(x)=\dfrac{1}{x^2}>0$，$f$ 下凸。\par
+$\dfrac{f(a)+f(b)+f(c)}{3}\geq f\!\left(\dfrac{a+b+c}{3}\right)$，即 $-\dfrac{\ln a+\ln b+\ln c}{3}\geq -\ln\dfrac{a+b+c}{3}$。\par
+$\ln\dfrac{a+b+c}{3}\geq\dfrac{\ln(abc)}{3}=\ln(abc)^{1/3}$，故 $\dfrac{a+b+c}{3}\geq\sqrt[3]{abc}$。
+
+\medskip
+
+\textbf{5.}\quad $e^x=kx$，即 $\dfrac{e^x}{x}=k$（$x>0$）。令 $g(x)=\dfrac{e^x}{x}$，$g'(x)=\dfrac{e^x(x-1)}{x^2}$。\par
+$g$ 在 $(0,1)$ 递减，$(1,+\infty)$ 递增，$g(1)=e$，$\lim_{x\to 0^+}g(x)=+\infty$，$\lim_{x\to+\infty}g(x)=+\infty$。\par
+$0<k<e$ 时 \textbf{0个} 解；$k=e$ 时 \textbf{1个} 解（$x=1$）；$k>e$ 时 \textbf{2个} 解。
+
+\medskip
+
+\textbf{6.}\quad $f(0)=0$，$f'(x)=1-\cos x\geq 0$，$f$ 在 $[0,+\infty)$ 单调递增，故 $f(x)\geq f(0)=0$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
