@@ -1,0 +1,623 @@
+% ============================================================
+% 讲义 — 人教版七年级上册 第2章 整式的加减
+% 编译命令：xelatex -interaction=nonstopmode 第2章_整式的加减.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版七年级上册 · 第2章\quad 整式的加减}}}
+\fancyhead[R]{\small\textcolor{mainblue}{家教讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第2章\quad 整式的加减}}\\[12pt]
+{\Large\textcolor{gray}{家\quad 教\quad 讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 七年级上册\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+%  第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+\subsection*{2.1\quad 单项式}
+
+\begin{knowledgebox}[单项式的定义]
+\textbf{单项式}：由数与字母的\textbf{乘积}组成的代数式叫做单项式。单独的一个数或一个字母也是单项式。
+
+\textbf{举例}：
+\begin{itemize}[leftmargin=*]
+  \item $3a$，$-2xy^2$，$\dfrac{1}{2}m^2n$，$x$，$-7$ 都是单项式。
+  \item $\dfrac{1}{x}$，$a+b$ \textbf{不是}单项式（因为它们不是数与字母的乘积）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[单项式的系数与次数]
+\textbf{系数}：单项式中的\textbf{数字因数}叫做这个单项式的系数。
+
+\textbf{次数}：单项式中所有字母的\textbf{指数之和}叫做这个单项式的次数。
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{ccccc}
+\toprule
+\textbf{单项式} & \textbf{数字因数} & \textbf{系数} & \textbf{各字母指数} & \textbf{次数}\\
+\midrule
+$3a$ & $3$ & $3$ & $a^1 \to 1$ & $1$\\
+$-2xy^2$ & $-2$ & $-2$ & $x^1, y^2 \to 1+2$ & $3$\\
+$\dfrac{1}{2}m^2n$ & $\dfrac{1}{2}$ & $\dfrac{1}{2}$ & $m^2, n^1 \to 2+1$ & $3$\\
+$-7$ & $-7$ & $-7$ & 无字母 & $0$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=*]
+  \item 单项式的系数包括前面的符号。例如 $-2xy^2$ 的系数是 $-2$，不是 $2$。
+  \item 单独一个数（如 $-7$）是单项式，其次数为 $0$（不是没有次数）。
+  \item 单独一个字母（如 $x$）是单项式，系数为 $1$，次数为 $1$。
+  \item $\pi$ 是常数（数），不是字母，所以 $3\pi r^2$ 的系数是 $3\pi$，次数是 $2$。
+\end{itemize}
+\end{warnbox}
+
+\subsection*{2.2\quad 多项式}
+
+\begin{knowledgebox}[多项式的定义]
+\textbf{多项式}：几个单项式的\textbf{和}叫做多项式。
+
+\textbf{项}：多项式中的每个单项式叫做多项式的项。其中不含字母的项叫做\textbf{常数项}。
+
+\textbf{多项式的次数}：多项式中\textbf{次数最高的项}的次数叫做这个多项式的次数。
+
+\textbf{举例}：$3x^2 - 2x + 5$
+\begin{itemize}[leftmargin=*]
+  \item 它有 $3$ 个项：$3x^2$、$-2x$、$5$
+  \item 常数项是 $5$
+  \item 各项次数分别为 $2$、$1$、$0$，最高次数为 $2$，所以它是\textbf{二次多项式}
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=*]
+  \item 多项式的每一项都包含前面的符号。例如 $3x^2 - 2x + 5$ 的第二项是 $-2x$，不是 $2x$。
+  \item 多项式的次数是"次数最高的项的次数"，不是所有项的次数之和。
+  \item 按某个字母的降幂（或升幂）排列时，要连同符号一起移动。
+\end{itemize}
+\end{warnbox}
+
+\subsection*{2.3\quad 整式}
+
+\begin{knowledgebox}[整式的概念]
+\textbf{整式}：单项式和多项式统称为整式。
+
+\[
+\boxed{\text{整式} = \text{单项式} + \text{多项式}}
+\]
+
+\textbf{关系}：
+\begin{itemize}[leftmargin=*]
+  \item 单项式是整式的一种特殊情况（只有一项）。
+  \item 多项式是若干个单项式相加得到的整式。
+  \item 整式中不能出现字母在分母上的情况（如 $\dfrac{1}{x}$ 不是整式）。
+\end{itemize}
+\end{knowledgebox}
+
+\subsection*{2.4\quad 同类项}
+
+\begin{knowledgebox}[同类项的定义]
+\textbf{同类项}：所含\textbf{字母相同}，并且相同字母的\textbf{指数也相同}的项叫做同类项。
+
+\textbf{判断标准}（两个条件缺一不可）：
+\begin{enumerate}[leftmargin=*]
+  \item 所含字母相同
+  \item 相同字母的指数分别相等
+\end{enumerate}
+
+\textbf{举例}：
+\begin{itemize}[leftmargin=*]
+  \item $3a^2b$ 与 $-5a^2b$ 是同类项（都含 $a^2b$）
+  \item $2xy$ 与 $-3yx$ 是同类项（字母相同，顺序不影响）
+  \item $3a^2b$ 与 $3ab^2$ \textbf{不是}同类项（$a$ 和 $b$ 的指数不同）
+  \item 所有常数项都是同类项（如 $5$ 与 $-3$）
+\end{itemize}
+\end{knowledgebox}
+
+\begin{tipbox}[判断同类项的口诀]
+"两相同"：\textbf{字母相同}，\textbf{指数相同}。与系数无关，与字母的排列顺序无关。
+\end{tipbox}
+
+\subsection*{2.5\quad 合并同类项}
+
+\begin{knowledgebox}[合并同类项法则]
+\textbf{合并同类项}：把多项式中的同类项合并成一项。
+
+\textbf{法则}：
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{系数相加}：把同类项的系数相加作为合并后的系数。
+  \item \textbf{字母和指数不变}：合并后字母和字母的指数保持不变。
+\end{enumerate}
+
+\textbf{公式}：$ma + na = (m+n)a$
+
+\textbf{举例}：
+\begin{itemize}[leftmargin=*]
+  \item $3x + 5x = (3+5)x = 8x$
+  \item $4a^2b - 7a^2b = (4-7)a^2b = -3a^2b$
+  \item $2x^2 + 3x - x^2 + 5x = (2-1)x^2 + (3+5)x = x^2 + 8x$
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=*]
+  \item 合并同类项只把系数相加，\textbf{字母和指数不能变}！例如 $3a^2 + 2a^2 = 5a^2$，不是 $5a^4$。
+  \item 不是同类项不能合并。例如 $3x^2 + 2x$ 不能合并为 $5x^2$ 或 $5x$。
+  \item 合并同类项后，若系数为 $0$，则该项变为 $0$。例如 $3a + (-3a) = 0$。
+\end{itemize}
+\end{warnbox}
+
+\subsection*{2.6\quad 去括号法则}
+
+\begin{knowledgebox}[去括号法则]
+\textbf{法则一：括号前是"$+$"号}，去掉括号和前面的"$+$"号，括号内各项的符号\textbf{不变}。
+
+\[
++(a - b + c) = a - b + c
+\]
+
+\textbf{法则二：括号前是"$-$"号}，去掉括号和前面的"$-$"号，括号内各项的符号\textbf{全部改变}。
+
+\[
+-(a - b + c) = -a + b - c
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[去括号的口诀]
+"+"去括号，符号不变；"-"去括号，全部变号。
+
+去括号的本质是\textbf{分配律}：
+\begin{itemize}[leftmargin=*]
+  \item $+(a - b + c) = (+1) \cdot a + (+1) \cdot (-b) + (+1) \cdot c = a - b + c$
+  \item $-(a - b + c) = (-1) \cdot a + (-1) \cdot (-b) + (-1) \cdot c = -a + b - c$
+\end{itemize}
+\end{tipbox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=*]
+  \item 括号前是"$-$"号时，括号内\textbf{每一项}都要变号，不能遗漏！
+  \item 括号前有数字系数时，先用分配律，再去括号。例如 $2(3x - 1) = 6x - 2$。
+  \item 多重括号时，一般\textbf{从里到外}逐层去括号。
+\end{itemize}
+\end{warnbox}
+
+\subsection*{2.7\quad 整式的加减运算}
+
+\begin{knowledgebox}[整式的加减运算法则]
+整式的加减运算步骤：
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{去括号}：根据去括号法则去掉括号。
+  \item \textbf{合并同类项}：将同类项的系数相加。
+\end{enumerate}
+
+\textbf{运算结果}：结果仍然是一个整式（单项式或多项式）。
+\end{knowledgebox}
+
+\begin{tipbox}[整式加减的注意事项]
+\begin{itemize}[leftmargin=*]
+  \item 多项式相加减时，通常需要加括号把每个多项式括起来，再运算。
+  \item 结果一般按某个字母的\textbf{降幂排列}（从高次到低次）。
+  \item 合并同类项后，系数为分数的要化简为最简分数。
+\end{itemize}
+\end{tipbox}
+
+
+% ============================================================
+%  第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】识别单项式的系数与次数]
+说出下列单项式的系数和次数：
+\[
+-3x^2y,\quad \frac{2ab}{3},\quad -m,\quad 5
+\]
+\end{examplebox}
+
+\textbf{解}：
+\begin{itemize}[leftmargin=*]
+  \item $-3x^2y$：系数为 $-3$，次数为 $2 + 1 = 3$
+  \item $\dfrac{2ab}{3} = \dfrac{2}{3}ab$：系数为 $\dfrac{2}{3}$，次数为 $1 + 1 = 2$
+  \item $-m$：系数为 $-1$，次数为 $1$
+  \item $5$：系数为 $5$，次数为 $0$
+\end{itemize}
+
+\begin{tipbox}[方法总结]
+识别单项式的系数时，注意包括前面的符号以及分数系数。次数是所有字母指数之和。单独一个常数的次数是 $0$。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题2】判断同类项]
+下列各组中的两个项是否为同类项？
+\begin{enumerate}[leftmargin=*]
+  \item $3x^2y$ 与 $-5xy^2$
+  \item $2ab$ 与 $2ba$
+  \item $3x^2$ 与 $3x$
+  \item $-7$ 与 $12$
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解}：
+\begin{enumerate}[leftmargin=*]
+  \item $3x^2y$ 与 $-5xy^2$ \textbf{不是}同类项。虽然字母相同（都是 $x$、$y$），但 $x$ 的指数分别是 $2$ 和 $1$，$y$ 的指数分别是 $1$ 和 $2$，指数不同。
+  \item $2ab$ 与 $2ba$ \textbf{是}同类项。$ab$ 和 $ba$ 只是书写顺序不同，字母和指数完全相同。
+  \item $3x^2$ 与 $3x$ \textbf{不是}同类项。$x$ 的指数分别是 $2$ 和 $1$，指数不同。
+  \item $-7$ 与 $12$ \textbf{是}同类项。常数项之间都是同类项。
+\end{enumerate}
+
+\begin{tipbox}[方法总结]
+判断同类项看两点：(1) 字母是否相同；(2) 相同字母的指数是否分别相等。与系数大小无关，与字母书写顺序无关。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题3】合并同类项]
+合并同类项：
+\[
+4a^2 - 3ab + 2a^2 + 5ab - a^2
+\]
+\end{examplebox}
+
+\textbf{解}：先找出同类项，再分别合并。
+
+$a^2$ 的项：$4a^2 + 2a^2 - a^2 = (4+2-1)a^2 = 5a^2$
+
+$ab$ 的项：$-3ab + 5ab = (-3+5)ab = 2ab$
+
+因此原式 $= 5a^2 + 2ab$。
+
+\begin{tipbox}[方法总结]
+合并同类项的步骤：(1) 找出同类项（可以标记下划线）；(2) 同类项的系数相加；(3) 字母和指数不变。最后检查是否还有可以合并的项。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题4】去括号化简]
+化简：$3(2x - 1) - 2(3x + 4)$
+\end{examplebox}
+
+\textbf{解}：先用分配律展开括号：
+\begin{align*}
+3(2x - 1) - 2(3x + 4) &= 6x - 3 - 6x - 8 \\
+&= (6x - 6x) + (-3 - 8) \\
+&= 0 - 11 \\
+&= -11
+\end{align*}
+
+\begin{tipbox}[方法总结]
+去括号要注意：(1) 括号前有系数时，系数要与括号内每一项相乘（分配律）；(2) 括号前是"$-$"号，每一项都要变号。此题中 $-2(3x+4)$ 展开为 $-6x - 8$，注意第二项也是负号。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题5】整式的加减运算]
+计算：$(5x^2 - 3x + 1) - (2x^2 + x - 4)$
+\end{examplebox}
+
+\textbf{解}：
+\begin{align*}
+&(5x^2 - 3x + 1) - (2x^2 + x - 4) \\
+=\;& 5x^2 - 3x + 1 - 2x^2 - x + 4 \\
+=\;& (5x^2 - 2x^2) + (-3x - x) + (1 + 4) \\
+=\;& 3x^2 - 4x + 5
+\end{align*}
+
+\begin{tipbox}[方法总结]
+两个多项式相减，注意减号后面的括号展开后每一项都要变号。然后合并同类项，结果按降幂排列。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题6】化简求值]
+先化简，再求值：$2(3a^2b - ab^2) - 3(2a^2b - ab) + ab^2$，其中 $a = 1$，$b = -2$。
+\end{examplebox}
+
+\textbf{解}：
+
+\textbf{第一步：化简}
+
+\begin{align*}
+&2(3a^2b - ab^2) - 3(2a^2b - ab) + ab^2 \\
+=\;& 6a^2b - 2ab^2 - 6a^2b + 3ab + ab^2 \\
+=\;& (6a^2b - 6a^2b) + (-2ab^2 + ab^2) + 3ab \\
+=\;& 0 - ab^2 + 3ab \\
+=\;& -ab^2 + 3ab
+\end{align*}
+
+\textbf{第二步：代入求值}
+
+当 $a = 1$，$b = -2$ 时：
+\[
+-ab^2 + 3ab = -(1) \times (-2)^2 + 3 \times 1 \times (-2) = -1 \times 4 + (-6) = -4 - 6 = -10
+\]
+
+\begin{tipbox}[方法总结]
+化简求值题必须遵循"先化简，后代入"的步骤。这样计算更简便，出错率更低。代入时注意负数代入后加括号，乘方运算也要注意符号。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题7】含多重括号的化简]
+化简：$5a - [3a - (2a - 4) + 1]$
+\end{examplebox}
+
+\textbf{解}：从里到外，逐层去括号：
+
+先去小括号（里面是 $-(2a-4)$，"$-$"号去括号要变号）：
+\[
+5a - [3a - 2a + 4 + 1]
+\]
+
+合并中括号内的同类项：
+\[
+5a - [a + 5]
+\]
+
+去中括号（前面是"$-$"号，要变号）：
+\[
+5a - a - 5 = 4a - 5
+\]
+
+\begin{tipbox}[方法总结]
+多重括号化简的一般策略：\textbf{从里到外}逐层去括号。每去一层括号，先看括号前面的符号决定是否变号，再用分配律展开。去完一层后能合并同类项的先合并，可以简化后续计算。
+\end{tipbox}
+
+
+% ============================================================
+%  第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】长方形面积问题]
+一个长方形的长为 $(3a + 2)\,\mathrm{cm}$，宽为 $(2a - 1)\,\mathrm{cm}$。另一个长方形的长为 $(3a - 1)\,\mathrm{cm}$，宽为 $a\,\mathrm{cm}$。求这两个长方形的周长之差。
+\end{appbox}
+
+\textbf{解}：
+
+第一个长方形的周长：
+\[
+2[(3a + 2) + (2a - 1)] = 2(5a + 1) = 10a + 2
+\]
+
+第二个长方形的周长：
+\[
+2[(3a - 1) + a] = 2(4a - 1) = 8a - 2
+\]
+
+周长之差：
+\[
+(10a + 2) - (8a - 2) = 10a + 2 - 8a + 2 = 2a + 4
+\]
+
+答：两个长方形的周长之差为 $(2a + 4)\,\mathrm{cm}$。
+
+\begin{appbox}[【应用2】数字规律问题]
+小明用火柴棒搭了如下图形：第1个图形用了6根火柴棒，第2个图形用了10根火柴棒，第3个图形用了14根火柴棒，依此类推。每个图形是一个正方形，相邻的正方形共用一条边。
+
+\begin{enumerate}[leftmargin=*]
+  \item 搭第 $n$ 个图形需要多少根火柴棒？（用含 $n$ 的整式表示）
+  \item 搭第 $10$ 个图形需要多少根火柴棒？
+\end{enumerate}
+\end{appbox}
+
+\textbf{解}：
+
+观察规律：
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ccc}
+\toprule
+\textbf{第 $n$ 个} & \textbf{火柴棒根数} & \textbf{规律}\\
+\midrule
+$1$ & $6$ & $4 \times 1 + 2 = 6$\\
+$2$ & $10$ & $4 \times 2 + 2 = 10$\\
+$3$ & $14$ & $4 \times 3 + 2 = 14$\\
+$n$ & $4n + 2$ & $4n + 2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[leftmargin=*]
+  \item 搭第 $n$ 个图形需要 $(4n + 2)$ 根火柴棒。
+  \item 当 $n = 10$ 时，$4 \times 10 + 2 = 42$（根）。
+\end{enumerate}
+
+答：搭第 $10$ 个图形需要 $42$ 根火柴棒。
+
+\begin{appbox}[【应用3】购物方案比较]
+某文具店的钢笔每支 $a$ 元，笔记本每本 $b$ 元。小华买了 $3$ 支钢笔和 $5$ 本笔记本，小丽买了 $5$ 支钢笔和 $3$ 本笔记本。
+
+\begin{enumerate}[leftmargin=*]
+  \item 分别用整式表示小华和小丽各花的钱数。
+  \item 两人一共花了多少钱？
+  \item 小丽比小华多花了多少钱？
+\end{enumerate}
+\end{appbox}
+
+\textbf{解}：
+\begin{enumerate}[leftmargin=*]
+  \item 小华花的钱：$(3a + 5b)$ 元；小丽花的钱：$(5a + 3b)$ 元。
+  \item 两人一共花的钱：
+  \[
+  (3a + 5b) + (5a + 3b) = 8a + 8b = 8(a + b)\;\text{（元）}
+  \]
+  \item 小丽比小华多花的钱：
+  \[
+  (5a + 3b) - (3a + 5b) = 5a + 3b - 3a - 5b = 2a - 2b = 2(a - b)\;\text{（元）}
+  \]
+\end{enumerate}
+
+\begin{appbox}[【应用4】行程问题]
+甲、乙两人从同一地点出发，甲向北走，每小时走 $(2x + 1)\,\mathrm{km}$；乙向南走，每小时走 $(x - 3)\,\mathrm{km}$。$(x > 3)$
+
+\begin{enumerate}[leftmargin=*]
+  \item $t$ 小时后，甲、乙两人相距多少千米？
+  \item 当 $x = 5$，$t = 2$ 时，求两人相距的具体距离。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解}：
+\begin{enumerate}[leftmargin=*]
+  \item $t$ 小时后，甲走了 $t(2x + 1)\,\mathrm{km}$，乙走了 $t(x - 3)\,\mathrm{km}$。两人方向相反，相距：
+  \[
+  t(2x + 1) + t(x - 3) = t[(2x + 1) + (x - 3)] = t(3x - 2)\;\text{（km）}
+  \]
+  \item 当 $x = 5$，$t = 2$ 时：
+  \[
+  2 \times (3 \times 5 - 2) = 2 \times 13 = 26\;\text{（km）}
+  \]
+\end{enumerate}
+
+答：$t$ 小时后两人相距 $t(3x - 2)\,\mathrm{km}$；当 $x=5$，$t=2$ 时，两人相距 $26\,\mathrm{km}$。
+
+
+% ============================================================
+%  第四部分：课堂练习与参考答案
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=*]
+  \item 说出单项式 $-\dfrac{3x^2y}{5}$ 的系数和次数。
+
+  \item 判断 $3a^2b$ 与 $-2ab^2$ 是否为同类项，并说明理由。
+
+  \item 合并同类项：$7x^2 - 3x + 2 - 4x^2 + 5x - 1$
+
+  \item 化简：$2(3x - 2y) - 3(x - 4y)$
+
+  \item 先化简，再求值：$3(a^2 - 2ab) - [a^2 - 3b + 2(ab + b)]$，其中 $a = -1$，$b = 2$。
+\end{enumerate}
+
+\vspace{10pt}
+
+\begin{knowledgebox}[参考答案]
+\textbf{第1题}：
+
+单项式 $-\dfrac{3x^2y}{5} = -\dfrac{3}{5}x^2y$，系数为 $-\dfrac{3}{5}$，次数为 $2 + 1 = 3$。
+
+\textbf{第2题}：
+
+$3a^2b$ 与 $-2ab^2$ \textbf{不是}同类项。理由：虽然字母相同（都是 $a$ 和 $b$），但 $3a^2b$ 中 $a$ 的指数为 $2$、$b$ 的指数为 $1$，而 $-2ab^2$ 中 $a$ 的指数为 $1$、$b$ 的指数为 $2$，相同字母的指数不相同。
+
+\textbf{第3题}：
+\begin{align*}
+&7x^2 - 3x + 2 - 4x^2 + 5x - 1 \\
+=\;& (7x^2 - 4x^2) + (-3x + 5x) + (2 - 1) \\
+=\;& 3x^2 + 2x + 1
+\end{align*}
+
+\textbf{第4题}：
+\begin{align*}
+&2(3x - 2y) - 3(x - 4y) \\
+=\;& 6x - 4y - 3x + 12y \\
+=\;& 3x + 8y
+\end{align*}
+
+\textbf{第5题}：
+
+\textbf{化简}：
+\begin{align*}
+&3(a^2 - 2ab) - [a^2 - 3b + 2(ab + b)] \\
+=\;& 3a^2 - 6ab - [a^2 - 3b + 2ab + 2b] \\
+=\;& 3a^2 - 6ab - [a^2 + 2ab - b] \\
+=\;& 3a^2 - 6ab - a^2 - 2ab + b \\
+=\;& 2a^2 - 8ab + b
+\end{align*}
+
+\textbf{代入求值}：当 $a = -1$，$b = 2$ 时：
+\[
+2 \times (-1)^2 - 8 \times (-1) \times 2 + 2 = 2 + 16 + 2 = 20
+\]
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

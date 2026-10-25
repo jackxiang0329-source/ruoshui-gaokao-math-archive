@@ -1,0 +1,763 @@
+% ============================================================
+% 讲义 — 人教版九年级下册 · 第28章 锐角三角函数
+% 编译命令：xelatex -interaction=nonstopmode 第28章_锐角三角函数.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版九年级下册}}}
+\fancyhead[R]{\small\textcolor{mainblue}{第28章 锐角三角函数讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第28章\quad 锐角三角函数}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 九年级下册\quad |\quad 课时：8课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+%  第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ------- 28.1 锐角三角函数的定义 -------
+\subsection*{28.1\quad 锐角三角函数的定义}
+
+\begin{knowledgebox}[正弦、余弦、正切的定义]
+在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，三个角 $A$、$B$、$C$ 的对边分别为 $a$、$b$、$c$（$c$ 为斜边）。
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \coordinate (C) at (0,0);
+  \coordinate (A) at (0,4);
+  \coordinate (B) at (5,0);
+  \draw[thick,mainblue] (A)--(B)--(C)--cycle;
+  \filldraw (0,0.35) -- (0.35,0.35) -- (0.35,0);
+  \node[above left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below left] at (C) {$C$};
+  \node[left] at ($(A)!0.5!(C)$) {$a$};
+  \node[below] at ($(B)!0.5!(C)$) {$b$};
+  \node[above right,shift={(0.15,-0.15)}] at ($(A)!0.5!(B)$) {$c$};
+  \draw[red,thick] (A) ++(-0.4,-0.05) arc(-175:-127:0.4);
+  \\node at ($(\1)+(\2)$) {\small $A$};
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}[nosep]
+  \item \textbf{正弦}：$\sin A=\dfrac{\angle A\;\text{的对边}}{\text{斜边}}=\dfrac{a}{c}$；
+  \item \textbf{余弦}：$\cos A=\dfrac{\angle A\;\text{的邻边}}{\text{斜边}}=\dfrac{b}{c}$；
+  \item \textbf{正切}：$\tan A=\dfrac{\angle A\;\text{的对边}}{\angle A\;\text{的邻边}}=\dfrac{a}{b}$。
+\end{itemize}
+
+\medskip
+三角函数值只与\textbf{角的大小}有关，与三角形的大小无关。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[nosep]
+  \item $\sin A$、$\cos A$、$\tan A$ 是一个\textbf{整体记号}，不能理解为 $\sin\times A$。
+  \item 只有在直角三角形中，才能直接用"对边/斜边"等来计算。锐角三角形中需用其他方法。
+  \item $\tan A$ 的值可以大于 $1$，但 $\sin A$、$\cos A$ 的值都在 $0$ 到 $1$ 之间（$A$ 为锐角时）。
+  \item $\angle A$ 与 $\angle B$ 互余时，$\sin A=\cos B$，不要搞混对边和邻边。
+\end{enumerate}
+\end{warnbox}
+
+% ------- 28.2 特殊角的三角函数值 -------
+\subsection*{28.2\quad 特殊角的三角函数值}
+
+\begin{knowledgebox}[30°、45°、60° 的三角函数值]
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=1]
+  % 30-60-90 三角形
+  \coordinate (C1) at (0,0);
+  \coordinate (A1) at (0,2);
+  \coordinate (B1) at (3.46,0);
+  \draw[thick,mainblue] (A1)--(B1)--(C1)--cycle;
+  \filldraw (0,0.3) -- (0.3,0.3) -- (0.3,0);
+  \node[left] at ($(A1)!0.5!(C1)$) {$1$};
+  \node[below] at ($(B1)!0.5!(C1)$) {$\sqrt{3}$};
+  \node[above right] at ($(A1)!0.5!(B1)$) {$2$};
+  \draw[red,thick] (C1) ++(0.5,0) arc(0:30:0.5);
+  \\node at ($(\1)+(\2)$) {\small $30°$};
+  \draw[red,thick] (A1) ++(-0.3,-0.15) arc(-180:-150:0.3);
+  \\node at ($(\1)+(\2)$) {\small $60°$};
+
+  % 45-45-90 三角形
+  \coordinate (C2) at (6,0);
+  \coordinate (A2) at (6,2.5);
+  \coordinate (B2) at (8.5,0);
+  \draw[thick,mainblue] (A2)--(B2)--(C2)--cycle;
+  \filldraw (6,0.3) -- (6.3,0.3) -- (6.3,0);
+  \node[left] at ($(A2)!0.5!(C2)$) {$1$};
+  \node[below] at ($(B2)!0.5!(C2)$) {$1$};
+  \node[above right,shift={(0.1,-0.1)}] at ($(A2)!0.5!(B2)$) {$\sqrt{2}$};
+  \draw[red,thick] (C2) ++(0.5,0) arc(0:45:0.5);
+  \\node at ($(\1)+(\2)$) {\small $45°$};
+\end{tikzpicture}
+\end{center}
+
+\medskip
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & $30°$ & $45°$ & $60°$ \\
+\hline
+$\sin$ & $\dfrac{1}{2}$ & $\dfrac{\sqrt{2}}{2}$ & $\dfrac{\sqrt{3}}{2}$ \\
+\hline
+$\cos$ & $\dfrac{\sqrt{3}}{2}$ & $\dfrac{\sqrt{2}}{2}$ & $\dfrac{1}{2}$ \\
+\hline
+$\tan$ & $\dfrac{\sqrt{3}}{3}$ & $1$ & $\sqrt{3}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{knowledgebox}
+
+\begin{tipbox}[记忆口诀]
+\textbf{正弦}：一、二、三（$\frac{1}{2}$、$\frac{\sqrt{2}}{2}$、$\frac{\sqrt{3}}{2}$），分母都是 $2$，分子 $\sqrt{1}$、$\sqrt{2}$、$\sqrt{3}$ 递增。
+
+\textbf{余弦}：与正弦刚好\textbf{反过来}（$30°$ 和 $60°$ 互换）。
+
+\textbf{正切}：$\frac{\sqrt{3}}{3}$、$1$、$\sqrt{3}$，即 $\frac{1}{\sqrt{3}}$、$\frac{\sqrt{3}}{\sqrt{3}}$、$\frac{\sqrt{3}}{1}$。
+\end{tipbox}
+
+% ------- 28.3 互余关系与增减性 -------
+\subsection*{28.3\quad 互余关系与增减性}
+
+\begin{knowledgebox}[互余关系]
+在直角三角形中，$\angle A+\angle B=90°$，则：
+\[
+\sin A=\cos(90°-A)=\cos B,\qquad
+\cos A=\sin(90°-A)=\sin B,
+\]
+\[
+\tan A=\frac{1}{\tan(90°-A)}=\frac{1}{\tan B},\qquad \text{即}\;\tan A\cdot\tan B=1.
+\]
+
+\textbf{一句话总结：一个锐角的正弦等于它的余角的余弦。}
+\end{knowledgebox}
+
+\begin{knowledgebox}[锐角三角函数的增减性]
+当 $\alpha$ 在 $0°$ 到 $90°$ 之间变化时：
+\begin{itemize}[nosep]
+  \item $\sin\alpha$ 随 $\alpha$ 增大而\textbf{增大}（从 $0$ 增大到 $1$）；
+  \item $\cos\alpha$ 随 $\alpha$ 增大而\textbf{减小}（从 $1$ 减小到 $0$）；
+  \item $\tan\alpha$ 随 $\alpha$ 增大而\textbf{增大}（从 $0$ 增大到 $+\infty$）。
+\end{itemize}
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  \begin{axis}[
+    axis lines=middle,
+    xlabel={$\alpha$（度）},
+    ylabel={},
+    xmin=0, xmax=95,
+    ymin=-0.1, ymax=1.6,
+    width=12cm, height=6cm,
+    legend style={at={(0.98,0.5)},anchor=east},
+    xtick={0,30,45,60,90},
+    xticklabels={$0°$,$30°$,$45°$,$60°$,$90°$},
+    ytick={0,0.5,1},
+  ]
+  \addplot[blue,thick,domain=0:89.5,samples=100]{sin(x)};
+  \addlegendentry{$\sin\alpha$}
+  \addplot[red,thick,domain=0:89.5,samples=100]{cos(x)};
+  \addlegendentry{$\cos\alpha$}
+  \end{axis}
+\end{tikzpicture}
+\end{center}
+\end{knowledgebox}
+
+\begin{tipbox}[规律]
+\begin{enumerate}[nosep]
+  \item 若 $0°<\alpha<45°$，则 $\sin\alpha<\cos\alpha$；
+  \item 若 $\alpha=45°$，则 $\sin\alpha=\cos\alpha=\dfrac{\sqrt{2}}{2}$；
+  \item 若 $45°<\alpha<90°$，则 $\sin\alpha>\cos\alpha$。
+\end{enumerate}
+\end{tipbox}
+
+% ------- 28.4 解直角三角形 -------
+\subsection*{28.4\quad 解直角三角形}
+
+\begin{knowledgebox}[解直角三角形的定义与依据]
+\textbf{解直角三角形}：在直角三角形中，由已知的元素求出所有未知元素的过程。
+
+\medskip
+直角三角形有 $5$ 个基本元素：$3$ 条边和 $2$ 个锐角（直角已知）。已知其中 $2$ 个独立元素（至少有一个是边），就可以求出其余 $3$ 个。
+
+\medskip
+\textbf{常用关系：}
+\begin{enumerate}[nosep]
+  \item \textbf{角的关系}：$\angle A+\angle B=90°$；
+  \item \textbf{边的关系}（勾股定理）：$a^2+b^2=c^2$；
+  \item \textbf{边角关系}：
+  \[
+  \sin A=\frac{a}{c},\quad \cos A=\frac{b}{c},\quad \tan A=\frac{a}{b}.
+  \]
+\end{enumerate}
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  \coordinate (C) at (0,0);
+  \coordinate (A) at (0,4);
+  \coordinate (B) at (5,0);
+  \draw[thick,mainblue] (A)--(B)--(C)--cycle;
+  \filldraw (0,0.35) -- (0.35,0.35) -- (0.35,0);
+  \node[above left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below left] at (C) {$C$};
+  \node[left] at ($(A)!0.5!(C)$) {$a$};
+  \node[below] at ($(B)!0.5!(C)$) {$b$};
+  \node[above right,shift={(0.15,-0.15)}] at ($(A)!0.5!(B)$) {$c$};
+  \draw[red,thick] (A) ++(-0.4,-0.05) arc(-175:-127:0.4);
+  \\node at ($(\1)+(\2)$) {$A$};
+  \draw[red,thick] (B) ++(-0.4,0.15) arc(160:117:0.4);
+  \\node at ($(\1)+(\2)$) {$B$};
+\end{tikzpicture}
+\end{center}
+\end{knowledgebox}
+
+\begin{warnbox}[解题步骤提醒]
+解直角三角形时，建议按以下步骤：
+\begin{enumerate}[nosep]
+  \item 画出直角三角形，标注已知量和未知量；
+  \item 确定用哪个三角函数关系（看已知边和未知边相对于哪个角的位置）；
+  \item 列方程求解，必要时使用勾股定理验算。
+\end{enumerate}
+选择三角函数时遵循"有斜用斜、无斜用切"的原则：若涉及斜边优先用正弦或余弦，若不涉及斜边用正切。
+\end{warnbox}
+
+% ------- 28.5 实际应用 -------
+\subsection*{28.5\quad 仰角、俯角与坡度}
+
+\begin{knowledgebox}[仰角与俯角]
+\textbf{仰角}：视线在水平线上方时，视线与水平线的夹角。
+
+\textbf{俯角}：视线在水平线下方时，视线与水平线的夹角。
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  \filldraw (0,0) circle(2pt);
+  \draw[thick,gray] (-1,0)--(6,0);
+  \node[left] at (-1,0) {\small 水平线};
+  \draw[thick,blue] (0,0)--(4,4);
+  \draw[blue,thick] (0,0) ++(1.2,0) arc(0:45:1.2);
+  \\node at ($(\1)+(\2)$) {\small\textcolor{blue}{仰角}};
+  \node[right] at (4,4) {\small 目标（上方）};
+  \draw[thick,red] (0,0)--(4,-3);
+  \draw[red,thick] (0,0) ++(1.2,0) arc(0:-37:1.2);
+  \\node at ($(\1)+(\2)$) {\small\textcolor{red}{俯角}};
+  \node[right] at (4,-3) {\small 目标（下方）};
+\end{tikzpicture}
+\end{center}
+\end{knowledgebox}
+
+\begin{knowledgebox}[坡度（坡比）]
+\textbf{坡度}（坡比）：坡面的铅直高度 $h$ 与水平宽度 $l$ 的比，记作 $i$：
+\[
+i=\frac{h}{l}=\tan\alpha,
+\]
+其中 $\alpha$ 为坡面与水平面的夹角（\textbf{坡角}）。
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (8,0);
+  \coordinate (C) at (8,3);
+  \draw[thick,mainblue] (A)--(C)--(B)--cycle;
+  \filldraw (8,0.3) -- (7.7,0.3) -- (7.7,0);
+  \node[below] at ($(A)!0.5!(B)$) {\small 水平距离 $l$};
+  \node[right] at ($(B)!0.5!(C)$) {\small 铅直高度 $h$};
+  \node[above left] at ($(A)!0.5!(C)$) {\small 坡面};
+  \draw[red,thick] (A) ++(1,0) arc(0:20.6:1);
+  \\node at ($(\1)+(\2)$) {\small 坡角 $\alpha$};
+  \\node at ($(\1)+(\2)$) {$i=\dfrac{h}{l}=\tan\alpha$};
+\end{tikzpicture}
+\end{center}
+\end{knowledgebox}
+
+% ============================================================
+%  第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】已知两边求三角函数]
+在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，$a=3$，$b=4$，求 $\sin A$、$\cos A$、$\tan A$。
+\end{examplebox}
+
+\textbf{解：}由勾股定理，$c=\sqrt{a^2+b^2}=\sqrt{9+16}=5$。
+
+\[
+\sin A=\frac{a}{c}=\frac{3}{5},\qquad
+\cos A=\frac{b}{c}=\frac{4}{5},\qquad
+\tan A=\frac{a}{b}=\frac{3}{4}.
+\]
+
+\begin{examplebox}[【例题2】特殊角的计算]
+求值：$\sin^2 30°+\cos^2 45°+\tan 60°\cdot\cos 30°$。
+\end{examplebox}
+
+\textbf{解：}
+\begin{align*}
+\sin^2 30°+\cos^2 45°+\tan 60°\cdot\cos 30°
+&=\left(\frac{1}{2}\right)^2+\left(\frac{\sqrt{2}}{2}\right)^2+\sqrt{3}\cdot\frac{\sqrt{3}}{2}\\
+&=\frac{1}{4}+\frac{2}{4}+\frac{3}{2}\\
+&=\frac{1}{4}+\frac{2}{4}+\frac{6}{4}\\
+&=\frac{9}{4}=\boxed{\dfrac{9}{4}}.
+\end{align*}
+
+\begin{examplebox}[【例题3】互余关系的应用]
+在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，$\sin A=\dfrac{5}{13}$，求 $\cos B$ 和 $\tan B$。
+\end{examplebox}
+
+\textbf{解：}
+\begin{itemize}[nosep]
+  \item 因为 $\angle A+\angle B=90°$，所以 $\cos B=\sin A=\dfrac{5}{13}$。
+  \item 由 $\sin A=\dfrac{a}{c}=\dfrac{5}{13}$，可设 $a=5k$，$c=13k$，则 $b=\sqrt{c^2-a^2}=\sqrt{169k^2-25k^2}=12k$。
+  \item 所以 $\tan B=\dfrac{b}{a}=\dfrac{12k}{5k}=\boxed{\dfrac{12}{5}}$。
+\end{itemize}
+
+\begin{examplebox}[【例题4】解直角三角形]
+在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，$\angle A=30°$，$a=6$，解这个直角三角形。
+\end{examplebox}
+
+\textbf{解：}
+\begin{itemize}[nosep]
+  \item $\angle B=90°-\angle A=90°-30°=60°$。
+  \item 由 $\tan A=\dfrac{a}{b}$，得 $b=\dfrac{a}{\tan A}=\dfrac{6}{\tan30°}=\dfrac{6}{\frac{\sqrt{3}}{3}}=\dfrac{6\times3}{\sqrt{3}}=6\sqrt{3}$。
+  \item 由 $\sin A=\dfrac{a}{c}$，得 $c=\dfrac{a}{\sin A}=\dfrac{6}{\frac{1}{2}}=12$。
+  \item 验证：$a^2+b^2=36+108=144=c^2$。\checkmark
+  \item 因此：$\angle B=60°$，$b=6\sqrt{3}$，$c=12$。
+\end{itemize}
+
+\begin{examplebox}[【例题5】解直角三角形——已知斜边和一角]
+在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，$\angle B=45°$，$c=10$，解这个直角三角形。
+\end{examplebox}
+
+\textbf{解：}
+\begin{itemize}[nosep]
+  \item $\angle A=90°-45°=45°$（这是一个等腰直角三角形）。
+  \item $a=c\cdot\sin A=10\times\sin45°=10\times\dfrac{\sqrt{2}}{2}=5\sqrt{2}$。
+  \item $b=c\cdot\cos A=10\times\cos45°=10\times\dfrac{\sqrt{2}}{2}=5\sqrt{2}$。
+  \item 验证：$a=b=5\sqrt{2}$，$a^2+b^2=50+50=100=c^2$。\checkmark
+\end{itemize}
+
+\begin{examplebox}[【例题6】比较三角函数值的大小]
+不查表，比较 $\sin 50°$ 和 $\cos 50°$ 的大小，并说明理由。
+\end{examplebox}
+
+\textbf{解：}
+\begin{itemize}[nosep]
+  \item 方法一（增减性）：$50°>45°$，在 $0°\sim90°$ 范围内 $\sin\alpha$ 递增，$\cos\alpha$ 递减。在 $45°$ 时两者相等，超过 $45°$ 后 $\sin$ 更大，所以 $\sin50°>\cos50°$。
+  \item 方法二（互余转化）：$\cos50°=\sin(90°-50°)=\sin40°$。因为 $\sin\alpha$ 在 $0°\sim90°$ 递增，且 $50°>40°$，所以 $\sin50°>\sin40°=\cos50°$。
+  \item 结论：$\boxed{\sin50°>\cos50°}$。
+\end{itemize}
+
+\begin{examplebox}[【例题7】证明题——三角恒等式]
+在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$。求证：$\sin^2 A+\cos^2 A=1$。
+\end{examplebox}
+
+\textbf{证明：}
+\begin{itemize}[nosep]
+  \item 设 $\angle A$ 的对边为 $a$，邻边为 $b$，斜边为 $c$。
+  \item $\sin A=\dfrac{a}{c}$，$\cos A=\dfrac{b}{c}$。
+  \item $\sin^2 A+\cos^2 A=\dfrac{a^2}{c^2}+\dfrac{b^2}{c^2}=\dfrac{a^2+b^2}{c^2}$。
+  \item 由勾股定理 $a^2+b^2=c^2$，代入得 $\dfrac{c^2}{c^2}=1$。
+  \item 所以 $\sin^2 A+\cos^2 A=1$。\qed
+\end{itemize}
+
+\begin{tipbox}[重要公式]
+$\sin^2 A+\cos^2 A=1$ 是\textbf{勾股定理}的三角函数形式，适用于任意角，在后续学习中非常重要。
+\end{tipbox}
+
+% ============================================================
+%  第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】利用仰角测高]
+如图，小明在距离一棵大树底部 $30\,\text{m}$ 的 $A$ 点处，测得树顶 $C$ 的仰角为 $30°$（小明眼睛距地面 $1.5\,\text{m}$），求大树的高度（精确到 $0.1\,\text{m}$）。
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+  \fill[lightgray!20] (-1,0) rectangle (13,-0.3);
+  \draw[thick] (-1,0)--(13,0);
+  \draw[very thick,green!50!black] (10,0)--(10,9);
+  \draw[thick,blue] (1,0)--(1,1.5);
+  \filldraw[blue] (1,1.5) circle(2.5pt);
+  \draw[dashed,red] (1,1.5)--(10,9);
+  \draw[thick,gray] (1,1.5)--(10,1.5);
+  \draw[red,thick] (1,1.5) ++(1.5,0) arc(0:29:1.5);
+  \\node at ($(\1)+(\2)$) {\small $30°$};
+  \node[left] at (1,0.75) {\small $1.5\,$m};
+  \draw[<->] (1,-0.5)--(10,-0.5);
+  \node at (5.5,-0.8) {\small $30\,$m};
+  \node[left] at (1,0) {\small $A$};
+  \node[above] at (10,9) {\small $C$};
+  \node at (10,-0.3) {\small $B$};
+\end{tikzpicture}
+\end{center}
+\end{appbox}
+
+\textbf{解：}设树顶 $C$ 到小明眼睛水平线的高度为 $h$。
+
+在直角三角形中（以 $A$ 为观测点，水平线为底边），
+\[
+\tan 30°=\frac{h}{30},\quad h=30\tan30°=30\times\frac{\sqrt{3}}{3}=10\sqrt{3}\approx17.32\,\text{m}.
+\]
+大树总高 $=h+1.5=17.32+1.5=\boxed{18.8}\,\text{m}$。
+
+\begin{appbox}[【应用2】坡度问题]
+一段斜坡路面的坡度为 $1:\sqrt{3}$。一辆汽车沿斜坡向上行驶了 $100\,\text{m}$，求汽车上升的高度和水平前进的距离。
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=0.6]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (10,0);
+  \coordinate (C) at (10,4);
+  \draw[thick,mainblue] (A)--(C);
+  \draw[thick,gray] (A)--(B);
+  \draw[dashed] (C)--(B);
+  \filldraw (10,0.3) -- (9.7,0.3) -- (9.7,0);
+  \node[below] at ($(A)!0.5!(B)$) {\small 水平距离 $l$};
+  \node[right] at ($(B)!0.5!(C)$) {\small 高度 $h$};
+  \node[above left] at ($(A)!0.5!(C)$) {\small 斜坡 $100\,$m};
+  \draw[red,thick] (A) ++(1,0) arc(0:21.8:1);
+  \\node at ($(\1)+(\2)$) {\small $\alpha$};
+\end{tikzpicture}
+\end{center}
+\end{appbox}
+
+\textbf{解：}坡度 $i=\dfrac{h}{l}=\dfrac{1}{\sqrt{3}}=\tan\alpha$。
+
+由 $\tan\alpha=\dfrac{1}{\sqrt{3}}$，得 $\alpha=30°$。
+
+\begin{itemize}[nosep]
+  \item 上升高度：$h=100\sin30°=100\times\dfrac{1}{2}=\boxed{50}\,\text{m}$。
+  \item 水平距离：$l=100\cos30°=100\times\dfrac{\sqrt{3}}{2}=\boxed{50\sqrt{3}}\approx86.6\,\text{m}$。
+\end{itemize}
+
+\begin{appbox}[【应用3】测量河宽]
+如图，为测量河宽，在河岸边 $A$ 点测得对岸一棵树 $B$ 的方向与河岸 $AD$ 的夹角为 $60°$（即 $\angle BAD=60°$）。沿河岸走 $50\,\text{m}$ 到 $D$ 点，测得 $\angle BDA=45°$。求河宽 $AB$（精确到 $0.1\,\text{m}$）。
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=0.55]
+  \fill[blue!8] (-1,-0.5) rectangle (14,5);
+  \draw[blue,thick] (-1,5)--(14,5);
+  \draw[blue,thick] (-1,-0.5)--(14,-0.5);
+  \node at (6.5,2) {\small 河};
+  \coordinate (A) at (0,5);
+  \coordinate (D) at (5,5);
+  \coordinate (B) at (2.68,-0.5);
+  \filldraw (A) circle(2pt) node[above] {$A$};
+  \filldraw (D) circle(2pt) node[above] {$D$};
+  \filldraw (B) circle(2pt) node[below] {$B$};
+  \draw[thick,red] (A)--(B);
+  \draw[thick,red] (D)--(B);
+  \draw[thick] (A)--(D);
+  \node[above] at ($(A)!0.5!(D)$) {\small $50\,$m};
+  \draw[red,thick] (A) ++(0.6,0) arc(0:-60:0.6);
+  \\node at ($(\1)+(\2)$) {\small $60°$};
+  \draw[red,thick] (D) ++(-0.6,0) arc(180:135:0.6);
+  \\node at ($(\1)+(\2)$) {\small $45°$};
+\end{tikzpicture}
+\end{center}
+\end{appbox}
+
+\textbf{解：}
+
+在 $\triangle ABD$ 中，$\angle BAD=60°$，$\angle BDA=45°$，$AD=50$。
+
+$\angle ABD=180°-60°-45°=75°$。
+
+由正弦定理：
+\[
+\frac{AD}{\sin(\angle ABD)}=\frac{AB}{\sin(\angle BDA)}\;\Rightarrow\;
+\frac{50}{\sin75°}=\frac{AB}{\sin45°}.
+\]
+
+其中 $\sin75°=\sin(45°+30°)=\sin45°\cos30°+\cos45°\sin30°=\dfrac{\sqrt{2}}{2}\cdot\dfrac{\sqrt{3}}{2}+\dfrac{\sqrt{2}}{2}\cdot\dfrac{1}{2}=\dfrac{\sqrt{6}+\sqrt{2}}{4}$。
+
+\[
+AB=\frac{50\sin45°}{\sin75°}=\frac{50\cdot\frac{\sqrt{2}}{2}}{\frac{\sqrt{6}+\sqrt{2}}{4}}
+=\frac{100\sqrt{2}}{\sqrt{6}+\sqrt{2}}
+=\frac{100\sqrt{2}(\sqrt{6}-\sqrt{2})}{4}
+=25\sqrt{2}(\sqrt{6}-\sqrt{2})
+=50(\sqrt{3}-1)\approx\boxed{36.6}\,\text{m}.
+\]
+
+\begin{appbox}[【应用4】航行问题]
+一艘船从 $A$ 港出发，沿北偏东 $60°$ 方向航行了 $20$ 海里到达 $B$ 港，再从 $B$ 港沿北偏西 $30°$ 方向航行了 $30$ 海里到达 $C$ 港。求 $A$、$C$ 两港之间的距离。
+
+\medskip
+\begin{center}
+\begin{tikzpicture}[scale=0.45]
+  \draw[thick,gray,->] (0,0)--(0,8) node[above]{\small N};
+  \draw[thick,gray,->] (0,0)--(8,0) node[right]{\small E};
+  \filldraw (0,0) circle(3pt) node[below left]{$A$};
+  \coordinate (B) at (5,8.66);
+  \filldraw (B) circle(3pt) node[right]{$B$};
+  \draw[thick,blue] (0,0)--(B);
+  \draw[blue,thick] (0,0) ++(1,0) arc(0:60:1);
+  \\node at ($(\1)+(\2)$) {\small $60°$};
+  \coordinate (C) at (-5,14.66);
+  \filldraw (C) circle(3pt) node[left]{$C$};
+  \draw[thick,red] (B)--(C);
+  \draw[red,thick] (B) ++(0,1.5) arc(90:120:1.5);
+  \\node at ($(\1)+(\2)$) {\small $30°$};
+  \draw[thick,dashed,mainblue] (0,0)--(C);
+  \node at (-2.5,7.33) {\small $AC$};
+  \node[above right] at ($(0,0)!0.5!(B)$) {\small $20$};
+  \node[above left] at ($(B)!0.5!(C)$) {\small $30$};
+\end{tikzpicture}
+\end{center}
+\end{appbox}
+
+\textbf{解：}
+
+$AB$ 方向为北偏东 $60°$（从正北顺时针 $60°$），$BC$ 方向为北偏西 $30°$（从正北逆时针 $30°$）。
+
+$BA$ 方向与 $BC$ 方向的夹角（即 $\angle ABC$）：
+\[
+\angle ABC=180°-60°-30°=90°.
+\]
+
+所以在 $\text{Rt}\triangle ABC$ 中，$AB=20$，$BC=30$。
+
+由勾股定理：
+\[
+AC=\sqrt{AB^2+BC^2}=\sqrt{400+900}=\sqrt{1300}=10\sqrt{13}\approx\boxed{36.1}\,\text{海里}.
+\]
+
+% ============================================================
+%  第四部分：课堂练习
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，$a=5$，$c=13$，求 $\sin A$、$\cos A$、$\tan A$。
+
+  \item 求值：$\dfrac{\tan45°-\sin30°}{1+\cos60°}+\sin60°\cdot\tan60°$。
+
+  \item 在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，$\cos A=\dfrac{3}{5}$，求 $\sin A$ 和 $\tan A$。
+
+  \item 在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，$\angle A=30°$，$c=14$，求 $a$ 和 $b$。
+
+  \item 一棵大树被风从 $D$ 处吹断，树顶 $B$ 着地于 $C$ 点，$C$ 点距树根 $A$ 的水平距离为 $4\,\text{m}$，折断部分 $BD$ 与地面的夹角为 $30°$，求大树原来的高。
+
+  \medskip
+  \begin{center}
+  \begin{tikzpicture}[scale=0.6]
+    \fill[lightgray!20] (-1,0) rectangle (10,-0.3);
+    \draw[thick] (-1,0)--(10,0);
+    \draw[very thick,green!50!black] (2,0)--(2,3.5);
+    \draw[very thick,green!50!black] (2,3.5)--(6,0);
+    \filldraw (2,0) circle(2pt) node[below]{$A$};
+    \filldraw (2,3.5) circle(2pt) node[above]{$D$（断点）};
+    \filldraw (6,0) circle(2pt) node[below]{$C$};
+    \node[left] at (2,1.75) {\small 直立部分};
+    \node[above right] at (4,1.75) {\small $BD$};
+    \draw[<->] (2,-0.5)--(6,-0.5);
+    \node at (4,-0.8) {\small $4\,$m};
+    \draw[red,thick] (2,3.5) ++(0.6,0) arc(0:-30:0.6);
+    \\node at ($(\1)+(\2)$) {\small $30°$};
+  \end{tikzpicture}
+  \end{center}
+
+  \item 在 $\text{Rt}\triangle ABC$ 中，$\angle C=90°$，$a=2\sqrt{3}$，$b=2$，求 $\angle A$ 和 $\angle B$。
+
+  \item 某人在 $A$ 点测得山顶 $D$ 的仰角为 $45°$，向山脚方向前进 $200\,\text{m}$ 到 $B$ 点，测得山顶 $D$ 的仰角为 $60°$。求山高 $CD$（精确到 $1\,\text{m}$）。
+
+  \medskip
+  \begin{center}
+  \begin{tikzpicture}[scale=0.4]
+    \coordinate (C) at (0,0);
+    \coordinate (D) at (0,10);
+    \coordinate (A) at (-10,0);
+    \coordinate (B) at (-5.77,0);
+    \draw[thick,green!50!black] (C)--(D);
+    \draw[thick,gray] (-12,0)--(2,0);
+    \draw[thick,red] (A)--(D);
+    \draw[thick,blue] (B)--(D);
+    \filldraw (C) circle(2pt) node[below]{$C$};
+    \filldraw (D) circle(2pt) node[above]{$D$};
+    \filldraw (A) circle(2pt) node[below left]{$A$};
+    \filldraw (B) circle(2pt) node[below]{$B$};
+    \draw[red,thick] (A) ++(0.8,0) arc(0:45:0.8);
+    \\node at ($(\1)+(\2)$) {\small $45°$};
+    \draw[blue,thick] (B) ++(0.8,0) arc(0:60:0.8);
+    \\node at ($(\1)+(\2)$) {\small $60°$};
+    \draw[<->] (A)--(B);
+    \node at ($(A)!0.5!(B)$) [below] {\small $200\,$m};
+    \node[left] at ($(C)!0.5!(D)$) {\small 山高 $h$};
+  \end{tikzpicture}
+  \end{center}
+
+  \item 如图，从 $20\,\text{m}$ 高的楼顶 $A$ 处测得对面一棵树顶 $C$ 的俯角为 $30°$，又测得树底 $D$ 的俯角为 $45°$。求树高 $CD$（精确到 $0.1\,\text{m}$）。
+
+  \medskip
+  \begin{center}
+  \begin{tikzpicture}[scale=0.5]
+    \draw[thick,mainblue] (0,0)--(0,5);
+    \draw[thick,mainblue] (1,0)--(1,5);
+    \draw[thick,mainblue] (0,5)--(1,5);
+    \node[left] at (0,2.5) {\small $20\,$m};
+    \draw[very thick,green!50!black] (6,0)--(6,3.5);
+    \filldraw (6,0) circle(2pt) node[below]{$D$};
+    \filldraw (6,3.5) circle(2pt) node[above]{$C$};
+    \filldraw (0.5,5) circle(2pt) node[above left]{$A$};
+    \draw[dashed,red] (0.5,5)--(6,3.5);
+    \draw[dashed,red] (0.5,5)--(6,5);
+    \draw[thick,gray] (0.5,5)--(8,5);
+    \draw[red,thick] (0.5,5) ++(1,0) arc(0:-15.5:1);
+    \\node at ($(\1)+(\2)$) {\small $30°$};
+    \draw[red,thick] (0.5,5) ++(1.2,0) arc(0:-45:1.2);
+    \\node at ($(\1)+(\2)$) {\small $45°$};
+  \end{tikzpicture}
+  \end{center}
+\end{enumerate}
+
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}
+  \item $b=\sqrt{c^2-a^2}=\sqrt{169-25}=12$。
+  \[
+  \sin A=\frac{a}{c}=\frac{5}{13},\quad
+  \cos A=\frac{b}{c}=\frac{12}{13},\quad
+  \tan A=\frac{a}{b}=\frac{5}{12}.
+  \]
+
+  \item $\dfrac{\tan45°-\sin30°}{1+\cos60°}+\sin60°\cdot\tan60°
+  =\dfrac{1-\frac{1}{2}}{1+\frac{1}{2}}+\frac{\sqrt{3}}{2}\cdot\sqrt{3}
+  =\dfrac{\frac{1}{2}}{\frac{3}{2}}+\frac{3}{2}
+  =\frac{1}{3}+\frac{3}{2}
+  =\boxed{\dfrac{11}{6}}.$
+
+  \item $\cos A=\dfrac{3}{5}$，设 $b=3k$，$c=5k$，则 $a=\sqrt{25k^2-9k^2}=4k$。
+  \[
+  \sin A=\frac{4}{5},\quad \tan A=\frac{4}{3}.
+  \]
+
+  \item $\angle A=30°$，
+  $a=c\sin30°=14\times\dfrac{1}{2}=\boxed{7}$，
+  $b=c\cos30°=14\times\dfrac{\sqrt{3}}{2}=\boxed{7\sqrt{3}}$。
+
+  \item 设断点 $D$ 的高度为 $h$。$AC=4\,\text{m}$，$\angle BCA=30°$。
+  \begin{itemize}[nosep]
+    \item 直立部分 $AD$：$\tan30°=\dfrac{h}{4}$，$h=4\tan30°=\dfrac{4\sqrt{3}}{3}$。
+    \item 折断部分 $BD$：$\cos30°=\dfrac{4}{BD}$，$BD=\dfrac{4}{\cos30°}=\dfrac{8\sqrt{3}}{3}$。
+    \item 原树高 $=AD+BD=\dfrac{4\sqrt{3}}{3}+\dfrac{8\sqrt{3}}{3}=4\sqrt{3}\approx\boxed{6.9}\,\text{m}$。
+  \end{itemize}
+
+  \item $\tan A=\dfrac{a}{b}=\dfrac{2\sqrt{3}}{2}=\sqrt{3}$，所以 $\angle A=60°$，$\angle B=30°$。
+
+  \item 设山高 $CD=h$。
+  \begin{itemize}[nosep]
+    \item 在 $\text{Rt}\triangle ACD$ 中，$\angle DAC=45°$，$AC=h$。
+    \item 在 $\text{Rt}\triangle BCD$ 中，$\angle DBC=60°$，$BC=\dfrac{h}{\tan60°}=\dfrac{h}{\sqrt{3}}$。
+    \item $AB=AC-BC=h-\dfrac{h}{\sqrt{3}}=h\cdot\dfrac{\sqrt{3}-1}{\sqrt{3}}=200$。
+    \item $h=\dfrac{200\sqrt{3}}{\sqrt{3}-1}=\dfrac{200\sqrt{3}(\sqrt{3}+1)}{2}=100(3+\sqrt{3})=300+100\sqrt{3}\approx\boxed{473}\,\text{m}$。
+  \end{itemize}
+
+  \item 设 $A$ 到树的水平距离为 $d$。
+  \begin{itemize}[nosep]
+    \item 由俯角 $45°$ 测树底 $D$：$d=20\,\text{m}$（因为 $\tan45°=\dfrac{20}{d}$）。
+    \item 由俯角 $30°$ 测树顶 $C$：设树高为 $h$，则 $\tan30°=\dfrac{20-h}{d}=\dfrac{20-h}{20}$。
+    \item $20-h=20\tan30°=\dfrac{20\sqrt{3}}{3}$，$h=20-\dfrac{20\sqrt{3}}{3}=\dfrac{60-20\sqrt{3}}{3}\approx\boxed{8.5}\,\text{m}$。
+  \end{itemize}
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

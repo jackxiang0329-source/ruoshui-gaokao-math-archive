@@ -1,0 +1,686 @@
+% ============================================================
+% 讲义 — 人教版七年级上册 第3章 一元一次方程
+% 编译命令：xelatex -interaction=nonstopmode 第3章_一元一次方程.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版七年级上册 · 第3章 一元一次方程}}}
+\fancyhead[R]{\small\textcolor{mainblue}{家教讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第3章\quad 一元一次方程}}\\[12pt]
+{\Large\textcolor{gray}{家\quad 教\quad 讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 七年级上册\quad |\quad 课时：6课时}
+\end{center}
+\vspace{10pt}
+
+% ================================================================
+% 第一部分：知识点讲解
+% ================================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 1.1 等式与等式的性质 ----------
+\subsection*{1.1\quad 等式与等式的性质}
+
+\begin{knowledgebox}[等式的概念]
+用等号"$=$"连接的式子叫做\textbf{等式}。等号左边的部分叫做等式的\textbf{左边}，右边的部分叫做等式的\textbf{右边}。
+
+等式可以分为：
+\begin{itemize}[nosep]
+  \item \textbf{恒等式}：无论字母取什么值都成立，如 $a+b=b+a$。
+  \item \textbf{条件等式}：只有当字母取某些特定值时才成立，如 $2x+3=7$（只有 $x=2$ 时成立）。
+  \item \textbf{矛盾等式}：无论字母取什么值都不成立，如 $x+1=x+2$。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[等式的性质1]
+\textbf{等式两边加（或减）同一个数（或式子），结果仍然相等。}
+
+用字母表示：如果 $a=b$，那么 $a+c=b+c$，$a-c=b-c$。
+
+\textbf{举例：}如果 $x+3=7$，两边同时减去3，得 $x+3-3=7-3$，即 $x=4$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[等式的性质2]
+\textbf{等式两边乘同一个数，或除以同一个不为0的数，结果仍然相等。}
+
+用字母表示：如果 $a=b$，那么 $ac=bc$；如果 $a=b$ 且 $c\neq 0$，那么 $\dfrac{a}{c}=\dfrac{b}{c}$。
+
+\textbf{举例：}如果 $3x=12$，两边同时除以3，得 $\dfrac{3x}{3}=\dfrac{12}{3}$，即 $x=4$。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[nosep]
+  \item 等式性质2中，\textbf{不能除以0}！这是最常见的错误。
+  \item 等式性质可以对等式的两边\textbf{同时}进行操作，不能只对一边操作。
+  \item "移项"本质上就是利用等式性质1，将项从等式一边移到另一边并改变符号。
+\end{itemize}
+\end{warnbox}
+
+% ---------- 1.2 方程与一元一次方程 ----------
+\subsection*{1.2\quad 方程与一元一次方程}
+
+\begin{knowledgebox}[方程的概念]
+含有\textbf{未知数}的\textbf{等式}叫做\textbf{方程}。
+
+判断一个式子是否为方程，必须同时满足两个条件：
+\begin{enumerate}[nosep]
+  \item 是等式（含有等号）；
+  \item 含有未知数（字母）。
+\end{enumerate}
+
+例如：$2x+1=5$ 是方程，$2+3=5$ 不是方程（没有未知数），$2x+1$ 也不是方程（不是等式）。
+\end{knowledgebox}
+
+\begin{knowledgebox}[一元一次方程的概念]
+只含有\textbf{一个}未知数，未知数的次数都是\textbf{1}，等号两边都是\textbf{整式}，这样的方程叫做\textbf{一元一次方程}。
+
+标准形式：$ax+b=0$（其中 $a,b$ 为常数，$a\neq 0$）。
+
+判断要点：
+\begin{itemize}[nosep]
+  \item \textbf{一元}：只含一个未知数；
+  \item \textbf{一次}：未知数的最高次数为1；
+  \item \textbf{方程}：是等式。
+\end{itemize}
+
+例如：$3x-5=0$、$\dfrac{x}{2}+1=3$ 都是一元一次方程；$x^2+1=0$ 不是（未知数次数为2）；$x+y=1$ 不是（含两个未知数）。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[nosep]
+  \item $2x^2+3x=2x^2+5$ 看起来复杂，但化简后得 $3x=5$，是一元一次方程。判断是否为一元一次方程需要先化简。
+  \item $\dfrac{1}{x}=2$ 不是一元一次方程，因为 $\dfrac{1}{x}$ 不是整式。
+  \item 含绝对值的方程如 $|x|=3$ 不是一元一次方程。
+\end{itemize}
+\end{warnbox}
+
+% ---------- 1.3 方程的解 ----------
+\subsection*{1.3\quad 方程的解}
+
+\begin{knowledgebox}[方程的解]
+使方程左右两边相等的未知数的值，叫做\textbf{方程的解}。
+
+只含有一个未知数的方程的解，也叫做方程的\textbf{根}。
+
+\textbf{检验方法：}将求得的值代入方程的左边和右边，分别计算，看左右两边是否相等。
+\end{knowledgebox}
+
+\begin{tipbox}[解的检验步骤]
+\begin{enumerate}[nosep]
+  \item 将 $x$ 的值代入方程的\textbf{左边}，计算结果；
+  \item 将 $x$ 的值代入方程的\textbf{右边}，计算结果；
+  \item 比较左边和右边是否相等：若相等，则该值是方程的解；若不相等，则不是。
+\end{enumerate}
+\end{tipbox}
+
+% ---------- 1.4 解一元一次方程 ----------
+\subsection*{1.4\quad 解一元一次方程的步骤}
+
+\begin{knowledgebox}[解一元一次方程的一般步骤]
+解一元一次方程的一般步骤如下：
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|l|}
+\hline
+\textbf{步骤} & \textbf{名称} & \textbf{说明} \\
+\hline
+1 & 去分母 & 方程两边同乘各分母的最小公倍数 \\
+\hline
+2 & 去括号 & 先去小括号，再去中括号，最后去大括号 \\
+\hline
+3 & 移项 & 把含未知数的项移到一边，常数项移到另一边 \\
+\hline
+4 & 合并同类项 & 将同类项合并 \\
+\hline
+5 & 系数化为1 & 方程两边除以未知数的系数 \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{注意：}并不是每个方程都需要经过全部五个步骤，应根据具体情况灵活处理。
+\end{knowledgebox}
+
+\begin{warnbox}[解方程中的易错点]
+\begin{itemize}[nosep]
+  \item \textbf{去分母}时，方程两边的\textbf{每一项}都要乘最小公倍数，特别注意常数项不要漏乘。
+  \item \textbf{去括号}时，如果括号前面是负号，括号内的每一项都要变号。
+  \item \textbf{移项}要变号！从等号左边移到右边（或反之），加变减、减变加。
+  \item \textbf{系数化为1}时，是两边同除以系数（或乘以系数的倒数），不要搞混分子分母。
+\end{itemize}
+\end{warnbox}
+
+\begin{tipbox}[移项的本质]
+移项的依据是\textbf{等式的性质1}。所谓"移项"，就是把等式一边的某项改变符号后移到另一边。
+
+例如：$2x+5=11$，将 $+5$ 从左边移到右边变为 $-5$，得 $2x=11-5$，即 $2x=6$。
+
+\textbf{口诀：}移项变号，过等号变号。
+\end{tipbox}
+
+% ---------- 1.5 一元一次方程的应用（常见题型） ----------
+\subsection*{1.5\quad 一元一次方程的应用（常见题型）}
+
+\begin{knowledgebox}[行程问题]
+\textbf{基本公式：}路程 $=$ 速度 $\times$ 时间，即 $s=vt$。
+
+\begin{itemize}[nosep]
+  \item \textbf{相遇问题：}两人相向而行，\textbf{路程之和} $=$ 总路程。\\
+    即 $v_1 t + v_2 t = s$。
+  \item \textbf{追及问题：}两人同向而行（快的追慢的），\textbf{路程之差} $=$ 初始距离。\\
+    即 $v_1 t - v_2 t = s$（$v_1>v_2$）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[工程问题]
+\textbf{基本公式：}工作量 $=$ 工作效率 $\times$ 时间。
+
+通常将总工作量设为"1"，则：
+\begin{itemize}[nosep]
+  \item 甲单独完成需要 $a$ 天，甲的工作效率为 $\dfrac{1}{a}$；
+  \item 乙单独完成需要 $b$ 天，乙的工作效率为 $\dfrac{1}{b}$；
+  \item 甲乙合作，完成的工作量 $=$ $\left(\dfrac{1}{a}+\dfrac{1}{b}\right)\times$ 合作天数。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[利润问题]
+\textbf{基本公式：}
+\begin{itemize}[nosep]
+  \item 利润 $=$ 售价 $-$ 成本（进价）；
+  \item 利润率 $=$ $\dfrac{\text{利润}}{\text{成本}}\times 100\%$；
+  \item 售价 $=$ 成本 $\times(1+$利润率$)$；
+  \item 打折后的售价 $=$ 原价 $\times$ 折扣率（如八折即乘以0.8）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[浓度问题]
+\textbf{基本公式：}
+\begin{itemize}[nosep]
+  \item 溶质 $=$ 溶液 $\times$ 浓度；
+  \item 混合前后，\textbf{溶质总量不变}。
+\end{itemize}
+例如：将浓度为 $a\%$ 的溶液 $m$ 克与浓度为 $b\%$ 的溶液 $n$ 克混合，混合后浓度为 $\dfrac{m \cdot a\% + n \cdot b\%}{m+n}$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[数字问题与年龄问题]
+\textbf{数字问题：}
+\begin{itemize}[nosep]
+  \item 两位数 $= 10\times$十位数字 $+$ 个位数字；
+  \item 三位数 $= 100\times$百位数字 $+ 10\times$十位数字 $+$ 个位数字。
+\end{itemize}
+
+\textbf{年龄问题：}
+\begin{itemize}[nosep]
+  \item 核心特点：\textbf{年龄差不变}。两人的年龄差始终等于他们最初的年龄差。
+  \item 设未知数时，常用"设 $x$ 年后（前）……"的方式。
+\end{itemize}
+\end{knowledgebox}
+
+% ================================================================
+% 第二部分：例题精讲
+% ================================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】基础计算：利用等式性质解方程]
+利用等式的性质解方程：$5x-3=12$。
+\end{examplebox}
+
+\textbf{解：}
+
+第一步：利用等式性质1，两边同时加3：
+$$5x-3+3=12+3 \implies 5x=15$$
+
+第二步：利用等式性质2，两边同时除以5：
+$$\frac{5x}{5}=\frac{15}{5} \implies x=3$$
+
+\textbf{检验：}左边 $=5\times 3-3=15-3=12$，右边 $=12$，左边 $=$ 右边，所以 $x=3$ 是原方程的解。
+
+\begin{tipbox}[方法总结]
+简单的方程可以直接利用等式性质逐步求解，养成检验的习惯。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题2】基础：解一元一次方程（含去括号、移项）]
+解方程：$3(x-2)+1=x+5$。
+\end{examplebox}
+
+\textbf{解：}
+
+去括号：$3x-6+1=x+5$
+
+合并左边同类项：$3x-5=x+5$
+
+移项（将含 $x$ 的项移到左边，常数项移到右边）：
+$$3x-x=5+5$$
+
+合并同类项：$2x=10$
+
+系数化为1：$x=5$
+
+\textbf{检验：}左边 $=3\times(5-2)+1=3\times 3+1=10$，右边 $=5+5=10$，左边 $=$ 右边。$\checkmark$
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题3】易错：去分母时漏乘常数项]
+解方程：$\dfrac{2x-1}{3}-\dfrac{x+2}{2}=1$。
+\end{examplebox}
+
+\textbf{解：}
+
+去分母：各分母的最小公倍数为6，方程两边同乘6：
+$$6\times\frac{2x-1}{3}-6\times\frac{x+2}{2}=6\times 1$$
+
+$$2(2x-1)-3(x+2)=6$$
+
+去括号：$4x-2-3x-6=6$
+
+合并同类项：$x-8=6$
+
+移项：$x=6+8$
+
+$$x=14$$
+
+\textbf{检验：}左边 $=\dfrac{2\times 14-1}{3}-\dfrac{14+2}{2}=\dfrac{27}{3}-\dfrac{16}{2}=9-8=1$，右边 $=1$。$\checkmark$
+
+\begin{warnbox}[易错提醒]
+去分母时，右边的常数"1"也要乘以6！很多同学会忘记乘，写成 $2(2x-1)-3(x+2)=1$，这是错的。
+\end{warnbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题4】综合：含小数的一元一次方程]
+解方程：$\dfrac{0.1x+0.2}{0.3}-\dfrac{0.3x-0.1}{0.2}=1$。
+\end{examplebox}
+
+\textbf{解：}
+
+方法一（利用分数基本性质去小数）：
+
+$\dfrac{0.1x+0.2}{0.3}=\dfrac{10(0.1x+0.2)}{10\times 0.3}=\dfrac{x+2}{3}$
+
+$\dfrac{0.3x-0.1}{0.2}=\dfrac{10(0.3x-0.1)}{10\times 0.2}=\dfrac{3x-1}{2}$
+
+原方程化为：$\dfrac{x+2}{3}-\dfrac{3x-1}{2}=1$
+
+去分母（最小公倍数为6）：$2(x+2)-3(3x-1)=6$
+
+去括号：$2x+4-9x+3=6$
+
+合并同类项：$-7x+7=6$
+
+移项：$-7x=6-7$
+
+$$-7x=-1 \implies x=\frac{1}{7}$$
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题5】综合：含参数的方程有正整数解]
+已知关于 $x$ 的方程 $2x+a=3x-1$ 的解为正整数，求正整数 $a$ 的值。
+\end{examplebox}
+
+\textbf{解：}
+
+先解方程：
+
+移项：$2x-3x=-1-a$
+
+$$-x=-1-a \implies x=1+a$$
+
+因为方程的解为正整数，所以 $x=1+a>0$，即 $a>-1$。
+
+又因为 $a$ 为正整数，所以 $a\geqslant 1$。
+
+当 $a=1$ 时，$x=2$；当 $a=2$ 时，$x=3$；当 $a=3$ 时，$x=4$；……
+
+所以正整数 $a$ 可以取 $\mathbf{1,2,3,\ldots}$（即所有正整数），此时 $x$ 均为正整数。
+
+\begin{tipbox}[方法总结]
+对于含参数的方程，先解出未知数用参数表示的结果，再根据条件确定参数的范围。
+\end{tipbox}
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题6】应用型：方程思想求值]
+若 $x=2$ 是方程 $\dfrac{x-m}{2}=\dfrac{x}{3}+1$ 的解，求 $m$ 的值。
+\end{examplebox}
+
+\textbf{解：}
+
+因为 $x=2$ 是方程的解，将 $x=2$ 代入方程：
+
+$$\frac{2-m}{2}=\frac{2}{3}+1$$
+
+右边通分：$\frac{2}{3}+1=\frac{2}{3}+\frac{3}{3}=\frac{5}{3}$
+
+所以：$\dfrac{2-m}{2}=\dfrac{5}{3}$
+
+交叉相乘：$3(2-m)=2\times 5$
+
+$$6-3m=10$$
+
+$$-3m=4 \implies m=-\frac{4}{3}$$
+
+\vspace{6pt}
+
+\begin{examplebox}[【例题7】综合提高：分段讨论]
+解方程：$|x-3|+|x+2|=7$。
+\end{examplebox}
+
+\textbf{解：}
+
+根据绝对值的零点 $x=3$ 和 $x=-2$，分三段讨论：
+
+\textbf{当 $x<-2$ 时：}
+$|x-3|=-(x-3)=3-x$，$|x+2|=-(x+2)=-x-2$
+
+方程化为：$(3-x)+(-x-2)=7 \implies 1-2x=7 \implies x=-3$
+
+检验：$|-3-3|+|-3+2|=6+1=7$ $\checkmark$，且 $-3<-2$ 成立。
+
+\textbf{当 $-2\leqslant x\leqslant 3$ 时：}
+$|x-3|=3-x$，$|x+2|=x+2$
+
+方程化为：$(3-x)+(x+2)=7 \implies 5=7$，矛盾，此段无解。
+
+\textbf{当 $x>3$ 时：}
+$|x-3|=x-3$，$|x+2|=x+2$
+
+方程化为：$(x-3)+(x+2)=7 \implies 2x-1=7 \implies x=4$
+
+检验：$|4-3|+|4+2|=1+6=7$ $\checkmark$，且 $4>3$ 成立。
+
+综上，方程的解为 $x=-3$ 或 $x=4$。
+
+% ================================================================
+% 第三部分：应用题
+% ================================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】行程问题——相遇]
+甲、乙两人分别从 $A$、$B$ 两地同时出发，相向而行。已知 $A$、$B$ 两地相距 $120$ 千米，甲每小时走 $35$ 千米，乙每小时走 $25$ 千米。问：几小时后两人相遇？
+\end{appbox}
+
+\textbf{解：}
+
+设 $x$ 小时后两人相遇。
+
+根据"相遇时两人所走的路程之和等于总路程"，列方程：
+
+$$35x+25x=120$$
+
+$$60x=120$$
+
+$$x=2$$
+
+\textbf{答：}2小时后两人相遇。
+
+\textbf{检验：}甲走的路程 $=35\times 2=70$ 千米，乙走的路程 $=25\times 2=50$ 千米，$70+50=120$ 千米。$\checkmark$
+
+\vspace{6pt}
+
+\begin{appbox}[【应用2】工程问题]
+一项工程，甲单独做需要 $10$ 天完成，乙单独做需要 $15$ 天完成。现在甲先单独做了 $3$ 天，然后甲乙合作完成剩余的工程。问：甲乙合作了多少天？
+\end{appbox}
+
+\textbf{解：}
+
+设甲乙合作了 $x$ 天。
+
+将总工作量设为"1"，则甲的工作效率为 $\dfrac{1}{10}$，乙的工作效率为 $\dfrac{1}{15}$。
+
+甲先做3天完成的工作量为 $\dfrac{3}{10}$，合作期间完成的工作量为 $\left(\dfrac{1}{10}+\dfrac{1}{15}\right)x$。
+
+列方程：
+$$\frac{3}{10}+\left(\frac{1}{10}+\frac{1}{15}\right)x=1$$
+
+通分计算：$\dfrac{1}{10}+\dfrac{1}{15}=\dfrac{3}{30}+\dfrac{2}{30}=\dfrac{5}{30}=\dfrac{1}{6}$
+
+$$\frac{3}{10}+\frac{x}{6}=1$$
+
+$$\frac{x}{6}=1-\frac{3}{10}=\frac{7}{10}$$
+
+$$x=\frac{7}{10}\times 6=\frac{42}{10}=4.2$$
+
+\textbf{答：}甲乙合作了 $4.2$ 天（即4天又$\dfrac{1}{5}$天）。
+
+\vspace{6pt}
+
+\begin{appbox}[【应用3】利润问题]
+某商店将一件商品按进价提高 $40\%$ 后标价，然后打八折出售，结果每件商品仍获利 $15$ 元。问：该商品的进价是多少元？
+\end{appbox}
+
+\textbf{解：}
+
+设该商品的进价为 $x$ 元。
+
+标价为 $x\times(1+40\%)=1.4x$ 元。
+
+打八折后的售价为 $1.4x\times 0.8=1.12x$ 元。
+
+根据"售价 $-$ 进价 $=$ 利润"，列方程：
+
+$$1.12x-x=15$$
+
+$$0.12x=15$$
+
+$$x=125$$
+
+\textbf{答：}该商品的进价为 $125$ 元。
+
+\textbf{检验：}标价 $=125\times 1.4=175$ 元，售价 $=175\times 0.8=140$ 元，利润 $=140-125=15$ 元。$\checkmark$
+
+\vspace{6pt}
+
+\begin{appbox}[【应用4】浓度问题]
+现有浓度为 $20\%$ 的盐水 $300$ 克，要将它配制成浓度为 $15\%$ 的盐水，需要加水多少克？
+\end{appbox}
+
+\textbf{解：}
+
+设需要加水 $x$ 克。
+
+加水前后，盐的质量不变。加水前盐的质量为 $300\times 20\%=60$ 克。
+
+加水后溶液总质量为 $300+x$ 克，浓度为 $15\%$，盐的质量为 $(300+x)\times 15\%$ 克。
+
+列方程：
+$$(300+x)\times 15\%=60$$
+
+$$0.15(300+x)=60$$
+
+$$45+0.15x=60$$
+
+$$0.15x=15$$
+
+$$x=100$$
+
+\textbf{答：}需要加水 $100$ 克。
+
+\vspace{6pt}
+
+\begin{appbox}[【应用5】数字问题]
+一个两位数，个位上的数字是十位上的数字的 $2$ 倍。如果把十位上的数字与个位上的数字对调，所得的两位数比原来的两位数大 $36$。求原来的两位数。
+\end{appbox}
+
+\textbf{解：}
+
+设十位上的数字为 $x$，则个位上的数字为 $2x$。
+
+原来的两位数为 $10x+2x=12x$。
+
+对调后的两位数为 $10\times 2x+x=21x$。
+
+列方程：
+$$21x-12x=36$$
+
+$$9x=36$$
+
+$$x=4$$
+
+原来的两位数 $=12\times 4=48$。
+
+\textbf{答：}原来的两位数是 $48$。
+
+\textbf{检验：}对调后为 $84$，$84-48=36$ $\checkmark$，个位数字 $8=$ 十位数字 $4$ 的 $2$ 倍 $\checkmark$。
+
+% ================================================================
+% 第四部分：课堂练习
+% ================================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 解方程：$4x+7=3x-2$。
+
+  \item 解方程：$2(3x-1)=3(x+2)+1$。
+
+  \item 解方程：$\dfrac{x+1}{2}-\dfrac{2x-1}{3}=1$。
+
+  \item 甲、乙两人从相距 $240$ 米的两地同时出发，相向而行。甲每秒走 $4$ 米，乙每秒走 $6$ 米。一只小狗与甲同时出发，以每秒 $8$ 米的速度跑向乙，遇到乙后立即返回跑向甲，遇到甲后又立即跑向乙……如此反复，直到甲乙相遇。问：小狗一共跑了多少米？
+
+  \item 某班共有 $50$ 名学生，在一次数学测试中，男生的平均分为 $78$ 分，全班的平均分为 $82$ 分。求女生的平均分。
+\end{enumerate}
+
+\vspace{10pt}
+
+\begin{knowledgebox}[参考答案]
+\textbf{第1题：}
+
+移项：$4x-3x=-2-7$，合并：$x=-9$。
+
+\medskip
+
+\textbf{第2题：}
+
+去括号：$6x-2=3x+6+1=3x+7$
+
+移项：$6x-3x=7+2$
+
+合并：$3x=9$，所以 $x=3$。
+
+\medskip
+
+\textbf{第3题：}
+
+去分母（乘6）：$3(x+1)-2(2x-1)=6$
+
+去括号：$3x+3-4x+2=6$
+
+合并：$-x+5=6$，$-x=1$，$x=-1$。
+
+\medskip
+
+\textbf{第4题：}
+
+关键：不要去计算小狗来回跑的各段路程。小狗跑的时间等于甲乙相遇的时间。
+
+设甲乙 $x$ 秒相遇：$4x+6x=240$，$10x=240$，$x=24$ 秒。
+
+小狗跑的路程 $=8\times 24=192$ 米。
+
+\textbf{答：}小狗一共跑了 $192$ 米。
+
+\medskip
+
+\textbf{第5题：}
+
+设女生有 $n$ 人，则男生有 $50-n$ 人。设女生平均分为 $x$ 分。
+
+总分方程：$78(50-n)+xn=82\times 50$
+
+$3900-78n+xn=4100$
+
+$(x-78)n=200$
+
+由于题目未给出男女生人数，此题条件不足，需补充条件。如果假设男生 $20$ 人、女生 $30$ 人：
+
+$(x-78)\times 30=200$，$x-78=\dfrac{200}{30}=\dfrac{20}{3}\approx 6.67$，$x\approx 84.67$ 分。
+
+\textbf{答：}当男生20人、女生30人时，女生平均分约为 $84.7$ 分。
+
+（注：此题旨在练习列方程，实际考试中一般会给出足够条件。）
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

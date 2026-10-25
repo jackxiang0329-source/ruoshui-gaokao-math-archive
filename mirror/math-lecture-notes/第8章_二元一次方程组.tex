@@ -1,0 +1,647 @@
+% ============================================================
+% 讲义 — 人教版七年级下册 · 第8章 二元一次方程组
+% 编译命令：xelatex -interaction=nonstopmode 第8章_二元一次方程组.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版七年级下册 · 第8章 二元一次方程组}}}
+\fancyhead[R]{\small\textcolor{mainblue}{家教讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+% 填空命令
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第8章\quad 二元一次方程组}}\\[12pt]
+{\Large\textcolor{gray}{家\quad 教\quad 讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 七年级下册\quad |\quad 课时：6课时}
+\end{center}
+\vspace{10pt}
+
+% ==============================================================
+% 第一部分：知识点讲解
+% ==============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---- 8.1 二元一次方程 ----
+\subsection*{8.1\quad 二元一次方程的概念}
+
+\begin{knowledgebox}[二元一次方程]
+含有\textbf{两个未知数}，并且含有未知数的项的\textbf{次数都是 $1$} 的方程，叫做\textbf{二元一次方程}。
+
+\medskip
+\textbf{一般形式：} $ax + by = c$ \quad（其中 $a \neq 0$，$b \neq 0$，$a$、$b$、$c$ 为常数）
+
+\medskip
+\textbf{关键判断标准（三个条件缺一不可）：}
+\begin{enumerate}[leftmargin=1.5em]
+  \item 含有\textbf{两个}未知数；
+  \item 含未知数的项的次数为 $1$（不能出现 $x^2$、$xy$ 等）；
+  \item 是\textbf{整式方程}（分母中不能含未知数）。
+\end{enumerate}
+
+\medskip
+\textbf{举例：}
+\begin{itemize}[leftmargin=1.5em]
+  \item $2x + 3y = 7$ \quad \checkmark \ 是二元一次方程
+  \item $x^2 + y = 5$ \quad $\times$ \ 含有 $x^2$，不是
+  \item $xy = 6$ \quad $\times$ \ 含有 $xy$（二次项），不是
+  \item $\dfrac{1}{x} + y = 3$ \quad $\times$ \ 分母含未知数，不是
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[二元一次方程的解]
+使二元一次方程两边的值相等的两个未知数的值，叫做二元一次方程的一个\textbf{解}。
+
+\medskip
+\textbf{注意：}一个二元一次方程有\textbf{无数多个}解。例如 $x + y = 5$ 的解有 $(0, 5)$、$(1, 4)$、$(2, 3)$、$(-1, 6)$ \ldots
+\end{knowledgebox}
+
+% ---- 8.2 二元一次方程组 ----
+\subsection*{8.2\quad 二元一次方程组及其解}
+
+\begin{knowledgebox}[二元一次方程组]
+把两个含有\textbf{相同未知数}的二元一次方程合在一起，就组成了一个\textbf{二元一次方程组}。
+
+\medskip
+\textbf{一般形式：}
+$$\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \end{cases}$$
+
+\medskip
+\textbf{二元一次方程组的解：}二元一次方程组中各个方程的\textbf{公共解}，叫做这个方程组的解。
+
+\medskip
+检验方法：将求得的 $x$、$y$ 的值代入方程组中的\textbf{每一个}方程，若都满足，则是方程组的解。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=1.5em]
+  \item 二元一次方程组中不一定要恰好两个方程，可以多于两个，但未知数只有两个。
+  \item 检验时必须代入\textbf{每一个}方程都验证，只代入一个是不够的。
+\end{itemize}
+\end{warnbox}
+
+% ---- 8.3 代入消元法 ----
+\subsection*{8.3\quad 代入消元法}
+
+\begin{knowledgebox}[代入消元法]
+\textbf{核心思想：}把"二元"转化为"一元"——从一个方程中用一个未知数表示另一个未知数，再代入另一个方程。
+
+\medskip
+\textbf{基本步骤：}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{变形}：从某个方程中，将一个未知数用含另一个未知数的式子表示。通常选取系数较简单的未知数。
+  \item \textbf{代入}：将变形后的式子代入另一个方程，消去一个未知数，得到一个一元一次方程。
+  \item \textbf{求解}：解一元一次方程，求出一个未知数的值。
+  \item \textbf{回代}：将求出的值代入变形后的式子，求出另一个未知数的值。
+  \item \textbf{检验}：将结果代入原方程组检验。
+\end{enumerate}
+
+\medskip
+\textbf{适用情况：}当某个未知数的系数为 $1$ 或 $-1$ 时，代入法比较简便。
+\end{knowledgebox}
+
+\begin{tipbox}[代入消元法口诀]
+\textbf{变、代、解、回、检}——五个步骤缺一不可。变形要准确，代入要仔细，回代不能忘，检验保正确。
+\end{tipbox}
+
+% ---- 8.4 加减消元法 ----
+\subsection*{8.4\quad 加减消元法}
+
+\begin{knowledgebox}[加减消元法]
+\textbf{核心思想：}通过两个方程相加或相减，消去一个未知数。
+
+\medskip
+\textbf{基本步骤：}
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{观察}：观察两个方程中同一个未知数的系数。
+  \item \textbf{变换}：如果某个未知数的系数相同（或互为相反数），可以直接相减（或相加）消元；否则需要先将某个方程乘以适当的数，使系数相同或互为相反数。
+  \item \textbf{加减}：两个方程相加或相减，消去一个未知数，得到一元一次方程。
+  \item \textbf{求解}：解一元一次方程。
+  \item \textbf{回代}：代入任一原方程求另一个未知数。
+  \item \textbf{检验}。
+\end{enumerate}
+
+\medskip
+\textbf{适用情况：}当两个方程中某个未知数的系数相同、互为相反数、或容易通过乘法变成相同/相反数时，加减法比较简便。
+\end{knowledgebox}
+
+\begin{tipbox}[方法选择指南]
+\textbf{何时用代入法？}当某个方程中某个未知数的系数为 $1$ 或 $-1$ 时，优先用代入法。
+
+\medskip
+\textbf{何时用加减法？}当两个方程中某个未知数的系数相同、互为相反数、或成倍数关系时，优先用加减法。
+
+\medskip
+实际上，两种方法都可以解任何二元一次方程组，选择计算量较小的方法即可。
+\end{tipbox}
+
+% ---- 8.5 三元一次方程组（拓展） ----
+\subsection*{8.5\quad 三元一次方程组（拓展）}
+
+\begin{knowledgebox}[三元一次方程组]
+含有\textbf{三个未知数}，且每个方程中含未知数的项的次数都是 $1$ 的方程组，叫做三元一次方程组。
+
+\medskip
+\textbf{解题策略：}先用代入法或加减法消去一个未知数，将三元转化为二元，再解二元一次方程组，最后回代求第三个未知数。
+
+\medskip
+\textbf{一般形式：}
+$$\begin{cases} a_1 x + b_1 y + c_1 z = d_1 \\ a_2 x + b_2 y + c_2 z = d_2 \\ a_3 x + b_3 y + c_3 z = d_3 \end{cases}$$
+\end{knowledgebox}
+
+% ---- 8.6 方程组的解的情况 ----
+\subsection*{8.6\quad 方程组解的情况讨论}
+
+\begin{knowledgebox}[二元一次方程组解的情况]
+对于方程组 $\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \end{cases}$：
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{条件} & \textbf{解的情况} & \textbf{几何意义} \\
+\hline
+$\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}$ & 唯一解 & 两直线相交 \\
+\hline
+$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}$ & 无解 & 两直线平行 \\
+\hline
+$\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}$ & 无穷多解 & 两直线重合 \\
+\hline
+\end{tabular}
+\end{center}
+\end{knowledgebox}
+
+% ==============================================================
+% 第二部分：例题精讲
+% ==============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】用代入消元法解方程组]
+解方程组：
+$$\begin{cases} y = 3x - 1 \quad \cdots ① \\ 2x + 3y = 19 \quad \cdots ② \end{cases}$$
+\end{examplebox}
+
+\textbf{解：}
+
+因为①已经用 $x$ 表示了 $y$，直接代入②：
+
+$$2x + 3(3x - 1) = 19$$
+
+$$2x + 9x - 3 = 19$$
+
+$$11x = 22$$
+
+$$x = 2$$
+
+回代入①：$y = 3 \times 2 - 1 = 5$。
+
+\textbf{检验}：代入②：$2 \times 2 + 3 \times 5 = 4 + 15 = 19$ \quad \checkmark
+
+所以方程组的解为 $\boxed{\begin{cases} x = 2 \\ y = 5 \end{cases}}$。
+
+\bigskip
+
+\begin{examplebox}[【例题2】用代入消元法解方程组（需要变形）]
+解方程组：
+$$\begin{cases} 3x + 2y = 14 \quad \cdots ① \\ x = y + 3 \quad \cdots ② \end{cases}$$
+\end{examplebox}
+
+\textbf{解：}
+
+将②代入①：
+
+$$3(y + 3) + 2y = 14$$
+
+$$3y + 9 + 2y = 14$$
+
+$$5y = 5$$
+
+$$y = 1$$
+
+回代入②：$x = 1 + 3 = 4$。
+
+所以方程组的解为 $\boxed{\begin{cases} x = 4 \\ y = 1 \end{cases}}$。
+
+\bigskip
+
+\begin{examplebox}[【例题3】用加减消元法解方程组]
+解方程组：
+$$\begin{cases} 2x + 3y = 19 \quad \cdots ① \\ 4x - 3y = 11 \quad \cdots ② \end{cases}$$
+\end{examplebox}
+
+\textbf{解：}
+
+观察发现 $y$ 的系数分别为 $+3$ 和 $-3$，互为相反数，①$+$②即可消去 $y$：
+
+$$① + ②: \quad 6x = 30$$
+
+$$x = 5$$
+
+回代入①：$2 \times 5 + 3y = 19$，$3y = 9$，$y = 3$。
+
+所以方程组的解为 $\boxed{\begin{cases} x = 5 \\ y = 3 \end{cases}}$。
+
+\bigskip
+
+\begin{examplebox}[【例题4】用加减消元法解方程组（需要先变换系数）]
+解方程组：
+$$\begin{cases} 2x + 3y = 12 \quad \cdots ① \\ 3x + 5y = 19 \quad \cdots ② \end{cases}$$
+\end{examplebox}
+
+\textbf{解：}
+
+为了消去 $x$，①$\times 3$，②$\times 2$：
+
+$$① \times 3: \quad 6x + 9y = 36 \quad \cdots ③$$
+
+$$② \times 2: \quad 6x + 10y = 38 \quad \cdots ④$$
+
+$$④ - ③: \quad y = 2$$
+
+回代入①：$2x + 3 \times 2 = 12$，$2x = 6$，$x = 3$。
+
+所以方程组的解为 $\boxed{\begin{cases} x = 3 \\ y = 2 \end{cases}}$。
+
+\bigskip
+
+\begin{examplebox}[【例题5】三元一次方程组（拓展）]
+解方程组：
+$$\begin{cases} x + y + z = 6 \quad \cdots ① \\ x - y + z = 2 \quad \cdots ② \\ 2x + y - z = 7 \quad \cdots ③ \end{cases}$$
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{第一步：消去 $y$。}
+
+$① + ②$: $2x + 2z = 8$，即 $x + z = 4 \quad \cdots ④$
+
+$② + ③$: $3x = 9$，即 $x = 3 \quad \cdots ⑤$
+
+\textbf{第二步：求 $z$。}
+
+将 $x = 3$ 代入④：$3 + z = 4$，$z = 1$。
+
+\textbf{第三步：求 $y$。}
+
+将 $x = 3$，$z = 1$ 代入①：$3 + y + 1 = 6$，$y = 2$。
+
+\textbf{检验}：代入②③均成立。
+
+所以方程组的解为 $\boxed{\begin{cases} x = 3 \\ y = 2 \\ z = 1 \end{cases}}$。
+
+\bigskip
+
+\begin{examplebox}[【例题6】含参数的方程组]
+已知方程组 $\begin{cases} 2x + y = k \\ x + 2y = 3 \end{cases}$ 的解满足 $x + y = 3$，求 $k$ 的值。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{方法一：}由 $x + y = 3$ 得 $y = 3 - x$，代入第二个方程：
+
+$$x + 2(3 - x) = 3$$
+
+$$x + 6 - 2x = 3$$
+
+$$-x = -3 \Rightarrow x = 3$$
+
+所以 $y = 3 - 3 = 0$。
+
+代入第一个方程求 $k$：$k = 2 \times 3 + 0 = 6$。
+
+\textbf{方法二（更简便）：}将两个方程相加：
+
+$$(2x + y) + (x + 2y) = k + 3$$
+
+$$3x + 3y = k + 3$$
+
+$$3(x + y) = k + 3$$
+
+因为 $x + y = 3$，所以 $3 \times 3 = k + 3$，$k = 6$。
+
+因此 $\boxed{k = 6}$。
+
+\begin{tipbox}[方法总结]
+方法二巧妙地利用了整体思想，避免了逐一求解 $x$ 和 $y$，计算更加简洁。在解决含参数的方程组问题时，要善于观察方程之间的结构关系。
+\end{tipbox}
+
+\bigskip
+
+\begin{examplebox}[【例题7】二元一次方程的整数解]
+求方程 $3x + 5y = 22$ 的正整数解。
+\end{examplebox}
+
+\textbf{解：}
+
+用 $x$ 表示 $y$：$y = \dfrac{22 - 3x}{5}$
+
+因为 $y$ 为正整数，所以 $22 - 3x$ 必须是 $5$ 的正整数倍。
+
+当 $x = 1$：$y = \dfrac{19}{5}$（不是整数）
+
+当 $x = 2$：$y = \dfrac{16}{5}$（不是整数）
+
+当 $x = 3$：$y = \dfrac{13}{5}$（不是整数）
+
+当 $x = 4$：$y = \dfrac{10}{5} = 2$ \quad \checkmark
+
+当 $x = 5$：$y = \dfrac{7}{5}$（不是整数）
+
+当 $x = 6$：$y = \dfrac{4}{5}$（不是整数）
+
+当 $x = 7$：$y = \dfrac{1}{5}$（不是整数）
+
+当 $x \geqslant 8$ 时，$22 - 3x < 0$，$y < 0$，不合要求。
+
+所以方程的正整数解为 $\boxed{\begin{cases} x = 4 \\ y = 2 \end{cases}}$。
+
+% ==============================================================
+% 第三部分：应用题
+% ==============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】行程问题]
+甲、乙两人从相距 $36$ 千米的两地同时出发，相向而行。$4$ 小时后相遇。如果甲比乙每小时多走 $1$ 千米，求甲、乙两人的速度。
+\end{appbox}
+
+\textbf{解：}
+
+设甲的速度为 $x$ 千米/时，乙的速度为 $y$ 千米/时。
+
+根据题意列方程组：
+$$\begin{cases} 4(x + y) = 36 \quad \cdots ① \\ x - y = 1 \quad \cdots ② \end{cases}$$
+
+由①得：$x + y = 9 \quad \cdots ③$
+
+$③ + ②$：$2x = 10$，$x = 5$
+
+$③ - ②$：$2y = 8$，$y = 4$
+
+\textbf{答：}甲的速度为 $5$ 千米/时，乙的速度为 $4$ 千米/时。
+
+\bigskip
+
+\begin{appbox}[【应用2】工程问题]
+一项工程，甲单独做 $10$ 天完成，乙单独做 $15$ 天完成。两人合作若干天后，甲因事离开，由乙继续完成剩余工程。已知从开工到完工共用了 $12$ 天，问甲、乙合作了几天？
+\end{appbox}
+
+\textbf{解：}
+
+设甲、乙合作了 $x$ 天，乙单独做了 $y$ 天。
+
+甲的工作效率为 $\dfrac{1}{10}$（每天完成工程的 $\dfrac{1}{10}$），乙的工作效率为 $\dfrac{1}{15}$。
+
+列方程组：
+$$\begin{cases} x + y = 12 \quad \cdots ① \\ \dfrac{x}{10} + \dfrac{x + y}{15} = 1 \quad \cdots ② \end{cases}$$
+
+注意：合作期间甲做了 $x$ 天，乙也做了 $x$ 天；之后乙又做了 $y$ 天。所以甲共做 $x$ 天，乙共做 $x + y = 12$ 天。
+
+由②：$\dfrac{x}{10} + \dfrac{12}{15} = 1$
+
+$$\dfrac{x}{10} = 1 - \dfrac{4}{5} = \dfrac{1}{5}$$
+
+$$x = 10 \times \dfrac{1}{5} = 2$$
+
+代入①：$y = 12 - 2 = 10$。
+
+\textbf{检验}：甲完成工作量 $\dfrac{2}{10} = \dfrac{1}{5}$，乙完成工作量 $\dfrac{12}{15} = \dfrac{4}{5}$，合计 $\dfrac{1}{5} + \dfrac{4}{5} = 1$ \quad \checkmark
+
+\textbf{答：}甲、乙合作了 $2$ 天。
+
+\bigskip
+
+\begin{appbox}[【应用3】利润问题]
+某文具店购进笔记本和钢笔共 $100$ 支（本），总花费 $650$ 元。笔记本每本进价 $5$ 元，钢笔每支进价 $8$ 元。问笔记本和钢笔各购进了多少？
+\end{appbox}
+
+\textbf{解：}
+
+设购进笔记本 $x$ 本，钢笔 $y$ 支。
+
+列方程组：
+$$\begin{cases} x + y = 100 \quad \cdots ① \\ 5x + 8y = 650 \quad \cdots ② \end{cases}$$
+
+由①得 $x = 100 - y$，代入②：
+
+$$5(100 - y) + 8y = 650$$
+
+$$500 - 5y + 8y = 650$$
+
+$$3y = 150 \Rightarrow y = 50$$
+
+$x = 100 - 50 = 50$。
+
+\textbf{答：}购进笔记本 $50$ 本，钢笔 $50$ 支。
+
+\bigskip
+
+\begin{appbox}[【应用4】配套问题]
+某车间有 $68$ 名工人，每人每天能加工甲种零件 $20$ 个或乙种零件 $15$ 个。已知每 $3$ 个甲种零件和 $2$ 个乙种零件恰好配套。应安排多少人加工甲种零件、多少人加工乙种零件，才能使每天生产的零件刚好配套？
+\end{appbox}
+
+\textbf{解：}
+
+设安排 $x$ 人加工甲种零件，$y$ 人加工乙种零件。
+
+每天甲种零件产量为 $20x$，乙种零件产量为 $15y$。配套比为 $3:2$，即甲种零件数 $= \dfrac{3}{2} \times$ 乙种零件数。
+
+列方程组：
+$$\begin{cases} x + y = 68 \quad \cdots ① \\ 20x = \dfrac{3}{2} \times 15y \quad \cdots ② \end{cases}$$
+
+②化简：$20x = \dfrac{45y}{2}$，即 $40x = 45y$，$8x = 9y \quad \cdots ③$
+
+由①得 $x = 68 - y$，代入③：
+
+$$8(68 - y) = 9y$$
+
+$$544 - 8y = 9y$$
+
+$$17y = 544 \Rightarrow y = 32$$
+
+$x = 68 - 32 = 36$。
+
+\textbf{检验}：甲种零件 $20 \times 36 = 720$ 个，乙种零件 $15 \times 32 = 480$ 个，$\dfrac{720}{480} = \dfrac{3}{2}$ \quad \checkmark
+
+\textbf{答：}安排 $36$ 人加工甲种零件，$32$ 人加工乙种零件。
+
+\bigskip
+
+\begin{appbox}[【应用5】方案设计问题]
+某校组织七年级学生春游，租用客车。若每辆客车坐 $40$ 人，则有 $10$ 人没有座位；若每辆客车坐 $45$ 人，则空出 $20$ 个座位。问：共租了几辆客车？共有多少学生参加春游？
+\end{appbox}
+
+\textbf{解：}
+
+设租了 $x$ 辆客车，共有 $y$ 名学生。
+
+列方程组：
+$$\begin{cases} y = 40x + 10 \quad \cdots ① \\ y = 45x - 20 \quad \cdots ② \end{cases}$$
+
+$① = ②$：$40x + 10 = 45x - 20$
+
+$$30 = 5x \Rightarrow x = 6$$
+
+代入①：$y = 40 \times 6 + 10 = 250$
+
+\textbf{答：}共租了 $6$ 辆客车，$250$ 名学生参加春游。
+
+\bigskip
+
+\begin{appbox}[【应用6】年龄问题]
+父亲现在的年龄是儿子的 $4$ 倍。$20$ 年后，父亲的年龄是儿子的 $2$ 倍（$20$ 年后父亲年龄是儿子年龄的2倍）。问：父亲和儿子现在各多少岁？
+\end{appbox}
+
+\textbf{解：}
+
+设父亲现在 $x$ 岁，儿子现在 $y$ 岁。
+
+列方程组：
+$$\begin{cases} x = 4y \quad \cdots ① \\ x + 20 = 2(y + 20) \quad \cdots ② \end{cases}$$
+
+将①代入②：
+
+$$4y + 20 = 2y + 40$$
+
+$$2y = 20 \Rightarrow y = 10$$
+
+$x = 4 \times 10 = 40$
+
+\textbf{答：}父亲现在 $40$ 岁，儿子现在 $10$ 岁。
+
+% ==============================================================
+% 第四部分：课堂练习
+% ==============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em]
+  \item 用代入消元法解方程组：
+  $\begin{cases} x = 2y + 1 \\ 3x - 2y = 13 \end{cases}$
+
+  \item 用加减消元法解方程组：
+  $\begin{cases} 4x + 3y = 10 \\ 4x - 5y = -6 \end{cases}$
+
+  \item 解方程组：
+  $\begin{cases} 3x + 2y = 13 \\ x - y = 1 \end{cases}$
+
+  \item 解三元一次方程组（拓展）：
+  $\begin{cases} x + y + z = 10 \\ x - y + z = 4 \\ 2x + y - z = 5 \end{cases}$
+
+  \item 已知 $\begin{cases} x = 1 \\ y = -2 \end{cases}$ 是方程组 $\begin{cases} ax + by = 1 \\ bx + ay = 7 \end{cases}$ 的解，求 $a$ 和 $b$ 的值。
+
+  \item 甲、乙两人的速度之比为 $3:2$，若甲比乙多走 $10$ 千米，则甲走了多少千米？
+
+  \item 某班共有 $50$ 人，数学竞赛中，男生平均 $72$ 分，女生平均 $78$ 分，全班平均 $74.4$ 分。问该班男生和女生各有多少人？
+
+  \item 一个两位数，十位上的数字与个位上的数字之和为 $9$。如果将十位与个位上的数字对调，所得的新数比原数大 $9$，求原来的两位数。
+\end{enumerate}
+
+\bigskip
+
+\begin{knowledgebox}[参考答案]
+
+\textbf{1.}\quad 由①代入②：$3(2y+1) - 2y = 13$，$6y + 3 - 2y = 13$，$4y = 10$，$y = \dfrac{5}{2}$，$x = 2 \times \dfrac{5}{2} + 1 = 6$。解为 $\begin{cases} x = 6 \\ y = \dfrac{5}{2} \end{cases}$。
+
+\medskip
+\textbf{2.}\quad $① - ②$：$8y = 16$，$y = 2$。代入①：$4x + 6 = 10$，$x = 1$。解为 $\begin{cases} x = 1 \\ y = 2 \end{cases}$。
+
+\medskip
+\textbf{3.}\quad 由②：$x = y + 1$，代入①：$3(y+1) + 2y = 13$，$5y + 3 = 13$，$y = 2$，$x = 3$。解为 $\begin{cases} x = 3 \\ y = 2 \end{cases}$。
+
+\medskip
+\textbf{4.}\quad $① - ②$：$2y = 6$，$y = 3$。$② + ③$：$3x = 9$，$x = 3$。代入①：$3 + 3 + z = 10$，$z = 4$。解为 $\begin{cases} x = 3 \\ y = 3 \\ z = 4 \end{cases}$。
+
+\medskip
+\textbf{5.}\quad 代入：$\begin{cases} a - 2b = 1 \\ b - 2a = 7 \end{cases}$，由① $a = 1 + 2b$，代入②：$b - 2 - 4b = 7$，$-3b = 9$，$b = -3$，$a = 1 + 2(-3) = -5$。所以 $a = -5$，$b = -3$。
+
+\medskip
+\textbf{6.}\quad 设甲走 $3k$ 千米，乙走 $2k$ 千米，$3k - 2k = 10$，$k = 10$，甲走 $30$ 千米。
+
+\medskip
+\textbf{7.}\quad 设男生 $x$ 人，女生 $y$ 人。$\begin{cases} x + y = 50 \\ 72x + 78y = 74.4 \times 50 \end{cases}$。②化简：$72x + 78y = 3720$，即 $12x + 13y = 620$。由① $x = 50 - y$，代入：$12(50-y) + 13y = 620$，$600 - 12y + 13y = 620$，$y = 20$，$x = 30$。男生 $30$ 人，女生 $20$ 人。
+
+\medskip
+\textbf{8.}\quad 设十位数字为 $a$，个位数字为 $b$。$\begin{cases} a + b = 9 \\ 10b + a - (10a + b) = 9 \end{cases}$。②化简：$9b - 9a = 9$，$b - a = 1$。联立：$a + b = 9$，$b - a = 1$。解得 $b = 5$，$a = 4$。原来的两位数为 $45$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
