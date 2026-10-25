@@ -1,0 +1,809 @@
+% ============================================================
+% 初升高衔接讲义 — 不等式与二次不等式
+% 编译命令：xelatex -interaction=nonstopmode 衔接3_不等式与二次不等式.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{初升高衔接 · 不等式与二次不等式}}}
+\fancyhead[R]{\small\textcolor{mainblue}{衔接讲义三}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{不等式与二次不等式}}\\[12pt]
+{\Large\textcolor{gray}{初升高衔接 · 讲义三}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：初升高衔接\quad |\quad 课时：2--3课时}
+\end{center}
+\vspace{10pt}
+
+% ==============================================================
+% 第一部分：知识点讲解
+% ==============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 1.1 不等式基本性质 ----------
+\subsection*{1.1\quad 不等式基本性质}
+
+\begin{knowledgebox}[不等式的三条基本性质]
+设 $a, b, c$ 为实数，则：
+
+\textbf{性质1（加法）：}若 $a > b$，则 $a + c > b + c$。
+
+\quad 即：不等式两边同时加上（或减去）同一个数，不等号方向\textbf{不变}。
+
+\textbf{性质2（乘正数）：}若 $a > b$，$c > 0$，则 $ac > bc$。
+
+\quad 即：不等式两边同时乘以（或除以）同一个\textbf{正数}，不等号方向\textbf{不变}。
+
+\textbf{性质3（乘负数）：}若 $a > b$，$c < 0$，则 $ac < bc$。
+
+\quad 即：不等式两边同时乘以（或除以）同一个\textbf{负数}，不等号方向\textbf{改变}！
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒：性质3是最大坑！]
+很多同学忘记"乘负数要变号"，这是不等式中最常见的错误。
+
+\textbf{例子：}$-2x > 6$
+
+错误做法：$x > -3$ \quad （直接除以$-2$，忘记变号）
+
+正确做法：两边除以 $-2$，不等号反向，得 $x < -3$。
+
+\medskip
+\textbf{记忆口诀：}乘负变号，牢记不忘！
+\end{warnbox}
+
+% ---------- 1.2 一元一次不等式 ----------
+\subsection*{1.2\quad 一元一次不等式回顾}
+
+\begin{knowledgebox}[一元一次不等式的解法]
+\textbf{步骤：}
+\begin{enumerate}[label=(\arabic*)]
+  \item 去分母（两边同乘最小公倍数，注意乘负数要变号）
+  \item 去括号
+  \item 移项（移项要变号）
+  \item 合并同类项
+  \item 系数化为1（除以负数要变号）
+\end{enumerate}
+
+\textbf{例子：}解不等式 $3x - 5 < 2x + 1$
+
+移项：$3x - 2x < 1 + 5$，得 $x < 6$。
+
+解集为 $\{x \mid x < 6\}$，用区间表示为 $(-\infty, 6)$。
+\end{knowledgebox}
+
+% ---------- 1.3 一元一次不等式组 ----------
+\subsection*{1.3\quad 一元一次不等式组回顾}
+
+\begin{knowledgebox}[一元一次不等式组的解法]
+分别解出每个不等式的解集，再取\textbf{公共部分}。
+
+\medskip
+\textbf{口诀（四句话）：}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{类型} & \textbf{条件} & \textbf{解集} \\
+\hline
+同大取大 & $\begin{cases} x > a \\ x > b \end{cases}$\quad ($a < b$) & $x > b$ \\
+\hline
+同小取小 & $\begin{cases} x < a \\ x < b \end{cases}$\quad ($a < b$) & $x < a$ \\
+\hline
+大小小大取中间 & $\begin{cases} x > a \\ x < b \end{cases}$\quad ($a < b$) & $a < x < b$ \\
+\hline
+大大小小无解 & $\begin{cases} x < a \\ x > b \end{cases}$\quad ($a < b$) & 无解 \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{例子：}$\begin{cases} 2x - 1 > 3 \\ x + 2 < 7 \end{cases}$
+
+解第一个：$x > 2$；解第二个：$x < 5$。
+
+属于"大小小大取中间"，解集为 $2 < x < 5$，即 $(2, 5)$。
+\end{knowledgebox}
+
+% ---------- 1.4 一元二次不等式（重点！） ----------
+\subsection*{1.4\quad 一元二次不等式（高中新内容，重点！）}
+
+\begin{knowledgebox}[一元二次不等式的定义]
+形如 $ax^2 + bx + c > 0$（或 $\geq 0$，$< 0$，$\leq 0$）的不等式，其中 $a \neq 0$，叫做\textbf{一元二次不等式}。
+
+\medskip
+\textbf{核心思想：}利用二次函数 $y = ax^2 + bx + c$ 的图象（抛物线）来求解。
+\end{knowledgebox}
+
+\begin{knowledgebox}[解法：图象法——"看图说话"]
+\textbf{第一步：}化标准形式（$a > 0$，右边为 $0$）。
+
+\textbf{第二步：}计算判别式 $\Delta = b^2 - 4ac$。
+
+\textbf{第三步：}根据 $\Delta$ 的正负，画出抛物线的大致图象。
+
+\textbf{第四步：}看抛物线在 $x$ 轴上方还是下方的部分，写出解集。
+
+\medskip
+设 $a > 0$，方程 $ax^2 + bx + c = 0$ 的两根为 $x_1, x_2$（$x_1 < x_2$）。
+\end{knowledgebox}
+
+\begin{knowledgebox}[$\Delta > 0$：抛物线与 $x$ 轴有两个交点]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle, xlabel=$x$, ylabel=$y$,
+  width=7cm, height=5cm,
+  xmin=-1.5, xmax=4.5, ymin=-3, ymax=4,
+  xtick={1, 3}, xticklabels={$x_1$, $x_2$},
+  ytick=\empty,
+  every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+  every axis y label/.style={at={(current axis.above origin)},anchor=south},
+]
+\addplot[domain=-0.5:4, samples=100, thick, mainblue] {1.5*(x-1)*(x-3)};
+\draw[dashed, gray] (axis cs:1,0) -- (axis cs:1,-2.5);
+\draw[dashed, gray] (axis cs:3,0) -- (axis cs:3,-2.5);
+\node at (axis cs:0, 3.5) {$ax^2+bx+c=0$有两不等实根};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{不等式} & \textbf{解集} \\
+\hline
+$ax^2+bx+c > 0$ & $\{x \mid x < x_1\text{ 或 }x > x_2\}$ \\
+\hline
+$ax^2+bx+c < 0$ & $\{x \mid x_1 < x < x_2\}$ \\
+\hline
+$ax^2+bx+c \geq 0$ & $\{x \mid x \leq x_1\text{ 或 }x \geq x_2\}$ \\
+\hline
+$ax^2+bx+c \leq 0$ & $\{x \mid x_1 \leq x \leq x_2\}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{knowledgebox}
+
+\begin{knowledgebox}[$\Delta = 0$：抛物线与 $x$ 轴有唯一交点（相切）]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle, xlabel=$x$, ylabel=$y$,
+  width=7cm, height=5cm,
+  xmin=-0.5, xmax=3.5, ymin=-0.5, ymax=4,
+  xtick={2}, xticklabels={$x_0$},
+  ytick=\empty,
+  every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+  every axis y label/.style={at={(current axis.above origin)},anchor=south},
+]
+\addplot[domain=-0.2:3.2, samples=100, thick, mainblue] {2*(x-2)*(x-2)};
+\draw[dashed, gray] (axis cs:2,0) -- (axis cs:2,-0.3);
+\node at (axis cs:0.5, 3.5) {$ax^2+bx+c=0$有两相等实根};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+设方程 $ax^2 + bx + c = 0$ 的根为 $x_0$（重根），则：
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{不等式} & \textbf{解集} \\
+\hline
+$ax^2+bx+c > 0$ & $\{x \mid x \neq x_0\}$（即全体实数去掉$x_0$） \\
+\hline
+$ax^2+bx+c < 0$ & 无解（$\varnothing$） \\
+\hline
+$ax^2+bx+c \geq 0$ & $\mathbb{R}$（全体实数） \\
+\hline
+$ax^2+bx+c \leq 0$ & $\{x_0\}$（只有一个点） \\
+\hline
+\end{tabular}
+\end{center}
+\end{knowledgebox}
+
+\begin{knowledgebox}[$\Delta < 0$：抛物线与 $x$ 轴无交点]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle, xlabel=$x$, ylabel=$y$,
+  width=7cm, height=5cm,
+  xmin=-1, xmax=4, ymin=-1, ymax=5,
+  ytick=\empty, xtick=\empty,
+  every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+  every axis y label/.style={at={(current axis.above origin)},anchor=south},
+]
+\addplot[domain=-0.5:3.5, samples=100, thick, mainblue] {(x-1.5)*(x-1.5)+1};
+\node at (axis cs:1.5, 0.3) {$ax^2+bx+c=0$无实根};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{不等式} & \textbf{解集} \\
+\hline
+$ax^2+bx+c > 0$ & $\mathbb{R}$（全体实数） \\
+\hline
+$ax^2+bx+c < 0$ & 无解（$\varnothing$） \\
+\hline
+$ax^2+bx+c \geq 0$ & $\mathbb{R}$ \\
+\hline
+$ax^2+bx+c \leq 0$ & 无解（$\varnothing$） \\
+\hline
+\end{tabular}
+\end{center}
+\end{knowledgebox}
+
+\begin{tipbox}[核心口诀]
+\textbf{"大于取两边，小于取中间"}（$\Delta > 0$，$a > 0$ 时）：
+
+\begin{itemize}
+  \item $ax^2+bx+c > 0$：解集取两根的\textbf{外侧}（两边）$x < x_1$ 或 $x > x_2$
+  \item $ax^2+bx+c < 0$：解集取两根的\textbf{内侧}（中间）$x_1 < x < x_2$
+\end{itemize}
+
+\medskip
+\textbf{注意：}如果 $a < 0$，先把两边乘以 $-1$（不等号变向），使 $a$ 变为正数再用口诀！
+\end{tipbox}
+
+% ---------- 1.5 绝对值不等式 ----------
+\subsection*{1.5\quad 绝对值不等式}
+
+\begin{knowledgebox}[绝对值不等式的两种基本类型]
+设 $a > 0$，则：
+
+\textbf{类型一：}$|x| < a$ \quad $\Longleftrightarrow$ \quad $-a < x < a$
+
+\quad 含义：$x$ 到原点的距离\textbf{小于}$a$。
+
+\textbf{类型二：}$|x| > a$ \quad $\Longleftrightarrow$ \quad $x < -a$ 或 $x > a$
+
+\quad 含义：$x$ 到原点的距离\textbf{大于}$a$。
+
+\medskip
+\textbf{推广：}$|x| \leq a \Leftrightarrow -a \leq x \leq a$，\quad $|x| \geq a \Leftrightarrow x \leq -a$ 或 $x \geq a$。
+\end{knowledgebox}
+
+\begin{warnbox}[注意前提]
+上面的等价关系\textbf{要求 $a > 0$}！
+
+如果 $a \leq 0$，要单独讨论：
+\begin{itemize}
+  \item $|x| < a$ 且 $a \leq 0$：无解（绝对值不可能小于等于 $0$ 的数）
+  \item $|x| > a$ 且 $a < 0$：解为全体实数（绝对值一定大于负数）
+  \item $|x| > 0$：解为 $x \neq 0$
+\end{itemize}
+\end{warnbox}
+
+% ---------- 1.6 分式不等式 ----------
+\subsection*{1.6\quad 分式不等式（简单了解）}
+
+\begin{knowledgebox}[分式不等式的基本解法]
+\textbf{核心方法：}不要两边同乘分母（因为分母正负未知），而是\textbf{移项通分}，化为整式不等式。
+
+\medskip
+$\dfrac{f(x)}{g(x)} > 0$ \quad $\Longleftrightarrow$ \quad $f(x) \cdot g(x) > 0$（分子分母同号）
+
+$\dfrac{f(x)}{g(x)} < 0$ \quad $\Longleftrightarrow$ \quad $f(x) \cdot g(x) < 0$（分子分母异号）
+
+\medskip
+\textbf{例子：}$\dfrac{x-1}{x+2} > 0$ \quad $\Longleftrightarrow$ \quad $(x-1)(x+2) > 0$
+
+解得 $x < -2$ 或 $x > 1$。
+\end{knowledgebox}
+
+% ---------- 1.7 均值不等式预习 ----------
+\subsection*{1.7\quad 均值不等式预习}
+
+\begin{knowledgebox}[均值不等式（算术平均--几何平均不等式）]
+若 $a \geq 0$，$b \geq 0$，则：
+\[
+\boxed{a + b \geq 2\sqrt{ab}}
+\]
+当且仅当 $a = b$ 时等号成立。
+
+\medskip
+\textbf{等价形式：}
+\begin{itemize}
+  \item 若 $a > 0$，则 $a + \dfrac{1}{a} \geq 2$
+  \item 若 $ab > 0$，则 $\dfrac{a}{b} + \dfrac{b}{a} \geq 2$
+\end{itemize}
+
+\textbf{使用条件：}一正、二定、三相等
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{一正：}$a, b$ 都是正数
+  \item \textbf{二定：}$a + b$ 或 $ab$ 中至少有一个是定值
+  \item \textbf{三相等：}等号能够取到（$a = b$）
+\end{enumerate}
+\end{knowledgebox}
+
+
+% ==============================================================
+% 第二部分：例题精讲
+% ==============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% 例题1：基础不等式性质
+\begin{examplebox}[【例题1】不等式基本性质的运用]
+已知 $a > b$，判断下列结论是否正确：
+\begin{enumerate}[label=(\arabic*)]
+  \item $a + 3 > b + 3$
+  \item $-2a > -2b$
+  \item $a^2 > b^2$
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解：}
+\begin{enumerate}[label=(\arabic*)]
+  \item 正确。由性质1，两边加 $3$，不等号不变。
+  \item 正确。由性质3，两边乘 $-2$，不等号变向。由 $a > b$ 得 $-2a < -2b$。
+
+  \textbf{所以"$-2a > -2b$"是错误的！}
+
+  \item 不一定正确。例如 $a = 1$，$b = -3$，满足 $a > b$，但 $a^2 = 1 < 9 = b^2$。
+\end{enumerate}
+
+\textbf{答：}(1) 正确；(2) 错误（乘负数应变号）；(3) 不一定正确。
+
+\begin{tipbox}[方法总结]
+判断不等式变形是否正确，关键是看：是否乘了负数（变号了吗？）、有没有特殊情况。举反例是否定一个命题的最有效方法。
+\end{tipbox}
+
+% 例题2：一元二次不等式（Δ > 0）
+\begin{examplebox}[【例题2】一元二次不等式（$\Delta > 0$）]
+解不等式：$x^2 - 5x + 6 > 0$
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{第一步：}这里 $a = 1 > 0$，已经是标准形式。
+
+\textbf{第二步：}求根。令 $x^2 - 5x + 6 = 0$，因式分解得 $(x-2)(x-3) = 0$。
+
+解得 $x_1 = 2$，$x_2 = 3$。
+
+\textbf{第三步：}因为 $a > 0$，抛物线开口向上，$\Delta = 25 - 24 = 1 > 0$，与 $x$ 轴有两个交点。
+
+\textbf{第四步：}$> 0$ 取两边（大于取两边）。
+
+\textbf{答：}解集为 $\{x \mid x < 2 \text{ 或 } x > 3\}$，即 $(-\infty, 2) \cup (3, +\infty)$。
+
+% 例题3：一元二次不等式（Δ > 0，小于0）
+\begin{examplebox}[【例题3】一元二次不等式（$\Delta > 0$，取中间）]
+解不等式：$2x^2 + x - 6 \leq 0$
+\end{examplebox}
+
+\textbf{解：}
+
+$a = 2 > 0$，已是标准形式。
+
+令 $2x^2 + x - 6 = 0$，用求根公式：
+\[
+x = \frac{-1 \pm \sqrt{1 + 48}}{4} = \frac{-1 \pm 7}{4}
+\]
+得 $x_1 = -2$，$x_2 = \dfrac{3}{2}$。
+
+$\Delta = 49 > 0$，开口向上，$\leq 0$ 取中间（含等号用闭区间）。
+
+\textbf{答：}解集为 $\left\{x \mid -2 \leq x \leq \dfrac{3}{2}\right\}$，即 $\left[-2, \dfrac{3}{2}\right]$。
+
+\begin{tipbox}[方法总结]
+求根时如果不容易因式分解，就用求根公式 $x = \dfrac{-b \pm \sqrt{\Delta}}{2a}$。记住：$\leq 0$ 时两端点\textbf{取得到}（闭区间），$< 0$ 时两端点\textbf{取不到}（开区间）。
+\end{tipbox}
+
+% 例题4：Δ = 0 的情况
+\begin{examplebox}[【例题4】一元二次不等式（$\Delta = 0$）]
+解不等式：$x^2 - 6x + 9 > 0$
+\end{examplebox}
+
+\textbf{解：}
+
+$a = 1 > 0$。
+
+令 $x^2 - 6x + 9 = 0$，即 $(x - 3)^2 = 0$，解得 $x_0 = 3$。
+
+$\Delta = 36 - 36 = 0$，抛物线与 $x$ 轴相切。
+
+$(x-3)^2$ 永远 $\geq 0$，要使 $(x-3)^2 > 0$，只需 $x \neq 3$。
+
+\textbf{答：}解集为 $\{x \mid x \neq 3\}$，即 $(-\infty, 3) \cup (3, +\infty)$。
+
+% 例题5：Δ < 0 的情况
+\begin{examplebox}[【例题5】一元二次不等式（$\Delta < 0$）]
+解不等式：$x^2 + 2x + 5 > 0$
+\end{examplebox}
+
+\textbf{解：}
+
+$a = 1 > 0$。
+
+$\Delta = 4 - 20 = -16 < 0$，方程无实根，抛物线在 $x$ 轴\textbf{上方}。
+
+所以 $x^2 + 2x + 5$ 恒大于 $0$。
+
+\textbf{答：}解集为 $\mathbb{R}$（全体实数）。
+
+\begin{tipbox}[三种情况速记表]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$\Delta$ & $ax^2+bx+c > 0$ ($a>0$) & $ax^2+bx+c < 0$ ($a>0$) \\
+\hline
+$\Delta > 0$ & 取两边（两根外侧） & 取中间（两根之间） \\
+\hline
+$\Delta = 0$ & $x \neq x_0$ & 无解 \\
+\hline
+$\Delta < 0$ & 全体实数 & 无解 \\
+\hline
+\end{tabular}
+\end{center}
+\end{tipbox}
+
+% 例题6：含参二次不等式
+\begin{examplebox}[【例题6】含参二次不等式]
+已知不等式 $x^2 - 2ax + a + 2 > 0$ 对一切实数 $x$ 恒成立，求 $a$ 的取值范围。
+\end{examplebox}
+
+\textbf{解：}
+
+$a_0 = 1 > 0$，抛物线开口向上。
+
+要使 $x^2 - 2ax + a + 2 > 0$ 恒成立，只需抛物线始终在 $x$ 轴上方，即：
+
+$\Delta < 0$
+
+$\Delta = (-2a)^2 - 4 \times 1 \times (a + 2) = 4a^2 - 4a - 8$
+
+令 $4a^2 - 4a - 8 < 0$，即 $a^2 - a - 2 < 0$
+
+因式分解：$(a - 2)(a + 1) < 0$
+
+解得 $-1 < a < 2$。
+
+\textbf{答：}$a$ 的取值范围为 $(-1, 2)$。
+
+\begin{tipbox}[方法总结]
+"恒大于 $0$"等价于"$\Delta < 0$"（开口向上时）。"恒小于 $0$"等价于"$\Delta < 0$ 且开口向下"。含参问题的核心是把参数当成常数处理，用判别式列不等式。
+\end{tipbox}
+
+% 例题7：绝对值不等式
+\begin{examplebox}[【例题7】绝对值不等式]
+解不等式：$|2x - 3| < 5$
+\end{examplebox}
+
+\textbf{解：}
+
+设 $u = 2x - 3$，则 $|u| < 5$，即 $-5 < u < 5$。
+
+代回：$-5 < 2x - 3 < 5$
+
+各部分加 $3$：$-2 < 2x < 8$
+
+各部分除以 $2$：$-1 < x < 4$
+
+\textbf{答：}解集为 $(-1, 4)$。
+
+\medskip
+\textbf{另解：}$|2x - 3| < 5$ 直接等价于 $-5 < 2x - 3 < 5$，后续步骤相同。
+
+% 例题8：不等式组与集合结合
+\begin{examplebox}[【例题8】不等式组与集合结合（预习高中）]
+设集合 $A = \{x \mid x^2 - 4x + 3 \leq 0\}$，$B = \{x \mid |x - 2| < 2\}$，求 $A \cap B$。
+\end{examplebox}
+
+\textbf{解：}
+
+先求集合 $A$：解 $x^2 - 4x + 3 \leq 0$
+
+$(x - 1)(x - 3) \leq 0$，解得 $1 \leq x \leq 3$。
+
+所以 $A = [1, 3]$。
+
+\medskip
+再求集合 $B$：解 $|x - 2| < 2$
+
+$-2 < x - 2 < 2$，解得 $0 < x < 4$。
+
+所以 $B = (0, 4)$。
+
+\medskip
+求交集 $A \cap B$：取 $[1, 3]$ 和 $(0, 4)$ 的公共部分。
+
+\textbf{答：}$A \cap B = [1, 3]$（因为 $[1, 3] \subset (0, 4)$）。
+
+\begin{tipbox}[方法总结]
+不等式与集合结合是高中常见题型。解法：分别解出各集合中的不等式，再用数轴或区间取交集、并集。记住：交集取公共部分，并集取合在一起。
+\end{tipbox}
+
+% 例题9：图象法综合
+\begin{examplebox}[【例题9】图象法解不等式]
+已知二次函数 $y = ax^2 + bx + c$ 的图象如图所示，写出 $ax^2 + bx + c > 0$ 和 $ax^2 + bx + c \leq 0$ 的解集。
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle, xlabel=$x$, ylabel=$y$,
+  width=8cm, height=5cm,
+  xmin=-3, xmax=5, ymin=-4, ymax=4,
+  xtick={-1, 3}, xticklabels={$-1$, $3$},
+  ytick=\empty,
+  every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+  every axis y label/.style={at={(current axis.above origin)},anchor=south},
+]
+\addplot[domain=-2.5:4.5, samples=100, thick, mainblue] {-1*(x+1)*(x-3)};
+\draw[dashed, gray] (axis cs:-1,0) -- (axis cs:-1,-3);
+\draw[dashed, gray] (axis cs:3,0) -- (axis cs:3,-3);
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{examplebox}
+
+\textbf{解：}
+
+从图象可知：
+\begin{itemize}
+  \item 抛物线\textbf{开口向下}，所以 $a < 0$。
+  \item 与 $x$ 轴交于 $x = -1$ 和 $x = 3$。
+\end{itemize}
+
+\textbf{（1）}$ax^2 + bx + c > 0$：图象在 $x$ 轴\textbf{上方}的部分。
+
+\quad 从图上看，当 $-1 < x < 3$ 时，$y > 0$。
+
+\quad 解集为 $(-1, 3)$。
+
+\textbf{（2）}$ax^2 + bx + c \leq 0$：图象在 $x$ 轴\textbf{下方或在轴上}的部分。
+
+\quad 从图上看，当 $x \leq -1$ 或 $x \geq 3$ 时，$y \leq 0$。
+
+\quad 解集为 $(-\infty, -1] \cup [3, +\infty)$。
+
+\begin{tipbox}[方法总结]
+当 $a < 0$ 时，口诀刚好\textbf{相反}："大于取中间，小于取两边"。也可以先把不等式两边乘以 $-1$（变号），使 $a$ 变为正数，再用正常口诀。
+\end{tipbox}
+
+
+% ==============================================================
+% 第三部分：应用题
+% ==============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】商品定价问题]
+某商店以每件 $20$ 元的成本购进一种商品。据市场调查：当售价为每件 $x$ 元（$x \geq 20$）时，每天可卖出 $(100 - 2x)$ 件。要使每天的利润不低于 $450$ 元，售价应定在什么范围？
+\end{appbox}
+
+\textbf{解：}
+
+每件利润为 $(x - 20)$ 元，每天卖出 $(100 - 2x)$ 件。
+
+每天总利润 $= (x - 20)(100 - 2x)$
+
+令 $(x - 20)(100 - 2x) \geq 450$
+
+展开：$100x - 2x^2 - 2000 + 40x \geq 450$
+
+$-2x^2 + 140x - 2000 \geq 450$
+
+$-2x^2 + 140x - 2450 \geq 0$
+
+两边除以 $-2$（变号）：$x^2 - 70x + 1225 \leq 0$
+
+$(x - 35)^2 \leq 0$
+
+因为 $(x - 35)^2 \geq 0$，所以 $(x - 35)^2 \leq 0$ 只在 $x = 35$ 时成立。
+
+\textbf{答：}售价应定为 $35$ 元/件。
+
+\textbf{（验证：}$x = 35$ 时，卖出 $100 - 70 = 30$ 件，每件利润 $15$ 元，总利润 $= 30 \times 15 = 450$ 元。）
+
+\begin{appbox}[【应用2】围栏面积问题]
+用总长为 $40$ 米的篱笆围成一个一面靠墙的矩形花园（墙长足够长）。要使花园面积不小于 $180$ 平方米，求平行于墙的一边长度的范围。（靠墙的一边不需篱笆）
+\end{appbox}
+
+\textbf{解：}
+
+设平行于墙的一边长度为 $x$ 米，则另一边长度为 $\dfrac{40 - x}{2}$ 米。
+
+由题意 $x > 0$ 且 $\dfrac{40 - x}{2} > 0$，得 $0 < x < 40$。
+
+面积 $S = x \cdot \dfrac{40 - x}{2} = \dfrac{40x - x^2}{2}$
+
+令 $S \geq 180$：
+
+$\dfrac{40x - x^2}{2} \geq 180$
+
+$40x - x^2 \geq 360$
+
+$-x^2 + 40x - 360 \geq 0$
+
+$x^2 - 40x + 360 \leq 0$
+
+用求根公式：$x = \dfrac{40 \pm \sqrt{1600 - 1440}}{2} = \dfrac{40 \pm \sqrt{160}}{2} = \dfrac{40 \pm 4\sqrt{10}}{2} = 20 \pm 2\sqrt{10}$
+
+$\sqrt{10} \approx 3.16$，$2\sqrt{10} \approx 6.32$。
+
+$x_1 \approx 13.68$，$x_2 \approx 26.32$。
+
+$\leq 0$ 取中间：$20 - 2\sqrt{10} \leq x \leq 20 + 2\sqrt{10}$。
+
+\textbf{答：}平行于墙的一边长度范围为 $[20 - 2\sqrt{10},\ 20 + 2\sqrt{10}]$（约 $[13.7, 26.3]$ 米）。
+
+\begin{appbox}[【应用3】利润不低于目标]
+某工厂生产一种产品，固定成本为 $1000$ 元，每生产一件产品需再投入 $20$ 元。若产品售价为每件 $45$ 元，且全部售出。
+\begin{enumerate}[label=(\arabic*)]
+  \item 写出利润 $P$（元）与产量 $x$（件）的函数关系。
+  \item 若要盈利（即 $P > 0$），至少需要生产多少件？
+  \item 若要利润不低于 $1500$ 元，产量应为多少？
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}
+
+\textbf{（1）}$P = 45x - (1000 + 20x) = 25x - 1000$
+
+\textbf{（2）}令 $P > 0$：$25x - 1000 > 0$，解得 $x > 40$。
+
+因为 $x$ 为整数，所以至少生产 $41$ 件。
+
+\textbf{（3）}令 $P \geq 1500$：$25x - 1000 \geq 1500$
+
+$25x \geq 2500$，解得 $x \geq 100$。
+
+\textbf{答：}(1) $P = 25x - 1000$；(2) 至少 $41$ 件；(3) 产量 $\geq 100$ 件。
+
+
+% ==============================================================
+% 第四部分：课堂练习
+% ==============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 解不等式：$3x + 5 > 2x - 1$
+
+  \item 解不等式组：$\begin{cases} 3x - 1 > 5 \\ 7 - 2x > 1 \end{cases}$
+
+  \item 解不等式：$x^2 - 3x - 4 > 0$
+
+  \item 解不等式：$-x^2 + 4x - 3 \geq 0$
+
+  \item 解不等式：$2x^2 - 4x + 3 < 0$
+
+  \item 解不等式：$|3x + 1| \leq 7$
+
+  \item 解不等式：$\dfrac{x + 1}{x - 3} \leq 0$
+
+  \item 已知关于 $x$ 的不等式 $x^2 - 2mx + m + 2 > 0$ 对任意实数 $x$ 恒成立，求 $m$ 的取值范围。
+\end{enumerate}
+
+\vspace{20pt}
+\begin{knowledgebox}[参考答案]
+
+\textbf{1.} $3x - 2x > -1 - 5$，得 $x > -6$。解集：$(-6, +\infty)$。
+
+\medskip
+\textbf{2.} 解第一个：$3x > 6$，$x > 2$。解第二个：$-2x > -6$，$x < 3$。
+
+大小小大取中间，解集：$(2, 3)$。
+
+\medskip
+\textbf{3.} $(x - 4)(x + 1) > 0$，$a > 0$，大于取两边。
+
+$x_1 = -1$，$x_2 = 4$。解集：$(-\infty, -1) \cup (4, +\infty)$。
+
+\medskip
+\textbf{4.} 两边乘 $-1$（变号）：$x^2 - 4x + 3 \leq 0$
+
+$(x - 1)(x - 3) \leq 0$，解集：$[1, 3]$。
+
+\medskip
+\textbf{5.} $\Delta = 16 - 24 = -8 < 0$，$a = 2 > 0$，抛物线全在 $x$ 轴上方。
+
+$2x^2 - 4x + 3$ 恒大于 $0$，解集：无解（$\varnothing$）。
+
+\medskip
+\textbf{6.} $|3x + 1| \leq 7$ $\Leftrightarrow$ $-7 \leq 3x + 1 \leq 7$
+
+$-8 \leq 3x \leq 6$，得 $-\dfrac{8}{3} \leq x \leq 2$。解集：$\left[-\dfrac{8}{3},\ 2\right]$。
+
+\medskip
+\textbf{7.} $\dfrac{x + 1}{x - 3} \leq 0$ $\Leftrightarrow$ $(x + 1)(x - 3) \leq 0$ 且 $x \neq 3$。
+
+由 $(x+1)(x-3) \leq 0$ 得 $-1 \leq x \leq 3$，再去掉 $x = 3$。
+
+解集：$[-1, 3)$。
+
+\medskip
+\textbf{8.} 恒成立需 $\Delta < 0$。
+
+$\Delta = 4m^2 - 4(m + 2) = 4m^2 - 4m - 8$
+
+令 $4m^2 - 4m - 8 < 0$，即 $m^2 - m - 2 < 0$
+
+$(m - 2)(m + 1) < 0$，解得 $-1 < m < 2$。
+
+$m$ 的取值范围：$(-1, 2)$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
