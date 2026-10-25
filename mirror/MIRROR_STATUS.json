@@ -3,8 +3,8 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 1296,
-  "missing": 5926,
+  "verified": 1540,
+  "missing": 5682,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,8 +16,8 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 322,
-      "missing": 5224,
+      "verified": 566,
+      "missing": 4980,
       "complete": false
     },
     {
@@ -89,10 +89,32 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25 latest GitHub Git-tree audit: relative to baseline cd405ded34e1100763c2a9ac69cce870335fe651, 138 physical Git blobs were imported; all 138 match upstream pinned SHA and mode (39 math-lecture-notes, 61 compilation index, 38 compilation 2013 exams). Total verified 1296/7222, remaining 5926 files and 580209500 original bytes. Six of 11 sources complete. No claim of mathematical/compilation/licensing validation or successful GitHub Actions execution.",
-  "remaining_bytes": 580209500,
+  "note": "2026-10-25: latest main Git tree independently matched all 282 TeX blobs (sha + mode) in fixed upstream 2010-2019 subtrees. Relative to c955845b730c12be9ae893dffeec14f5026721fc, 244 new original blobs were imported (5620920 original bytes). Verified across 11 pinned sources: 1540/7222; missing 5682; 6/11 sources complete; approximately 574588580 missing original bytes. Does not certify mathematics, actual official exam provenance, licensing, compilation or CI.",
+  "remaining_bytes": 574588580,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
+    "baseline_commit": "c955845b730c12be9ae893dffeec14f5026721fc",
+    "source": "gaokao-math-problems-compilation",
+    "source_pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+    "new_verified": 244,
+    "new_bytes": 5620920,
+    "sha_and_mode_mismatches": 0,
+    "year_files": {
+      "2010": 38,
+      "2011": 36,
+      "2012": 36,
+      "2013": 38,
+      "2014": 38,
+      "2015": 32,
+      "2016": 20,
+      "2017": 16,
+      "2018": 14,
+      "2019": 14
+    },
+    "ten_year_expected": 282,
+    "ten_year_verified": 282
+  },
+  "previous_direct_import": {
     "baseline_commit": "cd405ded34e1100763c2a9ac69cce870335fe651",
     "mirror_commit": "651d9f893718bf7171601ad3ddd93ed50181f3b2",
     "new_verified": 138,
