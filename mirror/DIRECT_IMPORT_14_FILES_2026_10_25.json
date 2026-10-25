@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-25",
+  "method": "Direct pinned GitHub blob transfer. Read source binary via base64, reconstruct original Git blob in target, confirm 40-hex SHA, add source path in exact mode 100644. Later independently compare all 11 fixed upstream recursive Git trees with actual main Git tree.",
+  "commits": [
+    "0967ec93616050d13182bc88ad66b0f4f9f8c7f4",
+    "d0d8195f5e63940375b4ca29e0a2d25f967d002a"
+  ],
+  "count": 14,
+  "total_upstream_bytes": 694630,
+  "by_source": {
+    "gaokaomath": {
+      "pin": "08179f1fc0a3300787155d92800ac82b57ee4118",
+      "count": 4,
+      "bytes": 287532
+    },
+    "math-lecture-notes": {
+      "pin": "b89f6207bc5b84f501837ea6da3899799a8787d8",
+      "count": 6,
+      "bytes": 406568
+    },
+    "gaokao-math-problems-compilation": {
+      "pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+      "count": 4,
+      "bytes": 530
+    }
+  },
+  "files": [
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1958/1958不明.pdf",
+      "sha": "ba77f5b8912c88dbfc6497540cb6ecacf1735c73",
+      "size": 30497,
+      "mode": "100644",
+      "mirror_path": "mirror/gaokaomath/普通高考/1958/1958不明.pdf"
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1958/1958江苏.pdf",
+      "sha": "eb6cf2ac901db1ee264769e9a5858eaf3ae3d44e",
+      "size": 35110,
+      "mode": "100644",
+      "mirror_path": "mirror/gaokaomath/普通高考/1958/1958江苏.pdf"
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1985/1985上海文.pdf",
+      "sha": "95362934bf071e16ae080cfd74e680bf29f29a7b",
+      "size": 79295,
+      "mode": "100644",
+      "mirror_path": "mirror/gaokaomath/普通高考/1985/1985上海文.pdf"
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1977/1977新疆文.pdf",
+      "sha": "ff63abed146d4a0ca026ab0d70740480d0070d05",
+      "size": 142630,
+      "mode": "100644",
+      "mirror_path": "mirror/gaokaomath/普通高考/1977/1977新疆文.pdf"
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/高中测试卷/选必2第4章_数列_测试卷.pdf",
+      "sha": "6fc6d03fb423231ac2725920c2428b79799657f5",
+      "size": 62498,
+      "mode": "100644",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/高中测试卷/选必2第4章_数列_测试卷.pdf"
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/培优测试卷/培优9_数列递推与不等式_测试卷.pdf",
+      "sha": "f728ed231063eabf170cc53f6fb60f39c144fce2",
+      "size": 67060,
+      "mode": "100644",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/培优测试卷/培优9_数列递推与不等式_测试卷.pdf"
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/培优测试卷/培优11_函数方程与抽象函数_测试卷.pdf",
+      "sha": "44469f9361130658b3233cd29287565f66c785d8",
+      "size": 68026,
+      "mode": "100644",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/培优测试卷/培优11_函数方程与抽象函数_测试卷.pdf"
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/高中测试卷/选必1第3章_圆锥曲线的方程_测试卷.pdf",
+      "sha": "48a464e4ff6a697abfa6bc2387931ba60120920a",
+      "size": 68922,
+      "mode": "100644",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/高中测试卷/选必1第3章_圆锥曲线的方程_测试卷.pdf"
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/初中测试卷/八年级上册_测试卷.pdf",
+      "sha": "97110588cb7a4df50afd384dbc06217e32dd2971",
+      "size": 69311,
+      "mode": "100644",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/初中测试卷/八年级上册_测试卷.pdf"
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/培优测试卷/培优12_参数方程与极坐标_测试卷.pdf",
+      "sha": "c071865a3672b5b17f0243a58d575e1ab1f65130",
+      "size": 70751,
+      "mode": "100644",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/培优测试卷/培优12_参数方程与极坐标_测试卷.pdf"
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2013/liaoning_science/q5_fig1.tex",
+      "sha": "dd8a5b795f987bda724505ea7e0b331cf8f77f6e",
+      "size": 132,
+      "mode": "100644",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2013/liaoning_science/q5_fig1.tex"
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2014/shandong_science/q7_fig1.tex",
+      "sha": "587757f66ca5c2309b19e4c0cbf8479008af54d9",
+      "size": 132,
+      "mode": "100644",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2014/shandong_science/q7_fig1.tex"
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2016/shandong_science/q3_fig1.tex",
+      "sha": "9df71cbf4ed26c609fa56f615306b7655da7163e",
+      "size": 132,
+      "mode": "100644",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2016/shandong_science/q3_fig1.tex"
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2012/liaoning_science/q19_fig1.tex",
+      "sha": "66c06362271ff564993062160c9486587f20c233",
+      "size": 134,
+      "mode": "100644",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2012/liaoning_science/q19_fig1.tex"
+    }
+  ],
+  "current_strict_inventory": {
+    "matched": 2007,
+    "expected": 7222,
+    "unmatched": 5215,
+    "remaining_bytes": 566522251
+  },
+  "limitations": [
+    "Only 14 files in this batch; five upstream trees remain incomplete.",
+    "Git object identity is not mathematical, image, licence or source authenticity review.",
+    "For remaining binary objects >=1MB use full Git transfer script, not connector base64."
+  ]
+}
