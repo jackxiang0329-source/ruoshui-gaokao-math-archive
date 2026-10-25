@@ -16,6 +16,8 @@ jobs:
         with:
           persist-credentials: true
           fetch-depth: 1
+      - name: Check all reviewed TeX sources are selected
+        run: python3 scripts/check_reviewed_pdf_manifest.py
       - name: Compile independent solutions using XeLaTeX
         uses: xu-cheng/latex-action@v4
         with:
