@@ -1,0 +1,500 @@
+% ============================================================
+% 培优专题21 — 多项式与韦达定理推广
+% 编译命令：xelatex -interaction=nonstopmode 培优专题21_多项式与韦达定理推广.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{培优专题21 · 多项式与韦达定理推广}}}
+\fancyhead[R]{\small\textcolor{mainblue}{高中数学培优讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{多项式与韦达定理推广}}\\[12pt]
+{\Large\textcolor{gray}{高\quad 中\quad 数\quad 学\quad 培\quad 优}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高三拔高/竞赛\quad |\quad 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+\subsection*{1.1\quad 因式定理与余数定理}
+
+\begin{knowledgebox}[余数定理（多项式余数定理）]
+设 $f(x)$ 为多项式，则 $f(x)$ 除以 $(x - a)$ 的余数等于 $f(a)$。
+
+即：若 $f(x) = (x-a) \cdot q(x) + r$，则 $r = f(a)$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[因式定理]
+$(x-a)$ 是多项式 $f(x)$ 的因式的充要条件是 $f(a)=0$。
+
+推广：$(ax-b)$ 是 $f(x)$ 的因式的充要条件是 $f\!\left(\dfrac{b}{a}\right)=0$。
+\end{knowledgebox}
+
+\begin{tipbox}[因式定理的应用场景]
+\begin{enumerate}[label=(\arabic*)]
+\item 判断某一次式是否为多项式的因式；
+\item 分解高次多项式（找有理根后逐次降次）；
+\item 证明整除性问题。
+\end{enumerate}
+\end{tipbox}
+
+\subsection*{1.2\quad 高次韦达定理}
+
+\begin{knowledgebox}[韦达定理的一般形式]
+设 $n$ 次多项式
+\[
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 = a_n(x - x_1)(x - x_2)\cdots(x - x_n)
+\]
+其中 $x_1, x_2, \ldots, x_n$ 为 $f(x)$ 的 $n$ 个根（含复根，计重数），则：
+
+\[
+\left\{
+\begin{aligned}
+x_1 + x_2 + \cdots + x_n &= -\frac{a_{n-1}}{a_n} \\[6pt]
+\sum_{i<j} x_i x_j &= \frac{a_{n-2}}{a_n} \\[6pt]
+\sum_{i<j<k} x_i x_j x_k &= -\frac{a_{n-3}}{a_n} \\[6pt]
+&\vdots \\[4pt]
+x_1 x_2 \cdots x_n &= (-1)^n \frac{a_0}{a_n}
+\end{aligned}
+\right.
+\]
+
+一般地，第 $k$ 个基本对称多项式 $e_k = \sum_{1 \leq i_1 < i_2 < \cdots < i_k \leq n} x_{i_1} x_{i_2} \cdots x_{i_k} = (-1)^k \dfrac{a_{n-k}}{a_n}$。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+韦达定理中的符号规律：奇数个根之积取负号，偶数个根之积取正号（针对首一多项式 $a_n=1$）。口诀："奇负偶正"。
+\end{warnbox}
+
+\subsection*{1.3\quad 牛顿恒等式（Newton's Identities）}
+
+\begin{knowledgebox}[牛顿恒等式]
+设 $x_1, x_2, \ldots, x_n$ 为多项式 $f(x)$ 的根，定义：
+
+\textbf{幂和：} $p_k = x_1^k + x_2^k + \cdots + x_n^k$
+
+\textbf{基本对称多项式：} $e_k$（如上定义，$e_0=1$）
+
+则牛顿恒等式为：
+\[
+\left\{
+\begin{aligned}
+p_1 &= e_1 \\
+p_2 &= e_1 p_1 - 2e_2 \\
+p_3 &= e_1 p_2 - e_2 p_1 + 3e_3 \\
+p_4 &= e_1 p_3 - e_2 p_2 + e_3 p_1 - 4e_4 \\
+&\vdots \\
+p_k &= e_1 p_{k-1} - e_2 p_{k-2} + \cdots + (-1)^{k-1} k \, e_k \quad (k \leq n)
+\end{aligned}
+\right.
+\]
+
+当 $k > n$ 时：
+\[
+p_k = e_1 p_{k-1} - e_2 p_{k-2} + \cdots + (-1)^{n-1} e_n p_{k-n}
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[牛顿恒等式的作用]
+牛顿恒等式建立了"幂和"与"对称多项式"之间的递推关系。当已知韦达定理中的各项系数时，可以递推求出 $x_1^k + x_2^k + \cdots + x_n^k$ 的值，这在竞赛中极为常用。
+\end{tipbox}
+
+\subsection*{1.4\quad 根的分布}
+
+\begin{knowledgebox}[实系数多项式实根分布的基本方法]
+设 $f(x)$ 为实系数多项式，研究 $f(x)=0$ 在指定区间内实根的个数：
+
+\textbf{(1) 判别式法：} 二次方程 $ax^2+bx+c=0$ 的判别式 $\Delta = b^2-4ac$。
+
+\textbf{(2) 零点存在定理：} 若 $f(a) \cdot f(b) < 0$，则 $f(x)=0$ 在 $(a,b)$ 内至少有一个实根。
+
+\textbf{(3) 韦达定理结合条件：} 对二次方程 $x^2+px+q=0$，两根 $x_1, x_2$ 满足：
+
+\begin{center}
+\begin{tabular}{l|l}
+\toprule
+条件 & 等价关系 \\
+\midrule
+两根同正 & $p<0,\, q>0,\, \Delta \geq 0$ \\
+两根同负 & $p>0,\, q>0,\, \Delta \geq 0$ \\
+两根一正一负 & $q<0$ \\
+两根均大于 $k$ & $f(k)>0,\, -\frac{p}{2}>k,\, \Delta \geq 0$ \\
+两根均在 $(k_1,k_2)$ 内 & $f(k_1)>0,\, f(k_2)>0,\, k_1<-\frac{p}{2}<k_2,\, \Delta \geq 0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{(4) 笛卡尔符号法则：} $f(x)$ 的正实根个数（计重数）不超过 $f(x)$ 系数变号的次数。
+\end{knowledgebox}
+
+\subsection*{1.5\quad 对称多项式}
+
+\begin{knowledgebox}[对称多项式基本定理]
+\textbf{定义：} 若多项式 $F(x_1, x_2, \ldots, x_n)$ 在任意置换 $x_i \leftrightarrow x_j$ 下不变，则称 $F$ 为对称多项式。
+
+\textbf{基本定理：} 任何对称多项式都可以唯一地表示为基本对称多项式 $e_1, e_2, \ldots, e_n$ 的多项式。
+
+常用对称多项式与 $e_k$ 的关系：
+\begin{enumerate}[label=(\arabic*)]
+\item $p_1 = e_1$
+\item $p_2 = e_1^2 - 2e_2$
+\item $x_1^2 x_2 + x_1 x_2^2 = e_1 e_2 - 3e_3$（三元时）
+\item $x_1^2 + x_2^2 + x_3^2 = e_1^2 - 2e_2$
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{warnbox}[对称多项式与韦达定理的联系]
+利用对称多项式基本定理，任何关于根的对称表达式都可以转化为多项式的系数的表达式。这是韦达定理推广的核心思想。
+\end{warnbox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】因式定理分解高次多项式]
+分解因式：$f(x) = x^3 - 6x^2 + 11x - 6$。
+\end{examplebox}
+
+\textbf{解：} 尝试有理根：$f(1) = 1 - 6 + 11 - 6 = 0$，故 $(x-1)$ 是因式。
+
+用综合除法或多项式除法：
+\[
+f(x) = (x-1)(x^2 - 5x + 6) = (x-1)(x-2)(x-3)
+\]
+
+\begin{examplebox}[【例题2】余数定理求参数]
+已知 $f(x) = x^3 + ax^2 + bx + 6$ 能被 $(x-1)$ 和 $(x+2)$ 整除，求 $a, b$ 的值。
+\end{examplebox}
+
+\textbf{解：} 由因式定理：$f(1)=0$ 且 $f(-2)=0$。
+
+$f(1) = 1 + a + b + 6 = 0 \implies a + b = -7$
+
+$f(-2) = -8 + 4a - 2b + 6 = 0 \implies 4a - 2b = 2$
+
+由 $\begin{cases} a+b=-7 \\ 2a-b=1 \end{cases}$，解得 $a=-2,\, b=-5$。
+
+验证：$f(x) = x^3 - 2x^2 - 5x + 6 = (x-1)(x+2)(x-3)$。
+
+\begin{examplebox}[【例题3】高次韦达定理直接应用]
+设 $x_1, x_2, x_3$ 是方程 $x^3 - 6x^2 + 11x - 6 = 0$ 的三个根，求 $x_1^2 + x_2^2 + x_3^2$ 的值。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理：$e_1 = x_1+x_2+x_3 = 6$，$e_2 = x_1x_2+x_2x_3+x_3x_1 = 11$。
+
+\[
+x_1^2+x_2^2+x_3^2 = e_1^2 - 2e_2 = 36 - 22 = 14
+\]
+
+\begin{examplebox}[【例题4】牛顿恒等式求幂和]
+设 $x_1, x_2, x_3$ 是方程 $x^3 - 2x^2 + 3x - 4 = 0$ 的三个根，求 $x_1^3 + x_2^3 + x_3^3$。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理：$e_1 = 2$，$e_2 = 3$，$e_3 = 4$。
+
+由牛顿恒等式：
+\[
+p_1 = e_1 = 2
+\]
+\[
+p_2 = e_1 p_1 - 2e_2 = 2 \times 2 - 6 = -2
+\]
+\[
+p_3 = e_1 p_2 - e_2 p_1 + 3e_3 = 2 \times (-2) - 3 \times 2 + 3 \times 4 = -4 - 6 + 12 = 2
+\]
+
+故 $x_1^3 + x_2^3 + x_3^3 = 2$。
+
+\begin{tipbox}[验证方法]
+由于 $x_i$ 是方程的根，故 $x_i^3 = 2x_i^2 - 3x_i + 4$。
+
+$p_3 = 2p_2 - 3p_1 + 3 \times 4 = 2(-2) - 3(2) + 12 = -4-6+12=2$。验证一致。
+\end{tipbox}
+
+\begin{examplebox}[【例题5】对称多项式求值]
+设 $x_1, x_2$ 是方程 $x^2 - 5x + 3 = 0$ 的两个根，求 $\dfrac{x_2}{x_1} + \dfrac{x_1}{x_2}$ 的值。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理：$x_1+x_2=5$，$x_1 x_2=3$。
+
+\[
+\frac{x_2}{x_1} + \frac{x_1}{x_2} = \frac{x_1^2+x_2^2}{x_1 x_2} = \frac{(x_1+x_2)^2 - 2x_1x_2}{x_1 x_2} = \frac{25-6}{3} = \frac{19}{3}
+\]
+
+\begin{examplebox}[【例题6】根的分布问题]
+若方程 $x^2 - 2mx + m + 2 = 0$ 的两个实根都大于 $1$，求 $m$ 的取值范围。
+\end{examplebox}
+
+\textbf{解：} 设 $f(x) = x^2 - 2mx + m + 2$，两根为 $x_1, x_2$。
+
+条件：
+\begin{enumerate}[label=(\arabic*)]
+\item $\Delta = 4m^2 - 4(m+2) \geq 0 \implies m^2 - m - 2 \geq 0 \implies (m-2)(m+1) \geq 0$，故 $m \leq -1$ 或 $m \geq 2$。
+\item 对称轴 $x = m > 1$，故 $m > 1$。
+\item $f(1) = 1 - 2m + m + 2 = 3 - m > 0$，故 $m < 3$。
+\end{enumerate}
+
+综合：$m \geq 2$ 且 $m < 3$，即 $m \in [2, 3)$。
+
+\begin{examplebox}[【例题7】三次方程韦达定理求对称式]
+设 $x_1, x_2, x_3$ 是方程 $2x^3 - 3x^2 + x - 1 = 0$ 的三个根，求 $\dfrac{1}{x_1} + \dfrac{1}{x_2} + \dfrac{1}{x_3}$ 的值。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理（注意首项系数 $a_3 = 2$）：
+\[
+e_1 = x_1+x_2+x_3 = \frac{3}{2},\quad e_2 = x_1x_2+x_2x_3+x_3x_1 = \frac{1}{2},\quad e_3 = x_1x_2x_3 = \frac{1}{2}
+\]
+
+\[
+\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3} = \frac{x_2x_3+x_3x_1+x_1x_2}{x_1x_2x_3} = \frac{e_2}{e_3} = \frac{1/2}{1/2} = 1
+\]
+
+\begin{examplebox}[【例题8】余数定理求余式]
+求 $f(x) = x^{100} + x^{50} + 1$ 除以 $x^2 - 1$ 的余式。
+\end{examplebox}
+
+\textbf{解：} $x^2 - 1 = (x-1)(x+1)$。设 $f(x) = (x^2-1)q(x) + ax + b$。
+
+$f(1) = 1+1+1 = 3$，故 $a+b=3$。
+
+$f(-1) = 1+1+1 = 3$（因为 $(-1)^{100}=1$，$(-1)^{50}=1$），故 $-a+b=3$。
+
+解得 $a=0,\, b=3$。余式为 $3$。
+
+\begin{examplebox}[【例题9】牛顿恒等式求高次幂和]
+设 $x_1, x_2, x_3$ 是方程 $x^3 - x - 1 = 0$ 的三个根，求 $x_1^4 + x_2^4 + x_3^4$。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理：$e_1 = 0$，$e_2 = -1$，$e_3 = 1$。
+
+牛顿恒等式递推：
+\[
+p_1 = e_1 = 0
+\]
+\[
+p_2 = e_1 p_1 - 2e_2 = 0 - 2(-1) = 2
+\]
+\[
+p_3 = e_1 p_2 - e_2 p_1 + 3e_3 = 0 - (-1)(0) + 3 = 3
+\]
+
+$k=4 > n=3$，使用推广公式：
+\[
+p_4 = e_1 p_3 - e_2 p_2 + e_3 p_1 = 0 - (-1)(2) + 1 \times 0 = 2
+\]
+
+故 $x_1^4 + x_2^4 + x_3^4 = 2$。
+
+\begin{examplebox}[【例题10】构造多项式求根的表达式]
+已知 $\alpha, \beta$ 是方程 $x^2 - 3x + 1 = 0$ 的两个根，求以 $\alpha^2, \beta^2$ 为根的二次方程。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理：$\alpha+\beta=3$，$\alpha\beta=1$。
+
+\[
+\alpha^2+\beta^2 = (\alpha+\beta)^2 - 2\alpha\beta = 9-2 = 7
+\]
+\[
+\alpha^2 \cdot \beta^2 = (\alpha\beta)^2 = 1
+\]
+
+所求方程为 $x^2 - 7x + 1 = 0$。
+
+\begin{examplebox}[【例题11】根的分布——含参二次方程]
+关于 $x$ 的方程 $x^2 + (a-1)x + a^2 - 2 = 0$ 的两个实根 $x_1, x_2$ 满足 $x_1 < 0 < x_2$ 且 $|x_1| > |x_2|$，求 $a$ 的取值范围。
+\end{examplebox}
+
+\textbf{解：} 条件分析：
+
+(1) $x_1 < 0 < x_2$：即两根异号，$x_1 x_2 < 0$。由韦达定理：$a^2 - 2 < 0$，即 $-\sqrt{2} < a < \sqrt{2}$。
+
+(2) $|x_1| > |x_2|$ 且 $x_1 < 0 < x_2$：等价于 $x_1 + x_2 < 0$。由韦达定理：$-(a-1) < 0$，即 $a > 1$。
+
+(3) $\Delta > 0$：$(a-1)^2 - 4(a^2-2) > 0$，即 $-3a^2 - 2a + 9 > 0$，$3a^2 + 2a - 9 < 0$。
+
+$a = \frac{-2 \pm \sqrt{4+108}}{6} = \frac{-2 \pm \sqrt{112}}{6} = \frac{-1 \pm 2\sqrt{7}}{3}$。
+
+故 $\dfrac{-1-2\sqrt{7}}{3} < a < \dfrac{-1+2\sqrt{7}}{3}$。
+
+综合三个条件：$a \in \left(1,\, \dfrac{-1+2\sqrt{7}}{3}\right)$。
+
+\begin{examplebox}[【例题12】对称多项式综合]
+设 $x_1, x_2, x_3$ 是方程 $x^3 - 3x^2 + 2x + 1 = 0$ 的三个根，求 $x_1^2 x_2^2 + x_2^2 x_3^2 + x_3^2 x_1^2$ 的值。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理：$e_1 = 3$，$e_2 = 2$，$e_3 = -1$。
+
+\[
+x_1^2 x_2^2 + x_2^2 x_3^2 + x_3^2 x_1^2 = (x_1 x_2 + x_2 x_3 + x_3 x_1)^2 - 2x_1 x_2 x_3(x_1+x_2+x_3)
+\]
+\[
+= e_2^2 - 2e_3 e_1 = 4 - 2 \times (-1) \times 3 = 4 + 6 = 10
+\]
+
+\begin{tipbox}[对称多项式化简技巧]
+将目标表达式用 $e_1, e_2, e_3$ 表示时，常用以下恒等式：
+\begin{enumerate}[label=(\arabic*)]
+\item $x_1^2+x_2^2+x_3^2 = e_1^2-2e_2$
+\item $(x_1x_2)^2+(x_2x_3)^2+(x_3x_1)^2 = e_2^2-2e_1e_3$
+\item $x_1^3+x_2^3+x_3^3 = e_1^3-3e_1e_2+3e_3$
+\end{enumerate}
+\end{tipbox}
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】密码学中的多项式求根]
+在某种加密算法中，密钥由方程 $x^3 - 7x^2 + 14x - 8 = 0$ 的三个正整数根决定。求这三个根，并计算它们的平方和作为最终密钥。
+\end{appbox}
+
+\textbf{解：} 尝试有理根：$f(1)=0$，$f(2)=0$，$f(4)=0$。
+
+三个根为 $x_1=1,\, x_2=2,\, x_3=4$。
+
+平方和 $= 1 + 4 + 16 = 21$。
+
+\begin{appbox}[【应用2】经济模型中的均衡价格]
+某市场中两种商品的价格 $p_1, p_2$ 满足方程组：
+\[
+p_1 + p_2 = 10,\quad p_1 p_2 = 21
+\]
+若引入第三种商品价格 $p_3$，使得 $p_1 + p_2 + p_3 = 15$，$p_1 p_2 p_3 = 126$，求 $p_3$ 及 $p_1 p_2 + p_2 p_3 + p_3 p_1$ 的值。
+\end{appbox}
+
+\textbf{解：} 由已知：$p_1+p_2=10$，$p_1p_2=21$，故 $p_3 = 15 - 10 = 5$。
+
+$p_1 p_2 + p_2 p_3 + p_3 p_1 = p_1 p_2 + p_3(p_1+p_2) = 21 + 5 \times 10 = 71$。
+
+验证：$p_1, p_2$ 是 $x^2 - 10x + 21 = 0$ 的根，$x=3$ 或 $x=7$。$p_1 p_2 p_3 = 21 \times 5 = 105 \neq 126$。
+
+故需调整：若 $p_1 p_2 p_3 = 126$，则 $p_3 = \dfrac{126}{21} = 6$，$p_1+p_2+p_3 = 16$。
+
+\begin{appbox}[【应用3】信号处理中的滤波器设计]
+一个数字滤波器的传递函数为 $H(z) = \dfrac{1}{z^3 + a_2 z^2 + a_1 z + a_0}$。已知三个极点 $z_1, z_2, z_3$ 满足：$z_1+z_2+z_3=-2$，$z_1z_2+z_2z_3+z_3z_1=3$，$z_1z_2z_3=-1$。求 $a_0, a_1, a_2$ 的值，并计算 $z_1^2+z_2^2+z_3^2$。
+\end{appbox}
+
+\textbf{解：} 分母 $z^3+a_2z^2+a_1z+a_0 = (z-z_1)(z-z_2)(z-z_3)$。
+
+由韦达定理（注意符号）：$a_2 = -(z_1+z_2+z_3) = 2$，$a_1 = z_1z_2+z_2z_3+z_3z_1 = 3$，$a_0 = -z_1z_2z_3 = 1$。
+
+$z_1^2+z_2^2+z_3^2 = (z_1+z_2+z_3)^2 - 2(z_1z_2+z_2z_3+z_3z_1) = 4 - 6 = -2$。
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+\item 用因式定理分解：$f(x) = x^4 - 5x^3 + 5x^2 + 5x - 6$。
+
+\item 已知 $f(x) = 2x^3 + ax^2 + bx + 1$ 被 $(x+1)$ 除余 $3$，被 $(x-1)$ 除余 $5$，求 $a, b$。
+
+\item 设 $x_1, x_2, x_3$ 是方程 $x^3 - 4x^2 + 5x - 2 = 0$ 的三个根，求：
+\begin{enumerate}[label=(\alph*)]
+\item $x_1^2 + x_2^2 + x_3^2$
+\item $\dfrac{1}{x_1} + \dfrac{1}{x_2} + \dfrac{1}{x_3}$
+\end{enumerate}
+
+\item 设 $x_1, x_2, x_3$ 是方程 $x^3 - 2x^2 + x - 3 = 0$ 的三个根，用牛顿恒等式求 $x_1^4+x_2^4+x_3^4$。
+
+\item 若方程 $x^2 - (a+1)x + a - 2 = 0$ 的两个根 $x_1, x_2$ 满足 $x_1 > 2$，$x_2 > 2$，求 $a$ 的取值范围。
+
+\item 设 $x_1, x_2$ 是方程 $x^2 - 4x + 1 = 0$ 的两个根，求 $x_1^3 + x_2^3$ 的值。
+\end{enumerate}
+
+\vspace{10pt}
+\begin{knowledgebox}[参考答案]
+\textbf{1.} $f(1)=0$，$f(-1)=0$，$f(2)=0$，$f(3)=0$。$f(x)=(x-1)(x+1)(x-2)(x-3)$。
+
+\textbf{2.} $f(-1)=-2+a-b+1=3 \implies a-b=4$；$f(1)=2+a+b+1=5 \implies a+b=2$。解得 $a=3,\, b=-1$。
+
+\textbf{3.} (a) $e_1=4,\, e_2=5$，$p_2 = e_1^2-2e_2=16-10=6$。
+(b) $\frac{e_2}{e_3} = \frac{5}{2}$。
+
+\textbf{4.} $e_1=2,\, e_2=1,\, e_3=3$。$p_1=2,\, p_2=e_1p_1-2e_2=4-2=2,\, p_3=e_1p_2-e_2p_1+3e_3=4-2+9=11$。$p_4=e_1p_3-e_2p_2+e_3p_1=22-2+6=26$。
+
+\textbf{5.} (1) $\Delta=(a+1)^2-4(a-2)=a^2-2a+9>0$ 恒成立。(2) 对称轴 $\frac{a+1}{2}>2 \implies a>3$。(3) $f(2)=4-2(a+1)+a-2=-a>0 \implies a<0$。无解，即不存在满足条件的 $a$。
+
+\textbf{6.} $e_1=4,\, e_2=1$。$p_3 = e_1^3-3e_1e_2+3e_3 = 64-12+3 = 55$。（注意 $e_3=1$。）或者直接用 $p_3 = e_1 p_2 - e_2 p_1 + 3e_3 = 4 \times 14 - 1 \times 4 + 3 = 56-4+3=55$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

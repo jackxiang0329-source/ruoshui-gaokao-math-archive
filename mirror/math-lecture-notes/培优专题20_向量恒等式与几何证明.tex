@@ -1,0 +1,497 @@
+% ============================================================
+% 培优专题20 — 向量恒等式与几何证明
+% 编译命令：xelatex -interaction=nonstopmode 培优专题20_向量恒等式与几何证明.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{培优专题20 · 向量恒等式与几何证明}}}
+\fancyhead[R]{\small\textcolor{mainblue}{高中数学培优讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{向量恒等式与几何证明}}\\[12pt]
+{\Large\textcolor{gray}{高\quad 中\quad 数\quad 学\quad 培\quad 优}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高二高三拔高\quad |\quad 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+\subsection*{1.1\quad 向量线性运算恒等式}
+
+\begin{knowledgebox}[向量线性运算基本恒等式]
+设 $\vec{a}, \vec{b}, \vec{c}$ 为平面向量，$\lambda, \mu \in \mathbb{R}$，则：
+
+\textbf{(1) 分配律：} $\lambda(\vec{a} + \vec{b}) = \lambda\vec{a} + \lambda\vec{b}$
+
+\textbf{(2) 三角不等式：} $|\vec{a} + \vec{b}| \leq |\vec{a}| + |\vec{b}|$，等号成立当且仅当 $\vec{a}$ 与 $\vec{b}$ 同向。
+
+\textbf{(3) 反向三角不等式：} $\bigl||\vec{a}| - |\vec{b}|\bigr| \leq |\vec{a} - \vec{b}| \leq |\vec{a}| + |\vec{b}|$
+
+\textbf{(4) 平行四边形恒等式：}
+\[
+|\vec{a} + \vec{b}|^2 + |\vec{a} - \vec{b}|^2 = 2|\vec{a}|^2 + 2|\vec{b}|^2
+\]
+此恒等式表明：平行四边形两条对角线的平方和等于四条边的平方和。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+平行四边形恒等式中，等号左端是"和的模的平方"，而非"模的和的平方"。即 $|\vec{a}+\vec{b}|^2 \neq (|\vec{a}|+|\vec{b}|)^2$。
+\end{warnbox}
+
+\subsection*{1.2\quad 斯图尔特定理（Stewart's Theorem）}
+
+\begin{knowledgebox}[斯图尔特定理]
+设 $\triangle ABC$ 中，$D$ 为边 $BC$ 上一点，$BD = m$，$DC = n$，$BC = a = m + n$，则：
+\[
+AB^2 \cdot n + AC^2 \cdot m = AD^2 \cdot a + m \cdot n \cdot a
+\]
+即
+\[
+AB^2 \cdot n + AC^2 \cdot m = a(AD^2 + mn)
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[记忆口诀]
+"对边平方乘邻段，等于中线平方乘全长加两段之积乘全长"。此定理本质上是余弦定理在 $D$ 点分割边 $BC$ 上的推广。
+\end{tipbox}
+
+\subsection*{1.3\quad 叉积与面积}
+
+\begin{knowledgebox}[二维叉积与面积公式]
+设 $\vec{a} = (a_1, a_2)$，$\vec{b} = (b_1, b_2)$，则：
+
+\textbf{(1) 二维叉积（外积的模）：}
+\[
+\vec{a} \times \vec{b} = a_1 b_2 - a_2 b_1
+\]
+
+\textbf{(2) 三角形面积：}
+\[
+S_{\triangle} = \frac{1}{2} |a_1 b_2 - a_2 b_1|
+\]
+
+\textbf{(3) 用夹角表示：} $|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin\theta$，其中 $\theta$ 为 $\vec{a}$ 与 $\vec{b}$ 的夹角。
+
+\textbf{(4) 推广：} 若 $A(x_1,y_1),\, B(x_2,y_2),\, C(x_3,y_3)$，则
+\[
+S_{\triangle ABC} = \frac{1}{2}\bigl|x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2)\bigr|
+\]
+\end{knowledgebox}
+
+\subsection*{1.4\quad 极化恒等式}
+
+\begin{knowledgebox}[极化恒等式]
+设 $\vec{a}, \vec{b}$ 为向量，则：
+
+\textbf{(1) 基本形式：}
+\[
+\vec{a} \cdot \vec{b} = \frac{1}{2}\left(|\vec{a}+\vec{b}|^2 - |\vec{a}|^2 - |\vec{b}|^2\right)
+\]
+
+\textbf{(2) 等价形式：}
+\[
+\vec{a} \cdot \vec{b} = \frac{1}{4}\left(|\vec{a}+\vec{b}|^2 - |\vec{a}-\vec{b}|^2\right)
+\]
+
+\textbf{(3) 模的平方展开：}
+\[
+|\vec{a} \pm \vec{b}|^2 = |\vec{a}|^2 \pm 2\vec{a}\cdot\vec{b} + |\vec{b}|^2
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[极化恒等式的作用]
+极化恒等式将"点积"转化为"模的运算"，在已知若干向量模长关系时非常有用，是高考和竞赛中处理向量问题的核心工具之一。
+\end{tipbox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】平行四边形恒等式的直接应用]
+已知 $|\vec{a}|=3$，$|\vec{b}|=5$，$|\vec{a}+\vec{b}|=7$，求 $|\vec{a}-\vec{b}|$。
+\end{examplebox}
+
+\textbf{解：} 由平行四边形恒等式：
+\[
+|\vec{a}+\vec{b}|^2 + |\vec{a}-\vec{b}|^2 = 2|\vec{a}|^2 + 2|\vec{b}|^2
+\]
+代入数据：
+\[
+49 + |\vec{a}-\vec{b}|^2 = 2 \times 9 + 2 \times 25 = 68
+\]
+故 $|\vec{a}-\vec{b}|^2 = 19$，$|\vec{a}-\vec{b}| = \sqrt{19}$。
+
+\begin{examplebox}[【例题2】极化恒等式求点积]
+已知 $|\vec{a}|=4$，$|\vec{b}|=6$，$|\vec{a}+\vec{b}|=2\sqrt{13}$，求 $\vec{a}\cdot\vec{b}$。
+\end{examplebox}
+
+\textbf{解：} 由极化恒等式：
+\[
+\vec{a}\cdot\vec{b} = \frac{1}{2}\left(|\vec{a}+\vec{b}|^2 - |\vec{a}|^2 - |\vec{b}|^2\right)
+= \frac{1}{2}(52 - 16 - 36) = \frac{1}{2} \times 0 = 0
+\]
+故 $\vec{a} \perp \vec{b}$。
+
+\begin{examplebox}[【例题3】叉积求三角形面积]
+已知 $\vec{OA} = (3, 1)$，$\vec{OB} = (-1, 3)$，$\vec{OC} = (2, -1)$，求 $\triangle ABC$ 的面积。
+\end{examplebox}
+
+\textbf{解：} $\vec{AB} = \vec{OB} - \vec{OA} = (-4, 2)$，$\vec{AC} = \vec{OC} - \vec{OA} = (-1, -2)$。
+\[
+S_{\triangle ABC} = \frac{1}{2}|(-4)(-2) - 2 \times (-1)| = \frac{1}{2}|8+2| = 5
+\]
+
+\begin{examplebox}[【例题4】斯图尔特定理应用]
+在 $\triangle ABC$ 中，$AB=5$，$AC=7$，$BC=8$。$D$ 为 $BC$ 中点，求 $AD$ 的长。
+\end{examplebox}
+
+\textbf{解：} $BD = DC = 4$，由斯图尔特定理：
+\[
+AB^2 \cdot DC + AC^2 \cdot BD = BC(AD^2 + BD \cdot DC)
+\]
+\[
+25 \times 4 + 49 \times 4 = 8(AD^2 + 16)
+\]
+\[
+100 + 196 = 8AD^2 + 128
+\]
+\[
+8AD^2 = 168 \implies AD^2 = 21 \implies AD = \sqrt{21}
+\]
+
+\begin{tipbox}[方法总结]
+中线长公式是斯图尔特定理的特例（$m=n$）：
+\[
+AD^2 = \frac{2AB^2 + 2AC^2 - BC^2}{4}
+\]
+直接代入验证：$\frac{50+98-64}{4} = \frac{84}{4} = 21$，与上述结果一致。
+\end{tipbox}
+
+\begin{examplebox}[【例题5】向量恒等式证明几何命题]
+设 $O$ 为 $\triangle ABC$ 内一点，证明：
+\[
+\overrightarrow{OA} \cdot \overrightarrow{BC} + \overrightarrow{OB} \cdot \overrightarrow{CA} + \overrightarrow{OC} \cdot \overrightarrow{AB} = 0
+\]
+\end{examplebox}
+
+\textbf{证明：} 设 $\overrightarrow{OA}=\vec{a}$，$\overrightarrow{OB}=\vec{b}$，$\overrightarrow{OC}=\vec{c}$。
+
+则 $\overrightarrow{BC}=\vec{c}-\vec{b}$，$\overrightarrow{CA}=\vec{a}-\vec{c}$，$\overrightarrow{AB}=\vec{b}-\vec{a}$。
+
+原式 $= \vec{a}\cdot(\vec{c}-\vec{b}) + \vec{b}\cdot(\vec{a}-\vec{c}) + \vec{c}\cdot(\vec{b}-\vec{a})$
+
+$= \vec{a}\cdot\vec{c} - \vec{a}\cdot\vec{b} + \vec{b}\cdot\vec{a} - \vec{b}\cdot\vec{c} + \vec{c}\cdot\vec{b} - \vec{c}\cdot\vec{a}$
+
+$= (\vec{a}\cdot\vec{c} - \vec{c}\cdot\vec{a}) + (\vec{b}\cdot\vec{a} - \vec{a}\cdot\vec{b}) + (\vec{c}\cdot\vec{b} - \vec{b}\cdot\vec{c})$
+
+$= 0$
+
+\begin{examplebox}[【例题6】极化恒等式求模长范围]
+已知 $|\vec{a}|=1$，$|\vec{b}|=2$，$\vec{a}\cdot\vec{b}=1$，求 $|\vec{a}+t\vec{b}|$（$t\in\mathbb{R}$）的最小值。
+\end{examplebox}
+
+\textbf{解：}
+\[
+|\vec{a}+t\vec{b}|^2 = |\vec{a}|^2 + 2t(\vec{a}\cdot\vec{b}) + t^2|\vec{b}|^2 = 1 + 2t + 4t^2
+\]
+配方：$4t^2 + 2t + 1 = 4\left(t+\frac{1}{4}\right)^2 + \frac{3}{4}$。
+
+当 $t = -\dfrac{1}{4}$ 时取最小值，$|\vec{a}+t\vec{b}|_{\min} = \sqrt{\dfrac{3}{4}} = \dfrac{\sqrt{3}}{2}$。
+
+\begin{examplebox}[【例题7】叉积判断三点共线]
+已知 $A(1,2)$，$B(3,4)$，$C(5,k)$，若 $A, B, C$ 三点共线，求 $k$ 的值。
+\end{examplebox}
+
+\textbf{解：} 三点共线等价于 $\overrightarrow{AB} \times \overrightarrow{AC} = 0$。
+
+$\overrightarrow{AB} = (2,2)$，$\overrightarrow{AC} = (4,k-2)$。
+
+叉积 $= 2(k-2) - 2 \times 4 = 2k - 4 - 8 = 2k - 12 = 0$。
+
+故 $k = 6$。
+
+\begin{examplebox}[【例题8】斯图尔特定理求线段比]
+在 $\triangle ABC$ 中，$AB=6$，$AC=8$，$BC=10$。$D$ 在 $BC$ 上，$AD$ 是 $\angle A$ 的角平分线，求 $AD$ 的长。
+\end{examplebox}
+
+\textbf{解：} 由角平分线定理，$\dfrac{BD}{DC} = \dfrac{AB}{AC} = \dfrac{6}{8} = \dfrac{3}{4}$。
+
+故 $BD = \dfrac{3}{7} \times 10 = \dfrac{30}{7}$，$DC = \dfrac{40}{7}$。
+
+由斯图尔特定理：
+\[
+36 \times \frac{40}{7} + 64 \times \frac{30}{7} = 10\left(AD^2 + \frac{30}{7} \times \frac{40}{7}\right)
+\]
+\[
+\frac{1440 + 1920}{7} = 10\left(AD^2 + \frac{1200}{49}\right)
+\]
+\[
+\frac{3360}{7} = 10 \cdot AD^2 + \frac{12000}{49}
+\]
+\[
+480 = 10 \cdot AD^2 + \frac{12000}{49}
+\]
+\[
+10 \cdot AD^2 = 480 - \frac{12000}{49} = \frac{23520 - 12000}{49} = \frac{11520}{49}
+\]
+\[
+AD^2 = \frac{1152}{49} \implies AD = \frac{24\sqrt{2}}{7}
+\]
+
+\begin{examplebox}[【例题9】用向量证明勾股定理逆定理]
+设 $\triangle ABC$ 中，$C$ 为原点，$\overrightarrow{CA}=\vec{a}$，$\overrightarrow{CB}=\vec{b}$。若 $|\vec{a}+\vec{b}|^2 = |\vec{a}|^2 + |\vec{b}|^2$，证明 $\angle C = 90°$。
+\end{examplebox}
+
+\textbf{证明：}
+\[
+|\vec{a}+\vec{b}|^2 = |\vec{a}|^2 + 2\vec{a}\cdot\vec{b} + |\vec{b}|^2
+\]
+由条件 $|\vec{a}+\vec{b}|^2 = |\vec{a}|^2 + |\vec{b}|^2$，故 $2\vec{a}\cdot\vec{b} = 0$，即 $\vec{a}\cdot\vec{b} = 0$。
+
+因此 $\vec{a} \perp \vec{b}$，即 $\angle C = 90°$。
+
+\begin{examplebox}[【例题10】综合运用极化恒等式与三角不等式]
+已知 $\vec{a}, \vec{b}$ 为单位向量，$\vec{a}\cdot\vec{b} = -\dfrac{1}{2}$，求 $|2\vec{a} - 3\vec{b}|$。
+\end{examplebox}
+
+\textbf{解：}
+\[
+|2\vec{a}-3\vec{b}|^2 = 4|\vec{a}|^2 - 12\vec{a}\cdot\vec{b} + 9|\vec{b}|^2 = 4 - 12\left(-\frac{1}{2}\right) + 9 = 4 + 6 + 9 = 19
+\]
+故 $|2\vec{a}-3\vec{b}| = \sqrt{19}$。
+
+\begin{examplebox}[【例题11】向量恒等式证明中线性质]
+设 $G$ 为 $\triangle ABC$ 的重心，证明：
+\[
+|\overrightarrow{GA}|^2 + |\overrightarrow{GB}|^2 + |\overrightarrow{GC}|^2 = \frac{1}{3}\left(|\overrightarrow{AB}|^2 + |\overrightarrow{BC}|^2 + |\overrightarrow{CA}|^2\right)
+\]
+\end{examplebox}
+
+\textbf{证明：} 设 $\overrightarrow{GA}=\vec{a}$，$\overrightarrow{GB}=\vec{b}$，$\overrightarrow{GC}=\vec{c}$，则 $\vec{a}+\vec{b}+\vec{c}=\vec{0}$。
+
+左端 $= |\vec{a}|^2 + |\vec{b}|^2 + |\vec{c}|^2$。
+
+由 $\vec{a}+\vec{b}+\vec{c}=\vec{0}$，两边取模的平方：
+\[
+|\vec{a}|^2 + |\vec{b}|^2 + |\vec{c}|^2 + 2(\vec{a}\cdot\vec{b}+\vec{b}\cdot\vec{c}+\vec{c}\cdot\vec{a}) = 0
+\]
+故 $\vec{a}\cdot\vec{b}+\vec{b}\cdot\vec{c}+\vec{c}\cdot\vec{a} = -\dfrac{1}{2}(|\vec{a}|^2+|\vec{b}|^2+|\vec{c}|^2)$。
+
+又 $\overrightarrow{AB}=\vec{b}-\vec{a}$，故 $|\overrightarrow{AB}|^2 = |\vec{a}|^2+|\vec{b}|^2-2\vec{a}\cdot\vec{b}$。
+
+三边平方和 $= 2(|\vec{a}|^2+|\vec{b}|^2+|\vec{c}|^2) - 2(\vec{a}\cdot\vec{b}+\vec{b}\cdot\vec{c}+\vec{c}\cdot\vec{a})$
+
+$= 2(|\vec{a}|^2+|\vec{b}|^2+|\vec{c}|^2) + (|\vec{a}|^2+|\vec{b}|^2+|\vec{c}|^2) = 3(|\vec{a}|^2+|\vec{b}|^2+|\vec{c}|^2)$。
+
+故左端 $= \dfrac{1}{3}$ 三边平方和，证毕。
+
+\begin{examplebox}[【例题12】叉积面积与向量共面]
+在平面直角坐标系中，$A(0,0)$，$B(4,0)$，$C(2,3)$，$D(1,1)$。求 $\triangle ABC$ 的面积，并判断 $D$ 是否在 $\triangle ABC$ 内部。
+\end{examplebox}
+
+\textbf{解：}
+\[
+S_{\triangle ABC} = \frac{1}{2}|4 \times 3 - 0 \times 2| = 6
+\]
+
+判断 $D$ 是否在内部：计算 $\triangle ABD$、$\triangle BCD$、$\triangle CAD$ 的面积。
+
+$S_{\triangle ABD} = \frac{1}{2}|4 \times 1 - 0 \times 1| = 2$
+
+$S_{\triangle BCD} = \frac{1}{2}|(2-4)(1-0) - (3-0)(1-4)| = \frac{1}{2}|-2+9| = \frac{7}{2}$
+
+$S_{\triangle CAD} = \frac{1}{2}|0 \times 1 + 2 \times 1 + 1 \times 0 - 0 \times 2 - 3 \times 1 - 1 \times 0| = \frac{1}{2}|2-3| = \frac{1}{2}$
+
+$S_{\triangle ABD} + S_{\triangle BCD} + S_{\triangle CAD} = 2 + \frac{7}{2} + \frac{1}{2} = 6 = S_{\triangle ABC}$。
+
+面积之和相等，故 $D$ 在 $\triangle ABC$ 内部。
+
+\begin{tipbox}[判断点在三角形内部的方法]
+设 $P$ 为平面上一点，$P$ 在 $\triangle ABC$ 内部（含边界）的充要条件是：
+\[
+S_{\triangle PAB} + S_{\triangle PBC} + S_{\triangle PCA} = S_{\triangle ABC}
+\]
+且三个小三角形面积均非负。用叉积计算面积非常高效。
+\end{tipbox}
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】船航行问题]
+一艘船从港口 $O$ 出发，先以速度 $\vec{v}_1$ 航行 $2$ 小时（$|\vec{v}_1|=15$ 海里/时），再以速度 $\vec{v}_2$ 航行 $3$ 小时（$|\vec{v}_2|=20$ 海里/时）。若 $\vec{v}_1$ 与 $\vec{v}_2$ 的夹角为 $60°$，求船最终位置距港口的距离。
+\end{appbox}
+
+\textbf{解：} 设位移 $\vec{s} = 2\vec{v}_1 + 3\vec{v}_2$。
+\[
+|\vec{s}|^2 = 4|\vec{v}_1|^2 + 12\vec{v}_1\cdot\vec{v}_2 + 9|\vec{v}_2|^2
+\]
+\[
+= 4 \times 225 + 12 \times 15 \times 20 \times \cos 60° + 9 \times 400
+\]
+\[
+= 900 + 12 \times 300 \times \frac{1}{2} + 3600 = 900 + 1800 + 3600 = 6300
+\]
+$|\vec{s}| = \sqrt{6300} = 30\sqrt{7} \approx 79.4$ 海里。
+
+\begin{appbox}[【应用2】力学中的向量合成]
+三个力 $\vec{F}_1, \vec{F}_2, \vec{F}_3$ 作用于同一点，$|\vec{F}_1|=3$N，$|\vec{F}_2|=4$N，$|\vec{F}_3|=5$N。若 $\vec{F}_1 \perp \vec{F}_2$，$\vec{F}_3$ 与 $\vec{F}_1$ 的夹角为 $45°$，求合力的大小。
+\end{appbox}
+
+\textbf{解：} 以 $\vec{F}_1$ 方向为 $x$ 轴建立坐标系。
+
+$\vec{F}_1 = (3, 0)$，$\vec{F}_2 = (0, 4)$，$\vec{F}_3 = (5\cos 45°, 5\sin 45°) = \left(\dfrac{5\sqrt{2}}{2}, \dfrac{5\sqrt{2}}{2}\right)$。
+
+合力 $\vec{F} = \left(3 + \dfrac{5\sqrt{2}}{2},\, 4 + \dfrac{5\sqrt{2}}{2}\right)$。
+
+\[
+|\vec{F}|^2 = \left(3+\frac{5\sqrt{2}}{2}\right)^2 + \left(4+\frac{5\sqrt{2}}{2}\right)^2
+\]
+\[
+= 9 + 15\sqrt{2} + \frac{25}{2} + 16 + 20\sqrt{2} + \frac{25}{2}
+\]
+\[
+= 50 + 35\sqrt{2} \approx 50 + 49.5 = 99.5
+\]
+$|\vec{F}| = \sqrt{50+35\sqrt{2}} \approx 9.97$ N。
+
+\begin{appbox}[【应用3】结构力学中的支撑点]
+一均匀横梁 $AB$ 长 $10$m，质量为 $200$kg，在距 $A$ 端 $3$m 处悬挂一重物 $500$kg，在距 $A$ 端 $7$m 处有另一支撑点 $C$。求 $C$ 点支撑力的大小（取 $g=10\,\text{m/s}^2$）。
+\end{appbox}
+
+\textbf{解：} 以 $A$ 为支点取力矩平衡。设 $A$ 端支撑力为 $F_A$，$C$ 点支撑力为 $F_C$。
+
+横梁重心在中点（距 $A$ 为 $5$m），重物在距 $A$ 为 $3$m 处。
+
+对 $A$ 点取力矩：
+\[
+F_C \times 7 = 500 \times 10 \times 3 + 200 \times 10 \times 5
+\]
+\[
+7F_C = 15000 + 10000 = 25000
+\]
+\[
+F_C = \frac{25000}{7} \approx 3571 \text{ N}
+\]
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+\item 已知 $|\vec{a}|=2$，$|\vec{b}|=3$，$|\vec{a}-\vec{b}|=\sqrt{7}$，求 $\vec{a}\cdot\vec{b}$。
+
+\item 在 $\triangle ABC$ 中，$AB=7$，$AC=5$，$BC=8$，$D$ 为 $BC$ 上一点且 $BD=3$，求 $AD$ 的长。
+
+\item 已知 $\vec{a}=(1,2)$，$\vec{b}=(3,-1)$，求以 $\vec{a}, \vec{b}$ 为邻边的平行四边形的面积。
+
+\item 用向量方法证明：三角形三条中线交于一点（重心），且重心到顶点的距离是中线长的 $\dfrac{2}{3}$。
+
+\item 设 $\vec{a}, \vec{b}$ 为非零向量，$|\vec{a}|=2$，$|\vec{b}|=1$，$\vec{a}$ 与 $\vec{b}$ 的夹角为 $60°$，若 $\vec{a}+t\vec{b}$ 与 $\vec{b}$ 垂直，求 $t$ 的值。
+
+\item 已知 $A(1,0)$，$B(0,1)$，$C(-1,0)$，$D(0,-1)$，求四边形 $ABCD$ 的面积。
+
+\item 在 $\triangle ABC$ 中，$AB=6$，$AC=4$，$BC=5$。$D$ 为 $BC$ 中点，$E$ 为 $AC$ 中点，求 $DE$ 的长。
+
+\item 设 $\overrightarrow{OA}=(2,1)$，$\overrightarrow{OB}=(1,3)$，$\overrightarrow{OC}=(4,k)$。若 $A, B, C$ 三点共线，求 $k$ 的值。
+\end{enumerate}
+
+\vspace{10pt}
+\begin{knowledgebox}[参考答案]
+\textbf{1.} 由 $|\vec{a}-\vec{b}|^2 = |\vec{a}|^2 - 2\vec{a}\cdot\vec{b} + |\vec{b}|^2$，得 $7 = 4 - 2\vec{a}\cdot\vec{b} + 9$，故 $\vec{a}\cdot\vec{b} = 3$。
+
+\textbf{2.} $BD=3$，$DC=5$，由斯图尔特定理：$49 \times 5 + 25 \times 3 = 8(AD^2 + 15)$，$320 = 8AD^2 + 120$，$AD^2 = 25$，$AD = 5$。
+
+\textbf{3.} 叉积 $= 1 \times (-1) - 2 \times 3 = -7$，面积 $= |{-7}| = 7$。
+
+\textbf{4.} 设 $A, B, C$ 对应向量 $\vec{a}, \vec{b}, \vec{c}$，中线 $AD$ 上 $D = \frac{\vec{b}+\vec{c}}{2}$，重心 $G = \frac{\vec{a}+\vec{b}+\vec{c}}{3}$，$AG = \frac{2}{3}AD$，类似得另两条中线也过 $G$。
+
+\textbf{5.} $(\vec{a}+t\vec{b})\cdot\vec{b} = \vec{a}\cdot\vec{b} + t|\vec{b}|^2 = 2 \times 1 \times \frac{1}{2} + t = 0$，故 $t = -1$。
+
+\textbf{6.} 对角线 $\vec{AC}=(-2,0)$，$\vec{BD}=(0,-2)$，面积 $= \frac{1}{2}|(-2)(-2)-0 \times 0| = 2$。
+
+\textbf{7.} $D$ 为 $BC$ 中点，$E$ 为 $AC$ 中点，$DE$ 为中位线，$DE = \frac{AB}{2} = 3$。
+
+\textbf{8.} $\overrightarrow{AB}=(-1,2)$，$\overrightarrow{AC}=(2,k-1)$，叉积 $=(-1)(k-1)-2 \times 2 = -k+1-4 = -k-3 = 0$，$k=-3$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

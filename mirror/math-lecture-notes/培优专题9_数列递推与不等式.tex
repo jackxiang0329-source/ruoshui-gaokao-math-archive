@@ -1,0 +1,721 @@
+% ============================================================
+% 培优专题9 — 数列递推与不等式
+% 编译命令：xelatex -interaction=nonstopmode 培优专题9_数列递推与不等式.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高中数学培优 · 数列递推与不等式}}}
+\fancyhead[R]{\small\textcolor{mainblue}{培优专题9}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{培优专题9\quad 数列递推与不等式}}\\[12pt]
+{\Large\textcolor{gray}{培\quad 优\quad 讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高二高三拔高\quad |\quad 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ------ 1.1 特征方程法 ------
+\subsection*{1.1\quad 特征方程法}
+
+\begin{knowledgebox}[特征方程法基本原理]
+对于二阶线性递推数列
+\[
+a_{n+2} = p\,a_{n+1} + q\,a_n \quad (p,q\text{为常数},\;q\neq 0)
+\]
+令 $r^2 = pr + q$，称此方程为\textbf{特征方程}。
+
+设其两根为 $r_1, r_2$：
+
+\textbf{情形一：}$r_1 \neq r_2$（两个不等实根）
+\[
+a_n = A\,r_1^{\,n} + B\,r_2^{\,n}
+\]
+其中 $A, B$ 由初始条件 $a_1, a_2$ 确定。
+
+\textbf{情形二：}$r_1 = r_2 = r$（重根）
+\[
+a_n = (A + Bn)\,r^{\,n}
+\]
+
+\textbf{情形三：}$r_1, r_2$ 为共轭复根 $r = \alpha \pm \beta i$
+\[
+a_n = R^n\left(A\cos n\theta + B\sin n\theta\right)
+\]
+其中 $R = |r|,\;\theta = \arg(r)$。
+\end{knowledgebox}
+
+\begin{tipbox}[推广：一阶线性递推]
+对于 $a_{n+1} = pa_n + q$（$p\neq 1$），其特征方程为 $r = pr + q$，解得不动点 $r = \dfrac{q}{1-p}$。令 $b_n = a_n - r$，则 $b_{n+1} = pb_n$，为等比数列。
+\end{tipbox}
+
+% ------ 1.2 不动点法 ------
+\subsection*{1.2\quad 不动点法}
+
+\begin{knowledgebox}[不动点法]
+对于递推关系 $a_{n+1} = f(a_n)$，若方程 $f(x) = x$ 有实数解 $x_0$，则称 $x_0$ 为 $f$ 的\textbf{不动点}。
+
+\textbf{类型一：}$a_{n+1} = pa_n + q$（$p\neq 1$）
+
+不动点 $x_0 = \dfrac{q}{1-p}$，令 $b_n = a_n - x_0$，则 $b_{n+1} = pb_n$。
+
+\textbf{类型二：}$a_{n+1} = \dfrac{a\,a_n + b}{c\,a_n + d}$（分式线性递推）
+
+不动点为方程 $x = \dfrac{ax+b}{cx+d}$ 的根，即 $cx^2 + (d-a)x - b = 0$ 的根。
+
+若有两个不等不动点 $\alpha, \beta$，令
+\[
+\frac{a_n - \alpha}{a_n - \beta} = t \cdot \frac{a_{n-1} - \alpha}{a_{n-1} - \beta}
+\]
+可化为等比数列求解。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+使用不动点法时，需验证递推函数在不动点附近有意义。若不动点处 $f'(x_0) = 0$，则收敛速度会加快（二次收敛）。特别注意分式递推中分母不为零的限制。
+\end{warnbox}
+
+% ------ 1.3 递推数列周期性 ------
+\subsection*{1.3\quad 递推数列周期性}
+
+\begin{knowledgebox}[周期数列的判定]
+数列 $\{a_n\}$ 若存在正整数 $T$，使得 $a_{n+T} = a_n$ 对一切 $n$ 成立，则称其为\textbf{周期数列}，$T$ 为一个周期。
+
+\textbf{常见周期性递推模型：}
+
+(1) 二阶循环：$a_{n+2} = \dfrac{1}{a_n}$，周期 $T=4$（一般情况）。
+
+(2) 三角型：$a_{n+1} = 2a_n\sqrt{1-a_n^2}$，令 $a_n = \sin\theta_n$ 可化为 $\theta_{n+1} = 2\theta_n$。
+
+(3) 取模型：$a_{n+1} \equiv f(a_n) \pmod{m}$，至多 $m$ 项后出现周期。
+
+\textbf{判定技巧：}
+\begin{itemize}[nosep]
+\item 计算若干项，观察是否重复；
+\item 利用函数迭代图分析；
+\item 利用模运算的有限性。
+\end{itemize}
+\end{knowledgebox}
+
+% ------ 1.4 数列不等式证明 ------
+\subsection*{1.4\quad 数列不等式证明}
+
+\begin{knowledgebox}[常用证明策略]
+\textbf{策略一：数学归纳法}
+\begin{itemize}[nosep]
+\item 验证 $n=1$（或起始值）成立；
+\item 假设 $n=k$ 成立，证明 $n=k+1$ 也成立。
+\end{itemize}
+
+\textbf{策略二：单调性论证}
+\begin{itemize}[nosep]
+\item 证明 $a_{n+1} - a_n > 0$（或 $< 0$）；
+\item 利用 $a_n$ 与目标值的差构造单调性。
+\end{itemize}
+
+\textbf{策略三：放缩法}
+\begin{itemize}[nosep]
+\item 利用 $a_n < b_n$（或 $>$）逐层放缩；
+\item 常配合裂项、均值不等式等工具。
+\end{itemize}
+
+\textbf{策略四：构造辅助数列}
+\begin{itemize}[nosep]
+\item 令 $b_n = a_n - c$ 或 $b_n = \dfrac{a_n}{c}$ 等，化简递推关系后证明。
+\end{itemize}
+\end{knowledgebox}
+
+% ------ 1.5 裂项放缩 ------
+\subsection*{1.5\quad 裂项放缩}
+
+\begin{knowledgebox}[裂项放缩核心公式]
+\textbf{基本裂项：}
+\[
+\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}
+\]
+\[
+\frac{1}{n(n+k)} = \frac{1}{k}\left(\frac{1}{n} - \frac{1}{n+k}\right)
+\]
+
+\textbf{常用放缩：}
+\[
+\frac{1}{n^2} < \frac{1}{n(n-1)} = \frac{1}{n-1} - \frac{1}{n} \quad (n\geq 2)
+\]
+\[
+\frac{1}{n^2} > \frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}
+\]
+\[
+\frac{1}{\sqrt{n} + \sqrt{n+1}} = \sqrt{n+1} - \sqrt{n}
+\]
+
+\textbf{进阶放缩：}
+\[
+\frac{1}{n^2} < \frac{1}{n^2 - \frac{1}{4}} = \frac{1}{\left(n-\frac{1}{2}\right)\left(n+\frac{1}{2}\right)} = \frac{1}{2n-1} - \frac{1}{2n+1} \cdot \frac{1}{2}
+\]
+更精确地：
+\[
+\frac{1}{n^2} < \frac{1}{n^2 - \frac{1}{4}} = \frac{1}{\left(n-\frac{1}{2}\right)\left(n+\frac{1}{2}\right)}
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[放缩原则]
+放缩方向要一致（同向传递），且放缩程度要"恰到好处"——既不过大（导致目标无法达到），也不过小（导致无法求和）。一般先试简单放缩，不成功再调整。
+\end{tipbox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% ------ 例题1 ------
+\begin{examplebox}[【例题1】特征方程法求通项]
+已知数列 $\{a_n\}$ 满足 $a_1 = 1,\;a_2 = 3$，且 $a_{n+2} = 3a_{n+1} - 2a_n$，求通项公式。
+\end{examplebox}
+
+\textbf{解：}特征方程为 $r^2 = 3r - 2$，即 $r^2 - 3r + 2 = 0$。
+
+解得 $r_1 = 1,\;r_2 = 2$。
+
+设 $a_n = A \cdot 1^n + B \cdot 2^n = A + B \cdot 2^n$。
+
+由初始条件：
+\[
+\begin{cases}
+a_1 = A + 2B = 1 \\
+a_2 = A + 4B = 3
+\end{cases}
+\]
+解得 $B = 1,\;A = -1$。
+
+故 $a_n = 2^n - 1$。
+
+\textbf{验证：}$a_1 = 1,\;a_2 = 3,\;a_3 = 3\times 3 - 2\times 1 = 7 = 2^3 - 1$。\;\checkmark
+
+% ------ 例题2 ------
+\begin{examplebox}[【例题2】重根情形的特征方程法]
+已知 $a_1 = 1,\;a_2 = 3$，且 $a_{n+2} = 4a_{n+1} - 4a_n$，求 $a_n$。
+\end{examplebox}
+
+\textbf{解：}特征方程 $r^2 - 4r + 4 = 0$，即 $(r-2)^2 = 0$，重根 $r = 2$。
+
+设 $a_n = (A + Bn) \cdot 2^n$。
+
+由初始条件：
+\[
+\begin{cases}
+a_1 = (A+B) \cdot 2 = 1 \\
+a_2 = (A+2B) \cdot 4 = 3
+\end{cases}
+\implies
+\begin{cases}
+2A + 2B = 1 \\
+4A + 8B = 3
+\end{cases}
+\]
+解得 $A = \dfrac{1}{4},\;B = \dfrac{1}{4}$。
+
+故 $a_n = \dfrac{n+1}{4} \cdot 2^n = (n+1)\cdot 2^{n-2}$。
+
+% ------ 例题3 ------
+\begin{examplebox}[【例题3】不动点法解分式线性递推]
+已知 $a_1 = 2$，$a_{n+1} = \dfrac{2a_n - 1}{a_n}$，求 $a_n$。
+\end{examplebox}
+
+\textbf{解：}令 $x = \dfrac{2x-1}{x}$，则 $x^2 = 2x - 1$，即 $(x-1)^2 = 0$，不动点 $x_0 = 1$。
+
+令 $b_n = a_n - 1$，则
+\[
+b_{n+1} + 1 = \frac{2(b_n+1)-1}{b_n+1} = \frac{2b_n + 1}{b_n + 1}
+\]
+\[
+b_{n+1} = \frac{2b_n + 1}{b_n + 1} - 1 = \frac{b_n}{b_n + 1}
+\]
+取倒数：
+\[
+\frac{1}{b_{n+1}} = \frac{b_n + 1}{b_n} = 1 + \frac{1}{b_n}
+\]
+令 $c_n = \dfrac{1}{b_n}$，则 $c_{n+1} = c_n + 1$，为等差数列。
+
+$a_1 = 2$，故 $b_1 = 1$，$c_1 = 1$，所以 $c_n = n$。
+
+回代：$b_n = \dfrac{1}{n}$，$a_n = 1 + \dfrac{1}{n} = \dfrac{n+1}{n}$。
+
+% ------ 例题4 ------
+\begin{examplebox}[【例题4】双不动点分式递推]
+已知 $a_1 = 3$，$a_{n+1} = \dfrac{a_n + 3}{a_n + 1}$，求 $a_n$。
+\end{examplebox}
+
+\textbf{解：}不动点方程 $x = \dfrac{x+3}{x+1}$，即 $x^2 + x = x + 3$，$x^2 = 3$。
+
+故 $\alpha = \sqrt{3},\;\beta = -\sqrt{3}$。
+
+构造：
+\[
+\frac{a_{n+1} - \sqrt{3}}{a_{n+1} + \sqrt{3}} = \frac{\frac{a_n+3}{a_n+1} - \sqrt{3}}{\frac{a_n+3}{a_n+1} + \sqrt{3}} = \frac{(a_n+3) - \sqrt{3}(a_n+1)}{(a_n+3) + \sqrt{3}(a_n+1)}
+\]
+\[
+= \frac{a_n(1-\sqrt{3}) + (3-\sqrt{3})}{a_n(1+\sqrt{3}) + (3+\sqrt{3})} = \frac{(1-\sqrt{3})(a_n - \sqrt{3})}{(1+\sqrt{3})(a_n + \sqrt{3})}
+\]
+令 $t_n = \dfrac{a_n - \sqrt{3}}{a_n + \sqrt{3}}$，则 $t_{n+1} = \dfrac{1-\sqrt{3}}{1+\sqrt{3}} \cdot t_n$。
+
+记 $\lambda = \dfrac{1-\sqrt{3}}{1+\sqrt{3}} = \dfrac{(1-\sqrt{3})^2}{1-3} = \dfrac{4-2\sqrt{3}}{-2} = \sqrt{3}-1$。
+
+故 $t_n = t_1 \cdot (\sqrt{3}-1)^{n-1}$。
+
+$a_1 = 3$，$t_1 = \dfrac{3-\sqrt{3}}{3+\sqrt{3}} = \dfrac{(3-\sqrt{3})^2}{9-3} = \dfrac{12-6\sqrt{3}}{6} = 2-\sqrt{3}$。
+
+故 $\dfrac{a_n - \sqrt{3}}{a_n + \sqrt{3}} = (2-\sqrt{3})(\sqrt{3}-1)^{n-1}$。
+
+解出：$a_n = \sqrt{3} \cdot \dfrac{1 + (2-\sqrt{3})(\sqrt{3}-1)^{n-1}}{1 - (2-\sqrt{3})(\sqrt{3}-1)^{n-1}}$。
+
+% ------ 例题5 ------
+\begin{examplebox}[【例题5】递推数列的周期性]
+设 $a_1 = 2$，$a_{n+1} = \dfrac{1+a_n}{1-a_n}$，证明数列 $\{a_n\}$ 为周期数列，并求 $a_{2023}$。
+\end{examplebox}
+
+\textbf{解：}计算前几项：
+\[
+a_1 = 2,\quad a_2 = \frac{1+2}{1-2} = -3,\quad a_3 = \frac{1+(-3)}{1-(-3)} = \frac{-2}{4} = -\frac{1}{2}
+\]
+\[
+a_4 = \frac{1+(-\frac{1}{2})}{1-(-\frac{1}{2})} = \frac{\frac{1}{2}}{\frac{3}{2}} = \frac{1}{3},\quad a_5 = \frac{1+\frac{1}{3}}{1-\frac{1}{3}} = \frac{\frac{4}{3}}{\frac{2}{3}} = 2
+\]
+
+$a_5 = a_1 = 2$，故周期 $T = 4$。
+
+$a_{2023}$：$2023 = 4 \times 505 + 3$，故 $a_{2023} = a_3 = -\dfrac{1}{2}$。
+
+\begin{tipbox}[方法总结]
+对于分式线性递推 $a_{n+1} = \dfrac{a\,a_n+b}{c\,a_n+d}$，计算前若干项即可发现周期性。若不动点为虚数，则数列往往具有周期性。本题不动点方程 $x = \dfrac{1+x}{1-x}$ 即 $x - x^2 = 1 + x$，得 $x^2 = -1$，无实不动点，恰好对应周期4。
+\end{tipbox}
+
+% ------ 例题6 ------
+\begin{examplebox}[【例题6】数学归纳法证明数列不等式]
+已知 $a_1 = 1$，$a_{n+1} = a_n + \dfrac{1}{a_n}$，证明：$\sqrt{2n-1} \leq a_n \leq \sqrt{3n-2}$。
+\end{examplebox}
+
+\textbf{证明：}
+
+\textbf{（下界）}先证 $a_n \geq \sqrt{2n-1}$。
+
+由递推式 $a_{n+1}^2 = a_n^2 + 2 + \dfrac{1}{a_n^2} > a_n^2 + 2$。
+
+累加：$a_n^2 > a_1^2 + 2(n-1) = 1 + 2n - 2 = 2n - 1$。
+
+故 $a_n > \sqrt{2n-1}$。\;\checkmark
+
+\textbf{（上界）}再证 $a_n \leq \sqrt{3n-2}$。
+
+$a_{n+1}^2 = a_n^2 + 2 + \dfrac{1}{a_n^2}$。
+
+由下界 $a_n^2 \geq 2n-1$，故 $\dfrac{1}{a_n^2} \leq \dfrac{1}{2n-1}$。
+
+$a_{n+1}^2 \leq a_n^2 + 2 + \dfrac{1}{2n-1}$。
+
+累加：$a_n^2 \leq 1 + 2(n-1) + \sum_{k=1}^{n-1}\dfrac{1}{2k-1}$。
+
+需证 $\displaystyle\sum_{k=1}^{n-1}\dfrac{1}{2k-1} \leq n - 1$。
+
+这等价于 $\displaystyle\sum_{k=1}^{n-1}\dfrac{1}{2k-1} \leq \sum_{k=1}^{n-1} 1$，即 $\dfrac{1}{2k-1} \leq 1$，对 $k\geq 1$ 显然成立。
+
+故 $a_n^2 \leq 1 + 2(n-1) + (n-1) = 3n - 2$，即 $a_n \leq \sqrt{3n-2}$。\;\checkmark
+
+% ------ 例题7 ------
+\begin{examplebox}[【例题7】裂项求和与放缩]
+证明：$\displaystyle\sum_{k=1}^{n} \frac{1}{k^2} < 2$。
+\end{examplebox}
+
+\textbf{证明：}$\dfrac{1}{k^2} < \dfrac{1}{k(k-1)} = \dfrac{1}{k-1} - \dfrac{1}{k}$（$k \geq 2$）。
+
+\[
+\sum_{k=1}^{n}\frac{1}{k^2} = 1 + \sum_{k=2}^{n}\frac{1}{k^2} < 1 + \sum_{k=2}^{n}\left(\frac{1}{k-1} - \frac{1}{k}\right) = 1 + 1 - \frac{1}{n} = 2 - \frac{1}{n} < 2
+\]
+
+\textbf{证毕。}
+
+\begin{tipbox}[更强的上界]
+利用 $\dfrac{1}{k^2} < \dfrac{1}{k^2 - \frac{1}{4}} = \dfrac{1}{(k-\frac{1}{2})(k+\frac{1}{2})} = \dfrac{1}{2k-1} - \dfrac{1}{2k+1}$，可以得到更强的结果 $\displaystyle\sum_{k=1}^{n}\dfrac{1}{k^2} < \dfrac{\pi^2}{6} \approx 1.6449$（但证明更复杂）。
+\end{tipbox}
+
+% ------ 例题8 ------
+\begin{examplebox}[【例题8】裂项放缩求和的精确估计]
+证明：$\displaystyle\frac{n}{2n+1} < \sum_{k=1}^{n}\frac{1}{(2k)^2 - 1} < \frac{n}{2n-1}$。
+\end{examplebox}
+
+\textbf{证明：}$\dfrac{1}{(2k)^2 - 1} = \dfrac{1}{4k^2 - 1} = \dfrac{1}{(2k-1)(2k+1)} = \dfrac{1}{2}\left(\dfrac{1}{2k-1} - \dfrac{1}{2k+1}\right)$。
+
+\[
+\sum_{k=1}^{n}\frac{1}{4k^2-1} = \frac{1}{2}\left(1 - \frac{1}{2n+1}\right) = \frac{n}{2n+1}
+\]
+
+等等——此处恰好等于 $\dfrac{n}{2n+1}$，等号成立，不等式左端应取等号。
+
+重新检查：题目要求严格不等号。若确实要求证明严格不等式，则需修改估计方式。这里我们验证 $\dfrac{n}{2n+1} \leq \dfrac{n}{2n+1}$ 恰好取等。
+
+实际上，令 $S_n = \displaystyle\sum_{k=1}^{n}\dfrac{1}{4k^2-1} = \dfrac{n}{2n+1}$。
+
+验证右端：$\dfrac{n}{2n+1} < \dfrac{n}{2n-1}$，即 $2n-1 < 2n+1$，显然成立。
+
+验证左端：$S_n = \dfrac{n}{2n+1}$，左端即为 $\dfrac{n}{2n+1}$，取等号。
+
+故准确结论为：$\dfrac{n}{2n+1} \leq \displaystyle\sum_{k=1}^{n}\dfrac{1}{4k^2-1} < \dfrac{n}{2n-1}$，左端取等。
+
+% ------ 例题9 ------
+\begin{examplebox}[【例题9】构造辅助数列证明不等式]
+已知 $a_1 = 1$，$a_{n+1} = \dfrac{a_n^2 + 2}{2a_n}$，证明：$a_n \geq \sqrt{2}$（$n\geq 2$），并求 $\{a_n\}$ 的极限。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{（1）证明下界：}$a_{n+1} = \dfrac{a_n^2 + 2}{2a_n} = \dfrac{a_n}{2} + \dfrac{1}{a_n}$。
+
+由均值不等式（$a_n > 0$ 时）：
+\[
+a_{n+1} = \frac{a_n}{2} + \frac{1}{a_n} \geq 2\sqrt{\frac{a_n}{2}\cdot\frac{1}{a_n}} = 2\sqrt{\frac{1}{2}} = \sqrt{2}
+\]
+
+等号条件 $\dfrac{a_n}{2} = \dfrac{1}{a_n}$，即 $a_n = \sqrt{2}$。
+
+$a_1 = 1$，$a_2 = \dfrac{1+2}{2} = \dfrac{3}{2} > \sqrt{2}$。
+
+由归纳法，$n\geq 2$ 时 $a_n \geq \sqrt{2}$。\;\checkmark
+
+\textbf{（2）求极限：}设 $\lim a_n = L$，则 $L = \dfrac{L^2+2}{2L}$，得 $2L^2 = L^2 + 2$，$L^2 = 2$，$L = \sqrt{2}$。
+
+进一步验证单调性（$n\geq 2$）：
+\[
+a_{n+1} - a_n = \frac{a_n}{2} + \frac{1}{a_n} - a_n = \frac{1}{a_n} - \frac{a_n}{2} = \frac{2 - a_n^2}{2a_n}
+\]
+当 $a_n > \sqrt{2}$ 时 $a_{n+1} < a_n$（递减），当 $a_n = \sqrt{2}$ 时取等。故 $a_n$ 单调递减有下界 $\sqrt{2}$，极限为 $\sqrt{2}$。
+
+% ------ 例题10 ------
+\begin{examplebox}[【例题10】递推与不等式综合]
+已知 $a_1 = \dfrac{1}{2}$，$a_{n+1} = a_n^2 + a_n$，证明：$\dfrac{1}{a_1 + 1} + \dfrac{1}{a_2 + 1} + \cdots + \dfrac{1}{a_n + 1} < 2$。
+\end{examplebox}
+
+\textbf{证明：}由 $a_{n+1} = a_n(a_n + 1)$，得 $\dfrac{1}{a_{n+1}} = \dfrac{1}{a_n(a_n+1)} = \dfrac{1}{a_n} - \dfrac{1}{a_n+1}$。
+
+故 $\dfrac{1}{a_n + 1} = \dfrac{1}{a_n} - \dfrac{1}{a_{n+1}}$。
+
+\[
+\sum_{k=1}^{n}\frac{1}{a_k+1} = \sum_{k=1}^{n}\left(\frac{1}{a_k} - \frac{1}{a_{k+1}}\right) = \frac{1}{a_1} - \frac{1}{a_{n+1}} = 2 - \frac{1}{a_{n+1}}
+\]
+
+由 $a_1 = \dfrac{1}{2}$，$a_2 = \dfrac{1}{4} + \dfrac{1}{2} = \dfrac{3}{4}$，$a_n > 0$（由归纳法易证），故 $\dfrac{1}{a_{n+1}} > 0$。
+
+\[
+\sum_{k=1}^{n}\frac{1}{a_k+1} = 2 - \frac{1}{a_{n+1}} < 2
+\]
+
+\textbf{证毕。}
+
+\begin{tipbox}[方法总结]
+本题的关键是发现 $\dfrac{1}{a_n+1} = \dfrac{1}{a_n} - \dfrac{1}{a_{n+1}}$，即数列 $\left\{\dfrac{1}{a_n}\right\}$ 的差恰好等于目标求和项。这类"望远镜求和"在递推数列中非常常见。
+\end{tipbox}
+
+% ------ 例题11 ------
+\begin{examplebox}[【例题11】特征方程法解决实际递推问题]
+某实验室培养皿中的细菌数量 $a_n$（万个）满足 $a_1 = 1,\;a_2 = 5$，且 $a_{n+2} = 4a_{n+1} - 3a_n$。求 $a_n$ 并判断 $a_{10}$ 是否超过1000万个。
+\end{examplebox}
+
+\textbf{解：}特征方程 $r^2 - 4r + 3 = 0$，$(r-1)(r-3) = 0$，$r_1 = 1,\;r_2 = 3$。
+
+设 $a_n = A + B \cdot 3^n$。
+
+\[
+\begin{cases}
+A + 3B = 1 \\
+A + 9B = 5
+\end{cases}
+\implies B = \frac{2}{3},\;A = -1
+\]
+
+$a_n = \dfrac{2}{3}\cdot 3^n - 1 = 2\cdot 3^{n-1} - 1$。
+
+$a_{10} = 2\cdot 3^9 - 1 = 2\times 19683 - 1 = 39365$（万个）$= 3936.5$ 万个 $> 1000$ 万个。\;\checkmark
+
+% ------ 例题12 ------
+\begin{examplebox}[【例题12】数列不等式的归纳证明]
+已知 $a_1 = 1$，$a_{n+1} = 1 + \dfrac{n}{a_n}$，证明：$\sqrt{n} \leq a_n \leq \sqrt{n} + 1$。
+\end{examplebox}
+
+\textbf{证明：}
+
+\textbf{（下界 $a_n \geq \sqrt{n}$，用数学归纳法）}
+
+$n=1$：$a_1 = 1 = \sqrt{1}$。\;\checkmark
+
+设 $a_k \geq \sqrt{k}$，则
+\[
+a_{k+1} = 1 + \frac{k}{a_k} \leq 1 + \frac{k}{\sqrt{k}} = 1 + \sqrt{k}
+\]
+（注意这里得到的是上界估计，下界需要另一方向。）
+
+$a_{k+1}^2 = \left(1+\dfrac{k}{a_k}\right)^2 = 1 + \dfrac{2k}{a_k} + \dfrac{k^2}{a_k^2}$。
+
+由 $a_k \leq \sqrt{k}+1$（归纳假设上界）：
+\[
+a_{k+1}^2 \geq 1 + \frac{2k}{\sqrt{k}+1} + \frac{k^2}{(\sqrt{k}+1)^2} = \frac{(\sqrt{k}+1)^2 + 2k(\sqrt{k}+1) + k^2}{(\sqrt{k}+1)^2}
+\]
+分子 $= (\sqrt{k}+1+k)^2$，故 $a_{k+1} \geq \dfrac{\sqrt{k}+1+k}{\sqrt{k}+1} = 1 + \dfrac{k}{\sqrt{k}+1}$。
+
+需证 $1 + \dfrac{k}{\sqrt{k}+1} \geq \sqrt{k+1}$。
+
+$1 + \dfrac{k}{\sqrt{k}+1} = \dfrac{\sqrt{k}+1+k}{\sqrt{k}+1} = \dfrac{(\sqrt{k}+1)^2 - 1}{\sqrt{k}+1} = \sqrt{k}+1 - \dfrac{1}{\sqrt{k}+1}$。
+
+需证 $\sqrt{k}+1 - \dfrac{1}{\sqrt{k}+1} \geq \sqrt{k+1}$，即 $1 - \dfrac{1}{\sqrt{k}+1} \geq \sqrt{k+1} - \sqrt{k} = \dfrac{1}{\sqrt{k+1}+\sqrt{k}}$。
+
+即 $\dfrac{\sqrt{k}}{\sqrt{k}+1} \geq \dfrac{1}{\sqrt{k+1}+\sqrt{k}}$，即 $\sqrt{k}(\sqrt{k+1}+\sqrt{k}) \geq \sqrt{k}+1$。
+
+左边 $= \sqrt{k}\sqrt{k+1} + k \geq k \geq \sqrt{k}+1$（$k\geq 2$ 时成立）。
+
+$k=1$：$a_2 = 1+\frac{1}{1} = 2 \geq \sqrt{2}$。\;\checkmark
+
+\textbf{（上界 $a_n \leq \sqrt{n}+1$，数学归纳法）}
+
+$n=1$：$a_1 = 1 \leq 1+1 = 2$。\;\checkmark
+
+设 $a_k \leq \sqrt{k}+1$，则
+\[
+a_{k+1} = 1 + \frac{k}{a_k} \leq 1 + \frac{k}{\sqrt{k}} = 1 + \sqrt{k} < 1 + \sqrt{k+1}
+\]
+
+\textbf{证毕。}
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】贷款还款问题]
+小张向银行贷款 $100$ 万元，年利率 $5\%$（复利），每年末还款 $x$ 万元。设第 $n$ 年初欠款为 $a_n$。
+
+(1) 写出 $a_n$ 的递推关系；
+
+(2) 若要求 $10$ 年还清，每年至少还款多少万元？
+
+（参考：$1.05^{10} \approx 1.6289$）
+\end{appbox}
+
+\textbf{解：}
+
+(1) 第 $n$ 年初欠款 $a_n$，年末变为 $1.05a_n$，还款 $x$ 后：
+\[
+a_{n+1} = 1.05a_n - x,\quad a_1 = 100
+\]
+
+(2) 这是一阶线性递推，不动点 $r = \dfrac{x}{1.05-1} = \dfrac{x}{0.05} = 20x$。
+
+令 $b_n = a_n - 20x$，则 $b_{n+1} = 1.05b_n$，$b_n = (a_1 - 20x)\cdot 1.05^{n-1}$。
+
+$a_n = 20x + (100 - 20x)\cdot 1.05^{n-1}$。
+
+$10$ 年还清要求 $a_{11} \leq 0$：
+\[
+20x + (100 - 20x)\cdot 1.05^{10} \leq 0
+\]
+\[
+20x \geq (20x - 100)\cdot 1.05^{10}
+\]
+\[
+20x(1.05^{10} - 1) \leq 100 \cdot 1.05^{10}
+\]
+\[
+x \leq \frac{100 \times 1.05^{10}}{20(1.05^{10}-1)} = \frac{100\times 1.6289}{20\times 0.6289} \approx \frac{162.89}{12.578} \approx 12.95
+\]
+
+注意这是最大还款额约束。由 $a_{11}\leq 0$ 得 $x \geq 12.95$（万元），即每年至少还款约 $12.95$ 万元。
+
+\begin{appbox}[【应用2】传染病传播模型]
+某传染病传播初期，每日新增感染者 $a_n$ 满足 $a_1 = 10$，$a_{n+1} = 1.2a_n - 5$。问：该模型下感染者最终会趋于稳定还是爆发？若稳定，每日新增多少人？
+\end{appbox}
+
+\textbf{解：}不动点方程 $r = 1.2r - 5$，解得 $r = 25$。
+
+令 $b_n = a_n - 25$，则 $b_{n+1} = 1.2b_n$，$b_n = (a_1-25)\cdot 1.2^{n-1} = -15\cdot 1.2^{n-1}$。
+
+$a_n = 25 - 15\cdot 1.2^{n-1}$。
+
+由于 $1.2 > 1$，$15\cdot 1.2^{n-1}$ 递增，$a_n$ 会递减变为负数。
+
+这意味着该模型下感染者会在某天后变为负数（不合理），说明模型只在初期有效。实际上当 $a_n$ 降至 $0$ 附近时，线性模型已不适用。
+
+$a_n = 0$ 时 $25 = 15\cdot 1.2^{n-1}$，$1.2^{n-1} = \dfrac{5}{3}$，$(n-1)\ln 1.2 = \ln\dfrac{5}{3}$，$n \approx 1 + \dfrac{0.5108}{0.1823} \approx 3.8$，约第 $4$ 天感染者降至 $0$。
+
+\begin{appbox}[【应用3】投资回报与数列不等式]
+某基金投资方案：初始投入 $a_0 = 10$ 万元，第 $n$ 年末资产 $a_n = 1.08a_{n-1} + 2$（每年追加投入 $2$ 万元）。证明 $15$ 年后资产超过 $80$ 万元。
+\end{appbox}
+
+\textbf{解：}$a_n = 1.08a_{n-1} + 2$，不动点 $r = \dfrac{2}{1.08-1} = \dfrac{2}{0.08} = 25$。
+
+令 $b_n = a_n - 25$，则 $b_n = 1.08b_{n-1}$，$b_n = (a_0 - 25)\cdot 1.08^n = -15\cdot 1.08^n$。
+
+$a_n = 25 - 15\cdot 1.08^n$。
+
+$a_{15} = 25 - 15\times 1.08^{15}$。
+
+$1.08^{15} = e^{15\ln 1.08} \approx e^{15\times 0.07696} = e^{1.1544} \approx 3.1722$。
+
+$a_{15} \approx 25 - 15\times 3.1722 = 25 - 47.58 = -22.58$？
+
+这是负值，说明不动点 $r=25$ 是不稳定的（$1.08>1$ 使得 $b_n$ 发散）。实际上我们需要直接展开：
+
+$a_n = 1.08^n \cdot a_0 + 2\cdot\dfrac{1.08^n - 1}{1.08 - 1} = 10\cdot 1.08^n + 25(1.08^n - 1) = 35\cdot 1.08^n - 25$。
+
+$a_{15} = 35\times 1.08^{15} - 25 \approx 35\times 3.1722 - 25 = 111.03 - 25 = 86.03$（万元）$> 80$ 万元。\;\checkmark
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+\item 已知 $a_1 = 1,\;a_2 = 2$，$a_{n+2} = 5a_{n+1} - 6a_n$，求 $a_n$。
+
+\item 已知 $a_1 = 2$，$a_{n+1} = \dfrac{3a_n + 2}{a_n + 2}$，用不动点法求 $a_n$。
+
+\item 已知 $a_1 = 1$，$a_{n+1} = 2 - \dfrac{1}{a_n}$，证明 $\{a_n\}$ 为周期数列并求 $a_{100}$。
+
+\item 已知 $a_n = \dfrac{1}{\sqrt{n} + \sqrt{n+1}}$，求 $S_n = \displaystyle\sum_{k=1}^{n}a_k$。
+
+\item 证明：$\displaystyle\sum_{k=2}^{n}\frac{1}{k^2} < 1$（$n\geq 2$）。
+
+\item 已知 $a_1 = 1$，$a_{n+1} = a_n + \dfrac{1}{a_n^2}$，证明 $a_n^3 \geq 3n - 2$。
+
+\item 已知 $a_1 = \sqrt{2}$，$a_{n+1} = \dfrac{a_n^2 + 2}{2a_n}$，求 $\displaystyle\lim_{n\to\infty}a_n$ 并证明 $a_n \geq \sqrt{2}$。
+
+\item 已知 $a_1 = 1$，$a_{n+1} = \dfrac{a_n}{1+a_n}$，求 $a_n$，并证明 $\displaystyle\sum_{k=1}^{n}a_k < 1$。
+\end{enumerate}
+
+\vspace{12pt}
+
+\begin{knowledgebox}[参考答案]
+\textbf{1.} 特征方程 $r^2 - 5r + 6 = 0$，$r_1 = 2,\;r_2 = 3$。
+
+$a_n = A\cdot 2^n + B\cdot 3^n$，由 $a_1=1,\;a_2=2$：$2A+3B=1,\;4A+9B=2$，解得 $A = \dfrac{1}{2},\;B = 0$。
+
+$a_n = 2^{n-1}$。
+
+\vspace{6pt}
+\textbf{2.} 不动点 $x = \dfrac{3x+2}{x+2}$，$x^2+2x=3x+2$，$x^2-x-2=0$，$x_1=2,\;x_2=-1$。
+
+$\dfrac{a_n-2}{a_n+1}$：$\dfrac{a_{n+1}-2}{a_{n+1}+1} = \dfrac{\frac{3a_n+2}{a_n+2}-2}{\frac{3a_n+2}{a_n+2}+1} = \dfrac{a_n-2}{4a_n+4}$。
+
+令 $t_n = \dfrac{a_n-2}{a_n+1}$，经计算 $t_{n+1} = \dfrac{1}{4}t_n$，$t_1 = 0$，故 $a_n = 2$（常数列）。
+
+（验证：$a_2 = \dfrac{6+2}{2+2} = 2$。\;\checkmark）
+
+\vspace{6pt}
+\textbf{3.} 计算：$a_1=1,\;a_2=1,\;a_3=1,\ldots$ 所有项均为 $1$，$a_{100}=1$。
+
+（验证：$a_2 = 2-1 = 1$，$a_3 = 2-1 = 1$。常数列，周期 $T=1$。）
+
+\vspace{6pt}
+\textbf{4.} $a_k = \dfrac{1}{\sqrt{k}+\sqrt{k+1}} = \sqrt{k+1}-\sqrt{k}$。
+
+$S_n = \displaystyle\sum_{k=1}^{n}(\sqrt{k+1}-\sqrt{k}) = \sqrt{n+1}-1$。
+
+\vspace{6pt}
+\textbf{5.} $\dfrac{1}{k^2} < \dfrac{1}{k(k-1)} = \dfrac{1}{k-1}-\dfrac{1}{k}$。
+
+$\displaystyle\sum_{k=2}^{n}\dfrac{1}{k^2} < \sum_{k=2}^{n}\left(\dfrac{1}{k-1}-\dfrac{1}{k}\right) = 1-\dfrac{1}{n} < 1$。\;\checkmark
+
+\vspace{6pt}
+\textbf{6.} $a_{n+1}^3 = \left(a_n+\dfrac{1}{a_n^2}\right)^3 = a_n^3 + 3 + \dfrac{3}{a_n^3} + \dfrac{1}{a_n^6} > a_n^3 + 3$。
+
+累加：$a_n^3 > 1 + 3(n-1) = 3n-2$。\;\checkmark
+
+\vspace{6pt}
+\textbf{7.} 不动点 $x = \dfrac{x^2+2}{2x}$，$x^2=2$，$x=\sqrt{2}$（取正）。
+
+$a_n - \sqrt{2} = \dfrac{(a_{n-1}-\sqrt{2})^2}{2a_{n-1}} \geq 0$（$a_{n-1}>0$ 时），故 $a_n \geq \sqrt{2}$。
+
+$a_n$ 单调递减且有下界 $\sqrt{2}$，$\lim a_n = \sqrt{2}$。
+
+\vspace{6pt}
+\textbf{8.} $\dfrac{1}{a_{n+1}} = \dfrac{1+a_n}{a_n} = \dfrac{1}{a_n}+1$，故 $\dfrac{1}{a_n} = n$，$a_n = \dfrac{1}{n}$。
+
+$S_n = \displaystyle\sum_{k=1}^{n}\dfrac{1}{k} < 1 + \displaystyle\sum_{k=2}^{n}\dfrac{1}{k(k-1)} = 1+1-\dfrac{1}{n} = 2-\dfrac{1}{n} < 2$。
+
+但题目要求 $< 1$。实际上 $a_1 = 1$，$S_1 = 1$，$S_n = 1 + \displaystyle\sum_{k=2}^{n}\dfrac{1}{k}$，对 $n\geq 2$ 有 $S_n > 1$。
+
+故 $\displaystyle\sum_{k=1}^{n}a_k < 1$ 不成立。正确结论应为 $\displaystyle\sum_{k=1}^{n}a_k < 2$，或 $\displaystyle\sum_{k=2}^{n}a_k < 1$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

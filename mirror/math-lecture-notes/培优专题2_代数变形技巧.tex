@@ -1,0 +1,767 @@
+% ============================================================
+% 培优专题讲义 — 代数变形技巧
+% 编译命令：xelatex -interaction=nonstopmode 培优专题2_代数变形技巧.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{初中数学培优 \(\cdot\) 代数变形}}}
+\fancyhead[R]{\small\textcolor{mainblue}{培优专题讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{代数变形技巧}}\\[12pt]
+{\Large\textcolor{gray}{培\quad 优\quad 专\quad 题}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：初中数学培优\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+%  技巧一：配方法
+% ============================================================
+\section*{\textcolor{mainblue}{技巧一：配方法}}
+
+\begin{knowledgebox}[配方法的核心思想]
+配方法是将一个二次多项式化为完全平方式与常数之和的方法。其基本公式为：
+\[
+a^2 + 2ab + b^2 = (a+b)^2
+\]
+配方法的关键步骤：
+\begin{enumerate}[leftmargin=2em]
+  \item 提取二次项系数（若系数不为1）；
+  \item 取一次项系数一半的平方，加上再减去；
+  \item 将前三项写成完全平方式，合并常数。
+\end{enumerate}
+对于一般二次式 $ax^2+bx+c$，配方过程为：
+\[
+ax^2+bx+c = a\left(x+\frac{b}{2a}\right)^2 + c - \frac{b^2}{4a}
+\]
+\end{knowledgebox}
+
+\begin{examplebox}[【例1】配方求最值]
+求函数 $y = 2x^2 - 8x + 5$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}
+\begin{align*}
+y &= 2x^2 - 8x + 5 \\
+  &= 2(x^2 - 4x) + 5 \\
+  &= 2(x^2 - 4x + 4 - 4) + 5 \\
+  &= 2(x-2)^2 - 8 + 5 \\
+  &= 2(x-2)^2 - 3
+\end{align*}
+因为 $(x-2)^2 \geqslant 0$，所以 $2(x-2)^2 \geqslant 0$，故 $y \geqslant -3$。
+
+当 $x=2$ 时，$y$ 取最小值 $\boxed{-3}$。
+
+\begin{examplebox}[【例2】配方化简求值]
+已知 $x^2 + y^2 + 4x - 6y + 13 = 0$，求 $x+y$ 的值。
+\end{examplebox}
+
+\textbf{解：} 对方程左边分别对 $x$ 和 $y$ 配方：
+\begin{align*}
+x^2 + y^2 + 4x - 6y + 13 &= 0 \\
+(x^2 + 4x + 4) + (y^2 - 6y + 9) &= 0 \\
+(x+2)^2 + (y-3)^2 &= 0
+\end{align*}
+由于 $(x+2)^2 \geqslant 0$ 且 $(y-3)^2 \geqslant 0$，两个非负数之和为零，则必须同时为零：
+\[
+x+2 = 0,\quad y-3 = 0 \implies x = -2,\; y = 3
+\]
+故 $x+y = -2+3 = \boxed{1}$。
+
+\begin{examplebox}[【例3】配方解一元二次方程]
+用配方法解方程 $x^2 - 6x + 5 = 0$。
+\end{examplebox}
+
+\textbf{解：}
+\begin{align*}
+x^2 - 6x + 5 &= 0 \\
+x^2 - 6x + 9 &= 4 \\
+(x-3)^2 &= 4 \\
+x - 3 &= \pm 2
+\end{align*}
+故 $x_1 = 5$，$x_2 = 1$。
+
+\begin{tipbox}[配方法要点总结]
+\begin{itemize}[leftmargin=1.5em]
+  \item 配方的核心是"凑平方"，关键数是 $\left(\dfrac{\text{一次项系数}}{2}\right)^2$。
+  \item 求最值时：若 $a>0$，配方后开口向上，有最小值；若 $a<0$，开口向下，有最大值。
+  \item 遇到 $\text{平方}+\text{平方}=0$ 的形式，立即得到各方为零。
+  \item 配方法是后续学习二次函数、二次不等式的重要基础。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  技巧二：换元法
+% ============================================================
+\section*{\textcolor{mainblue}{技巧二：换元法}}
+
+\begin{knowledgebox}[换元法的核心思想]
+换元法是通过引入新变量代替原式中的某个整体，将复杂表达式转化为简单形式的方法。
+
+换元法的一般步骤：
+\begin{enumerate}[leftmargin=2em]
+  \item 观察表达式中反复出现的"整体结构"；
+  \item 设新变量 $t$ 代替该整体；
+  \item 用 $t$ 重写方程并求解；
+  \item 回代求出原变量的值（注意检验）。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{examplebox}[【例4】换元法解高次方程]
+解方程：$(x^2+3x)^2 - 2(x^2+3x) - 8 = 0$。
+\end{examplebox}
+
+\textbf{解：} 设 $t = x^2 + 3x$，则原方程变为：
+\[
+t^2 - 2t - 8 = 0
+\]
+因式分解：$(t-4)(t+2) = 0$，故 $t = 4$ 或 $t = -2$。
+
+\textbf{当 $t=4$ 时：} $x^2 + 3x = 4$，即 $x^2 + 3x - 4 = 0$，
+\[
+(x+4)(x-1) = 0 \implies x = -4 \text{ 或 } x = 1
+\]
+
+\textbf{当 $t=-2$ 时：} $x^2 + 3x = -2$，即 $x^2 + 3x + 2 = 0$，
+\[
+(x+1)(x+2) = 0 \implies x = -1 \text{ 或 } x = -2
+\]
+
+经检验，原方程的解为 $\boxed{x = -4,\; -2,\; -1,\; 1}$。
+
+\begin{examplebox}[【例5】换元法化简分式]
+化简：$\dfrac{x^2+3x+2}{x^2+5x+6} + \dfrac{x^2+5x+4}{x^2+7x+12}$。
+\end{examplebox}
+
+\textbf{解：} 分别因式分解各分式：
+\[
+\frac{(x+1)(x+2)}{(x+2)(x+3)} + \frac{(x+1)(x+4)}{(x+3)(x+4)}
+= \frac{x+1}{x+3} + \frac{x+1}{x+3} = \frac{2(x+1)}{x+3}
+\]
+这里虽然形式上没有明显"换元"，但本质上是将 $(x+2)$、$(x+4)$ 等反复出现的整体约分，体现了"整体替换"的思想。
+
+\textbf{换元法更典型的应用：} 化简 $\dfrac{x}{x+1} + \dfrac{x+1}{x+2} + \dfrac{x+2}{x+3}$。
+
+设 $t = x+1$，则 $x = t-1$，$x+2 = t+1$，$x+3 = t+2$，原式变为：
+\[
+\frac{t-1}{t} + \frac{t}{t+1} + \frac{t+1}{t+2} = 1 - \frac{1}{t} + 1 - \frac{1}{t+1} + 1 - \frac{1}{t+2} = 3 - \left(\frac{1}{t} + \frac{1}{t+1} + \frac{1}{t+2}\right)
+\]
+再回代 $t = x+1$ 即可。
+
+\begin{tipbox}[换元法要点总结]
+\begin{itemize}[leftmargin=1.5em]
+  \item 换元的关键是找到反复出现的"整体"。
+  \item 设元后要明确新变量的取值范围。
+  \item 求出新变量后必须回代，并对原方程检验。
+  \item 换元法的本质是"降次"或"简化结构"，是处理高次方程、复杂分式的重要手段。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  技巧三：裂项法
+% ============================================================
+\section*{\textcolor{mainblue}{技巧三：裂项法}}
+
+\begin{knowledgebox}[裂项法的核心思想]
+裂项法（也称裂项相消法）是将一个分式拆成两个（或多个）分式之差，使求和时中间项相互抵消的方法。
+
+基本裂项公式：
+\[
+\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}
+\]
+推广公式（公差为 $k$）：
+\[
+\frac{1}{n(n+k)} = \frac{1}{k}\left(\frac{1}{n} - \frac{1}{n+k}\right)
+\]
+更一般的形式：
+\[
+\frac{1}{n(n+1)(n+2)} = \frac{1}{2}\left(\frac{1}{n(n+1)} - \frac{1}{(n+1)(n+2)}\right)
+\]
+\end{knowledgebox}
+
+\begin{examplebox}[【例6】裂项法求和]
+计算：$\dfrac{1}{1\times2} + \dfrac{1}{2\times3} + \dfrac{1}{3\times4} + \cdots + \dfrac{1}{n(n+1)}$。
+\end{examplebox}
+
+\textbf{解：} 利用裂项公式 $\dfrac{1}{n(n+1)} = \dfrac{1}{n} - \dfrac{1}{n+1}$，原式变为：
+\begin{align*}
+&\left(\frac{1}{1} - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \left(\frac{1}{3} - \frac{1}{4}\right) + \cdots + \left(\frac{1}{n} - \frac{1}{n+1}\right) \\
+&= 1 - \frac{1}{n+1} \\
+&= \boxed{\dfrac{n}{n+1}}
+\end{align*}
+
+\begin{examplebox}[【例7】裂项法求和（推广形式）]
+计算：$\dfrac{1}{1\times3} + \dfrac{1}{3\times5} + \dfrac{1}{5\times7} + \cdots + \dfrac{1}{(2n-1)(2n+1)}$。
+\end{examplebox}
+
+\textbf{解：} 注意到分母中相邻因式的差为 $2$，利用推广公式：
+\[
+\frac{1}{(2n-1)(2n+1)} = \frac{1}{2}\left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)
+\]
+原式变为：
+\begin{align*}
+&\frac{1}{2}\left[\left(\frac{1}{1} - \frac{1}{3}\right) + \left(\frac{1}{3} - \frac{1}{5}\right) + \cdots + \left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)\right] \\
+&= \frac{1}{2}\left(1 - \frac{1}{2n+1}\right) \\
+&= \frac{1}{2} \cdot \frac{2n}{2n+1} \\
+&= \boxed{\dfrac{n}{2n+1}}
+\end{align*}
+
+\begin{tipbox}[裂项法要点总结]
+\begin{itemize}[leftmargin=1.5em]
+  \item 裂项的核心是将 $\dfrac{1}{A \cdot B}$ 写成 $k\!\left(\dfrac{1}{A} - \dfrac{1}{B}\right)$，其中 $k = \dfrac{1}{B-A}$。
+  \item 写出前几项，观察哪些项能"首尾相消"。
+  \item 注意保留"头"和"尾"，不要误消。
+  \item 裂项法常用于数列求和、竞赛中的分式化简。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  技巧四：整体代换
+% ============================================================
+\section*{\textcolor{mainblue}{技巧四：整体代换}}
+
+\begin{knowledgebox}[整体代换的核心思想]
+整体代换是将表达式中的某一部分视为一个整体来处理，避免展开后出现繁琐的计算。常见的整体代换形式有：
+\begin{itemize}[leftmargin=1.5em]
+  \item 已知 $a+b$ 和 $ab$ 的值，利用 $a^2+b^2 = (a+b)^2 - 2ab$ 等恒等式求值。
+  \item 将复杂的条件式代入目标式，整体消元。
+  \item 利用对称式的基本关系，将高次对称式化为低次对称式的表达式。
+\end{itemize}
+常用恒等式：
+\[
+a^2+b^2 = (a+b)^2 - 2ab, \quad a^3+b^3 = (a+b)^3 - 3ab(a+b)
+\]
+\[
+(a-b)^2 = (a+b)^2 - 4ab
+\]
+\end{knowledgebox}
+
+\begin{examplebox}[【例8】条件求值——对称式]
+已知 $a+b=5$，$ab=3$，求 $a^2+b^2$ 和 $a^3+b^3$ 的值。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{（1）求 $a^2+b^2$：}
+\[
+a^2+b^2 = (a+b)^2 - 2ab = 5^2 - 2\times 3 = 25 - 6 = \boxed{19}
+\]
+
+\textbf{（2）求 $a^3+b^3$：}
+\[
+a^3+b^3 = (a+b)(a^2-ab+b^2) = (a+b)\left[(a+b)^2 - 3ab\right] = 5 \times (25-9) = 5\times 16 = \boxed{80}
+\]
+
+\begin{examplebox}[【例9】整体代换求分式值]
+已知 $\dfrac{1}{a} + \dfrac{1}{b} = 3$，求 $\dfrac{2a+3ab+2b}{a-2ab+b}$ 的值。
+\end{examplebox}
+
+\textbf{解：} 由 $\dfrac{1}{a}+\dfrac{1}{b}=3$，得 $\dfrac{a+b}{ab}=3$，即 $a+b=3ab$。
+
+将 $a+b=3ab$ 代入目标分式：
+\[
+\frac{2(a+b)+3ab}{(a+b)-2ab} = \frac{2\cdot 3ab + 3ab}{3ab - 2ab} = \frac{6ab+3ab}{ab} = \frac{9ab}{ab} = \boxed{9}
+\]
+
+\begin{tipbox}[整体代换要点总结]
+\begin{itemize}[leftmargin=1.5em]
+  \item 遇到 $a+b$、$ab$ 同时出现的条件，优先用基本恒等式转换。
+  \item 分式求值时，分子分母同除以 $ab$ 是常用技巧。
+  \item "不求 $a$、$b$ 的具体值，直接用整体关系代入"是整体代换的精髓。
+  \item 对称式（交换 $a$、$b$ 不变的式子）一定可以用 $a+b$ 和 $ab$ 表示。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  技巧五：韦达定理应用
+% ============================================================
+\section*{\textcolor{mainblue}{技巧五：韦达定理应用}}
+
+\begin{knowledgebox}[韦达定理]
+若 $x_1, x_2$ 是一元二次方程 $ax^2+bx+c=0$（$a\neq 0$）的两个根，则：
+\[
+x_1 + x_2 = -\frac{b}{a}, \qquad x_1 x_2 = \frac{c}{a}
+\]
+韦达定理的应用方向：
+\begin{enumerate}[leftmargin=2em]
+  \item 不解方程，求关于根的对称式的值。
+  \item 构造以给定两数为根的新方程。
+  \item 结合判别式讨论方程根的情况。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{examplebox}[【例10】不解方程求对称式]
+已知 $x_1, x_2$ 是方程 $x^2 - 5x + 3 = 0$ 的两个根，不解方程，求：
+（1）$x_1^2 + x_2^2$；\quad （2）$(x_1 - x_2)^2$；\quad （3）$\dfrac{1}{x_1} + \dfrac{1}{x_2}$。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理，$x_1+x_2=5$，$x_1 x_2=3$。
+
+\textbf{（1）} $x_1^2+x_2^2 = (x_1+x_2)^2 - 2x_1 x_2 = 25 - 6 = \boxed{19}$
+
+\textbf{（2）} $(x_1-x_2)^2 = (x_1+x_2)^2 - 4x_1 x_2 = 25 - 12 = \boxed{13}$
+
+\textbf{（3）} $\dfrac{1}{x_1}+\dfrac{1}{x_2} = \dfrac{x_1+x_2}{x_1 x_2} = \dfrac{5}{3}$
+
+\begin{examplebox}[【例11】构造新方程]
+已知方程 $2x^2 - 3x - 1 = 0$ 的两个根为 $x_1, x_2$，求一个以 $\dfrac{1}{x_1}$ 和 $\dfrac{1}{x_2}$ 为根的新方程。
+\end{examplebox}
+
+\textbf{解：} 由韦达定理，$x_1+x_2 = \dfrac{3}{2}$，$x_1 x_2 = -\dfrac{1}{2}$。
+
+设新方程的两根为 $y_1 = \dfrac{1}{x_1}$，$y_2 = \dfrac{1}{x_2}$，则：
+\[
+y_1 + y_2 = \frac{1}{x_1}+\frac{1}{x_2} = \frac{x_1+x_2}{x_1 x_2} = \frac{3/2}{-1/2} = -3
+\]
+\[
+y_1 y_2 = \frac{1}{x_1}\cdot\frac{1}{x_2} = \frac{1}{x_1 x_2} = \frac{1}{-1/2} = -2
+\]
+新方程为 $y^2 - (y_1+y_2)y + y_1 y_2 = 0$，即 $\boxed{y^2 + 3y - 2 = 0}$。
+
+\begin{tipbox}[韦达定理应用要点]
+\begin{itemize}[leftmargin=1.5em]
+  \item 常用变换公式：$x_1^2+x_2^2 = S^2-2P$，$(x_1-x_2)^2 = S^2-4P$，其中 $S=x_1+x_2$，$P=x_1 x_2$。
+  \item 以 $x_1, x_2$ 为根的方程为 $x^2 - Sx + P = 0$（不一定是原方程）。
+  \item 若求 $\dfrac{1}{x_1}+\dfrac{1}{x_2}$ 或 $x_1^3+x_2^3$ 等，先用韦达定理化为 $S$ 和 $P$ 的表达式。
+  \item 使用韦达定理前，务必确认方程有两根（$\Delta \geqslant 0$）。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  技巧六：判别式法
+% ============================================================
+\section*{\textcolor{mainblue}{技巧六：判别式法}}
+
+\begin{knowledgebox}[判别式法的核心思想]
+对于一元二次方程 $ax^2+bx+c=0$（$a\neq 0$），判别式 $\Delta = b^2 - 4ac$ 决定根的情况：
+\begin{itemize}[leftmargin=1.5em]
+  \item $\Delta > 0$：方程有两个不等实根；
+  \item $\Delta = 0$：方程有两个相等实根；
+  \item $\Delta < 0$：方程无实根。
+\end{itemize}
+判别式法的核心应用：
+\begin{enumerate}[leftmargin=2em]
+  \item 已知方程有实根，求参数的取值范围。
+  \item 将"存在性"问题转化为判别式的符号问题。
+  \item 利用 $\Delta \geqslant 0$ 求某些代数式的最值。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{examplebox}[【例12】判别式求参数范围]
+若关于 $x$ 的方程 $x^2 + 2mx + m + 2 = 0$ 有两个不相等的实数根，求 $m$ 的取值范围。
+\end{examplebox}
+
+\textbf{解：} 方程有两个不等实根，则 $\Delta > 0$：
+\[
+\Delta = (2m)^2 - 4(m+2) = 4m^2 - 4m - 8 > 0
+\]
+即 $m^2 - m - 2 > 0$，因式分解得 $(m-2)(m+1) > 0$。
+
+解得 $m > 2$ 或 $m < -1$。
+
+故 $m$ 的取值范围为 $\boxed{m < -1 \text{ 或 } m > 2}$。
+
+\begin{examplebox}[【例13】判别式法求最值]
+已知实数 $x$ 满足 $x^2 - 3x + 1 = 0$，求 $x^2 + \dfrac{1}{x^2}$ 的值。
+\end{examplebox}
+
+\textbf{解：} 由 $x^2 - 3x + 1 = 0$，因 $x \neq 0$，两边同除以 $x$：
+\[
+x - 3 + \frac{1}{x} = 0 \implies x + \frac{1}{x} = 3
+\]
+两边平方：
+\[
+\left(x+\frac{1}{x}\right)^2 = 9 \implies x^2 + 2 + \frac{1}{x^2} = 9
+\]
+故 $x^2 + \dfrac{1}{x^2} = 9 - 2 = \boxed{7}$。
+
+\textbf{拓展（判别式法求最值）：} 求 $y = \dfrac{x^2+1}{x^2-2x+2}$ 的最小值。
+
+去分母：$y(x^2-2x+2) = x^2+1$，整理得 $(y-1)x^2 - 2yx + (2y-1) = 0$。
+
+若 $y \neq 1$，因 $x$ 为实数，须 $\Delta \geqslant 0$：
+\[
+4y^2 - 4(y-1)(2y-1) \geqslant 0 \implies 4y^2 - 4(2y^2 - 3y + 1) \geqslant 0
+\]
+\[
+-4y^2 + 12y - 4 \geqslant 0 \implies y^2 - 3y + 1 \leqslant 0
+\]
+解得 $\dfrac{3-\sqrt{5}}{2} \leqslant y \leqslant \dfrac{3+\sqrt{5}}{2}$。
+
+当 $y = \dfrac{3-\sqrt{5}}{2}$ 时，$x = \dfrac{y}{y-1}$，代入可验证。故 $y$ 的最小值为 $\boxed{\dfrac{3-\sqrt{5}}{2}}$。
+
+\begin{tipbox}[判别式法要点总结]
+\begin{itemize}[leftmargin=1.5em]
+  \item "有实根"意味着 $\Delta \geqslant 0$，"无实根"意味着 $\Delta < 0$。
+  \item 含参方程求参数范围：先写出 $\Delta$ 的表达式，再列不等式。
+  \item 判别式法求最值：将问题转化为"关于 $x$ 的方程有实根"，利用 $\Delta \geqslant 0$ 得到关于目标式的不等式。
+  \item 注意：使用判别式法求最值时，要验证最值是否能取到（即对应方程是否有实数解）。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  技巧七：主元法
+% ============================================================
+\section*{\textcolor{mainblue}{技巧七：主元法}}
+
+\begin{knowledgebox}[主元法的核心思想]
+主元法是在含有多个变量的问题中，选定其中一个变量作为"主元"（主要变量），将其他变量视为常数，从而将多元问题转化为一元问题来处理。
+
+主元法的适用场景：
+\begin{enumerate}[leftmargin=2em]
+  \item 多元代数式的化简与求值。
+  \item 恒成立问题：将不等式/等式视为关于主元的函数，利用函数性质求解。
+  \item 因式分解：选定一个字母为主元，按降幂排列后分解。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{examplebox}[【例14】主元法因式分解]
+分解因式：$a^2 - b^2 - 2a + 1$。
+\end{examplebox}
+
+\textbf{解：} 以 $a$ 为主元，重新整理：
+\begin{align*}
+a^2 - b^2 - 2a + 1 &= a^2 - 2a + 1 - b^2 \\
+&= (a-1)^2 - b^2 \\
+&= (a-1+b)(a-1-b) \\
+&= \boxed{(a+b-1)(a-b-1)}
+\end{align*}
+
+\begin{examplebox}[【例15】主元法求恒成立条件]
+若不等式 $x^2 + ax + 1 \geqslant 0$ 对一切实数 $x$ 恒成立，求实数 $a$ 的取值范围。
+\end{examplebox}
+
+\textbf{解：} 以 $x$ 为主元，$f(x) = x^2 + ax + 1$ 是关于 $x$ 的二次函数（开口向上）。
+
+$f(x) \geqslant 0$ 恒成立，等价于 $\Delta \leqslant 0$：
+\[
+a^2 - 4 \leqslant 0 \implies -2 \leqslant a \leqslant 2
+\]
+故 $a$ 的取值范围为 $\boxed{-2 \leqslant a \leqslant 2}$。
+
+\textbf{拓展（变换主元）：} 若不等式 $(a-1)x^2 + (a-1)x + 2 > 0$ 对一切 $a \in [-1, 1]$ 恒成立，求 $x$ 的取值范围。
+
+此时以 $a$ 为主元，将不等式整理为关于 $a$ 的一次函数：
+\[
+(x^2+x)a - (x^2+x-2) > 0
+\]
+设 $g(a) = (x^2+x)a - (x^2+x-2)$，它是关于 $a$ 的一次函数。
+
+$g(a) > 0$ 对 $a \in [-1,1]$ 恒成立，只需：
+\[
+g(-1) > 0 \quad \text{且} \quad g(1) > 0
+\]
+\[
+-(x^2+x) - (x^2+x-2) > 0 \implies -2x^2 - 2x + 2 > 0 \implies x^2+x-1 < 0
+\]
+\[
+(x^2+x) - (x^2+x-2) > 0 \implies 2 > 0 \quad (\text{恒成立})
+\]
+由 $x^2+x-1 < 0$，解得 $\dfrac{-1-\sqrt{5}}{2} < x < \dfrac{-1+\sqrt{5}}{2}$。
+
+\begin{tipbox}[主元法要点总结]
+\begin{itemize}[leftmargin=1.5em]
+  \item 选择哪个变量为主元，取决于哪个变量能使问题最简化。
+  \item "变换主元"是高级技巧：当原主元处理困难时，换一个变量为主元可能柳暗花明。
+  \item 恒成立问题的关键：一次函数在闭区间上恒正（负），只需端点值满足条件。
+  \item 因式分解中，按某一字母降幂排列，再尝试分组或公式分解。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  技巧八：因式分解高级技巧
+% ============================================================
+\section*{\textcolor{mainblue}{技巧八：因式分解高级技巧}}
+
+\begin{knowledgebox}[因式分解高级技巧概述]
+在掌握提公因式法、公式法的基础上，还需掌握以下高级方法：
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{分组分解法}：将多项式适当分组，每组分别提取公因式或用公式，再整体提取公因式。
+  \item \textbf{十字相乘法}：适用于二次三项式 $ax^2+bx+c$ 的分解。
+  \item \textbf{拆项添项法}：通过拆开或添加某项，创造可分解的条件。
+  \item \textbf{双十字相乘法}：适用于含两个字母的二次齐次式的分解。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{examplebox}[【例16】分组分解法]
+分解因式：$ax + ay + bx + by$。
+\end{examplebox}
+
+\textbf{解：} 将四项分为两组：
+\begin{align*}
+ax + ay + bx + by &= a(x+y) + b(x+y) \\
+&= (x+y)(a+b) \\
+&= \boxed{(a+b)(x+y)}
+\end{align*}
+
+\textbf{更复杂的例子：} 分解因式：$x^3 - x^2 + x - 1$。
+
+\begin{align*}
+x^3 - x^2 + x - 1 &= (x^3 - x^2) + (x - 1) \\
+&= x^2(x-1) + (x-1) \\
+&= (x-1)(x^2+1)
+\end{align*}
+
+\begin{examplebox}[【例17】十字相乘法]
+分解因式：$2x^2 + 5x - 3$。
+\end{examplebox}
+
+\textbf{解：} 利用十字相乘法，将 $2x^2$ 拆为 $2x \cdot x$，将 $-3$ 拆为 $3 \times (-1)$：
+
+\[
+\begin{array}{ccc}
+2x & & 3 \\
+\searrow & & \swarrow \\
+& -1 &
+\end{array}
+\quad \text{交叉相乘：} \quad 2x \cdot(-1) + x \cdot 3 = -2x + 3x = 5x \quad \checkmark
+\]
+验证交叉相乘之和恰好等于一次项系数 $5x$，故：
+\[
+2x^2 + 5x - 3 = \boxed{(2x-1)(x+3)}
+\]
+
+\textbf{十字相乘法练习：} 分解 $3x^2 - 7x + 2$。
+
+拆 $3x^2 = 3x \cdot x$，拆 $2 = (-1)\times(-2)$：
+
+$3x \cdot (-2) + x \cdot (-1) = -6x - x = -7x$，故 $3x^2 - 7x + 2 = (3x-1)(x-2)$。
+
+\begin{examplebox}[【例18】拆项添项法]
+分解因式：$x^4 + 4$。
+\end{examplebox}
+
+\textbf{解：} 直接无法分解，考虑添项 $4x^2 - 4x^2$：
+\begin{align*}
+x^4 + 4 &= x^4 + 4x^2 + 4 - 4x^2 \\
+&= (x^2+2)^2 - (2x)^2 \\
+&= (x^2 + 2x + 2)(x^2 - 2x + 2)
+\end{align*}
+经检验，$(x^2+2x+2)$ 和 $(x^2-2x+2)$ 在实数范围内不可再分解（判别式均小于零），故：
+\[
+x^4 + 4 = \boxed{(x^2+2x+2)(x^2-2x+2)}
+\]
+
+\begin{examplebox}[【例19】双十字相乘法]
+分解因式：$x^2 + 5xy + 6y^2 + x + 5y - 6$。
+\end{examplebox}
+
+\textbf{解：} 先对二次项部分用十字相乘：
+\[
+x^2 + 5xy + 6y^2 = (x+2y)(x+3y)
+\]
+再对常数项 $-6$ 分解为 $3 \times (-2)$。
+
+用双十字：
+\[
+\begin{array}{ccc}
+x + 2y & & 3 \\
+\searrow & & \swarrow \\
+& x + 3y &
+\end{array}
+\quad
+\begin{array}{ccc}
+x + 2y & & -2 \\
+\searrow & & \swarrow \\
+& x + 3y &
+\end{array}
+\]
+
+\textbf{第二层十字}（验证一次项系数）：
+\[
+(x+2y)(-2) + (x+3y)(3) = -2x - 4y + 3x + 9y = x + 5y \quad \checkmark
+\]
+常数项：$3 \times (-2) = -6$ $\checkmark$
+
+故原式 $= \boxed{(x+2y+3)(x+3y-2)}$。
+
+\begin{examplebox}[【例20】拆项添项法进阶]
+分解因式：$x^3 + 3x^2 + 3x + 2$。
+\end{examplebox}
+
+\textbf{解：} 注意到 $x^3+3x^2+3x+1 = (x+1)^3$，因此：
+\begin{align*}
+x^3 + 3x^2 + 3x + 2 &= (x^3+3x^2+3x+1) + 1 \\
+&= (x+1)^3 + 1 \\
+&= [(x+1)+1][(x+1)^2 - (x+1) + 1] \\
+&= (x+2)(x^2+2x+1-x-1+1) \\
+&= (x+2)(x^2+x+1)
+\end{align*}
+故原式 $= \boxed{(x+2)(x^2+x+1)}$。
+
+\begin{tipbox}[因式分解高级技巧要点]
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{分组分解}：分组的原则是使每组有公因式，或每组可用公式，且组间有公因式。
+  \item \textbf{十字相乘}：核心是"交叉相乘之和等于一次项系数"，需多练习才能快速找到正确拆法。
+  \item \textbf{拆项添项}：关键是观察目标结构（如完全立方、平方差），通过添加 $0$ 的等价形式（如 $+kx^2 - kx^2$）来创造分解条件。
+  \item \textbf{双十字相乘}：适用于 $ax^2+bxy+cy^2+dx+ey+f$，先分解二次项，再用双十字确定一次项和常数项。
+  \item 因式分解的结果要检验：展开后应与原式完全一致。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  综合练习
+% ============================================================
+\newpage
+\section*{\textcolor{mainblue}{综合练习}}
+
+\begin{enumerate}[leftmargin=2em, label=\textbf{\arabic*.}]
+  \item 用配方法求函数 $y = -x^2 + 4x + 1$ 的最大值。
+
+  \item 已知 $a^2 + b^2 + c^2 - 2a + 4b - 6c + 14 = 0$，求 $a+b+c$ 的值。
+
+  \item 解方程：$(x^2 - 2x)^2 - 3(x^2 - 2x) - 4 = 0$。
+
+  \item 计算：$\dfrac{1}{2\times4} + \dfrac{1}{4\times6} + \dfrac{1}{6\times8} + \cdots + \dfrac{1}{20\times22}$。
+
+  \item 已知 $x + \dfrac{1}{x} = 4$，求 $x^2 + \dfrac{1}{x^2}$ 和 $x^3 + \dfrac{1}{x^3}$ 的值。
+
+  \item 已知 $x_1, x_2$ 是方程 $x^2 - 4x + 1 = 0$ 的两个根，求 $\dfrac{x_2}{x_1} + \dfrac{x_1}{x_2}$ 的值。
+
+  \item 若关于 $x$ 的方程 $kx^2 - 2x + 1 = 0$ 有实数根，求 $k$ 的取值范围。
+
+  \item 分解因式：$x^4 - 7x^2 + 1$。
+
+  \item 分解因式：$x^2 + 3xy + 2y^2 + 4x + 5y + 3$。
+
+  \item 已知 $a+b=3$，$ab=1$，求 $a^4+b^4$ 的值。
+\end{enumerate}
+
+\vspace{20pt}
+
+\begin{knowledgebox}[参考答案]
+\textbf{1.} $y = -(x-2)^2 + 5$，最大值为 $\boxed{5}$（当 $x=2$ 时取得）。
+
+\medskip
+
+\textbf{2.} 配方得 $(a-1)^2+(b+2)^2+(c-3)^2=0$，故 $a=1, b=-2, c=3$，$a+b+c = \boxed{2}$。
+
+\medskip
+
+\textbf{3.} 设 $t=x^2-2x$，$t^2-3t-4=0$，$(t-4)(t+1)=0$。
+$t=4$：$x^2-2x-4=0$，$x=1\pm\sqrt{5}$。
+$t=-1$：$x^2-2x+1=0$，$(x-1)^2=0$，$x=1$。
+故 $x = \boxed{1,\; 1+\sqrt{5},\; 1-\sqrt{5}}$。
+
+\medskip
+
+\textbf{4.} $\dfrac{1}{2n(2n+2)} = \dfrac{1}{4}\cdot\dfrac{1}{n(n+1)} = \dfrac{1}{4}\left(\dfrac{1}{n}-\dfrac{1}{n+1}\right)$。
+
+原式 $= \dfrac{1}{4}\left(\dfrac{1}{1}-\dfrac{1}{2}+\dfrac{1}{2}-\dfrac{1}{3}+\cdots+\dfrac{1}{10}-\dfrac{1}{11}\right) = \dfrac{1}{4}\left(1-\dfrac{1}{11}\right) = \dfrac{1}{4}\cdot\dfrac{10}{11} = \boxed{\dfrac{5}{22}}$。
+
+\medskip
+
+\textbf{5.} $x^2+\dfrac{1}{x^2} = \left(x+\dfrac{1}{x}\right)^2-2 = 16-2 = \boxed{14}$。
+
+$x^3+\dfrac{1}{x^3} = \left(x+\dfrac{1}{x}\right)^3 - 3\left(x+\dfrac{1}{x}\right) = 64-12 = \boxed{52}$。
+
+\medskip
+
+\textbf{6.} $x_1+x_2=4$，$x_1 x_2=1$。$\dfrac{x_2}{x_1}+\dfrac{x_1}{x_2} = \dfrac{x_1^2+x_2^2}{x_1 x_2} = \dfrac{(x_1+x_2)^2-2x_1 x_2}{x_1 x_2} = \dfrac{16-2}{1} = \boxed{14}$。
+
+\medskip
+
+\textbf{7.} 若 $k=0$，方程 $-2x+1=0$ 有解 $x=\dfrac{1}{2}$，符合。
+若 $k\neq 0$，$\Delta = 4-4k \geqslant 0$，$k \leqslant 1$。
+综合得 $\boxed{k \leqslant 1}$。
+
+\medskip
+
+\textbf{8.} $x^4-7x^2+1 = x^4+2x^2+1-9x^2 = (x^2+1)^2-(3x)^2 = (x^2+3x+1)(x^2-3x+1)$。
+
+\medskip
+
+\textbf{9.} $x^2+3xy+2y^2 = (x+y)(x+2y)$。
+设 $(x+y+p)(x+2y+q)$，展开得 $(p+q)x+(2p+q)y+pq$。
+$p+q=4$，$2p+q=5$，$pq=3$。解得 $p=1, q=3$。
+原式 $= \boxed{(x+y+1)(x+2y+3)}$。
+
+\medskip
+
+\textbf{10.} $a^2+b^2=(a+b)^2-2ab=9-2=7$。
+$a^4+b^4 = (a^2+b^2)^2-2a^2 b^2 = 49-2=47$。
+故 $a^4+b^4 = \boxed{47}$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

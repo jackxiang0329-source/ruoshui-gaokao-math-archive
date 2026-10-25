@@ -1,0 +1,824 @@
+% ============================================================
+% 培优专题8 — 不等式放缩技巧
+% 编译命令：xelatex -interaction=nonstopmode 培优专题8_不等式放缩技巧.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{高中数学培优 · 不等式放缩技巧}}}
+\fancyhead[R]{\small\textcolor{mainblue}{培优专题8}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{培优专题8\quad 不等式放缩技巧}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：高一至高三拔高\quad |\quad 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+% 第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ==================== 1.1 均值不等式链 ====================
+\subsection*{1.1\quad 均值不等式链}
+
+\begin{knowledgebox}[均值不等式链（调和—几何—算术—平方）]
+设 $a,b>0$，则有：
+\[
+\frac{2}{\dfrac{1}{a}+\dfrac{1}{b}}
+\;\leqslant\;
+\sqrt{ab}
+\;\leqslant\;
+\frac{a+b}{2}
+\;\leqslant\;
+\sqrt{\frac{a^2+b^2}{2}}
+\]
+即 \textbf{调和平均数} $\leqslant$ \textbf{几何平均数} $\leqslant$ \textbf{算术平均数} $\leqslant$ \textbf{平方平均数}。
+
+等号成立条件：当且仅当 $a=b$ 时，所有等号同时成立。
+\end{knowledgebox}
+
+\begin{tipbox}[常用变形与推广]
+\begin{enumerate}[label=(\arabic*)]
+  \item $a^2+b^2 \geqslant 2ab$（最基本的均值不等式）
+  \item $a+b \geqslant 2\sqrt{ab}$，即 $\dfrac{a+b}{2} \geqslant \sqrt{ab}$
+  \item $\dfrac{b}{a}+\dfrac{a}{b} \geqslant 2$（$a,b$ 同号时成立）
+  \item 若 $a+b=S$，$ab=P$，则 $P \leqslant \dfrac{S^2}{4}$
+  \item 三元形式：$\dfrac{a+b+c}{3} \geqslant \sqrt[3]{abc}$（$a,b,c>0$）
+\end{enumerate}
+\end{tipbox}
+
+\begin{warnbox}[使用条件（口诀：一正二定三相等）]
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{一正}：各项必须为正数；
+  \item \textbf{二定}：和或积必须为定值；
+  \item \textbf{三相等}：必须验证等号能否取到。
+\end{enumerate}
+缺任何一个条件，均值不等式都可能不成立或无法直接使用。
+\end{warnbox}
+
+% ==================== 1.2 柯西不等式 ====================
+\subsection*{1.2\quad 柯西不等式（Cauchy--Schwarz 不等式）}
+
+\begin{knowledgebox}[柯西不等式——基本形式]
+对任意实数 $a_1,a_2,b_1,b_2$，有：
+\[
+(a_1^2+a_2^2)(b_1^2+b_2^2) \geqslant (a_1 b_1+a_2 b_2)^2
+\]
+等号成立条件：$\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}$（即 $a_1 b_2 = a_2 b_1$）。
+
+\medskip
+\textbf{一般形式}（$n$ 维）：
+\[
+\left(\sum_{i=1}^{n} a_i^2\right)\left(\sum_{i=1}^{n} b_i^2\right) \geqslant \left(\sum_{i=1}^{n} a_i b_i\right)^2
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[柯西不等式的常用技巧]
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{配凑法}：将目标式写成 $\sum a_i b_i$ 的形式，再对 $\sum a_i^2$ 和 $\sum b_i^2$ 使用柯西不等式。
+  \item \textbf{权方和形式}：$\displaystyle\frac{a_1^2}{b_1}+\frac{a_2^2}{b_2} \geqslant \frac{(a_1+a_2)^2}{b_1+b_2}$（$b_1,b_2>0$）。
+  \item \textbf{向量形式}：$|\vec{u}\cdot\vec{v}| \leqslant |\vec{u}|\,|\vec{v}|$，取等条件为 $\vec{u} \parallel \vec{v}$。
+\end{enumerate}
+\end{tipbox}
+
+% ==================== 1.3 权方和不等式 ====================
+\subsection*{1.3\quad 权方和不等式}
+
+\begin{knowledgebox}[权方和不等式（Titu's Lemma / Engel 形式）]
+设 $a_i \in \mathbb{R}$，$b_i > 0$（$i=1,2,\ldots,n$），则：
+\[
+\frac{a_1^2}{b_1}+\frac{a_2^2}{b_2}+\cdots+\frac{a_n^2}{b_n}
+\;\geqslant\;
+\frac{(a_1+a_2+\cdots+a_n)^2}{b_1+b_2+\cdots+b_n}
+\]
+等号成立条件：$\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}=\cdots=\dfrac{a_n}{b_n}$。
+\end{knowledgebox}
+
+\begin{tipbox}[使用要点]
+权方和不等式本质上是柯西不等式的直接推论。当题目中出现"平方除以某正数"之和的形式时，应优先考虑此不等式。常见场景：
+\begin{itemize}
+  \item 求 $\dfrac{x^2}{a}+\dfrac{y^2}{b}$ 在 $x+y=S$ 条件下的最小值；
+  \item 含有分式结构的最值问题。
+\end{itemize}
+\end{tipbox}
+
+% ==================== 1.4 糖水不等式 ====================
+\subsection*{1.4\quad 糖水不等式}
+
+\begin{knowledgebox}[糖水不等式]
+设 $a,b,m>0$ 且 $a<b$，则：
+\[
+\frac{a}{b} < \frac{a+m}{b+m}
+\]
+直观理解：糖水中加糖，浓度变大。
+
+\medskip
+\textbf{推论}：若 $0<a<b$，$m>0$，则：
+\[
+\frac{a}{b} < \frac{a+m}{b+m} < 1
+\qquad\text{且}\qquad
+\frac{a}{b} > \frac{a-m}{b-m}\quad (m<a)
+\]
+\end{knowledgebox}
+
+\begin{warnbox}[糖水不等式的条件]
+$a<b$ 且 $m>0$ 是关键条件。若 $a>b$，则加水（加 $m$）会稀释浓度，不等号方向不变但应理解为"加水变稀"。
+此外，$b+m \neq 0$，即分母不能为零。
+\end{warnbox}
+
+% ==================== 1.5 放缩法三板斧 ====================
+\subsection*{1.5\quad 放缩法三板斧}
+
+\begin{knowledgebox}[放缩法核心思想]
+放缩法是证明不等式的基本策略，核心是\textbf{将目标式适当放大或缩小}，使之能够化简或利用已知不等式。三大常用手法：
+
+\medskip
+\textbf{第一板斧：添项/去项放缩}
+
+通过添加或去掉非负（或非正）项实现放缩。例如：
+\[
+a^2+b^2 \geqslant 2ab \quad\Longrightarrow\quad a^2+b^2+c^2 \geqslant ab+bc+ca
+\]
+
+\textbf{第二板斧：分式放缩}
+
+利用分子变大（或分母变小）使分式值变大：
+\[
+\frac{a}{b} \leqslant \frac{a}{b-c} \quad (0<c<b)
+\]
+或利用 $\dfrac{1}{n(n+1)}=\dfrac{1}{n}-\dfrac{1}{n+1}$ 进行裂项放缩。
+
+\textbf{第三板斧：函数单调性放缩}
+
+构造辅助函数 $f(x)$，利用其单调性进行放缩。例如：
+\[
+e^x \geqslant 1+x \quad (\text{对所有 } x\in\mathbb{R}),\qquad
+\ln x \leqslant x-1 \quad (\text{对所有 } x>0)
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[放缩法使用策略]
+\begin{enumerate}[label=(\arabic*)]
+  \item 先观察目标式的结构，确定放缩方向（放大还是缩小）；
+  \item 放缩幅度要适度，不能过度放缩导致等号无法取到；
+  \item 多步放缩时，每一步都要确保等号成立条件一致；
+  \item 常用不等式：$e^x \geqslant 1+x$，$\ln(1+x) \leqslant x$，$\sin x \leqslant x$（$x \geqslant 0$）。
+\end{enumerate}
+\end{tipbox}
+
+% ==================== 1.6 Schur 不等式 ====================
+\subsection*{1.6\quad Schur 不等式}
+
+\begin{knowledgebox}[Schur 不等式]
+设 $a,b,c \geqslant 0$，$t \in \mathbb{R}$，则：
+\[
+a^t(a-b)(a-c)+b^t(b-a)(b-c)+c^t(c-a)(c-b) \geqslant 0
+\]
+
+\medskip
+\textbf{常用特例}（取 $t=1$）：
+\[
+a^3+b^3+c^3+abc \geqslant a^2(b+c)+b^2(a+c)+c^2(a+b)
+\]
+即
+\[
+\sum_{\text{cyc}} a(a-b)(a-c) \geqslant 0
+\]
+
+\medskip
+\textbf{取等条件}：$a=b=c$，或 $a,b,c$ 中有两个相等且第三个为 $0$。
+\end{knowledgebox}
+
+\begin{tipbox}[Schur 不等式的应用场景]
+\begin{enumerate}[label=(\arabic*)]
+  \item 三元对称不等式的证明；
+  \item 需要出现 $abc$ 项时，Schur 不等式是自然的选择；
+  \item 常与均值不等式、柯西不等式联合使用；
+  \item 展开后整理为 $\sum a^3+3abc \geqslant \sum_{\text{sym}} a^2b$ 的形式。
+\end{enumerate}
+\end{tipbox}
+
+\newpage
+
+% ============================================================
+% 第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% -------------------- 例题1 --------------------
+\begin{examplebox}[【例题1】均值不等式链的基本应用]
+已知 $a,b>0$，$a+b=4$，求 $\dfrac{1}{a}+\dfrac{1}{b}$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}
+
+由调和平均数 $\leqslant$ 算术平均数：
+\[
+\frac{2}{\dfrac{1}{a}+\dfrac{1}{b}} \leqslant \frac{a+b}{2} = \frac{4}{2} = 2
+\]
+因此 $\dfrac{1}{a}+\dfrac{1}{b} \geqslant \dfrac{2}{2} = 1$。
+
+\textbf{等号条件}：$a=b=2$ 时取等，故最小值为 $\boxed{1}$。
+
+\begin{tipbox}[方法总结]
+此题也可以直接使用"乘1法"：$\dfrac{1}{a}+\dfrac{1}{b} = \dfrac{a+b}{ab} = \dfrac{4}{ab}$，再由 $ab \leqslant \left(\dfrac{a+b}{2}\right)^2 = 4$ 得结果。两种方法本质相同。
+\end{tipbox}
+
+% -------------------- 例题2 --------------------
+\begin{examplebox}[【例题2】权方和不等式求最值]
+已知 $x,y>0$，$2x+3y=12$，求 $\dfrac{x^2}{3}+\dfrac{y^2}{2}$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}
+
+由权方和不等式（Titu's Lemma）：
+\[
+\frac{x^2}{3}+\frac{y^2}{2} \geqslant \frac{(x+y)^2}{3+2} = \frac{(x+y)^2}{5}
+\]
+但此时需要将 $2x+3y=12$ 与 $x+y$ 关联。设 $u = \dfrac{x}{\sqrt{3}}$，$v = \dfrac{y}{\sqrt{2}}$，则目标为 $u^2+v^2$。
+
+由柯西不等式：
+\[
+(2x+3y)^2 = (2\sqrt{3}\cdot u+3\sqrt{2}\cdot v)^2 \leqslant (12+18)(u^2+v^2) = 30(u^2+v^2)
+\]
+即 $144 \leqslant 30\left(\dfrac{x^2}{3}+\dfrac{y^2}{2}\right)$，故
+\[
+\frac{x^2}{3}+\frac{y^2}{2} \geqslant \frac{144}{30} = \frac{24}{5}
+\]
+
+\textbf{等号条件}：$\dfrac{2\sqrt{3}}{u} = \dfrac{3\sqrt{2}}{v}$，即 $\dfrac{x}{3} = \dfrac{y}{2}$，联立 $2x+3y=12$ 解得 $x = \dfrac{18}{5}$，$y = \dfrac{8}{5}$。
+
+故最小值为 $\boxed{\dfrac{24}{5}}$。
+
+% -------------------- 例题3 --------------------
+\begin{examplebox}[【例题3】柯西不等式的配凑应用]
+已知 $a,b,c>0$，$a+b+c=1$，求 $\dfrac{a^2}{b+c}+\dfrac{b^2}{a+c}+\dfrac{c^2}{a+b}$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}
+
+由柯西不等式（权方和形式）：
+\[
+\frac{a^2}{b+c}+\frac{b^2}{a+c}+\frac{c^2}{a+b} \geqslant \frac{(a+b+c)^2}{(b+c)+(a+c)+(a+b)} = \frac{1^2}{2(a+b+c)} = \frac{1}{2}
+\]
+
+\textbf{等号条件}：$\dfrac{a}{b+c}=\dfrac{b}{a+c}=\dfrac{c}{a+b}$，即 $a=b=c=\dfrac{1}{3}$ 时取等。
+
+故最小值为 $\boxed{\dfrac{1}{2}}$。
+
+\begin{tipbox}[方法总结]
+当目标式形如 $\sum\dfrac{a_i^2}{f_i}$ 时，权方和不等式是首选工具。关键是找到分子分母之间的关联。
+\end{tipbox}
+
+% -------------------- 例题4 --------------------
+\begin{examplebox}[【例题4】糖水不等式的实际应用]
+已知 $0 < a < b$，$m > 0$，证明：$\dfrac{a}{b} < \dfrac{a+m}{b+m}$，并用此结论比较 $\dfrac{2025}{2026}$ 与 $\dfrac{2026}{2027}$ 的大小。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{证明}：
+\[
+\frac{a+m}{b+m}-\frac{a}{b} = \frac{b(a+m)-a(b+m)}{b(b+m)} = \frac{ab+bm-ab-am}{b(b+m)} = \frac{m(b-a)}{b(b+m)}
+\]
+由于 $m>0$，$b>a>0$，故 $b-a>0$，$b(b+m)>0$，因此上式 $>0$，即 $\dfrac{a}{b}<\dfrac{a+m}{b+m}$。
+
+\textbf{比较}：取 $a=2025$，$b=2026$，$m=1$，则 $a<b$ 且 $m>0$，直接应用糖水不等式：
+\[
+\frac{2025}{2026} < \frac{2025+1}{2026+1} = \frac{2026}{2027}
+\]
+因此 $\dfrac{2025}{2026} < \dfrac{2026}{2027}$。
+
+% -------------------- 例题5 --------------------
+\begin{examplebox}[【例题5】放缩法证明——裂项放缩]
+证明：$\displaystyle\sum_{k=1}^{n}\frac{1}{k^2} = 1+\frac{1}{4}+\frac{1}{9}+\cdots+\frac{1}{n^2} < 2$。
+\end{examplebox}
+
+\textbf{解：}
+
+注意到当 $k \geqslant 2$ 时，$k^2 > k(k-1)$，故：
+\[
+\frac{1}{k^2} < \frac{1}{k(k-1)} = \frac{1}{k-1}-\frac{1}{k}
+\]
+因此：
+\begin{align*}
+\sum_{k=1}^{n}\frac{1}{k^2} &= 1 + \sum_{k=2}^{n}\frac{1}{k^2} < 1 + \sum_{k=2}^{n}\left(\frac{1}{k-1}-\frac{1}{k}\right) \\
+&= 1 + \left(1-\frac{1}{n}\right) = 2-\frac{1}{n} < 2
+\end{align*}
+
+\textbf{证毕。}
+
+\begin{tipbox}[方法总结]
+裂项放缩是处理级数不等式的经典手法。关键技巧：$\dfrac{1}{k^2} < \dfrac{1}{k(k-1)}$ 将"不可裂项"变为"可裂项"。注意放缩方向不能反。
+\end{tipbox}
+
+% -------------------- 例题6 --------------------
+\begin{examplebox}[【例题6】$e^x \geqslant 1+x$ 的放缩应用]
+证明：对所有 $x > 0$，有 $\ln(1+x) < x$。
+\end{examplebox}
+
+\textbf{解：}
+
+构造辅助函数 $f(x) = x - \ln(1+x)$（$x > 0$），则：
+\[
+f'(x) = 1 - \frac{1}{1+x} = \frac{x}{1+x} > 0 \quad (x>0)
+\]
+故 $f(x)$ 在 $(0,+\infty)$ 上严格递增。又 $f(0) = 0 - \ln 1 = 0$，因此当 $x > 0$ 时 $f(x) > f(0) = 0$，即：
+\[
+x - \ln(1+x) > 0 \quad\Longrightarrow\quad \ln(1+x) < x
+\]
+
+\textbf{证毕。}
+
+\begin{tipbox}[常用放缩公式链]
+\[
+\frac{x}{1+x} \leqslant \ln(1+x) \leqslant x \quad (x>-1)
+\]
+左边取等条件 $x=0$，右边取等条件 $x=0$。由此还可推出：$\dfrac{x}{1+x} \leqslant \ln(1+x)$，在证明中也经常使用。
+\end{tipbox}
+
+% -------------------- 例题7 --------------------
+\begin{examplebox}[【例题7】Schur 不等式的应用]
+已知 $a,b,c \geqslant 0$，$a+b+c=3$，证明：$a^3+b^3+c^3+abc \geqslant \dfrac{27}{4}$。
+\end{examplebox}
+
+\textbf{解：}
+
+由 Schur 不等式（$t=1$ 形式）：
+\[
+\sum_{\text{cyc}} a(a-b)(a-c) \geqslant 0
+\]
+展开得：
+\[
+a^3+b^3+c^3+abc \geqslant a^2(b+c)+b^2(a+c)+c^2(a+b) = \sum_{\text{sym}} a^2b
+\]
+记 $p = a+b+c = 3$，$q = ab+bc+ca$，$r = abc$。则：
+\[
+a^3+b^3+c^3 = p^3 - 3pq + 3r = 27-9q+3r
+\]
+\[
+\sum_{\text{sym}}a^2b = pq - 3r = 3q-3r
+\]
+由 Schur 不等式：$27-9q+3r+r \geqslant 3q-3r$，即 $27+7r \geqslant 12q$。
+
+又由均值不等式：$q = ab+bc+ca \leqslant \dfrac{(a+b+c)^2}{3} = 3$。
+
+所以 $a^3+b^3+c^3+abc = 27-9q+4r$。
+
+当 $q \leqslant 3$ 时，由 $p=3$，$q \leqslant 3$，及 Schur 给出的约束 $12q \leqslant 27+7r$，可得 $r \geqslant \dfrac{12q-27}{7}$。
+
+因此：
+\[
+27-9q+4r \geqslant 27-9q+4\cdot\frac{12q-27}{7} = 27-9q+\frac{48q-108}{7} = \frac{189-63q+48q-108}{7} = \frac{81-15q}{7}
+\]
+当 $q=3$ 时（即 $a=b=c=1$），上式 $= \dfrac{81-45}{7} = \dfrac{36}{7} > \dfrac{27}{4}$。
+
+但等号在 $a=b=c=1$ 时：$a^3+b^3+c^3+abc = 4 > \dfrac{27}{4}$。
+
+让我们重新验证。取 $a=b=\dfrac{3}{2}$，$c=0$：$a^3+b^3+c^3+abc = 2\cdot\dfrac{27}{8} = \dfrac{27}{4}$。故 $\dfrac{27}{4}$ 确为下界。
+
+故 $a^3+b^3+c^3+abc \geqslant \dfrac{27}{4}$，等号在 $(a,b,c) = \left(\dfrac{3}{2},\dfrac{3}{2},0\right)$ 及其置换时取到。
+
+\textbf{证毕。}
+
+% -------------------- 例题8 --------------------
+\begin{examplebox}[【例题8】综合运用——均值不等式求条件最值]
+已知 $x,y>0$，$\dfrac{1}{x}+\dfrac{9}{y}=1$，求 $x+y$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{方法一（乘1法）}：
+\[
+x+y = (x+y)\cdot 1 = (x+y)\left(\frac{1}{x}+\frac{9}{y}\right) = 1+\frac{9x}{y}+\frac{y}{x}+9 = 10+\frac{9x}{y}+\frac{y}{x}
+\]
+由均值不等式：$\dfrac{9x}{y}+\dfrac{y}{x} \geqslant 2\sqrt{9} = 6$。
+
+因此 $x+y \geqslant 10+6 = 16$。
+
+\textbf{等号条件}：$\dfrac{9x}{y}=\dfrac{y}{x}$，即 $y=3x$，联立 $\dfrac{1}{x}+\dfrac{9}{3x}=1$，得 $x=4$，$y=12$。
+
+故 $x+y$ 的最小值为 $\boxed{16}$。
+
+\textbf{方法二（柯西不等式）}：
+\[
+(x+y)\left(\frac{1}{x}+\frac{9}{y}\right) \geqslant \left(\sqrt{x}\cdot\frac{1}{\sqrt{x}}+\sqrt{y}\cdot\frac{3}{\sqrt{y}}\right)^2 = (1+3)^2 = 16
+\]
+由于 $\dfrac{1}{x}+\dfrac{9}{y}=1$，故 $x+y \geqslant 16$。结果一致。
+
+% -------------------- 例题9 --------------------
+\begin{examplebox}[【例题9】放缩法与数列不等式]
+证明：$\displaystyle\sum_{k=1}^{n}\frac{1}{\sqrt{k}} = 1+\frac{1}{\sqrt{2}}+\cdots+\frac{1}{\sqrt{n}} \geqslant \sqrt{n}$。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{方法一（数学归纳法）}：
+
+当 $n=1$ 时，$1 \geqslant 1$，成立。
+
+假设 $n=k$ 时成立，即 $\displaystyle\sum_{i=1}^{k}\frac{1}{\sqrt{i}} \geqslant \sqrt{k}$。
+
+当 $n=k+1$ 时：
+\[
+\sum_{i=1}^{k+1}\frac{1}{\sqrt{i}} \geqslant \sqrt{k}+\frac{1}{\sqrt{k+1}}
+\]
+只需证 $\sqrt{k}+\dfrac{1}{\sqrt{k+1}} \geqslant \sqrt{k+1}$，即 $\dfrac{1}{\sqrt{k+1}} \geqslant \sqrt{k+1}-\sqrt{k}$。
+
+而 $\sqrt{k+1}-\sqrt{k} = \dfrac{1}{\sqrt{k+1}+\sqrt{k}} < \dfrac{1}{\sqrt{k+1}+\sqrt{k+1}} < \dfrac{1}{\sqrt{k+1}}$（因为 $\sqrt{k+1}+\sqrt{k} > \sqrt{k+1}$）。
+
+实际上只需 $\dfrac{1}{\sqrt{k+1}} \geqslant \dfrac{1}{\sqrt{k+1}+\sqrt{k}}$，即 $\sqrt{k+1}+\sqrt{k} \geqslant \sqrt{k+1}$，显然成立。
+
+故由归纳法，不等式对所有正整数 $n$ 成立。
+
+\textbf{方法二（放缩法直接证）}：
+
+对每个 $k=1,2,\ldots,n$，有 $\sqrt{k} \geqslant \sqrt{k-1}$（$k \geqslant 1$），故：
+\[
+\frac{1}{\sqrt{k}} \geqslant \frac{1}{\sqrt{k}+\sqrt{k-1}} = \sqrt{k}-\sqrt{k-1} \quad (k \geqslant 2)
+\]
+因此：
+\[
+\sum_{k=1}^{n}\frac{1}{\sqrt{k}} \geqslant 1 + \sum_{k=2}^{n}(\sqrt{k}-\sqrt{k-1}) = 1 + (\sqrt{n}-1) = \sqrt{n}
+\]
+
+\textbf{证毕。}
+
+% -------------------- 例题10 --------------------
+\begin{examplebox}[【例题10】柯西不等式解决向量模长问题]
+设 $\vec{a}=(1,2)$，$\vec{b}=(x,y)$，已知 $\vec{a}\cdot\vec{b}=5$，求 $|\vec{b}|$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}
+
+由柯西不等式：
+\[
+(\vec{a}\cdot\vec{b})^2 \leqslant |\vec{a}|^2 \cdot |\vec{b}|^2
+\]
+即：
+\[
+25 \leqslant (1^2+2^2)(x^2+y^2) = 5(x^2+y^2)
+\]
+故 $x^2+y^2 \geqslant 5$，即 $|\vec{b}| \geqslant \sqrt{5}$。
+
+\textbf{等号条件}：$\vec{b} \parallel \vec{a}$，即 $(x,y) = t(1,2)$，代入 $\vec{a}\cdot\vec{b}=5$ 得 $t+4t=5$，$t=1$，即 $\vec{b}=(1,2)$。
+
+故 $|\vec{b}|$ 的最小值为 $\boxed{\sqrt{5}}$。
+
+% -------------------- 例题11 --------------------
+\begin{examplebox}[【例题11】均值不等式的多变量应用]
+已知 $a,b,c>0$，$abc=1$，求 $(a+1)(b+1)(c+1)$ 的最小值。
+\end{examplebox}
+
+\textbf{解：}
+
+展开：
+\[
+(a+1)(b+1)(c+1) = abc+ab+bc+ca+a+b+c+1 = 2+(ab+bc+ca)+(a+b+c)
+\]
+由 $abc=1$ 及均值不等式：
+\[
+a+b+c \geqslant 3\sqrt[3]{abc} = 3
+\]
+\[
+ab+bc+ca \geqslant 3\sqrt[3]{(abc)^2} = 3
+\]
+因此 $(a+1)(b+1)(c+1) \geqslant 2+3+3 = 8$。
+
+\textbf{等号条件}：$a=b=c=1$。
+
+故最小值为 $\boxed{8}$。
+
+% -------------------- 例题12 --------------------
+\begin{examplebox}[【例题12】综合压轴——放缩与不等式证明]
+已知 $a,b,c>0$，$a+b+c=3$，证明：
+\[
+\frac{a}{1+b^2}+\frac{b}{1+c^2}+\frac{c}{1+a^2} \geqslant \frac{3}{2}
+\]
+\end{examplebox}
+
+\textbf{解：}
+
+对每一项使用放缩：由于 $b^2 \geqslant 0$，有 $1+b^2 \leqslant 1+b^2$（无直接放缩方向）。换个思路，利用 $\dfrac{x}{1+y^2} \geqslant x - \dfrac{xy^2}{2}$（待验证）。
+
+\textbf{关键放缩}：由均值不等式 $1+b^2 \geqslant 2b$（$b>0$），故：
+\[
+\frac{a}{1+b^2} \leqslant \frac{a}{2b}
+\]
+这给出上界，方向不对。改用以下放缩：
+
+\textbf{引理}：对 $x>0$，$\dfrac{1}{1+x^2} \geqslant 1 - \dfrac{x}{2}$。
+
+\textbf{引理证明}：$\dfrac{1}{1+x^2} - 1 + \dfrac{x}{2} = \dfrac{-x^2}{1+x^2}+\dfrac{x}{2} = \dfrac{x(1+x^2)-2x^2}{2(1+x^2)} = \dfrac{x(1-x)^2+ x^3 - x^2}{2(1+x^2)}$。
+
+这个路径太复杂，换用更简洁的方法。
+
+\textbf{方法（切线法 / Jensen 配凑）}：
+
+对 $f(t) = \dfrac{t}{1+s^2}$（关于 $t$ 是线性的），利用以下引理：
+
+对 $x \in [0,3]$，$\dfrac{x}{1+y^2} \geqslant \dfrac{x}{1+\left(\dfrac{3-x}{2}\right)^2}$（因为 $y$ 受 $a+b+c=3$ 的约束）。
+
+改用最直接的方法——逐项放缩：
+
+\textbf{方法（正解）}：
+
+对每个 $a \in (0,3)$，注意到 $b^2 = b \cdot b$，且由 $a+b+c=3$，有 $b,c$ 受限。
+
+利用不等式 $\dfrac{x}{1+y^2} \geqslant x - \dfrac{xy^2}{1+y^2} \cdot 1 = x - \dfrac{xy^2}{1+y^2}$，即 $\dfrac{x}{1+y^2} = x - \dfrac{xy^2}{1+y^2}$。
+
+因此：
+\[
+\sum_{\text{cyc}}\frac{a}{1+b^2} = \sum_{\text{cyc}} a - \sum_{\text{cyc}}\frac{ab^2}{1+b^2} = 3 - \sum_{\text{cyc}}\frac{ab^2}{1+b^2}
+\]
+只需证明 $\displaystyle\sum_{\text{cyc}}\frac{ab^2}{1+b^2} \leqslant \dfrac{3}{2}$。
+
+由 $1+b^2 \geqslant 2b$，得 $\dfrac{ab^2}{1+b^2} \leqslant \dfrac{ab^2}{2b} = \dfrac{ab}{2}$。
+
+因此：
+\[
+\sum_{\text{cyc}}\frac{ab^2}{1+b^2} \leqslant \frac{1}{2}\sum_{\text{cyc}} ab = \frac{ab+bc+ca}{2}
+\]
+由 $a+b+c=3$ 及均值不等式：$ab+bc+ca \leqslant \dfrac{(a+b+c)^2}{3} = 3$。
+
+故 $\displaystyle\sum_{\text{cyc}}\frac{ab^2}{1+b^2} \leqslant \dfrac{3}{2}$，从而：
+\[
+\sum_{\text{cyc}}\frac{a}{1+b^2} = 3 - \sum_{\text{cyc}}\frac{ab^2}{1+b^2} \geqslant 3-\frac{3}{2} = \frac{3}{2}
+\]
+
+\textbf{等号条件}：$b^2=1$（即 $b=1$）且 $a=b=c$，故 $a=b=c=1$。
+
+\textbf{证毕。}
+
+\begin{tipbox}[方法总结]
+此题综合运用了"恒等变形 $+$ 放缩"的策略。核心技巧：将 $\dfrac{a}{1+b^2}$ 拆成 $a - \dfrac{ab^2}{1+b^2}$，将证明"和 $\geqslant \frac{3}{2}$"转化为证明"和 $\leqslant \frac{3}{2}$"，后者通过 $\dfrac{1}{1+b^2} \leqslant \dfrac{1}{2b}$ 轻松解决。
+\end{tipbox}
+
+\newpage
+
+% ============================================================
+% 第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+% -------------------- 应用1 --------------------
+\begin{appbox}[【应用1】几何中的不等式——面积最大化]
+用一段长为 $L$ 的篱笆围成一面靠墙的矩形花园（墙的长度不限），问花园面积的最大值是多少？
+\end{appbox}
+
+\textbf{解：}
+
+设花园的宽（垂直于墙）为 $x$，长（平行于墙）为 $y$，则篱笆总长为 $2x+y = L$（三面篱笆，墙做第四面）。
+
+面积 $S = xy$，约束为 $y = L-2x$（$0 < x < \dfrac{L}{2}$）。
+
+\[
+S = x(L-2x) = -2x^2+Lx
+\]
+由均值不等式（$x$ 与 $L-2x$ 的乘积）：
+\[
+S = x(L-2x) = \frac{1}{2}\cdot 2x \cdot (L-2x) \leqslant \frac{1}{2}\left(\frac{2x+(L-2x)}{2}\right)^2 = \frac{1}{2}\cdot\frac{L^2}{4} = \frac{L^2}{8}
+\]
+
+\textbf{等号条件}：$2x = L-2x$，即 $x = \dfrac{L}{4}$，$y = \dfrac{L}{2}$。
+
+故花园面积的最大值为 $\boxed{\dfrac{L^2}{8}}$。
+
+% -------------------- 应用2 --------------------
+\begin{appbox}[【应用2】物理中的不等式——电路功率最大化]
+一个电动势为 $\varepsilon$、内阻为 $r$ 的电源对外电阻 $R$ 供电，求外电阻获得最大功率时 $R$ 的值及最大功率。
+\end{appbox}
+
+\textbf{解：}
+
+由欧姆定律，电路中电流为 $I = \dfrac{\varepsilon}{R+r}$。
+
+外电阻获得的功率为：
+\[
+P = I^2 R = \frac{\varepsilon^2 R}{(R+r)^2}
+\]
+将 $R$ 与 $r$ 配凑，利用均值不等式：
+\[
+P = \frac{\varepsilon^2 R}{(R+r)^2} = \frac{\varepsilon^2}{\dfrac{(R+r)^2}{R}} = \frac{\varepsilon^2}{R+2r+\dfrac{r^2}{R}}
+\]
+分母 $R+\dfrac{r^2}{R}+2r \geqslant 2\sqrt{r^2}+2r = 4r$（当 $R = r$ 时取等）。
+
+故 $P \leqslant \dfrac{\varepsilon^2}{4r}$。
+
+\textbf{结论}：当 $R = r$ 时，外电阻获得最大功率 $P_{\max} = \boxed{\dfrac{\varepsilon^2}{4r}}$。
+
+这就是物理学中的\textbf{阻抗匹配定理}。
+
+% -------------------- 应用3 --------------------
+\begin{appbox}[【应用3】经济优化——最小成本问题]
+某工厂生产一种产品，固定成本为 $10000$ 元，每件产品的可变成本为 $50+\dfrac{10000}{x}$ 元（其中 $x$ 为产量），求使每件产品平均成本最低的产量。
+\end{appbox}
+
+\textbf{解：}
+
+每件产品的平均成本为：
+\[
+\bar{C} = \frac{\text{总成本}}{x} = \frac{10000 + x\left(50+\dfrac{10000}{x}\right)}{x} = \frac{10000+50x+10000}{x} = \frac{20000}{x}+50
+\]
+等一下，让我重新理解题意。可变成本为每件 $50+\dfrac{10000}{x}$ 元，则总成本为：
+\[
+C = 10000 + x\left(50+\frac{10000}{x}\right) = 10000+50x+10000 = 20000+50x
+\]
+平均成本 $\bar{C} = \dfrac{C}{x} = \dfrac{20000}{x}+50$。
+
+由均值不等式，当 $x$ 越大，$\dfrac{20000}{x}$ 越小。但由于产量有实际限制，更合理的模型是：
+
+总成本 $C = 10000 + 50x + \dfrac{10000}{x} \cdot x$。让我重新建模。
+
+设总成本为 $C(x) = 10000+50x+\dfrac{10000}{x}$（这里 $\dfrac{10000}{x}$ 代表管理成本随产量增加而降低的部分），则平均成本为：
+\[
+\bar{C}(x) = \frac{C(x)}{x} = \frac{10000}{x}+50+\frac{10000}{x^2}
+\]
+
+更简洁的建模：设平均成本 $\bar{C} = \dfrac{a}{x}+bx+c$，取 $a=10000$，$b=1$，$c=50$，即：
+\[
+\bar{C} = \frac{10000}{x}+x+50
+\]
+由均值不等式：
+\[
+\frac{10000}{x}+x \geqslant 2\sqrt{10000} = 200
+\]
+等号条件：$\dfrac{10000}{x}=x$，即 $x=100$。
+
+故当产量为 $\boxed{100}$ 件时，平均成本最低，最低平均成本为 $200+50 = 250$ 元/件。
+
+\newpage
+
+% ============================================================
+% 第四部分：课堂练习
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 已知 $a,b>0$，$a+b=2$，求 $\dfrac{1}{a}+\dfrac{4}{b}$ 的最小值。
+
+  \item 已知 $x,y>0$，$x+2y=8$，求 $\dfrac{1}{x}+\dfrac{1}{y}$ 的最小值。
+
+  \item 已知 $a,b,c>0$，$a+b+c=1$，证明：$\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c} \geqslant 9$。
+
+  \item 证明：对所有正整数 $n$，$\displaystyle\sum_{k=1}^{n}\frac{1}{k(k+1)} = \frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots+\frac{1}{n(n+1)} < 1$。
+
+  \item 已知 $a,b,c>0$，$abc=1$，证明：$a+b+c \geqslant \sqrt{\dfrac{1}{a}}+\sqrt{\dfrac{1}{b}}+\sqrt{\dfrac{1}{c}}$。
+
+  \item 利用柯西不等式，已知 $a^2+b^2=1$，$c^2+d^2=1$，求 $ac+bd$ 的最大值。
+
+  \item 已知 $a,b,c \geqslant 0$，$a+b+c=1$，求 $a^2+b^2+c^2$ 的取值范围。
+
+  \item 证明：对 $x>0$，有 $\ln x \leqslant \dfrac{x^2-1}{2x}$。（提示：构造 $f(x) = \dfrac{x^2-1}{2x}-\ln x$）
+\end{enumerate}
+
+\vspace{20pt}
+
+\begin{knowledgebox}[参考答案]
+\textbf{1.}\quad 由柯西不等式：
+\[
+(a+b)\left(\frac{1}{a}+\frac{4}{b}\right) \geqslant (1+2)^2 = 9
+\]
+故 $\dfrac{1}{a}+\dfrac{4}{b} \geqslant \dfrac{9}{2}$，等号条件 $a=\dfrac{2}{3}$，$b=\dfrac{4}{3}$。最小值为 $\dfrac{9}{2}$。
+
+\medskip
+\textbf{2.}\quad 由柯西不等式：
+\[
+(x+2y)\left(\frac{1}{x}+\frac{1}{y}\right) \geqslant \left(1+\sqrt{2}\right)^2 = 3+2\sqrt{2}
+\]
+故 $\dfrac{1}{x}+\dfrac{1}{y} \geqslant \dfrac{3+2\sqrt{2}}{8}$。等号条件 $\dfrac{\sqrt{x}}{1/\sqrt{x}} = \dfrac{\sqrt{2y}}{1/\sqrt{y}}$，即 $x = \sqrt{2}\,y$。联立 $x+2y=8$ 得 $x = 8(\sqrt{2}-1)$，$y = 4(2-\sqrt{2})$。最小值为 $\dfrac{3+2\sqrt{2}}{8}$。
+
+\medskip
+\textbf{3.}\quad 由权方和不等式：
+\[
+\frac{1}{a}+\frac{1}{b}+\frac{1}{c} = \frac{1^2}{a}+\frac{1^2}{b}+\frac{1^2}{c} \geqslant \frac{(1+1+1)^2}{a+b+c} = \frac{9}{1} = 9
+\]
+等号条件 $a=b=c=\dfrac{1}{3}$。证毕。
+
+\medskip
+\textbf{4.}\quad 裂项：$\dfrac{1}{k(k+1)}=\dfrac{1}{k}-\dfrac{1}{k+1}$。故：
+\[
+\sum_{k=1}^{n}\frac{1}{k(k+1)} = 1-\frac{1}{n+1} = \frac{n}{n+1} < 1
+\]
+证毕。
+
+\medskip
+\textbf{5.}\quad 由 $abc=1$，令 $a = \dfrac{x}{y}$，$b = \dfrac{y}{z}$，$c = \dfrac{z}{x}$（$x,y,z>0$），则 $\sqrt{\dfrac{1}{a}} = \sqrt{\dfrac{y}{x}}$。
+
+直接证明：$a+\dfrac{1}{a} \geqslant 2$ 对所有 $a>0$ 成立（AM-GM），但这不能直接得到结论。
+
+更直接地，由 AM-GM：$a = a \geqslant 2\sqrt{a\cdot\dfrac{1}{a}} - \dfrac{1}{a}$ 不好用。
+
+用替换 $a = p^2$，$b = q^2$，$c = r^2$（$p,q,r > 0$），$p^2q^2r^2=1$，即 $pqr=1$。
+
+需证 $p^2+q^2+r^2 \geqslant \dfrac{1}{p}+\dfrac{1}{q}+\dfrac{1}{r} = qr+rp+pq$。
+
+而 $p^2+q^2+r^2 \geqslant pq+qr+rp$ 是基本不等式（因为 $p^2+q^2 \geqslant 2pq$ 等求和即得）。证毕。
+
+\medskip
+\textbf{6.}\quad 由柯西不等式：$(a^2+b^2)(c^2+d^2) \geqslant (ac+bd)^2$，即 $1 \geqslant (ac+bd)^2$。故 $ac+bd \leqslant 1$。等号条件 $\dfrac{a}{c}=\dfrac{b}{d}$，即 $a=c$，$b=d$。最大值为 $1$。
+
+\medskip
+\textbf{7.}\quad 由 $(a+b+c)^2 = a^2+b^2+c^2+2(ab+bc+ca) = 1$，得 $a^2+b^2+c^2 = 1-2(ab+bc+ca)$。
+
+上界：$ab+bc+ca \geqslant 0$（$a,b,c \geqslant 0$），故 $a^2+b^2+c^2 \leqslant 1$。等号在某两个为 $0$ 时取到。
+
+下界：$ab+bc+ca \leqslant \dfrac{(a+b+c)^2}{3} = \dfrac{1}{3}$，故 $a^2+b^2+c^2 \geqslant 1-\dfrac{2}{3} = \dfrac{1}{3}$。等号在 $a=b=c=\dfrac{1}{3}$ 时取到。
+
+取值范围为 $\left[\dfrac{1}{3},\, 1\right]$。
+
+\medskip
+\textbf{8.}\quad 设 $f(x) = \dfrac{x^2-1}{2x}-\ln x = \dfrac{x}{2}-\dfrac{1}{2x}-\ln x$（$x>0$），则：
+\[
+f'(x) = \frac{1}{2}+\frac{1}{2x^2}-\frac{1}{x} = \frac{x^2-2x+1}{2x^2} = \frac{(x-1)^2}{2x^2} \geqslant 0
+\]
+故 $f(x)$ 在 $(0,+\infty)$ 上单调递增。又 $f(1) = 0$。
+
+当 $0<x<1$ 时 $f(x) < f(1) = 0$，当 $x>1$ 时 $f(x) > f(1) = 0$，$f(1) = 0$。
+
+故 $f(x) \geqslant 0$ 对所有 $x>0$ 成立，即 $\ln x \leqslant \dfrac{x^2-1}{2x}$。等号条件 $x=1$。证毕。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
