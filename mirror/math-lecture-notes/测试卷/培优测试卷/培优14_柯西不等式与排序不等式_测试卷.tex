@@ -1,0 +1,211 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·柯西不等式与排序不等式}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{(#1分)}}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{培优专题测试卷·柯西不等式与排序不等式}
+
+\normalsize
+考试时间：120分钟\quad 满分：150分
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{一、单选题（本大题共8小题，每小题5分，共40分。在每小题给出的四个选项中，只有一项是符合题目要求的。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item 已知 $a_1^2 + a_2^2 = 1$，$b_1^2 + b_2^2 = 1$，则 $a_1 b_1 + a_2 b_2$ 的最大值为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{1}{2}$
+\item $1$
+\item $\sqrt{2}$
+\item $2$
+\end{enumerate}
+
+\item 设 $x, y, z > 0$，$x + y + z = 1$，则 $\dfrac{1}{x} + \dfrac{4}{y} + \dfrac{9}{z}$ 的最小值为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $14$
+\item $24$
+\item $36$
+\item $49$
+\end{enumerate}
+
+\item 设 $a, b, c > 0$，$a + b + c = 1$，则 $a^2 + b^2 + c^2$ 的最小值为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{1}{3}$
+\item $\dfrac{1}{9}$
+\item $\dfrac{1}{4}$
+\item $\dfrac{1}{2}$
+\end{enumerate}
+
+\item 设 $a_1 \leqslant a_2 \leqslant a_3$，$b_1 \leqslant b_2 \leqslant b_3$，则下列和最大的是\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_1 b_1 + a_2 b_2 + a_3 b_3$
+\item $a_1 b_2 + a_2 b_3 + a_3 b_1$
+\item $a_1 b_3 + a_2 b_1 + a_3 b_2$
+\item $a_1 b_1 + a_2 b_3 + a_3 b_2$
+\end{enumerate}
+
+\item 设 $x, y, z > 0$，$xyz = 1$，则 $\dfrac{x^2}{y+z} + \dfrac{y^2}{z+x} + \dfrac{z^2}{x+y}$ 的最小值为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{1}{2}$
+\item $1$
+\item $\dfrac{3}{2}$
+\item $2$
+\end{enumerate}
+
+\item 设 $a, b, c > 0$，则 $\dfrac{a}{b+c} + \dfrac{b}{c+a} + \dfrac{c}{a+b}$ 的最小值为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $\dfrac{3}{2}$
+\item $2$
+\item $\dfrac{5}{2}$
+\end{enumerate}
+
+\item 利用柯西不等式，$\sqrt{1 \cdot 2} + \sqrt{2 \cdot 3} + \sqrt{3 \cdot 4}$ 与 $6$ 的大小关系为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\sqrt{1 \cdot 2} + \sqrt{2 \cdot 3} + \sqrt{3 \cdot 4} > 6$
+\item $\sqrt{1 \cdot 2} + \sqrt{2 \cdot 3} + \sqrt{3 \cdot 4} < 6$
+\item $\sqrt{1 \cdot 2} + \sqrt{2 \cdot 3} + \sqrt{3 \cdot 4} = 6$
+\item 无法确定
+\end{enumerate}
+
+\item 设 $a_1, a_2, \ldots, a_n > 0$，$\displaystyle\sum_{i=1}^{n} a_i = 1$，则 $\displaystyle\sum_{i=1}^{n} \left(a_i + \dfrac{1}{a_i}\right)^2$ 的最小值为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $n + 2$
+\item $\dfrac{(n^2 + 1)^2}{n}$
+\item $n^2 + 2 + \dfrac{1}{n^2}$
+\item $\dfrac{(n+1)^2}{n}$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{二、多选题（本大题共4小题，每小题5分，共20分。在每小题给出的选项中，有多项符合题目要求。全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item 关于柯西不等式 $(a_1^2 + a_2^2)(b_1^2 + b_2^2) \geqslant (a_1 b_1 + a_2 b_2)^2$，下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 等号成立当且仅当 $\dfrac{a_1}{b_1} = \dfrac{a_2}{b_2}$
+\item 可推广到 $n$ 维：$\left(\displaystyle\sum_{i=1}^{n} a_i^2\right)\left(\displaystyle\sum_{i=1}^{n} b_i^2\right) \geqslant \left(\displaystyle\sum_{i=1}^{n} a_i b_i\right)^2$
+\item 等号成立当且仅当 $a_i = kb_i$（$i = 1, 2$）或某组全为零
+\item 向量形式为 $|\vec{a} \cdot \vec{b}| \leqslant |\vec{a}| \cdot |\vec{b}|$
+\end{enumerate}
+
+\item 关于排序不等式，设 $a_1 \leqslant a_2 \leqslant \cdots \leqslant a_n$，$b_1 \leqslant b_2 \leqslant \cdots \leqslant b_n$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 顺序和 $\geqslant$ 乱序和 $\geqslant$ 逆序和
+\item $a_1 b_1 + a_2 b_2 + \cdots + a_n b_n \geqslant a_1 b_n + a_2 b_{n-1} + \cdots + a_n b_1$
+\item 等号成立当且仅当 $a_1 = a_2 = \cdots = a_n$ 或 $b_1 = b_2 = \cdots = b_n$
+\item 切比雪夫不等式可由排序不等式推出
+\end{enumerate}
+
+\item 设 $a, b, c > 0$，$a + b + c = 3$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\sqrt{a} + \sqrt{b} + \sqrt{c} \leqslant 3$
+\item $\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c} \geqslant 3$
+\item $a^2 + b^2 + c^2 \geqslant 3$
+\item $\sqrt{a} + \sqrt{b} + \sqrt{c} \geqslant \sqrt{3}$
+\end{enumerate}
+
+\item 利用柯西不等式可以证明的不等式有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\left(\displaystyle\sum_{i=1}^{n} a_i\right)^2 \leqslant n \displaystyle\sum_{i=1}^{n} a_i^2$
+\item 对 $a_i, b_i > 0$，$\displaystyle\sum_{i=1}^{n} \dfrac{a_i^2}{b_i} \geqslant \dfrac{\left(\displaystyle\sum_{i=1}^{n} a_i\right)^2}{\displaystyle\sum_{i=1}^{n} b_i}$
+\item 三角不等式 $|\vec{a} + \vec{b}| \leqslant |\vec{a}| + |\vec{b}|$
+\item $a^2 + b^2 \geqslant 2ab$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item 设 $3x + 4y = 5$，则 $x^2 + y^2$ 的最小值为 \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $a, b, c > 0$，$a + b + c = 1$，则 $\sqrt{4a+1} + \sqrt{4b+1} + \sqrt{4c+1}$ 的最大值为 \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $a_1, a_2, \ldots, a_n > 0$，$\displaystyle\sum_{i=1}^{n} a_i = S$，则 $\displaystyle\sum_{i=1}^{n} \dfrac{a_i}{S - a_i}$ 的最小值为 \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $x, y, z > 0$，$x^2 + y^2 + z^2 = 1$，则 $\dfrac{x}{1-x^2} + \dfrac{y}{1-y^2} + \dfrac{z}{1-z^2}$ 的最小值为 \underline{\hspace{2cm}}。\score{5}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item （10分）利用柯西不等式证明：对任意正实数 $a, b, c$，
+$$\frac{a^2}{b} + \frac{b^2}{c} + \frac{c^2}{a} \geqslant a + b + c$$
+
+\item （12分）设 $a, b, c > 0$，$a + b + c = 1$。
+\begin{enumerate}[label=(\arabic*)]
+\item 利用柯西不等式求 $\sqrt{3a + 1} + \sqrt{3b + 1} + \sqrt{3c + 1}$ 的最大值；
+\item 利用柯西不等式求 $\dfrac{a^2}{b} + \dfrac{b^2}{c} + \dfrac{c^2}{a}$ 的最小值；
+\item 证明：$\dfrac{1}{a+b} + \dfrac{1}{b+c} + \dfrac{1}{c+a} \geqslant \dfrac{9}{2}$。
+\end{enumerate}
+
+\item （12分）利用排序不等式证明：
+\begin{enumerate}[label=(\arabic*)]
+\item 对任意正实数 $a, b, c$，$\dfrac{a}{b+c} + \dfrac{b}{c+a} + \dfrac{c}{a+b} \geqslant \dfrac{3}{2}$；
+\item 设 $a_1 \leqslant a_2 \leqslant \cdots \leqslant a_n$，$b_1 \leqslant b_2 \leqslant \cdots \leqslant b_n$，则
+$$\frac{1}{n}\sum_{i=1}^{n} a_i b_i \geqslant \left(\frac{1}{n}\sum_{i=1}^{n} a_i\right)\left(\frac{1}{n}\sum_{i=1}^{n} b_i\right)$$
+\end{enumerate}
+
+\item （12分）设 $a_1, a_2, \ldots, a_n > 0$，$\displaystyle\sum_{i=1}^{n} a_i = 1$。
+\begin{enumerate}[label=(\arabic*)]
+\item 利用柯西不等式证明：$\displaystyle\sum_{i=1}^{n} \dfrac{a_i^2}{a_i + a_{i+1}} \geqslant \dfrac{1}{2}$（其中 $a_{n+1} = a_1$）；
+\item 证明：$\displaystyle\sum_{i=1}^{n} \dfrac{1}{a_i} \geqslant n^2$；
+\item 证明：$\displaystyle\sum_{i=1}^{n} \dfrac{a_i}{1 - a_i} \geqslant \dfrac{n}{n-1}$。
+\end{enumerate}
+
+\item （12分）设 $a, b, c$ 为三角形三边长，$s = \dfrac{a+b+c}{2}$。
+\begin{enumerate}[label=(\arabic*)]
+\item 利用柯西不等式证明：$\sqrt{s-a} + \sqrt{s-b} + \sqrt{s-c} \leqslant \sqrt{3s}$；
+\item 利用排序不等式证明：$a^2 b + b^2 c + c^2 a \geqslant a^2 c + b^2 a + c^2 b$（当 $a \geqslant b \geqslant c$ 时）；
+\item 证明：$\dfrac{a}{b+c-a} + \dfrac{b}{c+a-b} + \dfrac{c}{a+b-c} \geqslant 3$。
+\end{enumerate}
+
+\item （12分）设 $x_1, x_2, \ldots, x_n$ 为正实数，$p, q > 0$。
+\begin{enumerate}[label=(\arabic*)]
+\item 利用柯西不等式证明幂均不等式：$\left(\dfrac{\displaystyle\sum_{i=1}^{n} x_i^2}{n}\right)^{1/2} \geqslant \dfrac{\displaystyle\sum_{i=1}^{n} x_i}{n}$；
+\item 证明：$\displaystyle\sum_{i=1}^{n} \dfrac{x_i^p}{x_i^q} \geqslant \dfrac{\left(\displaystyle\sum_{i=1}^{n} x_i^{\frac{p+q}{2}}\right)^2}{\displaystyle\sum_{i=1}^{n} x_i^q}$；
+\item 设 $\displaystyle\sum_{i=1}^{n} x_i = 1$，利用柯西不等式证明：$\displaystyle\sum_{i=1}^{n} \dfrac{x_i}{1 + x_i} \geqslant \dfrac{n}{n+1}$。
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

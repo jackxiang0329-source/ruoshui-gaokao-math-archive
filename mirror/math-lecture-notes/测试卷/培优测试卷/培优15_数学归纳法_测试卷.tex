@@ -1,0 +1,195 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·数学归纳法}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{（#1 分）}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 培优专题·数学归纳法 测试卷}\\[0.5em]
+{\large 总分：150分 \quad 时间：120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题意。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item 用数学归纳法证明 $1+2+3+\cdots+n=\dfrac{n(n+1)}{2}$ 时，从 $n=k$ 到 $n=k+1$ 时，左边需要增加的项为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $k+1$
+\item $k+2$
+\item $(k+1)+(k+2)$
+\item $(k+1)^2$
+\end{enumerate}
+
+\item 用数学归纳法证明 $1+a+a^2+\cdots+a^n=\dfrac{1-a^{n+1}}{1-a}$（$a\neq 1$）时，验证 $n=1$ 时左边为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $1+a$
+\item $1+a+a^2$
+\item $a$
+\end{enumerate}
+
+\item 用数学归纳法证明 $1^2+2^2+3^2+\cdots+n^2=\dfrac{n(n+1)(2n+1)}{6}$，从 $n=k$ 到 $n=k+1$ 时，右边增加的量为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $(k+1)^2$
+\item $\dfrac{(k+1)(k+2)(2k+3)}{6}-\dfrac{k(k+1)(2k+1)}{6}$
+\item $\dfrac{(k+1)^2(2k+3)}{6}$
+\item 以上结果化简后均为 $(k+1)^2$
+\end{enumerate}
+
+\item 设 $f(n)=1+\dfrac{1}{2}+\dfrac{1}{3}+\cdots+\dfrac{1}{n}$，则 $f(2^k)>f(2^{k-1})+\dfrac{1}{2}$ 对于 $k\geq 1$ 成立的原因是 $f(2^k)-f(2^{k-1})$ 共有 \score{5} 项，每项均 $\geq \dfrac{1}{2^k}$。
+\begin{enumerate}[label=\Alph*.]
+\item $2^k$ 项
+\item $2^{k-1}$ 项
+\item $2^k+1$ 项
+\item $2^{k-1}+1$ 项
+\end{enumerate}
+
+\item 已知数列 $\{a_n\}$ 满足 $a_1=1$，$a_{n+1}=a_n+\dfrac{1}{a_n}$，用数学归纳法可以证明 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_n < \sqrt{2n}$ 对所有 $n$ 成立
+\item $a_n < 2\sqrt{n}$ 对所有 $n$ 成立
+\item $a_n > \sqrt{2n}$ 对所有 $n>1$ 成立
+\item $a_n < \sqrt{3n}$ 对所有 $n$ 成立
+\end{enumerate}
+
+\item 用数学归纳法证明 $2^n > n^2$（$n \geq 5$），基础步骤应验证 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $n=1$ 成立
+\item $n=2$ 成立
+\item $n=5$ 成立
+\item $n=4$ 成立
+\end{enumerate}
+
+\item 若命题 $P(n)$："$n^3+(n+1)^3+(n+2)^3$ 能被 $9$ 整除"，则 $P(k)\Rightarrow P(k+1)$ 的过程中，需要证明 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $(k+1)^3+(k+2)^3+(k+3)^3$ 能被 $9$ 整除
+\item $(k+3)^3-k^3$ 能被 $9$ 整除
+\item $(k+3)^3$ 能被 $9$ 整除
+\item $k^3+(k+1)^3+(k+2)^3$ 能被 $9$ 整除
+\end{enumerate}
+
+\item 用数学归纳法证明凸 $n$ 边形的对角线条数为 $\dfrac{n(n-3)}{2}$（$n\geq 3$），归纳步骤中从 $k$ 边形到 $k+1$ 边形时，对角线增加的条数为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $k-1$ 条
+\item $k$ 条
+\item $k-2$ 条
+\item $k+1$ 条
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题意，全部选对得5分，部分选对得2分，有选错得0分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 下列关于数学归纳法的叙述中，正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 数学归纳法的第一步是验证命题对初始值 $n_0$ 成立
+\item 归纳假设可以是"假设 $n=k$ 时命题成立"
+\item 数学归纳法可以证明所有与自然数有关的命题
+\item 用数学归纳法证明 $2^n > n^2$（$n\geq 5$）时，归纳步骤中需要用到 $2^k > k^2$ 且 $k\geq 5$
+\end{enumerate}
+
+\item 用数学归纳法证明 $\displaystyle\sum_{i=1}^{n}i\cdot i! = (n+1)!-1$，以下说法正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 基础步骤 $n=1$ 时：$1\cdot 1!=2!-1$，即 $1=1$，成立
+\item 从 $n=k$ 到 $n=k+1$，左边增加 $(k+1)\cdot(k+1)!$
+\item 从 $n=k$ 到 $n=k+1$，右边增加 $(k+2)\cdot(k+1)!$
+\item 该等式对所有正整数 $n$ 成立
+\end{enumerate}
+
+\item 设 $P(n)$ 为关于正整数 $n$ 的命题，以下推理中正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 若 $P(1)$ 成立且 $P(k)\Rightarrow P(k+1)$，则 $P(n)$ 对所有 $n\geq 1$ 成立
+\item 若 $P(1),P(2)$ 成立且 $P(k)\Rightarrow P(k+2)$，则 $P(n)$ 对所有 $n\geq 1$ 成立
+\item 若 $P(1)$ 成立且 $P(k)\Rightarrow P(2k)$，则 $P(n)$ 对所有 $n\geq 1$ 成立
+\item 若 $P(1),P(2)$ 成立且 $[P(k)\wedge P(k+1)]\Rightarrow P(k+2)$，则 $P(n)$ 对所有 $n\geq 1$ 成立
+\end{enumerate}
+
+\item 关于数列 $a_1=1$，$a_{n+1}=\dfrac{a_n}{1+a_n}$，下列结论正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 可用数学归纳法证明 $a_n=\dfrac{1}{n}$
+\item $\{a_n\}$ 单调递减
+\item 可用数学归纳法证明 $a_n > 0$ 对所有 $n$ 成立
+\item $\displaystyle\lim_{n\to\infty}a_n=0$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 用数学归纳法证明 $1\times 2+2\times 3+3\times 4+\cdots+n(n+1)=\dfrac{n(n+1)(n+2)}{3}$，验证 $n=1$ 时等式左边$=$\underline{\hspace{3cm}}，右边$=$\underline{\hspace{3cm}}。\score{5}
+
+\item 用数学归纳法证明 $1^3+2^3+3^3+\cdots+n^3=\left[\dfrac{n(n+1)}{2}\right]^2$，从 $n=k$ 到 $n=k+1$ 时，需证 $(k+1)^3=$\underline{\hspace{5cm}}。\score{5}
+
+\item 已知 $f(1)=1$，$f(n+1)=2f(n)+1$，用数学归纳法可证 $f(n)=$\underline{\hspace{3cm}}。\score{5}
+
+\item 用数学归纳法证明 $3^{2n}-1$ 能被 $8$ 整除（$n$ 为正整数），归纳步骤中 $3^{2(k+1)}-1=9\cdot 3^{2k}-1=8\cdot 3^{2k}+(3^{2k}-1)$，其中 $8\cdot 3^{2k}$ 能被 $8$ 整除，由归纳假设 $\underline{\hspace{3cm}}$ 能被 $8$ 整除，故命题成立。\score{5}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item （10分）用数学归纳法证明：对任意正整数 $n$，有
+\[1\cdot 2^1+2\cdot 2^2+3\cdot 2^3+\cdots+n\cdot 2^n=(n-1)\cdot 2^{n+1}+2.\]
+\score{10}
+
+\item （12分）用数学归纳法证明：对任意正整数 $n$，有
+\[\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}+\frac{1}{5\cdot 7}+\cdots+\frac{1}{(2n-1)(2n+1)}=\frac{n}{2n+1}.\]
+\score{12}
+
+\item （12分）用数学归纳法证明：对任意正整数 $n$，$n\geq 2$ 时，
+\[\left(1+\frac{1}{1}\right)\left(1+\frac{1}{2}\right)\left(1+\frac{1}{3}\right)\cdots\left(1+\frac{1}{n}\right)=n+1.\]
+\score{12}
+
+\item （12分）已知数列 $\{a_n\}$ 满足 $a_1=2$，$a_{n+1}=a_n^2-a_n+1$。用数学归纳法证明：
+\begin{enumerate}[label=(\arabic*)]
+\item $a_n \geq 2$ 对所有正整数 $n$ 成立；
+\item $a_n$ 严格递增，即 $a_{n+1}>a_n$ 对所有正整数 $n$ 成立。
+\end{enumerate}
+\score{12}
+
+\item （12分）用数学归纳法证明：对任意 $n$ 个正实数 $a_1,a_2,\ldots,a_n$，当 $n\geq 2$ 时，有算术-几何平均不等式
+\[\frac{a_1+a_2+\cdots+a_n}{n}\geq \sqrt[n]{a_1 a_2 \cdots a_n}.\]
+（提示：先证明 $n=2^k$ 的情形，再用"反向归纳法"证明一般情形。）
+\score{12}
+
+\item （12分）设 $n$ 为正整数，用数学归纳法证明：平面上 $n$ 条直线最多将平面分成 $\dfrac{n^2+n+2}{2}$ 个区域，其中"最多"指任意三条直线不共点，任意两条直线不平行。\score{12}
+
+\end{enumerate}
+
+\end{document}

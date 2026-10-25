@@ -1,0 +1,206 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·构造法与存在性问题}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{(#1分)}}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{培优专题测试卷·构造法与存在性问题}
+
+\normalsize
+考试时间：120分钟\quad 满分：150分
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{一、单选题（本大题共8小题，每小题5分，共40分。在每小题给出的四个选项中，只有一项是符合题目要求的。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item 方程 $x^3 + x - 1 = 0$ 在下列哪个区间内有实根\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $(-1, 0)$
+\item $(0, 1)$
+\item $(1, 2)$
+\item $(2, 3)$
+\end{enumerate}
+
+\item 已知 $a + b + c = 0$，则方程 $ax^2 + bx + c = 0$（$a \neq 0$）必有实根\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $x = 0$
+\item $x = 1$
+\item $x = -1$
+\item $x = \pm 1$
+\end{enumerate}
+
+\item 设 $f(x) = x^3 - 3x + 1$，则 $f(x)$ 在 $[-2, 2]$ 上的零点个数为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+
+\item 设 $f(x) = e^x - x^2$，则下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f(x)$ 在 $\mathbb{R}$ 上恒大于 $0$
+\item $f(x)$ 在 $\mathbb{R}$ 上恰有一个零点
+\item $f(x)$ 在 $\mathbb{R}$ 上恰有两个零点
+\item $f(x)$ 在 $\mathbb{R}$ 上无零点
+\end{enumerate}
+
+\item 存在实数 $a$ 使得方程 $x^2 + ax + a + 3 = 0$ 的两根均为正整数，则 $a = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $-4$
+\item $-5$
+\item $-6$
+\item $-7$
+\end{enumerate}
+
+\item 设 $a, b \in \mathbb{R}$，$a^3 - 3a^2 + 5a = 1$，$b^3 - 3b^2 + 5b = 5$，则 $a + b = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+
+\item 设 $f(x) = \ln x - \dfrac{1}{x}$，则 $f(x) = 0$ 的实根个数为\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $0$
+\item $1$
+\item $2$
+\item $3$
+\end{enumerate}
+
+\item 已知 $f(x) = x^3 + ax^2 + bx + c$，$f(1) = f(2) = f(3) = 0$，则 $f(0) = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $-6$
+\item $0$
+\item $6$
+\item $24$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{二、多选题（本大题共4小题，每小题5分，共20分。在每小题给出的选项中，有多项符合题目要求。全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item 关于方程 $e^x = x + 2$ 的实根，下列说法正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 方程有且仅有两个实根
+\item 一个实根在 $(-2, -1)$ 内
+\item 一个实根在 $(0, 1)$ 内
+\item 一个实根在 $(1, 2)$ 内
+\end{enumerate}
+
+\item 设 $f(x)$ 在 $[a, b]$ 上连续，$f(a) \cdot f(b) < 0$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $f(x)$ 在 $(a, b)$ 内至少有一个零点
+\item 若 $f(x)$ 在 $(a, b)$ 内单调，则 $f(x)$ 在 $(a, b)$ 内恰有一个零点
+\item $f(x)$ 在 $(a, b)$ 内可能有无穷多个零点
+\item 存在 $c \in (a, b)$ 使得 $f(c) = 0$
+\end{enumerate}
+
+\item 关于构造辅助函数证明不等式，下列常用的构造正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 证 $f(x) > g(x)$ 可构造 $h(x) = f(x) - g(x)$
+\item 证 $\dfrac{f(a) - f(b)}{a - b} > k$ 可构造 $h(x) = f(x) - kx$
+\item 证 $f(x) \geqslant 0$ 且 $f(x_0) = 0$ 时，常考察 $f'(x_0) = 0$
+\item 证 $f(x)g(x) > 0$ 可构造 $h(x) = \dfrac{f(x)}{g(x)}$
+\end{enumerate}
+
+\item 存在实数 $x$ 使得 $x^2 + ax + a < 0$ 成立，则 $a$ 的取值范围满足\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a > 4$
+\item $a < 0$
+\item $a \in (-\infty, 0) \cup (4, +\infty)$
+\item $\Delta = a^2 - 4a > 0$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item 方程 $x^5 + x = 1$ 的实根个数为 \underline{\hspace{1cm}}。\score{5}
+
+\item 设 $f(x) = x^3 - 3x + m$，若 $f(x)$ 恰有两个零点，则 $m = $ \underline{\hspace{2cm}}。\score{5}
+
+\item 方程 $\sin x = \dfrac{x}{10}$ 的正实根个数为 \underline{\hspace{1cm}}。\score{5}
+
+\item 设 $f(x) = e^x - ax^2$（$a > 0$），若 $f(x) \geqslant 0$ 对所有 $x \in \mathbb{R}$ 成立，则 $a$ 的最大值为 \underline{\hspace{2cm}}。\score{5}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item （10分）证明：方程 $x^3 + x + 1 = 0$ 有且仅有一个实根，且该实根在 $(-1, 0)$ 内。
+
+\item （12分）设 $f(x) = x^3 - 3ax + 2$（$a > 0$）。
+\begin{enumerate}[label=(\arabic*)]
+\item 当 $a = 1$ 时，求 $f(x)$ 的极值；
+\item 当 $a > 1$ 时，证明：$f(x)$ 有三个零点；
+\item 当 $a = 2$ 时，设 $f(x)$ 的三个零点为 $x_1 < x_2 < x_3$，证明：$x_3 - x_1 > 4$。
+\end{enumerate}
+
+\item （12分）证明：对任意正整数 $n$，方程 $x^n + x^{n-1} + \cdots + x = 1$ 在 $(0, 1)$ 内有且仅有一个实根。
+
+\item （12分）设 $f(x) = e^x - ex$。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$f(x) \geqslant 0$ 对所有 $x \in \mathbb{R}$ 成立；
+\item 利用（1）证明：$\ln x \leqslant \dfrac{x}{e}$（$x > 0$）；
+\item 证明：对任意正整数 $n$，$\displaystyle\sum_{k=1}^{n} \frac{1}{k} > \ln(n+1)$。
+\end{enumerate}
+
+\item （12分）已知函数 $f(x) = x - \ln(1+x)$。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$f(x) \geqslant 0$ 对 $x > -1$ 成立；
+\item 设 $a_1, a_2, \ldots, a_n \in (0, 1)$，证明：$\displaystyle\sum_{i=1}^{n} \ln(1-a_i) \geqslant -\dfrac{\displaystyle\sum_{i=1}^{n} a_i}{1 - \dfrac{\displaystyle\sum_{i=1}^{n} a_i}{n}}$；
+\item 设 $0 < a < b$，证明：存在唯一的 $c \in (a, b)$ 使得 $\dfrac{a}{\ln a} = \dfrac{b}{\ln b} = \dfrac{c}{\ln c}$。
+\end{enumerate}
+
+\item （12分）设 $f(x) = x\ln x - x + 1$。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$f(x) \geqslant 0$ 对 $x > 0$ 成立；
+\item 设 $a, b > 0$，证明：$\dfrac{a}{b} + \dfrac{b}{a} \geqslant 2 + 2\left(\dfrac{a - b}{a + b}\right)^2$；
+\item 设 $x_1, x_2, \ldots, x_n > 0$，$\displaystyle\sum_{i=1}^{n} x_i = 1$，证明：$\displaystyle\sum_{i=1}^{n} x_i \ln x_i \geqslant -\ln n$；
+\item 利用（3）证明：$\displaystyle\sum_{i=1}^{n} x_i \ln x_i \geqslant -\ln n$ 等号成立当且仅当 $x_1 = x_2 = \cdots = x_n = \dfrac{1}{n}$。
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

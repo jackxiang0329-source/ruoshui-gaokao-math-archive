@@ -1,0 +1,232 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{九年级上册数学测试卷}
+\fancyhead[R]{第\thepage\ 页，共 \pageref{LastPage} 页}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[C]{}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 九年级上册数学测试卷}\\[0.5em]
+{\large 满分：120分\quad 考试时间：120分钟}
+\end{center}
+
+\vspace{0.5em}
+\noindent\textbf{注意事项：}
+\begin{enumerate}[label=\arabic*., leftmargin=2em]
+\item 本试卷共三大题，24小题。
+\item 请将答案写在答题卡上，在本试卷上作答无效。
+\item 考试结束后，请将本试卷和答题卡一并交回。
+\end{enumerate}
+
+\vspace{0.5em}
+
+% ============================================================
+% 一、选择题（共10题，每题3分，共30分）
+% ============================================================
+\noindent\textbf{一、选择题（本大题共10小题，每小题3分，共30分。在每小题给出的四个选项中，只有一项是符合题目要求的。）}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item 一元二次方程 $x^2 - 5x + 6 = 0$ 的两个根分别为（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item $x_1 = 1,\; x_2 = 6$
+\item $x_1 = 2,\; x_2 = 3$
+\item $x_1 = -2,\; x_2 = -3$
+\item $x_1 = -1,\; x_2 = -6$
+\end{enumerate}
+
+\item 关于 $x$ 的方程 $x^2 + 2x + k = 0$ 有两个不相等的实数根，则 $k$ 的取值范围是（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item $k < 1$
+\item $k \leqslant 1$
+\item $k > 1$
+\item $k \geqslant 1$
+\end{enumerate}
+
+\item 二次函数 $y = (x - 3)^2 + 2$ 的顶点坐标是（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item $(3, 2)$
+\item $(-3, 2)$
+\item $(3, -2)$
+\item $(-3, -2)$
+\end{enumerate}
+
+\item 将二次函数 $y = x^2$ 的图象向左平移2个单位，再向下平移3个单位后，所得图象的函数表达式为（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item $y = (x + 2)^2 - 3$
+\item $y = (x - 2)^2 - 3$
+\item $y = (x + 2)^2 + 3$
+\item $y = (x - 2)^2 + 3$
+\end{enumerate}
+
+\item 如图，在平面直角坐标系中，点 $A(2, 0)$ 绕原点 $O$ 逆时针旋转 $90^\circ$ 后得到点 $A'$，则点 $A'$ 的坐标为（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item $(0, 2)$
+\item $(0, -2)$
+\item $(-2, 0)$
+\item $(2, 0)$
+\end{enumerate}
+
+\item 下列图形中，既是轴对称图形又是中心对称图形的是（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item 等边三角形
+\item 平行四边形
+\item 正方形
+\item 等腰梯形
+\end{enumerate}
+
+\item 如图，$AB$ 是 $\odot O$ 的直径，$C$ 是圆上一点，$\angle BAC = 35^\circ$，则 $\angle BOC$ 等于（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item $35^\circ$
+\item $55^\circ$
+\item $70^\circ$
+\item $110^\circ$
+\end{enumerate}
+
+\item 已知 $\odot O$ 的半径为 $5\,\text{cm}$，点 $P$ 到圆心 $O$ 的距离为 $3\,\text{cm}$，则点 $P$ 与 $\odot O$ 的位置关系是（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item 点 $P$ 在 $\odot O$ 外
+\item 点 $P$ 在 $\odot O$ 上
+\item 点 $P$ 在 $\odot O$ 内
+\item 无法确定
+\end{enumerate}
+
+\item 用配方法解方程 $x^2 + 4x - 1 = 0$，下列变形正确的是（\quad）
+\begin{enumerate}[label=\Alph*.]
+\item $(x + 2)^2 = 3$
+\item $(x + 2)^2 = 5$
+\item $(x - 2)^2 = 3$
+\item $(x - 2)^2 = 5$
+\end{enumerate}
+
+\item 二次函数 $y = ax^2 + bx + c$ 的图象如图所示，下列结论正确的是（\quad）
+
+\begin{tikzpicture}[scale=0.6]
+\draw[->] (-3.5,0) -- (3.5,0) node[right]{$x$};
+\draw[->] (0,-4) -- (0,3) node[above]{$y$};
+\draw[domain=-2.5:2.5,smooth,variable=\x,blue,thick] plot (\x,{-1.2*(\x-1)*(\x+2)});
+\node at (1,-0.3) {\small $1$};
+\node at (-2,-0.3) {\small $-2$};
+\end{tikzpicture}
+
+\begin{enumerate}[label=\Alph*.]
+\item $a > 0$
+\item $c > 0$
+\item $b^2 - 4ac < 0$
+\item $a - b + c > 0$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5em}
+
+% ============================================================
+% 二、填空题（共6题，每题3分，共18分）
+% ============================================================
+\noindent\textbf{二、填空题（本大题共6小题，每小题3分，共18分。）}
+
+\begin{enumerate}[label=\arabic*., start=11]
+
+\item 一元二次方程 $2x^2 - 3x - 2 = 0$ 的两根之和为 \underline{\hspace{3cm}}。
+
+\item 若二次函数 $y = x^2 - 4x + 3$ 的图象与 $x$ 轴的交点坐标为 $A(x_1, 0)$ 和 $B(x_2, 0)$，其中 $x_1 < x_2$，则 $AB =$ \underline{\hspace{3cm}}。
+
+\item 如图，在正方形 $ABCD$ 中，将 $\triangle ABD$ 绕点 $B$ 顺时针旋转 $60^\circ$ 后得到 $\triangle A'BD'$，则 $\angle ABA' =$ \underline{\hspace{3cm}} 度。
+
+\item 已知 $\odot O$ 的半径为 $5\,\text{cm}$，弦 $AB$ 的长为 $8\,\text{cm}$，则圆心 $O$ 到弦 $AB$ 的距离为 \underline{\hspace{3cm}} $\text{cm}$。
+
+\item 若一元二次方程 $x^2 - 3x + 1 = 0$ 的两根为 $x_1$、$x_2$，则 $x_1^2 + x_2^2 =$ \underline{\hspace{3cm}}。
+
+\item 已知二次函数 $y = ax^2 + bx + c$ 满足 $a + b + c = 0$，且其图象经过点 $(-1, 4)$，则该二次函数图象一定还经过点 \underline{\hspace{3cm}}。
+
+\end{enumerate}
+
+\vspace{0.5em}
+
+% ============================================================
+% 三、解答题（共8题，共72分）
+% ============================================================
+\noindent\textbf{三、解答题（本大题共8小题，共72分。解答应写出文字说明、演算步骤或证明过程。）}
+
+\begin{enumerate}[label=\arabic*., start=17]
+
+\item （8分）解下列一元二次方程：
+\begin{enumerate}[label=(\arabic*)]
+\item $x^2 - 6x + 8 = 0$（用因式分解法）；
+\item $2x^2 + 3x - 1 = 0$（用公式法）。
+\end{enumerate}
+\vspace{6cm}
+
+\item （8分）已知关于 $x$ 的一元二次方程 $x^2 - (2m + 1)x + m^2 + m = 0$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求证：该方程总有两个不相等的实数根；
+\item 若该方程的一个根为 $x = 3$，求 $m$ 的值及方程的另一个根。
+\end{enumerate}
+\vspace{6cm}
+
+\item （8分）已知二次函数 $y = x^2 - 2x - 3$。
+\begin{enumerate}[label=(\arabic*)]
+\item 将该二次函数化为 $y = (x - h)^2 + k$ 的形式，并写出顶点坐标和对称轴；
+\item 画出该函数的大致图象（要求标出顶点、与 $x$ 轴的交点、与 $y$ 轴的交点）；
+\item 根据图象直接写出当 $y < 0$ 时 $x$ 的取值范围。
+\end{enumerate}
+\vspace{6cm}
+
+\item （9分）某商店以每件30元的价格购进一批商品。经市场调查发现，当售价为每件40元时，每月可售出200件；售价每增加1元，月销量就减少5件。设商品售价为每件 $x$ 元（$x \geqslant 40$），月利润为 $y$ 元。
+\begin{enumerate}[label=(\arabic*)]
+\item 写出 $y$ 与 $x$ 之间的函数关系式；
+\item 当售价为多少元时，月利润最大？最大月利润是多少元？
+\item 若该商店要求月利润不低于2250元，求售价 $x$ 的取值范围。
+\end{enumerate}
+\vspace{6cm}
+
+\item （9分）如图，在 $\odot O$ 中，$AB$ 为直径，弦 $CD \perp AB$，垂足为 $E$。已知 $AB = 10$，$CD = 8$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求 $OE$ 的长；
+\item 求 $\angle BOC$ 的度数；
+\item 求 $\overset{\frown}{BC}$（劣弧）的长度（结果保留 $\pi$）。
+\end{enumerate}
+\vspace{6cm}
+
+\item （10分）如图，在平面直角坐标系中，抛物线 $y = -x^2 + bx + c$ 经过 $A(-1, 0)$ 和 $B(3, 0)$ 两点。
+\begin{enumerate}[label=(\arabic*)]
+\item 求该抛物线的函数表达式；
+\item 求该抛物线的顶点坐标；
+\item 在抛物线的对称轴上是否存在一点 $P$，使得 $PA + PC$ 最小（$C$ 为抛物线与 $y$ 轴的交点）？若存在，求出点 $P$ 的坐标；若不存在，说明理由。
+\end{enumerate}
+\vspace{6cm}
+
+\item （10分）如图，$AB$ 是 $\odot O$ 的直径，点 $C$ 在 $\odot O$ 上，$\angle CAB = 30^\circ$。过点 $C$ 作 $\odot O$ 的切线交 $AB$ 的延长线于点 $D$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求证：$BD = CD$；
+\item 若 $\odot O$ 的半径为 $2$，求 $CD$ 的长。
+\end{enumerate}
+\vspace{6cm}
+
+\item （10分）已知关于 $x$ 的二次函数 $y = x^2 - 2mx + m^2 - 1$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求证：该函数的图象与 $x$ 轴总有两个交点；
+\item 设该函数的图象与 $x$ 轴的两个交点为 $A(x_1, 0)$、$B(x_2, 0)$，且 $x_1^2 + x_2^2 = 10$，求 $m$ 的值；
+\item 在（2）的条件下，设该函数图象的顶点为 $M$，求 $\triangle ABM$ 的面积。
+\end{enumerate}
+\vspace{6cm}
+
+\end{enumerate}
+
+\end{document}

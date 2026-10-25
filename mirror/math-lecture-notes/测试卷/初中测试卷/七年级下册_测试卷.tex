@@ -1,0 +1,282 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{CJKfntef}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{七年级下册数学测试卷}
+\fancyhead[R]{第~\thepage~页}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot[C]{共~4~页}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 七年级下册数学测试卷}\\[8pt]
+{\large 满分：120分\quad 考试时间：120分钟}\\[4pt]
+{\normalsize 命题范围：相交线与平行线、实数、平面直角坐标系、二元一次方程组、不等式与不等式组、数据的收集与整理}
+\end{center}
+
+\vspace{4pt}
+\noindent\textbf{注意事项：}
+\begin{enumerate}[leftmargin=2em]
+\item 本试卷共三大题，24小题。
+\item 选择题每小题3分，填空题每小题3分，解答题共72分。
+\item 请在答题卡上作答，在本试卷上作答无效。
+\end{enumerate}
+
+\vspace{6pt}
+\noindent\rule{\textwidth}{0.8pt}
+
+\vspace{8pt}
+\noindent{\large\bfseries 一、选择题（本大题共10小题，每小题3分，共30分。每小题给出的四个选项中，只有一个是正确的。）}
+
+\vspace{6pt}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2.5em]
+
+\item 如图，直线 $a$、$b$ 相交，若 $\angle 1 = 70^{\circ}$，则 $\angle 2$ 等于（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $70^{\circ}$
+\item $110^{\circ}$
+\item $90^{\circ}$
+\item $20^{\circ}$
+\end{enumerate}
+
+\vspace{6pt}
+
+\item 下列各组数中，互为相反数的是（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $2$ 与 $\dfrac{1}{2}$
+\item $-3$ 与 $|-3|$
+\item $\sqrt{4}$ 与 $-\sqrt{4}$
+\item $(-1)^2$ 与 $-1$
+\end{enumerate}
+
+\vspace{6pt}
+
+\item $\sqrt{16}$ 的算术平方根是（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $4$
+\item $\pm 4$
+\item $2$
+\item $\pm 2$
+\end{enumerate}
+
+\vspace{6pt}
+
+\item 在平面直角坐标系中，点 $P(-3, 2)$ 所在的象限是（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item 第一象限
+\item 第二象限
+\item 第三象限
+\item 第四象限
+\end{enumerate}
+
+\vspace{6pt}
+
+\item 方程组 $\begin{cases} x + y = 5 \\ x - y = 1 \end{cases}$ 的解是（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $\begin{cases} x = 2 \\ y = 3 \end{cases}$
+\item $\begin{cases} x = 3 \\ y = 2 \end{cases}$
+\item $\begin{cases} x = 1 \\ y = 4 \end{cases}$
+\item $\begin{cases} x = 4 \\ y = 1 \end{cases}$
+\end{enumerate}
+
+\vspace{6pt}
+
+\item 不等式 $2x - 1 > 3$ 的解集是（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $x > 1$
+\item $x > 2$
+\item $x < 2$
+\item $x > -1$
+\end{enumerate}
+
+\vspace{6pt}
+
+\item 下列实数中，是无理数的是（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $\dfrac{1}{3}$
+\item $\sqrt{9}$
+\item $\pi - 3.14$
+\item $0.3\dot{2}\dot{3}$
+\end{enumerate}
+
+\vspace{6pt}
+
+\item 如图，$AB \parallel CD$，$\angle A = 50^{\circ}$，$\angle C = 30^{\circ}$，则 $\angle AEC$ 等于（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $80^{\circ}$
+\item $100^{\circ}$
+\item $70^{\circ}$
+\item $90^{\circ}$
+\end{enumerate}
+
+\vspace{6pt}
+
+\item 点 $M(a, -3)$ 关于 $x$ 轴对称的点 $N$ 的坐标为 $(2, b)$，则 $a + b$ 的值为（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $5$
+\item $-1$
+\item $-5$
+\item $1$
+\end{enumerate}
+
+\vspace{6pt}
+
+\item 某班 $50$ 名学生的一次数学考试成绩统计如下：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+分数段 & $60$ 分以下 & $60\sim79$ & $80\sim89$ & $90\sim100$ \\
+\hline
+人数 & $5$ & $15$ & $20$ & $10$ \\
+\hline
+\end{tabular}
+\end{center}
+
+则成绩在 $80$ 分及以上的学生占全班人数的百分比为（\blank{1cm}）
+\begin{enumerate}[label=\Alph*., nosep]
+\item $30\%$
+\item $40\%$
+\item $50\%$
+\item $60\%$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{10pt}
+\noindent\rule{\textwidth}{0.8pt}
+
+\vspace{8pt}
+\noindent{\large\bfseries 二、填空题（本大题共6小题，每小题3分，共18分。）}
+
+\vspace{6pt}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2.5em, resume]
+
+\item $64$ 的立方根是 \blank{2cm} 。
+
+\vspace{6pt}
+
+\item 在平面直角坐标系中，点 $(0, -5)$ 在 \blank{2cm} 轴上。
+
+\vspace{6pt}
+
+\item 若 $\sqrt{x-2}$ 有意义，则 $x$ 的取值范围是 \blank{2cm} 。
+
+\vspace{6pt}
+
+\item 已知二元一次方程 $2x - y = 3$，当 $x = 2$ 时，$y = $ \blank{2cm} 。
+
+\vspace{6pt}
+
+\item 不等式组 $\begin{cases} x > -1 \\ x < 3 \end{cases}$ 的解集为 \blank{2cm} 。
+
+\vspace{6pt}
+
+\item 如图，$a \parallel b$，直线 $c$ 分别与 $a$、$b$ 相交，$\angle 1 = 120^{\circ}$，则 $\angle 2 = $ \blank{2cm} 。
+
+\end{enumerate}
+
+\vspace{10pt}
+\noindent\rule{\textwidth}{0.8pt}
+
+\vspace{8pt}
+\noindent{\large\bfseries 三、解答题（本大题共8小题，共72分。解答应写出文字说明、演算步骤或证明过程。）}
+
+\vspace{6pt}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2.5em, resume]
+
+\item （8分）计算：
+\begin{enumerate}[label=(\arabic*), nosep]
+\item $\sqrt{49} - \sqrt[3]{-27} + |1 - \sqrt{2}|$
+\item $(-2)^2 + \sqrt{12} - 3\sqrt{\dfrac{1}{3}}$
+\end{enumerate}
+\vspace{6cm}
+
+\item （8分）解方程组：
+\begin{enumerate}[label=(\arabic*), nosep]
+\item $\begin{cases} 3x + 2y = 12 \\ x - y = 1 \end{cases}$
+\item $\begin{cases} 2x + 3y = 16 \\ 5x - 2y = -1 \end{cases}$
+\end{enumerate}
+\vspace{6cm}
+
+\item （8分）解不等式（组），并在数轴上表示解集：
+\begin{enumerate}[label=(\arabic*), nosep]
+\item $\dfrac{2x-1}{3} \geqslant \dfrac{x+2}{2} - 1$
+\item $\begin{cases} 2x + 1 > 0 \\ 3x - 6 \leqslant 0 \end{cases}$
+\end{enumerate}
+\vspace{6cm}
+
+\item （9分）如图，直线 $AB$ 与 $CD$ 相交于点 $O$，$OE$ 平分 $\angle AOC$，$\angle BOD = 70^{\circ}$。
+\begin{enumerate}[label=(\arabic*), nosep]
+\item 求 $\angle AOC$ 的度数。
+\item 求 $\angle AOE$ 的度数。
+\item 判断 $OE$ 与 $OD$ 的位置关系，并说明理由。
+\end{enumerate}
+\vspace{6cm}
+
+\item （9分）某学校组织植树活动，七年级和八年级共植树 $150$ 棵。已知八年级植树棵数是七年级的 $2$ 倍少 $30$ 棵。
+\begin{enumerate}[label=(\arabic*), nosep]
+\item 设七年级植树 $x$ 棵，八年级植树 $y$ 棵，列出关于 $x$、$y$ 的方程组。
+\item 求七年级和八年级各植树多少棵。
+\end{enumerate}
+\vspace{6cm}
+
+\item （10分）在平面直角坐标系中，已知点 $A(2, 0)$，$B(0, 4)$，$C(-1, -3)$。
+\begin{enumerate}[label=(\arabic*), nosep]
+\item 在坐标系中描出这三个点。
+\item 求 $\triangle ABC$ 的面积。（提示：可用割补法）
+\item 将点 $A$ 向左平移 $3$ 个单位长度得到点 $A'$，写出点 $A'$ 的坐标。
+\end{enumerate}
+\vspace{6cm}
+
+\item （10分）某校对七年级 $200$ 名学生每天课外阅读时间（单位：分钟）进行调查，随机抽取 $40$ 名学生，数据如下：
+
+\begin{center}
+$20,\ 35,\ 25,\ 40,\ 30,\ 20,\ 45,\ 35,\ 25,\ 30$\\
+$35,\ 20,\ 30,\ 25,\ 40,\ 35,\ 30,\ 25,\ 20,\ 35$\\
+$30,\ 25,\ 40,\ 35,\ 30,\ 20,\ 25,\ 35,\ 30,\ 40$\\
+$25,\ 30,\ 35,\ 20,\ 25,\ 30,\ 40,\ 35,\ 25,\ 30$
+\end{center}
+
+\begin{enumerate}[label=(\arabic*), nosep]
+\item 将上述数据整理成频数分布表（分成 $20\sim24$、$25\sim29$、$30\sim34$、$35\sim39$、$40\sim44$ 五组）。
+\item 阅读时间在 $30$ 分钟及以上的学生有多少人？占样本的百分之几？
+\item 估计全校 $200$ 名学生中，每天课外阅读时间在 $30$ 分钟及以上的学生约有多少人？
+\end{enumerate}
+\vspace{6cm}
+
+\item （10分）某商场举办促销活动，方案如下：购买 $A$ 商品每件 $80$ 元，$B$ 商品每件 $50$ 元。若一次性购买 $A$、$B$ 两种商品总价不超过 $500$ 元，且 $A$ 商品不少于 $3$ 件。
+\begin{enumerate}[label=(\arabic*), nosep]
+\item 设购买 $A$ 商品 $x$ 件，$B$ 商品 $y$ 件，列出满足条件的不等式组。
+\item 若购买 $A$ 商品 $4$ 件，$B$ 商品最多能买多少件？
+\item 在（2）的条件下，$A$、$B$ 商品各买多少件时，购买总件数最多？最多是多少件？
+\end{enumerate}
+\vspace{6cm}
+
+\end{enumerate}
+
+\end{document}
