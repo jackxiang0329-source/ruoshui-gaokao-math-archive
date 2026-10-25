@@ -1,0 +1,703 @@
+% ============================================================
+% 讲义 — 人教版高一必修2 · 第9章 统计
+% 编译命令：xelatex -interaction=nonstopmode 文件名.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版高一必修2 · 第9章 统计}}}
+\fancyhead[R]{\small\textcolor{mainblue}{统计学讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第9章\quad 统\quad 计}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 高一必修2\quad |\quad 课时：8课时}
+\end{center}
+\vspace{10pt}
+
+% ================================================================
+%  第一部分：知识点讲解
+% ================================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---- 9.1 随机抽样 ----
+\subsection*{9.1\quad 随机抽样}
+
+\begin{knowledgebox}[总体、个体、样本与样本容量]
+在统计学中，所考察对象的全体称为\textbf{总体}，其中每一个考察对象称为\textbf{个体}，从总体中抽取的一部分个体称为\textbf{样本}，样本中个体的数目称为\textbf{样本容量}。
+
+用样本的特征去估计总体的特征，是统计的基本思想。样本容量越大，估计越精确。
+\end{knowledgebox}
+
+\begin{knowledgebox}[简单随机抽样]
+设总体含有 $N$ 个个体，从中\textbf{逐个不放回}地抽取 $n$ 个个体作为样本 ($n \leqslant N$)，如果每次抽取时总体内每个个体被抽到的概率都相等，则这种抽样方法称为\textbf{简单随机抽样}。
+
+常用方法：
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{抽签法}：将 $N$ 个个体编号并制作号签，搅拌均匀后逐个抽取。
+  \item \textbf{随机数表法}：将个体编号，利用随机数表依次读取随机数来选取样本。
+\end{enumerate}
+
+\textbf{适用条件}：总体容量较小，个体之间无明显差异。
+\end{knowledgebox}
+
+\begin{knowledgebox}[系统抽样（等距抽样）]
+将总体中的 $N$ 个个体编号，按\textbf{等间隔}分成若干段，从第一段中随机确定一个起始编号，再按固定间隔依次抽取。
+
+\textbf{步骤}：
+\begin{enumerate}[label=(\arabic*)]
+  \item 将总体 $N$ 个个体编号；
+  \item 确定分段间隔 $k = \left\lfloor \dfrac{N}{n} \right\rfloor$（若不能整除，先随机剔除多余个体）；
+  \item 在第一段 $1 \sim k$ 中随机确定起始编号 $l$；
+  \item 依次抽取编号为 $l,\ l+k,\ l+2k,\ \ldots$ 的个体。
+\end{enumerate}
+
+\textbf{适用条件}：总体容量较大，个体之间无明显差异。
+\end{knowledgebox}
+
+\begin{knowledgebox}[分层抽样]
+当总体由\textbf{差异明显}的几部分组成时，先将总体按某种特征分成若干互不交叉的层，再按各层个体数占总体的\textbf{比例}独立抽取样本。
+
+设总体分为 $m$ 层，第 $i$ 层有 $N_i$ 个个体，$N = \sum_{i=1}^{m} N_i$，样本容量为 $n$，则第 $i$ 层应抽取
+\[
+n_i = n \times \frac{N_i}{N} \quad (i = 1, 2, \ldots, m)
+\]
+
+\textbf{适用条件}：总体由差异明显的几部分组成。
+\end{knowledgebox}
+
+\begin{warnbox}[三种抽样方法对比]
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lccc}
+\toprule
+\textbf{方法} & \textbf{共同点} & \textbf{各自特点} & \textbf{适用范围} \\
+\midrule
+简单随机抽样 & \multirow{3}{*}{\parbox{4cm}{\centering 每个个体被抽到的概率相等}} & 逐个不放回 & 总体容量较小 \\
+系统抽样 & & 等间隔抽取 & 总体容量较大且均匀 \\
+分层抽样 & & 按比例分层 & 总体差异明显 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{warnbox}
+
+% ---- 9.2 频率分布表与直方图 ----
+\subsection*{9.2\quad 频率分布表与直方图}
+
+\begin{knowledgebox}[绘制频率分布直方图的步骤]
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{求极差}：$R = x_{\max} - x_{\min}$。
+  \item \textbf{决定组距与组数}：一般取 $5 \sim 12$ 组，组距 $= \left\lceil \dfrac{R}{\text{组数}} \right\rceil$。
+  \item \textbf{确定分点}：通常取比数据多一位小数，使数据不落在分点上。
+  \item \textbf{列频率分布表}：统计各组频数 $n_i$，计算频率 $= \dfrac{n_i}{n}$，以及 $\dfrac{\text{频率}}{\text{组距}}$。
+  \item \textbf{画直方图}：横轴表示数据，纵轴表示 $\dfrac{\text{频率}}{\text{组距}}$，以组距为底画矩形。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{tipbox}[频率分布直方图的关键性质]
+\begin{itemize}
+  \item 每个小矩形的面积 $=$ 组距 $\times \dfrac{\text{频率}}{\text{组距}} = \text{频率}$。
+  \item 所有小矩形面积之和 $= 1$。
+  \item 样本容量越大、分组越细，直方图越接近总体的真实分布。
+\end{itemize}
+\end{tipbox}
+
+% ---- 9.3 数字特征 ----
+\subsection*{9.3\quad 数字特征}
+
+\begin{knowledgebox}[平均数（均值）]
+设样本数据为 $x_1, x_2, \ldots, x_n$，则\textbf{样本均值}为：
+\[
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i = \frac{x_1 + x_2 + \cdots + x_n}{n}
+\]
+
+\textbf{加权平均数}：若数据 $x_1, x_2, \ldots, x_k$ 对应的频数分别为 $f_1, f_2, \ldots, f_k$（$\sum f_i = n$），则
+\[
+\bar{x} = \frac{1}{n}\sum_{i=1}^{k} x_i f_i
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[中位数与众数]
+\textbf{中位数}：将数据从小到大排列，若 $n$ 为奇数，中位数为第 $\dfrac{n+1}{2}$ 个数据；若 $n$ 为偶数，中位数为第 $\dfrac{n}{2}$ 个与第 $\dfrac{n}{2}+1$ 个数据的平均值。
+
+\textbf{众数}：一组数据中出现次数最多的数据。众数可能不唯一。
+\end{knowledgebox}
+
+\begin{knowledgebox}[方差与标准差]
+\textbf{样本方差}衡量数据的波动大小：
+\[
+s^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2
+\]
+
+等价计算公式：
+\[
+s^2 = \frac{1}{n}\sum_{i=1}^{n} x_i^2 - \bar{x}^2
+\]
+
+\textbf{标准差}为方差的算术平方根：
+\[
+s = \sqrt{s^2}
+\]
+
+方差（标准差）越大，数据越分散；方差（标准差）越小，数据越集中。
+\end{knowledgebox}
+
+\begin{tipbox}[方差的性质]
+若数据 $x_1, \ldots, x_n$ 的方差为 $s^2$，则数据 $ax_1+b,\ ax_2+b,\ \ldots,\ ax_n+b$ 的方差为 $a^2 s^2$。即线性变换 $y = ax + b$ 将方差放大 $a^2$ 倍，常数平移不改变方差。
+\end{tipbox}
+
+% ---- 9.4 变量的相关性 ----
+\subsection*{9.4\quad 变量的相关性}
+
+\begin{knowledgebox}[散点图与相关关系]
+对于两个变量 $X$ 和 $Y$，在平面直角坐标系中画出对应的点 $(x_i, y_i)$，称为\textbf{散点图}。
+\begin{itemize}
+  \item \textbf{正相关}：$X$ 增大时 $Y$ 也呈增大趋势，散点从左下到右上分布。
+  \item \textbf{负相关}：$X$ 增大时 $Y$ 呈减小趋势，散点从左上到右下分布。
+  \item 散点越接近一条直线，线性相关程度越强。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[线性回归方程]
+设 $y$ 关于 $x$ 的线性回归方程为 $\hat{y} = \hat{b}x + \hat{a}$，其中：
+\[
+\hat{b} = \frac{\displaystyle\sum_{i=1}^{n} x_i y_i - n\bar{x}\bar{y}}{\displaystyle\sum_{i=1}^{n} x_i^2 - n\bar{x}^2}, \qquad \hat{a} = \bar{y} - \hat{b}\bar{x}
+\]
+
+回归直线必过样本中心点 $(\bar{x},\, \bar{y})$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[相关系数]
+\textbf{相关系数} $r$ 衡量两个变量线性相关的强弱：
+\[
+r = \frac{\displaystyle\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\displaystyle\sum_{i=1}^{n}(x_i - \bar{x})^2 \cdot \sum_{i=1}^{n}(y_i - \bar{y})^2}}
+\]
+
+\begin{itemize}
+  \item $|r|$ 越接近 $1$，线性相关越强；
+  \item $|r|$ 越接近 $0$，线性相关越弱；
+  \item 一般 $|r| > 0.75$ 认为线性相关性较强。
+\end{itemize}
+\end{knowledgebox}
+
+% ================================================================
+%  第二部分：例题精讲
+% ================================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例1】简单随机抽样]
+某班有 $50$ 名学生，学号为 $01 \sim 50$，要从中用随机数表法抽取 $5$ 名学生参加体质测试。从随机数表某行某列开始向右读取，依次得到 $16,\ 22,\ 77,\ 94,\ 39,\ 45,\ 08$，问被抽中的学生学号有哪些？
+\end{examplebox}
+
+\textbf{解}：
+
+逐一检查，保留 $01 \sim 50$ 的编号，跳过超出范围和重复的数：
+\begin{itemize}
+  \item $16$：在范围内，选中。
+  \item $22$：在范围内，选中。
+  \item $77$：超出 $50$，跳过。
+  \item $94$：超出 $50$，跳过。
+  \item $39$：在范围内，选中。
+  \item $45$：在范围内，选中。
+  \item $08$：在范围内，选中。
+\end{itemize}
+
+被抽中的学号为：$08,\ 16,\ 22,\ 39,\ 45$。
+
+\begin{examplebox}[【例2】系统抽样]
+某工厂生产 $1000$ 个零件，编号 $0001 \sim 1000$，用系统抽样抽取 $50$ 个检测。(1) 求分段间隔；(2) 若起始编号为 $0015$，写出第 $5$ 个和第 $50$ 个被抽中的编号。
+\end{examplebox}
+
+\textbf{解}：
+
+(1) 分段间隔 $k = \dfrac{1000}{50} = 20$。
+
+(2) 第 $i$ 个被抽中的编号为 $15 + (i-1) \times 20$。
+\begin{itemize}
+  \item 第 $5$ 个：$15 + 4 \times 20 = 0095$。
+  \item 第 $50$ 个：$15 + 49 \times 20 = 0995$。
+\end{itemize}
+
+\begin{examplebox}[【例3】分层抽样]
+某校高一 $600$ 人、高二 $400$ 人、高三 $500$ 人，共 $1500$ 人。用分层抽样从全校抽取 $60$ 人进行视力调查，各年级应分别抽取多少人？
+\end{examplebox}
+
+\textbf{解}：
+
+抽样比 $= \dfrac{60}{1500} = \dfrac{1}{25}$。
+\begin{itemize}
+  \item 高一抽取：$600 \times \dfrac{1}{25} = 24$ 人。
+  \item 高二抽取：$400 \times \dfrac{1}{25} = 16$ 人。
+  \item 高三抽取：$500 \times \dfrac{1}{25} = 20$ 人。
+\end{itemize}
+
+验证：$24 + 16 + 20 = 60$，正确。
+
+\begin{examplebox}[【例4】频率分布直方图]
+某校抽取 $100$ 名学生测量身高（cm），数据分组如下表。求各组频率和频率/组距，并画出频率分布直方图。
+
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+分组 & $[150,155)$ & $[155,160)$ & $[160,165)$ & $[165,170)$ \\
+\midrule
+频数 & $10$ & $30$ & $40$ & $20$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{examplebox}
+
+\textbf{解}：
+
+样本容量 $n = 100$，组距 $= 5$。
+
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+分组 & $[150,155)$ & $[155,160)$ & $[160,165)$ & $[165,170)$ \\
+\midrule
+频率 & $0.10$ & $0.30$ & $0.40$ & $0.20$ \\
+频率/组距 & $0.02$ & $0.06$ & $0.08$ & $0.04$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+频率分布直方图如下：
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=11cm, height=6.5cm,
+    xlabel={身高（cm）},
+    ylabel={频率/组距},
+    ymin=0, ymax=0.10,
+    xtick={152.5,157.5,162.5,167.5},
+    xticklabels={$[150,155)$,$[155,160)$,$[160,165)$,$[165,170)$},
+    xticklabel style={font=\small},
+    bar width=60pt,
+    fill=lightblue,
+    draw=mainblue,
+    every axis plot/.append style={line width=0.8pt},
+    axis lines=left,
+]
+\addplot[fill=lightblue, draw=mainblue] coordinates {
+    (152.5, 0.02)
+    (157.5, 0.06)
+    (162.5, 0.08)
+    (167.5, 0.04)
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{examplebox}[【例5】均值与方差的计算]
+甲、乙两人各射击 $5$ 次，成绩（环数）如下：
+\begin{itemize}
+  \item 甲：$8,\ 9,\ 10,\ 9,\ 8$
+  \item 乙：$7,\ 10,\ 10,\ 9,\ 9$
+\end{itemize}
+分别计算均值和方差，判断谁的成绩更稳定。
+\end{examplebox}
+
+\textbf{解}：
+
+\textbf{甲}：
+\[
+\bar{x}_{\text{甲}} = \frac{8+9+10+9+8}{5} = 8.8
+\]
+\[
+s^2_{\text{甲}} = \frac{(8{-}8.8)^2+(9{-}8.8)^2+(10{-}8.8)^2+(9{-}8.8)^2+(8{-}8.8)^2}{5} = \frac{0.64+0.04+1.44+0.04+0.64}{5} = 0.56
+\]
+
+\textbf{乙}：
+\[
+\bar{x}_{\text{乙}} = \frac{7+10+10+9+9}{5} = 9
+\]
+\[
+s^2_{\text{乙}} = \frac{(7{-}9)^2+(10{-}9)^2+(10{-}9)^2+(9{-}9)^2+(9{-}9)^2}{5} = \frac{4+1+1+0+0}{5} = 1.2
+\]
+
+$s^2_{\text{甲}} < s^2_{\text{乙}}$，甲的成绩更稳定。
+
+\begin{examplebox}[【例6】方差的性质]
+已知数据 $x_1, x_2, x_3, x_4, x_5$ 的均值为 $10$，方差为 $4$。求数据 $3x_1+2,\ 3x_2+2,\ 3x_3+2,\ 3x_4+2,\ 3x_5+2$ 的均值和方差。
+\end{examplebox}
+
+\textbf{解}：
+
+由线性变换性质 $y_i = ax_i + b$：
+\[
+\text{新均值} = a\bar{x} + b = 3 \times 10 + 2 = 32
+\]
+\[
+\text{新方差} = a^2 s^2 = 9 \times 4 = 36
+\]
+
+新数据的均值为 $32$，方差为 $36$。
+
+\begin{examplebox}[【例7】回归方程]
+为研究学习时间 $x$（小时/天）与数学成绩 $y$（分）的关系，收集了 $5$ 组数据：
+
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+$x_i$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+\midrule
+$y_i$ & $62$ & $68$ & $75$ & $82$ & $88$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+求 $y$ 关于 $x$ 的线性回归方程，并画出散点图和回归直线。
+\end{examplebox}
+
+\textbf{解}：
+
+\[
+\bar{x} = \frac{2+3+4+5+6}{5} = 4, \qquad \bar{y} = \frac{62+68+75+82+88}{5} = 75
+\]
+
+\[
+\sum x_i y_i = 124 + 204 + 300 + 410 + 528 = 1566
+\]
+\[
+\sum x_i^2 = 4 + 9 + 16 + 25 + 36 = 90
+\]
+
+\[
+\hat{b} = \frac{1566 - 5 \times 4 \times 75}{90 - 5 \times 16} = \frac{66}{10} = 6.6
+\]
+\[
+\hat{a} = 75 - 6.6 \times 4 = 48.6
+\]
+
+回归方程：$\hat{y} = 6.6x + 48.6$
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=10cm, height=7cm,
+    xlabel={学习时间 $x$（小时/天）},
+    ylabel={数学成绩 $y$（分）},
+    xmin=1, xmax=7,
+    ymin=55, ymax=95,
+    grid=major,
+    grid style={dashed, gray!30},
+]
+\addplot[only marks, mark=*, mark size=3pt, color=mainblue] coordinates {
+    (2,62) (3,68) (4,75) (5,82) (6,88)
+};
+\addplot[domain=1:7, color=examorange, thick, samples=2] {6.6*x + 48.6};
+\addlegendimage{only marks, mark=*, mark size=3pt, color=mainblue}
+\addlegendentry{样本点}
+\addlegendimage{color=examorange, thick}
+\addlegendentry{回归直线}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{examplebox}[【例8】频率分布直方图中估计均值]
+根据例4中的频率分布直方图，估计这 $100$ 名学生身高的平均值。
+\end{examplebox}
+
+\textbf{解}：
+
+用各组的\textbf{组中值}乘以频率再求和：
+
+各组组中值：$152.5,\ 157.5,\ 162.5,\ 167.5$。
+
+\begin{align*}
+\bar{x} &\approx 152.5 \times 0.10 + 157.5 \times 0.30 + 162.5 \times 0.40 + 167.5 \times 0.20 \\
+&= 15.25 + 47.25 + 65.00 + 33.50 = 161 \text{（cm）}
+\end{align*}
+
+估计平均身高约为 $161$ cm。
+
+\begin{examplebox}[【例9】综合：抽样与统计推断]
+某市有高中生 $24000$ 人，其中高一 $8000$ 人、高二 $7000$ 人、高三 $9000$ 人。计划抽取 $1200$ 人调查视力。
+(1) 应采用什么抽样方法？(2) 各年级各抽多少人？(3) 若调查后高一近视率为 $40\%$，高二为 $55\%$，高三为 $70\%$，估计全市高中生近视率。
+\end{examplebox}
+
+\textbf{解}：
+
+(1) 不同年级的近视率可能有明显差异，应采用\textbf{分层抽样}。
+
+(2) 抽样比 $= \dfrac{1200}{24000} = \dfrac{1}{20}$。
+\begin{itemize}
+  \item 高一：$8000 \times \dfrac{1}{20} = 400$ 人。
+  \item 高二：$7000 \times \dfrac{1}{20} = 350$ 人。
+  \item 高三：$9000 \times \dfrac{1}{20} = 450$ 人。
+\end{itemize}
+
+(3) 综合近视率（加权平均）：
+\[
+\bar{p} = \frac{400 \times 0.40 + 350 \times 0.55 + 450 \times 0.70}{1200} = \frac{160 + 192.5 + 315}{1200} = \frac{667.5}{1200} \approx 55.6\%
+\]
+
+\begin{examplebox}[【例10】综合统计计算]
+$40$ 名学生数学成绩（分）如下，求均值、中位数和标准差。
+
+\begin{center}
+\small
+$85,\ 92,\ 78,\ 88,\ 76,\ 95,\ 82,\ 71,\ 89,\ 90$\\
+$73,\ 86,\ 91,\ 80,\ 77,\ 93,\ 84,\ 69,\ 87,\ 74$\\
+$96,\ 81,\ 79,\ 90,\ 83,\ 70,\ 88,\ 94,\ 75,\ 82$\\
+$85,\ 78,\ 92,\ 86,\ 68,\ 89,\ 80,\ 73,\ 91,\ 87$
+\end{center}
+\end{examplebox}
+
+\textbf{解}：
+
+排序后第 $20$ 个和第 $21$ 个数据为 $84$ 和 $85$。
+
+\textbf{中位数} $= \dfrac{84 + 85}{2} = 84.5$。
+
+\textbf{均值}：$\bar{x} = \dfrac{85+92+\cdots+87}{40} = \dfrac{3300}{40} = 82.5$。
+
+\textbf{方差}：$\sum x_i^2 = 274708$
+
+\[
+s^2 = \frac{274708}{40} - 82.5^2 = 6867.7 - 6806.25 = 61.45
+\]
+
+\textbf{标准差}：$s = \sqrt{61.45} \approx 7.84$。
+
+% ================================================================
+%  第三部分：应用题
+% ================================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】灯泡质量检测]
+某工厂生产 $5000$ 个灯泡，质检员用系统抽样抽取 $100$ 个检测，发现 $4$ 个不合格。
+(1) 估计这批灯泡中不合格品的数量。(2) 若出厂要求不合格率不超过 $5\%$，能否出厂？
+\end{appbox}
+
+\textbf{解}：
+
+(1) 样本不合格率 $= \dfrac{4}{100} = 4\%$。估计不合格品数量 $= 5000 \times 4\% = 200$ 个。
+
+(2) $4\% < 5\%$，符合标准，可以出厂。
+
+\begin{appbox}[【应用2】电商平台满意度调查]
+某电商平台调查 $200$ 名用户的满意度评分（$1 \sim 5$ 分），结果如下：
+
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+评分 & $1$ & $2$ & $3$ & $4$ & $5$ \\
+\midrule
+频数 & $10$ & $20$ & $50$ & $80$ & $40$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(1) 计算评分的均值和方差。(2) 画出频率分布直方图。
+\end{appbox}
+
+\textbf{解}：
+
+(1)
+\[
+\bar{x} = \frac{1\times10 + 2\times20 + 3\times50 + 4\times80 + 5\times40}{200} = \frac{720}{200} = 3.6
+\]
+
+\[
+s^2 = \frac{1^2\times10 + 2^2\times20 + 3^2\times50 + 4^2\times80 + 5^2\times40}{200} - 3.6^2 = 14.1 - 12.96 = 1.14
+\]
+
+(2) 频率分布直方图：
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=10cm, height=6cm,
+    xlabel={评分},
+    ylabel={频率},
+    ymin=0, ymax=0.45,
+    xtick={1,2,3,4,5},
+    bar width=1.2cm,
+    fill=lightpurple,
+    draw=apppurple,
+    axis lines=left,
+    nodes near coords,
+    every node near coord/.append style={font=\small},
+]
+\addplot[fill=lightpurple, draw=apppurple] coordinates {
+    (1, 0.05) (2, 0.10) (3, 0.25) (4, 0.40) (5, 0.20)
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{appbox}[【应用3】气温与冰淇淋销量回归]
+气象站记录 $7$ 天最高气温 $x$（$^{\circ}$C）与冰淇淋日销量 $y$（箱）：
+
+\begin{center}
+\begin{tabular}{cccccccc}
+\toprule
+$x$ & $22$ & $25$ & $28$ & $30$ & $32$ & $35$ & $38$ \\
+\midrule
+$y$ & $15$ & $20$ & $28$ & $33$ & $38$ & $45$ & $52$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(1) 画散点图，判断相关性。(2) 求回归方程。(3) 预测 $40^{\circ}$C 时的日销量。
+\end{appbox}
+
+\textbf{解}：
+
+(1) 散点图显示 $x$ 与 $y$ 呈\textbf{正相关}。
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=10cm, height=7cm,
+    xlabel={最高气温（$^{\circ}$C）},
+    ylabel={日销量（箱）},
+    xmin=20, xmax=42,
+    ymin=10, ymax=55,
+    grid=major,
+    grid style={dashed, gray!30},
+]
+\addplot[only marks, mark=*, mark size=3pt, color=mainblue] coordinates {
+    (22,15) (25,20) (28,28) (30,33) (32,38) (35,45) (38,52)
+};
+\addplot[domain=20:42, color=examorange, thick, samples=2] {2.20*x - 32.97};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+(2) $\bar{x} = 30$，$\bar{y} = 33$，$\sum x_i y_i = 7339$，$\sum x_i^2 = 6486$。
+
+\[
+\hat{b} = \frac{7339 - 7\times30\times33}{6486 - 7\times900} = \frac{409}{186} \approx 2.199
+\]
+\[
+\hat{a} = 33 - 2.199\times30 \approx -32.97
+\]
+
+回归方程：$\hat{y} = 2.20x - 32.97$
+
+(3) 当 $x = 40$ 时：$\hat{y} = 2.20\times40 - 32.97 = 55.03 \approx 55$（箱）。
+
+% ================================================================
+%  第四部分：课堂练习
+% ================================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 某校高一 $400$ 人、高二 $350$ 人、高三 $450$ 人，用分层抽样抽取 $120$ 人，各年级各抽多少人？
+
+  \item 数据 $2,\ 4,\ 6,\ 8,\ 10$ 的均值和方差各是多少？
+
+  \item 已知数据 $x_1, x_2, x_3, x_4$ 的均值为 $5$，方差为 $3$。求 $2x_1-1,\ 2x_2-1,\ 2x_3-1,\ 2x_4-1$ 的均值和方差。
+
+  \item 频率分布直方图中，$[20,30)$ 的面积为 $0.3$，$[30,40)$ 的面积为 $0.5$，$[40,50)$ 的面积为 $0.2$。样本容量 $200$，求数据落在 $[30,50)$ 的人数。
+
+  \item 已知 $\bar{x}=3$，$\bar{y}=5$，$\sum x_i y_i=90$，$\sum x_i^2=55$，$n=10$。求回归方程 $\hat{y}=\hat{b}x+\hat{a}$。
+
+  \item 甲组数据 $2,4,6,8,10$，乙组数据 $4,5,6,7,8$。比较两组方差，哪组更稳定？
+\end{enumerate}
+
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}
+  \item 总人数 $1200$，高一 $40$ 人，高二 $35$ 人，高三 $45$ 人。
+
+  \item $\bar{x} = 6$，$s^2 = \dfrac{16+4+0+4+16}{5} = 8$。
+
+  \item 新均值 $= 2\times5-1 = 9$，新方差 $= 4\times3 = 12$。
+
+  \item $[30,50)$ 频率 $= 0.5+0.2=0.7$，人数 $= 200\times0.7 = 140$ 人。
+
+  \item $\hat{b} = \dfrac{90-10\times3\times5}{55-10\times9} = \dfrac{-60}{-35} = \dfrac{12}{7}$，$\hat{a} = 5-\dfrac{12}{7}\times3 = -\dfrac{1}{7}$。
+
+  回归方程：$\hat{y} = \dfrac{12}{7}x - \dfrac{1}{7}$。
+
+  \item 甲 $s^2 = 8$，乙 $s^2 = 2$。乙组更稳定。
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

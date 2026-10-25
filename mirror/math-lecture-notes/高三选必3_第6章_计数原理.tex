@@ -1,0 +1,544 @@
+% ============================================================
+% 人教版高三选择性必修第三册 · 第6章 计数原理
+% 编译命令：xelatex -interaction=nonstopmode 高三选必3_第6章_计数原理.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版高三选必3 · 第6章 计数原理}}}
+\fancyhead[R]{\small\textcolor{mainblue}{计数原理讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第6章\quad 计数原理}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 高三选择性必修第三册\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ==================== 6.1 分类加法与分步乘法计数原理 ====================
+\subsection*{6.1\quad 分类加法与分步乘法计数原理}
+
+\begin{knowledgebox}[分类加法计数原理]
+做一件事，完成它可以有$n$类办法，在第一类办法中有$m_1$种不同的方法，在第二类办法中有$m_2$种不同的方法，$\cdots\cdots$，在第$n$类办法中有$m_n$种不同的方法，那么完成这件事共有
+\[
+N = m_1 + m_2 + \cdots + m_n
+\]
+种不同的方法。
+\end{knowledgebox}
+
+\begin{knowledgebox}[分步乘法计数原理]
+做一件事，完成它需要分成$n$个步骤，做第一步有$m_1$种不同的方法，做第二步有$m_2$种不同的方法，$\cdots\cdots$，做第$n$步有$m_n$种不同的方法，那么完成这件事共有
+\[
+N = m_1 \times m_2 \times \cdots \times m_n
+\]
+种不同的方法。
+\end{knowledgebox}
+
+\begin{tipbox}[两个原理的区别]
+\textbf{分类加法原理}：各类办法之间是\textbf{独立的、并列的}，采用任何一类办法都能独立完成这件事，各类方法互斥。
+
+\textbf{分步乘法原理}：各步之间是\textbf{连续的、依存的}，缺少任何一步都不能完成这件事，每一步都不能独立完成。
+
+简单判断方法：若能用"或者"连接，则用加法；若用"并且"（依次完成）连接，则用乘法。
+\end{tipbox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[label=\arabic*.]
+  \item 分类时要做到"不重不漏"，各类之间必须互斥。
+  \item 分步时要注意步骤的完整性，每一步必须完成，且步与步之间是连续的。
+  \item 混合使用两个原理时，一般先分类再分步，注意乘法和加法的正确使用。
+\end{enumerate}
+\end{warnbox}
+
+% ==================== 6.2 排列与排列数公式 ====================
+\subsection*{6.2\quad 排列与排列数公式}
+
+\begin{knowledgebox}[排列的定义]
+从$n$个不同元素中，任取$m$（$m \leqslant n$）个元素，按照一定的顺序排成一列，叫做从$n$个不同元素中取出$m$个元素的一个\textbf{排列}。当$m = n$时，称为\textbf{全排列}。
+\end{knowledgebox}
+
+\begin{knowledgebox}[排列数公式]
+从$n$个不同元素中取出$m$个元素的排列数，记作$A_n^m$（或$P_n^m$）：
+\[
+A_n^m = n(n-1)(n-2)\cdots(n-m+1) = \frac{n!}{(n-m)!}
+\]
+特别地，全排列：
+\[
+A_n^n = n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1
+\]
+规定：$0! = 1$。
+\end{knowledgebox}
+
+\begin{tipbox}[排列数的性质]
+\begin{enumerate}[label=\arabic*.]
+  \item $A_n^m = n \cdot A_{n-1}^{m-1}$（递推关系）
+  \item $A_n^m = A_n^{m+1} \div (n - m)$（常用变形）
+  \item $A_n^m = n \cdot A_{n-1}^{m-1} = n(n-1) \cdot A_{n-2}^{m-2} = \cdots$
+\end{enumerate}
+\end{tipbox}
+
+% ==================== 6.3 组合与组合数公式 ====================
+\subsection*{6.3\quad 组合与组合数公式}
+
+\begin{knowledgebox}[组合的定义]
+从$n$个不同元素中，任取$m$（$m \leqslant n$）个元素并成一组，叫做从$n$个不同元素中取出$m$个元素的一个\textbf{组合}。排列与组合的根本区别：排列有顺序，组合无顺序。
+\end{knowledgebox}
+
+\begin{knowledgebox}[组合数公式]
+从$n$个不同元素中取出$m$个元素的组合数，记作$C_n^m$（或$\binom{n}{m}$）：
+\[
+C_n^m = \frac{A_n^m}{A_m^m} = \frac{n!}{m!(n-m)!}
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[组合数的性质]
+\begin{enumerate}[label=\arabic*.]
+  \item $C_n^m = C_n^{n-m}$（互补性质，对称性）
+  \item $C_n^m = C_{n-1}^{m} + C_{n-1}^{m-1}$（递推关系，帕斯卡公式）
+  \item $C_n^0 + C_n^1 + C_n^2 + \cdots + C_n^n = 2^n$（组合恒等式）
+  \item $C_n^0 - C_n^1 + C_n^2 - \cdots + (-1)^n C_n^n = 0$（交错和恒等式）
+\end{enumerate}
+\end{tipbox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[label=\arabic*.]
+  \item 求排列问题时，先确定是否需要考虑顺序；若无顺序要求，应使用组合。
+  \item 含有特殊元素或特殊位置的问题，通常优先处理特殊元素（位置），再处理一般元素（位置）——即"优先法"。
+  \item 相邻问题用"捆绑法"，不相邻问题用"插空法"。
+  \item 注意$C_n^m$中$m \leqslant n$的隐含条件。
+\end{enumerate}
+\end{warnbox}
+
+% ==================== 6.4 二项式定理 ====================
+\subsection*{6.4\quad 二项式定理}
+
+\begin{knowledgebox}[二项式定理]
+对任意正整数$n$：
+\[
+(a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + C_n^2 a^{n-2}b^2 + \cdots + C_n^k a^{n-k}b^k + \cdots + C_n^n b^n
+\]
+其中第$r+1$项（$r = 0, 1, 2, \ldots, n$）称为\textbf{二项展开式的通项}：
+\[
+T_{r+1} = C_n^r a^{n-r} b^r
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[二项式系数的性质]
+\begin{enumerate}[label=\arabic*.]
+  \item 二项式系数$C_n^0, C_n^1, \ldots, C_n^n$具有对称性：$C_n^r = C_n^{n-r}$。
+  \item 各项二项式系数之和为$2^n$：$C_n^0 + C_n^1 + C_n^2 + \cdots + C_n^n = 2^n$。
+  \item 奇数项二项式系数之和等于偶数项二项式系数之和，均为$2^{n-1}$：
+  \[
+  C_n^0 + C_n^2 + C_n^4 + \cdots = C_n^1 + C_n^3 + C_n^5 + \cdots = 2^{n-1}
+  \]
+  \item 二项式系数最大项：当$n$为偶数时，中间一项$C_n^{n/2}$最大；当$n$为奇数时，中间两项$C_n^{(n-1)/2}$和$C_n^{(n+1)/2}$最大。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{warnbox}[二项式定理常见考点]
+\begin{enumerate}[label=\arabic*.]
+  \item 求展开式中特定项（如含$x^k$的项、常数项等）：利用通项公式$T_{r+1} = C_n^r a^{n-r} b^r$列方程求$r$。
+  \item 求二项式系数之和或特定项系数之和：分别令$a, b$取特殊值（如$1$或$-1$）。
+  \item 区分"二项式系数"与"项的系数"：二项式系数仅为$C_n^r$，项的系数还需乘以$a^{n-r} b^r$中的数字部分。
+\end{enumerate}
+\end{warnbox}
+
+\vspace{8pt}
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% 例题1：分类加法与分步乘法
+\begin{examplebox}[【例题1】分类加法与分步乘法计数原理]
+从甲地到乙地，可以乘火车，也可以乘汽车，还可以乘轮船。一天中，火车有4班，汽车有3班，轮船有2班。从甲地到乙地共有多少种不同的走法？
+
+\textbf{解}：从甲地到乙地有三类办法：
+\begin{itemize}
+  \item 第一类：乘火车，有$4$种；
+  \item 第二类：乘汽车，有$3$种；
+  \item 第三类：乘轮船，有$2$种。
+\end{itemize}
+由分类加法计数原理，共有$N = 4 + 3 + 2 = 9$种不同走法。
+\end{examplebox}
+
+% 例题2：分步乘法
+\begin{examplebox}[【例题2】分步乘法计数原理的应用]
+将3封不同的信投入4个不同的邮箱，每封信只能投一个邮箱，共有多少种不同的投法？
+
+\textbf{解}：投信需分三步完成：
+\begin{itemize}
+  \item 第一步：投第1封信，有$4$种选择；
+  \item 第二步：投第2封信，有$4$种选择；
+  \item 第三步：投第3封信，有$4$种选择。
+\end{itemize}
+由分步乘法计数原理，共有$N = 4 \times 4 \times 4 = 64$种不同投法。
+\end{examplebox}
+
+% 例题3：排列数计算
+\begin{examplebox}[【例题3】排列数的计算]
+计算下列各题：
+\begin{enumerate}[label=(\arabic*)]
+  \item $A_6^4$
+  \item $A_5^5$
+  \item 若$A_n^2 = 56$，求$n$。
+\end{enumerate}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item $A_6^4 = 6 \times 5 \times 4 \times 3 = 360$
+  \item $A_5^5 = 5! = 5 \times 4 \times 3 \times 2 \times 1 = 120$
+  \item $A_n^2 = n(n-1) = 56$，即$n^2 - n - 56 = 0$，解得$n = 8$（舍去$n = -7$）。
+\end{enumerate}
+\end{examplebox}
+
+% 例题4：组合数计算与恒等式
+\begin{examplebox}[【例题4】组合数计算与恒等式证明]
+\begin{enumerate}[label=(\arabic*)]
+  \item 计算$C_{10}^3$和$C_{10}^7$，并验证$C_{10}^3 = C_{10}^7$。
+  \item 求$C_n^0 + C_n^1 + C_n^2 + \cdots + C_n^n$的值。
+\end{enumerate}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item $C_{10}^3 = \dfrac{10!}{3! \cdot 7!} = \dfrac{10 \times 9 \times 8}{3 \times 2 \times 1} = 120$
+
+  $C_{10}^7 = \dfrac{10!}{7! \cdot 3!} = \dfrac{10 \times 9 \times 8}{3 \times 2 \times 1} = 120$
+
+  故$C_{10}^3 = C_{10}^7 = 120$，符合对称性$C_n^m = C_n^{n-m}$。
+
+  \item 由二项式定理，令$a = 1, b = 1$代入$(a+b)^n$：
+  \[
+  (1+1)^n = C_n^0 + C_n^1 + C_n^2 + \cdots + C_n^n = 2^n
+  \]
+\end{enumerate}
+\end{examplebox}
+
+% 例题5：排列应用——站队问题
+\begin{examplebox}[【例题5】排列应用——站队问题]
+5名同学站成一排照相：
+\begin{enumerate}[label=(\arabic*)]
+  \item 共有多少种不同的站法？
+  \item 若甲必须站在最左边，共有多少种站法？
+  \item 若甲、乙必须相邻，共有多少种站法？
+  \item 若甲、乙不能相邻，共有多少种站法？
+\end{enumerate}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item 5人的全排列：$A_5^5 = 120$种。
+
+  \item 甲固定在最左边，其余4人全排列：$A_4^4 = 24$种。
+
+  \item \textbf{捆绑法}：将甲、乙视为一个整体（内部有$A_2^2 = 2$种排列），与其余3人共4个元素全排列：
+  \[
+  A_2^2 \times A_4^4 = 2 \times 24 = 48 \text{种}
+  \]
+
+  \item \textbf{插空法}（或间接法）：
+  间接法：总排列数$-$甲乙相邻的排列数$= 120 - 48 = 72$种。
+
+  或者用插空法：先排其余3人（$A_3^3 = 6$种），产生4个空位（含两端），甲、乙选2个空位插入（$A_4^2 = 12$种）：
+  \[
+  A_3^3 \times A_4^2 = 6 \times 12 = 72 \text{种}
+  \]
+\end{enumerate}
+\end{examplebox}
+
+% 例题6：组合应用——选取问题
+\begin{examplebox}[【例题6】组合应用——选取问题]
+从10名学生中选出3人参加数学竞赛：
+\begin{enumerate}[label=(\arabic*)]
+  \item 共有多少种选法？
+  \item 若其中甲必须入选，共有多少种选法？
+  \item 若其中甲不能入选，共有多少种选法？
+  \item 若其中至少包含1名女生（已知10人中有4名女生），共有多少种选法？
+\end{enumerate}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item 选人不排序，用组合：$C_{10}^3 = \dfrac{10 \times 9 \times 8}{3 \times 2 \times 1} = 120$种。
+
+  \item 甲已入选，再从其余9人中选2人：$C_9^2 = \dfrac{9 \times 8}{2} = 36$种。
+
+  \item 甲不入选，从其余9人中选3人：$C_9^3 = \dfrac{9 \times 8 \times 7}{3 \times 2 \times 1} = 84$种。
+
+  \item \textbf{间接法}：至少1名女生$=$全部$-$全男生。
+  全男生选法（10人中6名男生）：$C_6^3 = 20$种。
+  至少1名女生：$C_{10}^3 - C_6^3 = 120 - 20 = 100$种。
+\end{enumerate}
+\end{examplebox}
+
+% 例题7：二项式定理——求特定项
+\begin{examplebox}[【例题7】二项式定理——求展开式的特定项]
+求$\left(2x - \dfrac{1}{\sqrt{x}}\right)^6$的展开式中：
+\begin{enumerate}[label=(\arabic*)]
+  \item 常数项；
+  \item 含$x^3$的项。
+\end{enumerate}
+
+\textbf{解}：展开式的通项为：
+\[
+T_{r+1} = C_6^r (2x)^{6-r} \left(-\frac{1}{\sqrt{x}}\right)^r = C_6^r \cdot 2^{6-r} \cdot (-1)^r \cdot x^{6-r} \cdot x^{-r/2}
+\]
+\[
+= C_6^r \cdot 2^{6-r} \cdot (-1)^r \cdot x^{6 - r - \frac{r}{2}} = C_6^r \cdot 2^{6-r} \cdot (-1)^r \cdot x^{6 - \frac{3r}{2}}
+\]
+
+\begin{enumerate}[label=(\arabic*)]
+  \item 常数项：令$6 - \dfrac{3r}{2} = 0$，解得$r = 4$。常数项为：
+  \[
+  T_5 = C_6^4 \cdot 2^2 \cdot (-1)^4 = 15 \times 4 \times 1 = 60
+  \]
+
+  \item 含$x^3$的项：令$6 - \dfrac{3r}{2} = 3$，解得$r = 2$。该项为：
+  \[
+  T_3 = C_6^2 \cdot 2^4 \cdot (-1)^2 = 15 \times 16 \times 1 = 240
+  \]
+  即含$x^3$的项为$240x^3$。
+\end{enumerate}
+\end{examplebox}
+
+% 例题8：二项式系数与项的系数
+\begin{examplebox}[【例题8】二项式系数之和与项的系数之和]
+已知$(1 - 2x)^n$的展开式中，各二项式系数之和为$64$，求：
+\begin{enumerate}[label=(\arabic*)]
+  \item $n$的值；
+  \item 展开式中各项系数之和；
+  \item 展开式中奇数项系数之和。
+\end{enumerate}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item 各二项式系数之和为$2^n = 64$，故$n = 6$。
+
+  \item 令$x = 1$，得各项系数之和：
+  \[
+  (1 - 2 \times 1)^6 = (-1)^6 = 1
+  \]
+
+  \item 奇数项系数之和：令$x = 1$得$S_{\text{奇}} + S_{\text{偶}} = 1$；令$x = -1$得$S_{\text{奇}} - S_{\text{偶}} = 3^6 = 729$。
+
+  联立解得：
+  \[
+  S_{\text{奇}} = \frac{1 + 729}{2} = 365
+  \]
+\end{enumerate}
+\end{examplebox}
+
+% 例题9：排列组合综合——分组分配
+\begin{examplebox}[【例题9】排列组合综合——分组分配问题]
+将6本不同的书分成三组，每组分别为1本、2本、3本，分别送给甲、乙、丙三人，有多少种不同的分法？
+
+\textbf{解}：分成三步：
+\begin{itemize}
+  \item 从6本书中选1本给甲：$C_6^1 = 6$种；
+  \item 从剩下的5本中选2本给乙：$C_5^2 = 10$种；
+  \item 剩下的3本给丙：$C_3^3 = 1$种。
+\end{itemize}
+由分步乘法原理，共有$N = 6 \times 10 \times 1 = 60$种分法。
+\end{examplebox}
+
+% 例题10：排列组合综合——涂色问题
+\begin{examplebox}[【例题10】排列组合综合——涂色问题]
+用5种不同的颜色涂如图所示的4个区域，要求相邻区域颜色不同，共有多少种涂法？
+
+（4个区域排成一排，区域1与区域2相邻，区域2与区域3相邻，区域3与区域4相邻。）
+
+\textbf{解}：按区域依次涂色：
+\begin{itemize}
+  \item 区域1：$5$种颜色可选；
+  \item 区域2：不能与区域1同色，$4$种可选；
+  \item 区域3：不能与区域2同色，$4$种可选；
+  \item 区域4：不能与区域3同色，$4$种可选。
+\end{itemize}
+由分步乘法原理：$N = 5 \times 4 \times 4 \times 4 = 320$种涂法。
+\end{examplebox}
+
+\vspace{8pt}
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】密码设置问题]
+一个密码由4位数字组成（每位可以是$0 \sim 9$中的任一个），且要求至少出现一个偶数数字。这样的密码共有多少个？
+
+\textbf{解}：间接法。
+
+全部密码数：每位10种选择，共$10^4 = 10000$个。
+
+全为奇数的密码数：每位只能选$1, 3, 5, 7, 9$共5个奇数，共$5^4 = 625$个。
+
+至少出现一个偶数的密码数：$10000 - 625 = 9375$个。
+\end{appbox}
+
+\begin{appbox}[【应用2】比赛场次问题]
+某校举行篮球比赛，共有8支队伍参加。比赛规则为单循环赛（每两队之间比赛一场），然后取前4名进行淘汰赛决出冠军。
+\begin{enumerate}[label=(\arabic*)]
+  \item 单循环赛阶段共需比赛多少场？
+  \item 淘汰赛阶段决出冠军需比赛多少场？
+  \item 整个赛程共需比赛多少场？
+\end{enumerate}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item 从8支队伍中选2支比赛（组合问题，比赛无顺序）：
+  \[
+  C_8^2 = \frac{8 \times 7}{2} = 28 \text{场}
+  \]
+  \item 淘汰赛：4进2需2场，决赛1场，共$2 + 1 = 3$场。或者理解为每淘汰1支队伍需1场比赛，淘汰3支队伍共$3$场。
+  \item 整个赛程：$28 + 3 = 31$场。
+\end{enumerate}
+\end{appbox}
+
+\begin{appbox}[【应用3】路线选择问题]
+如图，某城市的道路呈网格状。小明从$A$点出发，沿街道向北或向东走到$B$点（$A$到$B$需向北走3个街区，向东走4个街区），规定只能向北或向东走。
+
+\begin{enumerate}[label=(\arabic*)]
+  \item 小明从$A$到$B$共有多少种不同的走法？
+  \item 若在$A$到$B$的某条路线上有一处$C$点必须经过（$C$在$A$的正东2个街区处），则有多少种走法？
+\end{enumerate}
+
+\textbf{解}：
+\begin{enumerate}[label=(\arabic*)]
+  \item 从$A$到$B$共需走$3 + 4 = 7$步，其中选$3$步向北（或$4$步向东），无需排序：
+  \[
+  C_7^3 = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35 \text{种}
+  \]
+
+  \item $A$到$C$：向东走2步，仅$C_2^2 = 1$种走法。
+
+  $C$到$B$：需向北$3$步、向东$2$步，共$5$步中选$3$步向北：
+  \[
+  C_5^3 = \frac{5 \times 4 \times 3}{3 \times 2 \times 1} = 10 \text{种}
+  \]
+
+  由分步乘法原理：$1 \times 10 = 10$种走法。
+\end{enumerate}
+\end{appbox}
+
+\vspace{8pt}
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 从$5$名男同学和$3$名女同学中选出$3$人参加社区活动，要求至少有$1$名女同学，共有多少种选法？
+
+  \item 计算$A_8^3 - 2C_8^2$的值。
+
+  \item 用$0, 1, 2, 3, 4$这$5$个数字可以组成多少个没有重复数字的三位数？
+
+  \item 求$(1+x)^8$展开式中$x^5$的系数。
+
+  \item 求$\left(x^2 + \dfrac{1}{x}\right)^6$展开式中的常数项。
+
+  \item $4$个人坐成一排，其中甲不坐两端，共有多少种坐法？
+
+  \item 已知$C_{12}^{2x-1} = C_{12}^{x+1}$，求$x$的值。
+\end{enumerate}
+
+\vspace{10pt}
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}
+  \item 间接法：$C_8^3 - C_5^3 = 56 - 10 = 46$种。
+
+  \item $A_8^3 = 8 \times 7 \times 6 = 336$，$C_8^2 = 28$，所以$A_8^3 - 2C_8^2 = 336 - 56 = 280$。
+
+  \item 百位不能为$0$，故百位$4$种选择，十位$4$种，个位$3$种：$4 \times 4 \times 3 = 48$个。
+
+  \item $x^5$的系数为$C_8^5 = C_8^3 = \dfrac{8 \times 7 \times 6}{3 \times 2 \times 1} = 56$。
+
+  \item 通项$T_{r+1} = C_6^r (x^2)^{6-r} \cdot \left(\dfrac{1}{x}\right)^r = C_6^r \cdot x^{12-2r-r} = C_6^r \cdot x^{12-3r}$。
+
+  令$12 - 3r = 0$，得$r = 4$。常数项$T_5 = C_6^4 = 15$。
+
+  \item 先排甲：甲不坐两端，有$2$个中间位置可选；其余$3$人全排列$A_3^3 = 6$。共$2 \times 6 = 12$种。
+
+  \item 由$C_n^m = C_n^{n-m}$，有$2x - 1 = x + 1$或$2x - 1 + x + 1 = 12$。
+  解第一个方程：$x = 2$；解第二个方程：$x = 4$。
+  验证：$x = 2$时，$C_{12}^3 = C_{12}^3$，成立；$x = 4$时，$C_{12}^7 = C_{12}^5$，也成立。
+  故$x = 2$或$x = 4$。
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

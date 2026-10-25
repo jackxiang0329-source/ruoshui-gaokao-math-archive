@@ -1,0 +1,1035 @@
+% ============================================================
+% 讲义 — 人教版高中选择性必修第三册 第8章
+% 编译命令：xelatex -interaction=nonstopmode 文件名.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版高中选择性必修第三册 · 第8章}}}
+\fancyhead[R]{\small\textcolor{mainblue}{成对数据的统计分析讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第8章\quad 成对数据的统计分析}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 选择性必修第三册\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ========== 8.1 变量的相关关系 ==========
+\subsection*{8.1\quad 变量的相关关系}
+
+\begin{knowledgebox}[变量的相关关系]
+在现实世界中，变量之间的关系可分为两大类：
+
+\medskip
+\textbf{1. 函数关系：}两个变量之间存在确定性的关系，即一个变量的值可以完全确定另一个变量的值。例如：正方形面积 $S$ 与边长 $a$ 的关系 $S=a^2$。
+
+\medskip
+\textbf{2. 相关关系：}两个变量之间存在某种不确定性的联系，一个变量的变化不能完全由另一个变量确定，但两者之间又确实存在某种规律。例如：身高与体重的关系、学习时间与考试成绩的关系。
+
+\medskip
+相关关系的分类：
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{正相关：}两个变量的变化趋势相同，一个增大时另一个也倾向于增大。
+  \item \textbf{负相关：}两个变量的变化趋势相反，一个增大时另一个倾向于减小。
+  \item \textbf{不相关：}两个变量之间没有明显的线性变化规律。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+相关关系\textbf{不等于}因果关系！两个变量相关，不代表一个变量的变化"导致"了另一个变量的变化。可能存在第三个变量同时影响两者，也可能只是巧合。
+\end{warnbox}
+
+% ========== 8.2 散点图 ==========
+\subsection*{8.2\quad 散点图}
+
+\begin{knowledgebox}[散点图]
+散点图是将成对数据 $(x_i, y_i)$ 在直角坐标系中描点所得到的图形，是判断两个变量是否具有相关关系的直观工具。
+
+\medskip
+\textbf{散点图的判断方法：}
+\begin{itemize}[leftmargin=2em]
+  \item 若散点大致分布在一条从\textbf{左下到右上}的带状区域内，则两个变量\textbf{正相关}。
+  \item 若散点大致分布在一条从\textbf{左上到右下}的带状区域内，则两个变量\textbf{负相关}。
+  \item 若散点分布没有明显的方向性，则两个变量\textbf{不相关}。
+  \item 散点越集中在某条直线附近，说明线性相关性越\textbf{强}。
+\end{itemize}
+\end{knowledgebox}
+
+% ========== 8.3 回归直线方程 ==========
+\subsection*{8.3\quad 回归直线方程（最小二乘法）}
+
+\begin{knowledgebox}[一元线性回归方程]
+当散点图显示两个变量具有较强的线性相关关系时，可以用一条直线来近似描述这种关系，这条直线称为\textbf{回归直线}，对应的方程称为\textbf{回归方程}。
+
+\medskip
+设回归方程为：
+\[
+\hat{y} = \hat{b}x + \hat{a}
+\]
+
+其中 $\hat{b}$ 称为\textbf{回归系数}，$\hat{a}$ 称为\textbf{截距}。
+
+\medskip
+\textbf{最小二乘法：}选取 $\hat{a}$ 和 $\hat{b}$，使得各观测值 $y_i$ 与对应估计值 $\hat{y}_i = \hat{b}x_i + \hat{a}$ 的偏差平方和最小，即
+\[
+Q = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 = \sum_{i=1}^{n}(y_i - \hat{b}x_i - \hat{a})^2
+\]
+取得最小值。
+
+\medskip
+\textbf{回归系数和截距的计算公式：}
+\[
+\boxed{\hat{b} = \frac{\displaystyle\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\displaystyle\sum_{i=1}^{n}(x_i - \bar{x})^2} = \frac{\displaystyle\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}}{\displaystyle\sum_{i=1}^{n}x_i^2 - n\bar{x}^2}}
+\]
+\[
+\boxed{\hat{a} = \bar{y} - \hat{b}\bar{x}}
+\]
+
+其中 $\bar{x} = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}x_i$，$\bar{y} = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}y_i$。
+
+\medskip
+注意：回归直线必过样本中心点 $(\bar{x}, \bar{y})$。
+\end{knowledgebox}
+
+\begin{warnbox}[计算技巧]
+计算 $\hat{b}$ 时，可以先计算以下四个量，再代入公式：
+\[
+L_{xx} = \sum_{i=1}^{n}x_i^2 - n\bar{x}^2, \qquad L_{xy} = \sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}
+\]
+则 $\hat{b} = \dfrac{L_{xy}}{L_{xx}}$。这种记法有助于减少计算错误。
+\end{warnbox}
+
+% ========== 8.4 相关系数 ==========
+\subsection*{8.4\quad 相关系数}
+
+\begin{knowledgebox}[相关系数 $r$]
+相关系数 $r$ 用来衡量两个变量之间\textbf{线性相关}的强弱程度。
+
+\[
+\boxed{r = \frac{\displaystyle\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\displaystyle\sum_{i=1}^{n}(x_i - \bar{x})^2 \cdot \sum_{i=1}^{n}(y_i - \bar{y})^2}}}
+\]
+
+\medskip
+\textbf{相关系数的性质：}
+\begin{enumerate}[leftmargin=2em]
+  \item $|r| \leqslant 1$。
+  \item $r > 0$ 表示正相关，$r < 0$ 表示负相关。
+  \item $|r|$ 越接近 $1$，线性相关性越强；$|r|$ 越接近 $0$，线性相关性越弱。
+\end{enumerate}
+
+\medskip
+\textbf{判断标准（经验参考）：}
+\begin{itemize}[leftmargin=2em]
+  \item $|r| \geqslant 0.75$：线性相关性\textbf{较强}，适合用线性回归模型。
+  \item $0.5 \leqslant |r| < 0.75$：线性相关性\textbf{一般}。
+  \item $|r| < 0.5$：线性相关性\textbf{较弱}，不太适合用线性回归模型。
+\end{itemize}
+
+\medskip
+注意：$r = 0$ 只表示不存在线性相关关系，可能存在非线性关系。
+\end{knowledgebox}
+
+\begin{tipbox}[公式简化记忆]
+相关系数公式的分子与 $\hat{b}$ 的分子完全相同，都是 $L_{xy} = \sum x_iy_i - n\bar{x}\bar{y}$。因此实际计算时，可以先算出 $L_{xy}$，再分别算出 $L_{xx}$ 和 $L_{yy}$，即可同时得到 $\hat{b}$ 和 $r$。
+\end{tipbox}
+
+% ========== 8.5 独立性检验 ==========
+\subsection*{8.5\quad 独立性检验}
+
+\begin{knowledgebox}[2$\times$2 列联表与独立性检验]
+在实际问题中，我们常常需要判断两个分类变量之间是否存在关联。\textbf{独立性检验}是解决这类问题的统计方法。
+
+\medskip
+\textbf{1. 2$\times$2 列联表}
+
+设两个分类变量 $X$（取值 $A_1, A_2$）和 $Y$（取值 $B_1, B_2$），统计 $n$ 个样本的分类结果，得到如下列联表：
+
+\begin{center}
+\begin{tabular}{c|cc|c}
+\toprule
+ & $B_1$ & $B_2$ & 合计 \\
+\midrule
+$A_1$ & $a$ & $b$ & $a+b$ \\
+$A_2$ & $c$ & $d$ & $c+d$ \\
+\midrule
+合计 & $a+c$ & $b+d$ & $n = a+b+c+d$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+\textbf{2. 卡方统计量 $\chi^2$}
+
+\[
+\boxed{\chi^2 = \frac{n(ad - bc)^2}{(a+b)(c+d)(a+c)(b+d)}}
+\]
+
+其中 $n = a + b + c + d$ 为样本总量。
+
+\medskip
+\textbf{3. 临界值判断}
+
+根据显著性水平 $\alpha$ 查 $\chi^2$ 临界值表：
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+$\alpha$ & $0.10$ & $0.05$ & $0.01$ & $0.001$ \\
+\midrule
+临界值 $x_\alpha$ & $2.706$ & $3.841$ & $6.635$ & $10.828$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+\textbf{判断规则：}
+\begin{itemize}[leftmargin=2em]
+  \item 若 $\chi^2 \geqslant 3.841$（即 $\alpha = 0.05$），则在显著性水平 $0.05$ 下，认为两个变量\textbf{有关联}。
+  \item 若 $\chi^2 \geqslant 6.635$（即 $\alpha = 0.01$），则在显著性水平 $0.01$ 下，认为两个变量\textbf{有关联}。
+  \item 若 $\chi^2 < 2.706$，则没有充分证据认为两个变量有关联。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[leftmargin=2em]
+  \item 独立性检验的结论是概率性的，不是绝对的。说"有关联"是指犯错误的概率不超过 $\alpha$。
+  \item $\chi^2$ 统计量永远非负，$\chi^2 = 0$ 当且仅当 $ad = bc$。
+  \item 列联表中的 $a, b, c, d$ 要正确对应行列位置，代入公式前务必核实。
+\end{enumerate}
+\end{warnbox}
+
+\newpage
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例1】判断相关关系类型]
+下列各组变量之间，哪些具有相关关系？是正相关还是负相关？
+\begin{enumerate}[label=(\arabic*)]
+  \item 正方体的棱长与体积；
+  \item 人的身高与体重；
+  \item 汽车行驶的路程与油箱中剩余的油量；
+  \item 学生的数学成绩与物理成绩；
+  \item 经纬度与气温。
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解：}
+\begin{enumerate}[label=(\arabic*)]
+  \item 正方体棱长 $a$ 与体积 $V = a^2 \cdot a = a^3$ 是\textbf{函数关系}，不是相关关系。
+  \item 一般来说，身高较高的人体重也倾向于较大，属于\textbf{正相关}。
+  \item 汽车行驶的路程越多，油箱中剩余的油量越少，属于\textbf{负相关}。
+  \item 数学成绩好的同学物理成绩往往也不错，属于\textbf{正相关}。
+  \item 经纬度是地理位置的标识，与气温之间没有直接的线性相关关系，但（纬度与气温有一定关系，属于\textbf{负相关}——纬度越高气温越低）。
+\end{enumerate}
+
+\begin{tipbox}[方法总结]
+判断相关关系时，关键在于区分"函数关系"与"相关关系"。函数关系是确定的，相关关系是不确定的但有趋势的。判断正、负相关，看两个变量是否"同增同减"或"一增一减"。
+\end{tipbox}
+
+\bigskip
+
+\begin{examplebox}[【例2】由散点图判断相关性]
+下图展示了某班级 $10$ 名同学的数学学习时间（单位：小时/周）与数学成绩（分）的散点图。请判断两个变量的相关关系类型。
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{axis}[
+    width=10cm, height=7cm,
+    xlabel={学习时间（小时/周）},
+    ylabel={数学成绩（分）},
+    xmin=0, xmax=12, ymin=50, ymax=100,
+    grid=major, grid style={dashed, gray!40},
+  ]
+  \addplot[only marks, mark=*, mark size=2.5pt, mainblue] coordinates {
+    (1,58) (2,62) (3,65) (4,70) (4,68)
+    (5,75) (6,78) (7,82) (8,85) (10,92)
+  };
+  \end{axis}
+\end{tikzpicture}
+\end{center}
+\end{examplebox}
+
+\textbf{解：}观察散点图，随着学习时间的增加，数学成绩总体上呈上升趋势，散点大致分布在一条从左下到右上的带状区域内。
+
+因此，数学学习时间与数学成绩之间呈\textbf{正相关}关系。
+
+\bigskip
+
+\begin{examplebox}[【例3】回归直线方程的计算]
+某工厂收集了 $6$ 个月的产品产量 $x$（百件）和生产成本 $y$（万元）的数据如下：
+
+\begin{center}
+\begin{tabular}{c|cccccc}
+\toprule
+$x_i$ & 2 & 3 & 5 & 6 & 7 & 9 \\
+\midrule
+$y_i$ & 7.2 & 8.0 & 10.5 & 11.8 & 13.0 & 15.5 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+求 $y$ 关于 $x$ 的线性回归方程 $\hat{y} = \hat{b}x + \hat{a}$。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{第一步：}计算均值。
+
+$n = 6$，$\bar{x} = \dfrac{2+3+5+6+7+9}{6} = \dfrac{32}{6} = \dfrac{16}{3} \approx 5.33$
+
+$\bar{y} = \dfrac{7.2+8.0+10.5+11.8+13.0+15.5}{6} = \dfrac{66.0}{6} = 11.0$
+
+\medskip
+\textbf{第二步：}计算 $L_{xy}$ 和 $L_{xx}$。
+
+\[
+\sum_{i=1}^{6}x_iy_i = 2\times7.2 + 3\times8.0 + 5\times10.5 + 6\times11.8 + 7\times13.0 + 9\times15.5
+\]
+\[
+= 14.4 + 24.0 + 52.5 + 70.8 + 91.0 + 139.5 = 392.2
+\]
+
+\[
+\sum_{i=1}^{6}x_i^2 = 4 + 9 + 25 + 36 + 49 + 81 = 204
+\]
+
+\[
+L_{xy} = \sum x_iy_i - n\bar{x}\bar{y} = 392.2 - 6 \times \frac{16}{3} \times 11.0 = 392.2 - 352.0 = 40.2
+\]
+
+\[
+L_{xx} = \sum x_i^2 - n\bar{x}^2 = 204 - 6 \times \left(\frac{16}{3}\right)^2 = 204 - 6 \times \frac{256}{9} = 204 - \frac{512}{3} = \frac{100}{3} \approx 33.33
+\]
+
+\medskip
+\textbf{第三步：}求回归系数和截距。
+
+\[
+\hat{b} = \frac{L_{xy}}{L_{xx}} = \frac{40.2}{100/3} = \frac{40.2 \times 3}{100} = \frac{120.6}{100} = 1.206
+\]
+
+\[
+\hat{a} = \bar{y} - \hat{b}\bar{x} = 11.0 - 1.206 \times \frac{16}{3} = 11.0 - 6.432 = 4.568
+\]
+
+\medskip
+\textbf{所求回归方程为：}
+\[
+\boxed{\hat{y} = 1.206x + 4.568}
+\]
+
+\begin{tipbox}[方法总结]
+回归方程计算的步骤：(1)~算均值 $\bar{x}, \bar{y}$；(2)~算 $\sum x_iy_i$ 和 $\sum x_i^2$；(3)~算 $L_{xy}$ 和 $L_{xx}$；(4)~算 $\hat{b}$ 和 $\hat{a}$。验算：回归直线过 $(\bar{x}, \bar{y})$，代入验证 $\hat{b}\bar{x} + \hat{a}$ 是否等于 $\bar{y}$。
+\end{tipbox}
+
+\bigskip
+
+\begin{examplebox}[【例4】回归方程的预测]
+根据例3所求的回归方程，估计当产量为 $8$ 百件时的生产成本，并解释 $\hat{b}$ 的实际意义。
+\end{examplebox}
+
+\textbf{解：}
+
+将 $x = 8$ 代入回归方程 $\hat{y} = 1.206x + 4.568$：
+
+\[
+\hat{y} = 1.206 \times 8 + 4.568 = 9.648 + 4.568 = 14.216 \text{（万元）}
+\]
+
+即产量为 $8$ 百件时，估计生产成本约为 $\boxed{14.216}$ 万元。
+
+\medskip
+$\hat{b} = 1.206$ 的实际意义：产量每增加 $1$ 百件，生产成本平均增加约 $1.206$ 万元。
+
+\bigskip
+
+\begin{examplebox}[【例5】相关系数的计算与判断]
+利用例3中的数据，计算相关系数 $r$，并判断线性相关性的强弱。
+\end{examplebox}
+
+\textbf{解：}
+
+由例3已知 $L_{xy} = 40.2$，$L_{xx} = \dfrac{100}{3}$。
+
+\medskip
+\textbf{计算 $L_{yy}$：}
+
+\[
+\sum_{i=1}^{6}y_i^2 = 7.2^2 + 8.0^2 + 10.5^2 + 11.8^2 + 13.0^2 + 15.5^2
+\]
+\[
+= 51.84 + 64.00 + 110.25 + 139.24 + 169.00 + 240.25 = 774.58
+\]
+
+\[
+L_{yy} = \sum y_i^2 - n\bar{y}^2 = 774.58 - 6 \times 11.0^2 = 774.58 - 726.0 = 48.58
+\]
+
+\medskip
+\textbf{计算相关系数：}
+
+\[
+r = \frac{L_{xy}}{\sqrt{L_{xx} \cdot L_{yy}}} = \frac{40.2}{\sqrt{\dfrac{100}{3} \times 48.58}} = \frac{40.2}{\sqrt{1619.33}} = \frac{40.2}{40.24} \approx 0.999
+\]
+
+\medskip
+因为 $|r| \approx 0.999 \geqslant 0.75$，所以 $y$ 与 $x$ 之间存在很强的线性正相关关系，适合用线性回归模型。
+
+\begin{tipbox}[方法总结]
+相关系数与回归系数可以同时计算。$L_{xy}$ 是共同的分子，$L_{xx}$ 用于回归系数，$\sqrt{L_{xx} \cdot L_{yy}}$ 用于相关系数。
+\end{tipbox}
+
+\bigskip
+
+\begin{examplebox}[【例6】独立性检验的基本计算]
+为研究性别是否与选修某门课程有关，调查了 $200$ 名学生，结果如下：
+
+\begin{center}
+\begin{tabular}{c|cc|c}
+\toprule
+ & 选修 & 未选修 & 合计 \\
+\midrule
+男生 & $40$ & $60$ & $100$ \\
+女生 & $30$ & $70$ & $100$ \\
+\midrule
+合计 & $70$ & $130$ & $200$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+在显著性水平 $\alpha = 0.05$ 下，能否认为性别与选修该课程有关？
+\end{examplebox}
+
+\textbf{解：}
+
+列联表中 $a = 40$，$b = 60$，$c = 30$，$d = 70$，$n = 200$。
+
+代入卡方统计量公式：
+\[
+\chi^2 = \frac{n(ad - bc)^2}{(a+b)(c+d)(a+c)(b+d)}
+\]
+
+\[
+= \frac{200 \times (40\times70 - 60\times30)^2}{100 \times 100 \times 70 \times 130}
+\]
+
+\[
+= \frac{200 \times (2800 - 1800)^2}{100 \times 100 \times 70 \times 130} = \frac{200 \times 1000^2}{91\,000\,000}
+\]
+
+\[
+= \frac{200 \times 1\,000\,000}{91\,000\,000} = \frac{200\,000\,000}{91\,000\,000} \approx 2.198
+\]
+
+\medskip
+在显著性水平 $\alpha = 0.05$ 下，临界值为 $x_{0.05} = 3.841$。
+
+\medskip
+因为 $\chi^2 \approx 2.198 < 3.841$，所以在显著性水平 $0.05$ 下，\textbf{没有充分证据}认为性别与选修该课程有关。
+
+\begin{warnbox}[易错提醒]
+$\chi^2 < 3.841$ 不能说"性别与选修课程无关"，只能说"没有充分证据认为有关"。统计检验的结论都是概率性的。
+\end{warnbox}
+
+\bigskip
+
+\begin{examplebox}[【例7】独立性检验——有关联的情形]
+某医院研究吸烟与患呼吸道疾病的关系，调查了 $500$ 人的数据如下：
+
+\begin{center}
+\begin{tabular}{c|cc|c}
+\toprule
+ & 患病 & 未患病 & 合计 \\
+\midrule
+吸烟 & $80$ & $120$ & $200$ \\
+不吸烟 & $50$ & $250$ & $300$ \\
+\midrule
+合计 & $130$ & $370$ & $500$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+分别在显著性水平 $\alpha = 0.05$ 和 $\alpha = 0.01$ 下，判断吸烟与患呼吸道疾病是否有关联。
+\end{examplebox}
+
+\textbf{解：}
+
+$a = 80$，$b = 120$，$c = 50$，$d = 250$，$n = 500$。
+
+\[
+\chi^2 = \frac{n(ad - bc)^2}{(a+b)(c+d)(a+c)(b+d)}
+\]
+
+\[
+= \frac{500 \times (80\times250 - 120\times50)^2}{200 \times 300 \times 130 \times 370}
+\]
+
+\[
+= \frac{500 \times (20000 - 6000)^2}{200 \times 300 \times 130 \times 370} = \frac{500 \times 14000^2}{2\,886\,000\,000}
+\]
+
+\[
+= \frac{500 \times 196\,000\,000}{2\,886\,000\,000} = \frac{98\,000\,000\,000}{2\,886\,000\,000} \approx 33.96
+\]
+
+\medskip
+\textbf{判断：}
+
+\begin{itemize}[leftmargin=2em]
+  \item $\alpha = 0.05$ 时，临界值 $x_{0.05} = 3.841$。因为 $33.96 > 3.841$，所以认为吸烟与患呼吸道疾病\textbf{有关联}。
+  \item $\alpha = 0.01$ 时，临界值 $x_{0.01} = 6.635$。因为 $33.96 > 6.635$，所以在更严格的水平下，仍然认为吸烟与患呼吸道疾病\textbf{有关联}。
+\end{itemize}
+
+\begin{tipbox}[方法总结]
+$\chi^2$ 值越大，说明两个变量之间的关联越强。当 $\chi^2$ 超过更大的临界值时，结论更可靠。实际解题中，通常只需与 $3.841$ 比较即可。
+\end{tipbox}
+
+\bigskip
+
+\begin{examplebox}[【例8】回归方程与独立性检验的综合]
+某班 $8$ 名同学的数学成绩 $x$（分）和物理成绩 $y$（分）如下：
+
+\begin{center}
+\begin{tabular}{c|cccccccc}
+\toprule
+$x_i$ & 70 & 75 & 80 & 80 & 85 & 85 & 90 & 95 \\
+\midrule
+$y_i$ & 68 & 72 & 78 & 76 & 82 & 80 & 88 & 92 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\arabic*)]
+  \item 求 $y$ 关于 $x$ 的线性回归方程。
+  \item 计算相关系数 $r$，并判断线性相关强度。
+  \item 若某同学数学考了 $88$ 分，预测其物理成绩。
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{(1)} $n = 8$。
+
+\[
+\bar{x} = \frac{70+75+80+80+85+85+90+95}{8} = \frac{660}{8} = 82.5
+\]
+
+\[
+\bar{y} = \frac{68+72+78+76+82+80+88+92}{8} = \frac{636}{8} = 79.5
+\]
+
+计算 $\sum x_iy_i$：
+\[
+70\times68 + 75\times72 + 80\times78 + 80\times76 + 85\times82 + 85\times80 + 90\times88 + 95\times92
+\]
+\[
+= 4760 + 5400 + 6240 + 6080 + 6970 + 6800 + 7920 + 8740 = 52910
+\]
+
+计算 $\sum x_i^2$：
+\[
+4900 + 5625 + 6400 + 6400 + 7225 + 7225 + 8100 + 9025 = 54900
+\]
+
+\[
+L_{xy} = 52910 - 8 \times 82.5 \times 79.5 = 52910 - 52470 = 440
+\]
+
+\[
+L_{xx} = 54900 - 8 \times 82.5^2 = 54900 - 54450 = 450
+\]
+
+\[
+\hat{b} = \frac{440}{450} = \frac{44}{45} \approx 0.978
+\]
+
+\[
+\hat{a} = 79.5 - \frac{44}{45} \times 82.5 = 79.5 - 80.667 = -1.167
+\]
+
+回归方程为：$\boxed{\hat{y} = \dfrac{44}{45}x - \dfrac{35}{30} \approx 0.978x - 1.167}$
+
+\medskip
+\textbf{(2)} 计算 $\sum y_i^2$：
+\[
+4624 + 5184 + 6084 + 5776 + 6724 + 6400 + 7744 + 8464 = 51000
+\]
+
+\[
+L_{yy} = 51000 - 8 \times 79.5^2 = 51000 - 50562 = 438
+\]
+
+\[
+r = \frac{L_{xy}}{\sqrt{L_{xx} \cdot L_{yy}}} = \frac{440}{\sqrt{450 \times 438}} = \frac{440}{\sqrt{197100}} = \frac{440}{443.96} \approx 0.991
+\]
+
+$|r| \approx 0.991 \geqslant 0.75$，说明数学成绩与物理成绩之间存在\textbf{很强的线性正相关关系}。
+
+\medskip
+\textbf{(3)} 当 $x = 88$ 时：
+
+\[
+\hat{y} = 0.978 \times 88 - 1.167 = 86.064 - 1.167 = 84.9 \text{（分）}
+\]
+
+预测该同学的物理成绩约为 $\boxed{84.9}$ 分。
+
+\newpage
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】广告投入与销售额]
+某公司统计了 $7$ 个月的广告投入费用 $x$（万元）与销售额 $y$（万元）数据：
+
+\begin{center}
+\begin{tabular}{c|ccccccc}
+\toprule
+$x_i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\midrule
+$y_i$ & 12 & 18 & 20 & 26 & 30 & 35 & 38 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\arabic*)]
+  \item 画出散点图，判断两个变量的相关关系类型。
+  \item 求 $y$ 关于 $x$ 的线性回归方程。
+  \item 计算相关系数 $r$，并说明线性相关程度。
+  \item 若下个月计划投入广告费 $8$ 万元，预测销售额。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}
+
+\textbf{(1)} 散点图如下：
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{axis}[
+    width=10cm, height=7cm,
+    xlabel={广告投入（万元）},
+    ylabel={销售额（万元）},
+    xmin=0, xmax=9, ymin=5, ymax=45,
+    grid=major, grid style={dashed, gray!40},
+  ]
+  \addplot[only marks, mark=*, mark size=2.5pt, mainblue] coordinates {
+    (1,12) (2,18) (3,20) (4,26) (5,30) (6,35) (7,38)
+  };
+  \end{axis}
+\end{tikzpicture}
+\end{center}
+
+散点从左下到右上分布，两个变量呈\textbf{正相关}。
+
+\medskip
+\textbf{(2)} $n = 7$。
+
+\[
+\bar{x} = \frac{1+2+3+4+5+6+7}{7} = \frac{28}{7} = 4
+\]
+
+\[
+\bar{y} = \frac{12+18+20+26+30+35+38}{7} = \frac{179}{7} \approx 25.571
+\]
+
+\[
+\sum x_iy_i = 12 + 36 + 60 + 104 + 150 + 210 + 266 = 838
+\]
+
+\[
+\sum x_i^2 = 1 + 4 + 9 + 16 + 25 + 36 + 49 = 140
+\]
+
+\[
+L_{xy} = 838 - 7 \times 4 \times \frac{179}{7} = 838 - 716 = 122
+\]
+
+\[
+L_{xx} = 140 - 7 \times 16 = 140 - 112 = 28
+\]
+
+\[
+\hat{b} = \frac{122}{28} = \frac{61}{14} \approx 4.357
+\]
+
+\[
+\hat{a} = \frac{179}{7} - \frac{61}{14} \times 4 = \frac{179}{7} - \frac{122}{7} = \frac{57}{7} \approx 8.143
+\]
+
+回归方程：$\boxed{\hat{y} = 4.357x + 8.143}$
+
+\medskip
+\textbf{(3)} 计算相关系数：
+
+\[
+\sum y_i^2 = 144 + 324 + 400 + 676 + 900 + 1225 + 1444 = 5113
+\]
+
+\[
+L_{yy} = 5113 - 7 \times \left(\frac{179}{7}\right)^2 = 5113 - \frac{179^2}{7} = 5113 - 4577.286 = 535.714
+\]
+
+\[
+r = \frac{122}{\sqrt{28 \times 535.714}} = \frac{122}{\sqrt{14999.99}} = \frac{122}{122.47} \approx 0.996
+\]
+
+$|r| \approx 0.996 \geqslant 0.75$，线性正相关程度\textbf{非常强}。
+
+\medskip
+\textbf{(4)} 当 $x = 8$ 时：
+
+\[
+\hat{y} = 4.357 \times 8 + 8.143 = 34.856 + 8.143 = 43.0 \text{（万元）}
+\]
+
+预测销售额约为 $\boxed{43.0}$ 万元。
+
+\bigskip
+
+\begin{appbox}[【应用2】学习习惯与成绩]
+某校调查了 $200$ 名高二学生每天课外学习时间是否超过 $2$ 小时与期末考试是否及格的情况：
+
+\begin{center}
+\begin{tabular}{c|cc|c}
+\toprule
+ & 及格 & 不及格 & 合计 \\
+\midrule
+超过 $2$ 小时 & $72$ & $28$ & $100$ \\
+不超过 $2$ 小时 & $48$ & $52$ & $100$ \\
+\midrule
+合计 & $120$ & $80$ & $200$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+在显著性水平 $\alpha = 0.01$ 下，能否认为课外学习时间与考试及格率有关联？
+\end{appbox}
+
+\textbf{解：}
+
+$a = 72$，$b = 28$，$c = 48$，$d = 52$，$n = 200$。
+
+\[
+\chi^2 = \frac{n(ad - bc)^2}{(a+b)(c+d)(a+c)(b+d)}
+\]
+
+\[
+= \frac{200 \times (72\times52 - 28\times48)^2}{100 \times 100 \times 120 \times 80}
+\]
+
+\[
+= \frac{200 \times (3744 - 1344)^2}{96\,000\,000} = \frac{200 \times 2400^2}{96\,000\,000}
+\]
+
+\[
+= \frac{200 \times 5\,760\,000}{96\,000\,000} = \frac{1\,152\,000\,000}{96\,000\,000} = 12.0
+\]
+
+\medskip
+在显著性水平 $\alpha = 0.01$ 下，临界值 $x_{0.01} = 6.635$。
+
+\medskip
+因为 $\chi^2 = 12.0 > 6.635$，所以在显著性水平 $0.01$ 下，\textbf{有充分证据认为}课外学习时间与考试及格率有关联。
+
+\medskip
+进一步分析：课外学习超过 $2$ 小时的学生及格率为 $\dfrac{72}{100} = 72\%$，不超过 $2$ 小时的学生及格率为 $\dfrac{48}{100} = 48\%$，说明课外学习时间越长，考试及格率越高。
+
+\bigskip
+
+\begin{appbox}[【应用3】气温与用电量]
+某市电力公司统计了某年 $8$ 个夏季高温日的最高气温 $x$（$^\circ$C）与当日用电量 $y$（亿千瓦时）：
+
+\begin{center}
+\begin{tabular}{c|cccccccc}
+\toprule
+$x_i$ & 33 & 34 & 35 & 36 & 37 & 38 & 39 & 40 \\
+\midrule
+$y_i$ & 5.1 & 5.3 & 5.6 & 5.8 & 6.1 & 6.5 & 6.7 & 7.0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\arabic*)]
+  \item 求 $y$ 关于 $x$ 的线性回归方程。
+  \item 计算相关系数 $r$。
+  \item 气象台预报明日最高气温为 $41^\circ$C，预测该市明日的用电量。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}
+
+\textbf{(1)} $n = 8$。
+
+\[
+\bar{x} = \frac{33+34+35+36+37+38+39+40}{8} = \frac{292}{8} = 36.5
+\]
+
+\[
+\bar{y} = \frac{5.1+5.3+5.6+5.8+6.1+6.5+6.7+7.0}{8} = \frac{48.1}{8} = 6.0125
+\]
+
+\[
+\sum x_iy_i = 33\times5.1 + 34\times5.3 + 35\times5.6 + 36\times5.8 + 37\times6.1 + 38\times6.5 + 39\times6.7 + 40\times7.0
+\]
+\[
+= 168.3 + 180.2 + 196.0 + 208.8 + 225.7 + 247.0 + 261.3 + 280.0 = 1767.3
+\]
+
+\[
+\sum x_i^2 = 1089 + 1156 + 1225 + 1296 + 1369 + 1444 + 1521 + 1600 = 10700
+\]
+
+\[
+L_{xy} = 1767.3 - 8 \times 36.5 \times 6.0125 = 1767.3 - 1755.65 = 11.65
+\]
+
+\[
+L_{xx} = 10700 - 8 \times 36.5^2 = 10700 - 10658 = 42
+\]
+
+\[
+\hat{b} = \frac{11.65}{42} \approx 0.2774
+\]
+
+\[
+\hat{a} = 6.0125 - 0.2774 \times 36.5 = 6.0125 - 10.1251 = -4.1126
+\]
+
+回归方程：$\boxed{\hat{y} = 0.277x - 4.113}$
+
+\medskip
+\textbf{(2)} 计算相关系数：
+
+\[
+\sum y_i^2 = 26.01 + 28.09 + 31.36 + 33.64 + 37.21 + 42.25 + 44.89 + 49.00 = 292.45
+\]
+
+\[
+L_{yy} = 292.45 - 8 \times 6.0125^2 = 292.45 - 289.20 = 3.25
+\]
+
+\[
+r = \frac{11.65}{\sqrt{42 \times 3.25}} = \frac{11.65}{\sqrt{136.5}} = \frac{11.65}{11.683} \approx 0.997
+\]
+
+线性正相关程度非常强。
+
+\medskip
+\textbf{(3)} 当 $x = 41$ 时：
+
+\[
+\hat{y} = 0.277 \times 41 - 4.113 = 11.357 - 4.113 = 7.244 \text{（亿千瓦时）}
+\]
+
+预测明日用电量约为 $\boxed{7.24}$ 亿千瓦时。
+
+\newpage
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 下列各对变量中，属于相关关系的是（\quad）。
+  \begin{enumerate}[label=A.]
+    \item 正方形的边长与面积
+    \item 角的大小与该角的正弦值
+    \item 人的年龄与身高
+    \item 日照时间与水稻亩产量
+  \end{enumerate}
+
+  \item 设回归直线方程为 $\hat{y} = 2 - 1.5x$，当变量 $x$ 增加 $1$ 个单位时（\quad）。
+  \begin{enumerate}[label=A.]
+    \item $y$ 平均增加 $1.5$ 个单位
+    \item $y$ 平均增加 $2$ 个单位
+    \item $y$ 平均减少 $1.5$ 个单位
+    \item $y$ 平均减少 $2$ 个单位
+  \end{enumerate}
+
+  \item 已知回归方程 $\hat{y} = \hat{b}x + \hat{a}$，且 $\bar{x} = 5$，$\bar{y} = 30$，$\hat{b} = 2.5$，则 $\hat{a} = $ \underline{\qquad}。
+
+  \item 某组数据的回归方程为 $\hat{y} = 1.5x + \hat{a}$，其中 $\bar{x} = 6$，$\bar{y} = 17$，则 $\hat{a} = $ \underline{\qquad}。
+
+  \item 对于一组数据 $(x_i, y_i)$（$i=1,2,\ldots,10$），已知 $\bar{x}=4$，$\bar{y}=5$，$\sum_{i=1}^{10}x_i^2 = 200$，$\sum_{i=1}^{10}x_iy_i = 250$，求线性回归方程。
+
+  \item 已知相关系数 $r = -0.92$，则两个变量之间（\quad）。
+  \begin{enumerate}[label=A.]
+    \item 正相关，且相关性较强
+    \item 负相关，且相关性较强
+    \item 正相关，且相关性较弱
+    \item 负相关，且相关性较弱
+  \end{enumerate}
+
+  \item 某调查得到如下 $2\times2$ 列联表：
+  \begin{center}
+  \begin{tabular}{c|cc|c}
+  \toprule
+   & $B_1$ & $B_2$ & 合计 \\
+  \midrule
+  $A_1$ & $35$ & $15$ & $50$ \\
+  $A_2$ & $25$ & $25$ & $50$ \\
+  \midrule
+  合计 & $60$ & $40$ & $100$ \\
+  \bottomrule
+  \end{tabular}
+  \end{center}
+  计算 $\chi^2$ 统计量的值，并在 $\alpha=0.05$ 的水平下判断 $A$ 与 $B$ 是否有关联。
+
+  \item 某工厂 $6$ 个月的产品销量 $x$（万台）与利润 $y$（万元）如下：
+  \begin{center}
+  \begin{tabular}{c|cccccc}
+  \toprule
+  $x_i$ & 2 & 3 & 4 & 5 & 6 & 8 \\
+  \midrule
+  $y_i$ & 4 & 6 & 7 & 8 & 10 & 13 \\
+  \bottomrule
+  \end{tabular}
+  \end{center}
+  求 $y$ 关于 $x$ 的线性回归方程。
+\end{enumerate}
+
+\vspace{20pt}
+
+% ========== 参考答案 ==========
+\begin{knowledgebox}[参考答案]
+\textbf{1.} \textbf{C、D}。A 和 B 是确定的函数关系，C 和 D 是相关关系（不确定但有趋势）。
+
+\medskip
+\textbf{2.} \textbf{C}。回归系数 $\hat{b}=-1.5$，表示 $x$ 每增加 $1$ 个单位，$y$ 平均减少 $1.5$ 个单位。
+
+\medskip
+\textbf{3.} $\hat{a} = \bar{y} - \hat{b}\bar{x} = 30 - 2.5\times5 = 30 - 12.5 = \boxed{17.5}$。
+
+\medskip
+\textbf{4.} 回归直线过 $(\bar{x}, \bar{y})$，所以 $\bar{y} = 1.5\bar{x} + \hat{a}$，即 $17 = 1.5\times6 + \hat{a}$，$\hat{a} = 17 - 9 = \boxed{8}$。
+
+\medskip
+\textbf{5.} $n = 10$，$\bar{x} = 4$，$\bar{y} = 5$。
+
+$L_{xy} = \sum x_iy_i - n\bar{x}\bar{y} = 250 - 10\times4\times5 = 250 - 200 = 50$。
+
+$L_{xx} = \sum x_i^2 - n\bar{x}^2 = 200 - 10\times16 = 200 - 160 = 40$。
+
+$\hat{b} = \dfrac{50}{40} = 1.25$，$\hat{a} = 5 - 1.25\times4 = 5 - 5 = 0$。
+
+回归方程：$\boxed{\hat{y} = 1.25x}$。
+
+\medskip
+\textbf{6.} \textbf{B}。$r = -0.92 < 0$，表示负相关；$|r| = 0.92 \geqslant 0.75$，表示相关性较强。
+
+\medskip
+\textbf{7.} $a=35$，$b=15$，$c=25$，$d=25$，$n=100$。
+
+$\chi^2 = \dfrac{100\times(35\times25 - 15\times25)^2}{50\times50\times60\times40}$
+
+$= \dfrac{100\times(875-375)^2}{6\,000\,000} = \dfrac{100\times500^2}{6\,000\,000} = \dfrac{25\,000\,000}{6\,000\,000} \approx 4.167$。
+
+因为 $4.167 > 3.841$，所以在 $\alpha=0.05$ 水平下，认为 $A$ 与 $B$ \textbf{有关联}。
+
+\medskip
+\textbf{8.} $n=6$。
+
+$\bar{x} = \dfrac{2+3+4+5+6+8}{6} = \dfrac{28}{6} = \dfrac{14}{3} \approx 4.667$。
+
+$\bar{y} = \dfrac{4+6+7+8+10+13}{6} = \dfrac{48}{6} = 8$。
+
+$\sum x_iy_i = 8+18+28+40+60+104 = 258$。
+
+$\sum x_i^2 = 4+9+16+25+36+64 = 154$。
+
+$L_{xy} = 258 - 6\times\dfrac{14}{3}\times8 = 258 - 224 = 34$。
+
+$L_{xx} = 154 - 6\times\dfrac{196}{9} = 154 - \dfrac{392}{3} = \dfrac{70}{3}$。
+
+$\hat{b} = \dfrac{34}{70/3} = \dfrac{102}{70} = \dfrac{51}{35} \approx 1.457$。
+
+$\hat{a} = 8 - \dfrac{51}{35}\times\dfrac{14}{3} = 8 - \dfrac{714}{105} = 8 - 6.8 = 1.2$。
+
+回归方程：$\boxed{\hat{y} = 1.457x + 1.2}$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
