@@ -1,0 +1,682 @@
+% ============================================================
+% 第16章 二次根式 — 人教版八年级下册
+% 编译命令：xelatex -interaction=nonstopmode 第16章_二次根式.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版八年级下册 · 第16章\ 二次根式}}}
+\fancyhead[R]{\small\textcolor{mainblue}{二次根式讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第16章\quad 二次根式}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 八年级下册\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ================================================================
+% 第一部分：知识点讲解
+% ================================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 16.1 二次根式的概念 ----------
+\subsection*{16.1\quad 二次根式的概念}
+
+\begin{knowledgebox}[定义：二次根式]
+一般地，形如 $\sqrt{a}$（$a \geqslant 0$）的式子叫做\textbf{二次根式}。
+
+\medskip
+\textbf{关键要点：}
+\begin{itemize}[leftmargin=2em]
+  \item 符号"$\sqrt{\phantom{a}}$"叫做\textbf{二次根号}，$a$叫做\textbf{被开方数}。
+  \item 二次根式$\sqrt{a}$有意义（在实数范围内）的条件是 $a \geqslant 0$。
+  \item $\sqrt{a}$的结果是一个\textbf{非负数}，即 $\sqrt{a} \geqslant 0$（$a \geqslant 0$）。
+  \item 二次根式与平方的关系：$(\sqrt{a})^2 = a$（$a \geqslant 0$）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒：被开方数的非负性]
+在实数范围内，\textbf{负数不能开平方}。
+
+\medskip
+\textbf{易错判断：}
+\begin{itemize}[leftmargin=2em]
+  \item $\sqrt{-3}$ 在实数范围内无意义（$-3 < 0$）。
+  \item $\sqrt{x-1}$ 有意义的条件是 $x - 1 \geqslant 0$，即 $x \geqslant 1$。
+  \item $\sqrt{x^2+1}$ 对一切实数$x$都有意义（因为 $x^2 + 1 > 0$ 恒成立）。
+  \item $\sqrt{x} + \sqrt{-x}$ 有意义的条件是 $x = 0$（两个条件同时成立）。
+\end{itemize}
+\end{warnbox}
+
+% ---------- 16.2 二次根式的性质 ----------
+\subsection*{16.2\quad 二次根式的性质}
+
+\begin{knowledgebox}[二次根式的基本性质]
+\textbf{性质1：} $(\sqrt{a})^2 = a$（$a \geqslant 0$）
+
+\medskip
+即：对一个非负数先开方再平方，结果就是它本身。
+
+\bigskip
+\textbf{性质2：} $\sqrt{a^2} = |a|$
+
+\medskip
+即：对一个数先平方再开方，结果是它的\textbf{绝对值}。
+
+\medskip
+进一步展开：
+\[
+\sqrt{a^2} = |a| = \begin{cases} a, & a \geqslant 0 \\ -a, & a < 0 \end{cases}
+\]
+
+\medskip
+\textbf{性质3（积的算术平方根）：} $\sqrt{ab} = \sqrt{a} \cdot \sqrt{b}$（$a \geqslant 0,\; b \geqslant 0$）
+
+\medskip
+\textbf{性质4（商的算术平方根）：} $\sqrt{\dfrac{a}{b}} = \dfrac{\sqrt{a}}{\sqrt{b}}$（$a \geqslant 0,\; b > 0$）
+\end{knowledgebox}
+
+\begin{warnbox}[重要区别：$(\sqrt{a})^2$ 与 $\sqrt{a^2}$]
+这两个式子\textbf{不相同}！
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{lcc}
+\toprule
+ & $(\sqrt{a})^2$ & $\sqrt{a^2}$ \\
+\midrule
+前提条件 & $a \geqslant 0$ & $a$为任意实数 \\
+化简结果 & $a$ & $|a|$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+\textbf{举例：}
+\begin{itemize}[leftmargin=2em]
+  \item $(\sqrt{5})^2 = 5$
+  \item $\sqrt{(-3)^2} = \sqrt{9} = 3 = |-3|$
+  \item 当 $a < 0$ 时，$\sqrt{a^2} = -a$（注意是$-a$，不是$a$，因为$-a > 0$）
+\end{itemize}
+\end{warnbox}
+
+\begin{tipbox}[利用性质化简 $\sqrt{a^2}$ 的口诀]
+"先平方，再开方，结果等于绝对值；
+
+非负数，直接取，负数变号才为正。"
+
+即 $\sqrt{a^2} = |a|$，然后根据$a$的正负去绝对值符号。
+\end{tipbox}
+
+% ---------- 16.3 最简二次根式与同类二次根式 ----------
+\subsection*{16.3\quad 最简二次根式与同类二次根式}
+
+\begin{knowledgebox}[最简二次根式]
+满足以下两个条件的二次根式叫做\textbf{最简二次根式}：
+\begin{enumerate}[leftmargin=2em]
+  \item 被开方数中不含\textbf{分母}；
+  \item 被开方数中不含能开得尽方的\textbf{因数}或\textbf{因式}（即不含完全平方因子）。
+\end{enumerate}
+
+\medskip
+\textbf{判断举例：}
+\begin{itemize}[leftmargin=2em]
+  \item $\sqrt{3}$\quad 是最简二次根式。
+  \item $\sqrt{12}$\quad 不是（$12 = 4 \times 3$，含完全平方因子$4$，应化为$2\sqrt{3}$）。
+  \item $\sqrt{\dfrac{1}{2}}$\quad 不是（含分母，应化为$\dfrac{\sqrt{2}}{2}$）。
+  \item $\sqrt{a^2 b}$（$b > 0$）\quad 不是（$a^2$可开方，应化为$|a|\sqrt{b}$）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[同类二次根式]
+几个二次根式化为最简二次根式后，如果\textbf{被开方数相同}，则这几个二次根式叫做\textbf{同类二次根式}。
+
+\medskip
+\textbf{判断举例：}
+\begin{itemize}[leftmargin=2em]
+  \item $\sqrt{12}$ 和 $\sqrt{27}$ 是同类二次根式（$\sqrt{12}=2\sqrt{3}$，$\sqrt{27}=3\sqrt{3}$，被开方数都是$3$）。
+  \item $\sqrt{2}$ 和 $\sqrt{3}$ 不是同类二次根式。
+  \item $3\sqrt{5}$ 和 $-2\sqrt{5}$ 是同类二次根式。
+\end{itemize}
+
+\medskip
+\textbf{作用：}同类二次根式可以像合并同类项一样合并。例如：$2\sqrt{3} + 5\sqrt{3} = 7\sqrt{3}$。
+\end{knowledgebox}
+
+% ---------- 16.4 二次根式的运算 ----------
+\subsection*{16.4\quad 二次根式的运算}
+
+\begin{knowledgebox}[二次根式的加减法]
+二次根式的加减法本质是\textbf{合并同类二次根式}。
+
+\medskip
+\textbf{步骤：}
+\begin{enumerate}[leftmargin=2em]
+  \item 将每个二次根式化为\textbf{最简二次根式}；
+  \item 找出同类二次根式；
+  \item 合并同类二次根式（系数相加减，被开方数不变）。
+\end{enumerate}
+
+\medskip
+\textbf{示例：}
+\[
+2\sqrt{12} - 3\sqrt{27} + \sqrt{48} = 4\sqrt{3} - 9\sqrt{3} + 4\sqrt{3} = -\sqrt{3}
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[二次根式的乘除法]
+\textbf{乘法法则：}
+\[
+\sqrt{a} \cdot \sqrt{b} = \sqrt{ab} \quad (a \geqslant 0,\; b \geqslant 0)
+\]
+
+\textbf{除法法则：}
+\[
+\frac{\sqrt{a}}{\sqrt{b}} = \sqrt{\frac{a}{b}} \quad (a \geqslant 0,\; b > 0)
+\]
+
+\medskip
+\textbf{运算后要化为最简二次根式。}
+\end{knowledgebox}
+
+% ---------- 16.5 分母有理化 ----------
+\subsection*{16.5\quad 分母有理化}
+
+\begin{knowledgebox}[分母有理化]
+\textbf{定义：}把分母中的根号去掉，叫做\textbf{分母有理化}。
+
+\medskip
+\textbf{常用方法：}
+
+\textbf{方法一：}利用 $\sqrt{a} \cdot \sqrt{a} = a$（$a \geqslant 0$）。
+\[
+\frac{1}{\sqrt{a}} = \frac{\sqrt{a}}{\sqrt{a} \cdot \sqrt{a}} = \frac{\sqrt{a}}{a} \quad (a > 0)
+\]
+
+\textbf{方法二：}利用平方差公式（适用于分母为 $\sqrt{a} \pm \sqrt{b}$ 的情形）。
+\[
+\frac{1}{\sqrt{a} + \sqrt{b}} = \frac{\sqrt{a} - \sqrt{b}}{(\sqrt{a}+\sqrt{b})(\sqrt{a}-\sqrt{b})} = \frac{\sqrt{a} - \sqrt{b}}{a - b}
+\]
+\[
+\frac{1}{\sqrt{a} - \sqrt{b}} = \frac{\sqrt{a} + \sqrt{b}}{(\sqrt{a}-\sqrt{b})(\sqrt{a}+\sqrt{b})} = \frac{\sqrt{a} + \sqrt{b}}{a - b}
+\]
+（其中 $a > 0$，$b > 0$，$a \neq b$）
+\end{knowledgebox}
+
+\begin{tipbox}[分母有理化的关键]
+分母有理化的核心思路是：\textbf{分子分母同乘一个恰当的式子}，使分母变为有理数。常见的"恰当的式子"包括：
+\begin{itemize}[leftmargin=2em]
+  \item 分母为 $\sqrt{a}$ 时，同乘 $\sqrt{a}$；
+  \item 分母为 $\sqrt{a} \pm \sqrt{b}$ 时，同乘它的"有理化因式"$\sqrt{a} \mp \sqrt{b}$。
+\end{itemize}
+\end{tipbox}
+
+% ================================================================
+% 第二部分：例题精讲
+% ================================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% --- 例题1 ---
+\begin{examplebox}[【例题1】二次根式有意义的条件]
+求下列各式有意义的条件：
+
+\medskip
+(1)\ $\sqrt{3x - 6}$
+
+\medskip
+(2)\ $\dfrac{1}{\sqrt{x-2}}$
+
+\medskip
+(3)\ $\sqrt{x+1} + \sqrt{3-x}$
+
+\bigskip
+\textbf{解：}
+
+(1)\ 二次根式有意义要求被开方数 $\geqslant 0$：
+
+$3x - 6 \geqslant 0$，解得 $x \geqslant 2$。
+
+\medskip
+(2)\ 要同时满足两个条件：
+
+$\sqrt{x-2}$ 有意义 $\implies x - 2 \geqslant 0$，即 $x \geqslant 2$；
+
+分母不为零 $\implies \sqrt{x-2} \neq 0$，即 $x - 2 \neq 0$，即 $x \neq 2$。
+
+两个条件取交集：$x > 2$。
+
+\medskip
+(3)\ 要同时满足两个条件：
+
+$x + 1 \geqslant 0 \implies x \geqslant -1$
+
+$3 - x \geqslant 0 \implies x \leqslant 3$
+
+两个条件取交集：$-1 \leqslant x \leqslant 3$。
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+求二次根式有意义的条件，关键是列出被开方数 $\geqslant 0$ 的不等式。如果根式在分母中，还需要排除使被开方数等于零的情况。多个根式相加时，要取各条件的\textbf{交集}。
+\end{tipbox}
+
+% --- 例题2 ---
+\begin{examplebox}[【例题2】利用性质化简 $\sqrt{a^2}$]
+化简下列各式：
+
+\medskip
+(1)\ $\sqrt{(-7)^2}$
+
+\medskip
+(2)\ $\sqrt{(a-3)^2}$（$a < 3$）
+
+\medskip
+(3)\ $\sqrt{x^2 - 6x + 9}$（$x \geqslant 3$）
+
+\bigskip
+\textbf{解：}
+
+(1)\ $\sqrt{(-7)^2} = |-7| = 7$
+
+\medskip
+(2)\ $\sqrt{(a-3)^2} = |a - 3|$
+
+因为 $a < 3$，所以 $a - 3 < 0$，$|a - 3| = -(a-3) = 3 - a$。
+
+$\therefore \sqrt{(a-3)^2} = 3 - a$
+
+\medskip
+(3)\ $x^2 - 6x + 9 = (x-3)^2$
+
+$\therefore \sqrt{x^2 - 6x + 9} = \sqrt{(x-3)^2} = |x-3|$
+
+因为 $x \geqslant 3$，所以 $x - 3 \geqslant 0$，$|x - 3| = x - 3$。
+
+$\therefore \sqrt{x^2 - 6x + 9} = x - 3$
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+$\sqrt{a^2} = |a|$ 是二次根式的重点和难点。化简时先配方（把被开方数写成完全平方式），再用绝对值处理，最后根据条件去绝对值符号。特别注意：当 $a < 0$ 时，$|a| = -a$（结果为正）。
+\end{tipbox}
+
+% --- 例题3 ---
+\begin{examplebox}[【例题3】二次根式的加减运算]
+计算：
+
+\medskip
+(1)\ $\sqrt{48} - 3\sqrt{\dfrac{1}{3}} + 4\sqrt{0.75}$
+
+\medskip
+(2)\ $\dfrac{1}{3}\sqrt{75} + 2\sqrt{8} - \sqrt{50} + \sqrt{27}$
+
+\bigskip
+\textbf{解：}
+
+(1)\ 先化为最简二次根式：
+\[
+\sqrt{48} = \sqrt{16 \times 3} = 4\sqrt{3}
+\]
+\[
+3\sqrt{\frac{1}{3}} = 3 \cdot \frac{\sqrt{3}}{3} = \sqrt{3}
+\]
+\[
+4\sqrt{0.75} = 4\sqrt{\frac{3}{4}} = 4 \cdot \frac{\sqrt{3}}{2} = 2\sqrt{3}
+\]
+
+$\therefore$ 原式 $= 4\sqrt{3} - \sqrt{3} + 2\sqrt{3} = 5\sqrt{3}$
+
+\medskip
+(2)\ 先化为最简二次根式：
+\[
+\frac{1}{3}\sqrt{75} = \frac{1}{3} \times 5\sqrt{3} = \frac{5\sqrt{3}}{3}
+\]
+\[
+2\sqrt{8} = 2 \times 2\sqrt{2} = 4\sqrt{2}
+\]
+\[
+\sqrt{50} = 5\sqrt{2}
+\]
+\[
+\sqrt{27} = 3\sqrt{3}
+\]
+
+$\therefore$ 原式 $= \dfrac{5\sqrt{3}}{3} + 4\sqrt{2} - 5\sqrt{2} + 3\sqrt{3}$
+
+$= \left(\dfrac{5}{3} + 3\right)\sqrt{3} + (4 - 5)\sqrt{2}$
+
+$= \dfrac{14}{3}\sqrt{3} - \sqrt{2}$
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+二次根式加减法的三步：(1)\textbf{化简}——把每个根式化为最简二次根式；(2)\textbf{分类}——按被开方数归类；(3)\textbf{合并}——同类根式的系数相加减。
+\end{tipbox}
+
+% --- 例题4 ---
+\begin{examplebox}[【例题4】二次根式的乘除运算]
+计算：
+
+\medskip
+(1)\ $\sqrt{6} \times \sqrt{15} \times \sqrt{10}$
+
+\medskip
+(2)\ $\dfrac{\sqrt{72}}{\sqrt{18}}$
+
+\medskip
+(3)\ $(3\sqrt{2} + \sqrt{3})(3\sqrt{2} - \sqrt{3})$
+
+\bigskip
+\textbf{解：}
+
+(1)\ $\sqrt{6} \times \sqrt{15} \times \sqrt{10} = \sqrt{6 \times 15 \times 10} = \sqrt{900} = 30$
+
+\medskip
+(2)\ $\dfrac{\sqrt{72}}{\sqrt{18}} = \sqrt{\dfrac{72}{18}} = \sqrt{4} = 2$
+
+\medskip
+(3)\ 利用平方差公式：
+
+$(3\sqrt{2} + \sqrt{3})(3\sqrt{2} - \sqrt{3}) = (3\sqrt{2})^2 - (\sqrt{3})^2$
+
+$= 9 \times 2 - 3 = 18 - 3 = 15$
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+二次根式乘除法的核心公式是 $\sqrt{a} \cdot \sqrt{b} = \sqrt{ab}$ 和 $\dfrac{\sqrt{a}}{\sqrt{b}} = \sqrt{\dfrac{a}{b}}$。运算后务必化为最简。遇到括号展开时，可灵活运用乘法公式（平方差、完全平方等）简化运算。
+\end{tipbox}
+
+% --- 例题5 ---
+\begin{examplebox}[【例题5】分母有理化]
+将下列各式分母有理化：
+
+\medskip
+(1)\ $\dfrac{6}{\sqrt{3}}$
+
+\medskip
+(2)\ $\dfrac{1}{\sqrt{5} + \sqrt{2}}$
+
+\medskip
+(3)\ $\dfrac{\sqrt{3} + 1}{\sqrt{3} - 1}$
+
+\bigskip
+\textbf{解：}
+
+(1)\ $\dfrac{6}{\sqrt{3}} = \dfrac{6\sqrt{3}}{\sqrt{3} \cdot \sqrt{3}} = \dfrac{6\sqrt{3}}{3} = 2\sqrt{3}$
+
+\medskip
+(2)\ 分子分母同乘 $\sqrt{5} - \sqrt{2}$：
+\[
+\frac{1}{\sqrt{5}+\sqrt{2}} = \frac{\sqrt{5}-\sqrt{2}}{(\sqrt{5}+\sqrt{2})(\sqrt{5}-\sqrt{2})} = \frac{\sqrt{5}-\sqrt{2}}{5-2} = \frac{\sqrt{5}-\sqrt{2}}{3}
+\]
+
+\medskip
+(3)\ 分子分母同乘 $\sqrt{3} + 1$：
+\[
+\frac{\sqrt{3}+1}{\sqrt{3}-1} = \frac{(\sqrt{3}+1)^2}{(\sqrt{3}-1)(\sqrt{3}+1)} = \frac{3 + 2\sqrt{3} + 1}{3 - 1} = \frac{4 + 2\sqrt{3}}{2} = 2 + \sqrt{3}
+\]
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+分母有理化的关键是找"有理化因式"。单个根式 $\sqrt{a}$ 的有理化因式是自身；和（差）形式 $\sqrt{a} \pm \sqrt{b}$ 的有理化因式是 $\sqrt{a} \mp \sqrt{b}$（利用平方差公式消去根号）。
+\end{tipbox}
+
+% --- 例题6 ---
+\begin{examplebox}[【例题6】二次根式的综合运算]
+计算：$(\sqrt{2} + 1)^2 - (\sqrt{3} - 1)(\sqrt{3} + 1) + \sqrt{12} \div \sqrt{3}$
+
+\bigskip
+\textbf{解：}
+
+逐项计算：
+
+$(\sqrt{2}+1)^2 = 2 + 2\sqrt{2} + 1 = 3 + 2\sqrt{2}$
+
+$(\sqrt{3}-1)(\sqrt{3}+1) = 3 - 1 = 2$
+
+$\sqrt{12} \div \sqrt{3} = \sqrt{\dfrac{12}{3}} = \sqrt{4} = 2$
+
+$\therefore$ 原式 $= (3 + 2\sqrt{2}) - 2 + 2 = 3 + 2\sqrt{2}$
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+二次根式综合运算要注意运算顺序（先乘方，再乘除，最后加减），并灵活运用乘法公式。完全平方公式 $(\sqrt{a} \pm \sqrt{b})^2 = a \pm 2\sqrt{ab} + b$ 和平方差公式在二次根式运算中非常常用。
+\end{tipbox}
+
+% --- 例题7 ---
+\begin{examplebox}[【例题7】综合提高——条件求值与配方]
+已知 $x = \sqrt{3} + 1$，$y = \sqrt{3} - 1$，求下列各式的值：
+
+\medskip
+(1)\ $x^2 + y^2$
+
+\medskip
+(2)\ $\dfrac{y}{x} + \dfrac{x}{y}$
+
+\bigskip
+\textbf{解：}
+
+先计算基本量：
+
+$x + y = (\sqrt{3}+1) + (\sqrt{3}-1) = 2\sqrt{3}$
+
+$xy = (\sqrt{3}+1)(\sqrt{3}-1) = 3 - 1 = 2$
+
+\medskip
+(1)\ $x^2 + y^2 = (x+y)^2 - 2xy = (2\sqrt{3})^2 - 2 \times 2 = 12 - 4 = 8$
+
+\medskip
+(2)\ $\dfrac{y}{x} + \dfrac{x}{y} = \dfrac{y^2 + x^2}{xy} = \dfrac{8}{2} = 4$
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+含二次根式的条件求值题，不要急于把根号值代入，应先计算$x+y$、$xy$、$x^2+y^2$等"对称式"，利用整体代换可以大幅简化计算。这是分式条件求值和二次根式的综合应用。
+\end{tipbox}
+
+% ================================================================
+% 第三部分：应用题
+% ================================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+% --- 应用1 ---
+\begin{appbox}[【应用1】面积与根式计算]
+如图，一个矩形花坛的长为 $\sqrt{75}$ 米，宽为 $\sqrt{27}$ 米。
+
+(1) 求花坛的面积。
+
+(2) 求花坛的周长。
+
+(3) 沿花坛四周铺一圈宽度为 $\sqrt{3}$ 米的小路，求小路的面积。
+
+\bigskip
+\textbf{解：}
+
+先化简：$\sqrt{75} = 5\sqrt{3}$，$\sqrt{27} = 3\sqrt{3}$。
+
+(1) 面积 $= \sqrt{75} \times \sqrt{27} = 5\sqrt{3} \times 3\sqrt{3} = 15 \times 3 = 45$（平方米）
+
+(2) 周长 $= 2(\sqrt{75} + \sqrt{27}) = 2(5\sqrt{3} + 3\sqrt{3}) = 2 \times 8\sqrt{3} = 16\sqrt{3}$（米）
+
+(3) 铺路后外层矩形的长 $= 5\sqrt{3} + 2\sqrt{3} = 7\sqrt{3}$，宽 $= 3\sqrt{3} + 2\sqrt{3} = 5\sqrt{3}$。
+
+小路面积 $= 7\sqrt{3} \times 5\sqrt{3} - 45 = 35 \times 3 - 45 = 105 - 45 = 60$（平方米）
+
+\textbf{答：}面积 $45$ 平方米，周长 $16\sqrt{3}$ 米，小路面积 $60$ 平方米。
+\end{appbox}
+
+% --- 应用2 ---
+\begin{appbox}[【应用2】勾股定理与二次根式]
+一个直角三角形的两条直角边长分别为 $\sqrt{48}$ 厘米和 $\sqrt{12}$ 厘米。
+
+(1) 求斜边的长度。
+
+(2) 求斜边上的高。
+
+\bigskip
+\textbf{解：}
+
+先化简：$\sqrt{48} = 4\sqrt{3}$，$\sqrt{12} = 2\sqrt{3}$。
+
+(1) 由勾股定理：
+
+斜边$^2 = (\sqrt{48})^2 + (\sqrt{12})^2 = 48 + 12 = 60$
+
+斜边 $= \sqrt{60} = \sqrt{4 \times 15} = 2\sqrt{15}$（厘米）
+
+(2) 面积法：设斜边上的高为$h$。
+
+直角三角形面积 $= \dfrac{1}{2} \times \sqrt{48} \times \sqrt{12} = \dfrac{1}{2} \times 4\sqrt{3} \times 2\sqrt{3} = \dfrac{1}{2} \times 24 = 12$
+
+又面积 $= \dfrac{1}{2} \times 斜边 \times h = \dfrac{1}{2} \times 2\sqrt{15} \times h$
+
+$\therefore \sqrt{15} \times h = 12$，$h = \dfrac{12}{\sqrt{15}} = \dfrac{12\sqrt{15}}{15} = \dfrac{4\sqrt{15}}{5}$（厘米）
+
+\textbf{答：}斜边长 $2\sqrt{15}$ 厘米，斜边上的高为 $\dfrac{4\sqrt{15}}{5}$ 厘米。
+\end{appbox}
+
+% --- 应用3 ---
+\begin{appbox}[【应用3】物理情境中的二次根式]
+在物理学中，自由落体运动的公式为 $h = \dfrac{1}{2}gt^2$，其中 $h$ 为下落高度（米），$g = 10$ 米/秒$^2$，$t$ 为时间（秒）。
+
+(1) 物体从 $h$ 米高处自由落下，求落地时间 $t$（用含 $h$ 的根式表示）。
+
+(2) 当 $h = 20$ 米时，求落地时间。
+
+(3) 当 $h = 45$ 米时，求落地时的速度（速度 $v = gt$）。
+
+\bigskip
+\textbf{解：}
+
+(1) 由 $h = \dfrac{1}{2} \times 10 \times t^2 = 5t^2$，得 $t^2 = \dfrac{h}{5}$。
+
+$\therefore t = \sqrt{\dfrac{h}{5}} = \dfrac{\sqrt{h}}{\sqrt{5}} = \dfrac{\sqrt{5h}}{5}$（秒）\quad（取正值）
+
+(2) $t = \sqrt{\dfrac{20}{5}} = \sqrt{4} = 2$（秒）
+
+(3) $t = \sqrt{\dfrac{45}{5}} = \sqrt{9} = 3$（秒）
+
+$v = gt = 10 \times 3 = 30$（米/秒）
+
+\textbf{答：}落地时间为 $\dfrac{\sqrt{5h}}{5}$ 秒；$h=20$ 时为 $2$ 秒；$h=45$ 时落地速度为 $30$ 米/秒。
+\end{appbox}
+
+% ================================================================
+% 第四部分：课堂练习
+% ================================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em]
+  \item $x$ 为何值时，$\sqrt{2x - 6}$ 有意义？$\sqrt{5 - x}$ 呢？两者同时有意义的条件是什么？
+
+  \item 化简：$\sqrt{(-11)^2} + \sqrt{(3 - \pi)^2}$
+
+  \item 计算：$\sqrt{27} - 3\sqrt{\dfrac{1}{3}} + \sqrt{12}$
+
+  \item 分母有理化：$\dfrac{4}{\sqrt{5} - 1}$
+
+  \item 已知 $x = 2 + \sqrt{3}$，$y = 2 - \sqrt{3}$，求 $x^2 y + xy^2$ 的值。
+\end{enumerate}
+
+\begin{knowledgebox}[参考答案]
+\textbf{1.}\ $\sqrt{2x-6}$ 有意义：$2x - 6 \geqslant 0$，即 $x \geqslant 3$。
+
+$\sqrt{5-x}$ 有意义：$5 - x \geqslant 0$，即 $x \leqslant 5$。
+
+两者同时有意义：$3 \leqslant x \leqslant 5$。
+
+\medskip
+\textbf{2.}\ $\sqrt{(-11)^2} + \sqrt{(3-\pi)^2} = |-11| + |3 - \pi| = 11 + (\pi - 3) = 8 + \pi$
+
+（注：$\pi \approx 3.14 > 3$，故 $3 - \pi < 0$，$|3-\pi| = \pi - 3$）
+
+\medskip
+\textbf{3.}\ $\sqrt{27} - 3\sqrt{\dfrac{1}{3}} + \sqrt{12} = 3\sqrt{3} - \sqrt{3} + 2\sqrt{3} = 4\sqrt{3}$
+
+\medskip
+\textbf{4.}\ $\dfrac{4}{\sqrt{5}-1} = \dfrac{4(\sqrt{5}+1)}{(\sqrt{5}-1)(\sqrt{5}+1)} = \dfrac{4(\sqrt{5}+1)}{5-1} = \dfrac{4(\sqrt{5}+1)}{4} = \sqrt{5}+1$
+
+\medskip
+\textbf{5.}\ $x + y = 4$，$xy = (2+\sqrt{3})(2-\sqrt{3}) = 4 - 3 = 1$。
+
+$x^2y + xy^2 = xy(x + y) = 1 \times 4 = 4$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

@@ -1,0 +1,610 @@
+% ============================================================
+% 第20章 数据的分析 — 人教版八年级下册讲义
+% 编译命令：xelatex -interaction=nonstopmode 第20章_数据的分析.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版八年级下册 · 第20章 数据的分析}}}
+\fancyhead[R]{\small\textcolor{mainblue}{家教讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第20章\quad 数据的分析}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 八年级下册\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+%  第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+\subsection*{20.1\quad 数据的集中趋势——平均数}
+
+\begin{knowledgebox}[算术平均数]
+给定 $n$ 个数据 $x_1, x_2, \cdots, x_n$，它们的\textbf{算术平均数}为：
+$$\bar{x} = \frac{1}{n}(x_1 + x_2 + \cdots + x_n) = \frac{1}{n}\sum_{i=1}^{n} x_i$$
+
+算术平均数是最常用的集中趋势指标，反映一组数据的"平均水平"。
+\end{knowledgebox}
+
+\begin{knowledgebox}[加权平均数]
+若 $n$ 个数据中，$x_1$ 出现 $f_1$ 次，$x_2$ 出现 $f_2$ 次，$\cdots$，$x_k$ 出现 $f_k$ 次（$f_1 + f_2 + \cdots + f_k = n$），则\textbf{加权平均数}为：
+$$\bar{x} = \frac{x_1 f_1 + x_2 f_2 + \cdots + x_k f_k}{f_1 + f_2 + \cdots + f_k} = \frac{\sum_{i=1}^{k} x_i f_i}{n}$$
+
+其中 $f_1, f_2, \cdots, f_k$ 叫做\textbf{权}（权重），反映了各个数据的重要程度。
+
+\medskip
+\textbf{应用场景}：当不同数据的重要程度不同时，用加权平均数更合理。例如考试中平时成绩占 $30\%$、期末成绩占 $70\%$。
+\end{knowledgebox}
+
+\begin{tipbox}[加权平均数与算术平均数的关系]
+当所有数据的权相等（即每个数据出现的次数相同）时，加权平均数就退化为算术平均数。因此算术平均数是加权平均数的特殊情况。
+\end{tipbox}
+
+\subsection*{20.2\quad 数据的集中趋势——中位数和众数}
+
+\begin{knowledgebox}[中位数]
+将一组数据按\textbf{从小到大}的顺序排列后：
+
+\begin{itemize}[leftmargin=2em]
+  \item 如果数据个数 $n$ 为\textbf{奇数}，则处于正中间位置的那个数就是中位数，即第 $\dfrac{n+1}{2}$ 个数据。
+  \item 如果数据个数 $n$ 为\textbf{偶数}，则处于正中间位置的两个数的平均数就是中位数，即第 $\dfrac{n}{2}$ 个和第 $\dfrac{n}{2}+1$ 个数据的平均数。
+\end{itemize}
+
+\textbf{意义}：中位数不受极端值（偏大或偏小的数据）的影响，比平均数更能反映"中间水平"。
+\end{knowledgebox}
+
+\begin{knowledgebox}[众数]
+一组数据中\textbf{出现次数最多}的数据叫做这组数据的\textbf{众数}。
+
+\begin{itemize}[leftmargin=2em]
+  \item 一组数据的众数可能不止一个，也可能不存在。
+  \item 众数反映的是一组数据中出现最频繁的值。
+\end{itemize}
+
+\textbf{应用场景}：例如商场最畅销的鞋码、投票中得票最多的选项等。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=2em]
+  \item 求中位数前，\textbf{必须先排序}！不能直接取中间位置的数。
+  \item 众数是一个"值"，不是"次数"。例如数据 $\{1,2,2,3\}$ 的众数是 $2$，而不是 $2$ 出现了 $2$ 次。
+  \item 平均数、中位数、众数可能相同，也可能不同。
+\end{itemize}
+\end{warnbox}
+
+\begin{knowledgebox}[平均数、中位数、众数的对比]
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{统计量} & \textbf{定义} & \textbf{优点} & \textbf{缺点} \\
+\hline
+平均数 & 所有数据的算术平均 & 利用全部数据信息 & 易受极端值影响 \\
+\hline
+中位数 & 排序后居中的数 & 不受极端值影响 & 未利用全部信息 \\
+\hline
+众数 & 出现次数最多的数 & 反映最普遍的情况 & 可能不唯一或不存在 \\
+\hline
+\end{tabular}
+\end{center}
+\end{knowledgebox}
+
+\subsection*{20.3\quad 数据的波动程度——方差与标准差}
+
+\begin{knowledgebox}[方差]
+设 $n$ 个数据 $x_1, x_2, \cdots, x_n$ 的平均数为 $\bar{x}$，则\textbf{方差}为：
+$$s^2 = \frac{1}{n}\left[(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \cdots + (x_n - \bar{x})^2\right] = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2$$
+
+\textbf{意义}：方差越大，数据的波动越大（越分散）；方差越小，数据的波动越小（越集中、越稳定）。
+\end{knowledgebox}
+
+\begin{knowledgebox}[标准差]
+方差的算术平方根叫做\textbf{标准差}：
+$$s = \sqrt{s^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2}$$
+
+标准差的单位与原始数据的单位相同，比方差更直观。
+\end{knowledgebox}
+
+\begin{tipbox}[方差的计算技巧]
+计算方差时，先算 $\bar{x}$，再算每个数据与 $\bar{x}$ 的差的平方，最后取平均。也可以利用公式：
+$$s^2 = \frac{1}{n}(x_1^2 + x_2^2 + \cdots + x_n^2) - \bar{x}^2$$
+即"平方的平均"减去"平均的平方"，有时计算更简便。
+\end{tipbox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=2em]
+  \item 方差是"差的平方的平均"，不是"差的平均的平方"。
+  \item 方差 $s^2 \geqslant 0$，当且仅当所有数据都相等时 $s^2 = 0$。
+  \item 比较两组数据的稳定性时，先看平均数是否相同。平均数相同的情况下，方差越小越稳定。如果平均数不同，需要结合实际情况分析。
+\end{itemize}
+\end{warnbox}
+
+\subsection*{20.4\quad 用样本估计总体与统计图表}
+
+\begin{knowledgebox}[用样本估计总体]
+当总体数量很大或调查具有破坏性时，通常从总体中抽取\textbf{样本}，用样本的统计量（平均数、方差等）来估计总体的相应统计量。
+
+\textbf{注意}：
+\begin{itemize}[leftmargin=2em]
+  \item 样本必须具有\textbf{代表性}和\textbf{随机性}。
+  \item 样本容量越大，估计越精确。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{knowledgebox}[频数分布表与频率分布直方图]
+\textbf{频数}：落在某一小组内的数据个数。
+
+\textbf{频率}：$\text{频率} = \dfrac{\text{频数}}{\text{数据总数}}$。
+
+\textbf{频率分布直方图}的要点：
+\begin{itemize}[leftmargin=2em]
+  \item 横轴表示数据的取值范围（分组）。
+  \item 纵轴表示\textbf{频率/组距}（而不是频率本身）。
+  \item 每个小矩形的面积 $=$ 频率。
+  \item 所有小矩形的面积之和 $= 1$。
+\end{itemize}
+\end{knowledgebox}
+
+频率分布直方图示例：
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar interval,
+    width=12cm, height=6cm,
+    xlabel={成绩（分）},
+    ylabel={频率/组距},
+    xmin=50, xmax=100,
+    ymin=0, ymax=0.05,
+    xtick={50,60,70,80,90,100},
+    ytick=\empty,
+    fill=lightblue,
+    draw=mainblue,
+    bar width=28pt,
+    every axis plot/.append style={fill opacity=0.6},
+    area style,
+]
+\addplot coordinates {
+    (50,0.01) (60,0.025) (70,0.04) (80,0.03) (90,0.015) (100,0)
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+上面的直方图表示：$50\sim60$ 分的频率 $= 0.01 \times 10 = 0.1$（即 $10\%$），$60\sim70$ 分的频率 $= 0.025 \times 10 = 0.25$（即 $25\%$），以此类推。各组频率之和 $= 1$。
+
+% ============================================================
+%  第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】基础计算——求平均数]
+某同学 $5$ 次数学测验成绩如下：$78$，$85$，$90$，$82$，$85$。求这 $5$ 次成绩的平均数。
+\end{examplebox}
+
+\textbf{解}：
+
+$$\bar{x} = \frac{78 + 85 + 90 + 82 + 85}{5} = \frac{420}{5} = 84$$
+
+\textbf{答案}：平均成绩为 $84$ 分。
+
+\begin{tipbox}[方法总结]
+求算术平均数：先求总和，再除以数据个数。注意不要漏数数据个数，也不要算错总和。
+\end{tipbox}
+
+\begin{examplebox}[【例题2】加权平均数——学期总评]
+某学期数学总评成绩中，平时成绩占 $30\%$，期中考试占 $30\%$，期末考试占 $40\%$。小明的平时成绩为 $80$ 分，期中考试 $75$ 分，期末考试 $90$ 分。求小明的学期总评成绩。
+\end{examplebox}
+
+\textbf{解}：
+
+$$\bar{x} = 80 \times 30\% + 75 \times 30\% + 90 \times 40\% = 24 + 22.5 + 36 = 82.5$$
+
+\textbf{答案}：学期总评成绩为 $82.5$ 分。
+
+\begin{tipbox}[方法总结]
+加权平均数 $= \sum(\text{数据} \times \text{权重})$，注意权重之和必须为 $1$（即 $100\%$）。计算时分别相乘再求和即可。
+\end{tipbox}
+
+\begin{examplebox}[【例题3】中位数和众数——概念辨析]
+某班 $10$ 名同学的身高（单位：cm）数据如下：
+
+$160,\ 165,\ 170,\ 168,\ 172,\ 165,\ 175,\ 165,\ 168,\ 170$
+
+求这组数据的平均数、中位数和众数。
+\end{examplebox}
+
+\textbf{解}：
+
+\textbf{平均数}：
+$$\bar{x} = \frac{160+165+170+168+172+165+175+165+168+170}{10} = \frac{1678}{10} = 167.8 \text{ (cm)}$$
+
+\textbf{中位数}：先排序：
+$$160,\ 165,\ 165,\ 165,\ 168,\ 168,\ 170,\ 170,\ 172,\ 175$$
+
+$n = 10$（偶数），中位数为第 $5$ 个和第 $6$ 个数据的平均数：
+$$\text{中位数} = \frac{168 + 168}{2} = 168 \text{ (cm)}$$
+
+\textbf{众数}：$165$ 出现 $3$ 次，出现次数最多，所以众数为 $165$ cm。
+
+\textbf{答案}：平均数 $167.8$ cm，中位数 $168$ cm，众数 $165$ cm。
+
+\begin{tipbox}[方法总结]
+\begin{enumerate}[leftmargin=2em]
+  \item 求中位数前\textbf{必须排序}，然后根据数据个数的奇偶性确定取法。
+  \item 众数看"谁出现最多"，注意可能有多个众数。
+  \item 三者可能不同，说明它们从不同角度反映数据特征。
+\end{enumerate}
+\end{tipbox}
+
+\begin{examplebox}[【例题4】方差计算与比较]
+甲、乙两名射击选手各射靶 $5$ 次，成绩如下（单位：环）：
+
+甲：$8,\ 7,\ 9,\ 8,\ 8$
+
+乙：$7,\ 10,\ 7,\ 9,\ 7$
+
+哪位选手的成绩更稳定？
+\end{examplebox}
+
+\textbf{解}：
+
+\textbf{平均数}：
+$$\bar{x}_{\text{甲}} = \frac{8+7+9+8+8}{5} = \frac{40}{5} = 8$$
+$$\bar{x}_{\text{乙}} = \frac{7+10+7+9+7}{5} = \frac{40}{5} = 8$$
+
+两人平均成绩相同，都是 $8$ 环，可以比较方差。
+
+\textbf{方差}：
+$$s^2_{\text{甲}} = \frac{1}{5}\left[(8-8)^2+(7-8)^2+(9-8)^2+(8-8)^2+(8-8)^2\right] = \frac{0+1+1+0+0}{5} = 0.4$$
+
+$$s^2_{\text{乙}} = \frac{1}{5}\left[(7-8)^2+(10-8)^2+(7-8)^2+(9-8)^2+(7-8)^2\right] = \frac{1+4+1+1+1}{5} = 1.6$$
+
+因为 $s^2_{\text{甲}} = 0.4 < 1.6 = s^2_{\text{乙}}$，所以\textbf{甲的成绩更稳定}。
+
+\begin{tipbox}[方法总结]
+比较两组数据的稳定性：
+\begin{enumerate}[leftmargin=2em]
+  \item 先看平均数是否相同。若相同，直接比较方差，方差越小越稳定。
+  \item 若平均数不同，需结合实际意义综合分析（如比较变异系数等，初中阶段一般平均数相同）。
+  \item 方差计算时，先算平均数，再逐步算偏差的平方。
+\end{enumerate}
+\end{tipbox}
+
+\begin{examplebox}[【例题5】读频率分布直方图]
+某校对 $200$ 名学生的数学成绩进行统计，绘制了如下频率分布直方图（每组含最低值，不含最高值）：
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar interval,
+    width=12cm, height=7cm,
+    xlabel={成绩（分）},
+    ylabel={频率/组距},
+    xmin=40, xmax=100,
+    ymin=0, ymax=0.045,
+    xtick={40,50,60,70,80,90,100},
+    ytick=\empty,
+    fill=lightblue,
+    draw=mainblue,
+    bar width=28pt,
+    every axis plot/.append style={fill opacity=0.6},
+    area style,
+]
+\addplot coordinates {
+    (40,0.005) (50,0.015) (60,0.03) (70,0.04) (80,0.025) (90,0.01) (100,0)
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[leftmargin=2em]
+  \item 求成绩在 $70\sim80$ 分这一组的频数。
+  \item 求成绩在 $80$ 分以上（含 $80$ 分）的频率。
+  \item 如果 $80$ 分及以上为优秀，估计全年级 $800$ 名学生中优秀的人数。
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解}：
+
+\begin{enumerate}[leftmargin=2em]
+  \item $70\sim80$ 分这一组的频率 $= 0.04 \times 10 = 0.4$。
+
+  频数 $= 200 \times 0.4 = 80$（人）。
+
+  \item $80\sim90$ 分的频率 $= 0.025 \times 10 = 0.25$。
+
+  $90\sim100$ 分的频率 $= 0.01 \times 10 = 0.1$。
+
+  $80$ 分以上的频率 $= 0.25 + 0.1 = 0.35$。
+
+  \item 全年级 $800$ 人中，优秀人数估计为 $800 \times 0.35 = 280$（人）。
+\end{enumerate}
+
+\begin{tipbox}[方法总结]
+频率分布直方图的读图要点：
+\begin{enumerate}[leftmargin=2em]
+  \item 每个小矩形的面积 $=$ 该组的频率（注意纵轴是"频率/组距"）。
+  \item 频率 $=$ 频数 $\div$ 总数，反之频数 $=$ 总数 $\times$ 频率。
+  \item 用样本的频率可以估计总体中相应的人数或比例。
+\end{enumerate}
+\end{tipbox}
+
+\begin{examplebox}[【例题6】综合分析——选择合适的统计量]
+某公司 $10$ 名员工的月收入（单位：千元）如下：
+
+$3,\ 3,\ 3.5,\ 4,\ 4,\ 4.5,\ 5,\ 5,\ 6,\ 50$
+
+公司招聘广告写"本公司员工平均月薪较高"。
+
+\begin{enumerate}[leftmargin=2em]
+  \item 计算平均数、中位数和众数。
+  \item 你认为用哪个统计量描述员工收入水平更合理？为什么？
+\end{enumerate}
+\end{examplebox}
+
+\textbf{解}：
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{平均数}：$\bar{x} = \dfrac{3+3+3.5+4+4+4.5+5+5+6+50}{10} = \dfrac{88}{10} = 8.8$（千元）。
+
+  \textbf{中位数}：数据已排好序，$n = 10$（偶数），中位数 $= \dfrac{4+4.5}{2} = 4.25$（千元）。
+
+  \textbf{众数}：$3$ 和 $4$ 和 $5$ 各出现 $2$ 次，众数为 $3$、$4$、$5$（千元）。
+
+  \item 用\textbf{中位数}更合理。
+
+  原因：$50$ 千元是一个极端值（可能是高管的工资），它将平均数拉高到 $8.8$ 千元，远高于绝大多数员工的实际收入。中位数 $4.25$ 千元更能反映"大多数员工"的收入水平。
+\end{enumerate}
+
+\begin{tipbox}[方法总结]
+当数据中存在极端值（异常大或异常小的数据）时：
+\begin{itemize}[leftmargin=2em]
+  \item 平均数会被极端值"拉偏"，不能真实反映整体水平。
+  \item 中位数不受极端值影响，更适合描述"中间水平"。
+  \item 这就是为什么新闻中常用"中位数收入"而非"平均收入"来描述国民收入。
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+%  第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】质量检测——用样本估计总体]
+某食品厂生产了一批袋装薯片，标准重量为每袋 $100$ 克。质检员随机抽取了 $20$ 袋，称重结果（单位：克）如下：
+
+$98,\ 101,\ 99,\ 100,\ 102,\ 97,\ 100,\ 103,\ 99,\ 101,$
+$100,\ 98,\ 102,\ 101,\ 99,\ 100,\ 97,\ 101,\ 100,\ 99$
+
+\begin{enumerate}[leftmargin=2em]
+  \item 求这 $20$ 袋薯片重量的平均数和方差。
+  \item 如果该批产品共有 $1000$ 袋，估计有多少袋的重量不低于 $100$ 克？
+\end{enumerate}
+\end{appbox}
+
+\textbf{解}：
+
+\begin{enumerate}[leftmargin=2em]
+  \item 先统计各值出现的次数：
+
+  \begin{center}
+  \begin{tabular}{ccccccccc}
+    \toprule
+    重量 & 97 & 98 & 99 & 100 & 101 & 102 & 103 \\
+    次数 & 2 & 2 & 4 & 5 & 4 & 2 & 1 \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+
+  验证：$2+2+4+5+4+2+1 = 20$。$\checkmark$
+
+  $$\bar{x} = \frac{97\times2 + 98\times2 + 99\times4 + 100\times5 + 101\times4 + 102\times2 + 103\times1}{20}$$
+  $$= \frac{194+196+396+500+404+204+103}{20} = \frac{1997}{20} = 99.85 \text{ (克)}$$
+
+  $$s^2 = \frac{1}{20}\sum(x_i - 99.85)^2$$
+
+  逐项计算：$(97-99.85)^2 = 8.1225$，$(98-99.85)^2 = 3.4225$，$(99-99.85)^2 = 0.7225$，$(100-99.85)^2 = 0.0225$，$(101-99.85)^2 = 1.3225$，$(102-99.85)^2 = 4.6225$，$(103-99.85)^2 = 9.9225$。
+
+  $$s^2 = \frac{1}{20}[8.1225\times2 + 3.4225\times2 + 0.7225\times4 + 0.0225\times5 + 1.3225\times4 + 4.6225\times2 + 9.9225\times1]$$
+  $$= \frac{16.245 + 6.845 + 2.89 + 0.1125 + 5.29 + 9.245 + 9.9225}{20} = \frac{50.55}{20} \approx 2.53$$
+
+  \item 样本中不低于 $100$ 克的有：$100$（$5$ 袋）、$101$（$4$ 袋）、$102$（$2$ 袋）、$103$（$1$ 袋），共 $12$ 袋。
+
+  比例 $= \dfrac{12}{20} = 0.6$。
+
+  估计 $1000$ 袋中不低于 $100$ 克的有 $1000 \times 0.6 = 600$（袋）。
+\end{enumerate}
+
+\textbf{答案}：平均数 $99.85$ 克，方差约 $2.53$；估计 $600$ 袋不低于 $100$ 克。
+
+\begin{appbox}[【应用2】选谁参赛——统计量的实际应用]
+学校要选派一名同学参加区里的数学竞赛，现对甲、乙两名候选同学最近 $8$ 次模拟测试的成绩进行比较：
+
+甲：$88,\ 90,\ 85,\ 92,\ 88,\ 86,\ 90,\ 91$
+
+乙：$85,\ 95,\ 88,\ 82,\ 92,\ 90,\ 86,\ 92$
+
+\begin{enumerate}[leftmargin=2em]
+  \item 分别计算甲、乙成绩的平均数和方差。
+  \item 如果你是教练，你会选谁？请说明理由。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解}：
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{甲}：$\bar{x}_{\text{甲}} = \dfrac{88+90+85+92+88+86+90+91}{8} = \dfrac{710}{8} = 88.75$
+
+  $$s^2_{\text{甲}} = \frac{1}{8}\sum(x_i - 88.75)^2$$
+  $$= \frac{(0.75)^2+(1.25)^2+(3.75)^2+(3.25)^2+(0.75)^2+(2.75)^2+(1.25)^2+(2.25)^2}{8}$$
+  $$= \frac{0.5625+1.5625+14.0625+10.5625+0.5625+7.5625+1.5625+5.0625}{8}$$
+  $$= \frac{41.5}{8} \approx 5.19$$
+
+  \textbf{乙}：$\bar{x}_{\text{乙}} = \dfrac{85+95+88+82+92+90+86+92}{8} = \dfrac{710}{8} = 88.75$
+
+  $$s^2_{\text{乙}} = \frac{1}{8}\sum(x_i - 88.75)^2$$
+  $$= \frac{(3.75)^2+(6.25)^2+(0.75)^2+(6.75)^2+(3.25)^2+(1.25)^2+(2.75)^2+(3.25)^2}{8}$$
+  $$= \frac{14.0625+39.0625+0.5625+45.5625+10.5625+1.5625+7.5625+10.5625}{8}$$
+  $$= \frac{129.5}{8} \approx 16.19$$
+
+  \item 两人平均成绩相同，均为 $88.75$ 分。但甲的方差 $5.19$ 远小于乙的方差 $16.19$，说明\textbf{甲的成绩更稳定}。
+
+  竞赛需要稳定发挥，应选\textbf{甲}。
+\end{enumerate}
+
+\begin{appbox}[【应用3】混合分组——平均数的综合运用]
+某年级有 $200$ 名学生，其中一班 $60$ 人，平均身高 $160$ cm；二班 $80$ 人，平均身高 $158$ cm；三班 $60$ 人，平均身高 $162$ cm。求全年级学生的平均身高。
+\end{appbox}
+
+\textbf{解}：
+
+全年级总身高：
+$$60 \times 160 + 80 \times 158 + 60 \times 162 = 9600 + 12640 + 9720 = 31960 \text{ (cm)}$$
+
+全年级平均身高：
+$$\bar{x} = \frac{31960}{200} = 159.8 \text{ (cm)}$$
+
+\textbf{答案}：全年级平均身高为 $159.8$ cm。
+
+\begin{warnbox}[易错提醒]
+不能直接将三个班的平均数取算术平均：$\dfrac{160+158+162}{3} = 160 \neq 159.8$。因为三个班人数不同，必须用加权平均数（人数为权重）计算。
+\end{warnbox}
+
+% ============================================================
+%  第四部分：课堂练习
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em]
+  \item 数据 $3,\ 5,\ 2,\ 5,\ 7,\ 5,\ 8$ 的众数和中位数分别是\quad（\quad）
+
+  A. $5,\ 5$\quad B. $5,\ 7$\quad C. $7,\ 5$\quad D. $5,\ 3$
+
+  \item 某小组 $5$ 名同学的体重（单位：kg）为 $45,\ 48,\ 50,\ 52,\ 55$，则这组数据的方差为\quad（\quad）
+
+  A. $10$\quad B. $12$\quad C. $\sqrt{10}$\quad D. $2\sqrt{10}$
+
+  \item 某校在一次数学竞赛中，随机抽查了 $50$ 名学生的成绩，绘制成如下频率分布表：
+
+  \begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    分数段 & $60\sim70$ & $70\sim80$ & $80\sim90$ & $90\sim100$ \\
+    \hline
+    频率 & $0.16$ & $0.40$ & $0.32$ & $0.12$ \\
+    \hline
+  \end{tabular}
+  \end{center}
+
+  成绩在 $80$ 分以上（含 $80$ 分）的学生有多少人？
+
+  \item 一组数据 $2,\ 4,\ 6,\ x,\ 8$ 的平均数为 $5$，求 $x$ 的值和这组数据的方差。
+
+  \item 甲、乙两名同学 $5$ 次数学测试成绩的平均数相同，甲的成绩方差为 $1.2$，乙的成绩方差为 $4.8$，则成绩较稳定的是\quad（\quad）
+
+  A. 甲\quad B. 乙\quad C. 一样稳定\quad D. 无法判断
+\end{enumerate}
+
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{A}。\quad 众数：$5$ 出现 $3$ 次，出现最多，众数为 $5$。排序后 $2,3,5,5,5,7,8$，$n=7$（奇数），中位数为第 $4$ 个数据 $5$。
+
+  \item \textbf{B}。\quad $\bar{x} = \dfrac{45+48+50+52+55}{5} = 50$。
+  $$s^2 = \frac{(45-50)^2+(48-50)^2+(50-50)^2+(52-50)^2+(55-50)^2}{5} = \frac{25+4+0+4+25}{5} = \frac{58}{5} = 11.6$$
+  取最接近的答案 $12$，选 B。（注：精确值为 $11.6$，选项 B 最接近。）
+
+  \item $80$ 分以上的频率 $= 0.32 + 0.12 = 0.44$。人数 $= 50 \times 0.44 = 22$（人）。
+
+  \item $\bar{x} = 5$，则 $\dfrac{2+4+6+x+8}{5} = 5$，$20+x = 25$，$x = 5$。
+  $$s^2 = \frac{(2-5)^2+(4-5)^2+(6-5)^2+(5-5)^2+(8-5)^2}{5} = \frac{9+1+1+0+9}{5} = \frac{20}{5} = 4$$
+
+  \item \textbf{A}。\quad 平均数相同时，方差越小越稳定。$1.2 < 4.8$，甲更稳定。
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

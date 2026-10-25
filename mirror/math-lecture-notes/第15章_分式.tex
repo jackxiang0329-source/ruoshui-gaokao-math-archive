@@ -1,0 +1,628 @@
+% ============================================================
+% 第15章 分式 — 人教版八年级上册
+% 编译命令：xelatex -interaction=nonstopmode 第15章_分式.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版八年级上册 · 第15章\ 分式}}}
+\fancyhead[R]{\small\textcolor{mainblue}{分式讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第15章\quad 分\quad 式}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 八年级上册\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ================================================================
+% 第一部分：知识点讲解
+% ================================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 15.1 分式的概念 ----------
+\subsection*{15.1\quad 分式的概念}
+
+\begin{knowledgebox}[定义：分式]
+一般地，如果$A$、$B$表示两个整式，并且$B$中含有字母，那么式子$\dfrac{A}{B}$叫做\textbf{分式}。其中$A$叫做分子，$B$叫做分母。
+
+\medskip
+\textbf{关键要点：}
+\begin{itemize}[leftmargin=2em]
+  \item 分母$B$中必须含有字母（未知数），否则就是整式。
+  \item 分式的本质仍然是除法运算，只不过被除数和除数用分数的形式表示。
+  \item 分式$\dfrac{A}{B}$有意义的条件：$B \neq 0$（分母不为零）。
+  \item 分式$\dfrac{A}{B}$无意义的条件：$B = 0$。
+  \item 分式$\dfrac{A}{B} = 0$的条件：$A = 0$ 且 $B \neq 0$（分子为零且分母不为零）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒：分式的识别]
+判断一个式子是否为分式，关键看\textbf{分母中是否含有字母}。
+
+\medskip
+例如：
+\begin{itemize}[leftmargin=2em]
+  \item $\dfrac{1}{x}$ 是分式（分母含字母$x$）。
+  \item $\dfrac{x}{3}$ \textbf{不是}分式（分母是常数3，这是整式）。
+  \item $\dfrac{x+1}{\pi}$ \textbf{不是}分式（$\pi$是常数，不是字母）。
+  \item $\dfrac{x^2+1}{x-1}$ 是分式。
+\end{itemize}
+\end{warnbox}
+
+\begin{tipbox}[判断分式"值为零"的三步法]
+\begin{enumerate}[leftmargin=2em]
+  \item 令分子$A=0$，解出字母的值；
+  \item 将所得值代入分母$B$，检验$B \neq 0$；
+  \item 若$B \neq 0$，则分式值为零；若$B = 0$，则分式无意义（舍去）。
+\end{enumerate}
+\end{tipbox}
+
+% ---------- 15.2 分式的基本性质 ----------
+\subsection*{15.2\quad 分式的基本性质}
+
+\begin{knowledgebox}[分式的基本性质]
+分式的分子与分母同时乘以（或除以）同一个不为零的整式，分式的值不变。
+
+\[
+\frac{A}{B} = \frac{A \cdot C}{B \cdot C} \quad (C \neq 0), \qquad \frac{A}{B} = \frac{A \div C}{B \div C} \quad (C \neq 0)
+\]
+
+\medskip
+\textbf{应用一：约分}
+\begin{itemize}[leftmargin=2em]
+  \item 找分子、分母的\textbf{公因式}，然后约去。
+  \item 公因式 = 系数的最大公约数 $\times$ 相同字母（取最低次幂）。
+  \item 约分的结果必须是\textbf{最简分式}（分子与分母没有公因式，$1$除外）。
+\end{itemize}
+
+\medskip
+\textbf{应用二：通分}
+\begin{itemize}[leftmargin=2em]
+  \item 找各分母的\textbf{最简公分母}，然后将每个分式化为同分母分式。
+  \item 最简公分母 = 各分母系数的最小公倍数 $\times$ 所有出现的字母（取最高次幂）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒：约分时不能"跨项"约分]
+约分只能约去分子和分母的\textbf{公因式}，不能只约分分子（或分母）中的一部分。
+
+\medskip
+\textbf{错误示例：} $\dfrac{x+2}{x+3} = \dfrac{2}{3}$\quad（错误！$x$不是分子和分母的公因式）
+
+\medskip
+\textbf{正确做法：}
+\[
+\frac{x^2 + 2x}{x^2 + 3x} = \frac{x(x+2)}{x(x+3)} = \frac{x+2}{x+3} \quad (x \neq 0)
+\]
+\end{warnbox}
+
+% ---------- 15.3 分式的运算 ----------
+\subsection*{15.3\quad 分式的运算}
+
+\begin{knowledgebox}[分式的乘除法]
+\textbf{乘法法则：}
+\[
+\frac{A}{B} \cdot \frac{C}{D} = \frac{A \cdot C}{B \cdot D}
+\]
+即分子乘以分子，分母乘以分母，然后约分化简。
+
+\medskip
+\textbf{除法法则：}
+\[
+\frac{A}{B} \div \frac{C}{D} = \frac{A}{B} \cdot \frac{D}{C} = \frac{A \cdot D}{B \cdot C} \quad (C \neq 0)
+\]
+除以一个分式等于乘以它的倒数。
+
+\medskip
+\textbf{乘方法则：}
+\[
+\left(\frac{A}{B}\right)^n = \frac{A^n}{B^n} \quad (B \neq 0,\; n\text{为正整数})
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[分式的加减法]
+\textbf{同分母分式加减：}
+\[
+\frac{A}{C} \pm \frac{B}{C} = \frac{A \pm B}{C}
+\]
+
+\medskip
+\textbf{异分母分式加减：}
+\begin{enumerate}[leftmargin=2em]
+  \item 找最简公分母；
+  \item 将各分式通分；
+  \item 按同分母分式加减法则计算；
+  \item 结果化为最简分式。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{tipbox}[分式运算的一般步骤]
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{先观察}：是否有可约分的项，能否先约分再计算。
+  \item \textbf{乘除法}：先将除法统一变为乘法，再约分，最后相乘。
+  \item \textbf{加减法}：先通分，再加减，最后化简。
+  \item \textbf{结果要求}：化为最简分式或整式。
+\end{enumerate}
+\end{tipbox}
+
+% ---------- 15.4 分式方程 ----------
+\subsection*{15.4\quad 分式方程}
+
+\begin{knowledgebox}[分式方程及其解法]
+\textbf{定义：}分母中含有未知数的方程叫做\textbf{分式方程}。
+
+\medskip
+\textbf{解分式方程的一般步骤：}
+\begin{enumerate}[leftmargin=2em]
+  \item 找到各分母的\textbf{最简公分母}；
+  \item 方程两边同时乘以最简公分母（\textbf{去分母}），将分式方程化为整式方程；
+  \item 解这个整式方程；
+  \item \textbf{验根}：将所得解代入最简公分母，若最简公分母不为零，则是原方程的解；若为零，则是\textbf{增根}，应舍去。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{warnbox}[重要提醒：分式方程必须验根！]
+去分母的过程相当于在方程两边同时乘以一个含有未知数的整式，这个整式有可能为零。因此解分式方程后\textbf{必须验根}。
+
+\medskip
+\textbf{验根方法：}将求得的解代入\textbf{最简公分母}，而不是代入原方程。若最简公分母为零，则该解为增根，应舍去。
+\end{warnbox}
+
+% ================================================================
+% 第二部分：例题精讲
+% ================================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% --- 例题1 ---
+\begin{examplebox}[【例题1】判断分式的类型及意义条件]
+当$x$取何值时，分式$\dfrac{x-1}{x^2 - 4}$有意义？当$x$取何值时，分式的值为零？
+
+\bigskip
+\textbf{解：}
+
+\textbf{(1) 有意义的条件：}
+
+分母不为零，即 $x^2 - 4 \neq 0$。
+
+解 $x^2 - 4 = 0$，得 $x = 2$ 或 $x = -2$。
+
+$\therefore$ 当 $x \neq 2$ 且 $x \neq -2$ 时，分式有意义。
+
+\medskip
+\textbf{(2) 值为零的条件：}
+
+分子为零且分母不为零。
+
+令 $x - 1 = 0$，得 $x = 1$。
+
+当 $x = 1$ 时，$x^2 - 4 = 1 - 4 = -3 \neq 0$。
+
+$\therefore$ 当 $x = 1$ 时，分式的值为零。
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+分式"有意义"只要求分母不为零；分式"值为零"要求分子为零\textbf{且}分母不为零。两个条件缺一不可，这是考试高频考点。
+\end{tipbox}
+
+% --- 例题2 ---
+\begin{examplebox}[【例题2】分式的约分与化简]
+化简下列各式：
+
+\medskip
+(1)\ $\dfrac{12a^3b^2}{-18a^2b^3}$
+
+\medskip
+(2)\ $\dfrac{x^2 - 9}{x^2 - 6x + 9}$
+
+\medskip
+\textbf{解：}
+
+(1)\ $\dfrac{12a^3b^2}{-18a^2b^3} = \dfrac{12}{-18} \cdot \dfrac{a^3}{a^2} \cdot \dfrac{b^2}{b^3} = -\dfrac{2}{3} \cdot a \cdot \dfrac{1}{b} = -\dfrac{2a}{3b}$
+
+\medskip
+(2)\ $\dfrac{x^2 - 9}{x^2 - 6x + 9} = \dfrac{(x+3)(x-3)}{(x-3)^2} = \dfrac{x+3}{x-3} \quad (x \neq 3)$
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+约分前先对分子、分母进行因式分解（提公因式、公式法等），找到公因式后再约去。注意约分后要标注使原分母为零的字母取值排除条件。
+\end{tipbox}
+
+% --- 例题3 ---
+\begin{examplebox}[【例题3】分式的混合运算]
+计算：
+
+\medskip
+(1)\ $\dfrac{2}{x-1} - \dfrac{1}{x+1}$
+
+\medskip
+(2)\ $\dfrac{x}{x-y} \cdot \dfrac{x^2-y^2}{x^2} \div \dfrac{x+y}{x}$
+
+\bigskip
+\textbf{解：}
+
+(1)\ 最简公分母为 $(x-1)(x+1)$。
+\begin{align*}
+\frac{2}{x-1} - \frac{1}{x+1} &= \frac{2(x+1)}{(x-1)(x+1)} - \frac{1(x-1)}{(x-1)(x+1)} \\[6pt]
+&= \frac{2(x+1) - (x-1)}{(x-1)(x+1)} \\[6pt]
+&= \frac{2x + 2 - x + 1}{(x-1)(x+1)} \\[6pt]
+&= \frac{x + 3}{(x-1)(x+1)}
+\end{align*}
+
+\medskip
+(2)\ 先把除法变为乘法，再约分：
+\begin{align*}
+\frac{x}{x-y} \cdot \frac{x^2-y^2}{x^2} \div \frac{x+y}{x}
+&= \frac{x}{x-y} \cdot \frac{(x+y)(x-y)}{x^2} \cdot \frac{x}{x+y} \\[6pt]
+&= \frac{x \cdot (x+y)(x-y) \cdot x}{(x-y) \cdot x^2 \cdot (x+y)} \\[6pt]
+&= 1
+\end{align*}
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+分式加减法的核心是\textbf{通分}，乘除法的核心是\textbf{约分}。混合运算中，先算乘除后算加减，能约分的先约分再相乘，可以大大简化计算。
+\end{tipbox}
+
+% --- 例题4 ---
+\begin{examplebox}[【例题4】解分式方程]
+解方程：$\dfrac{3}{x-2} + 1 = \dfrac{x-1}{2-x}$
+
+\bigskip
+\textbf{解：}
+
+注意 $\dfrac{x-1}{2-x} = \dfrac{x-1}{-(x-2)} = -\dfrac{x-1}{x-2}$
+
+原方程化为：
+\[
+\frac{3}{x-2} + 1 = -\frac{x-1}{x-2}
+\]
+
+两边同乘以 $(x-2)$（最简公分母）：
+\[
+3 + (x-2) = -(x-1)
+\]
+
+\[
+3 + x - 2 = -x + 1
+\]
+
+\[
+x + 1 = -x + 1
+\]
+
+\[
+2x = 0 \implies x = 0
+\]
+
+\textbf{验根：}将 $x=0$ 代入最简公分母 $x-2 = 0-2 = -2 \neq 0$。
+
+$\therefore$ $x=0$ 是原方程的解。
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+解分式方程四步走：\textbf{找}公分母 $\to$ \textbf{去}分母 $\to$ \textbf{解}整式方程 $\to$ \textbf{验根}。注意当分母含 $a-x$ 形式时，先化为 $-(x-a)$，方便找公分母。
+\end{tipbox}
+
+% --- 例题5 ---
+\begin{examplebox}[【例题5】分式方程有增根的情况]
+关于$x$的方程 $\dfrac{x}{x-3} - 2 = \dfrac{m}{x-3}$ 有增根，求$m$的值。
+
+\bigskip
+\textbf{解：}
+
+两边同乘以 $x - 3$：
+\[
+x - 2(x-3) = m
+\]
+
+\[
+x - 2x + 6 = m
+\]
+
+\[
+-x + 6 = m \implies x = 6 - m
+\]
+
+增根即使最简公分母为零的值，即 $x - 3 = 0$，$x = 3$。
+
+令 $6 - m = 3$，解得 $m = 3$。
+
+$\therefore$ 当 $m = 3$ 时，方程有增根 $x = 3$。
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+"有增根"意味着解出的整式方程的根恰好使最简公分母为零。解题思路：先去分母得到含参数的整式方程，再令最简公分母为零求出增根，最后代入整式方程解出参数的值。
+\end{tipbox}
+
+% --- 例题6 ---
+\begin{examplebox}[【例题6】分式化简求值]
+先化简，再求值：$\left(\dfrac{x}{x-2} - \dfrac{x}{x+2}\right) \div \dfrac{4x}{x^2 - 4}$，其中 $x = -1$。
+
+\bigskip
+\textbf{解：}
+
+先化简括号内的部分：
+\[
+\frac{x}{x-2} - \frac{x}{x+2} = \frac{x(x+2) - x(x-2)}{(x-2)(x+2)} = \frac{x^2+2x-x^2+2x}{(x-2)(x+2)} = \frac{4x}{(x-2)(x+2)}
+\]
+
+再除以 $\dfrac{4x}{x^2-4}$，即乘以倒数：
+\[
+\frac{4x}{(x-2)(x+2)} \div \frac{4x}{(x-2)(x+2)} = \frac{4x}{(x-2)(x+2)} \cdot \frac{(x-2)(x+2)}{4x} = 1
+\]
+
+将 $x = -1$ 代入化简结果 $1$，得原式 $= 1$。
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+"先化简再求值"题型，关键是先把分式化为最简形式。化简时注意：(1)通分合并；(2)除法变乘法；(3)因式分解后约分。最后代入数值时要确保代入的是使原式有意义的值。
+\end{tipbox}
+
+% --- 例题7 ---
+\begin{examplebox}[【例题7】综合提高——分式的条件求值]
+已知 $\dfrac{1}{x} + \dfrac{1}{y} = 5$，求 $\dfrac{2x - 3xy + 2y}{x + 2xy + y}$ 的值。
+
+\bigskip
+\textbf{解：}
+
+由 $\dfrac{1}{x} + \dfrac{1}{y} = 5$ 得 $\dfrac{y + x}{xy} = 5$，即 $x + y = 5xy$。
+
+将 $x + y = 5xy$ 代入所求式：
+
+\textbf{分子：}$2x - 3xy + 2y = 2(x+y) - 3xy = 2 \times 5xy - 3xy = 10xy - 3xy = 7xy$
+
+\textbf{分母：}$x + 2xy + y = (x+y) + 2xy = 5xy + 2xy = 7xy$
+
+$\therefore \dfrac{2x - 3xy + 2y}{x + 2xy + y} = \dfrac{7xy}{7xy} = 1$
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+"条件求值"题型不要试图分别求出$x$和$y$的值，而应把条件整体代入。常见技巧：(1)从条件中提取$x+y$、$xy$等"整体"；(2)将所求式用相同的整体表示；(3)代入消元。
+\end{tipbox}
+
+% ================================================================
+% 第三部分：应用题
+% ================================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+% --- 应用1 ---
+\begin{appbox}[【应用1】工程问题]
+一项工程，甲单独做需要$a$天完成，乙单独做需要$b$天完成。
+
+(1) 甲、乙合做一天能完成全部工程的几分之几？
+
+(2) 甲、乙合做需要多少天完成？
+
+\bigskip
+\textbf{解：}
+
+(1) 甲每天完成$\dfrac{1}{a}$，乙每天完成$\dfrac{1}{b}$。
+
+合做一天完成：$\dfrac{1}{a} + \dfrac{1}{b} = \dfrac{b+a}{ab}$
+
+(2) 合做完成所需天数为：
+\[
+1 \div \frac{a+b}{ab} = \frac{ab}{a+b} \text{（天）}
+\]
+
+\textbf{答：}合做一天完成全部工程的$\dfrac{a+b}{ab}$，合做需要$\dfrac{ab}{a+b}$天完成。
+\end{appbox}
+
+% --- 应用2 ---
+\begin{appbox}[【应用2】行程问题]
+小明骑自行车从家到学校，去时速度为$v_1$千米/时，回来时速度为$v_2$千米/时（$v_1 \neq v_2$）。设家到学校的距离为$s$千米。
+
+(1) 求小明往返的平均速度。
+
+(2) 当 $v_1 = 12$，$v_2 = 8$ 时，求平均速度的值。
+
+\bigskip
+\textbf{解：}
+
+(1) 去时用时 $\dfrac{s}{v_1}$ 小时，回来用时 $\dfrac{s}{v_2}$ 小时。
+
+往返总路程 $= 2s$，总时间 $= \dfrac{s}{v_1} + \dfrac{s}{v_2} = \dfrac{s(v_1+v_2)}{v_1 v_2}$。
+
+平均速度：
+\[
+\bar{v} = \frac{2s}{\dfrac{s(v_1+v_2)}{v_1 v_2}} = \frac{2v_1 v_2}{v_1 + v_2}
+\]
+
+(2) 当 $v_1 = 12$，$v_2 = 8$ 时：
+\[
+\bar{v} = \frac{2 \times 12 \times 8}{12 + 8} = \frac{192}{20} = 9.6 \text{（千米/时）}
+\]
+
+\textbf{答：}平均速度为 $\dfrac{2v_1 v_2}{v_1 + v_2}$ 千米/时，具体值为 $9.6$ 千米/时。
+\end{appbox}
+
+% --- 应用3 ---
+\begin{appbox}[【应用3】浓度问题]
+有含盐 $20\%$ 的盐水 $a$ 克，现在要配成含盐 $15\%$ 的盐水。
+
+(1) 需要加多少克水？
+
+(2) 当 $a = 100$ 时，需要加多少克水？
+
+\bigskip
+\textbf{解：}
+
+(1) 设需要加水 $x$ 克。
+
+盐的质量不变：$a \times 20\% = 0.2a$ 克。
+
+加水后盐水总量 $= a + x$ 克，含盐比例为 $15\%$：
+\[
+\frac{0.2a}{a + x} = 0.15
+\]
+
+\[
+0.2a = 0.15(a + x)
+\]
+
+\[
+0.2a = 0.15a + 0.15x
+\]
+
+\[
+0.05a = 0.15x
+\]
+
+\[
+x = \frac{a}{3}
+\]
+
+(2) 当 $a = 100$ 时：$x = \dfrac{100}{3} \approx 33.3$（克）。
+
+\textbf{答：}需要加水 $\dfrac{a}{3}$ 克，当 $a=100$ 时约需加 $33.3$ 克水。
+\end{appbox}
+
+% --- 应用4 ---
+\begin{appbox}[【应用4】注水问题]
+一个水池有甲、乙两个进水管。单独开甲管注满水池需要$a$小时，单独开乙管注满水池需要$b$小时（$a > b > 0$）。
+
+(1) 两管同时开放，多少小时能注满水池？
+
+(2) 若先开甲管 $2$ 小时，再两管同时开放，还需多少小时注满？
+
+\bigskip
+\textbf{解：}
+
+(1) 甲管每小时注$\dfrac{1}{a}$，乙管每小时注$\dfrac{1}{b}$。
+
+两管同时开放每小时注 $\dfrac{1}{a}+\dfrac{1}{b} = \dfrac{a+b}{ab}$。
+
+注满水池所需时间：$1 \div \dfrac{a+b}{ab} = \dfrac{ab}{a+b}$（小时）。
+
+(2) 先开甲管 $2$ 小时，注了 $\dfrac{2}{a}$。
+
+剩余 $1 - \dfrac{2}{a} = \dfrac{a-2}{a}$。
+
+两管同时开放注完剩余部分所需时间：
+\[
+\frac{a-2}{a} \div \frac{a+b}{ab} = \frac{a-2}{a} \cdot \frac{ab}{a+b} = \frac{b(a-2)}{a+b} \text{（小时）}
+\]
+
+\textbf{答：}两管同开$\dfrac{ab}{a+b}$小时注满；先开甲管$2$小时后再同开，还需$\dfrac{b(a-2)}{a+b}$小时。
+\end{appbox}
+
+% ================================================================
+% 第四部分：课堂练习
+% ================================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em]
+  \item 当$x$为何值时，分式 $\dfrac{x+3}{x^2 - 1}$ 有意义？当$x$为何值时，分式的值为零？
+
+  \item 化简：$\dfrac{m^2 - 4m + 4}{m^2 - 4}$
+
+  \item 计算：$\dfrac{a}{a-b} - \dfrac{b}{a+b}$
+
+  \item 解方程：$\dfrac{2}{x-1} = \dfrac{3}{x+1}$
+
+  \item 先化简，再求值：$\left(1 + \dfrac{1}{x-1}\right) \div \dfrac{x}{x^2 - 1}$，其中 $x = 2$。
+\end{enumerate}
+
+\begin{knowledgebox}[参考答案]
+\textbf{1.}\ 有意义的条件：$x^2 - 1 \neq 0$，即 $x \neq 1$ 且 $x \neq -1$。
+
+值为零的条件：$x + 3 = 0$ 且 $x^2 - 1 \neq 0$，即 $x = -3$（代入验证：$x^2-1 = 8 \neq 0$，成立）。
+
+\medskip
+\textbf{2.}\ $\dfrac{m^2 - 4m + 4}{m^2 - 4} = \dfrac{(m-2)^2}{(m-2)(m+2)} = \dfrac{m-2}{m+2} \quad (m \neq 2)$
+
+\medskip
+\textbf{3.}\ $\dfrac{a}{a-b} - \dfrac{b}{a+b} = \dfrac{a(a+b) - b(a-b)}{(a-b)(a+b)} = \dfrac{a^2+ab-ab+b^2}{a^2-b^2} = \dfrac{a^2+b^2}{a^2-b^2}$
+
+\medskip
+\textbf{4.}\ 两边同乘 $(x-1)(x+1)$：$2(x+1) = 3(x-1)$，$2x+2=3x-3$，$x=5$。
+
+验根：$(x-1)(x+1) = 4 \times 6 = 24 \neq 0$，$\therefore x = 5$。
+
+\medskip
+\textbf{5.}\ $\left(1 + \dfrac{1}{x-1}\right) \div \dfrac{x}{x^2-1} = \dfrac{x-1+1}{x-1} \cdot \dfrac{(x-1)(x+1)}{x} = \dfrac{x}{x-1} \cdot \dfrac{(x-1)(x+1)}{x} = x+1$
+
+当 $x = 2$ 时，原式 $= 3$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

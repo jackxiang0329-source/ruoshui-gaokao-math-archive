@@ -1,0 +1,535 @@
+% ============================================================
+% 讲义 — 人教版九年级上册 · 第21章 一元二次方程
+% 编译命令：xelatex -interaction=nonstopmode 第21章_一元二次方程.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版九年级上册 · 第21章 一元二次方程}}}
+\fancyhead[R]{\small\textcolor{mainblue}{家教讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第21章\quad 一元二次方程}}\\[12pt]
+{\Large\textcolor{gray}{家\quad 教\quad 讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版九年级上册\quad |\quad 课时：6$\sim$8课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+% 第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+\subsection*{21.1\quad 一元二次方程的概念}
+
+\begin{knowledgebox}[一元二次方程的定义]
+只含有一个未知数，且未知数的最高次数是$2$的整式方程叫做一元二次方程。
+\medskip
+一元二次方程的一般形式为：
+\[
+\boxed{ax^2 + bx + c = 0 \quad (a \neq 0)}
+\]
+其中 $a$ 叫做二次项系数，$b$ 叫做一次项系数，$c$ 叫做常数项。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[leftmargin=*]
+  \item 必须满足 $a \neq 0$，否则就不是一元二次方程。
+  \item 一般形式中各项必须在等号左边，右边为 $0$。
+  \item 判断一元二次方程时，需要先化简整理，再看未知数的最高次数。
+\end{enumerate}
+\end{warnbox}
+
+\subsection*{21.2\quad 一元二次方程的解法}
+
+\begin{knowledgebox}[解法一：直接开平方法]
+如果方程能化为 $x^2 = p$ 或 $(mx+n)^2 = p$ 的形式（其中 $p \geqslant 0$），则可以直接开平方求解。
+\[
+x^2 = p \implies x = \pm\sqrt{p}
+\]
+\[
+(mx+n)^2 = p \implies mx+n = \pm\sqrt{p} \implies x = \frac{-n \pm \sqrt{p}}{m}
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[解法二：配方法]
+将方程 $ax^2+bx+c=0$ 化为完全平方的形式求解。
+\medskip
+步骤：
+\begin{enumerate}[leftmargin=*]
+  \item 若 $a \neq 1$，方程两边同除以 $a$，化为 $x^2 + \dfrac{b}{a}x + \dfrac{c}{a} = 0$。
+  \item 将常数项移到右边：$x^2 + \dfrac{b}{a}x = -\dfrac{c}{a}$。
+  \item 两边同时加上 $\left(\dfrac{b}{2a}\right)^2$，使左边成为完全平方式。
+  \item 左边写成 $\left(x + \dfrac{b}{2a}\right)^2$ 的形式，再用开平方法求解。
+\end{enumerate}
+\[
+\boxed{x^2 + \frac{b}{a}x + \left(\frac{b}{2a}\right)^2 = -\frac{c}{a} + \left(\frac{b}{2a}\right)^2}
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[解法三：公式法]
+对于一般形式 $ax^2+bx+c=0$（$a\neq 0$），当 $\Delta = b^2-4ac \geqslant 0$ 时，方程的两个根为：
+\[
+\boxed{x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}}
+\]
+这就是一元二次方程的\textbf{求根公式}，它适用于所有的一元二次方程。
+\end{knowledgebox}
+
+\begin{knowledgebox}[解法四：因式分解法]
+如果一元二次方程的左边能分解为两个一次因式的乘积，即：
+\[
+ax^2+bx+c = a(x-x_1)(x-x_2) = 0
+\]
+则由 $a \neq 0$ 可得 $x - x_1 = 0$ 或 $x - x_2 = 0$，从而 $x = x_1$ 或 $x = x_2$。
+\medskip
+常用的分解方法：
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{提公因式法}：如 $x^2-3x = 0 \implies x(x-3)=0$。
+  \item \textbf{平方差公式}：如 $x^2-4=0 \implies (x+2)(x-2)=0$。
+  \item \textbf{十字相乘法}：如 $x^2-5x+6=0 \implies (x-2)(x-3)=0$。
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{tipbox}[解法选择策略]
+\begin{enumerate}[leftmargin=*]
+  \item 方程形如 $ax^2+c=0$（缺一次项）$\longrightarrow$ 直接开平方法。
+  \item 方程一边能因式分解 $\longrightarrow$ 因式分解法（最快）。
+  \item 系数简单且需要推导公式 $\longrightarrow$ 配方法。
+  \item 通用方法（万能） $\longrightarrow$ 公式法。
+\end{enumerate}
+\end{tipbox}
+
+\subsection*{21.3\quad 判别式}
+
+\begin{knowledgebox}[判别式 $\Delta$]
+对于一元二次方程 $ax^2+bx+c=0$（$a \neq 0$），其判别式为：
+\[
+\boxed{\Delta = b^2 - 4ac}
+\]
+判别式与根的关系：
+\begin{itemize}[leftmargin=*]
+  \item $\Delta > 0$：方程有\textbf{两个不相等的实数根}。
+  \item $\Delta = 0$：方程有\textbf{两个相等的实数根}（即一个重根）。
+  \item $\Delta < 0$：方程\textbf{没有实数根}（有两个共轭复数根）。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+判别式只在 $a \neq 0$ 的前提下才有意义。若题目含有参数，需要先讨论 $a$ 是否为 $0$，再计算 $\Delta$。
+\end{warnbox}
+
+\subsection*{21.4\quad 韦达定理（根与系数的关系）}
+
+\begin{knowledgebox}[韦达定理]
+若一元二次方程 $ax^2+bx+c=0$（$a\neq 0$）的两个实数根为 $x_1$、$x_2$，则：
+\[
+\boxed{x_1 + x_2 = -\frac{b}{a}, \qquad x_1 \cdot x_2 = \frac{c}{a}}
+\]
+特别地，当 $a=1$ 时，方程 $x^2+px+q=0$ 的两根满足：
+\[
+x_1 + x_2 = -p, \qquad x_1 \cdot x_2 = q
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[韦达定理的常见变形]
+已知 $x_1+x_2 = S$，$x_1 \cdot x_2 = P$，则：
+\begin{itemize}[leftmargin=*]
+  \item $x_1^2 + x_2^2 = (x_1+x_2)^2 - 2x_1 x_2 = S^2 - 2P$
+  \item $|x_1 - x_2| = \sqrt{(x_1+x_2)^2 - 4x_1 x_2} = \sqrt{S^2 - 4P}$
+  \item $\dfrac{1}{x_1} + \dfrac{1}{x_2} = \dfrac{x_1+x_2}{x_1 x_2} = \dfrac{S}{P}$\quad（$P \neq 0$）
+  \item $(x_1-x_2)^2 = (x_1+x_2)^2 - 4x_1 x_2 = S^2 - 4P$
+\end{itemize}
+\end{tipbox}
+
+% ============================================================
+% 第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例1】用直接开平方法解方程]
+解方程：$(2x-3)^2 = 25$
+\end{examplebox}
+
+\textbf{解：}
+
+由 $(2x-3)^2 = 25$，两边开平方得：
+\[
+2x - 3 = \pm 5
+\]
+当 $2x-3 = 5$ 时，$2x = 8$，$x = 4$；
+
+当 $2x-3 = -5$ 时，$2x = -2$，$x = -1$。
+
+所以方程的解为 $\boxed{x_1 = 4,\; x_2 = -1}$。
+
+\begin{examplebox}[【例2】用配方法解方程]
+用配方法解方程：$2x^2 - 4x - 6 = 0$
+\end{examplebox}
+
+\textbf{解：}
+
+两边同除以 $2$：$x^2 - 2x - 3 = 0$。
+
+移项：$x^2 - 2x = 3$。
+
+配方：$x^2 - 2x + 1 = 3 + 1$，即 $(x-1)^2 = 4$。
+
+开平方：$x - 1 = \pm 2$，所以 $\boxed{x_1 = 3,\; x_2 = -1}$。
+
+\begin{examplebox}[【例3】用公式法解方程]
+用求根公式解方程：$3x^2 + 5x - 2 = 0$
+\end{examplebox}
+
+\textbf{解：}
+
+这里 $a=3$，$b=5$，$c=-2$。
+
+计算判别式：$\Delta = b^2 - 4ac = 25 - 4 \times 3 \times (-2) = 25 + 24 = 49 > 0$。
+
+代入求根公式：
+\[
+x = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{-5 \pm \sqrt{49}}{2 \times 3} = \frac{-5 \pm 7}{6}
+\]
+所以 $\boxed{x_1 = \dfrac{1}{3},\; x_2 = -2}$。
+
+\begin{examplebox}[【例4】用因式分解法解方程]
+解方程：$x^2 - 5x + 6 = 0$
+\end{examplebox}
+
+\textbf{解：}
+
+用十字相乘法分解：寻找两个数，乘积为 $6$，和为 $-5$。
+
+这两个数为 $-2$ 和 $-3$，因此：
+\[
+x^2 - 5x + 6 = (x-2)(x-3) = 0
+\]
+所以 $x-2=0$ 或 $x-3=0$，即 $\boxed{x_1 = 2,\; x_2 = 3}$。
+
+\begin{tipbox}[十字相乘法口诀]
+对于 $x^2+px+q=0$，寻找两个数 $m$、$n$，使得 $m+n=p$，$mn=q$，则 $x^2+px+q=(x+m)(x+n)$。
+\end{tipbox}
+
+\begin{examplebox}[【例5】判别式的应用]
+已知关于 $x$ 的方程 $kx^2-2x+1=0$ 有两个不相等的实数根，求 $k$ 的取值范围。
+\end{examplebox}
+
+\textbf{解：}
+
+因为方程有两个不相等的实数根，所以方程必须是一元二次方程，即 $k \neq 0$。
+
+且判别式 $\Delta > 0$：
+\[
+\Delta = (-2)^2 - 4k \times 1 = 4 - 4k > 0
+\]
+解得 $k < 1$。
+
+又因为 $k \neq 0$，所以 $k$ 的取值范围为 $\boxed{k < 1 \text{ 且 } k \neq 0}$。
+
+\begin{warnbox}[易错提醒]
+本题容易遗漏 $k \neq 0$ 的条件。若 $k=0$，方程变为 $-2x+1=0$，这是一元一次方程，不是一元二次方程，不能用判别式讨论。
+\end{warnbox}
+
+\begin{examplebox}[【例6】韦达定理的综合应用]
+已知方程 $x^2-3x+1=0$ 的两个根为 $x_1$、$x_2$，不解方程，求下列各式的值：
+
+$(1)\; x_1^2 + x_2^2 \qquad (2)\; \dfrac{1}{x_1} + \dfrac{1}{x_2} \qquad (3)\; (x_1 - x_2)^2$
+\end{examplebox}
+
+\textbf{解：}
+
+由韦达定理：$x_1 + x_2 = 3$，$x_1 x_2 = 1$。
+
+$(1)\; x_1^2 + x_2^2 = (x_1+x_2)^2 - 2x_1 x_2 = 9 - 2 = \boxed{7}$
+
+$(2)\; \dfrac{1}{x_1} + \dfrac{1}{x_2} = \dfrac{x_1+x_2}{x_1 x_2} = \dfrac{3}{1} = \boxed{3}$
+
+$(3)\; (x_1-x_2)^2 = (x_1+x_2)^2 - 4x_1 x_2 = 9 - 4 = \boxed{5}$
+
+\begin{examplebox}[【例7】构造一元二次方程]
+已知两个数的和为 $7$，积为 $12$，求这两个数。
+\end{examplebox}
+
+\textbf{解：}
+
+设这两个数为 $x_1$、$x_2$，则 $x_1+x_2=7$，$x_1 x_2=12$。
+
+由韦达定理的逆应用，$x_1$、$x_2$ 是方程 $x^2 - 7x + 12 = 0$ 的两个根。
+
+分解因式：$(x-3)(x-4)=0$，所以 $x_1=3$，$x_2=4$。
+
+这两个数为 $\boxed{3}$ 和 $\boxed{4}$。
+
+\begin{examplebox}[【例8】含参数的方程讨论]
+已知关于 $x$ 的方程 $x^2 - (2m+1)x + m^2 + m = 0$，证明：无论 $m$ 取何值，方程总有两个不相等的实数根。
+\end{examplebox}
+
+\textbf{证明：}
+
+$\Delta = [-(2m+1)]^2 - 4(m^2+m)$
+
+$= 4m^2 + 4m + 1 - 4m^2 - 4m$
+
+$= 1 > 0$
+
+因为 $\Delta = 1 > 0$ 恒成立，所以无论 $m$ 取何值，方程总有两个不相等的实数根。\qed
+
+% ============================================================
+% 第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】增长率问题]
+某工厂去年的产值为 $200$ 万元，计划在两年内使产值增加到 $288$ 万元。如果每年的增长率相同，求每年的增长率。
+\end{appbox}
+
+\textbf{解：}
+
+设每年的增长率为 $x$（$x>0$）。
+
+则今年产值为 $200(1+x)$ 万元，明年的产值为 $200(1+x)^2$ 万元。
+
+由题意列方程：
+\[
+200(1+x)^2 = 288
+\]
+\[
+(1+x)^2 = 1.44
+\]
+\[
+1+x = \pm 1.2
+\]
+因为 $x>0$，取 $1+x=1.2$，得 $x=0.2=20\%$。
+
+\textbf{答：}每年的增长率为 $\boxed{20\%}$。
+
+\begin{appbox}[【应用2】面积问题]
+用一根长为 $40$\,cm 的铁丝围成一个矩形框架，使矩形的面积为 $96$\,cm$^2$。求矩形的长和宽。
+\end{appbox}
+
+\textbf{解：}
+
+设矩形的一边长为 $x$\,cm，则另一边长为 $\dfrac{40-2x}{2} = 20-x$（cm）。
+
+由题意列方程：
+\[
+x(20-x) = 96
+\]
+\[
+20x - x^2 = 96
+\]
+\[
+x^2 - 20x + 96 = 0
+\]
+\[
+(x-8)(x-12) = 0
+\]
+所以 $x_1 = 8$，$x_2 = 12$。
+
+当 $x=8$ 时，另一边为 $12$；当 $x=12$ 时，另一边为 $8$。
+
+\textbf{答：}矩形的长为 $\boxed{12}$\,cm，宽为 $\boxed{8}$\,cm。
+
+\begin{appbox}[【应用3】利润问题]
+某商店以每件 $30$ 元的价格购进一批商品。经市场调查发现，当售价为每件 $40$ 元时，每月可售出 $200$ 件；售价每增加 $1$ 元，月销量就减少 $10$ 件。若商店希望每月获得利润 $2160$ 元，那么每件商品的售价应定为多少元？
+\end{appbox}
+
+\textbf{解：}
+
+设每件商品的售价比 $40$ 元增加 $x$ 元，则售价为 $(40+x)$ 元，每件利润为 $(40+x-30)=(10+x)$ 元，月销量为 $(200-10x)$ 件。
+
+由题意列方程：
+\[
+(10+x)(200-10x) = 2160
+\]
+\[
+2000 + 200x - 100x - 10x^2 = 2160
+\]
+\[
+-10x^2 + 100x + 2000 = 2160
+\]
+\[
+10x^2 - 100x + 160 = 0
+\]
+\[
+x^2 - 10x + 16 = 0
+\]
+\[
+(x-2)(x-8) = 0
+\]
+所以 $x_1=2$，$x_2=8$。
+
+当 $x=2$ 时，售价为 $42$ 元；当 $x=8$ 时，售价为 $48$ 元。
+
+\textbf{答：}每件商品的售价应定为 $\boxed{42}$ 元或 $\boxed{48}$ 元。
+
+\begin{appbox}[【应用4】综合应用（面积问题变式）]
+一块长方形草地的长比宽多 $5$\,m，要在草地中间开辟一条宽为 $1$\,m 的十字形道路（两条道路互相垂直），剩余草地的面积为 $150$\,m$^2$。求草地的长和宽。
+\end{appbox}
+
+\textbf{解：}
+
+设草地的宽为 $x$\,m，则长为 $(x+5)$\,m。
+
+十字形道路的面积为 $1\cdot x + 1\cdot(x+5) - 1\cdot1 = 2x + 4$（交叉部分减去重复计算的 $1$\,m$^2$）。
+
+剩余草地面积 $= x(x+5) - (2x+4) = x^2 + 5x - 2x - 4 = x^2 + 3x - 4$。
+
+由题意：
+\[
+x^2 + 3x - 4 = 150
+\]
+\[
+x^2 + 3x - 154 = 0
+\]
+\[
+(x-11)(x+14) = 0
+\]
+所以 $x_1 = 11$，$x_2 = -14$（不合题意，舍去）。
+
+宽为 $11$\,m，长为 $11+5 = 16$\,m。
+
+验证：草地面积 $11\times16=176$，道路面积 $2\times11+4=26$，剩余 $176-26=150$。\checkmark
+
+\textbf{答：}草地的长为 $\boxed{16}$\,m，宽为 $\boxed{11}$\,m。
+
+% ============================================================
+% 第四部分：课堂练习 + 参考答案
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
+  \item 用适当的方法解下列方程：
+  \begin{enumerate}[label=(\arabic*)]
+    \item $x^2 - 9 = 0$
+    \item $x^2 + 6x + 5 = 0$
+    \item $2x^2 - 3x - 2 = 0$
+    \item $x^2 - 4x + 1 = 0$（用配方法）
+  \end{enumerate}
+
+  \item 判断下列方程根的情况（不解方程）：
+  \begin{enumerate}[label=(\arabic*)]
+    \item $x^2 + 2x + 5 = 0$
+    \item $4x^2 - 12x + 9 = 0$
+  \end{enumerate}
+
+  \item 已知关于 $x$ 的方程 $x^2 + 2x + m - 1 = 0$ 有两个实数根，求 $m$ 的取值范围。
+
+  \item 已知方程 $2x^2-5x+1=0$ 的两个根为 $x_1$、$x_2$，不解方程，求 $x_1^2+x_2^2$ 和 $\dfrac{1}{x_1}+\dfrac{1}{x_2}$ 的值。
+
+  \item 某商品原价 $100$ 元，经过两次降价后售价为 $81$ 元。如果每次降价的百分率相同，求每次降价的百分率。
+\end{enumerate}
+
+\vspace{6pt}
+\begin{knowledgebox}[参考答案]
+\textbf{1.}\quad
+(1)\; $x^2=9$，$x=\pm 3$，即 $x_1=3,\; x_2=-3$。
+
+(2)\; $(x+1)(x+5)=0$，$x_1=-1,\; x_2=-5$。
+
+(3)\; $(2x+1)(x-2)=0$，$x_1=-\dfrac{1}{2},\; x_2=2$。
+
+(4)\; 配方：$x^2-4x+4=3$，$(x-2)^2=3$，$x=2\pm\sqrt{3}$。
+即 $x_1=2+\sqrt{3},\; x_2=2-\sqrt{3}$。
+
+\medskip
+\textbf{2.}\quad
+(1)\; $\Delta = 4-20 = -16 < 0$，方程没有实数根。
+
+(2)\; $\Delta = 144-144 = 0$，方程有两个相等的实数根。
+
+\medskip
+\textbf{3.}\quad $\Delta = 4-4(m-1) = 8-4m \geqslant 0$，解得 $m \leqslant 2$。
+
+\medskip
+\textbf{4.}\quad 由韦达定理 $x_1+x_2=\dfrac{5}{2}$，$x_1 x_2=\dfrac{1}{2}$。
+
+$x_1^2+x_2^2 = \left(\dfrac{5}{2}\right)^2 - 2\cdot\dfrac{1}{2} = \dfrac{25}{4}-1 = \dfrac{21}{4}$。
+
+$\dfrac{1}{x_1}+\dfrac{1}{x_2} = \dfrac{x_1+x_2}{x_1 x_2} = \dfrac{5/2}{1/2} = 5$。
+
+\medskip
+\textbf{5.}\quad 设每次降价百分率为 $x$，则 $100(1-x)^2=81$，$(1-x)^2=0.81$，$1-x=0.9$（取正值），$x=0.1=10\%$。每次降价的百分率为 $10\%$。
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
