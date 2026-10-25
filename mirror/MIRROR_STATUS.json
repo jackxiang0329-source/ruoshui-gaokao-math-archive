@@ -3,8 +3,8 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 1540,
-  "missing": 5682,
+  "verified": 1867,
+  "missing": 5355,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,8 +16,8 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 566,
-      "missing": 4980,
+      "verified": 893,
+      "missing": 4653,
       "complete": false
     },
     {
@@ -89,10 +89,25 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25: latest main Git tree independently matched all 282 TeX blobs (sha + mode) in fixed upstream 2010-2019 subtrees. Relative to c955845b730c12be9ae893dffeec14f5026721fc, 244 new original blobs were imported (5620920 original bytes). Verified across 11 pinned sources: 1540/7222; missing 5682; 6/11 sources complete; approximately 574588580 missing original bytes. Does not certify mathematics, actual official exam provenance, licensing, compilation or CI.",
-  "remaining_bytes": 574588580,
+  "note": "2026-10-25: independently audited main@388956f27777d33f754e1abcbc18b5e035e51fe8 against all 11 pinned upstream recursive trees: 1867/7222 exact blob SHA and file mode matches, 5355 missing/unmatched; 6/11 complete. Previous independent baseline main@46efd8 had 1823 matches (old 1540 report was stale). New verified addition 4 TeX + 40 PNG, 178810 upstream bytes. Git integrity only, not mathematical correctness, official provenance, copyright, compilation, or CI.",
+  "remaining_bytes": 567886584,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
+    "baseline_commit": "46efd8fe7e121a46b94c71e980b498b53f80380c",
+    "mirror_commit": "388956f27777d33f754e1abcbc18b5e035e51fe8",
+    "source": "gaokao-math-problems-compilation",
+    "source_pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+    "new_verified": 44,
+    "new_tex": 4,
+    "new_png": 40,
+    "new_bytes": 178810,
+    "sha_and_mode_mismatches": 0,
+    "year_1994_tex_expected": 7,
+    "year_1994_tex_verified": 7,
+    "prior_verified": 1823,
+    "post_verified": 1867
+  },
+  "previous_direct_import": {
     "baseline_commit": "c955845b730c12be9ae893dffeec14f5026721fc",
     "source": "gaokao-math-problems-compilation",
     "source_pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
@@ -114,7 +129,7 @@
     "ten_year_expected": 282,
     "ten_year_verified": 282
   },
-  "previous_direct_import": {
+  "earlier_direct_import": {
     "baseline_commit": "cd405ded34e1100763c2a9ac69cce870335fe651",
     "mirror_commit": "651d9f893718bf7171601ad3ddd93ed50181f3b2",
     "new_verified": 138,
