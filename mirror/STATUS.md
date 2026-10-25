@@ -2,12 +2,12 @@
 
 按 `sources.json` 锁定的 11 个上游 Git 提交逐路径比对主仓库 `mirror/<id>/` 下的 **Git Blob SHA 与 Git 文件模式**；不把 `upstream/` 子模块或仅有索引的记录当作实体文件。
 
-**严格一致：952 / 7,222**；缺失或模式不一致：**6,270**；来源完整：**6 / 11**。
+**严格一致：1,158 / 7,222**；缺失或模式不一致：**6,064**；来源完整：**6 / 11**。
 
 | 来源 ID | 上游 Blob | SHA 与模式均一致 | 未一致 | 状态 |
 |---|---:|---:|---:|---|
-| math-lecture-notes | 373 | 69 | 304 | 未完整 |
-| gaokao-math-problems-compilation | 5546 | 81 | 5465 | 未完整 |
+| math-lecture-notes | 373 | 133 | 240 | 未完整 |
+| gaokao-math-problems-compilation | 5546 | 223 | 5323 | 未完整 |
 | gaokaomath | 782 | 287 | 495 | 未完整 |
 | first-round-review | 47 | 43 | 4 | 未完整 |
 | gaokao-math-corpus | 207 | 207 | 0 | 完整 |
@@ -23,6 +23,14 @@
 - 本轮新增 **71 个实际 Blob 文件**（不是 gitlink，也不是仅更新文件名）：其中 `gaokao-math-problems-compilation` 新增 2020—2023 年 46 份试卷 TeX，`math-lecture-notes` 新增 25 份源码和 PDF；详细见 [直接导入记录](IMPORT_PROGRESS_2026_10_25.md)。
 - 现有 6 个来源完整，其余 5 个来源未完整；余下约 585.1 MB，含 46 个 1 MB 及以上的缺失 Blob，连接器不能完整获取这些二进制内容。
 - GitHub Actions 离线检查及全量同步仍曾在无 Runner 步骤记录的情况下失败；因此不把提交视作 CI 成功。
+
+## 2026-10-25 续批：历史试卷与测试卷实体补充
+
+- 对比上一个 952 个文件的仓库快照，**本续批额外加入 206 个经过 SHA/模式比对的实体 Blob**。
+- `gaokao-math-problems-compilation` 从 81 个提升为 **223 个**：本续批新增 141 份 1952—1994 年部分历史试卷 TeX。包括 1992 年一份曾因连接中断而重新成功导入的试卷；这些历史文件仍需真伪及数学审核。
+- `math-lecture-notes` 从 69 个提升为 **133 个**：本续批新增 65 份测试卷及讲义 TeX。
+- 文件级总体严格匹配 **1,158 / 7,222**，缺失或 SHA/模式不一致 **6,064**，剩余约 582.1 MB；完整上游仍为 **6 / 11**。
+- 新增 [固定提交镜像审计脚本](../scripts/audit_mirror_inventory.py) 和 [5 条单元测试](../tests/test_audit_mirror_inventory.py)，可在初始化全部上游子模块后复算 Git 对象统计。此处未宣称 GitHub Actions / XeLaTeX 已通过。
 
 ## 此前变化与边界
 
