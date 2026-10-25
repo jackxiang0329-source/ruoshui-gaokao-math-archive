@@ -1,0 +1,687 @@
+% ============================================================
+% 讲义 — 人教版高中必修第二册 · 第6章 平面向量及其应用
+% 编译命令：xelatex -interaction=nonstopmode 文件名.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版高中必修第二册 · 第6章}}}
+\fancyhead[R]{\small\textcolor{mainblue}{平面向量及其应用讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第6章\quad 平面向量及其应用}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 高中必修第二册\quad |\quad 课时：8--10课时}
+\end{center}
+\vspace{10pt}
+
+% ============ 第一部分：知识点讲解 ============
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 6.1 平面向量的概念 ----------
+\subsection*{6.1\quad 平面向量的概念}
+
+\begin{knowledgebox}[向量的定义]
+\textbf{向量}（vector）是既有\textbf{大小}又有\textbf{方向}的量，常用带箭头的有向线段表示，记作 $\overrightarrow{AB}$ 或粗体字母 $\boldsymbol{a}$。
+
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{零向量} $\boldsymbol{0}$：模为 $0$ 的向量，方向任意。
+  \item \textbf{单位向量}：模为 $1$ 的向量。
+  \item \textbf{相等向量}：大小相等且方向相同的向量。
+  \item \textbf{相反向量}：大小相等但方向相反的向量。
+  \item \textbf{平行向量（共线向量）}：方向相同或相反的非零向量。规定零向量与任意向量平行。
+\end{itemize}
+
+向量 $\overrightarrow{AB}$ 的大小称为向量的\textbf{模}（长度），记作 $|\overrightarrow{AB}|$ 或 $|\boldsymbol{a}|$。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[leftmargin=2em]
+  \item 向量不能比较大小（不能说 $\boldsymbol{a}>\boldsymbol{b}$），但向量的模可以比较大小。
+  \item 零向量方向不确定，因此零向量与任何向量平行，也与任何向量共线。
+  \item 平行向量不一定在同一条直线上，可以平移到同一直线上。
+\end{enumerate}
+\end{warnbox}
+
+% ---------- 6.2 向量的表示 ----------
+\subsection*{6.2\quad 向量的表示}
+
+\begin{knowledgebox}[向量的几何表示与代数表示]
+\textbf{几何表示：} 用有向线段 $\overrightarrow{AB}$ 表示，其中 $A$ 为起点，$B$ 为终点，箭头方向表示向量方向，线段长度表示向量大小。
+
+\textbf{代数表示（坐标表示）：} 在平面直角坐标系中，设 $\boldsymbol{i}$、$\boldsymbol{j}$ 分别是 $x$ 轴、$y$ 轴方向的单位向量，则任意向量 $\boldsymbol{a}$ 可唯一表示为
+\[
+\boldsymbol{a} = x\boldsymbol{i} + y\boldsymbol{j} = (x,\, y)
+\]
+其中 $x$ 为 $\boldsymbol{a}$ 在 $x$ 轴上的分量（横坐标），$y$ 为 $\boldsymbol{a}$ 在 $y$ 轴上的分量（纵坐标）。
+
+若 $A(x_1,y_1)$，$B(x_2,y_2)$，则
+\[
+\overrightarrow{AB} = (x_2 - x_1,\; y_2 - y_1)
+\]
+\end{knowledgebox}
+
+% ---------- 6.3 向量的加法与减法 ----------
+\subsection*{6.3\quad 向量的加法与减法}
+
+\begin{knowledgebox}[向量加法]
+\textbf{三角形法则：} 将 $\overrightarrow{AB}$ 的终点与 $\overrightarrow{BC}$ 的起点重合，则 $\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC}$。
+
+\textbf{平行四边形法则：} 以同一点 $A$ 为起点作 $\overrightarrow{AB}$ 和 $\overrightarrow{AD}$，以 $AB$、$AD$ 为邻边作平行四边形 $ABCD$，则对角线 $\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{AD}$。
+
+\textbf{运算律：}
+\begin{itemize}[leftmargin=2em]
+  \item 交换律：$\boldsymbol{a}+\boldsymbol{b}=\boldsymbol{b}+\boldsymbol{a}$
+  \item 结合律：$(\boldsymbol{a}+\boldsymbol{b})+\boldsymbol{c}=\boldsymbol{a}+(\boldsymbol{b}+\boldsymbol{c})$
+  \item $\boldsymbol{a}+\boldsymbol{0}=\boldsymbol{0}+\boldsymbol{a}=\boldsymbol{a}$
+\end{itemize}
+
+\textbf{坐标运算：} 设 $\boldsymbol{a}=(x_1,y_1)$，$\boldsymbol{b}=(x_2,y_2)$，则
+\[
+\boldsymbol{a}+\boldsymbol{b}=(x_1+x_2,\; y_1+y_2)
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[向量减法]
+\textbf{定义：} $\boldsymbol{a}-\boldsymbol{b}=\boldsymbol{a}+(-\boldsymbol{b})$，其中 $-\boldsymbol{b}$ 是 $\boldsymbol{b}$ 的相反向量。
+
+\textbf{几何意义：} $\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}$，即"终点坐标减起点坐标"。
+
+\textbf{坐标运算：} 设 $\boldsymbol{a}=(x_1,y_1)$，$\boldsymbol{b}=(x_2,y_2)$，则
+\[
+\boldsymbol{a}-\boldsymbol{b}=(x_1-x_2,\; y_1-y_2)
+\]
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[leftmargin=2em]
+  \item $|\boldsymbol{a}+\boldsymbol{b}|\leqslant|\boldsymbol{a}|+|\boldsymbol{b}|$（三角不等式），等号成立当且仅当 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 同向。
+  \item $|\boldsymbol{a}-\boldsymbol{b}|\geqslant\bigl||\boldsymbol{a}|-|\boldsymbol{b}|\bigr|$，等号成立当且仅当 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 同向。
+  \item 减法的几何意义是"共起点，连终点，指向被减向量的终点"。
+\end{enumerate}
+\end{warnbox}
+
+% ---------- 6.4 向量的数乘 ----------
+\subsection*{6.4\quad 向量的数乘}
+
+\begin{knowledgebox}[数乘的定义与运算律]
+实数 $\lambda$ 与向量 $\boldsymbol{a}$ 的\textbf{数乘} $\lambda\boldsymbol{a}$ 满足：
+\begin{itemize}[leftmargin=2em]
+  \item $|\lambda\boldsymbol{a}|=|\lambda|\cdot|\boldsymbol{a}|$
+  \item 当 $\lambda>0$ 时，$\lambda\boldsymbol{a}$ 与 $\boldsymbol{a}$ 同向；
+  \item 当 $\lambda<0$ 时，$\lambda\boldsymbol{a}$ 与 $\boldsymbol{a}$ 反向；
+  \item 当 $\lambda=0$ 时，$\lambda\boldsymbol{a}=\boldsymbol{0}$。
+\end{itemize}
+
+\textbf{运算律：}
+\begin{enumerate}[leftmargin=2em]
+  \item $\lambda(\mu\boldsymbol{a})=(\lambda\mu)\boldsymbol{a}$
+  \item $(\lambda+\mu)\boldsymbol{a}=\lambda\boldsymbol{a}+\mu\boldsymbol{a}$
+  \item $\lambda(\boldsymbol{a}+\boldsymbol{b})=\lambda\boldsymbol{a}+\lambda\boldsymbol{b}$
+\end{enumerate}
+
+\textbf{坐标运算：} 设 $\boldsymbol{a}=(x,y)$，则 $\lambda\boldsymbol{a}=(\lambda x,\;\lambda y)$。
+\end{knowledgebox}
+
+\begin{knowledgebox}[共线（平行）的充要条件]
+设 $\boldsymbol{a}=(x_1,y_1)$，$\boldsymbol{b}=(x_2,y_2)$（$\boldsymbol{b}\neq\boldsymbol{0}$），则
+\[
+\boldsymbol{a}\parallel\boldsymbol{b} \;\Longleftrightarrow\; \exists\,\lambda\in\mathbb{R},\;\boldsymbol{a}=\lambda\boldsymbol{b}
+\;\Longleftrightarrow\; x_1 y_2 - x_2 y_1 = 0
+\]
+\end{knowledgebox}
+
+% ---------- 6.5 向量的坐标运算 ----------
+\subsection*{6.5\quad 向量的坐标运算综合}
+
+\begin{knowledgebox}[坐标运算汇总]
+设 $\boldsymbol{a}=(x_1,y_1)$，$\boldsymbol{b}=(x_2,y_2)$，$\lambda\in\mathbb{R}$：
+\[
+\begin{aligned}
+  \boldsymbol{a}+\boldsymbol{b} &= (x_1+x_2,\; y_1+y_2) \\
+  \boldsymbol{a}-\boldsymbol{b} &= (x_1-x_2,\; y_1-y_2) \\
+  \lambda\boldsymbol{a} &= (\lambda x_1,\;\lambda y_1) \\
+  |\boldsymbol{a}| &= \sqrt{x_1^2+y_1^2}
+\end{aligned}
+\]
+
+设 $A(x_1,y_1)$，$B(x_2,y_2)$，则中点 $M$ 的坐标为
+\[
+M\!\left(\frac{x_1+x_2}{2},\;\frac{y_1+y_2}{2}\right)
+\]
+\end{knowledgebox}
+
+% ---------- 6.6 数量积（点积） ----------
+\subsection*{6.6\quad 向量的数量积（点积）}
+
+\begin{knowledgebox}[数量积的定义]
+设 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角为 $\theta$（$0\leqslant\theta\leqslant\pi$），则
+\[
+\boldsymbol{a}\cdot\boldsymbol{b} = |\boldsymbol{a}|\,|\boldsymbol{b}|\cos\theta
+\]
+数量积是一个\textbf{标量}（实数），不是向量。
+
+\textbf{几何意义：} $\boldsymbol{a}\cdot\boldsymbol{b}$ 等于 $\boldsymbol{a}$ 的模与 $\boldsymbol{b}$ 在 $\boldsymbol{a}$ 方向上投影的乘积。
+\end{knowledgebox}
+
+\begin{knowledgebox}[数量积的性质与运算律]
+\textbf{性质：}
+\begin{enumerate}[leftmargin=2em]
+  \item $\boldsymbol{a}\cdot\boldsymbol{a}=|\boldsymbol{a}|^2$
+  \item $\boldsymbol{a}\cdot\boldsymbol{b}=\boldsymbol{b}\cdot\boldsymbol{a}$（交换律）
+  \item $(\lambda\boldsymbol{a})\cdot\boldsymbol{b}=\lambda(\boldsymbol{a}\cdot\boldsymbol{b})$
+  \item $\boldsymbol{a}\cdot(\boldsymbol{b}+\boldsymbol{c})=\boldsymbol{a}\cdot\boldsymbol{b}+\boldsymbol{a}\cdot\boldsymbol{c}$（分配律）
+\end{enumerate}
+
+\textbf{注意：} 数量积\textbf{不满足}结合律，即一般情况下 $(\boldsymbol{a}\cdot\boldsymbol{b})\cdot\boldsymbol{c}\neq\boldsymbol{a}\cdot(\boldsymbol{b}\cdot\boldsymbol{c})$，因为 $\boldsymbol{a}\cdot\boldsymbol{b}$ 是实数，$(\boldsymbol{a}\cdot\boldsymbol{b})\boldsymbol{c}$ 是向量，两者意义不同。
+
+\textbf{坐标运算：} 设 $\boldsymbol{a}=(x_1,y_1)$，$\boldsymbol{b}=(x_2,y_2)$，则
+\[
+\boldsymbol{a}\cdot\boldsymbol{b}=x_1 x_2+y_1 y_2
+\]
+\end{knowledgebox}
+
+% ---------- 6.7 模与夹角 ----------
+\subsection*{6.7\quad 向量的模与夹角}
+
+\begin{knowledgebox}[模与夹角公式]
+\textbf{模：}
+\[
+|\boldsymbol{a}|=\sqrt{\boldsymbol{a}\cdot\boldsymbol{a}}=\sqrt{x^2+y^2}
+\]
+
+\textbf{两点间距离：} 设 $A(x_1,y_1)$，$B(x_2,y_2)$，则
+\[
+|\overrightarrow{AB}|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
+\]
+
+\textbf{夹角公式：} 设 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角为 $\theta$，则
+\[
+\cos\theta=\frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}|\,|\boldsymbol{b}|}=\frac{x_1 x_2+y_1 y_2}{\sqrt{x_1^2+y_1^2}\;\sqrt{x_2^2+y_2^2}}
+\]
+其中 $0\leqslant\theta\leqslant\pi$。
+\end{knowledgebox}
+
+% ---------- 6.8 平行与垂直 ----------
+\subsection*{6.8\quad 平行与垂直的判定}
+
+\begin{knowledgebox}[平行与垂直的充要条件]
+设 $\boldsymbol{a}=(x_1,y_1)$，$\boldsymbol{b}=(x_2,y_2)$ 为非零向量：
+
+\textbf{平行（共线）：}
+\[
+\boldsymbol{a}\parallel\boldsymbol{b}\;\Longleftrightarrow\; x_1 y_2-x_2 y_1=0
+\]
+
+\textbf{垂直：}
+\[
+\boldsymbol{a}\perp\boldsymbol{b}\;\Longleftrightarrow\;\boldsymbol{a}\cdot\boldsymbol{b}=0\;\Longleftrightarrow\; x_1 x_2+y_1 y_2=0
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[规律总结]
+判断平行用"交叉相乘之差为零"（$x_1 y_2-x_2 y_1=0$），判断垂直用"对应坐标乘积之和为零"（$x_1 x_2+y_1 y_2=0$）。两者的区别在于：平行判定用的是外积形式（二维叉积），垂直判定用的是内积形式（点积）。
+\end{tipbox}
+
+% ---------- 6.9 正弦定理与余弦定理 ----------
+\subsection*{6.9\quad 正弦定理与余弦定理}
+
+\begin{knowledgebox}[正弦定理]
+在 $\triangle ABC$ 中，角 $A$、$B$、$C$ 所对的边分别为 $a$、$b$、$c$，则
+\[
+\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R
+\]
+其中 $R$ 为 $\triangle ABC$ 外接圆的半径。
+
+\textbf{变形：}
+\[
+a=2R\sin A,\quad b=2R\sin B,\quad c=2R\sin C
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[余弦定理]
+在 $\triangle ABC$ 中：
+\[
+\begin{aligned}
+a^2 &= b^2+c^2-2bc\cos A \\
+b^2 &= a^2+c^2-2ac\cos B \\
+c^2 &= a^2+b^2-2ab\cos C
+\end{aligned}
+\]
+
+\textbf{推论（求角）：}
+\[
+\cos A=\frac{b^2+c^2-a^2}{2bc},\quad
+\cos B=\frac{a^2+c^2-b^2}{2ac},\quad
+\cos C=\frac{a^2+b^2-c^2}{2ab}
+\]
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[leftmargin=2em]
+  \item 正弦定理适用于"已知两角一边"或"已知两边和其中一边的对角"的情形，后一种情况可能有两解（"SSA"情形），需检验。
+  \item 余弦定理适用于"已知三边"或"已知两边及其夹角"的情形。
+  \item 利用余弦定理求角时，$\cos$ 值为正则为锐角，为负则为钝角。
+\end{enumerate}
+\end{warnbox}
+
+% ---------- 6.10 解三角形 ----------
+\subsection*{6.10\quad 解三角形}
+
+\begin{knowledgebox}[三角形面积公式]
+\[
+S_{\triangle ABC}=\frac{1}{2}ab\sin C=\frac{1}{2}bc\sin A=\frac{1}{2}ac\sin B
+\]
+
+\textbf{海伦公式（选学）：} 设 $p=\dfrac{a+b+c}{2}$，则
+\[
+S=\sqrt{p(p-a)(p-b)(p-c)}
+\]
+\end{knowledgebox}
+
+\begin{tipbox}[解三角形的一般步骤]
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{画图：} 根据题意画出三角形，标注已知元素。
+  \item \textbf{选择定理：} 已知条件涉及"边与角"的关系时，优先考虑正弦定理或余弦定理。
+  \item \textbf{求解：} 列方程，解出未知的边或角。
+  \item \textbf{检验：} 检查三角形内角和是否为 $180°$，边长是否为正，"SSA"情形是否有两解。
+\end{enumerate}
+\end{tipbox}
+
+% ============ 第二部分：例题精讲 ============
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+\begin{examplebox}[【例题1】向量加减法的坐标运算]
+已知 $\boldsymbol{a}=(2,-1)$，$\boldsymbol{b}=(-3,4)$，求 $\boldsymbol{a}+\boldsymbol{b}$、$\boldsymbol{a}-\boldsymbol{b}$、$2\boldsymbol{a}+3\boldsymbol{b}$ 的坐标。
+
+\textbf{解：}
+\[
+\boldsymbol{a}+\boldsymbol{b}=(2+(-3),\;-1+4)=(-1,\;3)
+\]
+\[
+\boldsymbol{a}-\boldsymbol{b}=(2-(-3),\;-1-4)=(5,\;-5)
+\]
+\[
+2\boldsymbol{a}+3\boldsymbol{b}=(4,-2)+(-9,12)=(4-9,\;-2+12)=(-5,\;10)
+\]
+\end{examplebox}
+
+\begin{examplebox}[【例题2】向量的模与单位向量]
+已知 $\boldsymbol{a}=(3,-4)$，求 $|\boldsymbol{a}|$ 及与 $\boldsymbol{a}$ 同方向的单位向量 $\boldsymbol{a}_0$。
+
+\textbf{解：}
+\[
+|\boldsymbol{a}|=\sqrt{3^2+(-4)^2}=\sqrt{9+16}=\sqrt{25}=5
+\]
+与 $\boldsymbol{a}$ 同方向的单位向量为
+\[
+\boldsymbol{a}_0=\frac{\boldsymbol{a}}{|\boldsymbol{a}|}=\frac{(3,-4)}{5}=\left(\frac{3}{5},\;-\frac{4}{5}\right)
+\]
+\end{examplebox}
+
+\begin{examplebox}[【例题3】数量积与夹角]
+已知 $|\boldsymbol{a}|=2$，$|\boldsymbol{b}|=3$，$\boldsymbol{a}\cdot\boldsymbol{b}=-3$，求 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角 $\theta$。
+
+\textbf{解：}
+由 $\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}|\,|\boldsymbol{b}|\cos\theta$，得
+\[
+\cos\theta=\frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}|\,|\boldsymbol{b}|}=\frac{-3}{2\times3}=-\frac{1}{2}
+\]
+因为 $0\leqslant\theta\leqslant\pi$，所以 $\theta=120°$。
+\end{examplebox}
+
+\begin{examplebox}[【例题4】平行与垂直的判定]
+已知 $\boldsymbol{a}=(1,2)$，$\boldsymbol{b}=(m,6)$，$\boldsymbol{c}=(n,-3)$。
+
+（1）若 $\boldsymbol{a}\parallel\boldsymbol{b}$，求 $m$ 的值；
+
+（2）若 $\boldsymbol{a}\perp\boldsymbol{c}$，求 $n$ 的值。
+
+\textbf{解：}
+
+（1）$\boldsymbol{a}\parallel\boldsymbol{b}$，则 $1\times6-2\times m=0$，解得 $m=3$。
+
+（2）$\boldsymbol{a}\perp\boldsymbol{c}$，则 $\boldsymbol{a}\cdot\boldsymbol{c}=0$，即 $1\times n+2\times(-3)=0$，解得 $n=6$。
+\end{examplebox}
+
+\begin{examplebox}[【例题5】利用余弦定理解三角形]
+在 $\triangle ABC$ 中，已知 $a=7$，$b=8$，$C=60°$，求边 $c$ 及 $\triangle ABC$ 的面积。
+
+\textbf{解：}
+
+由余弦定理：
+\[
+c^2=a^2+b^2-2ab\cos C=49+64-2\times7\times8\times\frac{1}{2}=113-56=57
+\]
+所以 $c=\sqrt{57}$。
+
+三角形面积：
+\[
+S=\frac{1}{2}ab\sin C=\frac{1}{2}\times7\times8\times\frac{\sqrt{3}}{2}=14\sqrt{3}
+\]
+\end{examplebox}
+
+\begin{examplebox}[【例题6】利用正弦定理解三角形（SSA情形）]
+在 $\triangle ABC$ 中，已知 $a=6$，$b=8$，$A=30°$，求角 $B$。
+
+\textbf{解：}
+
+由正弦定理 $\dfrac{a}{\sin A}=\dfrac{b}{\sin B}$，得
+\[
+\sin B=\frac{b\sin A}{a}=\frac{8\times\sin30°}{6}=\frac{8\times\frac{1}{2}}{6}=\frac{2}{3}
+\]
+因为 $\sin B=\dfrac{2}{3}<1$，且 $b>a$，所以 $B$ 可以是锐角或钝角：
+\[
+B=\arcsin\frac{2}{3}\approx41.8°\quad\text{或}\quad B=180°-\arcsin\frac{2}{3}\approx138.2°
+\]
+当 $B\approx138.2°$ 时，$A+B=30°+138.2°=168.2°<180°$，可以构成三角形。
+
+因此 $B$ 有两个解：$B\approx41.8°$ 或 $B\approx138.2°$。
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+"SSA"情形（已知两边和其中一边的对角）是解三角形中的难点。判断解的个数时，可以比较 $a$ 与 $b\sin A$ 的大小关系：
+\begin{itemize}[leftmargin=2em]
+  \item 若 $a<b\sin A$：无解；
+  \item 若 $a=b\sin A$：一解（直角）；
+  \item 若 $b\sin A<a<b$：两解；
+  \item 若 $a\geqslant b$：一解。
+\end{itemize}
+\end{tipbox}
+
+\begin{examplebox}[【例题7】向量在几何中的应用]
+已知 $A(1,2)$，$B(3,4)$，$C(5,0)$，试判断 $\triangle ABC$ 的形状。
+
+\textbf{解：}
+
+计算各边对应的向量：
+\[
+\overrightarrow{AB}=(2,2),\quad \overrightarrow{AC}=(4,-2),\quad \overrightarrow{BC}=(2,-4)
+\]
+各边长：
+\[
+|\overrightarrow{AB}|=2\sqrt{2},\quad |\overrightarrow{AC}|=2\sqrt{5},\quad |\overrightarrow{BC}|=2\sqrt{5}
+\]
+因为 $|\overrightarrow{AC}|=|\overrightarrow{BC}|=2\sqrt{5}$，所以 $\triangle ABC$ 是\textbf{等腰三角形}。
+
+验证是否为直角三角形：
+\[
+\overrightarrow{AB}\cdot\overrightarrow{AC}=2\times4+2\times(-2)=8-4=4\neq0
+\]
+\[
+\overrightarrow{AC}\cdot\overrightarrow{BC}=4\times2+(-2)\times(-4)=8+8=16\neq0
+\]
+\[
+\overrightarrow{AB}\cdot\overrightarrow{BC}=2\times2+2\times(-4)=4-8=-4\neq0
+\]
+没有直角，因此 $\triangle ABC$ 是\textbf{等腰三角形}（非直角三角形）。
+\end{examplebox}
+
+\begin{examplebox}[【例题8】综合题：向量与三角恒等式]
+已知 $|\boldsymbol{a}|=1$，$|\boldsymbol{b}|=2$，$\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角为 $60°$，求 $|\boldsymbol{a}+\boldsymbol{b}|$ 和 $|\boldsymbol{a}-\boldsymbol{b}|$。
+
+\textbf{解：}
+
+利用 $|\boldsymbol{v}|^2=\boldsymbol{v}\cdot\boldsymbol{v}$：
+\[
+|\boldsymbol{a}+\boldsymbol{b}|^2=(\boldsymbol{a}+\boldsymbol{b})\cdot(\boldsymbol{a}+\boldsymbol{b})=|\boldsymbol{a}|^2+2\boldsymbol{a}\cdot\boldsymbol{b}+|\boldsymbol{b}|^2
+\]
+其中 $\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}|\,|\boldsymbol{b}|\cos60°=1\times2\times\dfrac{1}{2}=1$。
+
+\[
+|\boldsymbol{a}+\boldsymbol{b}|^2=1+2\times1+4=7 \;\Longrightarrow\; |\boldsymbol{a}+\boldsymbol{b}|=\sqrt{7}
+\]
+
+同理：
+\[
+|\boldsymbol{a}-\boldsymbol{b}|^2=|\boldsymbol{a}|^2-2\boldsymbol{a}\cdot\boldsymbol{b}+|\boldsymbol{b}|^2=1-2+4=3
+\]
+\[
+|\boldsymbol{a}-\boldsymbol{b}|=\sqrt{3}
+\]
+\end{examplebox}
+
+\begin{tipbox}[方法总结]
+求向量的模时，利用 $|\boldsymbol{v}|^2=\boldsymbol{v}\cdot\boldsymbol{v}$ 将模的计算转化为数量积计算，是处理此类问题的核心技巧。
+\end{tipbox}
+
+% ============ 第三部分：应用题 ============
+\section*{\textcolor{apppurple}{三、应用题}}
+
+\begin{appbox}[【应用1】航行问题]
+一艘船以 $20$ km/h 的速度向北航行，同时受到向东的洋流影响，洋流速度为 $5$ km/h。
+
+（1）求船的实际速度的大小和方向（用与正北方向的夹角表示）；
+
+（2）若目的地在正北方向 $100$ km 处，船应朝什么方向航行才能直达目的地？此时船速（相对水）至少为多少？
+
+\textbf{解：}
+
+（1）设正北方向为 $y$ 轴正方向，正东方向为 $x$ 轴正方向。船对水的速度 $\boldsymbol{v}_1=(0,20)$，洋流速度 $\boldsymbol{v}_2=(5,0)$。实际速度 $\boldsymbol{v}=\boldsymbol{v}_1+\boldsymbol{v}_2=(5,20)$。
+
+\[
+|\boldsymbol{v}|=\sqrt{5^2+20^2}=\sqrt{25+400}=\sqrt{425}=5\sqrt{17}\approx20.6 \text{ (km/h)}
+\]
+设与正北方向夹角为 $\alpha$，则 $\tan\alpha=\dfrac{5}{20}=\dfrac{1}{4}$，$\alpha=\arctan\dfrac{1}{4}\approx14.0°$（偏东）。
+
+（2）设船相对水的速度方向与正北方向夹角为 $\beta$（向西偏），船速大小为 $v$。要使实际速度方向为正北，则实际速度的水平分量为零：
+\[
+v\sin\beta+5=0 \;\Longrightarrow\; v\sin\beta=-5
+\]
+取 $\beta$ 为向西偏的角度，令 $\beta'=\beta$，则 $v\sin\beta'=5$，$v\cos\beta'$ 为向北分量。
+
+船速至少需满足 $v>5$ km/h，使 $\sin\beta'=\dfrac{5}{v}\leqslant1$。船应朝西偏 $\beta'=\arcsin\dfrac{5}{v}$ 方向航行。当 $v$ 刚好为 $5$ km/h 时，船完全向西，无法北进；实际中 $v$ 需大于 $5$，且越大偏角越小。
+\end{appbox}
+
+\begin{appbox}[【应用2】力学问题]
+两个力 $\boldsymbol{F}_1$ 和 $\boldsymbol{F}_2$ 作用于同一物体，$|\boldsymbol{F}_1|=10$ N，$|\boldsymbol{F}_2|=15$ N，两力夹角为 $120°$。求合力 $\boldsymbol{F}$ 的大小及方向（用 $\boldsymbol{F}$ 与 $\boldsymbol{F}_1$ 的夹角表示）。
+
+\textbf{解：}
+
+合力 $\boldsymbol{F}=\boldsymbol{F}_1+\boldsymbol{F}_2$，则
+\[
+|\boldsymbol{F}|^2=|\boldsymbol{F}_1+\boldsymbol{F}_2|^2=|\boldsymbol{F}_1|^2+2\boldsymbol{F}_1\cdot\boldsymbol{F}_2+|\boldsymbol{F}_2|^2
+\]
+\[
+\boldsymbol{F}_1\cdot\boldsymbol{F}_2=10\times15\times\cos120°=150\times\left(-\frac{1}{2}\right)=-75
+\]
+\[
+|\boldsymbol{F}|^2=100-225+225=100+150-75=175
+\]
+\[
+|\boldsymbol{F}|=\sqrt{175}=5\sqrt{7}\approx13.2 \text{ (N)}
+\]
+
+设 $\boldsymbol{F}$ 与 $\boldsymbol{F}_1$ 的夹角为 $\alpha$，则
+\[
+\cos\alpha=\frac{\boldsymbol{F}\cdot\boldsymbol{F}_1}{|\boldsymbol{F}|\,|\boldsymbol{F}_1|}
+\]
+其中 $\boldsymbol{F}\cdot\boldsymbol{F}_1=(\boldsymbol{F}_1+\boldsymbol{F}_2)\cdot\boldsymbol{F}_1=|\boldsymbol{F}_1|^2+\boldsymbol{F}_2\cdot\boldsymbol{F}_1=100-75=25$。
+
+\[
+\cos\alpha=\frac{25}{5\sqrt{7}\times10}=\frac{25}{50\sqrt{7}}=\frac{1}{2\sqrt{7}}=\frac{\sqrt{7}}{14}\approx0.189
+\]
+\[
+\alpha=\arccos\frac{\sqrt{7}}{14}\approx79.1°
+\]
+合力大小约为 $13.2$ N，与 $\boldsymbol{F}_1$ 的夹角约为 $79.1°$。
+\end{appbox}
+
+\begin{appbox}[【应用3】测量问题]
+为测量河对岸两点 $A$、$B$ 之间的距离，测量者在河这一侧选取点 $C$，测得 $CA=100$ m，$CB=120$ m，$\angle ACB=60°$。求 $A$、$B$ 两点之间的距离。
+
+\textbf{解：}
+
+在 $\triangle ABC$ 中，已知 $CA=b=100$，$CB=a=120$，$C=60°$，由余弦定理：
+\[
+AB^2=CA^2+CB^2-2\cdot CA\cdot CB\cdot\cos C
+\]
+\[
+=100^2+120^2-2\times100\times120\times\cos60°
+\]
+\[
+=10000+14400-2\times100\times120\times\frac{1}{2}
+\]
+\[
+=24400-12000=12400
+\]
+\[
+AB=\sqrt{12400}=20\sqrt{31}\approx111.4 \text{ (m)}
+\]
+$A$、$B$ 两点之间的距离约为 $111.4$ m。
+\end{appbox}
+
+% ============ 第四部分：课堂练习 ============
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em]
+  \item 已知 $\boldsymbol{a}=(1,3)$，$\boldsymbol{b}=(-2,1)$，求 $\boldsymbol{a}+\boldsymbol{b}$，$\boldsymbol{a}-2\boldsymbol{b}$ 的坐标。
+
+  \item 已知 $\boldsymbol{a}=(3,4)$，求 $|\boldsymbol{a}|$ 及与 $\boldsymbol{a}$ 反方向的单位向量。
+
+  \item 已知 $|\boldsymbol{a}|=3$，$|\boldsymbol{b}|=4$，$\boldsymbol{a}\cdot\boldsymbol{b}=6$，求 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角。
+
+  \item 已知 $\boldsymbol{a}=(2,-1)$，$\boldsymbol{b}=(-4,2)$，判断 $\boldsymbol{a}$ 与 $\boldsymbol{b}$ 是否平行，并说明理由。
+
+  \item 已知 $\boldsymbol{a}=(3,1)$，$\boldsymbol{b}=(1,k)$，若 $\boldsymbol{a}\perp\boldsymbol{b}$，求 $k$ 的值。
+
+  \item 在 $\triangle ABC$ 中，已知 $a=5$，$b=7$，$C=120°$，求边 $c$。
+
+  \item 在 $\triangle ABC$ 中，已知 $a=10$，$B=45°$，$C=75°$，求边 $b$（结果保留根号）。
+
+  \item 已知 $|\boldsymbol{a}|=2$，$|\boldsymbol{b}|=3$，$\boldsymbol{a}$ 与 $\boldsymbol{b}$ 的夹角为 $60°$，求 $(2\boldsymbol{a}+\boldsymbol{b})\cdot(\boldsymbol{a}-\boldsymbol{b})$ 的值。
+\end{enumerate}
+
+\vspace{12pt}
+\begin{knowledgebox}[参考答案]
+\textbf{第1题：}
+
+$\boldsymbol{a}+\boldsymbol{b}=(1-2,\;3+1)=(-1,\;4)$
+
+$\boldsymbol{a}-2\boldsymbol{b}=(1-2\times(-2),\;3-2\times1)=(5,\;1)$
+
+\medskip
+\textbf{第2题：}
+
+$|\boldsymbol{a}|=\sqrt{3^2+4^2}=\sqrt{25}=5$
+
+与 $\boldsymbol{a}$ 反方向的单位向量为 $\left(-\dfrac{3}{5},\;-\dfrac{4}{5}\right)$
+
+\medskip
+\textbf{第3题：}
+
+$\cos\theta=\dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}|\,|\boldsymbol{b}|}=\dfrac{6}{3\times4}=\dfrac{1}{2}$，故 $\theta=60°$
+
+\medskip
+\textbf{第4题：}
+
+因为 $2\times2-(-1)\times(-4)=4-4=0$，所以 $\boldsymbol{a}\parallel\boldsymbol{b}$。也可以直接观察到 $\boldsymbol{b}=-2\boldsymbol{a}$。
+
+\medskip
+\textbf{第5题：}
+
+$\boldsymbol{a}\perp\boldsymbol{b}$，则 $\boldsymbol{a}\cdot\boldsymbol{b}=3\times1+1\times k=3+k=0$，解得 $k=-3$。
+
+\medskip
+\textbf{第6题：}
+
+由余弦定理：$c^2=a^2+b^2-2ab\cos C=25+49-2\times5\times7\times\left(-\dfrac{1}{2}\right)=74+35=109$
+
+故 $c=\sqrt{109}$。
+
+\medskip
+\textbf{第7题：}
+
+$A=180°-45°-75°=60°$。由正弦定理 $\dfrac{b}{\sin B}=\dfrac{a}{\sin A}$，得
+
+$b=\dfrac{a\sin B}{\sin A}=\dfrac{10\times\sin45°}{\sin60°}=\dfrac{10\times\dfrac{\sqrt{2}}{2}}{\dfrac{\sqrt{3}}{2}}=\dfrac{10\sqrt{2}}{\sqrt{3}}=\dfrac{10\sqrt{6}}{3}$
+
+\medskip
+\textbf{第8题：}
+
+先求 $\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}|\,|\boldsymbol{b}|\cos60°=2\times3\times\dfrac{1}{2}=3$
+
+$(2\boldsymbol{a}+\boldsymbol{b})\cdot(\boldsymbol{a}-\boldsymbol{b})=2|\boldsymbol{a}|^2-2\boldsymbol{a}\cdot\boldsymbol{b}+\boldsymbol{b}\cdot\boldsymbol{a}-|\boldsymbol{b}|^2=2\times4-2\times3+3-9=8-6+3-9=-4$
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}

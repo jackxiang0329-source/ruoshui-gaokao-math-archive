@@ -1,0 +1,770 @@
+% ============================================================
+% 讲义 — 人教版高一必修2 第7章 复数
+% 编译命令：xelatex -interaction=nonstopmode 高一必修2_第7章_复数.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版高一必修2 · 第7章 复数}}}
+\fancyhead[R]{\small\textcolor{mainblue}{复数讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第7章\quad 复数}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 高一必修2\quad |\quad 课时：3课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+%  第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ---------- 1.1 复数的概念 ----------
+\subsection*{1.1\quad 复数的概念}
+
+\begin{knowledgebox}[虚数单位]
+规定虚数单位 $\mathrm{i}$ 满足：
+\[
+  \mathrm{i}^2 = -1
+\]
+其中 $\mathrm{i}$ 是方程 $x^2 + 1 = 0$ 的一个根。
+\end{knowledgebox}
+
+\begin{knowledgebox}[复数的定义]
+形如
+\[
+  z = a + b\mathrm{i} \quad (a, b \in \mathbb{R})
+\]
+的数称为\textbf{复数}。其中：
+\begin{itemize}[leftmargin=2em]
+  \item $a$ 称为复数 $z$ 的\textbf{实部}，记作 $\operatorname{Re}(z) = a$；
+  \item $b$ 称为复数 $z$ 的\textbf{虚部}，记作 $\operatorname{Im}(z) = b$。
+\end{itemize}
+全体复数构成的集合记为 $\mathbb{C}$，即
+\[
+\mathbb{C} = \{a + b\mathrm{i} \mid a, b \in \mathbb{R}\}
+\]
+\end{knowledgebox}
+
+\begin{knowledgebox}[复数的分类]
+设 $z = a + b\mathrm{i}$（$a, b \in \mathbb{R}$），则：
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{类别} & \textbf{条件} & \textbf{示例} \\
+\midrule
+\textbf{实数}      & $b = 0$              & $3,\; -\dfrac{1}{2},\; 0$ \\[6pt]
+\textbf{虚数}      & $b \neq 0$           & $1+2\mathrm{i},\; 3-\mathrm{i}$ \\[6pt]
+\textbf{纯虚数}    & $a = 0$ 且 $b \neq 0$ & $2\mathrm{i},\; -\mathrm{i}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+数集关系：$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}$。
+\end{knowledgebox}
+
+\begin{warnbox}[易错提醒]
+\begin{enumerate}[leftmargin=2em]
+  \item $0$ 是实数，不是纯虚数。
+  \item 纯虚数要求实部为 $0$ \emph{且}虚部不为 $0$，缺一不可。
+  \item 两个复数如果不全是实数，则不能比较大小。
+\end{enumerate}
+\end{warnbox}
+
+% ---------- 1.2 复数的代数形式 ----------
+\subsection*{1.2\quad 复数的代数形式与相等}
+
+\begin{knowledgebox}[复数相等的条件]
+设 $z_1 = a_1 + b_1\mathrm{i}$，$z_2 = a_2 + b_2\mathrm{i}$（$a_1, b_1, a_2, b_2 \in \mathbb{R}$），则
+\[
+  z_1 = z_2 \iff a_1 = a_2 \;\text{且}\; b_1 = b_2
+\]
+即两个复数相等，当且仅当实部与虚部分别相等。
+\end{knowledgebox}
+
+\begin{tipbox}[规律]
+利用复数相等的条件，可以将一个复数方程转化为两个实数方程来求解。例如，若 $(x + y) + (y - 1)\mathrm{i} = 3 + 2\mathrm{i}$，则
+\[
+\begin{cases} x + y = 3 \\ y - 1 = 2 \end{cases}
+\]
+\end{tipbox}
+
+% ---------- 1.3 复数的四则运算 ----------
+\subsection*{1.3\quad 复数的加减乘除运算}
+
+\begin{knowledgebox}[复数的加法与减法]
+设 $z_1 = a_1 + b_1\mathrm{i}$，$z_2 = a_2 + b_2\mathrm{i}$，则：
+\[
+  z_1 + z_2 = (a_1 + a_2) + (b_1 + b_2)\mathrm{i}
+\]
+\[
+  z_1 - z_2 = (a_1 - a_2) + (b_1 - b_2)\mathrm{i}
+\]
+即：实部加（减）实部，虚部加（减）虚部。加法满足交换律和结合律。
+\end{knowledgebox}
+
+\begin{knowledgebox}[复数的乘法]
+设 $z_1 = a_1 + b_1\mathrm{i}$，$z_2 = a_2 + b_2\mathrm{i}$，则：
+\[
+  z_1 \cdot z_2 = (a_1 a_2 - b_1 b_2) + (a_1 b_2 + a_2 b_1)\mathrm{i}
+\]
+推导：按多项式乘法展开，再利用 $\mathrm{i}^2 = -1$ 化简。乘法满足交换律、结合律和分配律。
+\end{knowledgebox}
+
+\begin{knowledgebox}[复数的除法]
+设 $z_1 = a_1 + b_1\mathrm{i}$，$z_2 = a_2 + b_2\mathrm{i}$（$z_2 \neq 0$），则：
+\[
+  \frac{z_1}{z_2}
+  = \frac{a_1 + b_1\mathrm{i}}{a_2 + b_2\mathrm{i}}
+  = \frac{(a_1 + b_1\mathrm{i})(a_2 - b_2\mathrm{i})}{(a_2 + b_2\mathrm{i})(a_2 - b_2\mathrm{i})}
+  = \frac{(a_1 a_2 + b_1 b_2) + (a_2 b_1 - a_1 b_2)\mathrm{i}}{a_2^2 + b_2^2}
+\]
+\textbf{核心方法}：分子分母同乘分母的共轭复数，将分母化为实数。
+\end{knowledgebox}
+
+\begin{tipbox}[$\mathrm{i}$ 的幂的周期性]
+\[
+  \mathrm{i}^1 = \mathrm{i},\quad
+  \mathrm{i}^2 = -1,\quad
+  \mathrm{i}^3 = -\mathrm{i},\quad
+  \mathrm{i}^4 = 1
+\]
+以 $4$ 为周期循环。计算 $\mathrm{i}^n$ 时，只需将 $n$ 除以 $4$ 取余数即可。
+\end{tipbox}
+
+\begin{warnbox}[运算易错提醒]
+\begin{enumerate}[leftmargin=2em]
+  \item 乘法公式不要与多项式乘法混淆，注意 $\mathrm{i}^2 = -1$。
+  \item 除法一定要将分母化为实数，不能保留分母中的虚数。
+  \item $\mathrm{i}$ 不是字母，而是满足 $\mathrm{i}^2 = -1$ 的特殊符号。
+\end{enumerate}
+\end{warnbox}
+
+% ---------- 1.4 复数的模 ----------
+\subsection*{1.4\quad 复数的模}
+
+\begin{knowledgebox}[复数的模]
+复数 $z = a + b\mathrm{i}$ 的\textbf{模}（绝对值）定义为：
+\[
+  |z| = \sqrt{a^2 + b^2}
+\]
+几何意义：复平面上点 $Z(a,b)$ 到原点 $O$ 的距离。
+\end{knowledgebox}
+
+\begin{tipbox}[模的常用性质]
+设 $z_1, z_2 \in \mathbb{C}$，则：
+\begin{enumerate}[leftmargin=2em]
+  \item $|z| \geqslant 0$，且 $|z| = 0 \iff z = 0$。
+  \item $|z_1 \cdot z_2| = |z_1| \cdot |z_2|$。
+  \item $\left|\dfrac{z_1}{z_2}\right| = \dfrac{|z_1|}{|z_2|}$（$z_2 \neq 0$）。
+  \item $|z|^2 = z \cdot \overline{z}$。
+  \item $|z_1 + z_2| \leqslant |z_1| + |z_2|$（三角不等式）。
+\end{enumerate}
+\end{tipbox}
+
+% ---------- 1.5 共轭复数 ----------
+\subsection*{1.5\quad 共轭复数}
+
+\begin{knowledgebox}[共轭复数的定义]
+复数 $z = a + b\mathrm{i}$ 的\textbf{共轭复数}为：
+\[
+  \overline{z} = a - b\mathrm{i}
+\]
+即实部不变，虚部取反。几何意义：$z$ 与 $\overline{z}$ 在复平面上关于实轴对称。
+\end{knowledgebox}
+
+\begin{tipbox}[共轭复数的性质]
+\begin{enumerate}[leftmargin=2em]
+  \item $\overline{\overline{z}} = z$。
+  \item $z + \overline{z} = 2a = 2\operatorname{Re}(z)$（结果为实数）。
+  \item $z - \overline{z} = 2b\mathrm{i}$（纯虚数或 $0$）。
+  \item $z \cdot \overline{z} = a^2 + b^2 = |z|^2$（结果为非负实数）。
+  \item $\overline{z_1 + z_2} = \overline{z_1} + \overline{z_2}$。
+  \item $\overline{z_1 \cdot z_2} = \overline{z_1} \cdot \overline{z_2}$。
+\end{enumerate}
+\end{tipbox}
+
+% ---------- 1.6 复数的几何意义 ----------
+\subsection*{1.6\quad 复数的几何意义}
+
+\begin{knowledgebox}[复平面]
+用直角坐标系表示复数：
+\begin{itemize}[leftmargin=2em]
+  \item $x$ 轴称为\textbf{实轴}，表示复数的实部；
+  \item $y$ 轴称为\textbf{虚轴}，表示复数的虚部。
+\end{itemize}
+复数 $z = a + b\mathrm{i}$ 与复平面上的点 $Z(a, b)$ 一一对应，也与向量 $\overrightarrow{OZ}$ 一一对应。
+\end{knowledgebox}
+
+\begin{knowledgebox}[复数加减法的几何意义]
+\begin{itemize}[leftmargin=2em]
+  \item $z_1 + z_2$：对应向量的加法（平行四边形法则或三角形法则）。
+  \item $z_1 - z_2$：对应从 $z_2$ 指向 $z_1$ 的向量。
+  \item $|z_1 - z_2|$：表示复平面上点 $Z_1$ 与点 $Z_2$ 之间的距离。
+\end{itemize}
+\end{knowledgebox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  % 坐标轴
+  \draw[->, thick, mainblue] (-1,0) -- (5.5,0) node[right]{实轴};
+  \draw[->, thick, mainblue] (0,-1) -- (0,4.5) node[above]{虚轴};
+  \node[below left] at (0,0) {$O$};
+  % 点 z1 和 z2
+  \filldraw[examorange] (1,1) circle (2.5pt) node[above left]{$Z_1(1+\mathrm{i})$};
+  \filldraw[apppurple] (4,2) circle (2.5pt) node[above right]{$Z_2(4+2\mathrm{i})$};
+  % 向量
+  \draw[->, thick, examorange] (0,0) -- (1,1);
+  \draw[->, thick, apppurple] (0,0) -- (4,2);
+  % 和的向量
+  \filldraw[tipgreen] (5,3) circle (2.5pt) node[right]{$Z_1+Z_2(5+3\mathrm{i})$};
+  \draw[->, thick, tipgreen] (0,0) -- (5,3);
+  % 平行四边形辅助线
+  \draw[dashed, gray] (1,1) -- (5,3);
+  \draw[dashed, gray] (4,2) -- (5,3);
+  % 标注
+  \node[mainblue, below] at (2.5,0.3) {$|z_1-z_2|=\sqrt{3^2+1^2}=\sqrt{10}$};
+\end{tikzpicture}
+\end{center}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}[leftmargin=2em]
+  \item 复平面上的点与复数一一对应，但不是与有序实数对一一对应（意义不同）。
+  \item $|z_1 - z_2|$ 是两点间的距离，不是"差的模"的简单计算——要理解其几何含义。
+\end{itemize}
+\end{warnbox}
+
+
+% ============================================================
+%  第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% 例题 1
+\begin{examplebox}[【例题1】复数的分类]
+已知复数 $z = (m^2 - 1) + (m - 1)\mathrm{i}$（$m \in \mathbb{R}$），分别求 $z$ 为实数、虚数、纯虚数时 $m$ 的值。
+\end{examplebox}
+
+\textbf{解：}
+
+$z$ 的实部 $a = m^2 - 1$，虚部 $b = m - 1$。
+
+\textbf{（1）$z$ 为实数}：需 $b = 0$，即 $m - 1 = 0$，解得 $m = 1$。
+
+\textbf{（2）$z$ 为虚数}：需 $b \neq 0$，即 $m - 1 \neq 0$，解得 $m \neq 1$。
+
+\textbf{（3）$z$ 为纯虚数}：需 $a = 0$ 且 $b \neq 0$，即：
+\[
+  \begin{cases}
+    m^2 - 1 = 0 \\[4pt]
+    m - 1 \neq 0
+  \end{cases}
+  \implies m = -1
+\]
+
+\begin{tipbox}[方法总结]
+判断复数类型时，紧扣定义：实部 $a$、虚部 $b$ 是否为零。分类讨论时注意条件的"且""或"关系。
+\end{tipbox}
+
+\vspace{6pt}
+
+% 例题 2
+\begin{examplebox}[【例题2】复数相等求参数]
+已知 $(2x - 1) + (y + 3)\mathrm{i} = 5 - 2\mathrm{i}$（$x, y \in \mathbb{R}$），求 $x$ 和 $y$。
+\end{examplebox}
+
+\textbf{解：}
+
+由复数相等的条件，实部与虚部分别相等：
+\[
+  \begin{cases}
+    2x - 1 = 5 \\[4pt]
+    y + 3 = -2
+  \end{cases}
+  \implies
+  \begin{cases}
+    x = 3 \\[4pt]
+    y = -5
+  \end{cases}
+\]
+
+\begin{tipbox}[方法总结]
+"实部 $=$ 实部，虚部 $=$ 虚部"是解复数相等问题的核心策略，可将复数方程转化为实数方程组。
+\end{tipbox}
+
+\vspace{6pt}
+
+% 例题 3
+\begin{examplebox}[【例题3】$\mathrm{i}$ 的幂运算]
+计算 $\mathrm{i}^{2025} + \mathrm{i}^{2026} + \mathrm{i}^{2027} + \mathrm{i}^{2028}$。
+\end{examplebox}
+
+\textbf{解：}
+
+$\mathrm{i}$ 的幂以 $4$ 为周期。分别计算各指数除以 $4$ 的余数：
+\[
+  2025 \div 4 = 506 \cdots\cdots 1 \implies \mathrm{i}^{2025} = \mathrm{i}
+\]
+\[
+  2026 \div 4 = 506 \cdots\cdots 2 \implies \mathrm{i}^{2026} = -1
+\]
+\[
+  2027 \div 4 = 506 \cdots\cdots 3 \implies \mathrm{i}^{2027} = -\mathrm{i}
+\]
+\[
+  2028 \div 4 = 507 \cdots\cdots 0 \implies \mathrm{i}^{2028} = 1
+\]
+因此：
+\[
+  \mathrm{i}^{2025} + \mathrm{i}^{2026} + \mathrm{i}^{2027} + \mathrm{i}^{2028}
+  = \mathrm{i} + (-1) + (-\mathrm{i}) + 1 = 0
+\]
+
+\begin{tipbox}[方法总结]
+连续四个 $\mathrm{i}$ 的幂相加，其结果恒为 $0$。一般地，对任意正整数 $n$：
+$\mathrm{i}^n + \mathrm{i}^{n+1} + \mathrm{i}^{n+2} + \mathrm{i}^{n+3} = 0$。
+\end{tipbox}
+
+\vspace{6pt}
+
+% 例题 4
+\begin{examplebox}[【例题4】复数的四则运算]
+设 $z_1 = 1 + 2\mathrm{i}$，$z_2 = 3 - \mathrm{i}$，求 $z_1 + z_2$，$z_1 - z_2$，$z_1 \cdot z_2$，$\dfrac{z_1}{z_2}$。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{（1）加法：}
+\[
+  z_1 + z_2 = (1 + 3) + (2 + (-1))\mathrm{i} = 4 + \mathrm{i}
+\]
+
+\textbf{（2）减法：}
+\[
+  z_1 - z_2 = (1 - 3) + (2 - (-1))\mathrm{i} = -2 + 3\mathrm{i}
+\]
+
+\textbf{（3）乘法：}
+\[
+  z_1 \cdot z_2 = (1 \cdot 3 - 2 \cdot (-1)) + (1 \cdot (-1) + 2 \cdot 3)\mathrm{i} = 5 + 5\mathrm{i}
+\]
+
+\textbf{（4）除法：}
+\[
+  \frac{z_1}{z_2} = \frac{1 + 2\mathrm{i}}{3 - \mathrm{i}}
+  = \frac{(1 + 2\mathrm{i})(3 + \mathrm{i})}{(3 - \mathrm{i})(3 + \mathrm{i})}
+  = \frac{3 + \mathrm{i} + 6\mathrm{i} + 2\mathrm{i}^2}{9 + 1}
+  = \frac{1 + 7\mathrm{i}}{10}
+  = \frac{1}{10} + \frac{7}{10}\mathrm{i}
+\]
+
+\begin{tipbox}[方法总结]
+除法的关键是"分母实数化"：分子分母同乘分母的共轭复数。计算完毕后检查结果的实部与虚部是否化简彻底。
+\end{tipbox}
+
+\vspace{6pt}
+
+% 例题 5
+\begin{examplebox}[【例题5】复数的模与共轭复数]
+设 $z = 3 - 4\mathrm{i}$，求 $|z|$、$\overline{z}$，并验证 $z \cdot \overline{z} = |z|^2$。
+\end{examplebox}
+
+\textbf{解：}
+
+\textbf{（1）求模：}
+\[
+  |z| = \sqrt{3^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+\]
+
+\textbf{（2）共轭复数：}
+\[
+  \overline{z} = 3 + 4\mathrm{i}
+\]
+
+\textbf{（3）验证 $z \cdot \overline{z} = |z|^2$：}
+\[
+  z \cdot \overline{z} = (3 - 4\mathrm{i})(3 + 4\mathrm{i}) = 9 - 16\mathrm{i}^2 = 9 + 16 = 25 = 5^2 = |z|^2 \quad\checkmark
+\]
+
+\vspace{6pt}
+
+% 例题 6
+\begin{examplebox}[【例题6】利用模的性质化简]
+已知 $z = \dfrac{(1+\mathrm{i})^2}{3-4\mathrm{i}}$，求 $|z|$。
+\end{examplebox}
+
+\textbf{解：}
+
+利用 $|z_1/z_2| = |z_1|/|z_2|$ 和 $|z_1 z_2| = |z_1||z_2|$：
+
+\[
+|z| = \frac{|1+\mathrm{i}|^2}{|3-4\mathrm{i}|}
+\]
+
+\[
+|1+\mathrm{i}| = \sqrt{1^2+1^2} = \sqrt{2} \implies |1+\mathrm{i}|^2 = 2
+\]
+\[
+|3-4\mathrm{i}| = \sqrt{3^2+(-4)^2} = \sqrt{25} = 5
+\]
+\[
+|z| = \frac{2}{5}
+\]
+
+\begin{tipbox}[方法总结]
+求复数的模时，如果只是求 $|z|$（而非 $z$ 本身），可以利用模的运算性质先化简，避免复杂的代数运算。
+\end{tipbox}
+
+\vspace{6pt}
+
+% 例题 7
+\begin{examplebox}[【例题7】综合应用：利用复数相等求参数]
+已知 $(a + \mathrm{i})(1 + \mathrm{i}) = b$，其中 $a, b \in \mathbb{R}$，求 $a$ 和 $b$ 的值。
+\end{examplebox}
+
+\textbf{解：}
+
+将左边展开：
+\[
+  (a + \mathrm{i})(1 + \mathrm{i}) = a \cdot 1 + a \cdot \mathrm{i} + \mathrm{i} \cdot 1 + \mathrm{i} \cdot \mathrm{i}
+  = a + a\mathrm{i} + \mathrm{i} + \mathrm{i}^2
+  = (a - 1) + (a + 1)\mathrm{i}
+\]
+
+因为 $b$ 是实数，所以等式右边虚部为 $0$：
+\[
+  \begin{cases}
+    a + 1 = 0 \\[4pt]
+    b = a - 1
+  \end{cases}
+  \implies
+  \begin{cases}
+    a = -1 \\[4pt]
+    b = -2
+  \end{cases}
+\]
+
+\begin{tipbox}[方法总结]
+当等式一侧为实数时，隐含虚部为零的条件。挖掘隐含条件是解复数问题的重要技巧。
+\end{tipbox}
+
+\vspace{6pt}
+
+% 例题 8
+\begin{examplebox}[【例题8】复数的几何意义——两点间距离]
+在复平面上，$z_1 = 1 + 2\mathrm{i}$，$z_2 = 4 - 2\mathrm{i}$，求 $|z_1 - z_2|$ 并解释其几何意义。
+\end{examplebox}
+
+\textbf{解：}
+
+\[
+z_1 - z_2 = (1 + 2\mathrm{i}) - (4 - 2\mathrm{i}) = -3 + 4\mathrm{i}
+\]
+\[
+|z_1 - z_2| = \sqrt{(-3)^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+\]
+
+\textbf{几何意义}：$|z_1 - z_2| = 5$ 表示复平面上点 $Z_1(1, 2)$ 与点 $Z_2(4, -2)$ 之间的距离为 $5$。
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+  % 坐标轴
+  \draw[->, thick, mainblue] (-1,0) -- (6,0) node[right]{实轴};
+  \draw[->, thick, mainblue] (0,-3.5) -- (0,3.5) node[above]{虚轴};
+  \node[below left] at (0,0) {$O$};
+  % 点
+  \filldraw[examorange] (1,2) circle (2.5pt) node[above left]{$Z_1(1+2\mathrm{i})$};
+  \filldraw[apppurple] (4,-2) circle (2.5pt) node[below right]{$Z_2(4-2\mathrm{i})$};
+  % 连线
+  \draw[thick, warnred, <->] (1,2) -- (4,-2);
+  \node[above right, warnred] at (2.8,0.3) {$|z_1-z_2|=5$};
+  % 辅助虚线
+  \draw[dashed, gray] (1,0) -- (1,2);
+  \draw[dashed, gray] (4,0) -- (4,-2);
+\end{tikzpicture}
+\end{center}
+
+\vspace{6pt}
+
+% 例题 9
+\begin{examplebox}[【例题9】复数方程求解]
+在复数范围内解方程 $x^2 + 4 = 0$。
+\end{examplebox}
+
+\textbf{解：}
+
+\[
+x^2 + 4 = 0 \implies x^2 = -4
+\]
+\[
+x = \pm\sqrt{-4} = \pm 2\mathrm{i}
+\]
+
+验证：$(2\mathrm{i})^2 + 4 = 4\mathrm{i}^2 + 4 = -4 + 4 = 0$，$(-2\mathrm{i})^2 + 4 = 4\mathrm{i}^2 + 4 = 0$。均成立。
+
+\begin{tipbox}[方法总结]
+在复数范围内，任何二次方程都有两个根（含重根）。判别式 $\Delta < 0$ 时，方程有一对共轭虚根。
+\end{tipbox}
+
+
+% ============================================================
+%  第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+% 应用 1
+\begin{appbox}[【应用1】电路中的复数阻抗]
+在交流电路中，阻抗可以用复数表示。某电路中两个元件串联，阻抗分别为 $Z_1 = 3 + 4\mathrm{i}\ \Omega$ 和 $Z_2 = 1 - 2\mathrm{i}\ \Omega$。
+\begin{enumerate}[leftmargin=2em]
+  \item 求串联总阻抗 $Z = Z_1 + Z_2$。
+  \item 求总阻抗的模 $|Z|$，即阻抗的大小。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}
+
+\textbf{（1）} 串联总阻抗：
+\[
+  Z = Z_1 + Z_2 = (3 + 1) + (4 + (-2))\mathrm{i} = 4 + 2\mathrm{i}\ \Omega
+\]
+
+\textbf{（2）} 阻抗的模：
+\[
+  |Z| = \sqrt{4^2 + 2^2} = \sqrt{16 + 4} = \sqrt{20} = 2\sqrt{5}\ \Omega
+\]
+
+\vspace{6pt}
+
+% 应用 2
+\begin{appbox}[【应用2】复平面上的轨迹问题]
+在复平面上，复数 $z$ 满足 $|z - 1 - \mathrm{i}| = 2$。
+\begin{enumerate}[leftmargin=2em]
+  \item 说明该方程表示什么图形。
+  \item 求该图形上到原点距离的最大值和最小值。
+\end{enumerate}
+\end{appbox}
+
+\textbf{解：}
+
+\textbf{（1）} 设 $z = x + y\mathrm{i}$（$x, y \in \mathbb{R}$），则：
+\[
+  |z - 1 - \mathrm{i}| = |(x-1) + (y-1)\mathrm{i}| = \sqrt{(x-1)^2 + (y-1)^2} = 2
+\]
+即：
+\[
+  (x-1)^2 + (y-1)^2 = 4
+\]
+这是一个以 $(1, 1)$ 为圆心、半径为 $2$ 的圆。
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+  \draw[->, thick, mainblue] (-2,0) -- (4.5,0) node[right]{实轴};
+  \draw[->, thick, mainblue] (0,-2) -- (0,4.5) node[above]{虚轴};
+  \node[below left] at (0,0) {$O$};
+  \draw[thick, apppurple] (1,1) circle (2);
+  \filldraw[apppurple] (1,1) circle (2.5pt) node[below right]{$C(1,1)$};
+  \node[apppurple, right] at (3.2,1.8) {$|z-1-\mathrm{i}|=2$};
+  % 原点到圆心
+  \draw[dashed, gray] (0,0) -- (1,1);
+  \node[gray, above right] at (0.3,0.3) {$\sqrt{2}$};
+\end{tikzpicture}
+\end{center}
+
+\textbf{（2）} 原点 $O(0,0)$ 到圆心 $C(1,1)$ 的距离为：
+\[
+  |OC| = \sqrt{1^2 + 1^2} = \sqrt{2}
+\]
+因为 $\sqrt{2} < 2$，所以原点在圆内。
+
+圆上到原点的最近距离为 $2 - \sqrt{2}$，最远距离为 $2 + \sqrt{2}$。
+
+\vspace{6pt}
+
+% 应用 3
+\begin{appbox}[【应用3】复数与旋转]
+将复数 $z = 1 + \mathrm{i}$ 对应的向量绕原点逆时针旋转 $90^{\circ}$，求旋转后对应的复数。并说明复数乘法与旋转的关系。
+\end{appbox}
+
+\textbf{解：}
+
+将一个复数 $z$ 对应的向量绕原点逆时针旋转 $90^{\circ}$，等价于乘以 $\mathrm{i}$：
+\[
+z' = z \cdot \mathrm{i} = (1 + \mathrm{i}) \cdot \mathrm{i} = \mathrm{i} + \mathrm{i}^2 = \mathrm{i} + (-1) = -1 + \mathrm{i}
+\]
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \draw[->, thick, mainblue] (-1.5,0) -- (2,0) node[right]{实轴};
+  \draw[->, thick, mainblue] (0,-0.5) -- (0,2.5) node[above]{虚轴};
+  \node[below left] at (0,0) {$O$};
+  % 原向量
+  \filldraw[examorange] (1,1) circle (2.5pt) node[right]{$z=1+\mathrm{i}$};
+  \draw[->, thick, examorange] (0,0) -- (1,1);
+  % 旋转后
+  \filldraw[apppurple] (-1,1) circle (2.5pt) node[left]{$z'=-1+\mathrm{i}$};
+  \draw[->, thick, apppurple] (0,0) -- (-1,1);
+  % 旋转弧线
+  \draw[->, tipgreen, thick] (0.7,0) arc (0:120:0.7);
+  \node[tipgreen, above right] at (0.3,0.55) {$90^{\circ}$};
+\end{tikzpicture}
+\end{center}
+
+\textbf{规律}：复数乘以 $\mathrm{i}$ 相当于逆时针旋转 $90^{\circ}$；乘以 $-\mathrm{i}$ 相当于顺时针旋转 $90^{\circ}$。
+
+
+% ============================================================
+%  第四部分：课堂练习
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}[leftmargin=2em]
+
+  \item 判断下列复数哪些是实数、哪些是虚数、哪些是纯虚数：
+  \[
+    0,\quad -3,\quad 5\mathrm{i},\quad 1-\mathrm{i},\quad -\mathrm{i},\quad 2+0\mathrm{i}
+  \]
+
+  \item 已知 $(m+2) + (m-3)\mathrm{i}$ 是纯虚数，求实数 $m$ 的值。
+
+  \item 计算 $\mathrm{i}^{100} + \mathrm{i}^{101} + \mathrm{i}^{102} + \mathrm{i}^{103}$。
+
+  \item 已知 $z = 1 + \mathrm{i}$，求 $|z|$、$\overline{z}$ 以及 $z \cdot \overline{z}$。
+
+  \item 设 $z_1 = 2 + 3\mathrm{i}$，$z_2 = 1 - \mathrm{i}$，求 $z_1 \cdot z_2$ 和 $\dfrac{z_1}{z_2}$。
+
+  \item 已知 $z = a + b\mathrm{i}$（$a, b \in \mathbb{R}$），且 $(1 + \mathrm{i})z = 4 + 2\mathrm{i}$，求 $a$ 和 $b$。
+
+  \item 在复平面上，满足 $|z + 1 - \mathrm{i}| = 3$ 的点的轨迹是什么？写出方程并指出圆心和半径。
+
+  \item 计算 $\mathrm{i}^{1} + \mathrm{i}^{2} + \mathrm{i}^{3} + \cdots + \mathrm{i}^{20}$。
+
+\end{enumerate}
+
+\vspace{12pt}
+
+\begin{knowledgebox}[参考答案]
+
+\textbf{1.}
+\begin{itemize}[leftmargin=2em]
+  \item 实数：$0,\; -3,\; 2+0\mathrm{i}$（即 $2$）。
+  \item 虚数：$5\mathrm{i},\; 1-\mathrm{i},\; -\mathrm{i}$。
+  \item 纯虚数：$5\mathrm{i},\; -\mathrm{i}$。
+\end{itemize}
+
+\textbf{2.} 纯虚数要求实部为 $0$ 且虚部不为 $0$：
+\[
+  m + 2 = 0 \implies m = -2,\quad m - 3 = -5 \neq 0
+\]
+故 $m = -2$。
+
+\textbf{3.} 四个连续的 $\mathrm{i}$ 的幂之和为 $0$，答案为 $0$。
+
+\textbf{4.}
+\[
+  |z| = \sqrt{1^2 + 1^2} = \sqrt{2},\quad
+  \overline{z} = 1 - \mathrm{i},\quad
+  z \cdot \overline{z} = (1+\mathrm{i})(1-\mathrm{i}) = 2 = |z|^2
+\]
+
+\textbf{5.}
+\[
+  z_1 \cdot z_2 = (2 \cdot 1 - 3 \cdot (-1)) + (2 \cdot (-1) + 3 \cdot 1)\mathrm{i} = 5 + \mathrm{i}
+\]
+\[
+  \frac{z_1}{z_2} = \frac{2+3\mathrm{i}}{1-\mathrm{i}} = \frac{(2+3\mathrm{i})(1+\mathrm{i})}{(1-\mathrm{i})(1+\mathrm{i})}
+  = \frac{2+2\mathrm{i}+3\mathrm{i}+3\mathrm{i}^2}{2} = \frac{-1+5\mathrm{i}}{2} = -\frac{1}{2} + \frac{5}{2}\mathrm{i}
+\]
+
+\textbf{6.} 展开 $(1+\mathrm{i})(a+b\mathrm{i}) = (a-b) + (a+b)\mathrm{i} = 4 + 2\mathrm{i}$，由复数相等：
+\[
+  \begin{cases} a - b = 4 \\ a + b = 2 \end{cases}
+  \implies a = 3,\; b = -1
+\]
+
+\textbf{7.} 设 $z=x+y\mathrm{i}$，则 $|(x+1)+(y-1)\mathrm{i}|=3$，即 $(x+1)^2+(y-1)^2=9$。轨迹为圆，圆心 $(-1,1)$，半径 $3$。
+
+\textbf{8.} $\mathrm{i}$ 的幂以 $4$ 为周期，每四个连续幂之和为 $0$。$20 \div 4 = 5$，共 $5$ 个完整周期，故和为 $0$。
+
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
