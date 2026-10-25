@@ -1,0 +1,213 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{数列 测试卷}
+\fancyhead[R]{数学（选择性必修第二册）}
+\fancyfoot[C]{第 \thepage\ 页}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\score}[1]{\hfill\textbf{（#1分）}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 数列 测试卷}\\[0.5em]
+{\normalsize 时间：120分钟 \quad 满分：150分}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item 数列 $1$，$\dfrac{1}{2}$，$\dfrac{1}{3}$，$\dfrac{1}{4}$，$\ldots$ 的一个通项公式为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_n=n$
+\item $a_n=\dfrac{1}{n}$
+\item $a_n=\dfrac{1}{n+1}$
+\item $a_n=\dfrac{1}{n-1}$
+\end{enumerate}
+
+\item 等差数列 $\{a_n\}$ 中，$a_1=3$，$d=2$，则 $a_{10}=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $19$
+\item $21$
+\item $23$
+\item $25$
+\end{enumerate}
+
+\item 等比数列 $\{a_n\}$ 中，$a_1=2$，$q=3$，则 $a_5=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $54$
+\item $81$
+\item $162$
+\item $243$
+\end{enumerate}
+
+\item 等差数列 $\{a_n\}$ 中，$a_3=7$，$a_7=15$，则公差 $d=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+
+\item 等差数列 $\{a_n\}$ 中，$a_1=1$，$d=2$，则前 $10$ 项和 $S_{10}=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $90$
+\item $100$
+\item $110$
+\item $120$
+\end{enumerate}
+
+\item 等比数列 $\{a_n\}$ 中，$a_1=1$，$a_4=8$，则公比 $q=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $3$
+\item $4$
+\end{enumerate}
+
+\item 数列 $\{a_n\}$ 的前 $n$ 项和 $S_n=n^2+2n$，则 $a_5=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $7$
+\item $9$
+\item $11$
+\item $13$
+\end{enumerate}
+
+\item 已知等比数列 $\{a_n\}$ 满足 $a_1+a_2=3$，$a_2+a_3=6$，则 $a_6+a_7=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $48$
+\item $96$
+\item $192$
+\item $384$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 关于等差数列，下列结论正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_n=a_1+(n-1)d$
+\item $S_n=\dfrac{n(a_1+a_n)}{2}$
+\item $a_n=\dfrac{a_{n-1}+a_{n+1}}{2}$（$n\geq 2$）
+\item 若 $a_1>0$，$d<0$，则 $S_n$ 有最大值
+\end{enumerate}
+
+\item 关于等比数列 $\{a_n\}$（公比 $q\neq 0$），下列结论正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_n=a_1q^{n-1}$
+\item $a_n^2=a_{n-1}\cdot a_{n+1}$（$n\geq 2$）
+\item 当 $q=1$ 时，$S_n=na_1$
+\item 当 $q\neq 1$ 时，$S_n=\dfrac{a_1(1-q^n)}{1-q}$
+\end{enumerate}
+
+\item 已知数列 $\{a_n\}$ 的前 $n$ 项和 $S_n=2^n-1$，则下列结论正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_1=1$
+\item $a_n=2^{n-1}$
+\item $\{a_n\}$ 是等比数列
+\item $S_{10}=1023$
+\end{enumerate}
+
+\item 已知等差数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n$，$S_5=25$，$S_{10}=100$，则 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_1=1$
+\item $d=2$
+\item $S_{20}=400$
+\item $a_{10}=19$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 等差数列 $\{a_n\}$ 中，$a_1=2$，$a_5=10$，则公差 $d=$ \underline{\hspace{2cm}}，$a_{10}=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 等比数列 $\{a_n\}$ 中，$a_2=6$，$a_5=162$，则公比 $q=$ \underline{\hspace{2cm}}，$a_1=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 数列 $\{a_n\}$ 满足 $a_1=1$，$a_{n+1}=a_n+2n$，则 $a_n=$ \underline{\hspace{3cm}}。\score{5}
+
+\item 等差数列 $\{a_n\}$ 的前 $n$ 项和 $S_n=3n^2-2n$，则 $a_n=$ \underline{\hspace{3cm}}。\score{5}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item （10分）已知等差数列 $\{a_n\}$ 中，$a_3=9$，$a_9=3$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求 $a_1$ 和 $d$；
+\item 求 $S_n$；
+\item 求 $S_n$ 的最大值。
+\end{enumerate}
+
+\item （10分）已知等比数列 $\{a_n\}$ 满足 $a_1+a_3=10$，$a_2+a_4=20$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求 $a_1$ 和 $q$；
+\item 求前 $n$ 项和 $S_n$。
+\end{enumerate}
+
+\item （12分）已知数列 $\{a_n\}$ 满足 $a_1=1$，$a_{n+1}=2a_n+1$。
+\begin{enumerate}[label=(\arabic*)]
+\item 设 $b_n=a_n+1$，证明 $\{b_n\}$ 是等比数列；
+\item 求 $a_n$ 的通项公式；
+\item 求 $\{a_n\}$ 的前 $n$ 项和 $S_n$。
+\end{enumerate}
+
+\item （12分）已知等差数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n$，$S_3=9$，$S_6=36$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求数列 $\{a_n\}$ 的通项公式；
+\item 设 $b_n=\dfrac{1}{a_n a_{n+1}}$，求数列 $\{b_n\}$ 的前 $n$ 项和 $T_n$；
+\item 证明 $T_n<\dfrac{1}{3}$。
+\end{enumerate}
+
+\item （12分）某公司去年的产值为 $1000$ 万元，计划今后每年产值比上一年增长 $20\%$。
+\begin{enumerate}[label=(\arabic*)]
+\item 写出从今年起第 $n$ 年的产值 $a_n$（万元）关于 $n$ 的表达式；
+\item 从今年起，至少经过几年产值可以超过 $3000$ 万元？（$\lg 2\approx 0.3010$，$\lg 3\approx 0.4771$）
+\item 求从今年起前 $n$ 年的总产值。
+\end{enumerate}
+
+\item （14分）已知数列 $\{a_n\}$ 的前 $n$ 项和 $S_n$ 满足 $S_n=2a_n-2^n$（$n\in\mathbb{N}^*$）。
+\begin{enumerate}[label=(\arabic*)]
+\item 求 $a_1$，$a_2$，$a_3$ 的值；
+\item 证明 $\left\{\dfrac{a_n}{2^n}\right\}$ 是等差数列；
+\item 求数列 $\{a_n\}$ 的通项公式；
+\item 设 $b_n=\dfrac{a_n}{(n+1)\cdot 2^n}$，求 $\{b_n\}$ 的前 $n$ 项和 $T_n$。
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

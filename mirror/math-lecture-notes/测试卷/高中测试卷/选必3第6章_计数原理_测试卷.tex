@@ -1,0 +1,201 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+\setstretch{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[R]{\small 数学（选择性必修第三册）}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\textbf{（#1分）}}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{选择性必修第三册·第六章 计数原理 测试卷}
+
+\vspace{0.3cm}
+\normalsize 满分：150分 \quad 考试时间：120分钟
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em]
+
+\item 从5名同学中选3人参加社区志愿服务活动，不同的选法有\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 10种 \quad B. 15种 \quad C. 20种 \quad D. 60种
+\end{enumerate}
+
+\item 用0，1，2，3，4，5这6个数字，可以组成没有重复数字的三位偶数的个数是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 52 \quad B. 60 \quad C. 68 \quad D. 72
+\end{enumerate}
+
+\item $\left(x-\dfrac{1}{x}\right)^6$的展开式中含$x^2$项的系数是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $-20$ \quad B. $-15$ \quad C. $15$ \quad D. $20$
+\end{enumerate}
+
+\item 将4本不同的书全部分给甲、乙、丙三人，每人至少1本，则不同的分法有\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 12种 \quad B. 24种 \quad C. 36种 \quad D. 48种
+\end{enumerate}
+
+\item 同时抛掷两枚骰子，向上的点数之和为7的概率是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $\dfrac{1}{6}$ \quad B. $\dfrac{1}{8}$ \quad C. $\dfrac{5}{36}$ \quad D. $\dfrac{7}{36}$
+\end{enumerate}
+
+\item 二项式$(x+1)^8$的展开式中$x^5$的系数是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 28 \quad B. 56 \quad C. 70 \quad D. 112
+\end{enumerate}
+
+\item 6名同学站成一排照相，其中甲、乙两人必须相邻的排法有\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 120种 \quad B. 240种 \quad C. 360种 \quad D. 480种
+\end{enumerate}
+
+\item 将5封不同的信投入3个不同的信箱，每个信箱至少投1封信，则不同的投法有\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 120种 \quad B. 150种 \quad C. 180种 \quad D. 240种
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item 下列等式正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $C_n^m = C_n^{n-m}$
+\item $A_n^m = n \cdot A_{n-1}^{m-1}$
+\item $C_n^m = C_{n-1}^m + C_{n-1}^{m-1}$
+\item $A_n^m = C_n^m \cdot m!$
+\end{enumerate}
+
+\item 关于二项式$(1+x)^{10}$，下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 展开式共有11项
+\item 展开式中各项系数之和为$2^{10}$
+\item 展开式中$x^4$的系数与$x^6$的系数相等
+\item 展开式中二项式系数最大的项是第6项
+\end{enumerate}
+
+\item 从5双不同的鞋子中任取4只，则下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 恰好有2只配成一双的取法有120种
+\item 恰好有2只配成一双的取法有140种
+\item 4只都不成双的取法有80种
+\item 至少有2只成双的取法有130种
+\end{enumerate}
+
+\item 将4个不同的小球放入3个不同的盒子中，下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 不同的放法共有$3^4$种
+\item 恰有一个空盒的放法有42种
+\item 每个盒子都不空的放法有36种
+\item 恰好有两个盒子为空的放法有6种
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item 二项式$\left(x^2+\dfrac{1}{x}\right)^6$的展开式中的常数项为\hspace{3cm}。\score{5}
+
+\item 已知$C_{10}^x = C_{10}^3$，则$x=$\hspace{3cm}。\score{5}
+
+\item 二项式$(2x-1)^5$的展开式中各项系数之和为\hspace{3cm}。\score{5}
+
+\item 从1，2，3，4，5这5个数字中任取3个不同的数字排成三位数，其中百位数字比十位数字大，十位数字比个位数字大的三位数共有\hspace{3cm}个。\score{5}
+
+\end{enumerate}
+
+\newpage
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出必要的文字说明、证明过程或演算步骤。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item（10分）某班有4名男生和3名女生。\score{10}
+
+（1）从中选3人参加数学竞赛，要求至少有1名女生，有多少种选法？
+
+（2）从中选3人分别参加数学、物理、化学竞赛，要求至少有1名女生，有多少种选法？
+
+\item（12分）已知$(2x-1)^6 = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + a_4 x^4 + a_5 x^5 + a_6 x^6$。\score{12}
+
+（1）求$a_0$的值；
+
+（2）求$a_1 + a_2 + a_3 + a_4 + a_5 + a_6$的值；
+
+（3）求$a_0 + a_2 + a_4 + a_6$的值。
+
+\item（12分）一个口袋中装有4个红球和3个白球，这些球除颜色外完全相同。\score{12}
+
+（1）从袋中一次取出3个球，求恰好取到2个红球的概率；
+
+（2）从袋中依次不放回地取3个球，求第3次取到白球的概率。
+
+\item（12分）用0，1，2，3，4，5这6个数字组成没有重复数字的数。\score{12}
+
+（1）能组成多少个没有重复数字的四位偶数？
+
+（2）能组成多少个没有重复数字且比3400大的四位数？
+
+\item（12分）已知$(x^2+ax)^5$的展开式中$x^6$的系数为80。\score{12}
+
+（1）求实数$a$的值；
+
+（2）求展开式中$x^4$的系数；
+
+（3）求展开式中二项式系数最大的项。
+
+\item（12分）证明题。\score{12}
+
+（1）用二项式定理证明：$2^n > n^2$（其中$n \geqslant 5$，$n \in \mathbb{N}^*$）；
+
+（2）用二项式定理证明：$3^{2n+2} - 8n - 9$能被64整除（其中$n \in \mathbb{N}^*$）。
+
+\end{enumerate}
+
+\vspace{1cm}
+\begin{center}
+\rule{8cm}{0.4pt}
+
+\vspace{0.3cm}
+\textbf{本试卷结束}
+\end{center}
+
+\end{document}

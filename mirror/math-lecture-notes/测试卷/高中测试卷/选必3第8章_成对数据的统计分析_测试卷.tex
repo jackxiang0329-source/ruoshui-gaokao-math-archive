@@ -1,0 +1,300 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+\setstretch{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[R]{\small 数学（选择性必修第三册）}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\textbf{（#1分）}}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{选择性必修第三册·第八章 成对数据的统计分析 测试卷}
+
+\vspace{0.3cm}
+\normalsize 满分：150分 \quad 考试时间：120分钟
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em]
+
+\item 变量$X$与$Y$的相关系数$r$的取值范围是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $0 \leqslant |r| \leqslant 1$ \quad B. $-1 \leqslant r \leqslant 0$ \quad C. $0 \leqslant r \leqslant 1$ \quad D. $-1 \leqslant |r| \leqslant 1$
+\end{enumerate}
+
+\item 已知回归直线方程为$\hat{y} = 2x - 1$，当$x = 5$时，$y$的预测值为\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $7$ \quad B. $9$ \quad C. $11$ \quad D. $13$
+\end{enumerate}
+
+\item 在回归分析中，残差是指\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 观测值$y_i$与预测值$\hat{y}_i$的差
+\item 观测值$y_i$与均值$\bar{y}$的差
+\item 预测值$\hat{y}_i$与均值$\bar{y}$的差
+\item 以上都不对
+\end{enumerate}
+
+\item 对两个变量$X$和$Y$进行线性回归分析，若相关系数$r = 0.95$，则下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $X$与$Y$之间具有确定的函数关系
+\item $X$与$Y$之间具有很强的线性相关关系
+\item $X$与$Y$之间不具有相关关系
+\item $X$与$Y$之间具有因果关系
+\end{enumerate}
+
+\item 某同学根据一组数据$(x_i, y_i)$（$i=1,2,\ldots,10$）求得回归直线方程为$\hat{y} = \hat{b}x + \hat{a}$，已知$\bar{x} = 3$，$\bar{y} = 5$，$\hat{b} = 1.2$，则$\hat{a} = $\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $1.4$ \quad B. $1.6$ \quad C. $8.6$ \quad D. $11$
+\end{enumerate}
+
+\item 在残差分析中，若残差图中的点分布在一个水平的带状区域内，则说明\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 回归模型拟合效果不好
+\item 回归模型拟合效果较好
+\item 变量之间不具有线性相关关系
+\item 数据存在异常值
+\end{enumerate}
+
+\item 对分类变量$X$和$Y$进行独立性检验，计算得$\chi^2 = 6.635$，则下列结论正确的是\score{5}
+
+（参考数据：$P(\chi^2 \geqslant 3.841) = 0.05$，$P(\chi^2 \geqslant 6.635) = 0.01$）
+
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 在犯错误的概率不超过$0.01$的前提下认为$X$与$Y$有关
+\item 在犯错误的概率不超过$0.05$的前提下认为$X$与$Y$有关
+\item 在犯错误的概率不超过$0.01$的前提下认为$X$与$Y$无关
+\item 不能认为$X$与$Y$有关
+\end{enumerate}
+
+\item 已知变量$X$与$Y$的观测数据如下表：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$X$ & 1 & 2 & 3 & 4 & 5 \\
+\hline
+$Y$ & 2 & 3 & 5 & 6 & 7 \\
+\hline
+\end{tabular}
+\end{center}
+
+则$Y$关于$X$的回归直线方程为\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $\hat{y} = 1.4x + 0.4$ \quad B. $\hat{y} = 1.3x + 0.6$ \quad C. $\hat{y} = 1.4x + 0.6$ \quad D. $\hat{y} = 1.5x + 0.2$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item 下列关于线性回归分析的说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 回归直线一定过样本点的中心$(\bar{x}, \bar{y})$
+\item 回归直线的斜率$\hat{b}$可以为负数
+\item 用最小二乘法求得的回归直线使残差平方和最小
+\item 回归分析可以用来进行预测
+\end{enumerate}
+
+\item 关于相关系数$r$，下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $|r|$越接近1，线性相关程度越强
+\item $|r|$越接近0，线性相关程度越弱
+\item $r > 0$表示正相关，$r < 0$表示负相关
+\item $|r| = 1$表示两个变量之间一定存在因果关系
+\end{enumerate}
+
+\item 对两个分类变量$A$和$B$的观测数据进行独立性检验，则下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 零假设$H_0$：$A$与$B$相互独立
+\item $\chi^2$统计量的值越大，拒绝$H_0$的理由越充分
+\item 当$\chi^2$的观测值大于临界值时，在相应概率下认为$A$与$B$有关
+\item 独立性检验的结果是绝对正确的
+\end{enumerate}
+
+\item 已知变量$X$与$Y$的相关系数$r = -0.89$，则下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $X$与$Y$之间具有线性相关关系
+\item $X$与$Y$之间是负相关
+\item $X$增大时$Y$有减小的趋势
+\item 用回归直线拟合效果一定很好
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item 已知$\bar{x} = 4$，$\bar{y} = 5$，回归直线方程为$\hat{y} = \hat{b}x + 1$，则$\hat{b} = $\hspace{3cm}。\score{5}
+
+\item 某工厂生产的产品合格率$p$与工人工作年限$x$的相关系数$r = 0.97$，这说明两者具有\hspace{2cm}的\hspace{2cm}相关关系。\score{5}
+
+\item 在回归分析中，决定系数$R^2$越接近\hspace{1cm}，说明回归模型的拟合效果越好。\score{5}
+
+\item 已知根据8组数据求得$\hat{b} = 2.5$，$\hat{a} = -3$，当$x = 10$时，$y$的预测值$\hat{y} = $\hspace{3cm}。\score{5}
+
+\end{enumerate}
+
+\newpage
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出必要的文字说明、证明过程或演算步骤。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item（10分）某兴趣小组研究学习时间（单位：小时/周）与数学成绩之间的关系，收集了6名同学的数据如下：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+学习时间$x$ & 10 & 15 & 20 & 25 & 30 & 35 \\
+\hline
+数学成绩$y$ & 60 & 68 & 75 & 82 & 88 & 95 \\
+\hline
+\end{tabular}
+\end{center}
+
+（1）求$y$关于$x$的回归直线方程$\hat{y} = \hat{b}x + \hat{a}$；
+
+（2）预测学习时间为40小时/周的同学的数学成绩。
+
+（参考公式：$\hat{b} = \dfrac{\displaystyle\sum_{i=1}^{n} x_i y_i - n\bar{x}\bar{y}}{\displaystyle\sum_{i=1}^{n} x_i^2 - n\bar{x}^2}$，$\hat{a} = \bar{y} - \hat{b}\bar{x}$）
+
+\item（12分）为研究气温（$x$，单位：$^\circ\text{C}$）与冰淇淋日销量（$y$，单位：箱）的关系，某店收集了如下数据：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+气温$x$ & 20 & 25 & 30 & 35 & 40 \\
+\hline
+销量$y$ & 4 & 6 & 7 & 10 & 13 \\
+\hline
+\end{tabular}
+\end{center}
+
+已知$\sum_{i=1}^{5} x_i^2 = 4350$，$\sum_{i=1}^{5} x_i y_i = 1075$。
+
+（1）求$y$关于$x$的回归直线方程；
+
+（2）当气温为$38^\circ\text{C}$时，预测冰淇淋的日销量；
+
+（3）求相关系数$r$，并判断线性相关程度。（参考数据：$\sum_{i=1}^{5} y_i^2 = 350$）
+
+\item（12分）某研究机构研究了广告投入费用$x$（万元）与产品销售额$y$（万元）之间的关系，收集了8组数据，部分计算结果如下：
+
+$\bar{x} = 5$，$\bar{y} = 8$，$\sum_{i=1}^{8} x_i^2 = 230$，$\sum_{i=1}^{8} x_i y_i = 380$，$\sum_{i=1}^{8} y_i^2 = 620$。
+
+（1）求$y$关于$x$的回归直线方程$\hat{y} = \hat{b}x + \hat{a}$；
+
+（2）计算决定系数$R^2$，并说明回归模型的拟合效果；
+
+（3）当广告投入为8万元时，预测产品销售额。
+
+\item（12分）某校对100名学生的选课意愿进行调查，结果如下：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & 选择物理 & 不选择物理 & 合计 \\
+\hline
+男生 & 30 & 10 & 40 \\
+\hline
+女生 & 20 & 40 & 60 \\
+\hline
+合计 & 50 & 50 & 100 \\
+\hline
+\end{tabular}
+\end{center}
+
+（1）根据以上数据，判断是否有$99\%$的把握认为选课意愿与性别有关；
+
+（2）从选择物理的50名学生中随机抽取3人进行访谈，求至少有1名女生的概率。
+
+（参考公式：$\chi^2 = \dfrac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}$，参考数据：$P(\chi^2 \geqslant 6.635) = 0.01$）
+
+\item（12分）为研究某种植物的生长高度$y$（cm）与施肥量$x$（g）之间的关系，通过实验获得如下数据：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+施肥量$x$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
+生长高度$y$ & 2.0 & 3.5 & 6.0 & 9.5 & 14 & 20 & 27 \\
+\hline
+\end{tabular}
+\end{center}
+
+（1）画出散点图，判断$y$与$x$之间是否具有线性相关关系；
+
+（2）若$y$与$x$的关系更适合用指数型模型$y = ae^{bx}$描述，请通过对数变换将其转化为线性回归问题；
+
+（3）求线性化后的回归方程，并预测当$x = 8$时$y$的值。（$\ln 2 \approx 0.693$，$\ln 3 \approx 1.099$）
+
+\item（12分）某工厂有两条生产线生产同一产品，现从两条生产线的产品中各抽取100件进行检测，结果如下：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & 合格品 & 不合格品 & 合计 \\
+\hline
+生产线A & 90 & 10 & 100 \\
+\hline
+生产线B & 85 & 15 & 100 \\
+\hline
+合计 & 175 & 25 & 200 \\
+\hline
+\end{tabular}
+\end{center}
+
+（1）根据以上数据，判断两条生产线的产品合格率是否有显著差异（$\alpha = 0.05$）；
+
+（2）从生产线B的100件产品中随机抽取5件进行详细检测，用$X$表示抽到的不合格品件数，求$X$的分布列和$E(X)$。
+
+（参考数据：$P(\chi^2 \geqslant 3.841) = 0.05$，$P(\chi^2 \geqslant 6.635) = 0.01$）
+
+\end{enumerate}
+
+\vspace{1cm}
+\begin{center}
+\rule{8cm}{0.4pt}
+
+\vspace{0.3cm}
+\textbf{本试卷结束}
+\end{center}
+
+\end{document}

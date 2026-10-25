@@ -1,0 +1,238 @@
+% ============================================================
+% 测试卷 — 第8章 立体几何初步
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\definecolor{mainblue}{RGB}{41, 98, 168}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{2025-2026学年度·第8章测试卷}}
+\fancyhead[R]{\small\textcolor{mainblue}{数学（必修第二册）}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 第8章\quad 立体几何初步\quad 测试卷}\\[6pt]
+{\normalsize 数学（必修第二册）}\\[4pt]
+{\small 考试时间：120分钟\quad 满分：150分}
+\end{center}
+
+\vspace{2pt}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+题号 & 一 & 二 & 三 & 四 & 总分 \\ \hline
+得分 & & & & & \\ \hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\noindent\textbf{注意事项：}
+\begin{enumerate}[leftmargin=2em]
+  \item 答题前，请在答题卡上填写姓名、班级和考号。
+  \item 选择题请用2B铅笔在答题卡上涂黑对应选项。
+  \item 非选择题请用黑色签字笔在答题卡指定区域作答。
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 一、单项选择题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 一、单项选择题}（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）
+
+\vspace{6pt}
+
+\begin{enumerate}
+\item 正方体的对角线长为 $3\sqrt{3}$，则其棱长为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $3$ \quad \item $\sqrt{3}$ \quad \item $9$ \quad \item $3\sqrt{3}$
+  \end{enumerate}
+
+\item 一个正四棱锥的底面边长为 $4$，侧面与底面所成的二面角为 $60°$，则其侧面积为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $16$ \quad \item $32$ \quad \item $16\sqrt{3}$ \quad \item $32\sqrt{3}$
+  \end{enumerate}
+
+\item 已知直线 $m\subset\alpha$，直线 $n\subset\beta$，若 $\alpha\parallel\beta$，则 $m$ 与 $n$ 的关系是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 平行 \quad \item 异面 \quad \item 平行或异面 \quad \item 相交
+  \end{enumerate}
+
+\item 圆锥的母线长为 $5$，底面半径为 $3$，则圆锥的侧面积为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $15\pi$ \quad \item $20\pi$ \quad \item $24\pi$ \quad \item $30\pi$
+  \end{enumerate}
+
+\item 下列命题正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 若两条直线都与第三条直线垂直，则这两条直线平行
+    \item 若两个平面都与同一条直线平行，则这两个平面平行
+    \item 若直线 $m\perp\alpha$，$n\subset\alpha$，则 $m\perp n$
+    \item 若两个平面有三个公共点，则这两个平面重合
+  \end{enumerate}
+
+\item 正三棱柱 $ABC-A_1B_1C_1$ 的底面边长为 $2$，侧棱长为 $\sqrt{3}$，则其体积为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $\sqrt{3}$ \quad \item $3$ \quad \item $3\sqrt{3}$ \quad \item $6$
+  \end{enumerate}
+
+\item 已知正方体 $ABCD-A_1B_1C_1D_1$ 中，$E$ 为 $BB_1$ 的中点，则 $AE$ 与 $A_1D$ 的位置关系是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 平行 \quad \item 相交 \quad \item 异面 \quad \item 垂直
+  \end{enumerate}
+
+\item 一个圆柱的底面半径为 $2$，高为 $3$，则其全面积为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $20\pi$ \quad \item $24\pi$ \quad \item $16\pi$ \quad \item $28\pi$
+  \end{enumerate}
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 二、多项选择题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 二、多项选择题}（本大题共4小题，每小题5分，共20分。全部选对得5分，部分选对得2分，有选错的得0分。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item 下列关于空间直线与平面的位置关系，正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 若 $m\parallel n$，$n\subset\alpha$，则 $m\parallel\alpha$ 或 $m\subset\alpha$
+    \item 若 $m\perp\alpha$，$m\perp n$，则 $n\parallel\alpha$ 或 $n\subset\alpha$
+    \item 若 $m\subset\alpha$，$n\subset\beta$，$\alpha\perp\beta$，则 $m\perp n$
+    \item 若 $\alpha\perp\gamma$，$\beta\perp\gamma$，则 $\alpha\parallel\beta$ 或 $\alpha$ 与 $\beta$ 相交
+  \end{enumerate}
+
+\item 下列关于线面垂直的判定，正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 若一条直线与平面内两条直线都垂直，则该直线与平面垂直
+    \item 若一条直线与平面内两条相交直线都垂直，则该直线与平面垂直
+    \item 若两条平行直线中一条与平面垂直，则另一条也与该平面垂直
+    \item 垂直于同一平面的两条直线平行
+  \end{enumerate}
+
+\item 关于正棱锥，下列说法正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 底面是正多边形
+    \item 各侧面都是全等的等腰三角形
+    \item 顶点在底面上的射影是底面的中心
+    \item 侧棱都相等
+  \end{enumerate}
+
+\item 已知正方体 $ABCD-A_1B_1C_1D_1$ 的棱长为 $1$，则（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $AC=\sqrt{2}$
+    \item $AC_1=\sqrt{3}$
+    \item $\angle BAC_1=60°$
+    \item 体对角线 $AC_1$ 与底面 $ABCD$ 所成角的正弦值为 $\dfrac{\sqrt{3}}{3}$
+  \end{enumerate}
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 三、填空题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 三、填空题}（本大题共4小题，每小题5分，共20分。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item 一个正方体的棱长为 $2$，则其表面积为 \underline{\hspace{2cm}}，体积为 \underline{\hspace{2cm}}。
+
+\item 圆锥的母线长为 $5$，底面半径为 $3$，则其体积为 \underline{\hspace{2cm}}。
+
+\item 已知正三棱锥的底面边长为 $2$，侧棱长为 $2$，则其高为 \underline{\hspace{2cm}}。
+
+\item 一个球的半径为 $3$，则其表面积为 \underline{\hspace{2cm}}，体积为 \underline{\hspace{2cm}}。
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 四、解答题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 四、解答题}（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item[17.]（本小题10分）\\
+一个正三棱柱 $ABC-A_1B_1C_1$ 的底面边长为 $4$，侧棱长为 $3$。
+\begin{enumerate}[(1)]
+  \item 求该正三棱柱的侧面积；
+  \item 求该正三棱柱的体积。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[18.]（本小题12分）\\
+已知正方体 $ABCD-A_1B_1C_1D_1$ 的棱长为 $2$，$M$ 为 $BB_1$ 的中点，$N$ 为 $A_1B_1$ 的中点。
+\begin{enumerate}[(1)]
+  \item 证明：$MN\parallel$ 平面 $ABCD$；
+  \item 求 $MN$ 的长度。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[19.]（本小题12分）\\
+如图，在正方体 $ABCD-A_1B_1C_1D_1$ 中，棱长为 $2$。
+\begin{enumerate}[(1)]
+  \item 求体对角线 $BD_1$ 的长度；
+  \item 求 $BD_1$ 与底面 $ABCD$ 所成角的正切值。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[20.]（本小题12分）\\
+一个圆锥的底面半径为 $4$，母线长为 $8$。
+\begin{enumerate}[(1)]
+  \item 求圆锥的高；
+  \item 求圆锥的侧面积；
+  \item 求圆锥的体积。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[21.]（本小题12分）\\
+如图，在正方体 $ABCD-A_1B_1C_1D_1$ 中，$E$ 为 $CC_1$ 的中点，棱长为 $2$。
+\begin{enumerate}[(1)]
+  \item 证明：$AC\perp BD_1$；
+  \item 求直线 $AE$ 与平面 $ABCD$ 所成角的正弦值。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[22.]（本小题12分）\\
+如图，在正方体 $ABCD-A_1B_1C_1D_1$ 中，棱长为 $2$，$M$ 为 $BB_1$ 的中点。
+\begin{enumerate}[(1)]
+  \item 证明：$AM\perp$ 平面 $A_1BD$；
+  \item 求点 $A$ 到平面 $A_1BD$ 的距离。
+\end{enumerate}
+
+\vspace{6cm}
+\end{enumerate}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本试卷仅供教学参考}
+\end{center}
+
+\end{document}

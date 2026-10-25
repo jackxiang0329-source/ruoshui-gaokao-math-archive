@@ -1,0 +1,235 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+\setstretch{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{}
+\fancyhead[R]{\small 数学（选择性必修第三册）}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\textbf{（#1分）}}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{选择性必修第三册·第七章 随机变量及其分布 测试卷}
+
+\vspace{0.3cm}
+\normalsize 满分：150分 \quad 考试时间：120分钟
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em]
+
+\item 下列随机变量中，属于离散型随机变量的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 某品牌灯泡的使用寿命
+\item 某路口一天内经过的车辆数
+\item 某人体温测量值
+\item 某城市一天内的降水量
+\end{enumerate}
+
+\item 已知随机变量$X$服从二项分布$B\left(6, \dfrac{1}{3}\right)$，则$P(X=2)=$\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $\dfrac{13}{27}$ \quad B. $\dfrac{80}{243}$ \quad C. $\dfrac{160}{729}$ \quad D. $\dfrac{20}{81}$
+\end{enumerate}
+
+\item 已知随机变量$X$的分布列为
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$X$ & 0 & 1 & 2 \\
+\hline
+$P$ & $0.3$ & $a$ & $0.4$ \\
+\hline
+\end{tabular}
+\end{center}
+
+则$a$和$E(X)$分别为\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $0.3$，$1.1$ \quad B. $0.3$，$0.8$ \quad C. $0.4$，$1.1$ \quad D. $0.4$，$0.8$
+\end{enumerate}
+
+\item 一批产品共10件，其中有3件次品。从中随机抽取2件，用$X$表示取到的次品数，则$X$服从\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 二项分布 \quad B. 超几何分布 \quad C. 正态分布 \quad D. 均匀分布
+\end{enumerate}
+
+\item 已知随机变量$X \sim N(2, \sigma^2)$，且$P(X \leqslant 4) = 0.84$，则$P(X \leqslant 0)=$\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $0.16$ \quad B. $0.32$ \quad C. $0.50$ \quad D. $0.84$
+\end{enumerate}
+
+\item 已知随机变量$X$满足$E(2X+3) = 7$，$D(2X+3) = 16$，则$E(X)$和$D(X)$分别为\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $2$，$4$ \quad B. $2$，$1$ \quad C. $5$，$4$ \quad D. $5$，$1$
+\end{enumerate}
+
+\item 设随机变量$X$的分布列为$P(X=k) = \dfrac{a}{k(k+1)}$，$k=1,2,3$，则$a=$\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $\dfrac{3}{4}$ \quad B. $\dfrac{4}{3}$ \quad C. $1$ \quad D. $\dfrac{2}{3}$
+\end{enumerate}
+
+\item 某人投篮命中率为$p$，连续投篮5次，恰好命中3次的概率为$f(p)$，则$f(p)$取最大值时$p=$\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $\dfrac{1}{5}$ \quad B. $\dfrac{3}{5}$ \quad C. $\dfrac{1}{2}$ \quad D. $\dfrac{2}{3}$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item 已知随机变量$X$的分布列为
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$X$ & 0 & 1 & 2 \\
+\hline
+$P$ & $\dfrac{1}{5}$ & $\dfrac{2}{5}$ & $\dfrac{2}{5}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+则下列计算正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $E(X) = \dfrac{6}{5}$
+\item $D(X) = \dfrac{8}{25}$
+\item $E(3X+1) = \dfrac{23}{5}$
+\item $D(3X+1) = \dfrac{72}{25}$
+\end{enumerate}
+
+\item 关于超几何分布和二项分布，下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item 二项分布要求每次试验的结果相互独立
+\item 超几何分布适用于不放回抽样
+\item 当总体数量很大，抽取数量相对较小时，超几何分布可以用二项分布近似
+\item 二项分布和超几何分布的期望公式相同
+\end{enumerate}
+
+\item 已知随机变量$X \sim N(0, 1)$，$\Phi(x)$是标准正态分布的分布函数，则下列等式正确的是\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $\Phi(0) = 0.5$
+\item $\Phi(-x) = 1 - \Phi(x)$
+\item $P(|X| \leqslant a) = 2\Phi(a) - 1$（其中$a > 0$）
+\item $P(X > a) = \Phi(a)$
+\end{enumerate}
+
+\item 甲、乙两人独立地破译一份密码，甲破译的概率为$\dfrac{1}{3}$，乙破译的概率为$\dfrac{1}{4}$。用$X$表示密码被破译的总人数，则\score{5}
+\begin{enumerate}[label=\Alph*., leftmargin=2em]
+\item $P(X=0) = \dfrac{1}{2}$
+\item $P(X=1) = \dfrac{5}{12}$
+\item $P(X=2) = \dfrac{1}{12}$
+\item $E(X) = \dfrac{7}{12}$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item 已知随机变量$X$的分布列为$P(X=k) = \dfrac{k}{6}$，$k=1,2,3$，则$E(X) = $\hspace{2cm}。\score{5}
+
+\item 设随机变量$X \sim B(4, p)$，若$E(X) = 1.6$，则$p = $\hspace{2cm}，$D(X) = $\hspace{2cm}。\score{5}
+
+\item 已知$X \sim N(5, 4)$，则$P(3 < X < 7) = $\hspace{2cm}。（参考数据：$\Phi(1) = 0.8413$）\score{5}
+
+\item 从含有3件次品的10件产品中不放回地任取4件，用$X$表示取到的次品件数，则$P(X \leqslant 1) = $\hspace{2cm}。\score{5}
+
+\end{enumerate}
+
+\newpage
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出必要的文字说明、证明过程或演算步骤。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=2em, resume]
+
+\item（10分）袋中装有5个红球和3个白球，这些球除颜色外完全相同。从袋中随机摸出3个球，用$X$表示摸到的红球个数。\score{10}
+
+（1）求$X$的分布列；
+
+（2）求$E(X)$和$D(X)$。
+
+\item（12分）某射手每次射击命中目标的概率为$0.8$，现独立射击5次。\score{12}
+
+（1）求恰好命中3次的概率；
+
+（2）求至少命中4次的概率；
+
+（3）求命中次数的期望和方差。
+
+\item（12分）一批产品共20件，其中有4件次品。从中不放回地抽取3件进行检验，用$X$表示抽到的次品件数。\score{12}
+
+（1）求$X$的分布列；
+
+（2）求$E(X)$和$D(X)$；
+
+（3）求$P(X \geqslant 2)$。
+
+\item（12分）某校对学生进行体能测试，已知测试成绩$X$服从正态分布$N(70, 100)$。\score{12}
+
+（1）求$P(60 < X < 80)$；
+
+（2）若规定成绩不低于80分为优秀，求随机抽取1名学生为优秀的概率；
+
+（3）若随机抽取100名学生，用$Y$表示成绩优秀的人数，求$E(Y)$和$D(Y)$。（参考数据：$\Phi(1) = 0.8413$）
+
+\item（12分）设随机变量$X$的分布列为$P(X=k) = \dfrac{C_4^k}{m}$，$k=0,1,2,3,4$。\score{12}
+
+（1）求常数$m$的值；
+
+（2）求$E(X)$和$D(X)$；
+
+（3）设$Y = 2X+1$，求$Y$的分布列和$E(Y)$。
+
+\item（12分）甲、乙、丙三人进行投篮比赛，每人投一次，已知甲命中的概率为$\dfrac{3}{4}$，乙命中的概率为$\dfrac{2}{3}$，丙命中的概率为$\dfrac{1}{2}$，且三人投篮相互独立。用$X$表示命中的总人数。\score{12}
+
+（1）求$X$的分布列；
+
+（2）求$E(X)$和$D(X)$；
+
+（3）求$P(X \geqslant 2)$。
+
+\end{enumerate}
+
+\vspace{1cm}
+\begin{center}
+\rule{8cm}{0.4pt}
+
+\vspace{0.3cm}
+\textbf{本试卷结束}
+\end{center}
+
+\end{document}

@@ -1,0 +1,238 @@
+% ============================================================
+% 测试卷 — 第7章 复数
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\definecolor{mainblue}{RGB}{41, 98, 168}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{2025-2026学年度·第7章测试卷}}
+\fancyhead[R]{\small\textcolor{mainblue}{数学（必修第二册）}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 第7章\quad 复数\quad 测试卷}\\[6pt]
+{\normalsize 数学（必修第二册）}\\[4pt]
+{\small 考试时间：120分钟\quad 满分：150分}
+\end{center}
+
+\vspace{2pt}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+题号 & 一 & 二 & 三 & 四 & 总分 \\ \hline
+得分 & & & & & \\ \hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\noindent\textbf{注意事项：}
+\begin{enumerate}[leftmargin=2em]
+  \item 答题前，请在答题卡上填写姓名、班级和考号。
+  \item 选择题请用2B铅笔在答题卡上涂黑对应选项。
+  \item 非选择题请用黑色签字笔在答题卡指定区域作答。
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 一、单项选择题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 一、单项选择题}（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）
+
+\vspace{6pt}
+
+\begin{enumerate}
+\item 复数 $z=3+4i$ 的虚部为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $3$ \quad \item $4$ \quad \item $4i$ \quad \item $3+4i$
+  \end{enumerate}
+
+\item $i^{2025}$ 的值为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $1$ \quad \item $-1$ \quad \item $i$ \quad \item $-i$
+  \end{enumerate}
+
+\item 复数 $z=1-i$ 的共轭复数 $\bar{z}=$（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $1-i$ \quad \item $-1-i$ \quad \item $-1+i$ \quad \item $1+i$
+  \end{enumerate}
+
+\item 复数 $z=2+i$ 的模 $|z|=$（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $\sqrt{5}$ \quad \item $5$ \quad \item $3$ \quad \item $\sqrt{3}$
+  \end{enumerate}
+
+\item 设 $z=1+i$，则 $z^2=$（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $2$ \quad \item $2i$ \quad \item $-2i$ \quad \item $1+i$
+  \end{enumerate}
+
+\item 复数 $\dfrac{1+i}{1-i}$ 的值为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $1$ \quad \item $i$ \quad \item $-1$ \quad \item $-i$
+  \end{enumerate}
+
+\item 已知复数 $z$ 满足 $z(1+i)=2$，则 $z=$（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $1+i$ \quad \item $1-i$ \quad \item $-1+i$ \quad \item $-1-i$
+  \end{enumerate}
+
+\item 若复数 $z=a+bi$（$a,b\in\mathbb{R}$）在复平面上对应的点位于第四象限，则（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $a>0,b>0$ \quad \item $a>0,b<0$ \quad \item $a<0,b>0$ \quad \item $a<0,b<0$
+  \end{enumerate}
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 二、多项选择题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 二、多项选择题}（本大题共4小题，每小题5分，共20分。全部选对得5分，部分选对得2分，有选错的得0分。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item 设 $z=\sqrt{3}+i$，则下列结论正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $|z|=2$
+    \item $\bar{z}=\sqrt{3}-i$
+    \item $z^2=2+2\sqrt{3}\,i$
+    \item $z\cdot\bar{z}=4$
+  \end{enumerate}
+
+\item 下列关于复数的说法正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 实数集是复数集的真子集
+    \item 任意两个复数都能比较大小
+    \item 若 $z^2\geqslant 0$，则 $z$ 一定是实数
+    \item $|z_1\cdot z_2|=|z_1|\cdot|z_2|$
+  \end{enumerate}
+
+\item 已知 $i$ 为虚数单位，则下列等式正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $i^2=-1$
+    \item $(1+i)^2=2i$
+    \item $\dfrac{1}{i}=-i$
+    \item $(1+i)(1-i)=2$
+  \end{enumerate}
+
+\item 已知复数 $z_1=1+2i$，$z_2=3-i$，则（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $z_1+z_2=4+i$
+    \item $z_1\cdot z_2=5+5i$
+    \item $|z_1|=\sqrt{5}$
+    \item $\overline{z_1+z_2}=4-i$
+  \end{enumerate}
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 三、填空题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 三、填空题}（本大题共4小题，每小题5分，共20分。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item $i^3=$ \underline{\hspace{2cm}}，$i^4=$ \underline{\hspace{2cm}}。
+
+\item 复数 $z=5i$ 的模 $|z|=$ \underline{\hspace{2cm}}。
+
+\item 已知 $z=3-4i$，则 $z+\bar{z}=$ \underline{\hspace{2cm}}，$z\cdot\bar{z}=$ \underline{\hspace{2cm}}。
+
+\item 复数 $z=\dfrac{3+i}{1-i}$ 化简后为 \underline{\hspace{2cm}}。
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 四、解答题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 四、解答题}（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item[17.]（本小题10分）\\
+已知复数 $z=1+i$。
+\begin{enumerate}[(1)]
+  \item 求 $z^2$ 及 $z^3$；
+  \item 求 $z\cdot\bar{z}$。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[18.]（本小题12分）\\
+已知复数 $z$ 满足 $|z|=\sqrt{10}$，且 $z^2$ 的虚部为 $6$。
+\begin{enumerate}[(1)]
+  \item 设 $z=a+bi$（$a,b\in\mathbb{R}$），求 $a$ 与 $b$ 的关系；
+  \item 求复数 $z$。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[19.]（本小题12分）\\
+计算下列各式：
+\begin{enumerate}[(1)]
+  \item $(2+3i)+(4-i)$；
+  \item $(1+2i)(3-i)$；
+  \item $\dfrac{5}{1+2i}$。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[20.]（本小题12分）\\
+已知复数 $z=(1+i)(2-i)$。
+\begin{enumerate}[(1)]
+  \item 将 $z$ 化为 $a+bi$（$a,b\in\mathbb{R}$）的形式；
+  \item 求 $|z|$ 及 $\bar{z}$；
+  \item 求 $z$ 在复平面上对应的点的坐标。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[21.]（本小题12分）\\
+设复数 $z_1=1+2i$，$z_2=3-4i$。
+\begin{enumerate}[(1)]
+  \item 求 $z_1\cdot z_2$；
+  \item 求 $\dfrac{z_1}{z_2}$；
+  \item 若 $z_1\cdot z=z_2$，求复数 $z$。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[22.]（本小题12分）\\
+已知复数 $z=(\sqrt{3}+i)^2$。
+\begin{enumerate}[(1)]
+  \item 将 $z$ 化为 $a+bi$ 的形式；
+  \item 求 $|z|$ 和 $\arg z$（辐角主值）；
+  \item 证明：$z+\dfrac{4}{z}$ 为实数。
+\end{enumerate}
+
+\vspace{6cm}
+\end{enumerate}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本试卷仅供教学参考}
+\end{center}
+
+\end{document}
