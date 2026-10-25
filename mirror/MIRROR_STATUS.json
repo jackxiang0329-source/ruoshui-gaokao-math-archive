@@ -3,28 +3,28 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 1993,
-  "missing": 5229,
+  "verified": 2007,
+  "missing": 5215,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
-      "verified": 172,
-      "missing": 201,
+      "verified": 178,
+      "missing": 195,
       "complete": false
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1019,
-      "missing": 4527,
+      "verified": 1023,
+      "missing": 4523,
       "complete": false
     },
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 287,
-      "missing": 495,
+      "verified": 291,
+      "missing": 491,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25: independently compare main@9bd7183eb106e815399e156c273fdd368fa7d37c with all 11 pinned upstream recursive Git trees: 1993/7222 SHA+mode exact, 5229 missing/unmatched; remaining upstream bytes 567216881; 6/11 complete. New strict matches relative to main@97d236947c30b45c979d261bbb16e055c8bfa92e: 126 files (40 PNG, 86 TeX), 669703 source bytes. This does not certify image quality, math, licensing, compilation or CI.",
-  "remaining_bytes": 567216881,
+  "note": "2026-10-25 independent SHA+mode Git tree audit, main@c6580f15a0cacd0025f6087de4e671541ba297d1: 2007/7222 strict; remaining 5215 blobs / 566522251 original bytes; 6/11 complete. Added 14 source-exact PDFs and figure TeX in two commits; see mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json. This inventory audit is separate from unverified mathematics, original-paper authenticity, compilation, image inspection and rights. Earlier 126-blob batch remains documented in latest_direct_import.",
+  "remaining_bytes": 566522251,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -157,5 +157,19 @@
       },
       "sha_and_mode_mismatches": 0
     }
-  ]
+  ],
+  "latest_incremental_import": {
+    "manifest": "mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json",
+    "count": 14,
+    "bytes": 694630,
+    "source_count": 3,
+    "baseline_verified": 1993,
+    "after_verified": 2007,
+    "commits": [
+      "0967ec93616050d13182bc88ad66b0f4f9f8c7f4",
+      "d0d8195f5e63940375b4ca29e0a2d25f967d002a"
+    ],
+    "inventory_commit": "c6580f15a0cacd0025f6087de4e671541ba297d1"
+  },
+  "latest_inventory_audit_commit": "c6580f15a0cacd0025f6087de4e671541ba297d1"
 }
