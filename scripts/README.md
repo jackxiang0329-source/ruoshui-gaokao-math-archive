@@ -23,3 +23,7 @@ python3 -m unittest discover -s tests -v
 此检查读取 `mirror/IMPORT_BATCH_*.json`，对每条记录分别比对基线提交、导入完成时提交和当前 HEAD 的 **Git Blob SHA、文件模式与原始对象大小**；并独立重算文件数、分组字节数及 `mirror/MIRROR_STATUS.json` 的汇总算术。若历史文件被修改、缺失，或导入数被虚报，命令以非零状态退出。CI 使用 `fetch-depth: 0` 保留所需历史提交，并对 `mirror/**` 改动触发验收。
 
 **范围限制：**它只校验既有导入清单的 Git 对象及统计一致性，不能独立证明剩余上游文件总数、数学答案正确、图片可读、PDF 编译成功或再分发合法；这些仍需专门审核。
+
+## 审校 PDF 的构建清单完整性
+
+运行 python3 scripts/check_reviewed_pdf_manifest.py 可在不安装 TeX 的情况下，对比 derivative/reviewed 目录全部 .tex 与 .github/workflows/build-reviewed-pdfs.yml 所列编译根文件；若漏编、多写或重复条目就返回非零退出码。它同时接入离线 QA 和手动 PDF 构建流程。此脚本不替代 XeLaTeX 实际编译及渲染后的页面质检。
