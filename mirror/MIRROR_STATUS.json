@@ -3,28 +3,28 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 2007,
-  "missing": 5215,
+  "verified": 2095,
+  "missing": 5127,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
-      "verified": 178,
-      "missing": 195,
+      "verified": 190,
+      "missing": 183,
       "complete": false
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1023,
-      "missing": 4523,
+      "verified": 1087,
+      "missing": 4459,
       "complete": false
     },
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 291,
-      "missing": 491,
+      "verified": 303,
+      "missing": 479,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25 independent SHA+mode Git tree audit, main@c6580f15a0cacd0025f6087de4e671541ba297d1: 2007/7222 strict; remaining 5215 blobs / 566522251 original bytes; 6/11 complete. Added 14 source-exact PDFs and figure TeX in two commits; see mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json. This inventory audit is separate from unverified mathematics, original-paper authenticity, compilation, image inspection and rights. Earlier 126-blob batch remains documented in latest_direct_import.",
-  "remaining_bytes": 566522251,
+  "note": "2026-10-25: independently compared all 11 fixed upstream recursive Git trees against main@6e0c3f2c7dec775519341fab98db756da2661323. SHA+mode exact 2095/7222; remaining 5127 and 564753980 original Git Blob bytes; 6 of 11 upstream sources complete. Since main@20129a5dbc6d926386be3775f4e2addb0a2d6c9e, 88 new strict matches: 12 original lecture PDFs, 12 historical exam PDFs, 64 exact TeX figure sources, total 1768271 bytes. See mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json. Earlier batch bookkeeping latest_direct_import and audited_commit remain historical for independent archived batch manifest checking; this inventory snapshot is the latest overall.",
+  "remaining_bytes": 564753980,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -159,6 +159,21 @@
     }
   ],
   "latest_incremental_import": {
+    "manifest": "mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json",
+    "baseline_commit": "20129a5dbc6d926386be3775f4e2addb0a2d6c9e",
+    "mirror_commit": "6e0c3f2c7dec775519341fab98db756da2661323",
+    "new_verified": 88,
+    "new_source_bytes": 1768271,
+    "by_source": {
+      "math-lecture-notes": 12,
+      "gaokao-math-problems-compilation": 64,
+      "gaokaomath": 12
+    },
+    "prior_verified": 2007,
+    "post_verified": 2095
+  },
+  "latest_inventory_audit_commit": "f2bae727cbf2544ba1ab52f96de933e127ece34c",
+  "prior_incremental_import": {
     "manifest": "mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json",
     "count": 14,
     "bytes": 694630,
@@ -170,6 +185,5 @@
       "d0d8195f5e63940375b4ca29e0a2d25f967d002a"
     ],
     "inventory_commit": "c6580f15a0cacd0025f6087de4e671541ba297d1"
-  },
-  "latest_inventory_audit_commit": "c6580f15a0cacd0025f6087de4e671541ba297d1"
+  }
 }
