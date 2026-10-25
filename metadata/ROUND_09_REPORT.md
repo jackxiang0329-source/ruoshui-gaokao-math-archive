@@ -25,3 +25,7 @@
 [GitHub Actions 40195144369](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/actions/runs/40195144369) 在无 Runner steps 与可用 job 日志的状态下失败，不能当作在线 CI 成功，也不能归因于本轮的 Python 质检代码。分支保持草稿 PR，未合并主分支。
 
 数学核验不等于原卷影像真实性鉴定；单份 TeX 通过编译不代表全部资料通过编译；Git SHA 匹配不代表题目版权和第三方再分发权利已核验。
+
+## 四、手动 PDF 构建工作流修复
+
+核对当前 Git 树发现 14 份独立证明 TeX，而原有手动构建工作流只列出 12 份，漏掉 2010 陕西第 23 题与 2023 北京第 20 题；同时工作流会检查全部 TeX 都存在对应 PDF，故两处遗漏构成实际的预期失败隐患。本轮补全编译根文件为 14/14；新增 scripts/check_reviewed_pdf_manifest.py 检测漏项、多项和重复项，且在离线 QA 与正式 PDF 构建前运行。新增 4 组回归测试，结合此前 6 组镜像测试，本地共 **10/10 通过**。该修复尚需 Runner 正常启动才能在线实测。
