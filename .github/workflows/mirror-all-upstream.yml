@@ -42,6 +42,8 @@ jobs:
         shell: bash
         run: |
           python3 -c "import json; x=json.load(open('sources.json')); assert len(x['repositories']) == 11"
+      - name: Mirror verifier regression tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Install tools
         shell: bash
         run: |

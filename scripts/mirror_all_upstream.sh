@@ -55,6 +55,7 @@ while IFS=$'\t' read -r id repo branch pin; do
   mkdir -p "$dest"
   rsync -a --delete --exclude='.git' "$tmp/project/" "$dest/"
   git add -f -A -- "$dest"
+  python3 scripts/verify_pinned_mirror.py --source-id "$id" --upstream-dir "$tmp/project"
   if ! git diff --cached --quiet; then
     git commit -m "mirror: import $id at $pin [skip ci]"
     git push origin HEAD:main

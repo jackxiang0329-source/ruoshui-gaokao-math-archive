@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "method": "Compare mirror/<id>/path Git blob SHA against fixed upstream commit tree",
   "full": 6,
   "expected": 7222,
-  "verified": 719,
+  "verified": 751,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -22,8 +22,8 @@
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 125,
-      "missing": 657,
+      "verified": 157,
+      "missing": 625,
       "complete": false
     },
     {
@@ -88,5 +88,5 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "Compared main Git tree to the eleven pinned upstream trees, SHA for SHA. 2016 PDF entries blocked by safety check remain missing. No math correctness implied."
+  "note": "Git SHA checked against eleven pinned upstream trees. 2015 ordinary 31 PDFs and 2015 Shanghai spring 1 PDF newly imported. 2016 four PDFs remain missing; no mathematical review implied."
 }
