@@ -1,0 +1,543 @@
+% ============================================================
+% 讲义 — 人教版高二选择性必修第二册 第4章 数列
+% 编译命令：xelatex -interaction=nonstopmode 高二选必2_第4章_数列.tex
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% 颜色定义
+\definecolor{mainblue}{RGB}{41, 98, 168}
+\definecolor{lightblue}{RGB}{230, 240, 255}
+\definecolor{tipgreen}{RGB}{34, 139, 87}
+\definecolor{lightgreen}{RGB}{235, 250, 240}
+\definecolor{warnred}{RGB}{200, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+\definecolor{examorange}{RGB}{210, 120, 20}
+\definecolor{lightorange}{RGB}{255, 248, 235}
+\definecolor{apppurple}{RGB}{120, 60, 170}
+\definecolor{lightpurple}{RGB}{245, 238, 255}
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{\textbf{人教版高二选必2 · 第4章 数列}}}
+\fancyhead[R]{\small\textcolor{mainblue}{数列讲义}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+% tcolorbox 样式
+\newtcolorbox{knowledgebox}[1][]{%
+  colback=lightblue, colframe=mainblue,
+  fonttitle=\bfseries\large, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{tipbox}[1][]{%
+  colback=lightgreen, colframe=tipgreen,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{warnbox}[1][]{%
+  colback=lightred, colframe=warnred,
+  fonttitle=\bfseries, title=#1,
+  arc=2mm, boxrule=0.6pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt
+}
+
+\newtcolorbox{examplebox}[1][]{%
+  colback=lightorange, colframe=examorange,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\newtcolorbox{appbox}[1][]{%
+  colback=lightpurple, colframe=apppurple,
+  fonttitle=\bfseries, title=#1,
+  arc=3mm, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\begin{document}
+
+% ============ 标题页 ============
+\begin{center}
+{\Huge\bfseries\textcolor{mainblue}{第4章\quad 数列}}\\[12pt]
+{\Large\textcolor{gray}{讲\quad 义}}\\[8pt]
+\rule{0.6\textwidth}{1pt}\\[8pt]
+{\normalsize 适用：人教版\quad 高二选择性必修第二册\quad |\quad 课时：4课时}
+\end{center}
+\vspace{10pt}
+
+% ============================================================
+%  第一部分：知识点讲解
+% ============================================================
+\section*{\textcolor{mainblue}{一、知识点讲解}}
+
+% ==================== 4.1 数列的概念 ====================
+\subsection*{4.1\quad 数列的概念与表示}
+
+\begin{knowledgebox}[定义]
+按照\textbf{一定顺序}排列的一列数称为\textbf{数列}，记作 $\{a_n\}$。数列中的每一个数叫做这个数列的\textbf{项}，第 $n$ 项 $a_n$ 称为\textbf{通项}。
+\end{knowledgebox}
+
+\medskip
+
+\noindent\textbf{数列的表示方法：}
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{通项公式法：}用 $a_n = f(n)$（$n \in \mathbb{N}^*$）表示第 $n$ 项与序号 $n$ 的关系。
+  \item \textbf{递推公式法：}用初始项及递推关系表示，如 $a_1 = 1,\ a_{n+1} = 2a_n + 1$。
+  \item \textbf{列表法、图象法。}
+\end{enumerate}
+
+\begin{tipbox}[数列与函数的关系]
+数列 $\{a_n\}$ 可以看作定义在正整数集 $\mathbb{N}^*$（或其有限子集）上的函数 $a_n = f(n)$，其图象是一系列离散的点。
+\end{tipbox}
+
+\noindent\textbf{数列的分类：}
+\begin{itemize}
+  \item 按项数：\textbf{有穷数列}（项数有限）与\textbf{无穷数列}（项数无限）。
+  \item 按增减性：\textbf{递增数列}、\textbf{递减数列}、\textbf{常数列}、\textbf{摆动数列}。
+\end{itemize}
+
+\noindent\textbf{前 $n$ 项和：}记 $S_n = a_1 + a_2 + \cdots + a_n$，则
+\[
+  a_n = \begin{cases} S_1, & n = 1,\\[4pt] S_n - S_{n-1}, & n \geqslant 2. \end{cases}
+\]
+
+% ==================== 4.2 等差数列 ====================
+\subsection*{4.2\quad 等差数列}
+
+\begin{knowledgebox}[定义]
+如果数列 $\{a_n\}$ 从第 2 项起，每一项与前一项之差等于同一个常数 $d$，即
+\[
+  a_{n+1} - a_n = d \quad (n \in \mathbb{N}^*),
+\]
+则称 $\{a_n\}$ 为\textbf{等差数列}，$d$ 为\textbf{公差}。
+\end{knowledgebox}
+
+\medskip
+
+\noindent\textbf{通项公式：}
+\[
+  a_n = a_1 + (n-1)d.
+\]
+
+\noindent\textbf{前 $n$ 项和：}
+\[
+  S_n = \frac{n(a_1 + a_n)}{2} = na_1 + \frac{n(n-1)}{2}d.
+\]
+
+\begin{tipbox}[等差数列的性质]
+设 $\{a_n\}$ 是公差为 $d$ 的等差数列，则：
+\begin{enumerate}[label=(\arabic*)]
+  \item $a_n = a_m + (n - m)d$（广义通项公式）。
+  \item 若 $m + n = p + q$，则 $a_m + a_n = a_p + a_q$。
+  \item $S_n,\ S_{2n} - S_n,\ S_{3n} - S_{2n}$ 也成等差数列。
+  \item 前 $n$ 项和 $S_n$ 是关于 $n$ 的\textbf{二次函数}（$d \neq 0$ 时）或一次函数（$d = 0$ 时），且常数项为 $0$。即 $S_n = An^2 + Bn$。
+\end{enumerate}
+\end{tipbox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}
+  \item 等差数列前 $n$ 项和公式 $S_n = \dfrac{n(a_1 + a_n)}{2}$ 要求项数为 $n$，不要漏乘 $\dfrac{n}{2}$。
+  \item 利用 $a_n = S_n - S_{n-1}$ 时，仅当 $n \geqslant 2$ 时成立，$n = 1$ 需单独验证。
+  \item 等差中项：$a,\ A,\ b$ 成等差数列 $\Longleftrightarrow$ $A = \dfrac{a+b}{2}$。
+\end{itemize}
+\end{warnbox}
+
+% ==================== 4.3 等比数列 ====================
+\subsection*{4.3\quad 等比数列}
+
+\begin{knowledgebox}[定义]
+如果数列 $\{a_n\}$ 从第 2 项起，每一项与前一项之比等于同一个常数 $q$（$q \neq 0$），即
+\[
+  \frac{a_{n+1}}{a_n} = q \quad (n \in \mathbb{N}^*),
+\]
+则称 $\{a_n\}$ 为\textbf{等比数列}，$q$ 为\textbf{公比}。
+\end{knowledgebox}
+
+\medskip
+
+\noindent\textbf{通项公式：}
+\[
+  a_n = a_1 q^{n-1}.
+\]
+
+\noindent\textbf{前 $n$ 项和：}
+\[
+  S_n = \begin{cases} \dfrac{a_1(1 - q^n)}{1 - q} = \dfrac{a_1 - a_n q}{1 - q}, & q \neq 1,\\[8pt] na_1, & q = 1. \end{cases}
+\]
+
+\begin{tipbox}[等比数列的性质]
+设 $\{a_n\}$ 是公比为 $q$ 的等比数列，则：
+\begin{enumerate}[label=(\arabic*)]
+  \item $a_n = a_m \cdot q^{n - m}$。
+  \item 若 $m + n = p + q$，则 $a_m \cdot a_n = a_p \cdot a_q$。
+  \item $S_n,\ S_{2n} - S_n,\ S_{3n} - S_{2n}$ 也成等比数列（公比为 $q^n$，前提是各项之和不为零）。
+  \item 等比中项：$a,\ G,\ b$ 成等比数列 $\Longleftrightarrow$ $G^2 = ab$（$ab > 0$）。
+\end{enumerate}
+\end{tipbox}
+
+\begin{warnbox}[易错提醒]
+\begin{itemize}
+  \item 等比数列各项均不为零，公比 $q \neq 0$。
+  \item 使用前 $n$ 项和公式时必须先讨论 $q = 1$ 和 $q \neq 1$ 两种情况。
+  \item $a_n = S_n - S_{n-1}$ 对 $q \neq 1$ 在 $n \geqslant 2$ 成立，$n=1$ 须单独验证。
+\end{itemize}
+\end{warnbox}
+
+% ==================== 4.4 数列求和方法 ====================
+\subsection*{4.4\quad 数列求和方法}
+
+\begin{knowledgebox}[裂项相消法]
+将通项拆为两项之差，使求和时中间项互相抵消。常见裂项公式：
+\begin{enumerate}[label=(\arabic*)]
+  \item $\dfrac{1}{n(n+1)} = \dfrac{1}{n} - \dfrac{1}{n+1}$
+  \item $\dfrac{1}{n(n+k)} = \dfrac{1}{k}\!\left(\dfrac{1}{n} - \dfrac{1}{n+k}\right)$
+  \item $\dfrac{1}{\sqrt{n} + \sqrt{n+1}} = \sqrt{n+1} - \sqrt{n}$
+  \item $\dfrac{1}{(2n-1)(2n+1)} = \dfrac{1}{2}\!\left(\dfrac{1}{2n-1} - \dfrac{1}{2n+1}\right)$
+\end{enumerate}
+\end{knowledgebox}
+
+\begin{knowledgebox}[错位相减法]
+设 $\{a_n\}$ 为等差数列，$\{b_n\}$ 为等比数列，求 $\displaystyle\sum_{k=1}^{n} a_k b_k$。
+
+令 $T_n = a_1 b_1 + a_2 b_2 + \cdots + a_n b_n$，则
+\[
+  q T_n = a_1 b_2 + a_2 b_3 + \cdots + a_n b_{n+1},
+\]
+两式相减，化为等差数列与等比数列的混合求和。
+\end{knowledgebox}
+
+\begin{knowledgebox}[其他常用求和方法]
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{公式法：}直接利用等差/等比数列求和公式。
+  \item \textbf{分组求和法：}将通项拆分为可分别求和的几部分。
+  \item \textbf{倒序相加法：}适用于满足 $a_k + a_{n+1-k}$ 为常数的数列。
+\end{enumerate}
+\end{knowledgebox}
+
+% ============================================================
+%  第二部分：例题精讲
+% ============================================================
+\section*{\textcolor{examorange}{二、例题精讲}}
+
+% ---------- 例题 1 ----------
+\begin{examplebox}[【例题1】等差数列基本运算]
+已知等差数列 $\{a_n\}$ 中，$a_3 = 7$，$a_7 = 19$，求通项公式 $a_n$ 及前 $n$ 项和 $S_n$。
+\end{examplebox}
+
+\noindent\textbf{解：}设首项为 $a_1$，公差为 $d$，则
+\[
+  \begin{cases} a_1 + 2d = 7,\\ a_1 + 6d = 19. \end{cases}
+\]
+两式相减得 $4d = 12$，所以 $d = 3$，代入得 $a_1 = 1$。
+
+故通项公式为 $a_n = 1 + (n-1) \times 3 = 3n - 2$。
+
+前 $n$ 项和 $S_n = \dfrac{n(1 + 3n - 2)}{2} = \dfrac{n(3n-1)}{2}$。
+
+% ---------- 例题 2 ----------
+\begin{examplebox}[【例题2】等比数列基本运算]
+已知等比数列 $\{a_n\}$ 中，$a_1 = 2$，$a_4 = 54$，求公比 $q$ 及前 $n$ 项和 $S_n$。
+\end{examplebox}
+
+\noindent\textbf{解：}由 $a_4 = a_1 q^3 = 2q^3 = 54$，得 $q^3 = 27$，所以 $q = 3$。
+
+前 $n$ 项和（$q \neq 1$）：
+\[
+  S_n = \frac{a_1(1 - q^n)}{1 - q} = \frac{2(1 - 3^n)}{1 - 3} = \frac{2(3^n - 1)}{2} = 3^n - 1.
+\]
+
+% ---------- 例题 3 ----------
+\begin{examplebox}[【例题3】等差数列的性质应用]
+等差数列 $\{a_n\}$ 中，已知 $a_3 + a_5 + a_7 = 12$，求 $S_9$。
+\end{examplebox}
+
+\noindent\textbf{解：}由等差数列性质，$a_3 + a_7 = 2a_5$，故 $2a_5 + a_5 = 3a_5 = 12$，得 $a_5 = 4$。
+
+又 $S_9 = \dfrac{9(a_1 + a_9)}{2} = \dfrac{9 \cdot 2a_5}{2} = 9a_5 = 36$。
+
+\begin{tipbox}[方法总结]
+等差数列中若 $m + n = p + q$，则 $a_m + a_n = a_p + a_q$。特别地，$a_1 + a_{2k-1} = 2a_k$，可简化计算。
+\end{tipbox}
+
+% ---------- 例题 4 ----------
+\begin{examplebox}[【例题4】等比数列性质应用]
+等比数列 $\{a_n\}$ 中，$a_2 a_8 = 16$，且各项为正数，求 $a_5$。
+\end{examplebox}
+
+\noindent\textbf{解：}由等比数列性质，$a_2 \cdot a_8 = a_5^2$（因为 $2 + 8 = 5 + 5$）。
+
+故 $a_5^2 = 16$，又 $a_n > 0$，所以 $a_5 = 4$。
+
+% ---------- 例题 5 ----------
+\begin{examplebox}[【例题5】裂项求和]
+求和 $\displaystyle T_n = \frac{1}{1 \times 2} + \frac{1}{2 \times 3} + \frac{1}{3 \times 4} + \cdots + \frac{1}{n(n+1)}$。
+\end{examplebox}
+
+\noindent\textbf{解：}由裂项公式 $\dfrac{1}{k(k+1)} = \dfrac{1}{k} - \dfrac{1}{k+1}$，得
+\begin{align*}
+  T_n &= \left(\frac{1}{1} - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{n} - \frac{1}{n+1}\right)\\[4pt]
+      &= 1 - \frac{1}{n+1} = \frac{n}{n+1}.
+\end{align*}
+
+\begin{tipbox}[方法总结]
+裂项相消法的关键是将通项写成 $b_k - b_{k+1}$ 的形式，首尾相消后只剩下 $b_1 - b_{n+1}$。
+\end{tipbox}
+
+% ---------- 例题 6 ----------
+\begin{examplebox}[【例题6】错位相减法]
+求和 $T_n = 1 \times 2 + 2 \times 2^2 + 3 \times 2^3 + \cdots + n \cdot 2^n$。
+\end{examplebox}
+
+\noindent\textbf{解：}$T_n = \displaystyle\sum_{k=1}^{n} k \cdot 2^k$，令 $a_k = k$（等差），$b_k = 2^k$（等比）。
+
+\begin{align*}
+  T_n &= 1 \cdot 2 + 2 \cdot 2^2 + 3 \cdot 2^3 + \cdots + n \cdot 2^n,\\
+  2T_n &= \phantom{1 \cdot 2 + } 1 \cdot 2^2 + 2 \cdot 2^3 + \cdots + (n-1) \cdot 2^n + n \cdot 2^{n+1}.
+\end{align*}
+
+两式相减：
+\[
+  -T_n = 2 + 2^2 + 2^3 + \cdots + 2^n - n \cdot 2^{n+1} = \frac{2(2^n - 1)}{2 - 1} - n \cdot 2^{n+1} = 2^{n+1} - 2 - n \cdot 2^{n+1}.
+\]
+
+故 $T_n = (n-1) \cdot 2^{n+1} + 2$。
+
+% ---------- 例题 7 ----------
+\begin{examplebox}[【例题7】递推数列求通项]
+已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = 2a_n + 1$，求通项公式 $a_n$。
+\end{examplebox}
+
+\noindent\textbf{解：}构造辅助数列。设 $a_{n+1} + \lambda = 2(a_n + \lambda)$，则 $a_{n+1} = 2a_n + \lambda$。
+
+与已知递推式对比，$\lambda = 1$。令 $b_n = a_n + 1$，则 $b_{n+1} = 2b_n$，$b_1 = a_1 + 1 = 2$。
+
+故 $\{b_n\}$ 是首项为 $2$、公比为 $2$ 的等比数列，$b_n = 2^n$。
+
+因此 $a_n = b_n - 1 = 2^n - 1$。
+
+\begin{tipbox}[方法总结]
+形如 $a_{n+1} = pa_n + q$（$p \neq 1$）的递推式，令 $a_n + \dfrac{q}{p-1}$ 可化为等比数列。
+\end{tipbox}
+
+% ---------- 例题 8 ----------
+\begin{examplebox}[【例题8】$S_n$ 与 $a_n$ 的关系]
+已知数列 $\{a_n\}$ 的前 $n$ 项和 $S_n = 3n^2 + 2n$，求通项公式 $a_n$。
+\end{examplebox}
+
+\noindent\textbf{解：}当 $n = 1$ 时，$a_1 = S_1 = 3 \times 1 + 2 = 5$。
+
+当 $n \geqslant 2$ 时，
+\[
+  a_n = S_n - S_{n-1} = 3n^2 + 2n - [3(n-1)^2 + 2(n-1)] = 3n^2 + 2n - 3n^2 + 6n - 3 - 2n + 2 = 6n - 1.
+\]
+
+验证 $n = 1$：$a_1 = 6 \times 1 - 1 = 5 = S_1$，成立。
+
+故 $a_n = 6n - 1$。
+
+\begin{warnbox}[易错提醒]
+利用 $a_n = S_n - S_{n-1}$ 时，\textbf{必须}先算 $a_1 = S_1$，再用 $n \geqslant 2$ 的公式，最后验证 $n = 1$ 是否包含在内。若不包含，需分段写。
+\end{warnbox}
+
+% ---------- 例题 9 ----------
+\begin{examplebox}[【例题9】等差数列前 $n$ 项和的最值]
+等差数列 $\{a_n\}$ 中，$a_1 = 20$，$d = -2$，求 $S_n$ 的最大值及对应的 $n$。
+\end{examplebox}
+
+\noindent\textbf{解：}$a_n = 20 + (n-1)(-2) = 22 - 2n$。
+
+令 $a_n \geqslant 0$，即 $22 - 2n \geqslant 0$，得 $n \leqslant 11$。故 $a_{11} = 0$，$a_{12} = -2 < 0$。
+
+$S_n$ 在 $n = 10$ 或 $n = 11$ 时取最大值：$S_{10} = S_{11} = \dfrac{11 \times (20 + 0)}{2} = 110$。
+
+故 $S_n$ 的最大值为 $110$，在 $n = 10$ 或 $n = 11$ 时取得。
+
+% ============================================================
+%  第三部分：应用题
+% ============================================================
+\section*{\textcolor{apppurple}{三、应用题}}
+
+% ---------- 应用 1 ----------
+\begin{appbox}[【应用1】复利问题]
+小明将 $10000$ 元存入银行，年利率为 $4\%$，按复利计算（每年计息一次）。问：
+\begin{enumerate}[label=(\arabic*)]
+  \item $n$ 年后本息合计多少元？
+  \item 至少存多少年，本息合计才能超过 $20000$ 元？（$\lg 2 \approx 0.3010$，$\lg 1.04 \approx 0.01703$）
+\end{enumerate}
+\end{appbox}
+
+\noindent\textbf{解：}
+
+$(1)$ 每年后的本息是前一年的 $1.04$ 倍，故 $n$ 年后为
+\[
+  a_n = 10000 \times 1.04^n \text{（元）}.
+\]
+
+$(2)$ 需要 $10000 \times 1.04^n > 20000$，即 $1.04^n > 2$。
+
+两边取常用对数：$n \lg 1.04 > \lg 2$，故
+\[
+  n > \frac{\lg 2}{\lg 1.04} \approx \frac{0.3010}{0.01703} \approx 17.67.
+\]
+
+因此至少存 $\mathbf{18}$ 年，本息合计才能超过 $20000$ 元。
+
+% ---------- 应用 2 ----------
+\begin{appbox}[【应用2】人口增长问题]
+某城市现有人口 $500$ 万，若每年自然增长率为 $1.5\%$，经过 $n$ 年后该城市人口为 $P_n$。
+\begin{enumerate}[label=(\arabic*)]
+  \item 写出 $P_n$ 的表达式。
+  \item 经过多少年后，人口超过 $600$ 万？（$\lg 6 \approx 0.7782$，$\lg 5 \approx 0.6990$，$\lg 1.015 \approx 0.006466$）
+\end{enumerate}
+\end{appbox}
+
+\noindent\textbf{解：}
+
+$(1)$ $P_n = 500 \times 1.015^n$（万人）。
+
+$(2)$ $500 \times 1.015^n > 600$，即 $1.015^n > 1.2$。
+
+$n > \dfrac{\lg 1.2}{\lg 1.015} = \dfrac{\lg 6 - \lg 5}{\lg 1.015} \approx \dfrac{0.7782 - 0.6990}{0.006466} \approx \dfrac{0.0792}{0.006466} \approx 12.25$。
+
+因此经过 $\mathbf{13}$ 年后人口超过 $600$ 万。
+
+% ---------- 应用 3 ----------
+\begin{appbox}[【应用3】阶梯降价促销]
+某商品原价 $200$ 元，商家进行阶梯降价促销：第一天降价 $20\%$，第二天在第一天基础上再降价 $20\%$，以此类推。若第 $n$ 天售价低于 $50$ 元，则当天停止销售。
+\begin{enumerate}[label=(\arabic*)]
+  \item 写出第 $n$ 天售价 $a_n$ 的表达式。
+  \item 第几天起售价低于 $50$ 元？（$\lg 2 \approx 0.3010$）
+\end{enumerate}
+\end{appbox}
+
+\noindent\textbf{解：}
+
+$(1)$ 每天售价是前一天的 $0.8$ 倍，故 $a_n = 200 \times 0.8^n$（元）。
+
+$(2)$ 需要 $200 \times 0.8^n < 50$，即 $0.8^n < 0.25 = \dfrac{1}{4}$。
+
+两边取常用对数：$n \lg 0.8 < \lg 0.25$。注意 $\lg 0.8 < 0$，故
+\[
+  n > \frac{\lg 0.25}{\lg 0.8} = \frac{-2\lg 2}{\lg 8 - \lg 10} = \frac{-2\lg 2}{3\lg 2 - 1} = \frac{-0.6020}{0.9030 - 1} = \frac{-0.6020}{-0.0970} \approx 6.21.
+\]
+
+因此第 $\mathbf{7}$ 天起售价低于 $50$ 元。
+
+% ---------- 应用 4 ----------
+\begin{appbox}[【应用4】分期还款问题]
+某人贷款 $A$ 元，月利率为 $r$，按等额本息方式分 $n$ 个月还清，每月还款 $m$ 元。证明每月还款额为
+\[
+  m = \frac{A r(1+r)^n}{(1+r)^n - 1}.
+\]
+\end{appbox}
+
+\noindent\textbf{证：}设第 $k$ 月还款后剩余欠款为 $x_k$，则 $x_0 = A$，递推关系为
+\[
+  x_k = x_{k-1}(1 + r) - m \quad (k = 1, 2, \ldots, n).
+\]
+
+变形得 $x_k - \dfrac{m}{r} = (1+r)\!\left(x_{k-1} - \dfrac{m}{r}\right)$。
+
+故 $\left\{x_k - \dfrac{m}{r}\right\}$ 是以 $A - \dfrac{m}{r}$ 为首项、$1+r$ 为公比的等比数列：
+\[
+  x_k - \frac{m}{r} = \left(A - \frac{m}{r}\right)(1+r)^k.
+\]
+
+$n$ 个月还清时 $x_n = 0$，代入得
+\[
+  -\frac{m}{r} = \left(A - \frac{m}{r}\right)(1+r)^n.
+\]
+
+解关于 $m$ 的方程：
+\[
+  -\frac{m}{r} = A(1+r)^n - \frac{m}{r}(1+r)^n,
+\]
+\[
+  \frac{m}{r}\left[(1+r)^n - 1\right] = A(1+r)^n,
+\]
+\[
+  m = \frac{Ar(1+r)^n}{(1+r)^n - 1}. \qquad \blacksquare
+\]
+
+% ============================================================
+%  第四部分：课堂练习
+% ============================================================
+\section*{\textcolor{tipgreen}{四、课堂练习}}
+
+\begin{enumerate}
+  \item 等差数列 $\{a_n\}$ 中，$a_1 = 3$，$d = 2$，求 $a_{10}$ 和 $S_{10}$。
+  \vspace{1.5cm}
+
+  \item 等比数列 $\{a_n\}$ 中，$a_1 = 1$，$q = 2$，求 $a_8$ 和 $S_8$。
+  \vspace{1.5cm}
+
+  \item 等差数列 $\{a_n\}$ 中，$a_5 + a_9 = 20$，求 $S_{13}$。
+  \vspace{1.5cm}
+
+  \item 等比数列 $\{a_n\}$ 中，$a_1 + a_2 = 6$，$a_2 + a_3 = 12$，求 $a_n$ 和 $S_n$。
+  \vspace{2cm}
+
+  \item 求和 $\displaystyle\sum_{k=1}^{n} \frac{1}{(2k-1)(2k+1)}$。
+  \vspace{1.5cm}
+
+  \item 求和 $T_n = 1 + 3 \cdot 2 + 5 \cdot 2^2 + 7 \cdot 2^3 + \cdots + (2n-1) \cdot 2^{n-1}$。
+  \vspace{2cm}
+
+  \item 已知数列 $\{a_n\}$ 满足 $a_1 = 2$，$a_{n+1} = 3a_n - 2$，求 $a_n$。
+  \vspace{2cm}
+
+  \item 某细菌每小时繁殖一次（数量翻倍），现有 $100$ 个，问经过多少小时后数量超过 $10000$ 个？（$\lg 2 \approx 0.3010$）
+  \vspace{2cm}
+\end{enumerate}
+
+\begin{knowledgebox}[参考答案]
+\begin{enumerate}
+  \item $a_{10} = 3 + 9 \times 2 = 21$，$S_{10} = \dfrac{10(3 + 21)}{2} = 120$。
+
+  \item $a_8 = 2^7 = 128$，$S_8 = \dfrac{1 \times (2^8 - 1)}{2 - 1} = 255$。
+
+  \item $a_5 + a_9 = 2a_7 = 20$，故 $a_7 = 10$。$S_{13} = \dfrac{13(a_1 + a_{13})}{2} = \dfrac{13 \cdot 2a_7}{2} = 13 \times 10 = 130$。
+
+  \item 由 $a_1 + a_1 q = 6$，$a_1 q + a_1 q^2 = 12$，两式相除得 $\dfrac{q(1+q)}{1+q} = \dfrac{12}{6}$，即 $q = 2$。代入得 $a_1 = 2$。故 $a_n = 2^n$，$S_n = 2^{n+1} - 2$。
+
+  \item $\dfrac{1}{(2k-1)(2k+1)} = \dfrac{1}{2}\!\left(\dfrac{1}{2k-1} - \dfrac{1}{2k+1}\right)$，裂项相消得 $\displaystyle\sum_{k=1}^{n} = \dfrac{1}{2}\!\left(1 - \dfrac{1}{2n+1}\right) = \dfrac{n}{2n+1}$。
+
+  \item 错位相减法：$T_n = (2n-3) \cdot 2^n + 3$。
+
+  \item 令 $a_{n+1} - 1 = 3(a_n - 1)$，则 $\{a_n - 1\}$ 为首项 $1$、公比 $3$ 的等比数列。$a_n - 1 = 3^{n-1}$，故 $a_n = 3^{n-1} + 1$。
+
+  \item $100 \times 2^n > 10000$，$2^n > 100$，$n > \dfrac{\lg 100}{\lg 2} = \dfrac{2}{0.3010} \approx 6.64$。至少需要 $\mathbf{7}$ 小时。
+\end{enumerate}
+\end{knowledgebox}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本讲义仅供教学参考，例题可根据学生水平调整难度。}
+\end{center}
+
+\end{document}
