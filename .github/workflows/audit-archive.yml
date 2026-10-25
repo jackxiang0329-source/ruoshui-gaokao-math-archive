@@ -10,6 +10,7 @@ on:
       - "index/**"
       - "metadata/**"
       - "derivative/reviewed/**"
+      - ".github/workflows/build-reviewed-pdfs.yml"
       - "mirror/**"
   pull_request:
   workflow_dispatch:
@@ -31,6 +32,8 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Audit imported source blobs, batch manifests and mirror totals
         run: python3 scripts/validate_import_batches.py
+      - name: Ensure every reviewed TeX is in the PDF build manifest
+        run: python3 scripts/check_reviewed_pdf_manifest.py
       - name: Verify question-index and review provenance
         run: |
           python3 scripts/validate_question_index.py
