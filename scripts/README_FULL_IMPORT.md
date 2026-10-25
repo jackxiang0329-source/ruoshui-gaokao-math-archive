@@ -1,0 +1,37 @@
+# 11 个固定上游仓库：一键完整实体导入
+
+目标是把 sources.json 中 11 个固定版本上游仓库的原始 Git Blob 搬入本仓库 mirror/ 对应来源目录，包括 PDF、PNG、DOCX、TeX，而不是只放链接或 gitlink 子模块。
+
+## Windows 一键运行
+
+1. 安装 Git for Windows 和 Python 3。克隆/推送私有仓库时通过 Git Credential Manager 登录自己的 GitHub 账号，脚本不保存令牌。
+2. 使用仓库最新代码，双击 scripts/一键导入11个仓库.cmd。若尚无本地 Git 工作副本，PowerShell 启动器会克隆私有仓库到用户目录下的 ruoshui-gaokao-math-archive。
+3. 脚本处理 11 个固定 SHA，已完整匹配的来源自动跳过，每个未完整仓库在 SHA 校验后单独快进推送 main；网络失败时重新运行可续接。
+
+也可手工执行：
+
+    python3 scripts/import_pinned_git_trees.py --push
+
+仅导入一个来源：
+
+    python3 scripts/import_pinned_git_trees.py --source gaokaomath --push
+
+不加 --push 时只预览，需要下载源 Git 对象，但不上传文件。
+
+## 数据安全与完整性
+
+- 来源版本来自 origin/main 已提交的 sources.json，不使用上游最新浮动 HEAD。
+- 采用 Git 完整对象 fetch；特意不用 blob:none 过滤，保证 PDF 和图片等 Git 对象的真实字节随同复制。
+- 使用独立临时 Git index 和原生 git read-tree 将整棵上游目录树置于 mirror/<id>；不使用 rsync，也不改用户当前工作文件和普通 Git index。
+- 只有在完整目标子树 SHA 与固定上游树 SHA 完全一致时才创建提交，包括子目录、内容、符号链接模式。
+- 禁止强制推送；他人并行更新 main 时推送失败，重新运行即可处理。
+- 遇到上游嵌套 Git 子模块会报错而非谎称已复制。已检查本批 11 个固定版递归树，没有嵌套 gitlink。
+- Git LFS 指针仍需独立处理对应 LFS 真实资源。Git 对象一致不等于确认全部外部 LFS 对象已复制。
+
+## 完整度与验收边界
+
+已独立核算最新仓库状态：2,007 / 7,222 个上游源 Blob 严格匹配，5,215 个未完成，剩余原始 Git Blob 字节约 566,522,251（566.5 MB）。当前聊天的 GitHub 连接对大于约 1 MB 的二进制内容经常仅返回空数据，因此通过正常 Git fetch/push 才能可靠迁入剩余大型文件。
+
+历史 GitHub Actions 在 Runner 执行步骤前失败，不能声称在线全量镜像已通过；本地一键命令需要 Windows 电脑能够连接 GitHub 并拥有私有仓库推送权限。
+
+即使 11 个上游 Git 树完全匹配，也不等于试题真实性、数学证明正确性、全部 PDF 可出版或第三方材料再分发权利已经核实。
