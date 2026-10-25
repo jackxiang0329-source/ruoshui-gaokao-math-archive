@@ -1,0 +1,202 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·多项式与韦达定理推广}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{（#1 分）}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 培优专题·多项式与韦达定理推广 测试卷}\\[0.5em]
+{\large 总分：150分 \quad 时间：120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题意。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item 若三次方程 $x^3+px^2+qx+r=0$ 的三个根为 $x_1,x_2,x_3$，则 $x_1+x_2+x_3=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $p$
+\item $-p$
+\item $q$
+\item $-r$
+\end{enumerate}
+
+\item 若 $x_1,x_2$ 是方程 $x^2-5x+3=0$ 的两根，则 $x_1^2+x_2^2=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $19$
+\item $25$
+\item $31$
+\item $13$
+\end{enumerate}
+
+\item 若 $x_1,x_2,x_3$ 是方程 $x^3-6x^2+11x-6=0$ 的三个根，则 $x_1 x_2+x_2 x_3+x_3 x_1=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $6$
+\item $11$
+\item $-6$
+\item $-11$
+\end{enumerate}
+
+\item 以 $2+i$ 和 $3-i$ 为根的首一（最高次项系数为 $1$）实系数多项式的次数至少为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $2$
+\item $3$
+\item $4$
+\item $5$
+\end{enumerate}
+
+\item 设 $f(x)=x^3-3x+1$，则 $f(x)$ 在有理数域上的因式分解结果为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $(x-1)(x^2+x-1)$
+\item $(x+1)(x^2-x-1)$
+\item 在有理数域上不可约
+\item $(x-1)(x-1)(x+1)$
+\end{enumerate}
+
+\item 若多项式 $f(x)=x^4-2x^3+ax^2+bx+c$ 能被 $(x-1)^2$ 整除，则 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a+b+c=1$
+\item $a-b+c=1$
+\item $a+b+c=-1$
+\item $a+b-c=1$
+\end{enumerate}
+
+\item 牛顿恒等式建立了幂和与初等对称多项式的关系。设 $e_1,e_2,\ldots,e_n$ 为 $n$ 次多项式的初等对称多项式，$p_k=x_1^k+x_2^k+\cdots+x_n^k$，则 $p_1=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $e_1$
+\item $e_2$
+\item $e_1^2-2e_2$
+\item $-e_1$
+\end{enumerate}
+
+\item 设 $x_1,x_2$ 是方程 $x^2-3x+1=0$ 的两根，则 $x_1^3+x_2^3=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $18$
+\item $27$
+\item $9$
+\item $36$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题意，全部选对得5分，部分选对得2分，有选错得0分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 关于韦达定理，下列说法正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 对于 $ax^2+bx+c=0$（$a\neq 0$），$x_1+x_2=-\dfrac{b}{a}$
+\item 对于 $ax^2+bx+c=0$（$a\neq 0$），$x_1 x_2=\dfrac{c}{a}$
+\item 韦达定理只适用于实系数方程
+\item 韦达定理可以推广到任意次多项式
+\end{enumerate}
+
+\item 关于多项式的因式分解，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 有理系数多项式在有理数域上的因式分解是唯一的（不计顺序和常数因子）
+\item 整系数多项式若有有理根 $p/q$（$p,q$ 互素），则 $p$ 整除常数项，$q$ 整除最高次项系数
+\item 任何实系数多项式都可以分解为一次和二次实系数因式的乘积
+\item 任何复系数多项式在复数域上都可以完全分解为一次因式的乘积
+\end{enumerate}
+
+\item 关于对称多项式，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 初等对称多项式 $e_k$ 是所有 $k$ 个不同变量乘积之和
+\item 任何对称多项式都可以用初等对称多项式表示
+\item $x_1^2+x_2^2=e_1^2-2e_2$（其中 $e_1=x_1+x_2$，$e_2=x_1 x_2$）
+\item 对称多项式在变量的任意置换下保持不变
+\end{enumerate}
+
+\item 关于多项式方程的根，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $n$ 次复系数多项式恰好有 $n$ 个复数根（计重数）
+\item 实系数多项式的复数根成共轭对出现
+\item 有理系数多项式的有理根一定是整数根
+\item 整系数多项式的整根一定整除常数项
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 若 $x_1,x_2$ 是方程 $x^2-7x+10=0$ 的两根，则 $\dfrac{1}{x_1}+\dfrac{1}{x_2}=$ \underline{\hspace{2cm}}，$x_1^2 x_2+x_1 x_2^2=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 若 $x_1,x_2,x_3$ 是方程 $x^3-2x^2-5x+6=0$ 的三个根，则 $x_1^2+x_2^2+x_3^2=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 多项式 $f(x)=x^4-5x^3+8x^2-5x+1$ 可以写成 $x^2 g\!\left(x+\dfrac{1}{x}\right)$ 的形式，则 $g(t)=$ \underline{\hspace{4cm}}。\score{5}
+
+\item 设 $x_1,x_2$ 是方程 $x^2-x-1=0$ 的两根（即黄金分割比相关），则 $x_1^5+x_2^5=$ \underline{\hspace{2cm}}。\score{5}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item （10分）设 $x_1,x_2,x_3$ 是方程 $x^3-6x^2+11x-6=0$ 的三个根。不解方程，求以下各式的值：
+\begin{enumerate}[label=(\arabic*)]
+\item $x_1^2+x_2^2+x_3^2$；
+\item $x_1^3+x_2^3+x_3^3$；
+\item $\dfrac{1}{x_1}+\dfrac{1}{x_2}+\dfrac{1}{x_3}$。
+\end{enumerate}
+\score{10}
+
+\item （12分）证明韦达定理的推广形式：设 $f(x)=a_n x^n+a_{n-1}x^{n-1}+\cdots+a_1 x+a_0$（$a_n\neq 0$）的 $n$ 个根为 $x_1,x_2,\ldots,x_n$，则
+\[x_1+x_2+\cdots+x_n=-\frac{a_{n-1}}{a_n},\quad \sum_{1\leq i<j\leq n}x_i x_j=\frac{a_{n-2}}{a_n},\quad \ldots,\quad x_1 x_2\cdots x_n=(-1)^n\frac{a_0}{a_n}.\]
+\score{12}
+
+\item （12分）设 $x_1,x_2$ 是方程 $x^2-3x+1=0$ 的两根。利用递推关系求 $p_n=x_1^n+x_2^n$ 的通项公式（$n\geq 0$）。\score{12}
+
+\item （12分）设多项式 $f(x)=x^3+px+q$（无二次项）。令 $\Delta=-4p^3-27q^2$ 为判别式。证明：
+\begin{enumerate}[label=(\arabic*)]
+\item 当 $\Delta>0$ 时，$f(x)=0$ 有三个互异的实根；
+\item 当 $\Delta=0$ 时，$f(x)=0$ 有重根；
+\item 当 $\Delta<0$ 时，$f(x)=0$ 有一个实根和两个共轭复根。
+\end{enumerate}
+\score{12}
+
+\item （12分）用牛顿恒等式证明：设 $p_k=x_1^k+x_2^k+\cdots+x_n^k$，$e_k$ 为 $x_1,x_2,\ldots,x_n$ 的第 $k$ 个初等对称多项式，则
+\[p_k-e_1 p_{k-1}+e_2 p_{k-2}-\cdots+(-1)^{k-1}e_{k-1}p_1+(-1)^k k\,e_k=0\quad (1\leq k\leq n).\]
+\score{12}
+
+\item （12分）设多项式 $f(x)$ 除以 $(x-1)$ 余 $3$，除以 $(x-2)$ 余 $5$，除以 $(x-3)$ 余 $7$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求 $f(x)$ 除以 $(x-1)(x-2)(x-3)$ 的余式；
+\item 若 $f(x)$ 为三次多项式且首项系数为 $1$，求 $f(x)$。
+\end{enumerate}
+\score{12}
+
+\end{enumerate}
+
+\end{document}

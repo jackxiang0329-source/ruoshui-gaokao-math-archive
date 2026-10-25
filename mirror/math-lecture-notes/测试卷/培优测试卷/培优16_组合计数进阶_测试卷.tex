@@ -1,0 +1,182 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·组合计数进阶}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{（#1 分）}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 培优专题·组合计数进阶 测试卷}\\[0.5em]
+{\large 总分：150分 \quad 时间：120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题意。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item 将 $8$ 本不同的书分成三堆，其中一堆 $3$ 本、一堆 $3$ 本、一堆 $2$ 本，分法总数为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\mathrm{C}_8^3\mathrm{C}_5^3\mathrm{C}_2^2$
+\item $\dfrac{\mathrm{C}_8^3\mathrm{C}_5^3\mathrm{C}_2^2}{2!}$
+\item $\dfrac{\mathrm{C}_8^3\mathrm{C}_5^3\mathrm{C}_2^2}{3!}$
+\item $\mathrm{C}_8^3\mathrm{C}_5^3$
+\end{enumerate}
+
+\item 在 $(x+y+z)^6$ 的展开式中，$x^2y^2z^2$ 项的系数为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $60$
+\item $90$
+\item $120$
+\item $180$
+\end{enumerate}
+
+\item 满足 $a+b+c=10$ 的正整数解 $(a,b,c)$ 的个数为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $36$
+\item $45$
+\item $55$
+\item $66$
+\end{enumerate}
+
+\item 从 $1,2,3,\ldots,20$ 中选取 $4$ 个数，使得任意两个数之差的绝对值均大于 $2$，选法总数为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\mathrm{C}_{14}^4$
+\item $\mathrm{C}_{15}^4$
+\item $\mathrm{C}_{16}^4$
+\item $\mathrm{C}_{17}^4$
+\end{enumerate}
+
+\item 将 $6$ 个不同的小球放入 $3$ 个不同的盒子中，每个盒子至少放一个球，放法总数为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $540$
+\item $210$
+\item $729$
+\item $360$
+\end{enumerate}
+
+\item 由 $1,2,3,4,5$ 组成的没有重复数字的五位数中，大于 $34000$ 的数有 \score{5} 个。
+\begin{enumerate}[label=\Alph*.]
+\item $48$
+\item $54$
+\item $60$
+\item $66$
+\end{enumerate}
+
+\item 将 $n$ 个相同的球放入 $r$ 个不同的盒子中（允许有空盒），放法总数为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\mathrm{C}_n^{r-1}$
+\item $\mathrm{C}_{n+r-1}^{r-1}$
+\item $\mathrm{C}_{n+r}^{r}$
+\item $r^n$
+\end{enumerate}
+
+\item 圆周上有 $n$ 个点（$n\geq 3$），将这些点两两连弦，使得任意两条弦在圆内不相交的连法数等于 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $2^{n-1}$
+\item 卡特兰数 $C_{\lfloor n/2\rfloor}$
+\item $n!$
+\item 取决于 $n$ 的奇偶性
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题意，全部选对得5分，部分选对得2分，有选错得0分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 关于多重集的排列组合，以下说法正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 多重集 $\{n_1\cdot a_1, n_2\cdot a_2, \ldots, n_k\cdot a_k\}$ 的全排列数为 $\dfrac{(n_1+n_2+\cdots+n_k)!}{n_1!\,n_2!\cdots n_k!}$
+\item 从多重集中选取 $r$ 个元素的组合数可以用隔板法求解
+\item 将 $n$ 个相同的物品放入 $k$ 个不同的盒子（允许空盒）等价于多重集的组合
+\item 多重集的排列与普通排列完全相同
+\end{enumerate}
+
+\item 关于容斥原理，下列说法正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $|A\cup B|=|A|+|B|-|A\cap B|$
+\item $|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|$
+\item 错排问题可以用容斥原理求解
+\item 容斥原理只能用于两个集合的情形
+\end{enumerate}
+
+\item 关于卡特兰数 $C_n=\dfrac{1}{n+1}\dbinom{2n}{n}$，下列应用正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $n$ 对括号合法匹配的方案数为 $C_n$
+\item 从 $(0,0)$ 到 $(n,n)$ 不越过对角线的路径数为 $C_n$
+\item $n+1$ 个节点的不同构二叉树数为 $C_n$
+\item $n$ 个元素的出栈序列数为 $C_n$
+\end{enumerate}
+
+\item 关于母函数（生成函数），以下说法正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 序列 $\{a_n\}$ 的普通生成函数为 $G(x)=\displaystyle\sum_{n=0}^{\infty}a_n x^n$
+\item 斐波那契数列的生成函数为 $\dfrac{x}{1-x-x^2}$
+\item 母函数可以用于求解递推关系
+\item $(1+x)^n$ 的展开系数为二项式系数
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 方程 $x_1+x_2+x_3+x_4=15$ 的非负整数解的个数为 \underline{\hspace{3cm}}。\score{5}
+
+\item $5$ 对夫妻围圆桌就坐，要求每对夫妻相邻，坐法总数为 \underline{\hspace{3cm}}。\score{5}
+
+\item 由 $0,1,2,3,4,5$ 组成的没有重复数字且能被 $5$ 整除的四位数有 \underline{\hspace{3cm}} 个。\score{5}
+
+\item 错排数 $D_5=$ \underline{\hspace{3cm}}，即 $1,2,3,4,5$ 的全排列中，每个数都不在原来位置上的排列数。\score{5}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item （10分）用母函数方法求解递推关系 $a_n=3a_{n-1}-2a_{n-2}$（$n\geq 2$），其中 $a_0=0$，$a_1=1$。\score{10}
+
+\item （12分）将 $10$ 个相同的小球放入编号为 $1,2,3,4$ 的四个不同盒子中，要求每个盒子中的球数不少于其编号数，求不同的放法总数。\score{12}
+
+\item （12分）用容斥原理求 $1$ 到 $1000$ 中不能被 $2,3,5$ 中任何一个整除的正整数的个数。\score{12}
+
+\item （12分）证明：$n$ 个元素的所有排列中，恰好有 $k$ 个不动点（即恰好有 $k$ 个元素在原来的位置上）的排列数为 $\dbinom{n}{k}D_{n-k}$，其中 $D_m$ 为 $m$ 个元素的错排数。并由此推导错排数的公式。
+\score{12}
+
+\item （12分）求由 $n$ 个 $0$ 和 $n$ 个 $1$ 组成的长度为 $2n$ 的序列中，任意前缀中 $0$ 的个数不少于 $1$ 的个数的序列个数（即卡特兰数）。\score{12}
+
+\item （12分）在 $8\times 8$ 的棋盘上放置 $8$ 个互不攻击的车（即任意两个车不在同一行也不在同一列），再从中选出 $3$ 个车涂成红色，其余涂成蓝色。求不同的涂色方案数。\score{12}
+
+\end{enumerate}
+
+\end{document}

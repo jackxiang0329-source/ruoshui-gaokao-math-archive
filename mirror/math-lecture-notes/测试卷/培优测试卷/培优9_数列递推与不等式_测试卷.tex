@@ -1,0 +1,214 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·数列递推与不等式}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{(#1分)}}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{培优专题测试卷·数列递推与不等式}
+
+\normalsize
+考试时间：120分钟\quad 满分：150分
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{一、单选题（本大题共8小题，每小题5分，共40分。在每小题给出的四个选项中，只有一项是符合题目要求的。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item 已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = \dfrac{a_n}{1 + a_n}$，则 $a_{10} = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{1}{10}$
+\item $\dfrac{1}{11}$
+\item $\dfrac{1}{9}$
+\item $\dfrac{1}{100}$
+\end{enumerate}
+
+\item 设数列 $\{a_n\}$ 满足 $a_1 = 2$，$a_{n+1} = 2a_n + 1$，则 $a_n = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $2^n - 1$
+\item $3 \cdot 2^{n-1} - 1$
+\item $2^{n+1} - 1$
+\item $3 \cdot 2^n - 1$
+\end{enumerate}
+
+\item 已知 $a_1 = 1$，$a_{n+1} = a_n + 2n$，则 $a_{20} = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $380$
+\item $381$
+\item $400$
+\item $401$
+\end{enumerate}
+
+\item 设正数数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = \sqrt{a_n^2 + 2a_n}$，则 $a_{10}^2 = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $98$
+\item $99$
+\item $100$
+\item $101$
+\end{enumerate}
+
+\item 已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_2 = 2$，$a_{n+2} = a_{n+1} - a_n$，则 $a_{2025} = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $-2$
+\item $-1$
+\item $1$
+\item $2$
+\end{enumerate}
+
+\item 设 $S_n$ 为数列 $\{a_n\}$ 的前 $n$ 项和，$a_1 = 1$，$S_n = n^2 a_n$，则 $a_{10} = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{1}{55}$
+\item $\dfrac{1}{100}$
+\item $\dfrac{2}{55}$
+\item $\dfrac{1}{45}$
+\end{enumerate}
+
+\item 已知数列 $\{a_n\}$ 满足 $a_1 = 0$，$a_{n+1} = a_n + \dfrac{1}{n(n+1)}$，则 $\displaystyle\lim_{n \to \infty} a_n = $\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $0$
+\item $1$
+\item $\dfrac{1}{2}$
+\item $2$
+\end{enumerate}
+
+\item 设数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = \dfrac{1}{2}\left(a_n + \dfrac{2}{a_n}\right)$，则下列说法正确的是\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\{a_n\}$ 单调递减且 $a_n > \sqrt{2}$
+\item $\{a_n\}$ 单调递增且 $a_n < \sqrt{2}$
+\item $\{a_n\}$ 从第二项起单调递减且 $a_n > \sqrt{2}$
+\item $\{a_n\}$ 从第二项起单调递减，$a_2 > \sqrt{2}$ 且 $\displaystyle\lim_{n \to \infty} a_n = \sqrt{2}$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{二、多选题（本大题共4小题，每小题5分，共20分。在每小题给出的选项中，有多项符合题目要求。全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item 已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = 3a_n + 2$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\{a_n + 1\}$ 是等比数列
+\item $a_n = 2 \cdot 3^{n-1} - 1$
+\item $a_n$ 能被 $5$ 整除当且仅当 $n$ 为偶数
+\item $\displaystyle\sum_{k=1}^{n} a_k = 3^n - n - 1$
+\end{enumerate}
+
+\item 设正数数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1}^2 = a_n^2 + \dfrac{1}{n^2}$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_n^2 < 2$ 对所有 $n$ 成立
+\item $a_n^2 < \dfrac{\pi^2}{6}$ 对所有 $n$ 成立
+\item $a_n > \sqrt{\dfrac{n-1}{n}}$
+\item $\displaystyle\lim_{n \to \infty} a_n$ 存在
+\end{enumerate}
+
+\item 已知 $S_n = \displaystyle\sum_{k=1}^{n} \frac{1}{k(k+1)(k+2)}$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $S_n = \dfrac{1}{4} - \dfrac{1}{2(n+1)(n+2)}$
+\item $S_n < \dfrac{1}{4}$
+\item $\displaystyle\lim_{n \to \infty} S_n = \dfrac{1}{4}$
+\item $S_n > \dfrac{1}{4} - \dfrac{1}{2n^2}$
+\end{enumerate}
+
+\item 设数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = a_n + \dfrac{1}{a_n}$，则下列正确的有\score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $a_n$ 单调递增
+\item $a_n^2 \geqslant 2n - 1$
+\item $a_n \leqslant \sqrt{2n}$
+\item $a_n < \sqrt{2n} + 1$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item 数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = 2a_n + 3^n$，则 $a_n = $ \underline{\hspace{3cm}}。\score{5}
+
+\item 设 $a_1 = 1$，$a_{n+1} = \dfrac{a_n}{a_n + 2}$，则 $a_n = $ \underline{\hspace{3cm}}。\score{5}
+
+\item 已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = \sqrt{2 + a_n}$，则 $\displaystyle\lim_{n \to \infty} a_n = $ \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $S_n = \displaystyle\sum_{k=1}^{n} \frac{k}{(k+1)!}$，则 $S_n = $ \underline{\hspace{3cm}}。\score{5}
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.3cm}
+
+\begin{enumerate}[resume]
+\item （10分）已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = \dfrac{a_n}{1 + 2a_n}$。
+\begin{enumerate}[label=(\arabic*)]
+\item 求 $a_n$ 的通项公式；
+\item 设 $S_n = \displaystyle\sum_{k=1}^{n} a_k$，证明：$1 \leqslant S_n < 2$。
+\end{enumerate}
+
+\item （12分）设数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_{n+1} = a_n + \dfrac{1}{a_n}$（$n \in \mathbb{N}^*$）。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$a_n^2 \geqslant 2n - 1$；
+\item 证明：$\sqrt{2n} < a_n \leqslant \sqrt{2n} + \dfrac{1}{2}\ln n$（$n \geqslant 2$）。
+\end{enumerate}
+
+\item （12分）已知 $a_1 = 2$，$a_{n+1} = \dfrac{a_n^2 + 2}{2a_n}$。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$a_n > \sqrt{2}$ 对所有 $n \in \mathbb{N}^*$ 成立；
+\item 证明：$\{a_n\}$ 从第二项起单调递减；
+\item 求 $\displaystyle\lim_{n \to \infty} a_n$。
+\end{enumerate}
+
+\item （12分）设正数数列 $\{a_n\}$ 满足 $a_1 = 1$，$S_n = a_1 + a_2 + \cdots + a_n$，且 $S_n = \dfrac{n a_n}{2}$（$n \geqslant 2$）。
+\begin{enumerate}[label=(\arabic*)]
+\item 求 $a_n$ 的通项公式；
+\item 设 $b_n = \dfrac{1}{a_n a_{n+1}}$，求 $\{b_n\}$ 的前 $n$ 项和 $T_n$；
+\item 证明：$T_n < 2$。
+\end{enumerate}
+
+\item （12分）已知数列 $\{a_n\}$ 满足 $a_1 = 1$，$a_2 = 2$，$a_{n+2} = \dfrac{a_{n+1}^2 + 1}{a_n}$。
+\begin{enumerate}[label=(\arabic*)]
+\item 计算 $a_3, a_4, a_5$；
+\item 猜测 $a_n$ 的通项公式并证明之；
+\item 证明：$\displaystyle\sum_{k=1}^{n} \frac{1}{a_k} < 3$。
+\end{enumerate}
+
+\item （12分）设 $0 < a_1 < \dfrac{1}{2}$，$a_{n+1} = a_n(1 - a_n)$（$n \in \mathbb{N}^*$）。
+\begin{enumerate}[label=(\arabic*)]
+\item 证明：$0 < a_n < \dfrac{1}{2}$ 对所有 $n$ 成立；
+\item 证明：$\{a_n\}$ 单调递减；
+\item 证明：$\displaystyle\sum_{k=1}^{n} a_k^2 < \dfrac{a_1}{2}$；
+\item 证明：$\displaystyle\lim_{n \to \infty} na_n = 1$。
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

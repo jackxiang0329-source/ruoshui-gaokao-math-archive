@@ -1,0 +1,181 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·反演变换与几何变换}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{（#1 分）}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 培优专题·反演变换与几何变换 测试卷}\\[0.5em]
+{\large 总分：150分 \quad 时间：120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题意。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item 以 $O$ 为反演中心，$r$ 为反演半径作反演变换。若点 $P$ 满足 $OP=4$，$r=2$，则 $P$ 的反演点 $P'$ 满足 $OP'=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $1$
+\item $2$
+\item $4$
+\item $8$
+\end{enumerate}
+
+\item 在以原点为反演中心、反演半径为 $1$ 的反演变换下，圆 $x^2+y^2-2x=0$（即以 $(1,0)$ 为圆心、$1$ 为半径的圆）的像为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 一条不过原点的直线
+\item 一个过原点的圆
+\item 一条过原点的直线
+\item 一个不过原点的圆
+\end{enumerate}
+
+\item 在以 $O$ 为反演中心、反演半径 $r$ 的反演变换下，不过反演中心的直线 $l$ 的像是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 一条直线
+\item 一个过反演中心的圆
+\item 一个不过反演中心的圆
+\item 一个以 $O$ 为圆心的圆
+\end{enumerate}
+
+\item 平面上的旋转相似变换（即位似旋转）的不动点个数为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $0$ 个
+\item $1$ 个
+\item $2$ 个
+\item 无穷多个
+\end{enumerate}
+
+\item 反演变换保持的几何性质是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 线段长度
+\item 角度大小（不计方向）
+\item 面积
+\item 平行关系
+\end{enumerate}
+
+\item 以 $O$ 为反演中心，$r=3$ 为反演半径。过 $O$ 的圆 $C$（圆心距 $O$ 为 $5$，半径为 $5$）的反演像为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 过 $O$ 的圆
+\item 不过 $O$ 的圆
+\item 一条直线
+\item 一条过 $O$ 的直线
+\end{enumerate}
+
+\item 在反演变换下，与反演圆正交的圆的像为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 自身
+\item 一条直线
+\item 另一个与反演圆正交的圆
+\item 反演圆本身
+\end{enumerate}
+
+\item 平移变换不改变图形的 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 位置
+\item 形状和大小
+\item 方向
+\item 面积和周长
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题意，全部选对得5分，部分选对得2分，有选错得0分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 关于反演变换，下列说法正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 反演变换是保角变换
+\item 过反演中心的直线反演后仍为该直线
+\item 反演变换是自身的逆变换（即两次反演回到自身）
+\item 反演中心没有反演像
+\end{enumerate}
+
+\item 关于位似变换（放缩变换），下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 位似变换保持角度不变
+\item 位似变换将直线映射为平行直线
+\item 位似变换的位似中心是不动点
+\item 位似比为 $k$ 时，面积变为原来的 $k^2$ 倍
+\end{enumerate}
+
+\item 关于旋转变换，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 绕原点旋转 $\theta$ 角的变换矩阵为 $\begin{pmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{pmatrix}$
+\item 旋转变换保持距离不变
+\item 两次旋转的复合仍是旋转（旋转角之和，以同一点为中心）
+\item 旋转变换保持面积不变
+\end{enumerate}
+
+\item 关于反射变换（轴对称），下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 反射变换保持距离不变
+\item 反射变换是保角变换
+\item 两次反射的复合是一个旋转或平移
+\item 反射变换保持图形的定向不变
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 以原点 $O$ 为反演中心，反演半径 $r=2$，则点 $A(1,1)$ 的反演点 $A'$ 的坐标为 \underline{\hspace{3cm}}。\score{5}
+
+\item 以原点为反演中心，反演半径 $r=1$，则圆 $x^2+y^2-x=0$（圆心在 $(\frac{1}{2},0)$，半径 $\frac{1}{2}$，过原点）的反演像为 \underline{\hspace{4cm}}。\score{5}
+
+\item 将点 $A(1,0)$ 绕原点逆时针旋转 $60^\circ$ 后得到的点的坐标为 \underline{\hspace{3cm}}。\score{5}
+
+\item 位似中心在原点，位似比为 $2$ 的位似变换将点 $(3,5)$ 变为 \underline{\hspace{3cm}}，将直线 $y=2x+1$ 变为 \underline{\hspace{4cm}}。\score{5}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item （10分）设反演变换以 $O$ 为中心，反演半径为 $r$。证明：不过反演中心 $O$ 的直线 $l$ 的反演像是过 $O$ 的圆，且该圆的直径为 $r^2/d$，其中 $d$ 为 $O$ 到直线 $l$ 的距离。\score{10}
+
+\item （12分）利用反演变换证明：设 $\odot O_1$ 与 $\odot O_2$ 相交于 $A,B$ 两点，过 $A$ 作两圆的切线分别交 $\odot O_2$ 于 $C$，交 $\odot O_1$ 于 $D$，则 $BC=BD$。\score{12}
+
+\item （12分）在平面直角坐标系中，以原点为反演中心，反演半径 $r=1$。求圆 $(x-3)^2+y^2=1$ 的反演像的方程。\score{12}
+
+\item （12分）已知 $\triangle ABC$，设 $P$ 为 $\triangle ABC$ 外接圆上一点。以 $P$ 为反演中心，以 $PA$ 为反演半径作反演变换，证明 $\triangle ABC$ 的外接圆被映射为直线 $BC$。\score{12}
+
+\item （12分）设 $\triangle ABC$ 中，$\angle A=90^\circ$，$M$ 为 $BC$ 的中点。以 $M$ 为反演中心，$MA$ 为反演半径作反演变换。证明：$B$ 和 $C$ 互为反演点，且 $\triangle ABC$ 的外接圆在此反演下变为直线 $BC$。\score{12}
+
+\item （12分）利用反演变换证明庞斯莱闭合定理的一个特殊情形：设两个不相交的圆 $\odot O_1$（半径 $R$）和 $\odot O_2$（半径 $r$），从 $\odot O_1$ 上一点 $P_0$ 出发作 $\odot O_2$ 的切线交 $\odot O_1$ 于 $P_1$，再从 $P_1$ 作 $\odot O_2$ 的另一条切线交 $\odot O_1$ 于 $P_2$，如此反复。若存在 $n$ 使得 $P_n=P_0$，则对 $\odot O_1$ 上任意初始点 $P_0'$ 均有 $P_n'=P_0'$。\score{12}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,188 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·向量恒等式与几何证明}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\score}[1]{\hfill\makebox[2cm][l]{（#1 分）}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 培优专题·向量恒等式与几何证明 测试卷}\\[0.5em]
+{\large 总分：150分 \quad 时间：120分钟}
+\end{center}
+
+\vspace{1em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题意。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}
+\item 设 $\vec{a},\vec{b}$ 为非零向量，$|\vec{a}|=3$，$|\vec{b}|=4$，$\vec{a}\cdot\vec{b}=6$，则 $\vec{a}$ 与 $\vec{b}$ 的夹角为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{\pi}{6}$
+\item $\dfrac{\pi}{4}$
+\item $\dfrac{\pi}{3}$
+\item $\dfrac{\pi}{2}$
+\end{enumerate}
+
+\item 设 $\vec{a}=(1,2)$，$\vec{b}=(3,-1)$，则 $\vec{a}\times\vec{b}$（三维叉积，视 $\vec{a},\vec{b}$ 为 $xy$ 平面上的向量）的模为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $5$
+\item $7$
+\item $1$
+\item $\sqrt{50}$
+\end{enumerate}
+
+\item 设 $O$ 为 $\triangle ABC$ 的外心，$R$ 为外接圆半径，则 $\overrightarrow{OA}\cdot\overrightarrow{OB}+\overrightarrow{OB}\cdot\overrightarrow{OC}+\overrightarrow{OC}\cdot\overrightarrow{OA}=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $R^2$
+\item $\dfrac{3R^2}{2}$
+\item $-\dfrac{R^2}{2}$
+\item 取决于三角形的形状
+\end{enumerate}
+
+\item 在 $\triangle ABC$ 中，$D$ 为 $BC$ 的中点，则 $\overrightarrow{AD}=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{\overrightarrow{AB}+\overrightarrow{AC}}{2}$
+\item $\overrightarrow{AB}+\overrightarrow{AC}$
+\item $\dfrac{\overrightarrow{AB}-\overrightarrow{AC}}{2}$
+\item $\overrightarrow{AB}-\overrightarrow{AC}$
+\end{enumerate}
+
+\item 对任意向量 $\vec{a},\vec{b},\vec{c}$，拉格朗日恒等式 $|\vec{a}\times\vec{b}|^2=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $|\vec{a}|^2|\vec{b}|^2-(\vec{a}\cdot\vec{b})^2$
+\item $(|\vec{a}||\vec{b}|)^2+(\vec{a}\cdot\vec{b})^2$
+\item $|\vec{a}|^2+|\vec{b}|^2-2\vec{a}\cdot\vec{b}$
+\item $|\vec{a}|^2|\vec{b}|^2+(\vec{a}\cdot\vec{b})^2$
+\end{enumerate}
+
+\item 设 $G$ 为 $\triangle ABC$ 的重心，$O$ 为任意一点，则 $\overrightarrow{OG}=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}}{3}$
+\item $\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}$
+\item $\dfrac{\overrightarrow{OA}+\overrightarrow{OB}}{2}$
+\item $\dfrac{\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}}{2}$
+\end{enumerate}
+
+\item 设 $I$ 为 $\triangle ABC$ 的内心，则 $\overrightarrow{IA}\cdot\overrightarrow{IB}$ 与 $\overrightarrow{IB}\cdot\overrightarrow{IC}$ 的大小关系 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 仅取决于边长
+\item 必然相等
+\item 仅取决于角度
+\item 一般不相等
+\end{enumerate}
+
+\item 设 $\vec{a},\vec{b},\vec{c}$ 为空间中三个不共面的向量，$\vec{d}=\alpha\vec{a}+\beta\vec{b}+\gamma\vec{c}$，则系数 $\alpha$ 可以表示为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\dfrac{\vec{d}\cdot(\vec{b}\times\vec{c})}{\vec{a}\cdot(\vec{b}\times\vec{c})}$
+\item $\dfrac{\vec{d}\cdot\vec{a}}{|\vec{a}|^2}$
+\item $\dfrac{\vec{a}\cdot(\vec{b}\times\vec{c})}{\vec{d}\cdot(\vec{b}\times\vec{c})}$
+\item $\dfrac{\vec{d}\cdot(\vec{a}\times\vec{b})}{\vec{c}\cdot(\vec{a}\times\vec{b})}$
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。每小题有多个选项符合题意，全部选对得5分，部分选对得2分，有选错得0分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 关于向量点积的性质，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}$（交换律）
+\item $(\vec{a}+\vec{b})\cdot\vec{c}=\vec{a}\cdot\vec{c}+\vec{b}\cdot\vec{c}$（分配律）
+\item $\vec{a}\cdot\vec{a}=|\vec{a}|^2$
+\item 若 $\vec{a}\cdot\vec{b}=0$，则 $\vec{a}=\vec{0}$ 或 $\vec{b}=\vec{0}$
+\end{enumerate}
+
+\item 关于向量叉积的性质，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item $\vec{a}\times\vec{b}=-\vec{b}\times\vec{a}$（反交换律）
+\item $\vec{a}\times\vec{a}=\vec{0}$
+\item $|\vec{a}\times\vec{b}|=|\vec{a}||\vec{b}|\sin\theta$
+\item $\vec{a}\times\vec{b}$ 垂直于 $\vec{a}$ 和 $\vec{b}$ 所在的平面
+\end{enumerate}
+
+\item 关于 $\triangle ABC$ 中的向量恒等式，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 若 $O$ 为外心，则 $|\overrightarrow{OA}|=|\overrightarrow{OB}|=|\overrightarrow{OC}|$
+\item 若 $H$ 为垂心，则 $\overrightarrow{HA}\cdot\overrightarrow{HB}=\overrightarrow{HB}\cdot\overrightarrow{HC}=\overrightarrow{HC}\cdot\overrightarrow{HA}$
+\item $AB^2+BC^2+CA^2=|\overrightarrow{AB}|^2+|\overrightarrow{BC}|^2+|\overrightarrow{CA}|^2$
+\item 欧拉线定理：$O,G,H$ 三点共线且 $GH=2OG$
+\end{enumerate}
+
+\item 关于向量在几何证明中的应用，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+\item 向量法可以证明共线问题（利用向量共线条件）
+\item 向量法可以证明垂直问题（利用点积为零）
+\item 向量法可以求面积（利用叉积的模）
+\item 向量法不适合处理角度问题
+\end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item 设 $\vec{a}=(2,-1,3)$，$\vec{b}=(1,2,-1)$，则 $\vec{a}\cdot\vec{b}=$ \underline{\hspace{2cm}}，$\vec{a}\times\vec{b}=$ \underline{\hspace{5cm}}。\score{5}
+
+\item 在 $\triangle ABC$ 中，$\overrightarrow{AB}=(3,4)$，$\overrightarrow{AC}=(5,0)$，则 $\triangle ABC$ 的面积 $S=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $\vec{a},\vec{b}$ 满足 $|\vec{a}|=1$，$|\vec{b}|=2$，$\vec{a}\cdot\vec{b}=1$，则 $|2\vec{a}-3\vec{b}|=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $O$ 为 $\triangle ABC$ 的外心，$H$ 为垂心，$R$ 为外接圆半径。已知 $\overrightarrow{OH}=\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}$，则 $|\overrightarrow{OH}|^2=$ \underline{\hspace{5cm}}（用 $R$ 和三角形的边长表示）。\score{5}
+\end{enumerate}
+
+\vspace{1em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\vspace{0.5em}
+
+\begin{enumerate}[resume]
+\item （10分）用向量法证明：$\triangle ABC$ 的三条中线交于一点（重心 $G$），且重心到顶点的距离是到对边中点距离的 $2$ 倍。\score{10}
+
+\item （12分）用向量法证明：在 $\triangle ABC$ 中，$AB^2+AC^2=2(AD^2+BD^2)$，其中 $D$ 为 $BC$ 的中点。（此即中线长公式。）\score{12}
+
+\item （12分）设 $P$ 为 $\triangle ABC$ 所在平面上任意一点。用向量法证明：
+\[PA^2\cdot\overrightarrow{BC}+PB^2\cdot\overrightarrow{CA}+PC^2\cdot\overrightarrow{AB}=\overrightarrow{BC}\cdot\overrightarrow{CA}\cdot\overrightarrow{AB}\]
+（注：此即斯图尔特定理的向量形式。实际证明 $PA^2\cdot BC+PB^2\cdot CA+PC^2\cdot AB=BC\cdot CA\cdot AB+AB\cdot BC\cdot CA$ 之类的恒等式。）
+请改证：设 $D$ 为 $BC$ 上一点且 $BD:DC=m:n$，用向量法证明斯图尔特定理：$AB^2\cdot n+AC^2\cdot m-AD^2\cdot(m+n)=mn\cdot BC^2/(m+n)$。\score{12}
+
+\item （12分）用向量法证明欧拉线定理：$\triangle ABC$ 的外心 $O$、重心 $G$、垂心 $H$ 三点共线，且 $\overrightarrow{OG}:\overrightarrow{GH}=1:2$。\score{12}
+
+\item （12分）设四边形 $ABCD$ 的对角线 $AC$ 与 $BD$ 相交于 $O$。用向量法证明：
+\[AB^2+BC^2+CD^2+DA^2=AC^2+BD^2+4\,OM^2\]
+其中 $M$ 为对角线中点连线的中点（即 $AB^2+CD^2=AC^2+BD^2$ 当且仅当 $AC\perp BD$ 的推广）。简化版：证明 $AB^2+BC^2+CD^2+DA^2=AC^2+BD^2+4OM^2$，其中 $M$ 为 $AC$ 和 $BD$ 中点连线的中点。\score{12}
+
+\item （12分）用向量法证明：$\triangle ABC$ 的外心 $O$、内心 $I$ 满足
+\[OI^2=R^2-2Rr\]
+其中 $R$ 为外接圆半径，$r$ 为内切圆半径。（此即欧拉公式。）\score{12}
+
+\end{enumerate}
+
+\end{document}

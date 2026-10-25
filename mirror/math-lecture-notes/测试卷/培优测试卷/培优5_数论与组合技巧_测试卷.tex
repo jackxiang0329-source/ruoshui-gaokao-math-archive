@@ -1,0 +1,176 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·数论与组合技巧}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 培优专题·数论与组合技巧 测试卷}\\[0.5em]
+{\normalsize 满分150分\quad 考试时间120分钟}
+\end{center}
+
+\vspace{0.5em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题意。）}
+
+\begin{enumerate}[label=\Alph*.]
+
+\item $2^{2023}$除以$7$的余数为（\quad）
+\begin{enumerate}[label=]
+\item $1$ \qquad \item $2$ \qquad \item $4$ \qquad \item $8$
+\end{enumerate}
+
+\item 从$1,2,3,\ldots,20$中任取$3$个不同的数，使得这三个数之和能被$3$整除的取法数为（\quad）
+\begin{enumerate}[label=]
+\item $\mathrm{C}_{20}^3$ \qquad \item $\dfrac{\mathrm{C}_{20}^3}{3}$ \qquad \item $380$ \qquad \item $220$
+\end{enumerate}
+
+\item 不定方程$x+y+z=10$的非负整数解的个数为（\quad）
+\begin{enumerate}[label=]
+\item $\mathrm{C}_{10}^2$ \qquad \item $\mathrm{C}_{12}^2$ \qquad \item $\mathrm{C}_{9}^2$ \qquad \item $\mathrm{C}_{11}^2$
+\end{enumerate}
+
+\item 用$0,1,2,3,4,5$组成没有重复数字的四位偶数，共有（\quad）
+\begin{enumerate}[label=]
+\item $156$个 \qquad \item $168$个 \qquad \item $180$个 \qquad \item $192$个
+\end{enumerate}
+
+\item 已知$23!$的质因数分解中，$2$的幂次为$\alpha$，则$\alpha$等于（\quad）
+\begin{enumerate}[label=]
+\item $18$ \qquad \item $19$ \qquad \item $20$ \qquad \item $21$
+\end{enumerate}
+
+\item $\mathrm{C}_n^0+\mathrm{C}_n^1+\mathrm{C}_n^2+\cdots+\mathrm{C}_n^n=256$，则$n$等于（\quad）
+\begin{enumerate}[label=]
+\item $6$ \qquad \item $7$ \qquad \item $8$ \qquad \item $9$
+\end{enumerate}
+
+\item $7^{100}$的末两位数字为（\quad）
+\begin{enumerate}[label=]
+\item $01$ \qquad \item $07$ \qquad \item $49$ \qquad \item $43$
+\end{enumerate}
+
+\item 从$5$名男生和$4$名女生中选$4$人参加比赛，要求至少$2$名男生和至少$1$名女生，共有（\quad）
+\begin{enumerate}[label=]
+\item $80$种 \qquad \item $100$种 \qquad \item $105$种 \qquad \item $120$种
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item 关于二项式定理，下列结论正确的是（\quad）
+\begin{enumerate}[label=]
+\item $(1+x)^n$的展开式中，$x^r$的系数为$\mathrm{C}_n^r$
+\item $\mathrm{C}_n^0+\mathrm{C}_n^2+\mathrm{C}_n^4+\cdots=2^{n-1}$
+\item $\mathrm{C}_n^0-\mathrm{C}_n^1+\mathrm{C}_n^2-\cdots+(-1)^n\mathrm{C}_n^n=0$
+\item $\mathrm{C}_n^1+2\mathrm{C}_n^2+3\mathrm{C}_n^3+\cdots+n\mathrm{C}_n^n=n\cdot 2^{n-1}$
+\end{enumerate}
+
+\item 关于整除性，下列结论正确的是（\quad）
+\begin{enumerate}[label=]
+\item $n^3-n$能被$6$整除（$n$为整数）
+\item $n^5-n$能被$30$整除（$n$为整数）
+\item $2^{2n}-1$能被$3$整除（$n$为正整数）
+\item $3^{2n}-1$能被$8$整除（$n$为正整数）
+\end{enumerate}
+
+\item 关于组合恒等式，下列结论正确的是（\quad）
+\begin{enumerate}[label=]
+\item $\mathrm{C}_n^k=\mathrm{C}_n^{n-k}$
+\item $\mathrm{C}_n^k=\mathrm{C}_{n-1}^{k-1}+\mathrm{C}_{n-1}^k$
+\item $\mathrm{C}_n^0+\mathrm{C}_n^1+\cdots+\mathrm{C}_n^n=2^n$
+\item $(\mathrm{C}_n^0)^2+(\mathrm{C}_n^1)^2+\cdots+(\mathrm{C}_n^n)^2=\mathrm{C}_{2n}^n$
+\end{enumerate}
+
+\item 关于排列组合计数，下列结论正确的是（\quad）
+\begin{enumerate}[label=]
+\item $n$个不同元素的全排列数为$n!$
+\item 将$n$个相同元素分给$r$个人（每人至少$1$个）的方法数为$\mathrm{C}_{n-1}^{r-1}$
+\item $n$个不同元素中取$r$个的组合数为$\dfrac{n!}{r!(n-r)!}$
+\item 圆排列（旋转相同视为同一排列）数为$\dfrac{n!}{n}$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item $100!$末尾连续$0$的个数为 \underline{\hspace{3cm}}。
+
+\item $(2x-1)^5$的展开式中$x^3$的系数为 \underline{\hspace{3cm}}。
+
+\item 用红、黄、蓝三种颜色给一个正四面体的四个面染色，每个面染一种颜色，要求相邻面颜色不同，共有 \underline{\hspace{3cm}}种不同的染色方法。
+
+\item $2^{100}$除以$13$的余数为 \underline{\hspace{3cm}}。
+
+\end{enumerate}
+
+\vspace{0.5em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item （本小题满分10分）\\
+求证：\\
+（1）$n^3-n$能被$6$整除（$n$为任意整数）；\\
+（2）$2^{2n+1}+1$能被$3$整除（$n$为正整数）。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+求$\mathrm{C}_{20}^0+\mathrm{C}_{20}^3+\mathrm{C}_{20}^6+\cdots+\mathrm{C}_{20}^{18}$的值。（提示：利用$(1+1)^{20}$、$(1+\omega)^{20}$、$(1+\omega^2)^{20}$，其中$\omega$为$1$的三次虚根。）
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+（1）证明：$(\mathrm{C}_n^0)^2+(\mathrm{C}_n^1)^2+\cdots+(\mathrm{C}_n^n)^2=\mathrm{C}_{2n}^n$；\\
+（2）利用(1)的结论求$(\mathrm{C}_5^0)^2+(\mathrm{C}_5^1)^2+\cdots+(\mathrm{C}_5^5)^2$的值。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+一个袋子里有$6$个白球和$4$个黑球，从中任取$5$个球。\\
+（1）求恰好取到$3$个白球和$2$个黑球的概率；\\
+（2）求至少取到$3$个白球的概率；\\
+（3）若将取出的$5$个球排成一排，求两端都是白球的排列数。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+证明费马小定理：若$p$为素数，$a$为不被$p$整除的正整数，则$a^{p-1}\equiv 1\pmod{p}$。\\
+（1）利用$0,1,2,\ldots,p-1$的完全剩余系构造证明思路；\\
+（2）利用费马小定理求$2^{100}\pmod{13}$的值；\\
+（3）利用费马小定理证明：$p$为素数时，$\mathrm{C}_p^k$（$1\leq k\leq p-1$）能被$p$整除。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+（1）证明：任意$5$个整数中，必存在两个数，它们的差能被$4$整除；\\
+（2）从$\{1,2,3,\ldots,2n\}$中任取$n+1$个数，证明其中必存在两个数，一个数是另一个数的倍数；\\
+（3）将$1,2,3,\ldots,10$任意排列为$a_1,a_2,\ldots,a_{10}$，证明$|a_1-1|+|a_2-2|+\cdots+|a_{10}-10|$为偶数。
+\vspace{6cm}
+
+\end{enumerate}
+
+\end{document}

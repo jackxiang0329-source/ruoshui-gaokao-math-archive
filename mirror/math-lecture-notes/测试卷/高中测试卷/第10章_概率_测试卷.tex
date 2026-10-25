@@ -1,0 +1,239 @@
+% ============================================================
+% 测试卷 — 第10章 概率
+% ============================================================
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\definecolor{mainblue}{RGB}{41, 98, 168}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{mainblue}{2025-2026学年度·第10章测试卷}}
+\fancyhead[R]{\small\textcolor{mainblue}{数学（必修第二册）}}
+\fancyfoot[C]{\small —\ \thepage\ —}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{mainblue}\leaders\hrule height \headrulewidth\hfill}}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 第10章\quad 概率\quad 测试卷}\\[6pt]
+{\normalsize 数学（必修第二册）}\\[4pt]
+{\small 考试时间：120分钟\quad 满分：150分}
+\end{center}
+
+\vspace{2pt}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+题号 & 一 & 二 & 三 & 四 & 总分 \\ \hline
+得分 & & & & & \\ \hline
+\end{tabular}
+\end{center}
+\vspace{4pt}
+
+\noindent\textbf{注意事项：}
+\begin{enumerate}[leftmargin=2em]
+  \item 答题前，请在答题卡上填写姓名、班级和考号。
+  \item 选择题请用2B铅笔在答题卡上涂黑对应选项。
+  \item 非选择题请用黑色签字笔在答题卡指定区域作答。
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 一、单项选择题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 一、单项选择题}（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题目要求。）
+
+\vspace{6pt}
+
+\begin{enumerate}
+\item 下列试验中，是古典概型的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 在平面直角坐标系中随机取一点
+    \item 掷一枚质地均匀的骰子，观察出现的点数
+    \item 某人射击一次，观察命中的环数
+    \item 在区间 $[0,10]$ 上任取一个数
+  \end{enumerate}
+
+\item 从一副 $52$ 张扑克牌（不含大小王）中随机抽取一张，抽到红心的概率为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $\dfrac{1}{4}$ \quad \item $\dfrac{1}{13}$ \quad \item $\dfrac{1}{2}$ \quad \item $\dfrac{1}{52}$
+  \end{enumerate}
+
+\item 同时掷两枚质地均匀的骰子，点数之和为 $7$ 的概率为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $\dfrac{1}{6}$ \quad \item $\dfrac{1}{12}$ \quad \item $\dfrac{5}{36}$ \quad \item $\dfrac{7}{36}$
+  \end{enumerate}
+
+\item 已知事件 $A$ 与事件 $B$ 互斥，$P(A)=0.3$，$P(B)=0.5$，则 $P(A\cup B)=$（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $0.15$ \quad \item $0.65$ \quad \item $0.8$ \quad \item $0.2$
+  \end{enumerate}
+
+\item 某人投篮的命中率为 $0.6$，连续投篮 $3$ 次，恰好命中 $2$ 次的概率为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $0.288$ \quad \item $0.432$ \quad \item $0.216$ \quad \item $0.648$
+  \end{enumerate}
+
+\item 已知事件 $A$、$B$ 相互独立，$P(A)=\dfrac{1}{3}$，$P(B)=\dfrac{1}{4}$，则 $P(A\cup B)=$（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $\dfrac{5}{12}$ \quad \item $\dfrac{1}{2}$ \quad \item $\dfrac{7}{12}$ \quad \item $\dfrac{1}{12}$
+  \end{enumerate}
+
+\item 从 $1,2,3,4,5$ 五个数字中随机取出两个不同的数字，其和为偶数的概率为（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $\dfrac{2}{5}$ \quad \item $\dfrac{3}{10}$ \quad \item $\dfrac{1}{2}$ \quad \item $\dfrac{7}{10}$
+  \end{enumerate}
+
+\item 已知 $P(A)=0.4$，$P(B|A)=0.5$，则 $P(A\cap B)=$（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $0.1$ \quad \item $0.2$ \quad \item $0.3$ \quad \item $0.9$
+  \end{enumerate}
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 二、多项选择题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 二、多项选择题}（本大题共4小题，每小题5分，共20分。全部选对得5分，部分选对得2分，有选错的得0分。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item 已知事件 $A$、$B$，且 $P(A)=0.4$，$P(B)=0.5$，$P(B|A)=0.5$，则（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $P(A\cap B)=0.2$
+    \item $P(A|B)=0.4$
+    \item $P(A\cup B)=0.7$
+    \item $A$ 与 $B$ 相互独立
+  \end{enumerate}
+
+\item 掷一枚质地均匀的硬币 $3$ 次，记正面朝上的次数为 $X$，则（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item $P(X=0)=\dfrac{1}{8}$
+    \item $P(X=1)=\dfrac{3}{8}$
+    \item $P(X\leqslant 1)=\dfrac{1}{2}$
+    \item $E(X)=\dfrac{3}{2}$
+  \end{enumerate}
+
+\item 从 $1,2,3,4,5$ 五个数字中有放回地取两次，每次取一个数字，记事件 $A$ 为"两次取出的数字之和为 $6$"，则（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 样本空间包含 $25$ 个基本事件
+    \item $P(A)=\dfrac{1}{5}$
+    \item 事件 $A$ 包含 $4$ 个基本事件
+    \item $P(A)=\dfrac{4}{25}$
+  \end{enumerate}
+
+\item 下列关于概率的说法正确的是（\quad）
+  \begin{enumerate}[label=\Alph*., itemsep=0pt]
+    \item 必然事件的概率为 $1$
+    \item 若 $A\subseteq B$，则 $P(A)\leqslant P(B)$
+    \item 若 $A$ 与 $B$ 互斥，则 $P(A\cap B)=0$
+    \item 对任意事件 $A$，$0\leqslant P(A)\leqslant 1$
+  \end{enumerate}
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 三、填空题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 三、填空题}（本大题共4小题，每小题5分，共20分。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item 掷一枚质地均匀的骰子，出现偶数点的概率为 \underline{\hspace{2cm}}。
+
+\item 已知 $P(A)=0.3$，则 $P(\bar{A})=$ \underline{\hspace{2cm}}。
+
+\item 掷一枚硬币 $5$ 次，恰好出现 $3$ 次正面朝上的概率为 \underline{\hspace{2cm}}。
+
+\item 已知事件 $A$、$B$ 相互独立，$P(A)=0.4$，$P(B)=0.6$，则 $P(A\cup B)=$ \underline{\hspace{2cm}}。
+\end{enumerate}
+
+\vspace{6pt}
+
+% ============ 四、解答题 ============
+\noindent\rule{\textwidth}{0.4pt}\\[2pt]
+{\large\bfseries 四、解答题}（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）
+
+\vspace{6pt}
+
+\begin{enumerate}[resume]
+\item[17.]（本小题10分）\\
+袋中有 $3$ 个红球和 $5$ 个白球，这些球除颜色外完全相同。从袋中随机取出 $2$ 个球（不放回）。
+\begin{enumerate}[(1)]
+  \item 求取出的 $2$ 个球都是白球的概率；
+  \item 求取出的 $2$ 个球中至少有 $1$ 个红球的概率。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[18.]（本小题12分）\\
+某同学参加一次考试，共有 $5$ 道选择题，每道题有 $4$ 个选项，其中只有 $1$ 个正确。该同学每道题都随机猜测答案。
+\begin{enumerate}[(1)]
+  \item 求恰好答对 $3$ 道题的概率；
+  \item 求至少答对 $2$ 道题的概率。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[19.]（本小题12分）\\
+同时掷两枚质地均匀的骰子，观察出现的点数。设事件 $A$ 为"点数之和为 $7$"，事件 $B$ 为"至少有一枚骰子的点数为 $6$"。
+\begin{enumerate}[(1)]
+  \item 求 $P(A)$ 和 $P(B)$；
+  \item 求 $P(A\cap B)$；
+  \item 判断 $A$ 与 $B$ 是否相互独立。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[20.]（本小题12分）\\
+一个口袋中装有 $3$ 个红球和 $2$ 个白球，这些球除颜色外完全相同。从袋中随机取出 $2$ 个球（不放回），设 $X$ 为取出的红球个数。
+\begin{enumerate}[(1)]
+  \item 求 $X$ 的概率分布列；
+  \item 求 $E(X)$。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[21.]（本小题12分）\\
+一批产品共 $100$ 件，其中有 $5$ 件次品。从这批产品中随机抽取 $3$ 件进行检验。
+\begin{enumerate}[(1)]
+  \item 求恰好抽到 $1$ 件次品的概率；
+  \item 求至少抽到 $1$ 件次品的概率。
+\end{enumerate}
+
+\vspace{6cm}
+
+\item[22.]（本小题12分）\\
+甲袋中有 $3$ 个红球和 $2$ 个白球，乙袋中有 $2$ 个红球和 $3$ 个白球。从两个袋中各随机取出 $1$ 个球。
+\begin{enumerate}[(1)]
+  \item 求取出的两个球颜色相同的概率；
+  \item 求取出的两个球中至少有 $1$ 个红球的概率；
+  \item 在取出的两个球中已知至少有 $1$ 个红球的条件下，求两个球颜色相同的概率。
+\end{enumerate}
+
+\vspace{6cm}
+\end{enumerate}
+
+\vfill
+\begin{center}
+\small\textcolor{gray}{本试卷仅供教学参考}
+\end{center}
+
+\end{document}

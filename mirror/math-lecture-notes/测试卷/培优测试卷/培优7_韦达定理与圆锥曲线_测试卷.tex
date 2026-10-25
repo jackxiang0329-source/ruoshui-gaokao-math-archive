@@ -1,0 +1,182 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{培优专题·韦达定理与圆锥曲线}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 培优专题·韦达定理与圆锥曲线 测试卷}\\[0.5em]
+{\normalsize 满分150分\quad 考试时间120分钟}
+\end{center}
+
+\vspace{0.5em}
+
+\noindent\textbf{一、单项选择题（本大题共8小题，每小题5分，共40分。每小题只有一个选项符合题意。）}
+
+\begin{enumerate}[label=\Alph*.]
+
+\item 已知方程$x^2-3x+1=0$的两根为$x_1$、$x_2$，则$x_1^2+x_2^2$的值为（\quad）
+\begin{enumerate}[label=]
+\item $7$ \qquad \item $9$ \qquad \item $11$ \qquad \item $5$
+\end{enumerate}
+
+\item 直线$y=x+1$与椭圆$\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$的交点个数为（\quad）
+\begin{enumerate}[label=]
+\item $0$ \qquad \item $1$ \qquad \item $2$ \qquad \item $3$
+\end{enumerate}
+
+\item 已知椭圆$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的离心率为$\dfrac{1}{2}$，则$\dfrac{b}{a}$等于（\quad）
+\begin{enumerate}[label=]
+\item $\dfrac{\sqrt{3}}{2}$ \qquad \item $\dfrac{1}{2}$ \qquad \item $\dfrac{\sqrt{2}}{2}$ \qquad \item $\dfrac{\sqrt{5}}{3}$
+\end{enumerate}
+
+\item 已知双曲线$\dfrac{x^2}{4}-\dfrac{y^2}{5}=1$，则其渐近线方程为（\quad）
+\begin{enumerate}[label=]
+\item $y=\pm\dfrac{\sqrt{5}}{2}x$ \qquad \item $y=\pm\dfrac{2}{\sqrt{5}}x$ \qquad \item $y=\pm\dfrac{5}{2}x$ \qquad \item $y=\pm\dfrac{\sqrt{5}}{4}x$
+\end{enumerate}
+
+\item 过抛物线$y^2=8x$的焦点$F$且斜率为$1$的直线$l$与抛物线交于$A$、$B$两点，则$|AB|=$（\quad）
+\begin{enumerate}[label=]
+\item $8$ \qquad \item $12$ \qquad \item $16$ \qquad \item $20$
+\end{enumerate}
+
+\item 已知方程$x^2+px+q=0$的两根之比为$2:3$，两根之积为$6$，则$p+q$等于（\quad）
+\begin{enumerate}[label=]
+\item $-11$ \qquad \item $11$ \qquad \item $-1$ \qquad \item $1$
+\end{enumerate}
+
+\item 椭圆$\dfrac{x^2}{9}+\dfrac{y^2}{4}=1$的焦点为$F_1$、$F_2$，$P$为椭圆上一点，若$\angle F_1PF_2=60°$，则$\triangle F_1PF_2$的面积为（\quad）
+\begin{enumerate}[label=]
+\item $\sqrt{3}$ \qquad \item $\dfrac{4\sqrt{3}}{3}$ \qquad \item $2\sqrt{3}$ \qquad \item $3\sqrt{3}$
+\end{enumerate}
+
+\item 已知抛物线$y^2=4x$的弦$AB$过焦点$F$，且$|AF|=3$，$|BF|=1$，则$|AB|$等于（\quad）
+\begin{enumerate}[label=]
+\item $3$ \qquad \item $4$ \qquad \item $5$ \qquad \item $\dfrac{12}{5}$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5em}
+
+\noindent\textbf{二、多项选择题（本大题共4小题，每小题5分，共20分。全部选对得5分，部分选对得2分，有选错的得0分。）}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item 关于椭圆$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$），下列结论正确的是（\quad）
+\begin{enumerate}[label=]
+\item $c^2=a^2-b^2$，其中$c$为半焦距
+\item 离心率$e=\dfrac{c}{a}$，且$0<e<1$
+\item 焦点到对应准线的距离为$\dfrac{a^2}{c}-c=\dfrac{b^2}{c}$
+\item 通径长为$\dfrac{2b^2}{a}$
+\end{enumerate}
+
+\item 关于双曲线$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$（$a>0$，$b>0$），下列结论正确的是（\quad）
+\begin{enumerate}[label=]
+\item $c^2=a^2+b^2$，其中$c$为半焦距
+\item 离心率$e>1$
+\item 渐近线方程为$y=\pm\dfrac{b}{a}x$
+\item 实轴长为$2a$，虚轴长为$2b$
+\end{enumerate}
+
+\item 过抛物线$y^2=2px$（$p>0$）的焦点$F$作弦$AB$，下列结论正确的是（\quad）
+\begin{enumerate}[label=]
+\item $|AF|+|BF|\geq 2p$
+\item 当$AB\perp x$轴时，$|AB|=2p$
+\item $\dfrac{1}{|AF|}+\dfrac{1}{|BF|}=\dfrac{2}{p}$
+\item $|AB|=x_1+x_2+p$，其中$A(x_1,y_1)$，$B(x_2,y_2)$
+\end{enumerate}
+
+\item 关于直线与圆锥曲线的位置关系，下列说法正确的是（\quad）
+\begin{enumerate}[label=]
+\item 直线与椭圆相切时，联立方程的判别式$\Delta=0$
+\item 直线与双曲线相切时，联立方程的判别式$\Delta=0$
+\item 过抛物线焦点的弦中，通径是最短的焦点弦
+\item 椭圆的焦点弦长可用$|AB|=\dfrac{2ab^2}{a^2-c^2\cos^2\theta}$表示（$\theta$为弦与长轴的夹角）
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{0.5em}
+
+\noindent\textbf{三、填空题（本大题共4小题，每小题5分，共20分。）}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item 已知方程$2x^2-5x+2=0$的两根为$x_1$、$x_2$，则$\dfrac{1}{x_1}+\dfrac{1}{x_2}=$ \underline{\hspace{3cm}}。
+
+\item 已知椭圆$\dfrac{x^2}{25}+\dfrac{y^2}{16}=1$，过右焦点$F$且垂直于长轴的弦长为 \underline{\hspace{3cm}}。
+
+\item 直线$y=kx+1$与椭圆$\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$有两个交点，则$k$的取值范围为 \underline{\hspace{3cm}}。
+
+\item 已知抛物线$y^2=4x$，$F$为焦点，$A(2,2)$为定点，$P$为抛物线上一点，则$|PF|+|PA|$的最小值为 \underline{\hspace{3cm}}。
+
+\end{enumerate}
+
+\vspace{0.5em}
+
+\noindent\textbf{四、解答题（本大题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。）}
+
+\begin{enumerate}[label=\arabic*.]
+
+\item （本小题满分10分）\\
+已知直线$l:y=kx+1$与椭圆$\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$交于$A(x_1,y_1)$、$B(x_2,y_2)$两点。\\
+（1）求$k$的取值范围；\\
+（2）当$x_1+x_2=\dfrac{8}{7}$时，求$k$的值及$|AB|$的长度。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+已知抛物线$y^2=8x$，$F$为焦点，过$F$作弦$AB$。\\
+（1）若$|AF|=4$，求$|BF|$；\\
+（2）若$AB\perp x$轴，求$|AB|$；\\
+（3）求$|AB|$的最小值。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+已知椭圆$\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$，$F_1$为左焦点，$F_2$为右焦点，过$F_1$的直线$l$交椭圆于$A$、$B$两点。\\
+（1）求$\triangle ABF_2$的周长；\\
+（2）若$l\perp x$轴，求$\triangle ABF_2$的面积；\\
+（3）求$\overrightarrow{AF_1}\cdot\overrightarrow{BF_1}$的取值范围。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+已知双曲线$\dfrac{x^2}{4}-\dfrac{y^2}{3}=1$，$F_1$、$F_2$分别为左、右焦点。\\
+（1）求双曲线的离心率和渐近线方程；\\
+（2）过$F_2$作直线$l$与双曲线右支交于$A$、$B$两点，若$|AB|=8$，求$l$的斜率；\\
+（3）证明：以$AB$为直径的圆过$F_2$。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+已知椭圆$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的离心率为$\dfrac{\sqrt{2}}{2}$，且过点$(1,\dfrac{\sqrt{2}}{2})$。\\
+（1）求椭圆方程；\\
+（2）过点$P(0,1)$作直线$l$与椭圆交于$A$、$B$两点，求$\triangle OAB$面积的最大值（$O$为原点）；\\
+（3）设$Q$为椭圆上异于$A$、$B$的点，且$\overrightarrow{QA}\cdot\overrightarrow{QB}=0$，求$Q$的轨迹方程。
+\vspace{6cm}
+
+\item （本小题满分12分）\\
+已知抛物线$C:y^2=4x$，$F$为焦点，$A(x_0,y_0)$为$C$上一点（$x_0>0$），过$A$作$C$的切线$l_1$，过$B$作$C$的切线$l_2$，$A$、$B$为不同的两点。\\
+（1）求$C$在点$A$处的切线方程（用$x_0$、$y_0$表示）；\\
+（2）若$A(1,2)$，$l_1$与$l_2$交于点$M(3,0)$，求$B$点坐标；\\
+（3）证明：$\triangle AFB$中，$|AF|+|BF|\geq 2|AB|$。
+\vspace{6cm}
+
+\end{enumerate}
+
+\end{document}
