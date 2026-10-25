@@ -3,21 +3,21 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 1158,
-  "missing": 6064,
+  "verified": 1296,
+  "missing": 5926,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
-      "verified": 133,
-      "missing": 240,
+      "verified": 172,
+      "missing": 201,
       "complete": false
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 223,
-      "missing": 5323,
+      "verified": 322,
+      "missing": 5224,
       "complete": false
     },
     {
@@ -89,7 +89,19 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25: Current snapshot independently compared 11 pinned upstream recursive Git trees against repository Git blobs/modes. Since preceding 952-file snapshot, added 206 verified files: 141 historical 1952-1994 exam TeX and 65 math lecture/test TeX. Six sources complete; 6064 files remain (about 582.1 MB). Includes 46 missing blobs of at least 1 MB. Pinned original file SHA/mode does not certify exam authenticity, mathematics, compilation or permissions. Automated GitHub Actions jobs previously failed without logs.",
-  "remaining_bytes": 582105389,
-  "missing_blobs_at_least_1mb": 46
+  "note": "2026-10-25 latest GitHub Git-tree audit: relative to baseline cd405ded34e1100763c2a9ac69cce870335fe651, 138 physical Git blobs were imported; all 138 match upstream pinned SHA and mode (39 math-lecture-notes, 61 compilation index, 38 compilation 2013 exams). Total verified 1296/7222, remaining 5926 files and 580209500 original bytes. Six of 11 sources complete. No claim of mathematical/compilation/licensing validation or successful GitHub Actions execution.",
+  "remaining_bytes": 580209500,
+  "missing_blobs_at_least_1mb": 46,
+  "latest_direct_import": {
+    "baseline_commit": "cd405ded34e1100763c2a9ac69cce870335fe651",
+    "mirror_commit": "651d9f893718bf7171601ad3ddd93ed50181f3b2",
+    "new_verified": 138,
+    "new_bytes": 1895889,
+    "group_counts": {
+      "math-lecture-notes": 39,
+      "gaokao-math-problems-compilation/index": 61,
+      "gaokao-math-problems-compilation/content/2013": 38
+    },
+    "sha_and_mode_mismatches": 0
+  }
 }

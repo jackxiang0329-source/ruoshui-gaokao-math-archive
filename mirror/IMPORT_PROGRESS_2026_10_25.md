@@ -1,11 +1,11 @@
 # 11 源仓库实体导入进展：2026-10-25
 
-固定版源文件数 **7,222**；严格 Git Blob SHA + 文件模式均一致 **1,158**；剩余 **6,064**；完整来源仓库 **6/11**。
+固定版源文件数 **7,222**；严格 Git Blob SHA + 文件模式均一致 **1,296**；剩余 **5,926**；完整来源仓库 **6/11**。
 
 | 来源 | 应有 | 已严格匹配 | 仍待实体入库 |
 |---|---:|---:|---:|
-| `math-lecture-notes` | 373 | 133 | 240 |
-| `gaokao-math-problems-compilation` | 5546 | 223 | 5323 |
+| `math-lecture-notes` | 373 | 172 | 201 |
+| `gaokao-math-problems-compilation` | 5546 | 322 | 5224 |
 | `gaokaomath` | 782 | 287 | 495 |
 | `first-round-review` | 47 | 43 | 4 |
 | `gaokao-math-corpus` | 207 | 207 | 0 |
@@ -15,6 +15,15 @@
 | `daxmate-math` | 21 | 21 | 0 |
 | `math-atlas` | 110 | 110 | 0 |
 | `mathex` | 72 | 72 | 0 |
+
+## 最新 GitHub 提交批次：新增 138 个真实 Blob（已独立核对）
+
+- 本次相对基线提交 `cd405ded34e1100763c2a9ac69cce870335fe651` 新增 138 个严格匹配源 SHA/模式的文件：`math-lecture-notes` 增 39 个、`gaokao-math-problems-compilation` 增 99 个。
+- 完成 `content/2013/` 38/38 个 TeX 文件和 `index/` 64/64 个 TeX 年份索引的实体一致性核对；39 个高中数学 TeX/说明亦全部匹配锁定上游。
+- 累计 **1,296 / 7,222**；缺失 **5,926**；尚余源文件原始大小约 **580,209,500 字节**，完整来源仍 **6 / 11**。
+- Git Blob 一致不代表数学正确、排版合格或已获得版权授权。尚未完成 GitHub Actions runner 验收和大型 PDF/PNG/DOCX 的全量导入。
+
+## 以下为本日较早导入批次的历史记录
 
 ## 本轮已提交的文件
 
