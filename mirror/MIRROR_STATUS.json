@@ -3,27 +3,27 @@
   "method": "Compare mirror/<id>/path Git blob SHA against fixed upstream commit tree",
   "full": 6,
   "expected": 7222,
-  "verified": 539,
+  "verified": 719,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
-      "verified": 10,
-      "missing": 363,
+      "verified": 44,
+      "missing": 329,
       "complete": false
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 20,
-      "missing": 5526,
+      "verified": 35,
+      "missing": 5511,
       "complete": false
     },
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 0,
-      "missing": 782,
+      "verified": 125,
+      "missing": 657,
       "complete": false
     },
     {
@@ -57,8 +57,8 @@
     {
       "id": "mathpaper",
       "expected": 39,
-      "verified": 31,
-      "missing": 8,
+      "verified": 37,
+      "missing": 2,
       "complete": false
     },
     {
@@ -88,5 +88,5 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "Physically imported objects only: verify exact upstream Git Blob SHA for each mirror/ path. Full mirror 6/11. Binary files >1MB may be uncopyable through the connector; GitHub Actions runner failed before steps."
+  "note": "Compared main Git tree to the eleven pinned upstream trees, SHA for SHA. 2016 PDF entries blocked by safety check remain missing. No math correctness implied."
 }
