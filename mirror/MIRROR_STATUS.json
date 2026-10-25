@@ -3,7 +3,7 @@
   "method": "Compare mirror/<id>/path Git blob SHA against fixed upstream commit tree",
   "full": 6,
   "expected": 7222,
-  "verified": 755,
+  "verified": 767,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -22,8 +22,8 @@
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 161,
-      "missing": 621,
+      "verified": 173,
+      "missing": 609,
       "complete": false
     },
     {
@@ -88,5 +88,5 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25: Four remaining 2016 PDFs were imported byte-for-byte from fixed upstream commit and each newly created Git blob SHA was verified. Other upstream files not reassessed in this change; mathematical correctness not implied."
+  "note": "2026-10-25: Four missing 2016 PDFs and first 12 files from 2013 were individually imported from pinned upstream with matching Git Blob SHA; existing records not reaudited."
 }
