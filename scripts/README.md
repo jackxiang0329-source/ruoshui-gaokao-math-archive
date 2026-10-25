@@ -7,3 +7,6 @@
 固定版本核验：`python3 scripts/validate_pinned_sources.py --index-only`（仅 Git 索引，无须下载子模块）；克隆子模块后运行 `python3 scripts/validate_pinned_sources.py` 严格对比 HEAD。同步不再使用 `--remote`，更换上游版本须显式修改锁定 SHA 与 gitlink 后复核。
 
 轻量离线质检：`.github/workflows/audit-archive.yml` 会运行单元测试、题目级索引及审核溯源校验。数学正确性与 XeLaTeX 编译另行验收。
+
+
+重新核算固定版本镜像数量：`python3 scripts/audit_mirror_inventory.py --output mirror/MIRROR_STATUS.json`。需要先递归检出所有 11 个上游子模块。该脚本按 **HEAD Git SHA + mode** 统计，不把子模块 gitlink 或索引路径算作完整文件。运行后先审阅本地 JSON，再自行提交。独立单元测试在 `tests/test_audit_mirror_inventory.py`。

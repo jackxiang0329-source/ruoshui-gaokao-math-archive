@@ -36,3 +36,17 @@
 - **源文件 SHA/模式一致 ≠ LaTeX 编译通过 ≠ 数学解析正确 ≠ 已取得第三方内容再分发授权**。以上另行检查。
 
 [机器可读状态](MIRROR_STATUS.json) · [镜像脚本](../scripts/mirror_all_upstream.sh)
+
+
+## 可重复的镜像完整度审计
+
+已经递归检出 11 个固定版本的上游子模块后，可用
+
+```bash
+python3 scripts/validate_pinned_sources.py
+python3 scripts/audit_mirror_inventory.py --output mirror/MIRROR_STATUS.json
+```
+
+重新读取 **本仓库 HEAD 的实际 Git 对象**，计算逐来源的期望文件、SHA 与模式严格匹配的文件、缺失／模式不一致文件及多余文件。该命令只输出本地统计文件，不自动修改 GitHub；需审核差异再提交。单来源可加 `--source SOURCE_ID`。
+
+该工具检测镜像完整度，而不是数学证明、PDF 排版或版权。自动质检没有获得正常 GitHub Runner 日志之前，不能声明 CI 通过。
