@@ -8,7 +8,7 @@
 
 | 年份 | 卷种 | 题号 | 题目侧重 | 归类 | 校验阶段 |
 |---:|---|---:|---|---|---|
-| 2023 | 北京卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/beijing.tex#L627) | 求导、切线与极值点计数 | core | source-identified |
+| 2023 | 北京卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/beijing.tex#L627) | 求导、切线与极值点计数 | core | math-checked |
 | 2023 | 全国甲卷文科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_a_liberal.tex#L384) | 三角有理函数单调性与参数不等式 | core | source-identified |
 | 2023 | 全国甲卷理科 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_a_science.tex#L537) | 含参函数单调性与恒成立 | core | source-identified |
 | 2023 | 全国乙卷文科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_b_liberal.tex#L246) | 对数函数切线与单调性 | core | source-identified |
@@ -42,7 +42,7 @@
 - `application`：题目主体不是传统导数大题，但部分小问涉及求导/切线。
 - `needs-review`：涉及函数优化，尚需人工确认导数是否为主要方法。
 - `source-identified`：已定位上游题目及题号，数学解析尚未独立验证。
-- `math-checked`：目前仅 2024 新高考Ⅰ卷第18题与Ⅱ卷第16题，已有独立重写解答，核查参数端点、定义域、关键计算；不涵盖原来源全文。
+- `math-checked`：已有 2023 北京卷等题完成独立数学核验；准确列表以主索引及 review-provenance.json 为准，不涵盖原来源全文。
 
 每条来源链接锚定上游固定提交及文件中该题 `\begin{problem}` 的起始行；原作者素材仍保留原许可。
 

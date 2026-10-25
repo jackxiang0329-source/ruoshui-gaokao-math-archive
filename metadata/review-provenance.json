@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "checked_count": 15,
-  "distinct_proof_documents": 12,
+  "checked_count": 16,
+  "distinct_proof_documents": 13,
   "review_policy": "math-checked means independent mathematical derivation, not compilation or full paper correctness.",
   "entries": [
     {
@@ -65,6 +65,13 @@
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_liberal.tex#L418",
       "review_status": "math-checked",
       "proof_path": "derivative/reviewed/2019-national2-liberal-q21.md",
+      "latex_compiled_this_round": false
+    },
+    {
+      "question_id": "2023-beijing-q20",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/beijing.tex#L627",
+      "review_status": "math-checked",
+      "proof_path": "derivative/reviewed/2023-beijing-q20.md",
       "latex_compiled_this_round": false
     },
     {

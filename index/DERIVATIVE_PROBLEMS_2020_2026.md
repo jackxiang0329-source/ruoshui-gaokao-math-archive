@@ -35,7 +35,7 @@
 | 2022 | 新高考Ⅰ卷 | [22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2022/new_gaokao_paper_1.tex#L519) | 两函数同最小值与三交点 | core | 待独立核算 |
 | 2022 | 新高考Ⅱ卷 | [22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2022/new_gaokao_paper_2.tex#L598) | 指数函数单调、参数与对数不等式 | core | 待独立核算 |
 | 2022 | 浙江卷 | [22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2022/zhejiang.tex#L360) | 对数分式函数单调与三切线 | core | 待独立核算 |
-| 2023 | 北京卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/beijing.tex#L627) | 求导、切线与极值点计数 | core | 待独立核算 |
+| 2023 | 北京卷 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/beijing.tex#L627) | 求导、切线与极值点计数 | core | 已独立核验 |
 | 2023 | 全国甲卷理科 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_a_science.tex#L537) | 含参函数单调性与恒成立 | core | 待独立核算 |
 | 2023 | 全国甲卷文科 | [20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_a_liberal.tex#L384) | 三角有理函数单调性与参数不等式 | core | 待独立核算 |
 | 2023 | 全国乙卷理科 | [21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_b_science.tex#L346) | 对数函数切线、对称性与极值 | core | 待独立核算 |

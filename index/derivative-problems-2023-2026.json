@@ -10,7 +10,7 @@
       "problem_number": 20,
       "type": "core",
       "topic": "求导、切线与极值点计数",
-      "stage": "source-identified",
+      "stage": "math-checked",
       "source_id": "gaokao-math-problems-compilation",
       "source_path": "content/2023/beijing.tex",
       "source_line": 627,

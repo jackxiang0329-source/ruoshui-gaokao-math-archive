@@ -81,10 +81,11 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 - [2025 上海卷第19题证明](derivative/reviewed/2025-shanghai-q19.md) / [TeX](derivative/reviewed/2025-shanghai-q19.tex) / [2025 全国Ⅱ卷第18题证明](derivative/reviewed/2025-national2-q18.md) / [TeX](derivative/reviewed/2025-national2-q18.tex)
 - [2025 北京卷第20题转录顺序冲突审计](derivative/reviewed/2025-beijing-q20-transcription-audit.md)：暂不升格数学核验
 - [第七轮审校报告](metadata/ROUND_07_REPORT.md)
+- [第八轮质检与版本锁定记录](metadata/ROUND_08_REPORT.md) / [2023 北京卷第20题](derivative/reviewed/2023-beijing-q20.md) / [TeX](derivative/reviewed/2023-beijing-q20.tex)
 - [机器扫描候选](scripts/scan_derivative_questions.py)、[索引一致性脚本](scripts/validate_question_index.py)、[第五轮报告](metadata/ROUND_05_REPORT.md)
 
-共 **15 条来源记录**完成独立数学核验，实际对应 **13 道不同题目**（2011 安徽文理卷同题保留两份出处）。
-余下 233 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
+共 **16 条来源记录**完成独立数学核验，实际对应 **14 道不同题目**（2011 安徽文理卷同题保留两份出处）。
+余下 232 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
 
 本轮仅在 GitHub 写入源码、索引和质检文本，**不产生本地 PDF 或 ZIP**。
 新增的 TeX 尚未编译；GitHub Actions 曾在获得 Runner 前失败，自动同步未完成验收。

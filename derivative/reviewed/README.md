@@ -1,6 +1,6 @@
 # 独立数学复核成果
 
-当前 **15 条来源记录**完成数学复核，按确认的同题关系归并，对应 **13 道不同题目**。具体 ID、来源链接与证明文件的一一对应关系由 [review-provenance.json](../../metadata/review-provenance.json) 管理。
+当前 **16 条来源记录**完成数学复核，按确认的同题关系归并，对应 **14 道不同题目**。具体 ID、来源链接与证明文件的一一对应关系由 [review-provenance.json](../../metadata/review-provenance.json) 管理。
 
 | 题目 | Markdown 独立证明 | LaTeX 源码 |
 |---|---|---|
@@ -12,6 +12,7 @@
 | 2014 安徽文科第20题、理科第18题（同题） | [完整参数分类及上游解析问题](2014-anhui-common-q.md) | [TeX](2014-anhui-common-q.tex) |
 | 2019 全国Ⅱ卷文科第21题 | [证明](2019-national2-liberal-q21.md) | [TeX](2019-national2-liberal-q21.tex) |
 | 2024 新高考Ⅰ卷第18题与Ⅱ卷第16题 | [两道独立证明](2024-two-proofs.md) | [合订源码](2024-two-proofs.tex) |
+| 2023 北京卷第20题 | [证明](2023-beijing-q20.md) | [TeX](2023-beijing-q20.tex) |
 | 2023 全国乙卷文科第20题 | [证明](2023-national-b-liberal-q20.md) | [TeX](2023-national-b-liberal-q20.tex) |
 | 2023 新高考Ⅰ卷第19题 | [证明](2023-new-gaokao-1-q19.md) | [TeX](2023-new-gaokao-1-q19.tex) |
 | 2025 上海卷第19题 | [证明](2025-shanghai-q19.md) | [TeX](2025-shanghai-q19.tex) |
