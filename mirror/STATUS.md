@@ -1,14 +1,14 @@
 # 11 个上游仓库固定版本镜像进度（2026-10-25）
 
-按 `sources.json` 锁定的 11 个上游 Git SHA，对 `main@9bd7183eb106e815399e156c273fdd368fa7d37c` 的递归 Git 树逐路径比较原始 Blob SHA 和文件模式。**子模块 Gitlink 不计入实体文件。**
+按 `sources.json` 锁定的 11 个上游 Git SHA，对 `main@c6580f15a0cacd0025f6087de4e671541ba297d1` 的递归 Git 树逐路径比较原始 Blob SHA 和文件模式。**子模块 Gitlink 不计入实体文件。**
 
-**严格一致：1,993 / 7,222（27.60%）**；未严格匹配：**5,229**；完整来源：**6 / 11**；剩余固定上游 Blob 原始大小约 **567,216,881 字节**。
+**严格一致：2,007 / 7,222（27.79%）**；未严格匹配：**5,215**；完整来源：**6 / 11**；剩余固定上游 Blob 原始大小约 **566,522,251 字节**。
 
 | 来源 ID | 应有 Blob | SHA + mode 严格匹配 | 未匹配 | 状态 |
 |---|---:|---:|---:|---|
-| math-lecture-notes | 373 | 172 | 201 | 未完整 |
-| gaokao-math-problems-compilation | 5546 | 1019 | 4527 | 未完整 |
-| gaokaomath | 782 | 287 | 495 | 未完整 |
+| math-lecture-notes | 373 | 178 | 195 | 未完整 |
+| gaokao-math-problems-compilation | 5546 | 1023 | 4523 | 未完整 |
+| gaokaomath | 782 | 291 | 491 | 未完整 |
 | first-round-review | 47 | 43 | 4 | 未完整 |
 | gaokao-math-corpus | 207 | 207 | 0 | 完整 |
 | 2024-china-gaokao-math | 7 | 7 | 0 | 完整 |
@@ -17,6 +17,18 @@
 | daxmate-math | 21 | 21 | 0 | 完整 |
 | math-atlas | 110 | 110 | 0 | 完整 |
 | mathex | 72 | 72 | 0 | 完整 |
+
+## 本轮新入库 14 个 Git 实体文件（2026-10-25）
+
+来自三个原始仓库，已直接上传到本仓库主分支，不是子模块、文件名或链接：
+
+- **历年高考试卷 PDF**：gaokaomath 新增 4 份，分别为 1958 年两份、1977 年一份、1985 年一份，合计 287,532 字节。
+- **数学讲义测试 PDF**：math-lecture-notes 新增 6 份，合计 406,568 字节。
+- **原版图片重绘 TeX 源码**：gaokao-math-problems-compilation 新增 4 份，合计 530 字节。
+
+本批源对象合计 **14 文件 / 694,630 字节**，上传重建每个原始 Blob 后比对原始 SHA，最终再把 11 个固定版来源的递归 Git 树与自己的主分支 Git 树逐条比较：**2,007 / 7,222 完整匹配，模式或 SHA 冲突计 0（仅计已匹配项目）**。提交为 [PDF 批次](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/0967ec93616050d13182bc88ad66b0f4f9f8c7f4) 和 [讲义／TeX 批次](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/d0d8195f5e63940375b4ca29e0a2d25f967d002a)。[逐文件 SHA 和字节数清单](DIRECT_IMPORT_14_FILES_2026_10_25.json)。
+
+其余超过约 566 MB 的大型二进制内容需要完整 Git 对象传输。新增可在 Windows 双击的 [11 来源一键导入工具](../scripts/README_FULL_IMPORT.md)，使用原生 Git 传送整棵树，保留 PDF、PNG、DOCX 字节与文件模式；已在隔离本地 Git 回归环境验证 SHA、快进推送和不修改工作树。**这不等于所有 11 个来源已经导入完毕**；GitHub Actions 远程环境仍不能宣布正常。
 
 ## 本轮 126 文件（2026-10-25）
 
