@@ -1,23 +1,23 @@
 {
   "date": "2026-10-25",
-  "method": "Compare SHA and Git mode for every mirror/<id>/<path> entry against the pinned upstream recursive Git tree; blob matching does not imply mathematics or rights review.",
+  "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 881,
-  "missing": 6341,
+  "verified": 952,
+  "missing": 6270,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
-      "verified": 44,
-      "missing": 329,
+      "verified": 69,
+      "missing": 304,
       "complete": false
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 35,
-      "missing": 5511,
+      "verified": 81,
+      "missing": 5465,
       "complete": false
     },
     {
@@ -89,5 +89,7 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25: corrected actual SHA+mode counts. Added 1952-1957 and 1959-1965 (13 historical PDFs) and 2011 Shanghai spring PDF, all pinned Git blob matched. Repaired GKExam.sty mode to 120000. Four missing 2016 PDFs already present. 2023 Tianjin PDF remains absent."
+  "note": "2026-10-25: Direct GitHub commits imported 71 additional actual files (46 pinned 2020-2023 exam TeX files and 25 lecture source/PDFs). Six sources are complete. The remaining 6270 paths include 46 missing blobs >= 1MB that cannot be read through the current GitHub connector; full mirror needs a git-enabled environment. Text/PDF compilation, mathematical review, rights and authenticity remain separate checks.",
+  "remaining_bytes": 585121564,
+  "missing_blobs_at_least_1mb": 46
 }
