@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "checked_count": 16,
-  "distinct_proof_documents": 13,
+  "checked_count": 18,
+  "distinct_proof_documents": 14,
   "review_policy": "math-checked means independent mathematical derivation, not compilation or full paper correctness.",
   "entries": [
     {
@@ -17,6 +17,20 @@
       "review_status": "math-checked",
       "proof_path": "derivative/reviewed/2010-beijing-science-q18.md",
       "latex_compiled_this_round": false
+    },
+    {
+      "question_id": "2010-shaanxi_liberal-q23",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509",
+      "review_status": "math-checked",
+      "proof_path": "derivative/reviewed/2010-shaanxi-common-q23.md",
+      "latex_compiled_this_round": true
+    },
+    {
+      "question_id": "2010-shaanxi_science-q23",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500",
+      "review_status": "math-checked",
+      "proof_path": "derivative/reviewed/2010-shaanxi-common-q23.md",
+      "latex_compiled_this_round": true
     },
     {
       "question_id": "2011-anhui_liberal-q18",
