@@ -10,3 +10,16 @@
 
 
 重新核算固定版本镜像数量：`python3 scripts/audit_mirror_inventory.py --output mirror/MIRROR_STATUS.json`。需要先递归检出所有 11 个上游子模块。该脚本按 **HEAD Git SHA + mode** 统计，不把子模块 gitlink 或索引路径算作完整文件。运行后先审阅本地 JSON，再自行提交。独立单元测试在 `tests/test_audit_mirror_inventory.py`。
+
+## 已入库镜像批次的离线验收（无须初始化上游子模块）
+
+从完整 Git 历史的仓库检出运行：
+
+```bash
+python3 scripts/validate_import_batches.py
+python3 -m unittest discover -s tests -v
+```
+
+此检查读取 `mirror/IMPORT_BATCH_*.json`，对每条记录分别比对基线提交、导入完成时提交和当前 HEAD 的 **Git Blob SHA、文件模式与原始对象大小**；并独立重算文件数、分组字节数及 `mirror/MIRROR_STATUS.json` 的汇总算术。若历史文件被修改、缺失，或导入数被虚报，命令以非零状态退出。CI 使用 `fetch-depth: 0` 保留所需历史提交，并对 `mirror/**` 改动触发验收。
+
+**范围限制：**它只校验既有导入清单的 Git 对象及统计一致性，不能独立证明剩余上游文件总数、数学答案正确、图片可读、PDF 编译成功或再分发合法；这些仍需专门审核。
