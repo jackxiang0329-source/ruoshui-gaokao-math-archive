@@ -1,0 +1,219 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{高考数学满分突破·数论视角看高考}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newcommand{\score}[1]{\hfill\textbf{（#1分）}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 高考数学满分突破测试卷（七）}\\[8pt]
+{\large 数论视角看高考}\\[6pt]
+考试时间：120分钟 \quad 满分：150分
+\end{center}
+
+\vspace{10pt}
+
+{\large\bfseries 一、单项选择题：本题共8小题，每小题5分，共40分。每小题给出的四个选项中，只有一项是符合题目要求的。}
+
+\vspace{8pt}
+
+\begin{enumerate}
+
+\item 设 $a\equiv 3\pmod{7}$，$b\equiv 5\pmod{7}$，则 $ab\pmod{7}\equiv$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+\end{enumerate}
+
+\item 用辗转相除法求 $\gcd(252,105)$，则 $\gcd(252,105)=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $7$
+    \item $15$
+    \item $21$
+    \item $35$
+\end{enumerate}
+
+\item 不定方程 $3x+5y=1$ 的整数解可以表示为（其中 $x_0,y_0$ 为一组特解） \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $x=x_0+5t,\; y=y_0-3t,\; t\in\mathbb{Z}$
+    \item $x=x_0+3t,\; y=y_0-5t,\; t\in\mathbb{Z}$
+    \item $x=x_0+5t,\; y=y_0+3t,\; t\in\mathbb{Z}$
+    \item $x=x_0-5t,\; y=y_0+3t,\; t\in\mathbb{Z}$
+\end{enumerate}
+
+\item 设 $p$ 为素数，由费马小定理，$2^{p-1}\pmod{p}$ 的值为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $0$
+    \item $1$
+    \item $p-1$
+    \item 无法确定
+\end{enumerate}
+
+\item 设 $n$ 为正整数，$\varphi(n)$ 表示欧拉函数（小于等于 $n$ 且与 $n$ 互素的正整数个数），则 $\varphi(12)=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $2$
+    \item $4$
+    \item $6$
+    \item $8$
+\end{enumerate}
+
+\item 从数论函数的Mobius反演公式出发，设 $F(n)=\displaystyle\sum_{d\mid n}f(d)$，若 $F(n)=n$，则 $f(6)=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $\varphi(6)=2$
+\end{enumerate}
+
+\item 中国剩余定理（孙子定理）：求满足 $x\equiv 2\pmod{3}$，$x\equiv 3\pmod{5}$，$x\equiv 2\pmod{7}$ 的最小正整数 $x$，则 $x=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $23$
+    \item $53$
+    \item $128$
+    \item $23$
+\end{enumerate}
+
+\item 设 $n$ 的标准分解为 $n=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$，则 $n$ 的正因子个数 $\tau(n)=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $(\alpha_1+1)(\alpha_2+1)\cdots(\alpha_k+1)$
+    \item $\alpha_1\alpha_2\cdots\alpha_k$
+    \item $p_1p_2\cdots p_k$
+    \item $\alpha_1+\alpha_2+\cdots+\alpha_k$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{10pt}
+
+{\large\bfseries 二、多项选择题：本题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。}
+
+\vspace{8pt}
+
+\begin{enumerate}[resume]
+
+\item 关于同余的性质，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item 若 $a\equiv b\pmod{m}$，$c\equiv d\pmod{m}$，则 $a+c\equiv b+d\pmod{m}$
+    \item 若 $a\equiv b\pmod{m}$，$c\equiv d\pmod{m}$，则 $ac\equiv bd\pmod{m}$
+    \item 若 $ac\equiv bc\pmod{m}$，则 $a\equiv b\pmod{m}$
+    \item 若 $a\equiv b\pmod{m}$，$d\mid m$，则 $a\equiv b\pmod{d}$
+\end{enumerate}
+
+\item 设 $p$ 为奇素数，下列关于二次剩余的说法正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item 模 $p$ 的二次剩余恰有 $\dfrac{p-1}{2}$ 个
+    \item 欧拉判别准则：$a$ 是模 $p$ 的二次剩余当且仅当 $a^{\frac{p-1}{2}}\equiv 1\pmod{p}$
+    \item $-1$ 是模 $p$ 的二次剩余当且仅当 $p\equiv 1\pmod{4}$
+    \item $2$ 是模 $p$ 的二次剩余当且仅当 $p\equiv \pm 1\pmod{8}$
+\end{enumerate}
+
+\item 关于连分数，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $\sqrt{2}=[1;2,2,2,\cdots]$ 为纯循环连分数
+    \item 每个有理数都可以表示为有限连分数
+    \item 二次无理数的连分数表示一定是最终循环的
+    \item 连分数的渐近分数 $\dfrac{p_n}{q_n}$ 满足 $\left|\alpha-\dfrac{p_n}{q_n}\right|<\dfrac{1}{q_nq_{n+1}}$
+\end{enumerate}
+
+\item 关于数论函数，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item 欧拉函数 $\varphi$ 是积性函数
+    \item 因子个数函数 $\tau$ 是积性函数
+    \item 因子和函数 $\sigma$ 是积性函数
+    \item Mobius函数 $\mu$ 满足 $\displaystyle\sum_{d\mid n}\mu(d)=\begin{cases}1,&n=1\\0,&n>1\end{cases}$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{10pt}
+
+{\large\bfseries 三、填空题：本题共4小题，每小题5分，共20分。}
+
+\vspace{8pt}
+
+\begin{enumerate}[resume]
+
+\item 设 $a=123$，$b=456$，则 $\gcd(a,b)=$ \underline{\hspace{2cm}}，$\text{lcm}(a,b)=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 用费马小定理计算 $2^{100}\pmod{13}=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 不定方程 $x^2+y^2=z^2$ 满足 $0<x<y<z$，$x+y+z=60$ 的正整数解 $(x,y,z)=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $n=360$，则 $\varphi(n)=$ \underline{\hspace{2cm}}，$\tau(n)=$ \underline{\hspace{2cm}}，$\sigma(n)=$ \underline{\hspace{2cm}}。\score{5}
+
+\end{enumerate}
+
+\vspace{10pt}
+
+{\large\bfseries 四、解答题：本题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。}
+
+\vspace{8pt}
+
+\begin{enumerate}[resume]
+
+\item （10分）用辗转相除法求 $\gcd(4284,2508)$，并求整数 $x$，$y$ 使得 $4284x+2508y=\gcd(4284,2508)$。
+
+\item （12分）证明费马小定理：若 $p$ 为素数，$a$ 为不被 $p$ 整除的整数，则 $a^{p-1}\equiv 1\pmod{p}$。
+
+提示：考虑集合 $\{a,2a,3a,\cdots,(p-1)a\}$ 模 $p$ 的余数。
+
+\item （12分）研究同余方程的求解。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 解同余方程 $7x\equiv 3\pmod{31}$；
+    \item 解同余方程组 $x\equiv 1\pmod{3}$，$x\equiv 2\pmod{5}$，$x\equiv 3\pmod{7}$；
+    \item 证明：对任意正整数 $n$，$n^5-n$ 能被 $30$ 整除。
+\end{enumerate}
+
+\item （12分）从数论角度研究整数的因子结构。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 设 $n=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$，证明 $\varphi(n)=n\displaystyle\prod_{i=1}^{k}\left(1-\frac{1}{p_i}\right)$；
+    \item 证明 $\displaystyle\sum_{d\mid n}\varphi(d)=n$；
+    \item 利用上述结论求 $\displaystyle\sum_{d\mid 12}\varphi(d)$。
+\end{enumerate}
+
+\item （12分）数论与代数的交叉。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 证明：若 $p$ 为素数且 $p\equiv 1\pmod{4}$，则 $p$ 可以表示为两个完全平方数之和（提示：利用Wilson定理和构造法）；
+    \item 证明：形如 $4k+3$ 的素数不能表示为两个完全平方数之和；
+    \item 判断 $2017$ 是否可以表示为两个完全平方数之和（已知 $2017$ 为素数，$2017\equiv 1\pmod{4}$）。
+\end{enumerate}
+
+\item （12分）数论在密码学中的应用——RSA算法基础。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 设 $p=61$，$q=53$，计算 $n=pq$ 和 $\varphi(n)$；
+    \item 选取 $e=17$，验证 $\gcd(e,\varphi(n))=1$，并求 $d$ 使得 $ed\equiv 1\pmod{\varphi(n)}$；
+    \item 对消息 $m=65$ 进行加密，即计算密文 $c\equiv m^e\pmod{n}$；
+    \item 对密文 $c$ 进行解密，验证 $c^d\equiv m\pmod{n}$。
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

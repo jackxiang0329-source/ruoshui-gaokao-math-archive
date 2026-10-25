@@ -1,0 +1,228 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+
+\setCJKmainfont{Hiragino Sans GB}
+\setCJKsansfont{Heiti SC}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{高考数学满分突破·不等式统一视角}
+\fancyhead[R]{测试卷}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newcommand{\score}[1]{\hfill\textbf{（#1分）}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries 高考数学满分突破测试卷（八）}\\[8pt]
+{\large 不等式统一视角}\\[6pt]
+考试时间：120分钟 \quad 满分：150分
+\end{center}
+
+\vspace{10pt}
+
+{\large\bfseries 一、单项选择题：本题共8小题，每小题5分，共40分。每小题给出的四个选项中，只有一项是符合题目要求的。}
+
+\vspace{8pt}
+
+\begin{enumerate}
+
+\item 设 $a>b>0$，则下列不等式恒成立的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $a^2>ab>b^2$
+    \item $a^2>b^2>ab$
+    \item $ab>a^2>b^2$
+    \item $a^2>b^2$ 且 $ab>b^2$
+\end{enumerate}
+
+\item 若 $x>0$，$y>0$，$x+y=1$，则 $\dfrac{1}{x}+\dfrac{4}{y}$ 的最小值为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $6$
+    \item $8$
+    \item $9$
+    \item $12$
+\end{enumerate}
+
+\item 由均值不等式链 $H\leq G\leq A\leq Q$（调和平均 $\leq$ 几何平均 $\leq$ 算术平均 $\leq$ 平方平均），设 $a=2$，$b=8$，则 $\sqrt{ab}=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $4$
+    \item $5$
+    \item $3$
+    \item $6$
+\end{enumerate}
+
+\item 设 $f(x)=|x-1|+|x-3|$，则 $f(x)$ 的最小值为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+\end{enumerate}
+
+\item 已知 $x^2+y^2=1$，则 $x+y$ 的最大值为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $1$
+    \item $\sqrt{2}$
+    \item $2$
+    \item $\dfrac{3}{2}$
+\end{enumerate}
+
+\item 设 $a$，$b$，$c$ 为正实数，$abc=1$，则 $a+b+c$ 的最小值为 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $1$
+    \item $2$
+    \item $3$
+    \item $4$
+\end{enumerate}
+
+\item 利用凸函数的Jensen不等式：设 $f(x)=e^x$（凸函数），$x_1=\ln 2$，$x_2=\ln 8$，则 $f\left(\dfrac{x_1+x_2}{2}\right)\leq \dfrac{f(x_1)+f(x_2)}{2}$ 即 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $4\leq 5$
+    \item $4\leq 4$
+    \item $4\leq 6$
+    \item $3\leq 5$
+\end{enumerate}
+
+\item 设 $a_1,a_2,\cdots,a_n>0$，$S=\displaystyle\sum_{i=1}^{n}a_i$，由Cauchy--Schwarz不等式，$\displaystyle\sum_{i=1}^{n}\dfrac{a_i^2}{S-a_i}\geq \dfrac{S}{n-1}$。当 $n=3$，$a_1=1$，$a_2=2$，$a_3=3$ 时，$\displaystyle\sum_{i=1}^{3}\dfrac{a_i^2}{S-a_i}=$ \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $\dfrac{5}{3}$
+    \item $2$
+    \item $\dfrac{7}{3}$
+    \item $3$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{10pt}
+
+{\large\bfseries 二、多项选择题：本题共4小题，每小题5分，共20分。每小题有多个选项符合题目要求，全部选对得5分，部分选对得2分，有选错的得0分。}
+
+\vspace{8pt}
+
+\begin{enumerate}[resume]
+
+\item 关于柯西--施瓦茨（Cauchy--Schwarz）不等式，下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $\left(\displaystyle\sum_{i=1}^{n}a_ib_i\right)^2\leq \left(\displaystyle\sum_{i=1}^{n}a_i^2\right)\left(\displaystyle\sum_{i=1}^{n}b_i^2\right)$
+    \item 等号成立当且仅当存在常数 $k$ 使得 $a_i=kb_i$ 对所有 $i$ 成立
+    \item Cauchy--Schwarz不等式可以用来证明三角不等式
+    \item Cauchy--Schwarz不等式只适用于实数
+\end{enumerate}
+
+\item 关于排序不等式，设 $a_1\leq a_2\leq a_3$，$b_1\leq b_2\leq b_3$，则下列正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item 顺序和 $\geq$ 乱序和 $\geq$ 逆序和
+    \item $a_1b_1+a_2b_2+a_3b_3\geq a_1b_2+a_2b_3+a_3b_1$
+    \item $a_1b_3+a_2b_2+a_3b_1\leq a_1b_1+a_2b_2+a_3b_3$
+    \item 排序不等式可以用来证明Chebyshev不等式
+\end{enumerate}
+
+\item 下列关于不等式的说法正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item AM--GM不等式是Jensen不等式对 $f(x)=\ln x$（凹函数）的直接推论
+    \item Power Mean不等式可以统一AM--GM不等式
+    \item Holder不等式是Cauchy--Schwarz不等式的推广
+    \item Minkowski不等式是三角不等式的推广
+\end{enumerate}
+
+\item 设 $a$，$b$，$c$ 为正实数，下列不等式正确的是 \score{5}
+\begin{enumerate}[label=\Alph*.]
+    \item $\dfrac{a}{b}+\dfrac{b}{a}\geq 2$
+    \item $\dfrac{a+b+c}{3}\geq \sqrt[3]{abc}$
+    \item $a^2+b^2+c^2\geq ab+bc+ca$
+    \item $(a+b)(b+c)(c+a)\geq 8abc$
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{10pt}
+
+{\large\bfseries 三、填空题：本题共4小题，每小题5分，共20分。}
+
+\vspace{8pt}
+
+\begin{enumerate}[resume]
+
+\item 设 $x>0$，则 $x+\dfrac{1}{x}$ 的最小值为 \underline{\hspace{2cm}}，取到最小值时 $x=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $a$，$b>0$，$a+b=4$，则 $\sqrt{a}+\sqrt{b}$ 的最大值为 \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $a$，$b$，$c$ 为三角形三边长，由Schur不等式 $a^3+b^3+c^3+abc\geq ab(a+b)+bc(b+c)+ca(c+a)$ 对所有 $a,b,c\geq 0$ 成立。当 $a=b=c=1$ 时，不等式左边 $=$ \underline{\hspace{2cm}}，右边 $=$ \underline{\hspace{2cm}}。\score{5}
+
+\item 设 $x$，$y$，$z>0$，$xyz=1$，则 $\dfrac{x^2}{y+z}+\dfrac{y^2}{z+x}+\dfrac{z^2}{x+y}\geq$ \underline{\hspace{2cm}}。\score{5}
+
+\end{enumerate}
+
+\vspace{10pt}
+
+{\large\bfseries 四、解答题：本题共6小题，共70分。解答应写出文字说明、证明过程或演算步骤。}
+
+\vspace{8pt}
+
+\begin{enumerate}[resume]
+
+\item （10分）从凸函数的视角统一证明经典不等式。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 设 $f(x)=-\ln x$，证明 $f(x)$ 在 $(0,+\infty)$ 上是凸函数；
+    \item 利用Jensen不等式证明：对 $a_1,a_2,\cdots,a_n>0$，有 $\dfrac{a_1+a_2+\cdots+a_n}{n}\geq \sqrt[n]{a_1a_2\cdots a_n}$（算术--几何平均不等式）；
+    \item 利用上述结果证明：若 $a+b+c=1$，$a,b,c>0$，则 $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\geq 9$。
+\end{enumerate}
+
+\item （12分）利用柯西--施瓦茨不等式解决高考压轴题。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 证明Cauchy--Schwarz不等式：$\left(\displaystyle\sum_{i=1}^{n}a_ib_i\right)^2\leq \left(\displaystyle\sum_{i=1}^{n}a_i^2\right)\left(\displaystyle\sum_{i=1}^{n}b_i^2\right)$（提示：考虑关于 $t$ 的二次函数 $\displaystyle\sum_{i=1}^{n}(a_i t+b_i)^2\geq 0$）；
+    \item 利用Cauchy--Schwarz不等式证明：若 $a_1,a_2,\cdots,a_n>0$，则 $(a_1+a_2+\cdots+a_n)\left(\dfrac{1}{a_1}+\dfrac{1}{a_2}+\cdots+\dfrac{1}{a_n}\right)\geq n^2$；
+    \item 已知 $x,y,z>0$，$x+y+z=1$，求 $\dfrac{x^2}{y}+\dfrac{y^2}{z}+\dfrac{z^2}{x}$ 的最小值。
+\end{enumerate}
+
+\item （12分）研究幂平均不等式的统一框架。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 定义 $r$ 阶幂平均 $M_r(a_1,\cdots,a_n)=\left(\dfrac{a_1^r+\cdots+a_n^r}{n}\right)^{1/r}$（$r\neq 0$），$M_0=\sqrt[n]{a_1\cdots a_n}$。证明 $M_{-1}\leq M_0\leq M_1\leq M_2$ 对两个正数 $a,b$ 成立；
+    \item 利用幂平均不等式证明：若 $a^2+b^2=2$，则 $a+b\leq 2$；
+    \item 推广：设 $a_1^2+a_2^2+\cdots+a_n^2=n$，证明 $a_1+a_2+\cdots+a_n\leq n$。
+\end{enumerate}
+
+\item （12分）不等式在求最值问题中的应用。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 设 $x>0$，$y>0$，$2x+3y=12$，求 $xy$ 的最大值；
+    \item 设 $x>0$，$y>0$，$x+y=1$，求 $\left(1+\dfrac{1}{x}\right)\left(1+\dfrac{1}{y}\right)$ 的最小值；
+    \item 设 $a$，$b$，$c>0$，$a+b+c=3$，证明 $\dfrac{1}{1+a^2}+\dfrac{1}{1+b^2}+\dfrac{1}{1+c^2}\leq \dfrac{3}{1+abc}$。
+\end{enumerate}
+
+\item （12分）绝对值不等式与分式不等式。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 证明三角不等式：$|a+b|\leq |a|+|b|$，并给出等号成立的条件；
+    \item 解不等式 $|2x-1|+|x+2|<5$；
+    \item 证明：对任意实数 $a$，$b$，$c$，有 $|a-b|+|b-c|+|c-a|\geq 2\max\{|a-b|,|b-c|,|c-a|\}$。
+\end{enumerate}
+
+\item （12分）从优化理论视角看不等式。
+
+\begin{enumerate}[label=(\arabic*)]
+    \item 用Lagrange乘数法求 $f(x,y)=xy$ 在约束 $x+y=6$（$x,y>0$）下的最大值；
+    \item 用Lagrange乘数法求 $f(x,y,z)=x+y+z$ 在约束 $xyz=27$（$x,y,z>0$）下的最小值；
+    \item 利用上述方法解释为什么AM--GM不等式 $\dfrac{x+y}{2}\geq \sqrt{xy}$ 在 $x+y$ 固定时给出 $xy$ 的上界。
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
