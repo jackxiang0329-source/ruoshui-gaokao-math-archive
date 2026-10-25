@@ -1,4 +1,4 @@
-name: Update upstream projects and file index
+name: Refresh pinned upstream indexes
 on:
   workflow_dispatch:
   push:

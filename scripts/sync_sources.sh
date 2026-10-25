@@ -27,7 +27,9 @@ while IFS=$'\t' read -r slug source_repo branch; do
     fi
 done < "$manifest_file"
 git submodule sync --recursive
-git -c protocol.version=2 submodule update --init --remote --depth 1 --jobs 3
+python3 scripts/validate_pinned_sources.py --index-only
+git -c protocol.version=2 submodule update --init --depth 1 --jobs 3
+python3 scripts/validate_pinned_sources.py
 python3 scripts/build_index.py
 python3 -m unittest discover -s tests -v
 python3 scripts/scan_derivative_questions.py

@@ -1,0 +1,33 @@
+name: Offline archive QA
+on:
+  push:
+    paths:
+      - ".github/workflows/audit-archive.yml"
+      - ".gitmodules"
+      - "sources.json"
+      - "scripts/**"
+      - "tests/**"
+      - "index/**"
+      - "metadata/**"
+      - "derivative/reviewed/**"
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out metadata (no large submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Confirm all Git links match pinned revisions
+        run: python3 scripts/validate_pinned_sources.py --index-only
+      - name: Run isolated tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify question-index and review provenance
+        run: |
+          python3 scripts/validate_question_index.py
+          python3 scripts/validate_review_traceability.py

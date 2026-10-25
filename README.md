@@ -27,7 +27,7 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 
 ## 自动同步
 
-`.github/workflows/sync-upstream.yml` 提供人工触发与按来源/脚本修改触发的同步流程：更新 Git 子模块、生成文件级索引并运行验证。在仓库的 **Actions** 页面可手动运行。
+`.github/workflows/sync-upstream.yml` 提供固定版本的子模块同步、文件级索引生成与验证：只按主仓库的 Gitlink / `sources.json` 锁定 SHA 检出，不自动升级上游分支。新增 `.github/workflows/audit-archive.yml` 可在不克隆大型子模块的条件下独立验收索引与溯源一致性。在仓库的 **Actions** 页面可手动运行。
 
 如果自动提交因仓库的 Actions 写入策略失败，需要在 **Settings → Actions → General → Workflow permissions** 允许 GitHub Actions 具有读写权限，或改为本地执行 `bash scripts/sync_sources.sh` 并推送。
 
