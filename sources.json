@@ -1,7 +1,7 @@
 {
   "version": 1,
   "last_reviewed": "2026-10-24",
-  "policy": "Original projects remain separate Git submodules. Licenses do not become a single combined license. Source material may contain additional third-party rights.",
+  "policy": "All 11 upstream source commits are pinned. Original projects remain as optional submodule references; actual Git Blob trees are progressively mirrored under mirror/<id> and audited by SHA plus Git mode. A listed source is not considered fully imported until its entire pinned tree matches. Licenses and third-party exam/image rights remain separate.",
   "repositories": [
     {
       "id": "math-lecture-notes",
