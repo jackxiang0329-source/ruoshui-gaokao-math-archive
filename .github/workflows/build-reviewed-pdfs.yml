@@ -23,11 +23,13 @@ jobs:
           root_file: |
             derivative/reviewed/2010-anhui-liberal-q20.tex
             derivative/reviewed/2010-beijing-science-q18.tex
+            derivative/reviewed/2010-shaanxi-common-q23.tex
             derivative/reviewed/2011-anhui-derivative-common.tex
             derivative/reviewed/2013-fujian-science-q17.tex
             derivative/reviewed/2014-anhui-common-q.tex
             derivative/reviewed/2014-chongqing-liberal-q19.tex
             derivative/reviewed/2019-national2-liberal-q21.tex
+            derivative/reviewed/2023-beijing-q20.tex
             derivative/reviewed/2023-national-b-liberal-q20.tex
             derivative/reviewed/2023-new-gaokao-1-q19.tex
             derivative/reviewed/2024-two-proofs.tex
