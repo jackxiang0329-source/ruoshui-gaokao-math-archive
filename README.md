@@ -72,6 +72,16 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 上游保持独立许可，不能把整个聚合库声称为一个统一许可证。部分原仓库存在许可声明不完整或第三方素材权利不明确的情况，详见 [sources.json](sources.json)。
 
 
+## 11 个上游仓库实体镜像（2026-10-25）
+
+目前 11 个来源已经全部登记并固定 Git SHA，其中 **6 个仓库的原始 Git 文件完全匹配**，其余 5 个仍有文件未完整迁入。已把 14 个 PDF／TeX 原文件直接导入本仓库的 main 分支，并独立复算得到 **2,007 / 7,222** 个固定上游 Blob 的 SHA＋Git 模式完全一致（27.79%），仍缺 5,215 个，原始大小约 566.5 MB。此处的“导入”是真实 Blob，不把子模块或者链接算作文件。
+
+- [11 个固定来源逐项镜像进度](mirror/STATUS.md) / [机器可读审计状态](mirror/MIRROR_STATUS.json)
+- [已实际迁入的 14 文件 SHA 原始清单](mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json)
+- **[Windows 一键完整迁入 11 个固定 Git 来源（含大 PDF、DOCX、图片）](scripts/README_FULL_IMPORT.md)** / [双击启动器](scripts/一键导入11个仓库.cmd) / [Python 导入器](scripts/import_pinned_git_trees.py)
+
+这份一键工具在隔离的本地 Git 仓库中通过二进制原始文件和完整树 SHA 的回归验证，但**尚未在正常网络和具有推送权限的环境完成剩余 566.5 MB 全量传输**；不能声称 11 个来源已全部到齐。第三方试题、图形的许可仍按原始项目单独处理。
+
 ## 高考导数题目级索引（2026-10-24）
 
 已登记 2010—2026 年导数相关解答题 **248 条来源记录**：
