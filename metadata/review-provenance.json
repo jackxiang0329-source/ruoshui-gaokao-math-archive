@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "checked_count": 16,
-  "distinct_proof_documents": 13,
+  "checked_count": 20,
+  "distinct_proof_documents": 15,
   "review_policy": "math-checked means independent mathematical derivation, not compilation or full paper correctness.",
   "entries": [
     {
@@ -19,6 +19,20 @@
       "latex_compiled_this_round": false
     },
     {
+      "question_id": "2010-shaanxi_liberal-q23",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509",
+      "review_status": "math-checked",
+      "proof_path": "derivative/reviewed/2010-shaanxi-common-q23.md",
+      "latex_compiled_this_round": true
+    },
+    {
+      "question_id": "2010-shaanxi_science-q23",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500",
+      "review_status": "math-checked",
+      "proof_path": "derivative/reviewed/2010-shaanxi-common-q23.md",
+      "latex_compiled_this_round": true
+    },
+    {
       "question_id": "2011-anhui_liberal-q18",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/anhui_liberal.tex#L447",
       "review_status": "math-checked",
@@ -31,6 +45,20 @@
       "review_status": "math-checked",
       "proof_path": "derivative/reviewed/2011-anhui-derivative-common.md",
       "latex_compiled_this_round": false
+    },
+    {
+      "question_id": "2011-new_curriculum_liberal-q21",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex#L473",
+      "review_status": "math-checked",
+      "proof_path": "derivative/reviewed/2011-newcurriculum-q21-variants.md",
+      "latex_compiled_this_round": true
+    },
+    {
+      "question_id": "2011-new_curriculum_science-q21",
+      "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex#L583",
+      "review_status": "math-checked",
+      "proof_path": "derivative/reviewed/2011-newcurriculum-q21-variants.md",
+      "latex_compiled_this_round": true
     },
     {
       "question_id": "2013-fujian_science-q17",

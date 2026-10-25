@@ -1,0 +1,72 @@
+\documentclass[UTF8,a4paper,10pt]{ctexart}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[margin=2.05cm]{geometry}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist[enumerate]{label=\textbf{（\arabic*）},leftmargin=2.7em,itemsep=2pt,topsep=3pt}
+\setlength{\parindent}{2em}
+\linespread{1.06}
+\title{2010 年陕西高考数学文理共同题\\[2pt]\large 第 23 题：公切线、最小值与均值不等式}
+\author{三千弱水 · 高考数学题库｜独立复核}
+\date{2026 年 10 月 25 日}
+\begin{document}
+\maketitle
+\noindent\textbf{原题出处：}\href{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex\#L500}{理科第 23 题}；\href{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex\#L509}{文科第 23 题}。已逐项比对两个版本的三问，数学条件一致。
+
+设 $f(x)=\sqrt{x}$，$g(x)=a\ln x$，$a\in\mathbb R$，两函数的共同定义域是 $x>0$。
+\begin{enumerate}
+\item 若两曲线相交并在交点处有共同切线，求 $a$ 及切线方程。
+\item 设 $h(x)=f(x)-g(x)$，若 $h$ 存在最小值，求 $\varphi(a)=\min_{x>0}h(x)$ 的表达式和参数范围。
+\item 对任意 $a,b>0$，证明
+\[
+\varphi'\!\left(\frac{a+b}{2}\right)
+\leq\frac{\varphi'(a)+\varphi'(b)}{2}
+\leq\varphi'\!\left(\frac{2ab}{a+b}\right).
+\]
+\end{enumerate}
+
+\section*{独立解答}
+\paragraph{（1）公切线}
+记交点横坐标为 $t>0$。在同一点既相交又有共同切线，必要条件为
+\[
+\sqrt t=a\ln t,\qquad \frac{1}{2\sqrt t}=\frac{a}{t}.
+\]
+第二式给出 $a=\sqrt t/2$，代回第一式并利用 $\sqrt t>0$，得 $\ln t=2$。因此 $t=e^2$、$a=e/2$，交点为 $(e^2,e)$，公切线为
+\[
+\boxed{\;y-e=\frac{x-e^2}{2e}\;}
+\qquad\text{（等价地，$x-2ey+e^2=0$）}.
+\]
+反向代入两条曲线及其导数，确能同时满足交点与斜率条件，故该解既必要又充分。
+
+\paragraph{（2）最小值存在性及取值}
+在 $x>0$ 上有
+\[
+h'(x)=\frac{1}{2\sqrt x}-\frac a x=\frac{\sqrt x-2a}{2x}.
+\]
+若 $a>0$，在 $0<x<4a^2$ 时 $h'<0$，在 $x>4a^2$ 时 $h'>0$。因此 $x=4a^2$ 是唯一全局最小值点，
+\[
+\boxed{\;\varphi(a)=h(4a^2)=2a\bigl(1-\ln(2a)\bigr),\quad a>0.\;}
+\]
+若 $a=0$，$h(x)=\sqrt x>0$ 的下确界为 $0$，但 $x>0$ 时无法取到；若 $a<0$，$\lim_{x\to0^+}h(x)=-\infty$，故无最小值。于是\textbf{最小值存在当且仅当 $a>0$}。
+
+\paragraph{（3）两个均值的夹逼}
+对 $t>0$ 求导，得 $\varphi'(t)=-2\ln(2t)$，故 $\varphi'$ 在 $(0,\infty)$ 上严格递减。又
+\[
+\frac{\varphi'(a)+\varphi'(b)}{2}
+=-\ln(4ab)=\varphi'(\sqrt{ab}).
+\]
+由调和平均数、几何平均数、算术平均数的标准关系
+\[
+\frac{2ab}{a+b}\leq\sqrt{ab}\leq\frac{a+b}{2}
+\qquad(a,b>0),
+\]
+利用严格递减性，反转不等号即得
+\[
+\boxed{\;\varphi'\!\left(\frac{a+b}{2}\right)
+\leq\frac{\varphi'(a)+\varphi'(b)}{2}
+\leq\varphi'\!\left(\frac{2ab}{a+b}\right).\;}
+\]
+两处等号均在且仅在 $a=b$ 时成立。
+
+\medskip\noindent\textbf{质检范围：}以上数学推理按原题独立推导，并核对参数边界与取等条件；固定上游 Git 来源不等于官方原卷影像认证，亦不表示原题再分发权利已审定。
+\end{document}

@@ -3,9 +3,9 @@
   "policy": "A group is not merged merely because its duplicate_group is populated. Only confirmed_same_problem supports eventual logical deduplication, and provenance records remain intact.",
   "summary": {
     "groups": 21,
-    "confirmed_same_problem": 6,
-    "confirmed_variant": 1,
-    "unverified": 14,
+    "confirmed_same_problem": 7,
+    "confirmed_variant": 2,
+    "unverified": 12,
     "grouped_source_records": 42
   },
   "groups": [
@@ -39,7 +39,7 @@
     },
     {
       "duplicate_group": "2010-shaanxi-common",
-      "status": "unverified",
+      "status": "confirmed_same_problem",
       "n_records": 2,
       "member_ids": [
         "2010-shaanxi_science-q23",
@@ -49,7 +49,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "逐项核对固定上游理科 content/2010/shaanxi_science.tex#L500—508 与文科 content/2010/shaanxi_liberal.tex#L509—517：两卷均有 f(x)=sqrt(x)、g(x)=a ln x、公切线求参数与切线、h(x) 最小值、φ' 在算术/调和平均数上的夹逼三问；文字及空白差异不改变数学条件。独立证明见 derivative/reviewed/2010-shaanxi-common-q23.md。"
     },
     {
       "duplicate_group": "2010-shandong-variant",
@@ -81,7 +81,7 @@
     },
     {
       "duplicate_group": "2011-newcurriculum-derivative-common",
-      "status": "unverified",
+      "status": "confirmed_variant",
       "n_records": 2,
       "member_ids": [
         "2011-new_curriculum_science-q21",
@@ -91,7 +91,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex#L583",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex#L473"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "固定版源题逐问对照：2011 新课标文理卷均以 f(x)=a ln(x)/(x+1)+b/x 和切线 x+2y-3=0 为条件，第一问同为求 a,b；理科第二问额外引入 k，要求对所有 x>0,x≠1 满足 f(x)>ln(x)/(x-1)+k/x 的 k 范围（k≤0），文科第二问仅要求证明无 k 项的 f(x)>ln(x)/(x-1)，故文科相当于理科的 k=0 特例，不得按完全同题合并。"
     },
     {
       "duplicate_group": "2011-shaanxi-function-common",

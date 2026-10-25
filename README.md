@@ -83,13 +83,15 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 - [2015—2019 年重点卷](index/DERIVATIVE_PROBLEMS_2015_2019.md)
 - [2020—2026 年主要试卷](index/DERIVATIVE_PROBLEMS_2020_2026.md)
 - [2010 安徽文科第20题独立证明](derivative/reviewed/2010-anhui-liberal-q20.md) / [TeX](derivative/reviewed/2010-anhui-liberal-q20.tex)
+- [2010 陕西文理共同第23题严格证明](derivative/reviewed/2010-shaanxi-common-q23.md) / [TeX](derivative/reviewed/2010-shaanxi-common-q23.tex)
 - [2011 安徽文、理科共同题独立证明](derivative/reviewed/2011-anhui-derivative-common.md) / [TeX](derivative/reviewed/2011-anhui-derivative-common.tex)
+- [2011 新课标文理第21题独立证明（两题为变式）](derivative/reviewed/2011-newcurriculum-q21-variants.md) / [TeX](derivative/reviewed/2011-newcurriculum-q21-variants.tex)
 - [2019 全国Ⅱ卷文科第21题独立证明](derivative/reviewed/2019-national2-liberal-q21.md) / [TeX](derivative/reviewed/2019-national2-liberal-q21.tex)
 - [2024 新高考Ⅰ、Ⅱ卷两题独立证明](derivative/reviewed/2024-two-proofs.md) / [TeX](derivative/reviewed/2024-two-proofs.tex)
 - [2010 北京理科第18题](derivative/reviewed/2010-beijing-science-q18.md)、[2013 福建理科第17题](derivative/reviewed/2013-fujian-science-q17.md)、[2014 重庆文科第19题](derivative/reviewed/2014-chongqing-liberal-q19.md) 的独立复核
 - [2014 安徽文理共同题：完整参数分类](derivative/reviewed/2014-anhui-common-q.md)，同时记录[上游解析缺失问题](metadata/quality-findings.json)
-- [15 条数学质检状态的溯源清单](metadata/review-provenance.json)
-- [疑似重复题复核索引：6 组同题、1 组变式、14 组待核查](index/DUPLICATE_AUDIT.md)
+- [20 条数学质检状态的溯源清单](metadata/review-provenance.json)
+- [疑似重复题复核索引：7 组同题、2 组变式、12 组待核查](index/DUPLICATE_AUDIT.md)
 - [已完成数学证明与可独立编译源码目录](derivative/reviewed/README.md)
 - [数学复核溯源和重复索引自动一致性检查](scripts/validate_review_traceability.py)
 - [第六轮质检报告](metadata/ROUND_06_REPORT.md)
@@ -97,11 +99,13 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 - [2025 上海卷第19题证明](derivative/reviewed/2025-shanghai-q19.md) / [TeX](derivative/reviewed/2025-shanghai-q19.tex) / [2025 全国Ⅱ卷第18题证明](derivative/reviewed/2025-national2-q18.md) / [TeX](derivative/reviewed/2025-national2-q18.tex)
 - [2025 北京卷第20题转录顺序冲突审计](derivative/reviewed/2025-beijing-q20-transcription-audit.md)：暂不升格数学核验
 - [第七轮审校报告](metadata/ROUND_07_REPORT.md)
+- [第十轮质检：2011 新课标文理第21题严格解答及双来源核验](metadata/ROUND_10_REPORT.md)
+- [第九轮质检：陕西文理同题、2011 新课标变式与一页 PDF 编译](metadata/ROUND_09_REPORT.md)
 - [第八轮质检与版本锁定记录](metadata/ROUND_08_REPORT.md) / [2023 北京卷第20题](derivative/reviewed/2023-beijing-q20.md) / [TeX](derivative/reviewed/2023-beijing-q20.tex)
 - [机器扫描候选](scripts/scan_derivative_questions.py)、[索引一致性脚本](scripts/validate_question_index.py)、[第五轮报告](metadata/ROUND_05_REPORT.md)
 
-共 **16 条来源记录**完成独立数学核验，实际对应 **14 道不同题目**（2011 安徽文理卷同题保留两份出处）。
-余下 232 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
+共 **20 条来源记录**完成独立数学核验，实际对应 **17 道不同题目**（2010 陕西、2011 安徽、2014 安徽的文理同题均保留两份出处；2011 新课标文理第 21 题为两道变式，不合并）。
+余下 228 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
 
-本轮仅在 GitHub 写入源码、索引和质检文本，**不产生本地 PDF 或 ZIP**。
-新增的 TeX 尚未编译；GitHub Actions 曾在获得 Runner 前失败，自动同步未完成验收。
+已在本地使用 XeLaTeX 生成并目视检查 2010 陕西第 23 题和 2011 新课标文理第 21 题的单页 PDF；GitHub 分支仅推送其 TeX、Markdown、索引和质检文本，**未将 PDF 二进制纳入 Git 仓库**。
+上述两份 TeX 已在本地独立编译验收；其他新旧 TeX 不据此推断编译通过。GitHub Actions 曾在获得 Runner 前失败，远程 CI 尚未完成验收。

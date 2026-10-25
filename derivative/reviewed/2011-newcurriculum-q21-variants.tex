@@ -1,0 +1,60 @@
+\documentclass[UTF8,a4paper,10pt]{ctexart}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[margin=2.05cm]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}
+\usepackage{enumitem}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1pt}
+\linespread{1.05}
+\setlist[enumerate]{leftmargin=2.7em,itemsep=3pt,topsep=4pt}
+\begin{document}
+\begin{center}
+{\Large\bfseries 2011 年新课标高考数学第 21 题}\\[3pt]
+{\normalsize 文理变式的独立证明}\\[4pt]
+{\small 三千弱水 · 高考数学题库\quad|\quad 2026 年 10 月 25 日}
+\end{center}
+\vspace{3pt}
+\noindent\textbf{原题来源：}\href{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex\#L583}{理科第 21 题}；\href{https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex\#L473}{文科第 21 题}。两卷第一问相同；理科第二问求最优参数，文科只要求证明其中的 $k=0$ 特例，属于\textbf{变式}，不可按完全同题合并。
+
+\section*{题意及结论}
+设 $f(x)=a\dfrac{\ln x}{x+1}+\dfrac bx$（$x>0$），曲线 $y=f(x)$ 在 $(1,f(1))$ 处的切线为 $x+2y-3=0$。
+\begin{enumerate}[label=\textbf{（\arabic*）}]
+\item 求 $a,b$；
+\item 理科：求使 $f(x)>\dfrac{\ln x}{x-1}+\dfrac{k}{x}$ 对全部 $x>0$、$x\ne1$ 成立的 $k$ 的范围。文科：证明 $k=0$ 时上述不等式成立。
+\end{enumerate}
+
+\section*{独立解答}
+\paragraph{（1）求参数} 切线方程化为 $y=(3-x)/2$，故 $f(1)=1$、$f'(1)=-1/2$。由于
+\[
+f(1)=b,\qquad
+f'(x)=a\frac{(x+1)/x-\ln x}{(x+1)^2}-\frac{b}{x^2},
+\]
+有 $b=1$ 及 $a/2-b=-1/2$，从而
+\[\boxed{a=b=1}.\]
+
+\paragraph{（2）理科参数范围与文科不等式} 对 $x>0$、$x\ne1$，将 $a=b=1$ 代入并记
+\[
+D_k(x)=f(x)-\frac{\ln x}{x-1}-\frac{k}{x}
+=\frac1x\left(1-\frac{2x\ln x}{x^2-1}-k\right).
+\]
+令 $N(x)=x^2-1-2x\ln x$，有 $N(1)=0$，且
+\[
+N'(x)=2(x-1-\ln x)>0\qquad (x>0,\ x\ne1),
+\]
+其中严格不等号源于 $\ln x<x-1$（$x>0$、$x\ne1$）。因此，$N$ 在 $(0,+\infty)$ 上严格递增，$N(x)<0$（$0<x<1$），$N(x)>0$（$x>1$）。$N(x)$ 与 $x^2-1$ 同号，所以
+\[
+H(x):=\frac{N(x)}{x^2-1}
+=1-\frac{2x\ln x}{x^2-1}>0\qquad (x>0,\ x\ne1).
+\]
+又由洛必达法则（亦可用 $\ln x$ 在 $1$ 处的导数）得到
+\[
+\lim_{x\to1}H(x)=1-\lim_{x\to1}\frac{2x\ln x}{x^2-1}
+=1-\lim_{x\to1}\frac{2(\ln x+1)}{2x}=0.
+\]
+因此 $D_k(x)=[H(x)-k]/x$。若 $k\le0$，由于 $H(x)>0$ 且 $x>0$，恒有 $D_k(x)>0$。若 $k>0$，由 $H(x)\to0$ 可在 $1$ 附近选取 $x\ne1$ 使 $H(x)<k$，于是 $D_k(x)<0$，不满足题设。故理科答案是
+\[\boxed{k\in(-\infty,0]}.\]
+特别地，取 $k=0$ 即得文科的完整证明：
+\[\boxed{\;f(x)>\frac{\ln x}{x-1}\qquad (x>0,\ x\ne1).\;}\]
+\medskip
+\noindent\textbf{审核边界：}此证明对固定上游的两套转录题面独立推导，包含严格不等式、端点极限和充分必要性。数学核验不代表官方原卷影像或再分发权利已认证。
+\end{document}

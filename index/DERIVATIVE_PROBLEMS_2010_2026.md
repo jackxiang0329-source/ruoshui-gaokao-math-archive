@@ -1,6 +1,6 @@
 # 2010—2026 年高考导数题目级总索引
 
-**来源定位记录 248 条；其中数学独立核验 16 条。**
+**来源定位记录 248 条；其中数学独立核验 20 条。**
 
 记录保留题号、卷别、TeX 固定提交及源码行号，尚未穷尽所有省市卷；相似题保留各自来源，疑似同题和变式通过 `duplicate_group` 标记。
 
@@ -24,8 +24,8 @@
 | 2010 | 辽宁卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_liberal.tex#L491) | 对数二次函数单调与两点差估计 | source-identified · 待复核重复组 |
 | 2010 | 山东卷理科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shandong_science.tex#L603) | 对数分式函数含参单调与不等式 | source-identified · 待复核重复组 |
 | 2010 | 山东卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shandong_liberal.tex#L528) | 对数分式函数切线与含参单调 | source-identified · 待复核重复组 |
-| 2010 | 陕西卷理科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500) | 平方根与对数曲线公切线 | source-identified · 待复核重复组 |
-| 2010 | 陕西卷文科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509) | 平方根与对数曲线公切线 | source-identified · 待复核重复组 |
+| 2010 | 陕西卷理科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500) | 平方根与对数曲线公切线 | math-checked · 文理同题 |
+| 2010 | 陕西卷文科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509) | 平方根与对数曲线公切线 | math-checked · 文理同题 |
 | 2010 | 天津卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/tianjin_science.tex#L578) | xexp(-x) 的极值、对称曲线与不等式 | source-identified |
 | 2010 | 天津卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/tianjin_liberal.tex#L621) | 含参三次函数切线与区间约束 | source-identified |
 | 2010 | 新课标全国卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/new_curriculum_science.tex#L691) | 指数函数非负性与二次放缩 | source-identified · 待复核重复组 |
@@ -55,8 +55,8 @@
 | 2011 | 四川卷文科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/sichuan_liberal.tex#L531) | 含根号函数与多项式极值 | source-identified |
 | 2011 | 天津卷理科 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/tianjin_science.tex#L652) | 含参对数二次函数单调与交点 | source-identified |
 | 2011 | 天津卷文科 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/tianjin_liberal.tex#L569) | 含参三次函数切线和单调 | source-identified |
-| 2011 | 新课标全国卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex#L583) | 有理对数函数切线与参数不等式 | source-identified · 待复核重复组 |
-| 2011 | 新课标全国卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex#L473) | 有理对数函数切线与不等式 | source-identified · 待复核重复组 |
+| 2011 | 新课标全国卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex#L583) | 有理对数函数切线与参数不等式 | math-checked · 文理确认变式 |
+| 2011 | 新课标全国卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex#L473) | 有理对数函数切线与不等式 | math-checked · 文理确认变式 |
 | 2011 | 浙江卷理科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/zhejiang_science.tex#L545) | 对数平方函数的极值点与不等式 | source-identified |
 | 2011 | 浙江卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/zhejiang_liberal.tex#L340) | 含参对数二次函数单调及闭区间恒成立 | source-identified |
 | 2012 | 安徽卷理科 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/anhui_science.tex#L501) | 指数有理函数最小值与切线 | source-identified |
@@ -258,6 +258,6 @@
 ## 审核边界
 
 - `source-identified` 只代表题目位置及导数相关性初筛，不代表数学答案正确。
-- `math-checked` 必须有独立证明，已有成果见 [2010 安徽](../derivative/reviewed/2010-anhui-liberal-q20.md)、[2011 安徽](../derivative/reviewed/2011-anhui-derivative-common.md)、[2019 全国Ⅱ卷](../derivative/reviewed/2019-national2-liberal-q21.md)、[2024 新高考Ⅰ、Ⅱ卷](../derivative/reviewed/2024-two-proofs.md)。
+- `math-checked` 必须有独立证明，已有成果见 [2010 安徽](../derivative/reviewed/2010-anhui-liberal-q20.md)、[2010 陕西文理第23题](../derivative/reviewed/2010-shaanxi-common-q23.md)、[2011 安徽](../derivative/reviewed/2011-anhui-derivative-common.md)、[2011 新课标文理变式](../derivative/reviewed/2011-newcurriculum-q21-variants.md)、[2019 全国Ⅱ卷](../derivative/reviewed/2019-national2-liberal-q21.md)、[2024 新高考Ⅰ、Ⅱ卷](../derivative/reviewed/2024-two-proofs.md)。
 - 当前多卷相同题、近似变式未跨源严格去重；总量为 `题目-卷别记录数`，不是独立原创题数。
 - 题干、插图等版权按各原来源许可；不批量复制未经核验的整卷 PDF。
