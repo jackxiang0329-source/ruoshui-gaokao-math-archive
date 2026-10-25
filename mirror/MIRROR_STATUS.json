@@ -3,7 +3,7 @@
   "method": "Compare mirror/<id>/path Git blob SHA against fixed upstream commit tree",
   "full": 6,
   "expected": 7222,
-  "verified": 767,
+  "verified": 793,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -22,8 +22,8 @@
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 173,
-      "missing": 609,
+      "verified": 199,
+      "missing": 583,
       "complete": false
     },
     {
@@ -88,5 +88,5 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-25: Four missing 2016 PDFs and first 12 files from 2013 were individually imported from pinned upstream with matching Git Blob SHA; existing records not reaudited."
+  "note": "2026-10-25: All 38 PDF files in upstream 2013 directory and all 20 in 2016 are now represented as SHA-matching physical Git blobs. 2023 Tianjin PDF remains missing (1,717,817 bytes, Contents API returns empty content); other mirrors remain partial."
 }
