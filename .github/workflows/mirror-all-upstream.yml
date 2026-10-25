@@ -44,12 +44,10 @@ jobs:
           python3 -c "import json; x=json.load(open('sources.json')); assert len(x['repositories']) == 11"
       - name: Mirror verifier regression tests
         run: python3 -m unittest discover -s tests -p 'test_*.py'
-      - name: Install tools
-        shell: bash
+      - name: Configure Git commit identity
         run: |
-          sudo apt-get update
-          sudo apt-get install -y rsync git-lfs
-          git lfs install
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
       - name: Import complete source trees and their assets
         shell: bash
         env:
@@ -58,5 +56,7 @@ jobs:
       - name: Physical file summary
         shell: bash
         run: |
-          find mirror -type f | wc -l
-          du -sh mirror
+          git fetch --no-tags origin main
+          echo 'Physical Git mirror entries in remote main:'
+          git ls-tree -r --name-only FETCH_HEAD -- mirror/ | wc -l
+          echo 'Matched source SHA integrity is independently checked by import script.'
