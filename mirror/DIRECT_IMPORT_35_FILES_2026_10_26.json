@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-26",
+  "baseline_commit": "1e4f5140a305d9c44899b044dd16aa443939a20d",
+  "audited_after_commit": "ad22904cdbc4107416b57bd08d6046406adfee6d",
+  "method": "Independently compared baseline/after Git trees to three immutable pinned upstream recursive Git trees. Each newly strict-matched actual blob must agree on SHA, Git mode and size.",
+  "source_pins": {
+    "math-lecture-notes": {
+      "repo": "Dreamaker203/math-lecture-notes",
+      "pin": "b89f6207bc5b84f501837ea6da3899799a8787d8"
+    },
+    "gaokao-math-problems-compilation": {
+      "repo": "DxAThing/Gaokao-Math-Problems-Compilation",
+      "pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188"
+    },
+    "gaokaomath": {
+      "repo": "deekur/gaokaomath",
+      "pin": "08179f1fc0a3300787155d92800ac82b57ee4118"
+    }
+  },
+  "count": 35,
+  "total_upstream_bytes": 1416616,
+  "group_counts": {
+    "math-lecture-notes": {
+      "count": 6,
+      "bytes": 460688
+    },
+    "gaokao-math-problems-compilation": {
+      "count": 18,
+      "bytes": 50369
+    },
+    "gaokaomath": {
+      "count": 11,
+      "bytes": 905559
+    }
+  },
+  "files": [
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2011/anhui_science/q11_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2011/anhui_science/q11_fig1.tex",
+      "mode": "100644",
+      "sha": "9ae48268dc698b503b5218af5c268526f70cc3de",
+      "size": 2802
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2011/liaoning_liberal/q10_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2011/liaoning_liberal/q10_fig1.tex",
+      "mode": "100644",
+      "sha": "8ae53c65a61cd77ac00279718fed1463e2480171",
+      "size": 2771
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2012/zhejiang_liberal/q13_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2012/zhejiang_liberal/q13_fig1.tex",
+      "mode": "100644",
+      "sha": "0e0a3c4798db3b9e7065e66941b9cd59a7cff129",
+      "size": 2831
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2013/anhui_science/q2_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2013/anhui_science/q2_fig1.tex",
+      "mode": "100644",
+      "sha": "acd92f48db257fad2d271704047e1d12323168d6",
+      "size": 2771
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2013/guangdong_liberal/q5_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2013/guangdong_liberal/q5_fig1.tex",
+      "mode": "100644",
+      "sha": "ad4bdafec364a810e9372ff408a29f0579278b7c",
+      "size": 2812
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2013/jiangsu/q5_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2013/jiangsu/q5_fig1.tex",
+      "mode": "100644",
+      "sha": "4fac2fa4a98935fa4fee5668498338adf13f9f77",
+      "size": 2808
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2013/liaoning_science/q8_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2013/liaoning_science/q8_fig1.tex",
+      "mode": "100644",
+      "sha": "cd32545dbb1bf1604b53acfad32eb88dee7e975e",
+      "size": 2830
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2013/new_curriculum_paper_1_liberal/q7_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2013/new_curriculum_paper_1_liberal/q7_fig1.tex",
+      "mode": "100644",
+      "sha": "3254770478c0cd80689ff604c1109de389eef779",
+      "size": 2823
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2013/shandong_liberal/q6_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2013/shandong_liberal/q6_fig1.tex",
+      "mode": "100644",
+      "sha": "966f01c9eed274f5c6b5a1cca1728a51286f8c15",
+      "size": 2756
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2014/anhui_liberal/q4_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2014/anhui_liberal/q4_fig1.tex",
+      "mode": "100644",
+      "sha": "42ef0aae1ad292e202009a232bc6efdd0136eea1",
+      "size": 2828
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2014/chongqing_liberal/q5_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2014/chongqing_liberal/q5_fig1.tex",
+      "mode": "100644",
+      "sha": "3a4cd1d3c7df4d2e45b2876216c1579add1a9ad7",
+      "size": 2822
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2014/chongqing_science/q5_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2014/chongqing_science/q5_fig1.tex",
+      "mode": "100644",
+      "sha": "305f26ccb21639364b6221ead61a46bf9093dc1f",
+      "size": 2748
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2014/fujian_science/q5_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2014/fujian_science/q5_fig1.tex",
+      "mode": "100644",
+      "sha": "bba9e30a9b8d5aa726f17a9dd8ddbce7cc320374",
+      "size": 2816
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2014/hubei_science/q13_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2014/hubei_science/q13_fig1.tex",
+      "mode": "100644",
+      "sha": "6f7c2aa508bd62600a867570d261b8c58b5300d0",
+      "size": 2799
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2014/hunan_liberal/q7_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2014/hunan_liberal/q7_fig1.tex",
+      "mode": "100644",
+      "sha": "53b28320f1d8d22df9c6123fe993223ff7b6d163",
+      "size": 2751
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2015/fujian_science/q6_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2015/fujian_science/q6_fig1.tex",
+      "mode": "100644",
+      "sha": "68e4858d90febb5249490ef333056fd5b7c545b4",
+      "size": 2815
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2015/national_paper_1_science/q9_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2015/national_paper_1_science/q9_fig1.tex",
+      "mode": "100644",
+      "sha": "e380d2a5e215282351614d562af2ec54ed671e68",
+      "size": 2773
+    },
+    {
+      "source_id": "gaokao-math-problems-compilation",
+      "path": "img_repaint/2016/national_paper_1_science/q9_fig1.tex",
+      "mirror_path": "mirror/gaokao-math-problems-compilation/img_repaint/2016/national_paper_1_science/q9_fig1.tex",
+      "mode": "100644",
+      "sha": "bd00b759fee1ee410c12f8e96673e8e8d64d1201",
+      "size": 2813
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "LICENSE",
+      "mirror_path": "mirror/gaokaomath/LICENSE",
+      "mode": "100644",
+      "sha": "da6ab6cc8f333d7e89a99812866df8f24374d47c",
+      "size": 18657
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "README_EN.md",
+      "mirror_path": "mirror/gaokaomath/README_EN.md",
+      "mode": "100644",
+      "sha": "a95446d2d75255dc5bf9f6e23c9ed4d93c131f3c",
+      "size": 19614
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "README_JA.md",
+      "mirror_path": "mirror/gaokaomath/README_JA.md",
+      "mode": "100644",
+      "sha": "ba19c019989c1a1b9e699af3f29771cc2823522c",
+      "size": 18449
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "README.md",
+      "mirror_path": "mirror/gaokaomath/README.md",
+      "mode": "100644",
+      "sha": "195f00cde1bc7288d8d441e276a1b476f9030400",
+      "size": 15106
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1977/初试/1977江苏南通地区初试.pdf",
+      "mirror_path": "mirror/gaokaomath/普通高考/1977/初试/1977江苏南通地区初试.pdf",
+      "mode": "100644",
+      "sha": "91fae0f5c89e5582720c95cb0f84b3a3ecb35dd2",
+      "size": 136903
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1986/1986上海文.pdf",
+      "mirror_path": "mirror/gaokaomath/普通高考/1986/1986上海文.pdf",
+      "mode": "100644",
+      "sha": "107755698d007c4235e515b5515f8053828c4619",
+      "size": 137686
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1989/1989上海.pdf",
+      "mirror_path": "mirror/gaokaomath/普通高考/1989/1989上海.pdf",
+      "mode": "100644",
+      "sha": "d01a9c8b8656b87d9fd1d16eabb541bb6f2e103f",
+      "size": 128273
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1989/1989广东文.pdf",
+      "mirror_path": "mirror/gaokaomath/普通高考/1989/1989广东文.pdf",
+      "mode": "100644",
+      "sha": "ee0f4dfcd5af015b510348df03671c224630d9e4",
+      "size": 147202
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1994/1994上海.pdf",
+      "mirror_path": "mirror/gaokaomath/普通高考/1994/1994上海.pdf",
+      "mode": "100644",
+      "sha": "a5b42d8e3935f34a2d9eeee96f1a3dc66f941663",
+      "size": 145637
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/1999/1999上海理.pdf",
+      "mirror_path": "mirror/gaokaomath/普通高考/1999/1999上海理.pdf",
+      "mode": "100644",
+      "sha": "1d76d728820d9302c707ccdfddddd9ec430df2b3",
+      "size": 138032
+    },
+    {
+      "source_id": "gaokaomath",
+      "path": "普通高考/2004/北京和全国3卷为旧课程.txt",
+      "mirror_path": "mirror/gaokaomath/普通高考/2004/北京和全国3卷为旧课程.txt",
+      "mode": "100644",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/培优测试卷/培优1_几何辅助线技巧_测试卷.pdf",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/培优测试卷/培优1_几何辅助线技巧_测试卷.pdf",
+      "mode": "100644",
+      "sha": "2eab292968ac1b045f9087eb4bcf8c484eb6484c",
+      "size": 77279
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/培优测试卷/培优3_函数与动点综合_测试卷.pdf",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/培优测试卷/培优3_函数与动点综合_测试卷.pdf",
+      "mode": "100644",
+      "sha": "3380cfd8603024c87da8634b483ab0ca446c2a56",
+      "size": 75629
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/培优测试卷/培优7_韦达定理与圆锥曲线_测试卷.pdf",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/培优测试卷/培优7_韦达定理与圆锥曲线_测试卷.pdf",
+      "mode": "100644",
+      "sha": "f1b5d040f45cf9a27d3fa58c908e8707cc227578",
+      "size": 78833
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/高中测试卷/第1章_集合与常用逻辑用语_测试卷.pdf",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/高中测试卷/第1章_集合与常用逻辑用语_测试卷.pdf",
+      "mode": "100644",
+      "sha": "be8d7d59e13b01bcfc5f03434b9cb7f46a196969",
+      "size": 75336
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/高中测试卷/第8章_立体几何初步_测试卷.pdf",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/高中测试卷/第8章_立体几何初步_测试卷.pdf",
+      "mode": "100644",
+      "sha": "1078311d65e2cfbda495dec5edac7ffa855eed8f",
+      "size": 77349
+    },
+    {
+      "source_id": "math-lecture-notes",
+      "path": "测试卷/高考满分突破测试卷/满分突破4_解析几何代数化_测试卷.pdf",
+      "mirror_path": "mirror/math-lecture-notes/测试卷/高考满分突破测试卷/满分突破4_解析几何代数化_测试卷.pdf",
+      "mode": "100644",
+      "sha": "5de580877131b8032d2349663d24d2540feedc08",
+      "size": 76262
+    }
+  ],
+  "limitations": [
+    "This verifies byte-for-byte Git identity, not mathematical correctness or source-paper authenticity.",
+    "Licensing and third-party figure/exam redistribution require separate review.",
+    "The other 5074 source objects are not yet strictly matched."
+  ]
+}
