@@ -4,7 +4,7 @@
 
 **仓库状态**：已建立上游来源清单及 Git 子模块；`upstream/` 中是指向原仓库固定版本的链接，**不是将数百 MB 二进制文件平铺复制**。独立文件级索引见 [index](index/)（运行索引脚本后生成）。数学答案和试题版权均未被自动验证。
 
-[11 仓库完整镜像进度](mirror/STATUS.md)（2026-10-26：**2,297/7,222** 个固定上游源文件 SHA＋Git 模式严格匹配、尚缺 **4,925**；[最新新增 149 文件的 SHA 清单](mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json)）：本轮已把上游 img_repaint 的图形重绘 TeX 全部 320/320 份按原始 SHA 搬运到主仓库；另外 5 个源仓库仍未完整，不能把子模块视为已复制文件。
+[11 仓库完整镜像进度](mirror/STATUS.md)（2026-10-26：**2,359/7,222** 严格匹配、尚缺 **4,863**、累计覆盖 32.66%；[本轮实际新增 62 张 PNG 及逐文件 SHA 审计](mirror/DIRECT_IMPORT_62_PNG_2026_10_26.json)）：6 个来源已完整，其余 5 个尚不完整。先前 149 文件批次见 [历史清单](mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json)。
 
 ## 2010—2019 年试卷 TeX：完整的十年固定版镜像
 
@@ -72,16 +72,15 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 上游保持独立许可，不能把整个聚合库声称为一个统一许可证。部分原仓库存在许可声明不完整或第三方素材权利不明确的情况，详见 [sources.json](sources.json)。
 
 
-## 11 个上游仓库实体镜像（2026-10-26）
+## 11 个上游仓库实体镜像（2026-10-26 最新）
 
-11 个上游已全部锁定固定 Git SHA，其中 **6 个来源完整，5 个仍有实体文件缺失**。主分支与全部固定上游递归 Git 树独立比较：**2,297 / 7,222（31.81%）** 个原始 Blob 的 SHA 和 Git 模式严格一致，尚缺 **4,925 个**、原始字节约 **560.2 MB**。只计真实 Git Blob，不计子模块链接。
+11 个上游均固定到 `sources.json` 记录的 Git 提交。**6 个已完全镜像，5 个仍缺源文件**。以前次完整树审计 2,297 为基线，加本次确证的 62 个新 PNG，得到 **2,359/7,222（32.66%）** 个 SHA 与 Git 模式相符的原始实体文件，缺 **4,863** 个，待迁原始大小约 **557.6 MB**。
 
-- [11 个来源最新镜像进度](mirror/STATUS.md) / [机器可读状态](mirror/MIRROR_STATUS.json)。
-- **[本轮实际导入 149 个文件的完整 SHA、模式、大小和路径](mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json)**：131 个图形重绘 TeX，12 份历史数学试卷 PDF，6 份数学专题 PDF。固定上游 `img_repaint/*.tex` 共 **320/320** 严格匹配。
-- [上一轮导入 35 文件清单](mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json)及更早的 [88 文件清单](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json)均是历史批次，不可与本轮重复计算。
-- **[Windows 一键导入剩余大型原始 PDF、PNG 和 DOCX](scripts/README_FULL_IMPORT.md)** / [双击启动器](scripts/一键导入11个仓库.cmd) / [完整 Git 对象导入源码](scripts/import_pinned_git_trees.py)。
+- [最新状态与边界说明](mirror/STATUS.md) / [机器可读镜像统计](mirror/MIRROR_STATUS.json) / [本轮新增 62 张 PNG 的 SHA 清单](mirror/DIRECT_IMPORT_62_PNG_2026_10_26.json)。来自 DxAThing 固定版本 `img/1977/`，62/147 实体到齐，原始字节 2,605,421，均按 SHA＋模式复核。
+- [上一轮导入 149 文件的清单](mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json)，包含 131 张重绘图 TeX、12 份历年试卷 PDF、6 份数学专题 PDF；该批使 `img_repaint/*.tex` 达到 320/320。
+- [完整文件导入操作说明](scripts/README_FULL_IMPORT.md) / [Windows 双击脚本](scripts/一键导入11个仓库.cmd) / [Git 原对象导入源码](scripts/import_pinned_git_trees.py)。
 
-剩余较大二进制内容未能经当前接口全部上传，且历史 GitHub Actions Runner 启动失败，不能声称 11 个仓库已经全部完成；请在具备 GitHub 网络、私有仓库认证与推送权限的电脑上执行完整 Git 树导入。原始文件 SHA 校验不等于试题数学正确、权利授权或官方影像鉴定。
+**SHA 一致只证明原始对象搬运忠实**；题目真伪、数学审核、图片视觉效果、LaTeX 及 PDF 编译和再分发权利仍未因此验证。
 
 ## 高考导数题目级索引（2026-10-24）
 

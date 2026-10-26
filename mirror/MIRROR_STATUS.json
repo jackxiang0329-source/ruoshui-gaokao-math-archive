@@ -3,8 +3,8 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 2297,
-  "missing": 4925,
+  "verified": 2359,
+  "missing": 4863,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,8 +16,8 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1254,
-      "missing": 4292,
+      "verified": 1316,
+      "missing": 4230,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-26 fresh full recursive Git-tree SHA+mode audit of main@2ffd4cc638d724042edeb6a69c62f8679a7de0fb versus all 11 pinned upstream commits: 2297/7222 exact; 4925 absent/unmatched, 560185193 original source bytes remain. This turn physically imported 149 previously unmatched blobs: 131 original img_repaint/*.tex (now 320/320 complete), 12 gaokaomath historical exam PDFs, 6 math-lecture-notes PDFs, total 3103899 original bytes; independent pin comparison and manifest mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json. SHA identity does not establish authoritative exam provenance, legal rights, compilability, image inspection or mathematical correctness.",
-  "remaining_bytes": 560185193,
+  "note": "2026-10-26: prior full 11-upstream audit verified 2297/7222; newly imported and independently verified 62 previously missing PNG in pinned DxAThing img/1977/ directory (62/147), SHA+mode differences 0; derived current total 2359/7222, missing 4863, remaining bytes 557579772. Not a fresh all-source audit. Source correctness, licensing and typesetting not tested.",
+  "remaining_bytes": 557579772,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -159,22 +159,20 @@
     }
   ],
   "latest_incremental_import": {
-    "manifest": "mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json",
-    "baseline_commit": "d136c65574460a9df12d0b75a793abcd7e0bbfc4",
-    "mirror_commit": "2ffd4cc638d724042edeb6a69c62f8679a7de0fb",
-    "new_verified": 149,
-    "new_source_bytes": 3103899,
-    "by_source": {
-      "gaokao-math-problems-compilation": 131,
-      "gaokaomath": 12,
-      "math-lecture-notes": 6
-    },
-    "prior_verified": 2148,
-    "post_verified": 2297,
-    "fig_tex_checked": 320,
-    "fig_tex_expected": 320
+    "manifest": "mirror/DIRECT_IMPORT_62_PNG_2026_10_26.json",
+    "baseline_verified": 2297,
+    "post_verified": 2359,
+    "source": "gaokao-math-problems-compilation",
+    "source_pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+    "added_png": 62,
+    "new_source_bytes": 2605421,
+    "baseline_commit": "87a7b083979a50c72242cb71ea578529cc8e986d",
+    "mirror_commit": "62e1edf78807453ba4b62694b25650de5dcf44e4",
+    "year_1977_expected": 147,
+    "year_1977_verified": 62,
+    "sha_and_mode_mismatches": 0
   },
-  "latest_inventory_audit_commit": "2ffd4cc638d724042edeb6a69c62f8679a7de0fb",
+  "latest_inventory_audit_commit": "62e1edf78807453ba4b62694b25650de5dcf44e4",
   "prior_incremental_import": {
     "manifest": "mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json",
     "count": 14,
@@ -229,5 +227,22 @@
       "actual_after_reaudit": 2105,
       "actual_reaudit_commit": "ae9fc963a2ba7960bdbfe7012079cba6567cf049"
     }
-  ]
+  ],
+  "previous_latest_incremental_import": {
+    "manifest": "mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json",
+    "baseline_commit": "d136c65574460a9df12d0b75a793abcd7e0bbfc4",
+    "mirror_commit": "2ffd4cc638d724042edeb6a69c62f8679a7de0fb",
+    "new_verified": 149,
+    "new_source_bytes": 3103899,
+    "by_source": {
+      "gaokao-math-problems-compilation": 131,
+      "gaokaomath": 12,
+      "math-lecture-notes": 6
+    },
+    "prior_verified": 2148,
+    "post_verified": 2297,
+    "fig_tex_checked": 320,
+    "fig_tex_expected": 320
+  },
+  "audit_scope": "Incremental verification of 1977 image subtree plus previously audited 2297 baseline; not fresh all-11 source audit"
 }
