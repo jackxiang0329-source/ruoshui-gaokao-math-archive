@@ -4,7 +4,7 @@
 
 **仓库状态**：已建立上游来源清单及 Git 子模块；`upstream/` 中是指向原仓库固定版本的链接，**不是将数百 MB 二进制文件平铺复制**。独立文件级索引见 [index](index/)（运行索引脚本后生成）。数学答案和试题版权均未被自动验证。
 
-[11 仓库完整镜像进度](mirror/STATUS.md)（2026-10-25：**2,095/7,222** 个上游文件严格匹配、尚缺 **5,127**；[最新 88 文件 SHA 审计](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json)；[先前 126 文件审计](mirror/AUDIT_HISTORICAL_FIGURES_2026_10_25.md)）：按固定 Git SHA 核验已入库文件；仍有大型仓库未完成，不能仅凭子模块认为源码齐全。
+[11 仓库完整镜像进度](mirror/STATUS.md)（2026-10-26：**2,105/7,222** 个上游文件严格匹配、尚缺 **5,117**；[最新 10 份 TeX 导入提交](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/ae9fc963a2ba7960bdbfe7012079cba6567cf049)；[前批 88 文件 SHA 审计](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json)；[先前 126 文件审计](mirror/AUDIT_HISTORICAL_FIGURES_2026_10_25.md)）：按固定 Git SHA 核验已入库文件；仍有大型仓库未完成，不能仅凭子模块认为源码齐全。
 
 ## 2010—2019 年试卷 TeX：完整的十年固定版镜像
 
