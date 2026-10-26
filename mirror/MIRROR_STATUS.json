@@ -3,8 +3,8 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 2105,
-  "missing": 5117,
+  "verified": 2113,
+  "missing": 5109,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,8 +16,8 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1097,
-      "missing": 4449,
+      "verified": 1105,
+      "missing": 4441,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-26 re-audited all 11 fixed source recursive Git trees against main@ae9fc963a2ba7960bdbfe7012079cba6567cf049: SHA and Git mode matched 2105/7222; 5117 unmatched; remaining original blob sizes 564727454 bytes; 6 fully matched sources. The latest explicitly recorded single import commit ae9fc963a2ba7960bdbfe7012079cba6567cf049 includes ten original TeX figure blobs (26526 bytes). Other concurrent main changes are included in the current full inventory but are not attributed to that batch. Does not certify mathematics, PDF, original-paper authenticity, licensing, or CI.",
-  "remaining_bytes": 564727454,
+  "note": "2026-10-26 complete independent recursive Git tree re-audit of all 11 pinned upstream versions vs main@faf453a6b0d2bca6be018e23b863e00d12740ab1: SHA+Git-mode exact 2113/7222, missing 5109, remaining source blob size 564705708 bytes, 6/11 complete. Other main commits already included in count; only eight figure TeX files are attributed to faf453a6. No math/rights/PDF authenticity conclusion.",
+  "remaining_bytes": 564705708,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -177,7 +177,7 @@
     "actual_after_reaudit": 2105,
     "actual_reaudit_commit": "ae9fc963a2ba7960bdbfe7012079cba6567cf049"
   },
-  "latest_inventory_audit_commit": "ae9fc963a2ba7960bdbfe7012079cba6567cf049",
+  "latest_inventory_audit_commit": "faf453a6b0d2bca6be018e23b863e00d12740ab1",
   "prior_incremental_import": {
     "manifest": "mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json",
     "count": 14,
@@ -190,5 +190,12 @@
       "d0d8195f5e63940375b4ca29e0a2d25f967d002a"
     ],
     "inventory_commit": "c6580f15a0cacd0025f6087de4e671541ba297d1"
+  },
+  "latest_figure_tex_import": {
+    "commit": "faf453a6b0d2bca6be018e23b863e00d12740ab1",
+    "source": "gaokao-math-problems-compilation",
+    "pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+    "new_verified": 8,
+    "new_bytes": 21746
   }
 }
