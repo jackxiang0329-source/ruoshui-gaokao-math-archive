@@ -4,7 +4,7 @@
 
 **仓库状态**：已建立上游来源清单及 Git 子模块；`upstream/` 中是指向原仓库固定版本的链接，**不是将数百 MB 二进制文件平铺复制**。独立文件级索引见 [index](index/)（运行索引脚本后生成）。数学答案和试题版权均未被自动验证。
 
-[11 仓库完整镜像进度](mirror/STATUS.md)（2026-10-26：**2,148/7,222** 个上游文件严格匹配、尚缺 **5,074**；[最新 35 文件机器审计](mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json)；[最新 10 份 TeX 导入提交](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/ae9fc963a2ba7960bdbfe7012079cba6567cf049)；[前批 88 文件 SHA 审计](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json)；[先前 126 文件审计](mirror/AUDIT_HISTORICAL_FIGURES_2026_10_25.md)）：按固定 Git SHA 核验已入库文件；仍有大型仓库未完成，不能仅凭子模块认为源码齐全。
+[11 仓库完整镜像进度](mirror/STATUS.md)（2026-10-26：**2,297/7,222** 个固定上游源文件 SHA＋Git 模式严格匹配、尚缺 **4,925**；[最新新增 149 文件的 SHA 清单](mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json)）：本轮已把上游 img_repaint 的图形重绘 TeX 全部 320/320 份按原始 SHA 搬运到主仓库；另外 5 个源仓库仍未完整，不能把子模块视为已复制文件。
 
 ## 2010—2019 年试卷 TeX：完整的十年固定版镜像
 
@@ -74,14 +74,14 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 
 ## 11 个上游仓库实体镜像（2026-10-26）
 
-11 个上游已全部登记并锁定固定 Git SHA，**6 个来源仓库完整，另外 5 个仍有实体文件未迁入**。与全部 11 个固定上游 Git 树重新比对，主分支当前 **2,148 / 7,222（29.74%）** 个源 Blob 的 SHA 与 Git 模式严格一致，尚缺 **5,074 个**，剩余源文件原始大小约 **563.3 MB**。此口径不把子模块链接或索引当作实体文件。
+11 个上游已全部锁定固定 Git SHA，其中 **6 个来源完整，5 个仍有实体文件缺失**。主分支与全部固定上游递归 Git 树独立比较：**2,297 / 7,222（31.81%）** 个原始 Blob 的 SHA 和 Git 模式严格一致，尚缺 **4,925 个**、原始字节约 **560.2 MB**。只计真实 Git Blob，不计子模块链接。
 
-- [11 个来源的最新核验进度](mirror/STATUS.md) / [机器可读状态](mirror/MIRROR_STATUS.json)。
-- [2026-10-26 本轮新增 35 个精确 SHA 匹配文件](mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json)：6 份专题 PDF、6 份历年高考 PDF、5 个上游说明及许可文件、18 份原始重绘图 TeX。
-- [之前 88 文件清单](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json) / [更早的 14 文件清单](mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json)；这两者是历史批次，不应与本轮混淆。
-- **[Windows 一键迁入剩余大型文件](scripts/README_FULL_IMPORT.md)** / [双击启动器](scripts/一键导入11个仓库.cmd) / [完整 Git 对象导入脚本](scripts/import_pinned_git_trees.py)。
+- [11 个来源最新镜像进度](mirror/STATUS.md) / [机器可读状态](mirror/MIRROR_STATUS.json)。
+- **[本轮实际导入 149 个文件的完整 SHA、模式、大小和路径](mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json)**：131 个图形重绘 TeX，12 份历史数学试卷 PDF，6 份数学专题 PDF。固定上游 `img_repaint/*.tex` 共 **320/320** 严格匹配。
+- [上一轮导入 35 文件清单](mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json)及更早的 [88 文件清单](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json)均是历史批次，不可与本轮重复计算。
+- **[Windows 一键导入剩余大型原始 PDF、PNG 和 DOCX](scripts/README_FULL_IMPORT.md)** / [双击启动器](scripts/一键导入11个仓库.cmd) / [完整 Git 对象导入源码](scripts/import_pinned_git_trees.py)。
 
-目前本地一键工具可通过完整 Git 对象传输和固定树 SHA 校验剩余内容，但**尚未在可以向私有仓库推送大文件的环境中完成全量执行**。第三方高考试卷、插图和讲义的真实性、版权及编译／数学正确性需要分别质检。
+剩余较大二进制内容未能经当前接口全部上传，且历史 GitHub Actions Runner 启动失败，不能声称 11 个仓库已经全部完成；请在具备 GitHub 网络、私有仓库认证与推送权限的电脑上执行完整 Git 树导入。原始文件 SHA 校验不等于试题数学正确、权利授权或官方影像鉴定。
 
 ## 高考导数题目级索引（2026-10-24）
 
