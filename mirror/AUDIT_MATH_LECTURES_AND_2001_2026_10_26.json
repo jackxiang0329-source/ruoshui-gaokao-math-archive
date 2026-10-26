@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-26",
+  "scope": "targeted independent verification of two imported sources",
+  "target": "jackxiang0329-source/ruoshui-gaokao-math-archive",
+  "math_lecture_notes": {
+    "upstream": "Dreamaker203/math-lecture-notes",
+    "pin": "b89f6207bc5b84f501837ea6da3899799a8787d8",
+    "expected": 373,
+    "matched_blob_sha_and_mode": 373,
+    "missing": 0,
+    "source_directory_tree_sha": "b89f6207bc5b84f501837ea6da3899799a8787d8",
+    "target_directory_tree_sha": "85de50b7aace38224d6fae35bf8e0d83e7c980f9",
+    "whole_tree_sha_same": false,
+    "comment": "Full flattened file audit exact; overall tree hash differs."
+  },
+  "gaokao_2001_png": {
+    "upstream": "DxAThing/Gaokao-Math-Problems-Compilation",
+    "pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+    "path": "img/2001",
+    "expected": 41,
+    "matched": 41,
+    "source_tree_sha": "225460a0b8a253aacd105b186fb250bbf7e29cc9",
+    "target_tree_sha": "225460a0b8a253aacd105b186fb250bbf7e29cc9",
+    "bytes": 3932906
+  },
+  "baseline": 3121,
+  "added": 198,
+  "post_verified": 3319,
+  "expected_all": 7222,
+  "remaining": 3903,
+  "warning": "Incremental figure, other in-flight commits not counted; licenses not audited."
+}

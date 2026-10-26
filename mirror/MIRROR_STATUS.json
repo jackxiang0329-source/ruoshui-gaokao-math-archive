@@ -1,23 +1,23 @@
 {
   "date": "2026-10-26",
-  "method": "Historical 11-source full-tree audit and later SHA-verified DxAThing year imports, including 1998, 2000, 1995 and 1996. Incremental, not fresh all-11 audit.",
-  "full": 6,
+  "method": "Incremental historical 11-source baseline 3121 plus independently verified math-lecture-notes 157 and 2001 PNG 41; not a fresh 11-source audit.",
+  "full": 7,
   "expected": 7222,
-  "verified": 3121,
-  "missing": 4101,
+  "verified": 3319,
+  "missing": 3903,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
-      "verified": 216,
-      "missing": 157,
-      "complete": false
+      "verified": 373,
+      "missing": 0,
+      "complete": true
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1992,
-      "missing": 3554,
+      "verified": 2033,
+      "missing": 3513,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "Added 99 previously missing, original SHA+mode verified PNGs for years 1995/1996. Exact year Git Tree SHA independently verified for both. Prior 3,022/7,222 + 99 = 3,121/7,222.",
-  "remaining_bytes": 475771105,
+  "note": "Math lecture notes 373/373 original blobs SHA+mode exact; 2001 PNG 41/41 whole subtree Git Tree SHA exact. Count 3121+157+41=3319, excluding other un-audited concurrent commits. Remaining byte total not refreshed.",
+  "remaining_bytes": null,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
