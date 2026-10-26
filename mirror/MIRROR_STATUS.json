@@ -3,8 +3,8 @@
   "method": "2026-10-26 fresh independent full comparison: each of the 11 upstream pinned recursive Git trees vs corresponding main mirror recursive Git trees; exact path, SHA, mode. Exclude gitlinks. See AUDIT_FULL_11_POST_IMPORT_2026_10_26.json.",
   "full": 6,
   "expected": 7222,
-  "verified": 2755,
-  "missing": 4467,
+  "verified": 2897,
+  "missing": 4325,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,8 +16,8 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1626,
-      "missing": 3920,
+      "verified": 1768,
+      "missing": 3778,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "Full Git tree reaudit supersedes previous incremental estimates. Prior 2,615 reported files + this continuation's 91 new real Git blobs + 49 previously mirrored gaokaomath PDFs omitted from prior count = 2,755 verified. Does not evaluate math correctness, exam provenance, licensing, or PDF visual quality.",
-  "remaining_bytes": 494315160,
+  "note": "Latest status uses the prior verified 11-source full recursive audit plus a fresh pinned recursive-tree re-audit of DxAThing after concurrent writes to this source. 1999 image folder tree fully matches upstream. This is NOT a new all-source re-audit; see historical full audit and 1999 continuation manifest.",
+  "remaining_bytes": 490040910,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -244,7 +244,7 @@
     "fig_tex_checked": 320,
     "fig_tex_expected": 320
   },
-  "audit_scope": "Independent full recursive Git tree audit all 11 pinned source commits after this continuation.",
+  "audit_scope": "11-source full audit baseline 2755 plus freshly audited DxAThing source-tree delta of +142 across this conversation and concurrent GitHub commits. Only 26 of these newly copied files are from the 1999 continuation commit in this turn.",
   "latest_year_image_audit": "mirror/AUDIT_IMAGES_1977_1985_1986_2026_10_26.json",
   "latest_incremental_commits": [
     {
@@ -324,5 +324,17 @@
       "14a9bd1c8c04440577cf31de8e8e7be5e5403347",
       "25ea96de83a5282b264518cadb05b02beff2b381"
     ]
+  },
+  "latest_source_reaudit": {
+    "source": "gaokao-math-problems-compilation",
+    "verified": 1768,
+    "expected": 5546,
+    "missing": 3778,
+    "missing_source_bytes": 103956476,
+    "continuation_manifest": "mirror/DIRECT_IMPORT_1999_CONTINUATION_2026_10_26.json",
+    "direct_import_commit": "5a59ae69c5595c9e5418d55f24d56177e5878b3c",
+    "direct_import_files": 26,
+    "files_increase_since_prior_source_audit": 142,
+    "concurrent_changes": true
   }
 }
