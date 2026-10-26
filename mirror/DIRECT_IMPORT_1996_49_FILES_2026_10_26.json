@@ -1,0 +1,316 @@
+{
+  "date": "2026-10-26",
+  "kind": "direct_verified_git_blob_import",
+  "source": "DxAThing/Gaokao-Math-Problems-Compilation",
+  "source_commit": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+  "source_subtree": "img/1996",
+  "source_subtree_sha": "b56f14715eefa656a6a8b0f46ef7174d91af8384",
+  "target_subtree": "mirror/gaokao-math-problems-compilation/img/1996",
+  "verified_target_subtree_sha": "b56f14715eefa656a6a8b0f46ef7174d91af8384",
+  "target_last_import_commit": "5973a36f70ae13a88d34019a1565b29f8f028895",
+  "new_files": 49,
+  "new_source_bytes": 5852453,
+  "source_files_expected": 49,
+  "destination_files_verified": 49,
+  "git_blob_sha_and_mode_matched": 49,
+  "conflicts": 0,
+  "math_accuracy_reviewed": false,
+  "visual_pdf_reviewed": false,
+  "third_party_redistribution_rights_verified": false,
+  "files": [
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_liberal/q19_fig1.png",
+      "sha": "1b693a9ce6057ebc2689d69caef60d487204ceb5",
+      "mode": "100644",
+      "size": 11002
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_liberal/q23_fig1.png",
+      "sha": "e2cb8e340eff67939d1c78583958a920e02f9a0d",
+      "mode": "100644",
+      "size": 23391
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_liberal/q2_optA.png",
+      "sha": "fa5cef435fd65f3402be2b675fd51164f08ab0c4",
+      "mode": "100644",
+      "size": 12241
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_liberal/q2_optB.png",
+      "sha": "fcfc631fc1e99d10984ffa1b4ee8690d95fb6c6e",
+      "mode": "100644",
+      "size": 11849
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_liberal/q2_optC.png",
+      "sha": "019937c0ddc62d376b6b43ee59cec4cab984f927",
+      "mode": "100644",
+      "size": 12196
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_liberal/q2_optD.png",
+      "sha": "f145fcbe2ec9d5f5c409999d586ce8462a9332e8",
+      "mode": "100644",
+      "size": 12374
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q19_fig1.png",
+      "sha": "22872c1458e43425f260ecef194108f53c5491d8",
+      "mode": "100644",
+      "size": 12195
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q22_fig1.png",
+      "sha": "68725befd1ded636fbe928847d9293cc93513ddc",
+      "mode": "100644",
+      "size": 20310
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q2_optA.png",
+      "sha": "718b52df610c8cdd9ada4fe82d7094cdb7370fdc",
+      "mode": "100644",
+      "size": 15110
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q2_optA_clean.png",
+      "sha": "cfb5e6b5e6a110a628bb6a137791f28269fe9b56",
+      "mode": "100644",
+      "size": 12220
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q2_optB.png",
+      "sha": "0bada5d4431c084625f01db131f8b0588d27d4b9",
+      "mode": "100644",
+      "size": 15017
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q2_optB_clean.png",
+      "sha": "db0885daf5c47754f3becec113cbf996a6a9a795",
+      "mode": "100644",
+      "size": 12108
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q2_optC.png",
+      "sha": "29bcc5b1ccb14a711ec217f0b010d6c6afea9eea",
+      "mode": "100644",
+      "size": 15161
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q2_optC_clean.png",
+      "sha": "8505015e8a401790c5ec7543421cfcfc7458418c",
+      "mode": "100644",
+      "size": 11114
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q2_optD.png",
+      "sha": "bef0b9f92e072fc6832e3909f14269d8920af70a",
+      "mode": "100644",
+      "size": 15551
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/national_science/q2_optD_clean.png",
+      "sha": "42a9f6e870c03a2e4dd6f1ea88b49042a9e5c449",
+      "mode": "100644",
+      "size": 11602
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/paper_1996_0182/q19_fig1.png",
+      "sha": "5a73e75afe012bcedcfe39e1e85305a1ac0973a6",
+      "mode": "100644",
+      "size": 7543
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/paper_1996_0182/q23_fig1.png",
+      "sha": "d7bc2ff96d6f82dd2a48d4024c446ff66fd6fd85",
+      "mode": "100644",
+      "size": 10884
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/paper_1996_0182/q2_fig1.png",
+      "sha": "714029385edc5c51e7b8c1b424d99f36d5f93d6a",
+      "mode": "100644",
+      "size": 14788
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/paper_1996_0183/q19_fig1.png",
+      "sha": "3ea4cb4807d79e80a9091b0d163183495740f5c0",
+      "mode": "100644",
+      "size": 4987
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/paper_1996_0183/q22_fig1.png",
+      "sha": "7007dcb9cba6594bb63299e299f1d6e5a2133279",
+      "mode": "100644",
+      "size": 4813
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/paper_1996_0183/q2_fig1.png",
+      "sha": "3fc32fe1b6f23172198639355c6eb62002b0e57a",
+      "mode": "100644",
+      "size": 34288
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_liberal/q20_fig1.png",
+      "sha": "fc095bc35981791105f372a586bc1ec0db551e23",
+      "mode": "100644",
+      "size": 210867
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_liberal/q21_fig1.png",
+      "sha": "b173cc6250a6cbd5cab6c0923a663d4c6098b56d",
+      "mode": "100644",
+      "size": 364256
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_liberal/q22_fig1.png",
+      "sha": "418eda0fa66adb8c371e1a5a73bd4c8a47ff3396",
+      "mode": "100644",
+      "size": 438644
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_liberal/q8_fig1.png",
+      "sha": "af3ddbf265350ad3226b31a9756f5de1d53c9535",
+      "mode": "100644",
+      "size": 194149
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_liberal/q8_fig2.png",
+      "sha": "ca89e049bcceedb310f955249300650203e1b274",
+      "mode": "100644",
+      "size": 197695
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_liberal/q8_fig3.png",
+      "sha": "22274609ff1daea882c7b04c0dff688cb1082e2e",
+      "mode": "100644",
+      "size": 169050
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_liberal/q8_fig4.png",
+      "sha": "853fb753a7f9928aeb0c09532dbad06d98828bf5",
+      "mode": "100644",
+      "size": 224856
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q18_fig1.png",
+      "sha": "1ac7c6aba3491a4b4d2cde1701f0d01bcfe1a2a0",
+      "mode": "100644",
+      "size": 282890
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q20_fig1.png",
+      "sha": "8712ef0e9732f247f0745e0a08aaba4b0176ed94",
+      "mode": "100644",
+      "size": 349725
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q21_fig1.png",
+      "sha": "e72351e7af89bd2a2380848ea9a090a7b65a1ee3",
+      "mode": "100644",
+      "size": 578146
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q23_fig1.png",
+      "sha": "689d76774188495dc1ae6d07d7864e6e7232a69c",
+      "mode": "100644",
+      "size": 342170
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q7_fig1.png",
+      "sha": "3f949b1b6710984378446e1b7722228556c1d4bc",
+      "mode": "100644",
+      "size": 130648
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q7_fig2.png",
+      "sha": "fa55b1f38c9d7781fc43b00270cbcb6f11e8cf16",
+      "mode": "100644",
+      "size": 114143
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q7_fig3.png",
+      "sha": "b19174bd71f5f3ac7f3eee44b626bda6195285d6",
+      "mode": "100644",
+      "size": 132961
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q7_fig4.png",
+      "sha": "322e0e6395085e4f5785d9139991184b3891d6cb",
+      "mode": "100644",
+      "size": 136428
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q7_optA.png",
+      "sha": "5bf1aa186ffeccf40d5ecdd162b70492f5f1c3c2",
+      "mode": "100644",
+      "size": 104361
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q7_optB.png",
+      "sha": "1f82a9973491077e9a64523bb957a40ad0747161",
+      "mode": "100644",
+      "size": 94068
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q7_optC.png",
+      "sha": "700629d3942579a791c2063bb7be8f02ff461937",
+      "mode": "100644",
+      "size": 110157
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q7_optD.png",
+      "sha": "8f9bbd78f45e4d2c30a6ab8ff0f4dda750883845",
+      "mode": "100644",
+      "size": 114482
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q8_fig1.png",
+      "sha": "be99ca8a6b8f2f61e449b3e9b454ed4ac73802b0",
+      "mode": "100644",
+      "size": 161541
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q8_fig2.png",
+      "sha": "b1cf5e695ac52ad80d5c0221848e8cacb3dff8e3",
+      "mode": "100644",
+      "size": 162276
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q8_fig3.png",
+      "sha": "7d4344153071f8fd62daa98cd8e6ceec21cfde34",
+      "mode": "100644",
+      "size": 150823
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q8_fig4.png",
+      "sha": "f47a2674abbdd69f7835cc123a8814ac818a6ef8",
+      "mode": "100644",
+      "size": 202432
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q8_optA.png",
+      "sha": "641a788e550ca6b6f3f4eff871bcffc80bf9ebf4",
+      "mode": "100644",
+      "size": 144430
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q8_optB.png",
+      "sha": "331269b76d52c27198559ecfd33024f824c5553f",
+      "mode": "100644",
+      "size": 139631
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q8_optC.png",
+      "sha": "6d9b36838aaec198bdc3e9984d0ee34aa0ce205f",
+      "mode": "100644",
+      "size": 129448
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1996/shanghai_science/q8_optD.png",
+      "sha": "29f8d309faa1fdb8a8913fe118a0686bb1d39e1b",
+      "mode": "100644",
+      "size": 171432
+    }
+  ]
+}
