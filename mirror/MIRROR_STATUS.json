@@ -1,10 +1,10 @@
 {
   "date": "2026-10-26",
-  "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
+  "method": "2026-10-26 fresh independent full comparison: each of the 11 upstream pinned recursive Git trees vs corresponding main mirror recursive Git trees; exact path, SHA, mode. Exclude gitlinks. See AUDIT_FULL_11_POST_IMPORT_2026_10_26.json.",
   "full": 6,
   "expected": 7222,
-  "verified": 2615,
-  "missing": 4607,
+  "verified": 2755,
+  "missing": 4467,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,15 +16,15 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1540,
-      "missing": 4006,
+      "verified": 1626,
+      "missing": 3920,
       "complete": false
     },
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 344,
-      "missing": 438,
+      "verified": 398,
+      "missing": 384,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-26 cumulative incremental SHA+Git-mode audit: previous 2,541/7,222 plus 60 newly completed 1988–1990 image files and 14 mathematics test PDF blobs verified against pinned upstream SHA/mode. It is not a fresh exhaustive all-11 tree audit.",
-  "remaining_bytes": 522909935,
+  "note": "Full Git tree reaudit supersedes previous incremental estimates. Prior 2,615 reported files + this continuation's 91 new real Git blobs + 49 previously mirrored gaokaomath PDFs omitted from prior count = 2,755 verified. Does not evaluate math correctness, exam provenance, licensing, or PDF visual quality.",
+  "remaining_bytes": 494315160,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -244,7 +244,7 @@
     "fig_tex_checked": 320,
     "fig_tex_expected": 320
   },
-  "audit_scope": "Prior all-source audit plus independently verified incremental imports. For 1988–1990 img year subtrees, full Git directory tree SHA matches pinned upstream; for 14 PDFs, each source blob SHA and mode matches mirrored repository tree.",
+  "audit_scope": "Independent full recursive Git tree audit all 11 pinned source commits after this continuation.",
   "latest_year_image_audit": "mirror/AUDIT_IMAGES_1977_1985_1986_2026_10_26.json",
   "latest_incremental_commits": [
     {
@@ -269,9 +269,9 @@
       "subtree": "普通高考/1978-1984"
     }
   ],
-  "latest_verified_commit": "57cc6e4ef39eecd3931aeb932123dcdb5ff8375b",
-  "latest_verified_delta": 74,
-  "latest_verified_source_bytes": 2659734,
+  "latest_verified_commit": "25ea96de83a5282b264518cadb05b02beff2b381",
+  "latest_verified_delta": 91,
+  "latest_verified_source_bytes": 6077141,
   "latest_import_1987": {
     "commit": "8aaa7ef87fccd30521edaaac7eeee9ea28089724",
     "source": "gaokao-math-problems-compilation",
@@ -296,5 +296,33 @@
     "commit_png_1990": "7538d353e1b661a9d9f8ee2cb65a9ad1ef614b50",
     "commit_pdfs": "57cc6e4ef39eecd3931aeb932123dcdb5ff8375b",
     "sha_mode_mismatches": 0
+  },
+  "full_reaudit": {
+    "date": "2026-10-26",
+    "manifest": "mirror/AUDIT_FULL_11_POST_IMPORT_2026_10_26.json",
+    "manifest_commit": "09c431546c6df5d26f7c9364ae6a8e05be1a721d",
+    "all_sources": 11,
+    "verified": 2755,
+    "expected": 7222,
+    "missing": 4467,
+    "remaining_original_blob_bytes": 494315160,
+    "uncounted_existing_files_corrected": 49
+  },
+  "latest_continuation_import": {
+    "manifest": "mirror/DIRECT_IMPORT_91_FILES_2026_10_26.json",
+    "manifest_commit": "948bf58690227612aedce33d8a3120260f02bd54",
+    "added_files": 91,
+    "added_png": 86,
+    "added_pdf": 5,
+    "source_count": 2,
+    "new_source_bytes": 6077141,
+    "source_pins": "see manifest",
+    "commits": [
+      "219307721b92b8c253e889f4d7eb11bbe74e7eda",
+      "93c491ff26413872b9362a3443075d3e8279e7d3",
+      "f22c803f8da391f1c38f868f0cda6bf47f8ddad4",
+      "14a9bd1c8c04440577cf31de8e8e7be5e5403347",
+      "25ea96de83a5282b264518cadb05b02beff2b381"
+    ]
   }
 }
