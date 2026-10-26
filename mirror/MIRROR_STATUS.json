@@ -3,8 +3,8 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 2359,
-  "missing": 4863,
+  "verified": 2475,
+  "missing": 4747,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,8 +16,8 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1316,
-      "missing": 4230,
+      "verified": 1432,
+      "missing": 4114,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-26: prior full 11-upstream audit verified 2297/7222; newly imported and independently verified 62 previously missing PNG in pinned DxAThing img/1977/ directory (62/147), SHA+mode differences 0; derived current total 2359/7222, missing 4863, remaining bytes 557579772. Not a fresh all-source audit. Source correctness, licensing and typesetting not tested.",
-  "remaining_bytes": 557579772,
+  "note": "2026-10-26 derived from prior 2297/7222 full audit plus exact SHA+mode pin checks of img/1977 (147), img/1985 (6), img/1986 (25); current 2475/7222, missing 4747, remaining original bytes 534990266; not a fresh all-11 recursive audit.",
+  "remaining_bytes": 534990266,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -172,7 +172,7 @@
     "year_1977_verified": 62,
     "sha_and_mode_mismatches": 0
   },
-  "latest_inventory_audit_commit": "62e1edf78807453ba4b62694b25650de5dcf44e4",
+  "latest_inventory_audit_commit": "7bbb373d1451d8146ecaa36ce4d2de9cf86192c8",
   "prior_incremental_import": {
     "manifest": "mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json",
     "count": 14,
@@ -244,5 +244,6 @@
     "fig_tex_checked": 320,
     "fig_tex_expected": 320
   },
-  "audit_scope": "Incremental verification of 1977 image subtree plus previously audited 2297 baseline; not fresh all-11 source audit"
+  "audit_scope": "Incremental verification of 1977 image subtree plus previously audited 2297 baseline; not fresh all-11 source audit",
+  "latest_year_image_audit": "mirror/AUDIT_IMAGES_1977_1985_1986_2026_10_26.json"
 }
