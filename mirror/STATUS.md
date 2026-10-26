@@ -1,6 +1,29 @@
 # 11 个固定上游仓库：实体镜像进度（2026-10-26）
 
-## 2026-10-26 续批：1987 年全部试题插图
+## 2026-10-26 本次续迁：1988—1990 年 60 张插图及高中数学 14 份 PDF
+
+从此前经增量验证的 **2,541/7,222** 出发，向主分支实际导入 **74 个真实 Git Blob**（原始文件字节总量 **2,659,734**）：
+
+- **DxAThing**：1988 年 23 张 PNG、1989 年 23 张 PNG、1990 年 14 张 PNG，共 **60 张原始插图**，各年份 **完整目录树 SHA** 均与锁定源提交 `f1ae169b58a75b3db6e35c670b3f0d5c78718188` 完全相同。提交：[1988](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/67bc4881fd033f9eb8a3b0553a99a9c4f7eb654c) / [1989](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/b6859c48efd41cec83b1a013a37ed7527a0f12a3) / [1990](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/7538d353e1b661a9d9f8ee2cb65a9ad1ef614b50)。
+- **Dreamaker203**：新增 **14 份高中数学测试卷 PDF**，逐文件 Git Blob SHA、模式与固定源提交 `b89f6207bc5b84f501837ea6da3899799a8787d8` 相同。提交：[14 份 PDF](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/57cc6e4ef39eecd3931aeb932123dcdb5ff8375b)。
+
+| 来源 | 严格匹配 / 固定源文件 | 尚缺 |
+|---|---:|---:|
+| DxAThing 大型高考 LaTeX / 插图 | **1,540 / 5,546** | 4,006 |
+| Dreamaker203 数学讲义 | **216 / 373** | 157 |
+| deekur 历年试卷 PDF | 344 / 782 | 438 |
+| hbinfrog 高三复习 | 43 / 47 | 4 |
+| Yan-Zero MathPaper | 37 / 39 | 2 |
+| 其他 6 个已完整来源 | 435 / 435 | 0 |
+| **总计** | **2,615 / 7,222（36.21%）** | **4,607** |
+
+至此 **6/11 个来源完整**，5 个仍未完整；固定源剩余原始 Blob 大小估算 **522,909,935 字节**。本统计为可追溯的 **之前增量核验 + 本轮 74 个严格比对**，不是重新全量扫描所有来源。大于 1 MB 的二进制文件通过当前轻量内容接口经常无法读取，完整源树仍需仓库的 Git 对象批量导入脚本。
+
+[本轮 74 个文件逐路径 SHA / mode / 字节清单](DIRECT_IMPORT_74_FILES_2026_10_26.json) · [更新后机器台账](MIRROR_STATUS.json)。文件搬运 SHA 一致不等于试题真实、答案准确、LaTeX 编译通过、出版质检通过或第三方版权授权已核实。
+
+---
+
+## 上一次续批（历史快照）：1987 年全部试题插图
 
 本批将固定来源 `DxAThing/Gaokao-Math-Problems-Compilation@f1ae169b58a75b3db6e35c670b3f0d5c78718188` 的 1987 年五个图形子目录 **29 张 PNG（669,570 字节）** 真正写入 `mirror/gaokao-math-problems-compilation/img/1987/`，逐图 Blob SHA 与 Git mode 已校验。目标全部五个目录树 SHA 与原始固定版本一致，冲突 0。提交：[8aaa7ef8](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/8aaa7ef87fccd30521edaaac7eeee9ea28089724)。
 
@@ -8,7 +31,7 @@
 
 
 
-当前已验证 **2,541 / 7,222（35.18%）** 个实体源文件按固定上游 SHA 和 Git mode 一致，尚缺 **4,681**，完整来源 **6 / 11**。这属于以前次 2,475 条核验为基线加 37 条新文件的**增量核验**，不是重新遍历全部 11 个上游仓库。
+上一批已验证 **2,541 / 7,222（35.18%）** 个实体源文件按固定上游 SHA 和 Git mode 一致，尚缺 **4,681**，完整来源 **6 / 11**。这属于以前次 2,475 条核验为基线加 37 条新文件的**增量核验**，不是重新遍历全部 11 个上游仓库。
 
 | 来源 | 已验证 | 总数 | 尚缺 |
 |---|---:|---:|---:|
