@@ -1,10 +1,10 @@
 {
   "date": "2026-10-26",
-  "method": "2026-10-26 11-source full-audit baseline, followed by pinned DxAThing audit through 1999 and independently verified 82/82 tree SHA+mode for img/2000; not a newly repeated all-11 full audit.",
+  "method": "Historical 11-source complete-tree audit baseline, later DxAThing 1999 re-audit, and two independently verified complete image-year trees: 2000 (82/82), 1998 (43/43). Not a new 11-source full audit.",
   "full": 6,
   "expected": 7222,
-  "verified": 2979,
-  "missing": 4243,
+  "verified": 3022,
+  "missing": 4200,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,8 +16,8 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1850,
-      "missing": 3696,
+      "verified": 1893,
+      "missing": 3653,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "Post-2000 year image import incremental result, based on prior 2,897/7,222 verified snapshot + 82 previously missing SHA/mode-verified original PNGs. Exact Git Tree SHA for img/2000 matches upstream. Other source mirror completeness not freshly reaudited.",
-  "remaining_bytes": 488415471,
+  "note": "Verified 125 new and previously missing original PNGs in this round, exact source Git Blob SHA/mode and matching independent 1998/2000 year Git Tree SHAs. 3,022/7,222 derived incrementally from previous 2,897/7,222; other sources not freshly reaudited.",
+  "remaining_bytes": 486827149,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -244,7 +244,7 @@
     "fig_tex_checked": 320,
     "fig_tex_expected": 320
   },
-  "audit_scope": "Historical 11-source full audit 2,755/7,222 + DxAThing fresh source audit to 2,897/7,222 + 82 new, previously absent img/2000 blobs. No all-source re-audit after this import.",
+  "audit_scope": "Full 11-source baseline 2,755/7,222; independent DxAThing delta to 2,897; source-exact 2000 +82 and 1998 +43, now 3,022/7,222. Year-level tree Sha equal. No new all-source full audit.",
   "latest_year_image_audit": "mirror/AUDIT_IMAGES_1977_1985_1986_2026_10_26.json",
   "latest_incremental_commits": [
     {
@@ -269,9 +269,9 @@
       "subtree": "普通高考/1978-1984"
     }
   ],
-  "latest_verified_commit": "2069a7fdd34dc672e214c74c82052ca804a9708e",
-  "latest_verified_delta": 82,
-  "latest_verified_source_bytes": 1625439,
+  "latest_verified_commit": "c02c5c91b76ac9e96d22325fcc277f92c015700e",
+  "latest_verified_delta": 43,
+  "latest_verified_source_bytes": 1588322,
   "latest_import_1987": {
     "commit": "8aaa7ef87fccd30521edaaac7eeee9ea28089724",
     "source": "gaokao-math-problems-compilation",
@@ -349,5 +349,18 @@
     "last_import_commit": "2069a7fdd34dc672e214c74c82052ca804a9708e",
     "prior_verified": 2897,
     "post_verified": 2979
+  },
+  "latest_1998_year_import": {
+    "manifest": "mirror/DIRECT_IMPORT_1998_43_FILES_2026_10_26.json",
+    "source": "gaokao-math-problems-compilation",
+    "source_pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+    "year": "1998",
+    "added_png": 43,
+    "verified_png": 43,
+    "new_source_bytes": 1588322,
+    "target_year_tree_sha": "0ffd9d92a086ca15c754fde5f044f0dcf551b288",
+    "last_import_commit": "c02c5c91b76ac9e96d22325fcc277f92c015700e",
+    "prior_verified": 2979,
+    "post_verified": 3022
   }
 }
