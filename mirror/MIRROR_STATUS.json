@@ -3,8 +3,8 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 2512,
-  "missing": 4710,
+  "verified": 2541,
+  "missing": 4681,
   "sources": [
     {
       "id": "math-lecture-notes",
@@ -16,8 +16,8 @@
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1451,
-      "missing": 4095,
+      "verified": 1480,
+      "missing": 4066,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-26 incremental mirror verification: previous 2,475/7,222 SHA+mode audited baseline plus 37 new exact source blobs, verified with target Git tree SHA equality for 1985 images and the 1978-1984/1993 PDF year directories. Not a fresh recursive audit of all 11 sources.",
-  "remaining_bytes": 526239239,
+  "note": "2026-10-26 incremental pinned SHA+mode audit. The prior 2512/7222 verified baseline plus 29 new original 1987 PNG blobs; all five target image directory tree SHAs match the pinned upstream exactly. Not a fresh recursive audit of all 11 sources.",
+  "remaining_bytes": 525569669,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -244,7 +244,7 @@
     "fig_tex_checked": 320,
     "fig_tex_expected": 320
   },
-  "audit_scope": "Incrementally verified 37 additional pinned source files and exact year subtrees. Historical full-source baseline retained; this count does not independently re-enumerate all 11 current trees.",
+  "audit_scope": "Prior full-source audit plus separately checked incremental batches, including 1987 five image directories (29 exact blobs).",
   "latest_year_image_audit": "mirror/AUDIT_IMAGES_1977_1985_1986_2026_10_26.json",
   "latest_incremental_commits": [
     {
@@ -269,7 +269,16 @@
       "subtree": "普通高考/1978-1984"
     }
   ],
-  "latest_verified_commit": "f7a6d93369e903665f4bf3649c52522781635e2a",
-  "latest_verified_delta": 37,
-  "latest_verified_source_bytes": 8751027
+  "latest_verified_commit": "8aaa7ef87fccd30521edaaac7eeee9ea28089724",
+  "latest_verified_delta": 29,
+  "latest_verified_source_bytes": 669570,
+  "latest_import_1987": {
+    "commit": "8aaa7ef87fccd30521edaaac7eeee9ea28089724",
+    "source": "gaokao-math-problems-compilation",
+    "pin": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+    "verified": 29,
+    "bytes": 669570,
+    "subtree": "img/1987",
+    "sha_mode_mismatches": 0
+  }
 }
