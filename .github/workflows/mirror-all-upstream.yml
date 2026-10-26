@@ -34,13 +34,22 @@ concurrency:
 jobs:
   mirror:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    # Keep each scheduled run within the 30-minute recurrence window.
+    timeout-minutes: 28
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
           persist-credentials: true
           submodules: false
+          # Do not materialize huge historical assets or unsafe upstream
+          # symlinks in the runner filesystem. Git objects remain available.
+          sparse-checkout: |
+            .github
+            scripts
+            tests
+            sources.json
+          sparse-checkout-cone-mode: true
       - name: Verify manifest
         shell: bash
         run: |
