@@ -1,97 +1,142 @@
 {
   "date": "2026-10-26",
-  "method": "Incremental historical 11-source baseline 3121 plus independently verified math-lecture-notes 157 and 2001 PNG 41; not a fresh 11-source audit.",
-  "full": 7,
+  "method": "Independent verification of all 11 exact pinned Git tree SHA values against mirror/<source-id> subtree SHAs in main. A matching whole tree proves all file content/modes/paths, not mathematical correctness or permissions.",
+  "full": 11,
   "expected": 7222,
-  "verified": 3319,
-  "missing": 3903,
+  "verified": 7222,
+  "missing": 0,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
       "verified": 373,
       "missing": 0,
-      "complete": true
+      "complete": true,
+      "upstream_commit": "b89f6207bc5b84f501837ea6da3899799a8787d8",
+      "expected_tree_sha": "85de50b7aace38224d6fae35bf8e0d83e7c980f9",
+      "actual_tree_sha": "85de50b7aace38224d6fae35bf8e0d83e7c980f9",
+      "tree_match": true
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 2033,
-      "missing": 3513,
-      "complete": false
+      "verified": 5546,
+      "missing": 0,
+      "complete": true,
+      "upstream_commit": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+      "expected_tree_sha": "dcb022234a7a6299942d4c8b936828df6a09e65f",
+      "actual_tree_sha": "dcb022234a7a6299942d4c8b936828df6a09e65f",
+      "tree_match": true
     },
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 398,
-      "missing": 384,
-      "complete": false
+      "verified": 782,
+      "missing": 0,
+      "complete": true,
+      "upstream_commit": "08179f1fc0a3300787155d92800ac82b57ee4118",
+      "expected_tree_sha": "2c3f5e00201a2b5042268d397d0f8d2b5dda360b",
+      "actual_tree_sha": "2c3f5e00201a2b5042268d397d0f8d2b5dda360b",
+      "tree_match": true
     },
     {
       "id": "first-round-review",
       "expected": 47,
-      "verified": 43,
-      "missing": 4,
-      "complete": false
+      "verified": 47,
+      "missing": 0,
+      "complete": true,
+      "upstream_commit": "9eea8bd0f3e12c0ff95b9ba763d06d4da4f23b3b",
+      "expected_tree_sha": "7edfe5e94b1644d719f298bf41e0c84acf71f6fa",
+      "actual_tree_sha": "7edfe5e94b1644d719f298bf41e0c84acf71f6fa",
+      "tree_match": true
     },
     {
       "id": "gaokao-math-corpus",
       "expected": 207,
       "verified": 207,
       "missing": 0,
-      "complete": true
+      "complete": true,
+      "upstream_commit": "fb53cf48eeadf1520109f55a9852e9465ae1d6bd",
+      "expected_tree_sha": "609c376620c1d130a525c0cad7b4f0f1911c6b1c",
+      "actual_tree_sha": "609c376620c1d130a525c0cad7b4f0f1911c6b1c",
+      "tree_match": true
     },
     {
       "id": "2024-china-gaokao-math",
       "expected": 7,
       "verified": 7,
       "missing": 0,
-      "complete": true
+      "complete": true,
+      "upstream_commit": "f3ef469f92981c662f1904a77c5adbd6b7531565",
+      "expected_tree_sha": "fbb22b2e3be83736f35c1ae7da87a438160f4640",
+      "actual_tree_sha": "fbb22b2e3be83736f35c1ae7da87a438160f4640",
+      "tree_match": true
     },
     {
       "id": "gaokao-exam-template",
       "expected": 18,
       "verified": 18,
       "missing": 0,
-      "complete": true
+      "complete": true,
+      "upstream_commit": "54932049810b24e85076cee6cb941f501923a00d",
+      "expected_tree_sha": "8419a86820980cefcd6eebf7343565e8ef9a2b8d",
+      "actual_tree_sha": "8419a86820980cefcd6eebf7343565e8ef9a2b8d",
+      "tree_match": true
     },
     {
       "id": "mathpaper",
       "expected": 39,
-      "verified": 37,
-      "missing": 2,
-      "complete": false
+      "verified": 39,
+      "missing": 0,
+      "complete": true,
+      "upstream_commit": "19585a8a6e1f09e326d1772f48a7cee0982228d8",
+      "expected_tree_sha": "be7b3f129248ce5a4672eb560914e3dca553298d",
+      "actual_tree_sha": "be7b3f129248ce5a4672eb560914e3dca553298d",
+      "tree_match": true
     },
     {
       "id": "daxmate-math",
       "expected": 21,
       "verified": 21,
       "missing": 0,
-      "complete": true
+      "complete": true,
+      "upstream_commit": "187878cf239f0e2bb45e92e22ee4a14a51afbc78",
+      "expected_tree_sha": "c2e7f11a6d9ca89a3b899add0f5dc56d2e66f8fd",
+      "actual_tree_sha": "c2e7f11a6d9ca89a3b899add0f5dc56d2e66f8fd",
+      "tree_match": true
     },
     {
       "id": "math-atlas",
       "expected": 110,
       "verified": 110,
       "missing": 0,
-      "complete": true
+      "complete": true,
+      "upstream_commit": "b8022192c5cca91957cfd43babf02f49512e08b4",
+      "expected_tree_sha": "e9ff15cc0c095b8514ea92ad0045791ee5c1e28c",
+      "actual_tree_sha": "e9ff15cc0c095b8514ea92ad0045791ee5c1e28c",
+      "tree_match": true
     },
     {
       "id": "mathex",
       "expected": 72,
       "verified": 72,
       "missing": 0,
-      "complete": true
+      "complete": true,
+      "upstream_commit": "bf687c88507e7ab5680d1af96b82ac0af812bea8",
+      "expected_tree_sha": "131e336cba82cbf10379b313a334e70bf9886a73",
+      "actual_tree_sha": "131e336cba82cbf10379b313a334e70bf9886a73",
+      "tree_match": true
     }
   ],
   "last_mirror_ci": {
-    "run_id": 40165208999,
-    "status": "failure",
-    "runner_steps_available": false
+    "run_id": 40354890353,
+    "status": "success",
+    "runner_steps_available": true,
+    "workflow": "mirror-all-upstream.yml"
   },
-  "note": "Math lecture notes 373/373 original blobs SHA+mode exact; 2001 PNG 41/41 whole subtree Git Tree SHA exact. Count 3121+157+41=3319, excluding other un-audited concurrent commits. Remaining byte total not refreshed.",
-  "remaining_bytes": null,
-  "missing_blobs_at_least_1mb": 46,
+  "note": "11/11 pinned trees mirror exactly (7,222/7,222 source blobs). This does not validate copyright, third-party rights, mathematical solutions, or PDF quality. Scheduled runs keep the pins; upstream new commits require explicit pin updates.",
+  "remaining_bytes": 0,
+  "missing_blobs_at_least_1mb": 0,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
     "mirror_commit": "9bd7183eb106e815399e156c273fdd368fa7d37c",
@@ -106,7 +151,7 @@
     "post_verified": 1993,
     "manifest": "mirror/IMPORT_BATCH_HISTORICAL_FIGURES_2026_10_25.json"
   },
-  "audited_commit": "9bd7183eb106e815399e156c273fdd368fa7d37c",
+  "audited_commit": "9d1bba1aee81ede93e3a5677d993671d56b4651e",
   "archived_direct_imports": [
     {
       "baseline_commit": "46efd8fe7e121a46b94c71e980b498b53f80380c",
@@ -244,7 +289,7 @@
     "fig_tex_checked": 320,
     "fig_tex_expected": 320
   },
-  "audit_scope": "Historical 11-source full audit, then individual source re-audit and complete year subtree checks; no fresh all-11 scan for this round.",
+  "audit_scope": "Fresh independent all-11 pinned commit tree-SHA comparison 2026-10-26",
   "latest_year_image_audit": "mirror/AUDIT_IMAGES_1977_1985_1986_2026_10_26.json",
   "latest_incremental_commits": [
     {
@@ -380,5 +425,71 @@
     "post_verified": 3121,
     "sha_mode_mismatches": 0,
     "last_commit": "5973a36f70ae13a88d34019a1565b29f8f028895"
+  },
+  "full_mirror_verified": {
+    "date": "2026-10-26",
+    "head_commit": "9d1bba1aee81ede93e3a5677d993671d56b4651e",
+    "workflow_run_id": 40354890353,
+    "sources_count": 11,
+    "expected_files": 7222,
+    "exact_verified_files": 7222,
+    "missing_files": 0,
+    "source_tree_shas": [
+      {
+        "id": "math-lecture-notes",
+        "commit": "b89f6207bc5b84f501837ea6da3899799a8787d8",
+        "tree_sha": "85de50b7aace38224d6fae35bf8e0d83e7c980f9"
+      },
+      {
+        "id": "gaokao-math-problems-compilation",
+        "commit": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+        "tree_sha": "dcb022234a7a6299942d4c8b936828df6a09e65f"
+      },
+      {
+        "id": "gaokaomath",
+        "commit": "08179f1fc0a3300787155d92800ac82b57ee4118",
+        "tree_sha": "2c3f5e00201a2b5042268d397d0f8d2b5dda360b"
+      },
+      {
+        "id": "first-round-review",
+        "commit": "9eea8bd0f3e12c0ff95b9ba763d06d4da4f23b3b",
+        "tree_sha": "7edfe5e94b1644d719f298bf41e0c84acf71f6fa"
+      },
+      {
+        "id": "gaokao-math-corpus",
+        "commit": "fb53cf48eeadf1520109f55a9852e9465ae1d6bd",
+        "tree_sha": "609c376620c1d130a525c0cad7b4f0f1911c6b1c"
+      },
+      {
+        "id": "2024-china-gaokao-math",
+        "commit": "f3ef469f92981c662f1904a77c5adbd6b7531565",
+        "tree_sha": "fbb22b2e3be83736f35c1ae7da87a438160f4640"
+      },
+      {
+        "id": "gaokao-exam-template",
+        "commit": "54932049810b24e85076cee6cb941f501923a00d",
+        "tree_sha": "8419a86820980cefcd6eebf7343565e8ef9a2b8d"
+      },
+      {
+        "id": "mathpaper",
+        "commit": "19585a8a6e1f09e326d1772f48a7cee0982228d8",
+        "tree_sha": "be7b3f129248ce5a4672eb560914e3dca553298d"
+      },
+      {
+        "id": "daxmate-math",
+        "commit": "187878cf239f0e2bb45e92e22ee4a14a51afbc78",
+        "tree_sha": "c2e7f11a6d9ca89a3b899add0f5dc56d2e66f8fd"
+      },
+      {
+        "id": "math-atlas",
+        "commit": "b8022192c5cca91957cfd43babf02f49512e08b4",
+        "tree_sha": "e9ff15cc0c095b8514ea92ad0045791ee5c1e28c"
+      },
+      {
+        "id": "mathex",
+        "commit": "bf687c88507e7ab5680d1af96b82ac0af812bea8",
+        "tree_sha": "131e336cba82cbf10379b313a334e70bf9886a73"
+      }
+    ]
   }
 }
