@@ -80,7 +80,8 @@ def import_one(root: Path, *, source_id: str, source_url: str, pin: str,
                    GIT_TERMINAL_PROMPT="0")
         git(root, "read-tree", parent, env=env)
         if existing:
-            git(root, "rm", "-r", "-f", "--cached", "-q", "--", dest, env=env)
+            # --sparse is required when the runner only checks out scripts/tests.
+            git(root, "rm", "-r", "-f", "--cached", "--sparse", "-q", "--", dest, env=env)
         git(root, "read-tree", f"--prefix={dest}/", pinned_tree, env=env)
         new_tree = git(root, "write-tree", env=env)
         exact = git(root, "rev-parse", f"{new_tree}:{dest}")
