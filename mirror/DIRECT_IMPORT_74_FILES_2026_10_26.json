@@ -1,0 +1,493 @@
+{
+  "date": "2026-10-26",
+  "kind": "physical Git blobs, original SHA plus Git mode",
+  "baseline_verified": 2541,
+  "expected_total": 7222,
+  "new_verified": 74,
+  "post_verified": 2615,
+  "remaining": 4607,
+  "original_bytes": 2659734,
+  "validation": "Pinned source blob SHA preserved; the 1988/1989/1990 year directory Git tree SHA was independently re-checked against target main. All 14 PDFs match source by SHA and mode in mirrored Git tree; not a math/authenticity/license review.",
+  "batches": [
+    {
+      "source": "DxAThing/Gaokao-Math-Problems-Compilation",
+      "pinned_commit": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+      "year": "1988",
+      "source_year_tree_sha": "f11d31ca91aa738f7cdadcec8d66d37529f551bb",
+      "target_commit": "67bc4881fd033f9eb8a3b0553a99a9c4f7eb654c",
+      "count": 23,
+      "bytes": 551123
+    },
+    {
+      "source": "DxAThing/Gaokao-Math-Problems-Compilation",
+      "pinned_commit": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+      "year": "1989",
+      "source_year_tree_sha": "db9a23bd984e70c69e19cce80c3adac6fdfbc4b9",
+      "target_commit": "b6859c48efd41cec83b1a013a37ed7527a0f12a3",
+      "count": 23,
+      "bytes": 325617
+    },
+    {
+      "source": "DxAThing/Gaokao-Math-Problems-Compilation",
+      "pinned_commit": "f1ae169b58a75b3db6e35c670b3f0d5c78718188",
+      "year": "1990",
+      "source_year_tree_sha": "5f607797d45b334fe02c10de8f5d8631316a573b",
+      "target_commit": "7538d353e1b661a9d9f8ee2cb65a9ad1ef614b50",
+      "count": 14,
+      "bytes": 453953
+    },
+    {
+      "source": "Dreamaker203/math-lecture-notes",
+      "pinned_commit": "b89f6207bc5b84f501837ea6da3899799a8787d8",
+      "target_commit": "57cc6e4ef39eecd3931aeb932123dcdb5ff8375b",
+      "count": 14,
+      "bytes": 1329041
+    }
+  ],
+  "files": [
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/guangdong_liberal/q2_fig1.png",
+      "sha": "965d3cc747983bb0a81b3bdb1622eb2f527cb03b",
+      "mode": "100644",
+      "bytes": 79118
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/guangdong_liberal/q24_fig1.png",
+      "sha": "40d7396b94d3ea9b20939f3bda33118599ffd699",
+      "mode": "100644",
+      "bytes": 45202
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/guangdong_science/q23_fig1.png",
+      "sha": "40d7396b94d3ea9b20939f3bda33118599ffd699",
+      "mode": "100644",
+      "bytes": 45202
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/guangdong_science/q26_fig1.png",
+      "sha": "00318661e7fde1f6af9bbec0decff4d2014c2457",
+      "mode": "100644",
+      "bytes": 24687
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/guangdong_science/q27_solution_fig1.png",
+      "sha": "5fee7354a9ef2d9d8b7b2b30945a3ab27ed5cece",
+      "mode": "100644",
+      "bytes": 38453
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_liberal/q12_fig1.png",
+      "sha": "9e8963c39b71901dc8dc260fa18f88b50d591acd",
+      "mode": "100644",
+      "bytes": 22100
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_liberal/q22_fig1.png",
+      "sha": "5875d85f734dc904b0f58129e3748d41462fc369",
+      "mode": "100644",
+      "bytes": 23052
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_liberal/q4_fig1.png",
+      "sha": "093f7c51f5b1677faa2de9fbda55fa892d1964a6",
+      "mode": "100644",
+      "bytes": 52759
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_liberal/q4_optA.png",
+      "sha": "d677f8d52d913d1df01993129ff5a1e304d218c1",
+      "mode": "100644",
+      "bytes": 11396
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_liberal/q4_optB.png",
+      "sha": "09c420caf69cf30ee9a391dcf82512d147b745dd",
+      "mode": "100644",
+      "bytes": 11845
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_liberal/q4_optC.png",
+      "sha": "2096fe9550b0ebcd61e90ca3b3c900f55aca2ce1",
+      "mode": "100644",
+      "bytes": 11375
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_liberal/q4_optD.png",
+      "sha": "b5d8df60ac2dd11ecea6a9f602645b385eea6ac6",
+      "mode": "100644",
+      "bytes": 11781
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_science/q19_fig1.png",
+      "sha": "c05a3efd2b7e5a54cbcd923235411977c773e049",
+      "mode": "100644",
+      "bytes": 22908
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_science/q22_fig1.png",
+      "sha": "5c5470b40cbdf8be5e22fc9db92d35e1c9e2591b",
+      "mode": "100644",
+      "bytes": 38966
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_science/q24_fig1.png",
+      "sha": "d59f971c5a28fd37af890241520c78606aa548d5",
+      "mode": "100644",
+      "bytes": 27144
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/national_science/q9_fig1.png",
+      "sha": "84a90e733f79d7266db3d2408e1d9820840a0df8",
+      "mode": "100644",
+      "bytes": 22338
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/shanghai/q18_optA.png",
+      "sha": "cf24fe0a71bd0246507d420fd5e0f949278832e0",
+      "mode": "100644",
+      "bytes": 4741
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/shanghai/q18_optB.png",
+      "sha": "1b5002a202cb6dfa4a866f903a0809f2137dbd96",
+      "mode": "100644",
+      "bytes": 4633
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/shanghai/q18_optC.png",
+      "sha": "3c8721df83b31e38e8fb24f1ec9a46148a1b265d",
+      "mode": "100644",
+      "bytes": 4095
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/shanghai/q18_optD.png",
+      "sha": "27aad8639fa01dd44806018fe94b3c3ebb0836b1",
+      "mode": "100644",
+      "bytes": 4330
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/shanghai/q18_options.png",
+      "sha": "047095b7c0ad97d36b2b4feded8f280f387255f9",
+      "mode": "100644",
+      "bytes": 24458
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/shanghai/q23_fig1.png",
+      "sha": "9527671b47e0c151cfc6b64356b6dd2cd0e20dba",
+      "mode": "100644",
+      "bytes": 8354
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1988/shanghai/q26_fig1.png",
+      "sha": "cf348740ecaa9d8665f020318bf0f713f37d8da9",
+      "mode": "100644",
+      "bytes": 12186
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_liberal/q12_optA.png",
+      "sha": "a5538d8423d24945e6676c4cf3a29291cd1a8275",
+      "mode": "100644",
+      "bytes": 22970
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_liberal/q12_optB.png",
+      "sha": "1efa9f0a9b1fe5cc1becee5fa7de4cfe0afd34f9",
+      "mode": "100644",
+      "bytes": 25254
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_liberal/q12_optC.png",
+      "sha": "5d20e4cbdd31696145592d351e0f710f5d937066",
+      "mode": "100644",
+      "bytes": 27818
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_liberal/q12_optD.png",
+      "sha": "982c416da6aa7fdf1ad81f115246153107bf90bf",
+      "mode": "100644",
+      "bytes": 27017
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_liberal/q12_options.png",
+      "sha": "d866c63dc8cb87a5c1e1ebd2ccb0fd9a3df5e079",
+      "mode": "100644",
+      "bytes": 13974
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_liberal/q2_fig1.png",
+      "sha": "e55540132efdf7beab86a58929be6d8590177c78",
+      "mode": "100644",
+      "bytes": 3829
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_liberal/q2_solution_fig1.png",
+      "sha": "d0fe09cfbe9bc54d7e9c7436234abd5ed99f0dde",
+      "mode": "100644",
+      "bytes": 4718
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_science/q25_optA.png",
+      "sha": "9d6830f54f3d5a57f970e4dd6768b0b5da5902c7",
+      "mode": "100644",
+      "bytes": 8643
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_science/q25_optB.png",
+      "sha": "1f5e96f50f2dbc1d4d58be817bba75480b822c79",
+      "mode": "100644",
+      "bytes": 11440
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_science/q25_optC.png",
+      "sha": "4eb1b44b9169b768c627be812187aff94c0f1c16",
+      "mode": "100644",
+      "bytes": 15023
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_science/q25_optD.png",
+      "sha": "28a66fe88dff17de1fb0d886810b7a79a3ae559f",
+      "mode": "100644",
+      "bytes": 8434
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_science/q4_solution_fig1.png",
+      "sha": "d54713741939c5a67cde1d0ab8509a1341f2d027",
+      "mode": "100644",
+      "bytes": 22105
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/guangdong_science/q5_solution_fig1.png",
+      "sha": "ef7125e16596cba8e3d2f1d5faac33f73a72c145",
+      "mode": "100644",
+      "bytes": 9193
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/national_liberal/q18_fig1.png",
+      "sha": "1dba957861e30bcb580f1d2f4921bf52e2924003",
+      "mode": "100644",
+      "bytes": 14120
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/national_liberal/q21_fig1.png",
+      "sha": "4dba744256903988a9d1e23af619c9765afeb454",
+      "mode": "100644",
+      "bytes": 23719
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/national_science/q18_fig1.png",
+      "sha": "6f5c3c1064123b86423a7bbd96e85962492e81f2",
+      "mode": "100644",
+      "bytes": 21920
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/national_science/q20_fig1.png",
+      "sha": "f9879ea97e41763d90411c0936dc525f12cd773a",
+      "mode": "100644",
+      "bytes": 23916
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/shanghai/q25_solution_fig1.png",
+      "sha": "a30bf9a199ee6cbb1d2eae98036092ce6e1e0d4c",
+      "mode": "100644",
+      "bytes": 9217
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/shanghai/q26_solution_fig1.png",
+      "sha": "f11f413fc9bcd5c2ec5a327c854712a780d02593",
+      "mode": "100644",
+      "bytes": 7154
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/shanghai/q28_solution_fig1.png",
+      "sha": "febb62f20b44fac9b8dc0a06e42db43c78b7a9b3",
+      "mode": "100644",
+      "bytes": 4700
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/shanghai/q28_solution_fig2.png",
+      "sha": "8c28928c211bd74d2ce5115c2d879ca4ef4aab33",
+      "mode": "100644",
+      "bytes": 6876
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/shanghai/q5_fig1.png",
+      "sha": "9eca65edec089e280d944421cf3b4b81e7b1ec81",
+      "mode": "100644",
+      "bytes": 7395
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1989/shanghai/q6_fig1.png",
+      "sha": "98f0cbd127719d52edd7761d931b94f26f48edeb",
+      "mode": "100644",
+      "bytes": 6182
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/guangdong_liberal/q18_fig1.png",
+      "sha": "f9fedcdcab239172b8b4e0a93f71db91103a7788",
+      "mode": "100644",
+      "bytes": 33109
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/guangdong_liberal/q2_fig1.png",
+      "sha": "a4856ffedc352106c519970803f067b381698cb3",
+      "mode": "100644",
+      "bytes": 42941
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/guangdong_science/q12_fig1.png",
+      "sha": "1670dc9a33dc4b50b736f70db2c65155b01208a7",
+      "mode": "100644",
+      "bytes": 157823
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/guangdong_science/q30_fig1.png",
+      "sha": "15712112af855d589abea6d1c42a7d399294c847",
+      "mode": "100644",
+      "bytes": 16362
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/guangdong_science/q31_fig1.png",
+      "sha": "bace52b7a0d0131f8f922f54460f0ee97d4e28e3",
+      "mode": "100644",
+      "bytes": 25995
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/national_liberal/q14_fig1.png",
+      "sha": "77b99ea2e963b6332dfade667ab584869cf1537d",
+      "mode": "100644",
+      "bytes": 19678
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/national_liberal/q20_fig1.png",
+      "sha": "56342963fc6f565bdf8dec9210bf4f11d59967e1",
+      "mode": "100644",
+      "bytes": 23529
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/national_liberal/q23_fig1.png",
+      "sha": "4851dc71971ba05b514a9d0a09be57cef79ab453",
+      "mode": "100644",
+      "bytes": 18106
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/national_liberal/q6_fig1.png",
+      "sha": "534b3057bbeb430b59fcc99e31df91f2b9af99ae",
+      "mode": "100644",
+      "bytes": 16368
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/national_science/q11_fig1.png",
+      "sha": "0ea955d041ca333f0305776efd825d7ebb8f928b",
+      "mode": "100644",
+      "bytes": 19570
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/national_science/q20_fig1.png",
+      "sha": "8d31a25c70df06ecf26befdbe625e496213fa838",
+      "mode": "100644",
+      "bytes": 23569
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/national_science/q23_fig1.png",
+      "sha": "de7b6efa296f888fb14e427aaf15cd9ca5af0876",
+      "mode": "100644",
+      "bytes": 18169
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/national_science/q5_fig1.png",
+      "sha": "5075f6e60821ddf93f31b7f91bec189750376515",
+      "mode": "100644",
+      "bytes": 17684
+    },
+    {
+      "path": "mirror/gaokao-math-problems-compilation/img/1990/shanghai/q26_fig1.png",
+      "sha": "e118c7bee0922d4332b10927bfc8697e5af7167d",
+      "mode": "100644",
+      "bytes": 21050
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高中测试卷/第10章_概率_测试卷.pdf",
+      "sha": "bb7cc7e1c73e89c14f0bd147b27f05923741738d",
+      "mode": "100644",
+      "bytes": 88617
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高中测试卷/第2章_一元二次函数方程与不等式_测试卷.pdf",
+      "sha": "a54435e6955c0b902835bfa11912cad7364331e5",
+      "mode": "100644",
+      "bytes": 82570
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高中测试卷/第4章_指数函数与对数函数_测试卷.pdf",
+      "sha": "395ab16dc944750d0dd5c3df6121cebf16493317",
+      "mode": "100644",
+      "bytes": 83626
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高中测试卷/第9章_统计_测试卷.pdf",
+      "sha": "e769a8d97efda2ef16f7d2beb56a33e03a5315ab",
+      "mode": "100644",
+      "bytes": 95726
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高中测试卷/选必3第6章_计数原理_测试卷.pdf",
+      "sha": "b811a565729189e65e88cc710b975b026511fff2",
+      "mode": "100644",
+      "bytes": 86675
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高中测试卷/选必3第7章_随机变量及其分布_测试卷.pdf",
+      "sha": "c441556a99c3188bc8aa4fb9ae5bb5b57e31d416",
+      "mode": "100644",
+      "bytes": 97109
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高中测试卷/选必3第8章_成对数据的统计分析_测试卷.pdf",
+      "sha": "f342bc7ecd151a5be10080c1d7de370f1d1cd218",
+      "mode": "100644",
+      "bytes": 124613
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高考满分突破测试卷/满分突破1_极限思想与高考_测试卷.pdf",
+      "sha": "7c92635c8bf45df73591f7b1589e2fab074b367a",
+      "mode": "100644",
+      "bytes": 84909
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高考满分突破测试卷/满分突破10_数学思想方法总结_测试卷.pdf",
+      "sha": "da4e7951751a088115b7c579852c2814c5514408",
+      "mode": "100644",
+      "bytes": 103793
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高考满分突破测试卷/满分突破3_线性代数视角看向量_测试卷.pdf",
+      "sha": "9982771c01cdf6071d90fced1a4198ff0605517f",
+      "mode": "100644",
+      "bytes": 83632
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高考满分突破测试卷/满分突破6_概率论公理化视角_测试卷.pdf",
+      "sha": "55d0e2f3a6f2a9e64155fac9be67b45541e45396",
+      "mode": "100644",
+      "bytes": 114037
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高考满分突破测试卷/满分突破7_数论视角看高考_测试卷.pdf",
+      "sha": "3cc15cf964f88be65bb716bcb9fa96d9358de837",
+      "mode": "100644",
+      "bytes": 95352
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高考满分突破测试卷/满分突破8_不等式统一视角_测试卷.pdf",
+      "sha": "29ea247e12e88d55864fac7e7f547c735c59d49a",
+      "mode": "100644",
+      "bytes": 93611
+    },
+    {
+      "path": "mirror/math-lecture-notes/测试卷/高考满分突破测试卷/满分突破9_复数与欧拉公式_测试卷.pdf",
+      "sha": "7f90c203f52a470673d4412620a6b8b7444247fe",
+      "mode": "100644",
+      "bytes": 94771
+    }
+  ]
+}
