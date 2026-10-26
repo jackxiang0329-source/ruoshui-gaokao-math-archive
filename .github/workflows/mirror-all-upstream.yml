@@ -6,6 +6,9 @@ on:
   push:
     paths:
       - '.github/workflows/mirror-all-upstream.yml'
+      - 'scripts/import_pinned_git_trees.py'
+      - 'scripts/mirror_all_upstream.sh'
+      - 'tests/test_import_pinned_git_trees.py'
   workflow_dispatch:
     inputs:
       source:
