@@ -3,28 +3,28 @@
   "method": "Compare each mirrored path Git Blob SHA and Git mode with the fixed upstream recursive Git tree. 11 source versions are pinned; file presence alone, or a gitlink, does not count.",
   "full": 6,
   "expected": 7222,
-  "verified": 2148,
-  "missing": 5074,
+  "verified": 2297,
+  "missing": 4925,
   "sources": [
     {
       "id": "math-lecture-notes",
       "expected": 373,
-      "verified": 196,
-      "missing": 177,
+      "verified": 202,
+      "missing": 171,
       "complete": false
     },
     {
       "id": "gaokao-math-problems-compilation",
       "expected": 5546,
-      "verified": 1123,
-      "missing": 4423,
+      "verified": 1254,
+      "missing": 4292,
       "complete": false
     },
     {
       "id": "gaokaomath",
       "expected": 782,
-      "verified": 314,
-      "missing": 468,
+      "verified": 326,
+      "missing": 456,
       "complete": false
     },
     {
@@ -89,8 +89,8 @@
     "status": "failure",
     "runner_steps_available": false
   },
-  "note": "2026-10-26 full recursive Git tree SHA+mode re-audit of main@ad22904cdbc4107416b57bd08d6046406adfee6d versus all 11 pinned upstream commits: 2148/7222 exact, 5074 unmatched, remaining upstream source Blob bytes 563289092, 6/11 complete. Added exactly 35 pinned source blobs from baseline main@1e4f5140a305d9c44899b044dd16aa443939a20d; see mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json. This only verifies Git object identity, not mathematical truth, authoritative exam provenance, license, XeLaTeX or visuals.",
-  "remaining_bytes": 563289092,
+  "note": "2026-10-26 fresh full recursive Git-tree SHA+mode audit of main@2ffd4cc638d724042edeb6a69c62f8679a7de0fb versus all 11 pinned upstream commits: 2297/7222 exact; 4925 absent/unmatched, 560185193 original source bytes remain. This turn physically imported 149 previously unmatched blobs: 131 original img_repaint/*.tex (now 320/320 complete), 12 gaokaomath historical exam PDFs, 6 math-lecture-notes PDFs, total 3103899 original bytes; independent pin comparison and manifest mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json. SHA identity does not establish authoritative exam provenance, legal rights, compilability, image inspection or mathematical correctness.",
+  "remaining_bytes": 560185193,
   "missing_blobs_at_least_1mb": 46,
   "latest_direct_import": {
     "baseline_commit": "97d236947c30b45c979d261bbb16e055c8bfa92e",
@@ -159,20 +159,22 @@
     }
   ],
   "latest_incremental_import": {
-    "manifest": "mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json",
-    "baseline_commit": "1e4f5140a305d9c44899b044dd16aa443939a20d",
-    "mirror_commit": "ad22904cdbc4107416b57bd08d6046406adfee6d",
-    "new_verified": 35,
-    "new_source_bytes": 1416616,
+    "manifest": "mirror/DIRECT_IMPORT_149_FILES_2026_10_26.json",
+    "baseline_commit": "d136c65574460a9df12d0b75a793abcd7e0bbfc4",
+    "mirror_commit": "2ffd4cc638d724042edeb6a69c62f8679a7de0fb",
+    "new_verified": 149,
+    "new_source_bytes": 3103899,
     "by_source": {
-      "math-lecture-notes": 6,
-      "gaokao-math-problems-compilation": 18,
-      "gaokaomath": 11
+      "gaokao-math-problems-compilation": 131,
+      "gaokaomath": 12,
+      "math-lecture-notes": 6
     },
-    "prior_verified": 2113,
-    "post_verified": 2148
+    "prior_verified": 2148,
+    "post_verified": 2297,
+    "fig_tex_checked": 320,
+    "fig_tex_expected": 320
   },
-  "latest_inventory_audit_commit": "ad22904cdbc4107416b57bd08d6046406adfee6d",
+  "latest_inventory_audit_commit": "2ffd4cc638d724042edeb6a69c62f8679a7de0fb",
   "prior_incremental_import": {
     "manifest": "mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json",
     "count": 14,
@@ -194,6 +196,20 @@
     "new_bytes": 21746
   },
   "prior_incremental_imports": [
+    {
+      "manifest": "mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json",
+      "baseline_commit": "1e4f5140a305d9c44899b044dd16aa443939a20d",
+      "mirror_commit": "ad22904cdbc4107416b57bd08d6046406adfee6d",
+      "new_verified": 35,
+      "new_source_bytes": 1416616,
+      "by_source": {
+        "math-lecture-notes": 6,
+        "gaokao-math-problems-compilation": 18,
+        "gaokaomath": 11
+      },
+      "prior_verified": 2113,
+      "post_verified": 2148
+    },
     {
       "manifest": "mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json",
       "baseline_commit": "20129a5dbc6d926386be3775f4e2addb0a2d6c9e",
