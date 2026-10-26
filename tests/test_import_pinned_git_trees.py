@@ -67,6 +67,24 @@ class PinnedGitTreeImportTests(unittest.TestCase):
                 pin=pin, parent=result, push=True)
             self.assertEqual((again, status, count), (result, "unchanged", 2))
 
+            # The hosted runner sparsely checks out only scripts/tests.
+            # Pinned mirror folders remain in the Git index, outside the
+            # working tree. A newer fixed pin must still replace that subtree.
+            run(work, "sparse-checkout", "init", "--cone")
+            run(work, "sparse-checkout", "set", "scripts", "tests")
+            (source / "old.txt").write_text("第二版本\\n", encoding="utf-8")
+            run(source, "add", ".")
+            run(source, "commit", "-qm", "pinned source version 2")
+            second_pin = command(source, "rev-parse", "HEAD")
+            second_tree = command(source, "rev-parse", "HEAD^{tree}")
+            newer, newer_status, newer_count = mirror.import_one(
+                work, source_id="source", source_url=source.as_uri(),
+                pin=second_pin, parent=result, push=True)
+            self.assertEqual((newer_status, newer_count), ("pushed", 2))
+            self.assertEqual(command(bare, "rev-parse", "refs/heads/main"), newer)
+            self.assertEqual(command(work, "rev-parse", f"{newer}:mirror/source"),
+                             second_tree)
+
     def test_invalid_pin_or_source_id_rejected(self):
         with self.assertRaises(ValueError):
             mirror.import_one(Path("."), source_id="../escape",
