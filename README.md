@@ -4,7 +4,7 @@
 
 **仓库状态**：已建立上游来源清单及 Git 子模块；`upstream/` 中是指向原仓库固定版本的链接，**不是将数百 MB 二进制文件平铺复制**。独立文件级索引见 [index](index/)（运行索引脚本后生成）。数学答案和试题版权均未被自动验证。
 
-[11 仓库完整镜像进度](mirror/STATUS.md)（2026-10-26：**2,105/7,222** 个上游文件严格匹配、尚缺 **5,117**；[最新 10 份 TeX 导入提交](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/ae9fc963a2ba7960bdbfe7012079cba6567cf049)；[前批 88 文件 SHA 审计](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json)；[先前 126 文件审计](mirror/AUDIT_HISTORICAL_FIGURES_2026_10_25.md)）：按固定 Git SHA 核验已入库文件；仍有大型仓库未完成，不能仅凭子模块认为源码齐全。
+[11 仓库完整镜像进度](mirror/STATUS.md)（2026-10-26：**2,148/7,222** 个上游文件严格匹配、尚缺 **5,074**；[最新 35 文件机器审计](mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json)；[最新 10 份 TeX 导入提交](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/commit/ae9fc963a2ba7960bdbfe7012079cba6567cf049)；[前批 88 文件 SHA 审计](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json)；[先前 126 文件审计](mirror/AUDIT_HISTORICAL_FIGURES_2026_10_25.md)）：按固定 Git SHA 核验已入库文件；仍有大型仓库未完成，不能仅凭子模块认为源码齐全。
 
 ## 2010—2019 年试卷 TeX：完整的十年固定版镜像
 
@@ -72,15 +72,16 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 上游保持独立许可，不能把整个聚合库声称为一个统一许可证。部分原仓库存在许可声明不完整或第三方素材权利不明确的情况，详见 [sources.json](sources.json)。
 
 
-## 11 个上游仓库实体镜像（2026-10-25）
+## 11 个上游仓库实体镜像（2026-10-26）
 
-目前 11 个来源已经全部登记并固定 Git SHA，其中 **6 个仓库的原始 Git 文件完全匹配**，其余 5 个仍有文件未完整迁入。已继续直接导入 88 个 PDF／TeX 原始文件，独立复算得到 **2,095 / 7,222** 个固定上游 Blob 的 SHA＋Git 模式完全一致（29.01%），仍缺 5,127 个，原始大小约 564.8 MB。此处的“导入”是真实 Blob，不把子模块或者链接算作文件。
+11 个上游已全部登记并锁定固定 Git SHA，**6 个来源仓库完整，另外 5 个仍有实体文件未迁入**。与全部 11 个固定上游 Git 树重新比对，主分支当前 **2,148 / 7,222（29.74%）** 个源 Blob 的 SHA 与 Git 模式严格一致，尚缺 **5,074 个**，剩余源文件原始大小约 **563.3 MB**。此口径不把子模块链接或索引当作实体文件。
 
-- [11 个固定来源逐项镜像进度](mirror/STATUS.md) / [机器可读审计状态](mirror/MIRROR_STATUS.json)
-- [本轮 88 文件 SHA 审计清单](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json) / [前一批 14 文件](mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json)
-- **[Windows 一键完整迁入 11 个固定 Git 来源（含大 PDF、DOCX、图片）](scripts/README_FULL_IMPORT.md)** / [双击启动器](scripts/一键导入11个仓库.cmd) / [Python 导入器](scripts/import_pinned_git_trees.py)
+- [11 个来源的最新核验进度](mirror/STATUS.md) / [机器可读状态](mirror/MIRROR_STATUS.json)。
+- [2026-10-26 本轮新增 35 个精确 SHA 匹配文件](mirror/DIRECT_IMPORT_35_FILES_2026_10_26.json)：6 份专题 PDF、6 份历年高考 PDF、5 个上游说明及许可文件、18 份原始重绘图 TeX。
+- [之前 88 文件清单](mirror/DIRECT_IMPORT_88_FILES_2026_10_25.json) / [更早的 14 文件清单](mirror/DIRECT_IMPORT_14_FILES_2026_10_25.json)；这两者是历史批次，不应与本轮混淆。
+- **[Windows 一键迁入剩余大型文件](scripts/README_FULL_IMPORT.md)** / [双击启动器](scripts/一键导入11个仓库.cmd) / [完整 Git 对象导入脚本](scripts/import_pinned_git_trees.py)。
 
-这份一键工具在隔离的本地 Git 仓库中通过二进制原始文件和完整树 SHA 的回归验证，但**尚未在正常网络和具有推送权限的环境完成剩余 564.8 MB 全量传输**；不能声称 11 个来源已全部到齐。第三方试题、图形的许可仍按原始项目单独处理。
+目前本地一键工具可通过完整 Git 对象传输和固定树 SHA 校验剩余内容，但**尚未在可以向私有仓库推送大文件的环境中完成全量执行**。第三方高考试卷、插图和讲义的真实性、版权及编译／数学正确性需要分别质检。
 
 ## 高考导数题目级索引（2026-10-24）
 
