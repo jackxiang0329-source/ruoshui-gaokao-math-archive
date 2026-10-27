@@ -314,17 +314,17 @@
 
 已按固定上游 Git SHA 和模式实体导入该大型题库 `content/2010/` 至 `content/2019/` 的全部 **282 份 TeX**。当批新增 **244 份**，2013 年 38 份在此前完成。**完整指与上游目录一致，不代表试卷真伪、数学解答、XeLaTeX 编译或版权已审核。**
 
-- [2010—2019 十年逐年份核验明细](mirror/AUDIT_2010_2019.md)
+- [2010—2019 十年逐年份核验明细](../mirror/HISTORICAL_AUDITS.md#audit-2010-2019)
 - [2010—2019 原始 TeX 文件目录](mirror/gaokao-math-problems-compilation/content/)
 - 2010—2019 年逐年数量：38、36、36、38、38、32、20、16、14、14。
 
 ## 1994 年历史试卷与配套插图补充
 
-1994 年原始试卷 TeX 已完成 **7/7** 文件级严格匹配；1953—1963 年另补充 40 张原始 PNG。详见[本轮审计](mirror/AUDIT_1994_AND_IMAGES_2026_10_25.md)。文件复刻不代表试题真实性、数学正确性或编译/视觉验收。
+1994 年原始试卷 TeX 已完成 **7/7** 文件级严格匹配；1953—1963 年另补充 40 张原始 PNG。详见[本轮审计](../mirror/HISTORICAL_AUDITS.md#audit-1994-and-images-2026-10-25)。文件复刻不代表试题真实性、数学正确性或编译/视觉验收。
 
 ## 历史插图与重绘图原始源码（2026-10-25 续批）
 
-本批按固定上游 Git 提交净增 **126** 个实体文件：1963—1965 与 1978—1984 年的 **40 张原始 PNG**，以及 1998—2010 年所选年份的 **86 份重绘图 TeX**。该范围纳入原已有文件后 **132/132** 文件严格匹配；11 源总覆盖 **1,993/7,222**。详见[专项审计](mirror/AUDIT_HISTORICAL_FIGURES_2026_10_25.md)及[逐文件 SHA 清单](mirror/IMPORT_BATCH_HISTORICAL_FIGURES_2026_10_25.json)。图片视觉、编译、数学与授权尚未验收。
+本批按固定上游 Git 提交净增 **126** 个实体文件：1963—1965 与 1978—1984 年的 **40 张原始 PNG**，以及 1998—2010 年所选年份的 **86 份重绘图 TeX**。该范围纳入原已有文件后 **132/132** 文件严格匹配；11 源总覆盖 **1,993/7,222**。详见[专项审计](../mirror/HISTORICAL_AUDITS.md#audit-historical-figures-2026-10-25)及[逐文件 SHA 清单](mirror/IMPORT_BATCH_HISTORICAL_FIGURES_2026_10_25.json)。图片视觉、编译、数学与授权尚未验收。
 
 ## 使用
 
@@ -393,9 +393,9 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 带卷别的来源记录数不等于去重后的独立题目数。
 
 - [2010—2026 年统一索引](index/DERIVATIVE_PROBLEMS_2010_2026.md) / [CSV](index/derivative-problems-2010-2026.csv) / [JSON](index/derivative-problems-2010-2026.json)
-- [2010—2014 年地方卷与重点卷](index/DERIVATIVE_PROBLEMS_2010_2014.md)
-- [2015—2019 年重点卷](index/DERIVATIVE_PROBLEMS_2015_2019.md)
-- [2020—2026 年主要试卷](index/DERIVATIVE_PROBLEMS_2020_2026.md)
+- [2010—2014 年地方卷与重点卷](../index/HISTORICAL_PERIOD_INDEXES.md#period-2010-2014)
+- [2015—2019 年重点卷](../index/HISTORICAL_PERIOD_INDEXES.md#period-2015-2019)
+- [2020—2026 年主要试卷](../index/HISTORICAL_PERIOD_INDEXES.md#period-2020-2026)
 - [2010 安徽文科第20题独立证明](derivative/reviewed/2010-anhui-liberal-q20.md) / [TeX](derivative/reviewed/2010-anhui-liberal-q20.tex)
 - [2011 安徽文、理科共同题独立证明](derivative/reviewed/2011-anhui-derivative-common.md) / [TeX](derivative/reviewed/2011-anhui-derivative-common.tex)
 - [2019 全国Ⅱ卷文科第21题独立证明](derivative/reviewed/2019-national2-liberal-q21.md) / [TeX](derivative/reviewed/2019-national2-liberal-q21.tex)
@@ -406,13 +406,13 @@ git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-g
 - [疑似重复题复核索引：6 组同题、1 组变式、14 组待核查](index/DUPLICATE_AUDIT.md)
 - [已完成数学证明与可独立编译源码目录](derivative/reviewed/README.md)
 - [数学复核溯源和重复索引自动一致性检查](scripts/validate_review_traceability.py)
-- [第六轮质检报告](metadata/ROUND_06_REPORT.md)
+- [第六轮质检报告](#record-04)
 - [2023 全国乙卷文科第20题完整证明](derivative/reviewed/2023-national-b-liberal-q20.md) / [TeX](derivative/reviewed/2023-national-b-liberal-q20.tex) / [2023 新高考Ⅰ卷第19题证明](derivative/reviewed/2023-new-gaokao-1-q19.md) / [TeX](derivative/reviewed/2023-new-gaokao-1-q19.tex)
 - [2025 上海卷第19题证明](derivative/reviewed/2025-shanghai-q19.md) / [TeX](derivative/reviewed/2025-shanghai-q19.tex) / [2025 全国Ⅱ卷第18题证明](derivative/reviewed/2025-national2-q18.md) / [TeX](derivative/reviewed/2025-national2-q18.tex)
 - [2025 北京卷第20题转录顺序冲突审计](derivative/reviewed/2025-beijing-q20-transcription-audit.md)：暂不升格数学核验
-- [第七轮审校报告](metadata/ROUND_07_REPORT.md)
-- [第八轮质检与版本锁定记录](metadata/ROUND_08_REPORT.md) / [2023 北京卷第20题](derivative/reviewed/2023-beijing-q20.md) / [TeX](derivative/reviewed/2023-beijing-q20.tex)
-- [机器扫描候选](scripts/scan_derivative_questions.py)、[索引一致性脚本](scripts/validate_question_index.py)、[第五轮报告](metadata/ROUND_05_REPORT.md)
+- [第七轮审校报告](#record-05)
+- [第八轮质检与版本锁定记录](#record-06) / [2023 北京卷第20题](derivative/reviewed/2023-beijing-q20.md) / [TeX](derivative/reviewed/2023-beijing-q20.tex)
+- [机器扫描候选](scripts/scan_derivative_questions.py)、[索引一致性脚本](scripts/validate_question_index.py)、[第五轮报告](#record-03)
 
 共 **16 条来源记录**完成独立数学核验，实际对应 **14 道不同题目**（2011 安徽文理卷同题保留两份出处）。
 余下 232 条记录尚需逐题数学复核；多卷同题只打上疑似重复组标签，并未全面去重。
