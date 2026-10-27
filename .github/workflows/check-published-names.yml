@@ -1,11 +1,13 @@
 name: Check Gaokao PDF and LaTeX naming, pairing and SHA
 on:
+  pull_request:
   push:
     paths:
       - 'papers/**'
       - 'topics/**'
       - 'derivative/reviewed/**'
       - 'catalog/normalized_files.csv'
+      - 'catalog/topic_pairs.csv'
       - 'scripts/check_published_names.py'
       - '.github/workflows/check-published-names.yml'
   workflow_dispatch:

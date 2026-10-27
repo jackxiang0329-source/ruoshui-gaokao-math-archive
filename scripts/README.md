@@ -1,29 +1,12 @@
-# 同步和索引工具
+# 仓库维护工具
 
-运行 `bash scripts/sync_sources.sh` 更新 11 个 Git 子模块、生成文件级索引并执行一致性验证。此命令需要 Git 和 Python 3；GitHub Actions 可调用。
+精简主分支只保留发布产物、索引和维护脚本；11 个来源的固定原件保留在 full-source-archive 分支。
 
-索引脚本只筛选文件名，不能证明文件内容是导数题，也不会做逐题数学核验。
+- `python3 scripts/check_published_names.py`：核对 775 份真题 PDF、142 组同名 TeX/PDF 及 Git Blob SHA。
+- `python3 scripts/verify_source_snapshot.py`：从 full-source-archive 校验 11 个上游版本和 7,222 个原始文件。
+- `python3 scripts/build_catalog_fast.py`：从完整快照生成可用的试卷与专题链接。
+- `python3 -m unittest discover -s tests -v`：执行回归测试。
 
-固定版本核验：`python3 scripts/validate_pinned_sources.py --index-only`（仅 Git 索引，无须下载子模块）；克隆子模块后运行 `python3 scripts/validate_pinned_sources.py` 严格对比 HEAD。同步不再使用 `--remote`，更换上游版本须显式修改锁定 SHA 与 gitlink 后复核。
+需编译上游原始多文件工程时，访问 [固定源代码快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)，连同图片与各模块一起检出；不要把片段 `.tex` 误认作独立主文件。
 
-轻量离线质检：`.github/workflows/audit-archive.yml` 会运行单元测试、题目级索引及审核溯源校验。数学正确性与 XeLaTeX 编译另行验收。
-
-
-重新核算固定版本镜像数量：`python3 scripts/audit_mirror_inventory.py --output mirror/MIRROR_STATUS.json`。需要先递归检出所有 11 个上游子模块。该脚本按 **HEAD Git SHA + mode** 统计，不把子模块 gitlink 或索引路径算作完整文件。运行后先审阅本地 JSON，再自行提交。独立单元测试在 `tests/test_audit_mirror_inventory.py`。
-
-
-## 全量搬运全部 11 个固定版上游仓库
-
-[详细用法：README_FULL_IMPORT.md](README_FULL_IMPORT.md)。
-
-Windows 用户可以双击 [一键导入11个仓库.cmd](一键导入11个仓库.cmd)，使用 PowerShell、Python 和 Git for Windows 完成真实 Git Blob 导入，无须 rsync/WSL。Linux/macOS 运行：
-
-    python3 scripts/import_pinned_git_trees.py --push
-
-选择一个来源：
-
-    python3 scripts/import_pinned_git_trees.py --source gaokaomath --push
-
-与旧版 rsync 路径相比，新脚本完整抓取上游 Git 对象，通过临时 Git index 组装精确的 Git 树；只有当迁入目录的树 SHA 与上游固定树 SHA 完全一致时才快进推送。脚本不会修改工作目录；多次执行会跳过已经完整匹配的来源。镜像 Actions 的 shell 入口也已改为调用该版本；但远程 Runner 未正常执行前，不宣称自动导入完成。
-
-有关准确进度，读取 [镜像状态](../mirror/STATUS.md)。最近独立核验为 2,007/7,222，仍需通过拥有 GitHub 网络访问的本地 Git 完整导入约 566.5 MB。
+历史导入与子模块管理命令仍可在 [旧版说明](README_FULL_IMPORT.md) 查阅，但旧日志中的 main/mirror 状态已过时。
