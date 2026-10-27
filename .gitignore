@@ -4,3 +4,11 @@ __pycache__/
 *.aux
 *.log
 *.synctex.gz
+
+# Old source-filename inventories: locally regenerable, not part of the lean main branch
+/index/INDEX.md
+/index/files.csv
+/index/gaokao-candidates.csv
+/index/derivative-candidates.csv
+/index/stats.json
+/index/derivative-machine-candidates.csv

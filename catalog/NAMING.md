@@ -24,6 +24,6 @@
 
 ## 4. 去重、溯源和恢复
 
-[原路径→规范路径→原 SHA](normalized_files.csv) 用于机器检查，汇总全部 1,190 条历史映射；[来源合订本](../archive/SOURCE_MARKDOWN.md) 保存旧 Markdown，独立上游原件在 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)。
+[原路径→规范路径→原 SHA](normalized_files.csv) 用于机器检查，汇总全部 1,190 条历史映射；[旧 Markdown 合订本](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/archive/SOURCE_MARKDOWN.md) 已在整理前快照保留，独立上游原件在 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)。
 
-曾经分散在多个历史时期的重复统计与索引保留在 Git 历史及 [历史合订说明](../index/HISTORICAL_PERIOD_INDEXES.md)。不擅自删除不同数学变式、依赖图形或尚未审核的来源。
+曾经分散在多个历史时期的重复统计与索引保留在 Git 历史及 [历史分期合订说明](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/index/HISTORICAL_PERIOD_INDEXES.md)。不擅自删除不同数学变式、依赖图形或尚未审核的来源。
