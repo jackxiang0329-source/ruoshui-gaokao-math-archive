@@ -4,8 +4,8 @@
   "summary": {
     "groups": 21,
     "confirmed_same_problem": 8,
-    "confirmed_variant": 2,
-    "unverified": 11,
+    "confirmed_variant": 4,
+    "unverified": 9,
     "grouped_source_records": 42
   },
   "groups": [
@@ -151,7 +151,7 @@
     },
     {
       "duplicate_group": "2012-shaanxi-common",
-      "status": "unverified",
+      "status": "confirmed_variant",
       "n_records": 2,
       "member_ids": [
         "2012-shaanxi_science-q23",
@@ -161,7 +161,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_science.tex#L584",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_liberal.tex#L410"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "固定上游文理第23题均以 f_n(x)=x^n+bx+c 开始，首问零点唯一性相同；但理科第二问求 |b|≤2、第三问研究零点数列 x_n 的单调性，文科第二问新增偶数 n 下 b+3c 的最值，第三问才求 |b|≤2。逐问顺序与数学任务不一致，须保留为不同变式。"
     },
     {
       "duplicate_group": "2012-shandong-common",
@@ -221,7 +221,7 @@
     },
     {
       "duplicate_group": "2014-hubei-common",
-      "status": "unverified",
+      "status": "confirmed_variant",
       "n_records": 2,
       "member_ids": [
         "2014-hubei_science-q22",
@@ -231,7 +231,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_science.tex#L586",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_liberal.tex#L493"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "固定上游湖北理科第22题、文科第21题均以 f(x)=ln x/x 为基础并比较 e^3、3^e、e^π、π^e、3^π、π^3。文科仅两问（单调性；最大/最小值）；理科另有第三问，要求六数完整严格排序及证明，数学任务不同，不能视作完全同题。"
     },
     {
       "duplicate_group": "2014-sichuan-common",

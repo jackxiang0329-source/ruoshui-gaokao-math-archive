@@ -75,8 +75,8 @@
 | 2012 | 全国大纲卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/syllabus_liberal.tex#L599) | 含参三次函数两极值点与割线 | source-identified |
 | 2012 | 山东卷理科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shandong_science.tex#L751) | 对数指数分式函数切线与单调 | source-identified · 待复核重复组 |
 | 2012 | 山东卷文科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shandong_liberal.tex#L446) | 对数指数分式函数切线与单调 | source-identified · 待复核重复组 |
-| 2012 | 陕西卷理科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_science.tex#L584) | 多项式族零点与单调性 | source-identified · 待复核重复组 |
-| 2012 | 陕西卷文科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_liberal.tex#L410) | 多项式族零点与单调性 | source-identified · 待复核重复组 |
+| 2012 | 陕西卷理科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_science.tex#L584) | 多项式族零点与单调性 | source-identified · 已确认变式 |
+| 2012 | 陕西卷文科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_liberal.tex#L410) | 多项式族零点与单调性 | source-identified · 已确认变式 |
 | 2012 | 天津卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/tianjin_liberal.tex#L342) | 含参三次函数单调与两个零点 | source-identified |
 | 2012 | 新课标全国卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/new_curriculum_science.tex#L400) | 导数方程确定函数及二次函数上界 | source-identified |
 | 2012 | 新课标全国卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/new_curriculum_liberal.tex#L386) | 指数函数导数不等式与参数整数最大值 | source-identified |
@@ -113,8 +113,8 @@
 | 2014 | 福建卷文科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/fujian_liberal.tex#L398) | 指数一次函数切线与极值及不等式 | source-identified · 待复核重复组 |
 | 2014 | 广东卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/guangdong_science.tex#L460) | 含参复合根式函数定义域和单调 | source-identified |
 | 2014 | 广东卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/guangdong_liberal.tex#L682) | 含参三次函数单调与两点函数值 | source-identified |
-| 2014 | 湖北卷理科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_science.tex#L586) | 对数商函数单调与幂指数排序 | source-identified · 待复核重复组 |
-| 2014 | 湖北卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_liberal.tex#L493) | 对数商函数单调与幂指数排序 | source-identified · 待复核重复组 |
+| 2014 | 湖北卷理科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_science.tex#L586) | 对数商函数单调与幂指数排序 | source-identified · 已确认变式 |
+| 2014 | 湖北卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_liberal.tex#L493) | 对数商函数单调与幂指数排序 | source-identified · 已确认变式 |
 | 2014 | 湖南卷理科 | [第 22 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hunan_science.tex#L586) | 含参对数有理函数双极值点 | source-identified |
 | 2014 | 湖南卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hunan_liberal.tex#L355) | 三角线性函数单调与零点数列 | source-identified |
 | 2014 | 江苏卷 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/jiangsu.tex#L499) | 双指数函数恒成立与导数估计 | source-identified |

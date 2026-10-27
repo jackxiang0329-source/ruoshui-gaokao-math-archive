@@ -3,8 +3,8 @@
 **这里进行题目级别的人工核查结果汇总，而不是仅比对文件名和整个 PDF 的哈希。** 原试卷与答案都保留，每组明确记录文理卷、年份、题号及其来源。
 
 - **确认同一题**：8 组（每组两个来源，导航合并但不删除原题）。
-- **确认是不同变式**：2 组（保留为两道不同题）。
-- **待进一步审核**：11 组（不自动合并）。
+- **确认是不同变式**：4 组（保留为两道不同题）。
+- **待进一步审核**：9 组（不自动合并）。
 
 [完整机器可读核查表](reviewed_problem_groups.csv) · [历史独立核验说明](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/snapshot-before-lean-metadata-20261027/index/DUPLICATE_AUDIT.md)
 
@@ -29,6 +29,9 @@
 
 - **2011-shaanxi-function-common**：[2011-shaanxi_science-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L605) 与 [2011-shaanxi_liberal-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L642)。文理卷前两问虽然都研究 $g(x)=\ln x+1/x$，但理科第三问是「是否存在 $x_0$ 使 $|g(x)-g(x_0)|<1/2$ 对所有 $x>0$ 成立」（否：$g(x)\to\infty$），文科第三问是求 $g(a)-g(x)<1/a$ 对所有 $x>0$ 成立的参数范围（$0<a<e$）。不可因前两问相似而合并。
 
+- **2012-shaanxi-common**：[2012-shaanxi_science-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_science.tex#L584) 与 [2012-shaanxi_liberal-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_liberal.tex#L410)。共有首问，但理科第三问研究零点数列单调性，文科另考查偶数 $n$ 下 $b+3c$ 最值；不可合并。
+- **2014-hubei-common**：[2014-hubei_science-q22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_science.tex#L586) 与 [2014-hubei_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_liberal.tex#L493)。共有函数与极值比较，但理科第三问额外要求六个数完整排序并证明，文科仅要求最大数和最小数；不可合并。
+
 ## 待审核、不得直接合并
 
 - 2010-liaoning-variant — [2010-liaoning_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_science.tex#L590) / [2010-liaoning_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_liberal.tex#L491)
@@ -37,9 +40,7 @@
 - 2011-newcurriculum-derivative-common — [2011-new_curriculum_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex#L583) / [2011-new_curriculum_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex#L473)
 - 2012-beijing-derivative-variant — [2012-beijing_science-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_science.tex#L482) / [2012-beijing_liberal-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_liberal.tex#L378)
 - 2012-guangdong-variant — [2012-guangdong_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/guangdong_science.tex#L375) / [2012-guangdong_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/guangdong_liberal.tex#L594)
-- 2012-shaanxi-common — [2012-shaanxi_science-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_science.tex#L584) / [2012-shaanxi_liberal-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_liberal.tex#L410)
 - 2013-sichuan-common — [2013-sichuan_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_science.tex#L595) / [2013-sichuan_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_liberal.tex#L484)
-- 2014-hubei-common — [2014-hubei_science-q22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_science.tex#L586) / [2014-hubei_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/hubei_liberal.tex#L493)
 - 2014-sichuan-common — [2014-sichuan_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_science.tex#L840) / [2014-sichuan_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_liberal.tex#L442)
 - 2016-national1-derivative-variant — [2016-national_paper_1_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_science.tex#L633) / [2016-national_paper_1_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_liberal.tex#L400)
 
