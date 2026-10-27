@@ -12,5 +12,5 @@
   "topic_volumes": 1,
   "removed_generated_markdown_pages": 71,
   "source_branch": "full-source-archive",
-  "merge_rule": "Exact source trees are preserved on full-source-archive, while main source MD is consolidated"
+  "merge_rule": "Exact source trees are preserved on full-source-archive; historical merged Markdown lives on snapshot-before-lean-metadata-20261027"
 }

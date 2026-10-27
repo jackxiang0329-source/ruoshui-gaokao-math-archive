@@ -2,7 +2,7 @@
 
 [命名与去重规范](NAMING.md) · [归档原路径 SHA](normalized_files.csv) · [需要人工核对的 2 份年份异常 PDF](naming_review.csv)
 
-**推荐从这里查找试卷和题目。** 全量原始文件位于 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)；上游 Markdown 历史合订本保留在 [整理前快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/archive/SOURCE_MARKDOWN.md)。
+**推荐从这里查找试卷和题目。** 全量原始文件位于 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)；旧版上游 Markdown 合订本在 [整理前快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/archive/SOURCE_MARKDOWN.md)。
 
 - 来源仓库：**11**
 - 原始文件：**7,222**
