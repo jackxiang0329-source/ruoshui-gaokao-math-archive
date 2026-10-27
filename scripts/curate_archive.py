@@ -6,6 +6,7 @@ import csv
 import difflib
 import hashlib
 import itertools
+import io
 import json
 import re
 import subprocess
@@ -32,6 +33,25 @@ TOPICS = {
 
 def git(*args):
     return subprocess.check_output(["git","-C",str(ROOT),*args],stderr=subprocess.PIPE)
+
+def read_blobs_batch(oids, batch_size=64):
+    """Read source blobs in batches: avoid thousands of Git subprocesses."""
+    for start in range(0, len(oids), batch_size):
+        batch = oids[start:start + batch_size]
+        payload = ("\n".join(batch) + "\n").encode("ascii")
+        cmd = ["git", "-C", str(ROOT), "cat-file", "--batch"]
+        result = subprocess.run(cmd, input=payload, capture_output=True, check=True)
+        stream = io.BytesIO(result.stdout)
+        for expected_sha in batch:
+            header = stream.readline().decode("ascii").strip().split()
+            if len(header) != 3 or header[0] != expected_sha or header[1] != "blob":
+                raise RuntimeError("Invalid Git batch blob header: " + repr(header))
+            size = int(header[2])
+            content = stream.read(size)
+            if len(content) != size or stream.read(1) != b"\n":
+                raise RuntimeError("Corrupt Git batch stream for " + expected_sha)
+            yield expected_sha, content
+
 
 def year_of(path):
     found = YEAR.search(path)
@@ -108,12 +128,15 @@ def curate(ref,output,limit=1200):
     docs=[r for r in representatives.values() if r["kind"]=="document"]
     text_by_sha={}
     norm_groups=defaultdict(list)
-    for r in docs:
-        if r["ext"] not in TEXT or r["size"]<400 or r["size"]>1500000: continue
-        body=normalize(git("cat-file","blob",r["sha"]),r["ext"])
-        if len(body)<400: continue
-        text_by_sha[r["sha"]]=body
+    text_rows = {r["sha"]: r for r in docs if r["ext"] in TEXT and 400 <= r["size"] <= 1500000}
+    print(f"Reading {len(text_rows)} text Git blobs in batches...", flush=True)
+    for oid, raw in read_blobs_batch(list(text_rows)):
+        r = text_rows[oid]
+        body = normalize(raw, r["ext"])
+        if len(body) < 400: continue
+        text_by_sha[oid] = body
         norm_groups[hashlib.sha256(body.encode("utf-8")).hexdigest()].append(r)
+    print(f"Normalized {len(text_by_sha)} text documents.", flush=True)
     redirects={sha:sha for sha in representatives}
     normalized_group_count=0
     for g in norm_groups.values():
