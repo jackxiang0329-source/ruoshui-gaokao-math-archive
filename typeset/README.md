@@ -15,3 +15,5 @@ XeLaTeX / A4，中文 Fandol 宋体、TeX Gyre Termes 英文字体与数学字�
 ## 逐卷文件
 
 通过 PDF 书签章节和年度 TeX 索引自动切分为 papers/YYYY/ 内逐卷 PDF 与 TeX。全部页码必须恰好覆盖，来源数量与 PDF 章数不一致则阻止发布。卷与原始 775 份 PDF 的逐一对应状态尚待人工核对，逐卷拆分版暂沿用年册页码。
+
+构建失败的年份会在 blocked/YYYY.json 记录对应 Actions 运行号，定时任务跳过该年，继续下一个尚未处理的年份；之后可在 workflow_dispatch 显式指定该年重新处理。单页的短试卷是合法 PDF，不设置两页的错误下限。自动任务每 30 分钟触发一次，受 GitHub Actions 队列与运行限额约束。
