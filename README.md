@@ -7,8 +7,8 @@
 | 入口 | 用途 |
 |---|---|
 | [统一命名的历年真题 PDF](papers/) | 775 份按年份、卷别、科类归档 |
-| [编译文件命名与去重记录](catalog/NAMING.md) | 1,014 条路径/SHA 映射、2 份年份异常待核验 |
-| [专题资料 TeX/PDF 统一目录](topics/) | 58 组专题源码和 PDF 同名配对（含独立试卷） |
+| [编译文件命名与去重记录](catalog/NAMING.md) | 1,020 条路径/SHA 映射、2 份年份异常待核验 |
+| [专题资料 TeX/PDF 统一目录](topics/) | 60 组专题源码和 PDF 同名配对（含独立试卷） |
 | [13 份复核证明 TeX 合订](derivative/reviewed/README.md) | 1 份可编译 TeX，PDF 与源码同名发布 |
 | [按年份统一检索](catalog/YEAR_INDEX.md) | 全部 64 个年份合订为 1 份文档，按原始文件 SHA 去重 |
 | [按专题检索](catalog/TOPICS.md) | 原来的 7 个专题文件合订为 1 份 |

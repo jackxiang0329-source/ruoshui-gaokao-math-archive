@@ -22,3 +22,7 @@
 ## 第四批：非真题独立测试卷的同名配对整理
 
 已把 **52 组测试卷、104 个文件**从镜像的测试卷原目录迁移到规范化 `topics/`，每组 TeX/PDF 主文件名一致，Git Blob SHA 不改变。按用途分为初中测试 6 组、培优 20 组、高中章节 17 组、高考满分突破 9 组。源文件均为独立 `\\documentclass` 文档、未检出外部 `\\input` / `\\includegraphics` 等依赖；完整原件可从 `full-source-archive` 恢复。此前 6 组 `topics/calculus/` 配对不变。
+
+## 第五批：独立讲义与原地编译的真题源码
+
+另将 **2 组独立讲义 TeX/PDF** 放入专题目录（勾股定理、必修二平面向量），现专题共有 **60 组**。对 [2024 新高考Ⅰ卷 LaTeX 工程](../mirror/2024-china-gaokao-math/) 的 `main.tex/main.pdf` 实施**同目录**更名为 `gaokao-2024-new-gaokao-1-general-paper.tex/.pdf`，保留 `.jpg`、嵌入 PDF 及其它样式依赖的相对位置，避免破坏源工程。原件可在完整快照分支恢复。
