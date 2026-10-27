@@ -4,8 +4,8 @@
   "summary": {
     "groups": 21,
     "confirmed_same_problem": 8,
-    "confirmed_variant": 4,
-    "unverified": 9,
+    "confirmed_variant": 6,
+    "unverified": 7,
     "grouped_source_records": 42
   },
   "groups": [
@@ -179,7 +179,7 @@
     },
     {
       "duplicate_group": "2013-sichuan-common",
-      "status": "unverified",
+      "status": "confirmed_variant",
       "n_records": 2,
       "member_ids": [
         "2013-sichuan_science-q21",
@@ -189,7 +189,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_science.tex#L595",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_liberal.tex#L484"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "两卷函数相同，第一问单调性及第三问切线重合求 a 范围相同；但理科第二问要求求 x₂−x₁ 的最小值（须证明可取等号，值为 1），文科第二问仅要求证明 x₂−x₁≥1。不应把最小值求解题与不等式证明题标为完整同题。"
     },
     {
       "duplicate_group": "2014-anhui-common",
@@ -235,7 +235,7 @@
     },
     {
       "duplicate_group": "2014-sichuan-common",
-      "status": "unverified",
+      "status": "confirmed_variant",
       "n_records": 2,
       "member_ids": [
         "2014-sichuan_science-q21",
@@ -245,7 +245,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_science.tex#L840",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_liberal.tex#L442"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "两卷首问均求 g=f′ 在 [0,1] 上的最小值；但理科第二问在 f(1)=0 且 (0,1) 存在零点时要求求 a 的取值范围（必须兼顾必要性和充分性），文科第二问仅要求证明 e−2<a<1 的必要界限。因此数学解答任务不同，属于跨卷变式。"
     },
     {
       "duplicate_group": "2016-national1-derivative-variant",

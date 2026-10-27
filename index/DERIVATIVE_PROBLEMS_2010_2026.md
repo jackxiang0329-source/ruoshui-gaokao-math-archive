@@ -94,8 +94,8 @@
 | 2013 | 全国大纲卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/syllabus_liberal.tex#L520) | 含参三次函数单调及非负区间 | source-identified |
 | 2013 | 山东卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/shandong_science.tex#L711) | 指数线性函数单调和方程根数 | source-identified |
 | 2013 | 山东卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/shandong_liberal.tex#L432) | 对数二次函数单调与参数比较 | source-identified |
-| 2013 | 四川卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_science.tex#L595) | 分段二次与对数函数单调与两点关系 | source-identified · 待复核重复组 |
-| 2013 | 四川卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_liberal.tex#L484) | 分段二次与对数函数单调与两点关系 | source-identified · 待复核重复组 |
+| 2013 | 四川卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_science.tex#L595) | 分段二次与对数函数单调与两点关系 | source-identified · 已确认变式 |
+| 2013 | 四川卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_liberal.tex#L484) | 分段二次与对数函数单调与两点关系 | source-identified · 已确认变式 |
 | 2013 | 天津卷理科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/tianjin_science.tex#L539) | x²lnx 单调与逆函数估计 | source-identified |
 | 2013 | 天津卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/tianjin_liberal.tex#L500) | 分段三次函数单调与最值 | source-identified |
 | 2013 | 新课标全国Ⅰ卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/new_curriculum_paper_1_science.tex#L415) | 二次与指数函数公切线、参数和证明 | source-identified |
@@ -124,8 +124,8 @@
 | 2014 | 山东卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/shandong_liberal.tex#L525) | 对数有理函数切线与含参单调 | source-identified |
 | 2014 | 陕西卷理科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/shaanxi_science.tex#L674) | 对数函数导数迭代与比较 | source-identified |
 | 2014 | 陕西卷文科 | [第 23 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/shaanxi_liberal.tex#L455) | 对数有理函数极值及导函数零点 | source-identified |
-| 2014 | 四川卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_science.tex#L840) | 指数二次函数导函数最小值与零点 | source-identified · 待复核重复组 |
-| 2014 | 四川卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_liberal.tex#L442) | 指数二次函数导函数最小值与零点 | source-identified · 待复核重复组 |
+| 2014 | 四川卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_science.tex#L840) | 指数二次函数导函数最小值与零点 | source-identified · 已确认变式 |
+| 2014 | 四川卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_liberal.tex#L442) | 指数二次函数导函数最小值与零点 | source-identified · 已确认变式 |
 | 2014 | 天津卷理科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/tianjin_science.tex#L500) | 指数线性函数双零点及参数单调 | source-identified |
 | 2014 | 天津卷文科 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/tianjin_liberal.tex#L436) | 含参三次函数极值与存在性 | source-identified |
 | 2014 | 新课标全国Ⅰ卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/new_curriculum_paper_1_science.tex#L676) | 指数对数函数切线和不等式 | source-identified |
