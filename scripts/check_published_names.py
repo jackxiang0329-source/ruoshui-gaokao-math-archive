@@ -11,13 +11,14 @@ TOPIC = re.compile(r"topics/[a-z0-9-]+/topic-[^\s/]+\.(tex|pdf)")
 MASTER = "derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex"
 
 def main():
-    result = subprocess.check_output(["git", "-C", str(ROOT), "ls-tree", "-r", "HEAD"])
+    result = subprocess.check_output(["git", "-C", str(ROOT), "ls-tree", "-r", "-z", "HEAD"])
     blobs = {}
-    for ln in result.decode("utf-8", "surrogateescape").splitlines():
-        if not ln: continue
-        metadata, path = ln.split("\t", 1)
-        if metadata.split()[1] == "blob":
-            blobs[path] = metadata.split()[2]
+    for entry in result.split(b"\\0"):
+        if not entry: continue
+        metadata, path = entry.split(b"\\t", 1)
+        fields = metadata.decode("ascii").split()
+        if fields[1] == "blob":
+            blobs[path.decode("utf-8", "surrogateescape")] = fields[2]
     assert not any(p.startswith("mirror/") for p in blobs)
     merged_text = (ROOT / MASTER).read_text(encoding="utf-8")
     with (ROOT / "catalog" / "normalized_files.csv").open(encoding="utf-8-sig", newline="") as fh:
