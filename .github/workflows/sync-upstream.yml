@@ -1,11 +1,6 @@
-name: Refresh pinned upstream indexes
+name: Manual legacy pinned-submodule refresh
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/sync-upstream.yml"
-      - "sources.json"
-      - "scripts/**"
 permissions:
   contents: write
 concurrency:

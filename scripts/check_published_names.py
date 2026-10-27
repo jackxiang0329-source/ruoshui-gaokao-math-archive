@@ -22,6 +22,9 @@ def main():
     with (ROOT / "catalog" / "normalized_files.csv").open(encoding="utf-8-sig", newline="") as fh:
         mapping = list(csv.DictReader(fh))
     assert len({r["original_path"] for r in mapping}) == len(mapping)
+    with (ROOT / "catalog" / "topic_pairs.csv").open(encoding="utf-8", newline="") as fh:
+        topic_map = list(csv.DictReader(fh))
+    topic_redirect = {r["original_path"]: r["canonical_path"] for r in topic_map}
     merged = 0
     for record in mapping:
         old, new, sha = record["original_path"], record["canonical_path"], record["blob_sha"]
@@ -31,7 +34,8 @@ def main():
             assert ("sha=" + sha) in merged_text, "Missing original SHA in master: " + old
             merged += 1
         else:
-            assert blobs.get(new) == sha, "Changed blob: " + new
+            actual = topic_redirect.get(new, new)
+            assert blobs.get(actual) == sha, "Changed blob: " + new + " -> " + actual
     assert merged == 26, "Expected legacy and normalized proof provenance entries"
     papers = [p for p in blobs if p.startswith("papers/")]
     assert len(papers) == 775 and all(PDF.fullmatch(p) for p in papers)
