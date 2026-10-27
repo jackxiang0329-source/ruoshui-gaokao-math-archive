@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PDF = re.compile(r"papers/(\d{4})/gaokao-\1-[a-z0-9-]+-(general|science|liberal)(-spring)?-paper\.pdf")
-TOPIC = re.compile(r"topics/[a-z0-9-]+/topic-[a-z0-9-]+\.(tex|pdf)")
+TOPIC = re.compile(r"topics/[a-z0-9-]+/topic-[^\s/]+\.(tex|pdf)")
 MASTER = "derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex"
 
 def main():
