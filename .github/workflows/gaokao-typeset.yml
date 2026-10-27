@@ -27,6 +27,8 @@ jobs:
           sparse-checkout: |
             typeset
             .github
+      - name: Test historical-only safeguards
+        run: python3 -m unittest discover -s project/typeset/tests -v
       - id: pick
         name: Select next year
         env:
