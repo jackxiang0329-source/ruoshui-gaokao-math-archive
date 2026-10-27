@@ -1,6 +1,6 @@
 # 高考数学 · 统一去重目录
 
-[统一文件命名规范](NAMING.md) · [文件改名与合订 SHA 记录](normalized_files.csv) · [真题 PDF 年份冲突待核验](naming_review.csv)
+[命名与去重规范](NAMING.md) · [归档原路径 SHA](normalized_files.csv) · [需要人工核对的 2 份年份异常 PDF](naming_review.csv)
 
 **推荐从这里查找试卷和题目。** 全量原始文件位于 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)；上游 Markdown 在主分支合并为 [源文合订本](../archive/SOURCE_MARKDOWN.md)。
 
