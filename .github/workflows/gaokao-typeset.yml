@@ -1,0 +1,107 @@
+name: XeLaTeX typeset archived Gaokao maths by year
+on:
+  push:
+    paths:
+      - ".github/workflows/gaokao-typeset.yml"
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "YYYY, or empty for newest not yet compiled"
+        type: string
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: gaokao-yearly-typeset
+  cancel-in-progress: false
+jobs:
+  typeset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: project
+          sparse-checkout: |
+            typeset
+            .github
+      - id: pick
+        name: Select next year
+        env:
+          REQ: "${{ inputs.year || '' }}"
+        run: |
+          y=$(python3 project/typeset/select_year.py --year "$REQ")
+          echo "year=$y" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.pick.outputs.year != ''
+        with:
+          path: source
+          ref: full-source-archive
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            mirror/gaokao-math-problems-compilation/styles.tex
+            mirror/gaokao-math-problems-compilation/statistical-charts.tex
+            mirror/gaokao-math-problems-compilation/index/${{ steps.pick.outputs.year }}.tex
+            mirror/gaokao-math-problems-compilation/content/${{ steps.pick.outputs.year }}/
+            mirror/gaokao-math-problems-compilation/img/${{ steps.pick.outputs.year }}/
+            mirror/gaokao-math-problems-compilation/img_repaint/${{ steps.pick.outputs.year }}/
+            mirror/gaokao-math-problems-compilation/tools/typeset/generated_image_layout.tex
+            mirror/gaokao-math-problems-compilation/tools/crop/manual_image_layout.tex
+      - name: Verify originals and prepare unified design
+        if: steps.pick.outputs.year != ''
+        run: |
+          python3 project/typeset/build_year.py \
+             --year ${{ steps.pick.outputs.year }} \
+             --source source/mirror/gaokao-math-problems-compilation \
+             --report project/typeset/reports/${{ steps.pick.outputs.year }}.json
+      - uses: xu-cheng/latex-action@v4
+        if: steps.pick.outputs.year != ''
+        with:
+          os: debian
+          working_directory: source/mirror/gaokao-math-problems-compilation
+          root_file: __ruoshui_${{ steps.pick.outputs.year }}.tex
+          latexmk_use_xelatex: true
+      - name: Install PDF inspection tools
+        if: steps.pick.outputs.year != ''
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: PDF integrity, glyphs and source checks
+        if: steps.pick.outputs.year != ''
+        run: |
+          set -euo pipefail
+          root=source/mirror/gaokao-math-problems-compilation
+          pdf="$root/__ruoshui_${{ steps.pick.outputs.year }}.pdf"
+          test -s "$pdf"
+          test "$(head -c 5 "$pdf")" = "%PDF-"
+          pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+          test "$pages" -ge 2
+          pdftotext "$pdf" "$RUNNER_TEMP/typeset.txt"
+          test -s "$RUNNER_TEMP/typeset.txt"
+          log="$root/__ruoshui_${{ steps.pick.outputs.year }}.log"
+          if test -f "$log" && grep -q 'Missing character:' "$log"; then
+            echo "Missing glyphs - reject PDF" >&2
+            exit 1
+          fi
+          mkdir -p project/typeset/annual project/typeset/tex
+          cp "$pdf" project/typeset/annual/ruoshui-gaokao-${{ steps.pick.outputs.year }}.pdf
+          cp "$root/__ruoshui_${{ steps.pick.outputs.year }}.tex" project/typeset/tex/ruoshui-gaokao-${{ steps.pick.outputs.year }}.tex
+          python3 -c 'import json,sys;from pathlib import Path;p=Path(sys.argv[1]);d=json.loads(p.read_text());d.update({"pdf_pages":int(sys.argv[2]),"compiled":True,"pdf_QA":"passed"});p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n")' project/typeset/reports/${{ steps.pick.outputs.year }}.json "$pages"
+      - uses: actions/upload-artifact@v4
+        if: steps.pick.outputs.year != ''
+        with:
+          name: gaokao-yearly-${{ steps.pick.outputs.year }}
+          path: |
+            project/typeset/annual/ruoshui-gaokao-${{ steps.pick.outputs.year }}.pdf
+            project/typeset/tex/ruoshui-gaokao-${{ steps.pick.outputs.year }}.tex
+            project/typeset/reports/${{ steps.pick.outputs.year }}.json
+          if-no-files-found: error
+      - name: Keep original PDFs; publish separately
+        if: steps.pick.outputs.year != ''
+        run: |
+          cd project
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add typeset
+          git commit -m "typeset: create Gaokao ${{ steps.pick.outputs.year }} annual volume [skip ci]"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
