@@ -1,0 +1,94 @@
+{
+  "year": "1996",
+  "source_papers": 4,
+  "question_environments": 108,
+  "figures_present": true,
+  "visual_review": "pending",
+  "mathematics_review": "not_certified",
+  "pdf_pages": 14,
+  "compiled": true,
+  "pdf_QA": "passed",
+  "individual_papers": 4,
+  "all_annual_pages_accounted_for": true,
+  "papers": [
+    {
+      "source": "content/1996/national_science.tex",
+      "title": "1996年全国卷（理）",
+      "pdf": "typeset/papers/1996/ruoshui-gaokao-1996-national_science.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        1,
+        3
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1891,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1996/national_liberal.tex",
+      "title": "1996年全国卷（文）",
+      "pdf": "typeset/papers/1996/ruoshui-gaokao-1996-national_liberal.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        4,
+        6
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1986,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1996/shanghai_science.tex",
+      "title": "1996年上海卷（理）",
+      "pdf": "typeset/papers/1996/ruoshui-gaokao-1996-shanghai_science.pdf",
+      "pages": 4,
+      "annual_page_range": [
+        7,
+        10
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 3023,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1996/shanghai_liberal.tex",
+      "title": "1996年上海卷（文）",
+      "pdf": "typeset/papers/1996/ruoshui-gaokao-1996-shanghai_liberal.pdf",
+      "pages": 4,
+      "annual_page_range": [
+        11,
+        14
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 3345,
+      "full_chinese_tex_embedded": true
+    }
+  ],
+  "chinese_text_QA": "passed",
+  "chinese_quality_checks": [
+    {
+      "source": "content/1996/national_science.tex",
+      "pdf_chinese_chars": 593,
+      "tex_chinese_chars": 1927,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1996/national_liberal.tex",
+      "pdf_chinese_chars": 603,
+      "tex_chinese_chars": 2022,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1996/shanghai_science.tex",
+      "pdf_chinese_chars": 1074,
+      "tex_chinese_chars": 3059,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1996/shanghai_liberal.tex",
+      "pdf_chinese_chars": 1057,
+      "tex_chinese_chars": 3381,
+      "embedded_cjk_font": true
+    }
+  ]
+}
