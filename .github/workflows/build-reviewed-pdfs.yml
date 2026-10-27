@@ -21,18 +21,19 @@ jobs:
         with:
           os: debian
           root_file: |
-            derivative/reviewed/2010-anhui-liberal-q20.tex
-            derivative/reviewed/2010-beijing-science-q18.tex
-            derivative/reviewed/2011-anhui-derivative-common.tex
-            derivative/reviewed/2013-fujian-science-q17.tex
-            derivative/reviewed/2014-anhui-common-q.tex
-            derivative/reviewed/2014-chongqing-liberal-q19.tex
-            derivative/reviewed/2019-national2-liberal-q21.tex
-            derivative/reviewed/2023-national-b-liberal-q20.tex
-            derivative/reviewed/2023-new-gaokao-1-q19.tex
-            derivative/reviewed/2024-two-proofs.tex
-            derivative/reviewed/2025-national2-q18.tex
-            derivative/reviewed/2025-shanghai-q19.tex
+            derivative/reviewed/gaokao-2010-anhui-liberal-q20-solution.tex
+            derivative/reviewed/gaokao-2010-beijing-science-q18-solution.tex
+            derivative/reviewed/gaokao-2011-anhui-derivative-common-solution.tex
+            derivative/reviewed/gaokao-2013-fujian-science-q17-solution.tex
+            derivative/reviewed/gaokao-2014-anhui-common-q-solution.tex
+            derivative/reviewed/gaokao-2014-chongqing-liberal-q19-solution.tex
+            derivative/reviewed/gaokao-2019-national2-liberal-q21-solution.tex
+            derivative/reviewed/gaokao-2023-beijing-q20-solution.tex
+            derivative/reviewed/gaokao-2023-national-b-liberal-q20-solution.tex
+            derivative/reviewed/gaokao-2023-new-gaokao-1-q19-solution.tex
+            derivative/reviewed/gaokao-2024-two-proofs-solution.tex
+            derivative/reviewed/gaokao-2025-national2-q18-solution.tex
+            derivative/reviewed/gaokao-2025-shanghai-q19-solution.tex
           latexmk_use_xelatex: true
           continue_on_error: false
       - name: Verify PDF completeness and push to repository

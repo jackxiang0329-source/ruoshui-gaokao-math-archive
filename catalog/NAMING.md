@@ -7,3 +7,10 @@
 [原始路径 → 当前路径、原始 SHA 映射](normalized_files.csv)。内容完全相同不等于所有同名或相似题目都相同；未经人工核验的不同试题和图片没有删除。部分 PDF-only 来源没有 TeX，不能伪造其源文件配对。
 
 11 个原始上游的完整文件、目录和 SHA 保留在 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)，不对其执行删除或重命名。原始多文件 LaTeX 工程和插图依赖暂留原路径，避免破坏编译。
+
+## 已整理的配套编译文件（第二批）
+
+- 导数专题 **6 组 TeX/PDF（12 个文件）**，统一命名为 `topics/calculus/topic-calculus-<unit>-<guide|test>.{tex,pdf}`。
+- 合并去除与上述专题 TeX 内容完全一致的重复副本 **6 份**。
+- 已审核单题解答 **13 个 TeX** 改名为 `derivative/reviewed/gaokao-YYYY-<卷别及题号>-solution.tex`。配套 PDF 只能在实际编译成功后发布，不能虚构成品。
+- 保留独立多文件上游工程的相对 `\\input` / 图片依赖，暂不贸然将它们拆开合并。
