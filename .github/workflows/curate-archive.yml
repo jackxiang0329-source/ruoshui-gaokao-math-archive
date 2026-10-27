@@ -1,0 +1,49 @@
+name: Curate and deduplicate the Gaokao math archive
+on:
+  schedule:
+    # Thirty minutes apart, offset from source mirroring.
+    - cron: '17,47 * * * *'
+  push:
+    paths:
+      - '.github/workflows/curate-archive.yml'
+      - 'scripts/curate_archive.py'
+      - 'tests/test_curate_archive.py'
+      - 'sources.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: gaokao-curation
+  cancel-in-progress: false
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          submodules: false
+          persist-credentials: true
+          sparse-checkout: |
+            .github
+            scripts
+            tests
+            catalog
+            sources.json
+          sparse-checkout-cone-mode: true
+      - name: Run no-loss regression tests
+        run: python3 -m unittest discover -s tests -p 'test_curate_archive.py'
+      - name: Create organized deduplicated index
+        run: python3 scripts/curate_archive.py --ref HEAD --output catalog
+      - name: Commit generated catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse -A catalog/
+          if git diff --cached --quiet; then
+            echo "No catalog changes."
+            exit 0
+          fi
+          git commit -m "catalog: rebuild source-preserving deduplication and similarity reviews"
+          git push origin HEAD:main
