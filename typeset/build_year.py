@@ -38,8 +38,8 @@ def build(source,year,report):
 \input{styles.tex}
 \showanswerfalse
 \tallpagefalse
-\geometry{left=22mm,right=22mm,top=24mm,bottom=24mm,headheight=17pt}
-\renewcommand{\baselinestretch}{1.24}
+\geometry{left=22mm,right=22mm,top=20mm,bottom=20mm,headheight=17pt}
+\renewcommand{\baselinestretch}{1.18}
 \ctexset{chapter={format=\centering\bfseries\zihao{-2},beforeskip=9pt,afterskip=14pt,pagestyle=plain},section={format=\bfseries\zihao{4},beforeskip=1em,afterskip=.5em}}
 \usepackage{fancyhdr}
 \pagestyle{fancy}

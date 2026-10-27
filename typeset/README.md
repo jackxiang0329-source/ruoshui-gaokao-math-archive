@@ -11,3 +11,7 @@ XeLaTeX / A4，中文 Fandol 宋体、TeX Gyre Termes 英文字体与数学字�
 正式发布前必须通过原图存在性、试题 TeX 环境数量、XeLaTeX 实际编译、PDF 页数、可提取文本及字体缺字检测。通过不等于 PDF 逐页视觉、原卷真实性或数学证明全部通过。第三方图片权利需另外核对。
 
 署名：DxAThing/Gaokao-Math-Problems-Compilation（其原创整理部分 CC BY-SA 4.0），原来源 deekur/gaokaomath（适用部分 CC BY 4.0）；原始试题和图片并不必然处于这些许可之下。
+
+## 逐卷文件
+
+通过 PDF 书签章节和年度 TeX 索引自动切分为 papers/YYYY/ 内逐卷 PDF 与 TeX。全部页码必须恰好覆盖，来源数量与 PDF 章数不一致则阻止发布。卷与原始 775 份 PDF 的逐一对应状态尚待人工核对，逐卷拆分版暂沿用年册页码。

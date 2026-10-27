@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - ".github/workflows/gaokao-typeset.yml"
+  schedule:
+    - cron: "17,47 * * * *"
   workflow_dispatch:
     inputs:
       year:
@@ -28,7 +30,7 @@ jobs:
       - id: pick
         name: Select next year
         env:
-          REQ: "${{ inputs.year || '' }}"
+          REQ: "${{ inputs.year || (github.event_name == 'push' && '1952') || '' }}"
         run: |
           y=$(python3 project/typeset/select_year.py --year "$REQ")
           echo "year=$y" >> "$GITHUB_OUTPUT"
@@ -63,7 +65,10 @@ jobs:
           latexmk_use_xelatex: true
       - name: Install PDF inspection tools
         if: steps.pick.outputs.year != ''
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python3 -m pip install --quiet pypdf
       - name: PDF integrity, glyphs and source checks
         if: steps.pick.outputs.year != ''
         run: |
@@ -85,6 +90,16 @@ jobs:
           cp "$pdf" project/typeset/annual/ruoshui-gaokao-${{ steps.pick.outputs.year }}.pdf
           cp "$root/__ruoshui_${{ steps.pick.outputs.year }}.tex" project/typeset/tex/ruoshui-gaokao-${{ steps.pick.outputs.year }}.tex
           python3 -c 'import json,sys;from pathlib import Path;p=Path(sys.argv[1]);d=json.loads(p.read_text());d.update({"pdf_pages":int(sys.argv[2]),"compiled":True,"pdf_QA":"passed"});p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n")' project/typeset/reports/${{ steps.pick.outputs.year }}.json "$pages"
+      - name: Split each bookmarked chapter into its own PDF and TeX source
+        if: steps.pick.outputs.year != ''
+        run: |
+          python3 project/typeset/split_year.py \
+            --year "${{ steps.pick.outputs.year }}" \
+            --root source/mirror/gaokao-math-problems-compilation \
+            --annual project/typeset/annual/ruoshui-gaokao-${{ steps.pick.outputs.year }}.pdf \
+            --entry project/typeset/tex/ruoshui-gaokao-${{ steps.pick.outputs.year }}.tex \
+            --dest project/typeset/papers/${{ steps.pick.outputs.year }} \
+            --report project/typeset/reports/${{ steps.pick.outputs.year }}.json
       - uses: actions/upload-artifact@v4
         if: steps.pick.outputs.year != ''
         with:
@@ -93,6 +108,7 @@ jobs:
             project/typeset/annual/ruoshui-gaokao-${{ steps.pick.outputs.year }}.pdf
             project/typeset/tex/ruoshui-gaokao-${{ steps.pick.outputs.year }}.tex
             project/typeset/reports/${{ steps.pick.outputs.year }}.json
+            project/typeset/papers/${{ steps.pick.outputs.year }}/
           if-no-files-found: error
       - name: Keep original PDFs; publish separately
         if: steps.pick.outputs.year != ''
