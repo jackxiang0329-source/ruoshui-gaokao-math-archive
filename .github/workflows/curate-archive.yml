@@ -46,4 +46,7 @@ jobs:
             exit 0
           fi
           git commit -m "catalog: rebuild source-preserving deduplication and similarity reviews"
+          # Rebase only our generated catalog commit after other writers advance main.
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
