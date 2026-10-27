@@ -5,7 +5,22 @@
   "figures_present": true,
   "visual_review": "pending",
   "mathematics_review": "not_certified",
-  "pdf_pages": 2,
+  "pdf_pages": 1,
   "compiled": true,
-  "pdf_QA": "passed"
+  "pdf_QA": "passed",
+  "individual_papers": 1,
+  "all_annual_pages_accounted_for": true,
+  "papers": [
+    {
+      "source": "content/1952/national.tex",
+      "title": "1952年全国卷",
+      "pdf": "typeset/papers/1952/ruoshui-gaokao-1952-national.pdf",
+      "pages": 1,
+      "annual_page_range": [
+        1,
+        1
+      ],
+      "published_original_pdf_match": "pending"
+    }
+  ]
 }
