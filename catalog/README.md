@@ -26,7 +26,7 @@
 - [sequences](TOPICS.md#sequences) · 12 份
 - [trigonometry](TOPICS.md#trigonometry) · 21 份
 
-[旧 Markdown 路径对应表](legacy_markdown_paths.csv) · 生成的 64 个年份页、8 份年代页和 7 个专题页已实质合并，旧内容均按段保留。
+[旧页面路径对照](legacy_markdown_paths.csv) · 年份页仅收录已发布真题；其他上游 TeX/Markdown 原件可从 [完整来源 CSV](documents.csv) 和 [固定原件快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive) 查找。
 
 
 ## 题目级去重与相似题复核

@@ -39,5 +39,16 @@ class PublishedYearIndexTests(unittest.TestCase):
                 module.published_papers()
 
 
+    def test_published_year_index_matches_tracked_git_tree(self):
+        # Validate the committed artifact without checking out 775 binary PDFs.
+        import subprocess
+        root = SCRIPT.parent.parent
+        actual = subprocess.check_output(
+            ["git", "-C", str(root), "show", "HEAD:catalog/YEAR_INDEX.md"]
+        ).decode("utf-8")
+        expected = module.render_published_year_index(module.published_papers())
+        self.assertEqual(actual, expected)
+
+
 if __name__ == "__main__":
     unittest.main()

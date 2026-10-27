@@ -256,8 +256,9 @@ def main():
     for tag, group in sorted(topics_map.items()):
         lines.append("- [" + tag + "](TOPICS.md#" + tag + ") · " +
                      str(len(group)) + " 份")
-    lines += ["", "[旧 Markdown 路径对应表](legacy_markdown_paths.csv) · "
-              "生成的 64 个年份页、8 份年代页和 7 个专题页已实质合并，旧内容均按段保留。", ""]
+    lines += ["", "[旧页面路径对照](legacy_markdown_paths.csv) · 年份页仅收录已发布真题；"
+              "其他上游 TeX/Markdown 原件可从 [完整来源 CSV](documents.csv) 和"
+              " [固定原件快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive) 查找。", ""]
     lines += ["", "## 题目级去重与相似题复核", "",
               "- [6 组已经独立确认的同题合并索引、1 组明确不同变式及 14 组待审](QUESTION_DEDUP.md)",
               "- [完整题目级核查表](reviewed_problem_groups.csv)",

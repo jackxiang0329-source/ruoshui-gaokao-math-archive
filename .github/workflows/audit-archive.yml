@@ -8,6 +8,10 @@ on:
       - "scripts/**"
       - "tests/**"
       - "index/**"
+      - "catalog/YEAR_INDEX.md"
+      - "catalog/stats.json"
+      - "catalog/README.md"
+      - "catalog/legacy_markdown_paths.csv"
       - "metadata/**"
       - "derivative/reviewed/**"
   pull_request:
