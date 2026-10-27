@@ -18,3 +18,7 @@
 ## 第三批：独立解答 TeX 真正合订
 
 2026-10-27 已将 13 份已经独立审核的 TeX 改为 **1 个真实合订源码**：[`derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex`](../derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex)。合订版保留正文、各题标题、原始 Git Blob SHA 与恢复入口；采用同一主文件名生成 `.pdf`。独立原件仍可从 [合订前快照分支](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-tex-merge-2026-10-27/derivative/reviewed) 恢复。此类 `merge` 映射不声称合并文件 SHA 等于某一独立源码 SHA。
+
+## 第四批：非真题独立测试卷的同名配对整理
+
+已把 **52 组测试卷、104 个文件**从镜像的测试卷原目录迁移到规范化 `topics/`，每组 TeX/PDF 主文件名一致，Git Blob SHA 不改变。按用途分为初中测试 6 组、培优 20 组、高中章节 17 组、高考满分突破 9 组。源文件均为独立 `\\documentclass` 文档、未检出外部 `\\input` / `\\includegraphics` 等依赖；完整原件可从 `full-source-archive` 恢复。此前 6 组 `topics/calculus/` 配对不变。

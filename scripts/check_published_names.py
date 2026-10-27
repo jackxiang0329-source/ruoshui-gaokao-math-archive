@@ -36,13 +36,13 @@ def main():
     papers = [p for p in blobs if p.startswith("papers/")]
     assert len(papers) == 775 and all(PDF.fullmatch(p) for p in papers)
     topic_files = [p for p in blobs if p.startswith("topics/") and p.endswith((".tex",".pdf"))]
-    assert len(topic_files) == 12
+    assert len(topic_files) == 116
     for p in topic_files:
         assert TOPIC.fullmatch(p)
         assert (p[:-4] + (".pdf" if p.endswith(".tex") else ".tex")) in blobs
     assert [p for p in blobs if p.startswith("derivative/reviewed/") and p.endswith(".tex")] == [MASTER]
     assert merged_text.count("% SOURCE_ENTRY path=") == 13
-    print("PASS:",len(mapping),"provenance entries;",len(papers),"exam PDFs; 6 TeX/PDF topic pairs; 13 proof sections")
+    print("PASS:",len(mapping),"provenance entries;",len(papers),"exam PDFs; 58 TeX/PDF topic pairs; 13 proof sections")
 
 if __name__ == "__main__":
     main()
