@@ -1,77 +1,35 @@
-name: Mirror all 11 upstream repositories into Git files
+name: Verify all 11 pinned source trees in complete archive
 on:
   schedule:
-    # Every 30 minutes, away from the busy top-of-hour GitHub Actions peak.
     - cron: '7,37 * * * *'
   push:
     paths:
       - '.github/workflows/mirror-all-upstream.yml'
-      - 'scripts/import_pinned_git_trees.py'
-      - 'scripts/mirror_all_upstream.sh'
-      - 'tests/test_import_pinned_git_trees.py'
+      - 'scripts/verify_source_snapshot.py'
+      - 'sources.json'
   workflow_dispatch:
-    inputs:
-      source:
-        description: "Select one pinned source, or all 11 repositories"
-        required: true
-        type: choice
-        options:
-          - all
-          - math-lecture-notes
-          - gaokao-math-problems-compilation
-          - gaokaomath
-          - first-round-review
-          - gaokao-math-corpus
-          - 2024-china-gaokao-math
-          - gaokao-exam-template
-          - mathpaper
-          - daxmate-math
-          - math-atlas
-          - mathex
-        default: all
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: ruoshui-full-mirror-main
   cancel-in-progress: false
 jobs:
-  mirror:
+  verify:
     runs-on: ubuntu-latest
-    # Keep each scheduled run within the 30-minute recurrence window.
-    timeout-minutes: 28
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          persist-credentials: true
+          persist-credentials: false
           submodules: false
-          # Do not materialize huge historical assets or unsafe upstream
-          # symlinks in the runner filesystem. Git objects remain available.
           sparse-checkout: |
             .github
             scripts
             tests
             sources.json
           sparse-checkout-cone-mode: true
-      - name: Verify manifest
-        shell: bash
-        run: |
-          python3 -c "import json; x=json.load(open('sources.json')); assert len(x['repositories']) == 11"
-      - name: Mirror verifier regression tests
-        run: python3 -m unittest discover -s tests -p 'test_*.py'
-      - name: Configure Git commit identity
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-      - name: Import complete source trees and their assets
-        shell: bash
-        env:
-          SOURCE: ${{ inputs.source || 'all' }}
-        run: bash scripts/mirror_all_upstream.sh --source "$SOURCE"
-      - name: Physical file summary
-        shell: bash
-        run: |
-          git fetch --no-tags origin main
-          echo 'Physical Git mirror entries in remote main:'
-          git ls-tree -r --name-only FETCH_HEAD -- mirror/ | wc -l
-          echo 'Matched source SHA integrity is independently checked by import script.'
+      - name: Fetch immutable original source tree
+        run: git -c protocol.version=2 fetch --no-tags --depth=1 --filter=blob:none origin refs/heads/full-source-archive:refs/remotes/origin/full-source-archive
+      - name: Verify exact pinned Git tree SHAs and 7222 files
+        run: python3 scripts/verify_source_snapshot.py
