@@ -6,6 +6,8 @@ ROOT=Path(__file__).parent
 COVERAGE=json.loads((ROOT/"source-coverage.json").read_text(encoding="utf-8"))["years"]
 def build(source,year,report):
     if year not in COVERAGE: raise ValueError("Unknown year "+year)
+    if not (1952 <= int(year) <= 1999):
+        raise ValueError("Modern exams (2000 onward) must retain original layout")
     count=COVERAGE[year]
     docs=sorted((source/"content"/year).glob("*.tex"))
     idx=source/"index"/(year+".tex")

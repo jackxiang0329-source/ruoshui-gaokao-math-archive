@@ -1,4 +1,4 @@
-name: XeLaTeX typeset archived Gaokao maths by year
+name: XeLaTeX typeset historical Gaokao maths (1952-1999)
 on:
   push:
     paths:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       year:
-        description: "YYYY, or empty for newest not yet compiled"
+        description: "1952-1999 only; blank = newest pending historical year"
         type: string
         required: false
 permissions:
@@ -49,6 +49,13 @@ jobs:
             mirror/gaokao-math-problems-compilation/img_repaint/${{ steps.pick.outputs.year }}/
             mirror/gaokao-math-problems-compilation/tools/typeset/generated_image_layout.tex
             mirror/gaokao-math-problems-compilation/tools/crop/manual_image_layout.tex
+      - name: Guard historical years only
+        if: steps.pick.outputs.year != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          year="${{ steps.pick.outputs.year }}"
+          test "$year" -ge 1952 && test "$year" -le 1999
       - name: Verify originals and prepare unified design
         if: steps.pick.outputs.year != ''
         run: |
