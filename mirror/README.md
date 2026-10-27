@@ -2,7 +2,7 @@
 
 **完整原件位于 [full-source-archive 分支](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive/mirror)**。该分支保留 11 个固定上游文件树，7,222/7,222 个原件（含 215 个独立 Markdown），Git Tree SHA 与固定提交全部一致。
 
-主分支 `main` 中的 `mirror/` 为精简版本，只保留 **7,007 个非 Markdown** 原始文件。原始 Markdown 内容已合并入 [一个 Markdown 合订本](../archive/SOURCE_MARKDOWN.md)，并附有 [215 条原路径 / SHA 映射](../archive/source-markdown-paths.csv)。
+主分支 `main` 中的 `mirror/` 为精简版本，保留仍需依赖原目录的题目 TeX、章节文件和图片；已将 775 份高考 PDF 放到 `papers/`、6 组成对专题放到 `topics/calculus/`，并删除严格一致的冗余副本。原始 Markdown 内容已合并入 [一个 Markdown 合订本](../archive/SOURCE_MARKDOWN.md)，并附有 [215 条原路径 / SHA 映射](../archive/source-markdown-paths.csv)。
 
 **因此不能再声称主分支的镜像子目录 SHA 与原始上游完全相同。** 完整版本的精确 SHA 核验应针对 `full-source-archive`；想使用源仓库的原始 README、题目 Markdown 相对图片路径、工程构建和编译配置，也应进入完整快照分支。
 

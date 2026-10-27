@@ -7,7 +7,7 @@
 | 位置 | 文件数量 | 说明 |
 |---|---:|---|
 | 完整快照 `full-source-archive/mirror/<source>` | **7,222** | 原始路径、SHA 和 Git 模式均与锁定版本一致 |
-| 精简主分支 `main/mirror/<source>` | **7,007** | 原始非 Markdown 文件；镜像树不再与上游同 SHA |
+| 精简主分支 `main/mirror/<source>` | 按需精简 | 历年 PDF 和专题 TeX/PDF 已移出并重命名，保留未合并的原始工程依赖 |
 | `main/archive/SOURCE_MARKDOWN.md` | **1 个合订本** | 汇集 215 个上游 Markdown 原文及 SHA、路径映射 |
 
 [逐源机器审计记录](MIRROR_STATUS.json) · [源文合订本](../archive/SOURCE_MARKDOWN.md) · [历史审计](HISTORICAL_AUDITS.md)
