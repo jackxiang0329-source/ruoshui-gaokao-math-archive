@@ -1,0 +1,11 @@
+{
+  "sources": 11,
+  "original_files": 7222,
+  "unique_git_blobs": 7024,
+  "exact_duplicate_copies": 198,
+  "exact_duplicate_groups": 189,
+  "canonical_documents": 2271,
+  "year_pages": 64,
+  "topic_pages": 7,
+  "merge_rule": "Exact Git blobs folded in navigation only; raw mirrors untouched"
+}
