@@ -1,46 +1,38 @@
 # 三千弱水 · 高考数学真题与专题题库
 
-高考数学资源的**统一检索、整理、去重与溯源仓库**。收录 11 个固定版本的开源来源，保留试卷原稿、TeX、PDF、图片、答案及相关工具。
+**精简主分支，完整原件单独保存**。收录 11 个固定上游版本，支持年份检索、导数题定位、去重和数学质检。详细来源与许可证请看 [sources.json](sources.json)。
 
-## 从这里开始
+## 主要入口
 
 | 入口 | 用途 |
 |---|---|
-| [去重整理后的资料目录](catalog/README.md) | **推荐日常使用**：按年份、专题和代表文件查找；完全重复只显示一份，保留全部出处 |
-| [题目级人工确认去重](catalog/QUESTION_DEDUP.md) | 6 组已确认同题共享题目入口，1 组确定不同变式严格保留，14 组待审查 |
-| [已独立核验的导数大题](derivative/reviewed/README.md) | 数学证明、独立复核的 TeX 和说明 |
-| [年份与导数候选索引](index/INDEX.md) | 查找高考试卷、导数题候选及已有重复题记录 |
-| [原始镜像](mirror/README.md) | 11 个上游仓库的原始版本；不可变证据存档 |
-| [来源和许可证说明](sources.json) | 来源版本、原仓库许可证及第三方版权提示 |
-| [质量检查和审计材料](metadata/HISTORICAL_REPORTS.md) | 数学审核、历史记录与出处 |
+| [按年份统一检索](catalog/YEAR_INDEX.md) | 全部 64 个年份合订为 1 份文档，按原始文件 SHA 去重 |
+| [按专题检索](catalog/TOPICS.md) | 原来的 7 个专题文件合订为 1 份 |
+| [题目级去重审核](catalog/QUESTION_DEDUP.md) | 6 组确认同题、1 组不同变式、14 组仍待核验 |
+| [数学证明合订本](derivative/reviewed/PROOFS.md) | 原 14 份数学复核 Markdown 合为 1 份，保留每题 TeX |
+| [完整来源 Markdown 合订本](archive/SOURCE_MARKDOWN.md) | 215 个上游 Markdown 原文、各自 SHA、原路径与独立链接 |
+| [固定上游完整快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive) | **11/11 个完整原始来源，7,222/7,222 个文件，不合并、不删除** |
+| [全部索引 CSV](catalog/documents.csv) | 代表文件、原始来源链接、年份与专题等 |
 
-## 当前数据状态
+## Markdown 精简结果
 
-- **11/11 个来源已镜像**：对应 7,222/7,222 个固定版本的原始文件，11 个原始 Git 文件树 SHA 全部匹配。
-- **文件级精确去重初筛**：发现 198 个 SHA 完全相同的重复副本、189 个重复组，导航中只保留代表入口，源文件一律不删除。
-- **内容相似复核**：6 组确认同题已纳入题目级索引；其他疑似同题仅进入待审记录，不自动误合并。
+从最初的 **338 个 Markdown 文件精简到 24 个**，文件数减少 **314 个（约 93%）**。
 
-## 仓库结构
+精简不是简单删除内容：原有 215 份上游 Markdown 合并归档，14 份数学审核文档合并为一份，64 份年份导航合并为一份，7 份专题导航合并为一份，历史审计和阶段索引也已经合并归档。
 
-- `catalog/`：**整理后的工作区**，64 个年份目录合为 8 个年代卷、7 个专题合为 1 个专题卷；保留原始文件索引、别名映射与题目去重核查。
-- `derivative/`、`materials/`：独立整理及质检通过或待核验的专题资料。
-- `index/`：原有题目级索引与重复题独立核查。
-- `mirror/`、`upstream/`：历史来源镜像与子模块，**保持原件和来源路径不变**。
-- `metadata/`、`scripts/`、`tests/`：合并的历史报告、自动整理程序和回归测试。
+**两个分支的区别**：主分支 `main` 是精简的工作区，其中 `mirror/` 保留 **7,007 个非 Markdown 源文件**；215 个原始 Markdown 归并到 [正文合订本](archive/SOURCE_MARKDOWN.md)。完整的 7,222 个独立原件只在 `full-source-archive` 分支按原路径保留，且该分支的 11 个来源 Git Tree SHA 与锁定版本均严格匹配。恢复单独原件、编译第三方项目或核对原始相对链接时，应使用完整快照分支。
 
-## 自动化
+## 其它资料
 
-[镜像同步工作流](.github/workflows/mirror-all-upstream.yml) 每 30 分钟运行一次（UTC 每小时 07/37 分）；[去重目录工作流](.github/workflows/curate-archive.yml) 每 30 分钟运行一次（UTC 每小时 17/47 分），两者错峰执行。镜像目前固定为 `sources.json` 中的版本，不会在未经审核的情况下擅自升级上游内容。
+[已审核导数题索引](derivative/reviewed/README.md) · [导数题总索引](index/DERIVATIVE_PROBLEMS_2010_2026.md) · [重复题独立审计](index/DUPLICATE_AUDIT.md) · [迁移与 QA 历史](metadata/HISTORICAL_REPORTS.md) · [历史镜像审计](mirror/HISTORICAL_AUDITS.md) · [镜像当前说明](mirror/STATUS.md)
 
-**审核边界**：Git SHA 相同只证明原始内容一致；高考试卷真实性、数学证明、图形、PDF 排版以及第三方素材再分发许可，都需要单独质检。
+## 自动任务
 
-原先首页的完整迁移过程已移至 [迁移、导入与质检合订历史](metadata/HISTORICAL_REPORTS.md)，避免干扰日常检索。
+- 每 30 分钟：读取 `full-source-archive`，核对 11 个来源 SHA 和文件数，**不向精简主分支回填独立 Markdown**（[校验工作流](.github/workflows/mirror-all-upstream.yml)）。
+- 每 30 分钟：从完整快照的 Git 文件树更新精简的检索与去重目录（[目录工作流](.github/workflows/curate-archive.yml)）。
 
-## Markdown 文档合并说明（2026-10-27）
+当前两个周期任务只处理 **固定的上游版本**，不会自动发现/导入后来发布的版本。SHA 核对、文件去重也不能代替数学正确性、版权和 PDF 排版检查。
 
-已将本站生成的年份、专题页和重复的历史报告实质合并：仓库 Markdown 文件数从 **338 份降至 258 份**（减少 **80 份**）。
+## 恢复与溯源
 
-- [年代合订目录](catalog/README.md) · [专题合订文档](catalog/TOPICS.md) · [旧导航页对应表](catalog/legacy_markdown_paths.csv)
-- [历史迁移审计合订](mirror/HISTORICAL_AUDITS.md) · [项目质检报告合订](metadata/HISTORICAL_REPORTS.md) · [导数分期索引合订](index/HISTORICAL_PERIOD_INDEXES.md)
-
-**不改动上游原始仓库中的 215 份 Markdown 文件**，它们属于来源文件树，包括独立题目、README 与数学素材。修改这些文件会破坏固定版本 SHA 核验；数学复核中的独立证明也继续按题保留，避免破坏溯源和 TeX 的一一对应关系。
+[完整快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive) 中的独立文件、原始路径和 Git SHA 保留不变；[源文件清单](archive/source-markdown-paths.csv) 可逐一查回 215 个 Markdown 原件。分开的题目证明、迁移记录还可通过 Git 历史或各合订本记录的原始 SHA 恢复。

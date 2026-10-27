@@ -1,12 +1,14 @@
-# 11 个上游仓库的完整原始镜像
+# 镜像目录说明：精简主分支 / 完整快照分支
 
-`mirror/<source-id>/` 下保存全部 **11 个固定版本原始 Git 树**，**7,222/7,222 个文件**与固定上游的路径、SHA 和 Git 模式一致。
+**完整原件位于 [full-source-archive 分支](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive/mirror)**。该分支保留 11 个固定上游文件树，7,222/7,222 个原件（含 215 个独立 Markdown），Git Tree SHA 与固定提交全部一致。
 
-- [当前完整性验收](STATUS.md) · [机器可读的 SHA 校验数据](MIRROR_STATUS.json)
-- [合并后的历史专项审计和迁移记录](HISTORICAL_AUDITS.md)
-- [GitHub Actions 自动镜像工作流](../.github/workflows/mirror-all-upstream.yml)
-- [统一检索与去重目录](../catalog/README.md)
+主分支 `main` 中的 `mirror/` 为精简版本，只保留 **7,007 个非 Markdown** 原始文件。原始 Markdown 内容已合并入 [一个 Markdown 合订本](../archive/SOURCE_MARKDOWN.md)，并附有 [215 条原路径 / SHA 映射](../archive/source-markdown-paths.csv)。
 
-原始 `mirror/<source-id>/` 文件必须保留，特别是来源自带的 Markdown、TeX、PDF、图片与样式文件；本仓库不因内容相似而直接删改它们。文档精简和去重只发生在派生目录和历史报告层。上游子模块 `upstream/` 仍用于源版本对照，与真实镜像的文件区分。
+**因此不能再声称主分支的镜像子目录 SHA 与原始上游完全相同。** 完整版本的精确 SHA 核验应针对 `full-source-archive`；想使用源仓库的原始 README、题目 Markdown 相对图片路径、工程构建和编译配置，也应进入完整快照分支。
 
-固定版本镜像每 30 分钟检查一次，版本 SHA 不变时跳过；本机制**不会自动抓取上游后续新提交**。原始题目版权及第三方插图的再分发许可需要逐项审核，数学正确性和 PDF 可读性也不由 Git SHA 保证。
+- [完整来源校验说明](STATUS.md)
+- [机器可读的原始来源锁定信息](MIRROR_STATUS.json)
+- [合订的历史镜像审计](HISTORICAL_AUDITS.md)
+- [新的统一资料目录](../catalog/README.md)
+
+周期性 GitHub Actions 任务每 30 分钟验证完整快照，而不会回填已合并的 Markdown。该任务不自动更新上游版本。许可、数学内容及 PDF 视觉质量仍需分别审核。
