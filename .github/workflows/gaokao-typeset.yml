@@ -30,7 +30,7 @@ jobs:
       - id: pick
         name: Select next year
         env:
-          REQ: "${{ inputs.year || (github.event_name == 'push' && '1952') || '' }}"
+          REQ: "${{ inputs.year || '' }}"
         run: |
           y=$(python3 project/typeset/select_year.py --year "$REQ")
           echo "year=$y" >> "$GITHUB_OUTPUT"
