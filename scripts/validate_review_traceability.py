@@ -5,6 +5,7 @@ This is a consistency gate. It cannot certify the mathematical truth of proofs,
 the copyright status of source material, or a successful TeX compilation.
 """
 from __future__ import annotations
+import csv
 import json
 import sys
 from collections import defaultdict
@@ -73,6 +74,39 @@ def main() -> None:
     assert summary["grouped_source_records"] == sum(map(len, grouped.values()))
     for kind in allowed:
         assert summary[kind] == counts[kind], "duplicate audit summary mismatch"
+
+    # The public CSV, audit JSON, and Markdown summary must agree.
+    csv_path = ROOT / "catalog/reviewed_problem_groups.csv"
+    with csv_path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        assert reader.fieldnames == [
+            "group_id", "decision", "canonical_question_id",
+            "alternate_question_id", "canonical_url", "alternate_url",
+            "evidence", "audit_record",
+        ], "unexpected reviewed group CSV columns"
+        rows = list(reader)
+    assert len(rows) == len(audit["groups"]), "CSV/audit group count mismatch"
+    csv_by_group = {r["group_id"]: r for r in rows}
+    assert len(csv_by_group) == len(rows), "duplicate CSV group IDs"
+    for group in audit["groups"]:
+        key = group["duplicate_group"]
+        assert key in csv_by_group, "missing CSV group: " + key
+        row = csv_by_group[key]
+        assert row["decision"] == group["status"], "CSV decision mismatch: " + key
+        assert row["evidence"] == group["evidence"], "CSV evidence mismatch: " + key
+        assert [row["canonical_question_id"], row["alternate_question_id"]] == group["member_ids"], key
+        assert [row["canonical_url"], row["alternate_url"]] == group["source_urls"], key
+        assert row["audit_record"] == "index/duplicate-audit.json", key
+    document = (ROOT / "catalog/QUESTION_DEDUP.md").read_text(encoding="utf-8")
+    for phrase in (
+        f"**确认同一题**：{counts['confirmed_same_problem']} 组",
+        f"**确认是不同变式**：{counts['confirmed_variant']} 组",
+        f"**待进一步审核**：{counts['unverified']} 组",
+    ):
+        assert phrase in document, "Markdown summary drift: " + phrase
+    for group in audit["groups"]:
+        key = group["duplicate_group"]
+        assert document.count(key) == 1, "Missing or repeated Markdown group: " + key
 
     findings = load("metadata/quality-findings.json")["findings"]
     for issue in findings:

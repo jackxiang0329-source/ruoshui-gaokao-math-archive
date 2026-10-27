@@ -3,9 +3,9 @@
   "policy": "A group is not merged merely because its duplicate_group is populated. Only confirmed_same_problem supports eventual logical deduplication, and provenance records remain intact.",
   "summary": {
     "groups": 21,
-    "confirmed_same_problem": 6,
-    "confirmed_variant": 1,
-    "unverified": 14,
+    "confirmed_same_problem": 8,
+    "confirmed_variant": 2,
+    "unverified": 11,
     "grouped_source_records": 42
   },
   "groups": [
@@ -39,7 +39,7 @@
     },
     {
       "duplicate_group": "2010-shaanxi-common",
-      "status": "unverified",
+      "status": "confirmed_same_problem",
       "n_records": 2,
       "member_ids": [
         "2010-shaanxi_science-q23",
@@ -49,7 +49,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "固定上游理科第23题与文科第23题逐问对照：均为 f(x)=√x、g(x)=a ln x，依次求公切线及 a、h(x)=f(x)−g(x) 的全局最小值 φ(a)、证明 φ′ 在算术/几何/调和平均数之间的不等式。三问题意和参数域相同；解答书写不同，不影响同题判断。"
     },
     {
       "duplicate_group": "2010-shandong-variant",
@@ -95,7 +95,7 @@
     },
     {
       "duplicate_group": "2011-shaanxi-function-common",
-      "status": "unverified",
+      "status": "confirmed_variant",
       "n_records": 2,
       "member_ids": [
         "2011-shaanxi_science-q23",
@@ -105,11 +105,11 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L605",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L642"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "固定上游理科第23题与文科第23题前两问均研究 g(x)=ln x+1/x 的单调性及 g(x) 与 g(1/x) 比较；但理科第三问问是否存在 x0>0 使 |g(x)−g(x0)|<1/2 对所有 x>0 成立（不存在），文科第三问求 a>0 使 g(a)−g(x)<1/a 对所有 x>0 成立（0<a<e）。第三问数学任务和结论不同，必须作为变式分别保留。"
     },
     {
       "duplicate_group": "2011-shaanxi-tangent-common",
-      "status": "unverified",
+      "status": "confirmed_same_problem",
       "n_records": 2,
       "member_ids": [
         "2011-shaanxi_science-q21",
@@ -119,7 +119,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L521",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L538"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "固定上游理科第21题与文科第21题逐问对照：同为 y=e^x 在 P1=(0,0) 起逐次作切线，求 x_k=x_{k−1}−1 及 Σ|PkQk|=e(1−e^{−n})/(e−1)。两小问相同；图片文件路径及排版不同，原图仍分别保留。"
     },
     {
       "duplicate_group": "2012-beijing-derivative-variant",

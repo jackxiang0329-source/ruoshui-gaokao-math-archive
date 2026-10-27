@@ -2,16 +2,20 @@
 
 **这里进行题目级别的人工核查结果汇总，而不是仅比对文件名和整个 PDF 的哈希。** 原试卷与答案都保留，每组明确记录文理卷、年份、题号及其来源。
 
-- **确认同一题**：6 组（每组两个来源，导航合并但不删除原题）。
-- **确认是不同变式**：1 组（保留为两道不同题）。
-- **待进一步审核**：14 组（不自动合并）。
+- **确认同一题**：8 组（每组两个来源，导航合并但不删除原题）。
+- **确认是不同变式**：2 组（保留为两道不同题）。
+- **待进一步审核**：11 组（不自动合并）。
 
 [完整机器可读核查表](reviewed_problem_groups.csv) · [历史独立核验说明](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/snapshot-before-lean-metadata-20261027/index/DUPLICATE_AUDIT.md)
 
 ## 已确认同题
 
+下面两组陕西题为本轮新增的固定原题对照结果；其余六组沿用先前核验记录。
+
 | 统一题组 | 代表题目 | 另一个出处 | 已核查依据 |
 |---|---|---|---|
+| 2010-shaanxi-common | [2010-shaanxi_science-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500) | [2010-shaanxi_liberal-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509) | 固定上游理科第23题与文科第23题逐问对照：均为 f(x)=√x、g(x)=a ln x，依次求公切线及 a、h(x)=f(x)−g(x) 的全局最小值 φ(a)、证明 φ′ 在算术/几何/调和平均数之间的不等式。三问题意和参数域相同；解答书写不同，不影响同题判断。 |
+| 2011-shaanxi-tangent-common | [2011-shaanxi_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L521) | [2011-shaanxi_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L538) | 固定上游理科第21题与文科第21题逐问对照：同为 y=e^x 在 P1=(0,0) 起逐次作切线，求 x_k=x_{k−1}−1 及 Σ|PkQk|=e(1−e^{−n})/(e−1)。两小问相同；图片文件路径及排版不同，原图仍分别保留。 |
 | 2011-anhui-common | [2011-anhui_science-q16](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/anhui_science.tex#L362) | [2011-anhui_liberal-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/anhui_liberal.tex#L447) | 文理卷 f(x)=e^x/(1+ax²)、两小问的数学要求均相同；已完成共同独立数学证明 |
 | 2014-anhui-common | [2014-anhui_science-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_science.tex#L279) | [2014-anhui_liberal-q20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_liberal.tex#L628) | 文理卷 f(x)=1+(1+a)x−x²−x³、两小问完全对应；文科版本解答末尾存在缺失 |
 | 2014-fujian-common | [2014-fujian_science-q20](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/fujian_science.tex#L440) | [2014-fujian_liberal-q22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/fujian_liberal.tex#L398) | 文理卷 f(x)=e^x−ax，三小问相同；仅 LaTeX 间距和指数括号写法不同 |
@@ -23,15 +27,14 @@
 
 - **2012-shandong-common**：[2012-shandong_science-q22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shandong_science.tex#L751) 与 [2012-shandong_liberal-q22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shandong_liberal.tex#L446)。前两问相近，但文科第三问定义 g(x)=x f'(x)，理科第三问定义 g(x)=(x²+x) f'(x)，因此不是相同题目
 
+- **2011-shaanxi-function-common**：[2011-shaanxi_science-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L605) 与 [2011-shaanxi_liberal-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L642)。文理卷前两问虽然都研究 $g(x)=\ln x+1/x$，但理科第三问是「是否存在 $x_0$ 使 $|g(x)-g(x_0)|<1/2$ 对所有 $x>0$ 成立」（否：$g(x)\to\infty$），文科第三问是求 $g(a)-g(x)<1/a$ 对所有 $x>0$ 成立的参数范围（$0<a<e$）。不可因前两问相似而合并。
+
 ## 待审核、不得直接合并
 
 - 2010-liaoning-variant — [2010-liaoning_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_science.tex#L590) / [2010-liaoning_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_liberal.tex#L491)
 - 2010-newcurriculum-derivative-variant — [2010-new_curriculum_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/new_curriculum_science.tex#L691) / [2010-new_curriculum_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/new_curriculum_liberal.tex#L559)
-- 2010-shaanxi-common — [2010-shaanxi_science-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_science.tex#L500) / [2010-shaanxi_liberal-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shaanxi_liberal.tex#L509)
 - 2010-shandong-variant — [2010-shandong_science-q22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shandong_science.tex#L603) / [2010-shandong_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shandong_liberal.tex#L528)
 - 2011-newcurriculum-derivative-common — [2011-new_curriculum_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex#L583) / [2011-new_curriculum_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex#L473)
-- 2011-shaanxi-function-common — [2011-shaanxi_science-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L605) / [2011-shaanxi_liberal-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L642)
-- 2011-shaanxi-tangent-common — [2011-shaanxi_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_science.tex#L521) / [2011-shaanxi_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/shaanxi_liberal.tex#L538)
 - 2012-beijing-derivative-variant — [2012-beijing_science-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_science.tex#L482) / [2012-beijing_liberal-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_liberal.tex#L378)
 - 2012-guangdong-variant — [2012-guangdong_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/guangdong_science.tex#L375) / [2012-guangdong_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/guangdong_liberal.tex#L594)
 - 2012-shaanxi-common — [2012-shaanxi_science-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_science.tex#L584) / [2012-shaanxi_liberal-q23](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/shaanxi_liberal.tex#L410)

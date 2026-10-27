@@ -26,7 +26,25 @@ jobs:
           root_file: derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex
           latexmk_use_xelatex: true
           continue_on_error: false
-      - name: Check output and publish paired PDF
+      - name: Check PDF integrity, page count and extractable text
+        shell: bash
+        run: |
+          set -euo pipefail
+          pdf="derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.pdf"
+          test -s "$pdf"
+          test "$(head -c 5 "$pdf")" = "%PDF-"
+          pdfinfo "$pdf"
+          pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+          test "${pages:-0}" -ge 2
+          pdftotext "$pdf" - | grep -q '2010'
+      - name: Keep compiled PDF as a downloadable Actions artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-gaokao-calculus-pdf
+          path: derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.pdf
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish verified PDF on main
         shell: bash
         run: |
           set -euo pipefail

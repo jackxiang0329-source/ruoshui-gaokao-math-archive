@@ -31,7 +31,7 @@
 
 ## 题目级去重与相似题复核
 
-- [6 组已经独立确认的同题合并索引、1 组明确不同变式及 14 组待审](QUESTION_DEDUP.md)
+- [8 组已确认同题、2 组明确不同变式及 11 组待审](QUESTION_DEDUP.md)
 - [完整题目级核查表](reviewed_problem_groups.csv)
 - [历史独立核验说明](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/snapshot-before-lean-metadata-20261027/index/DUPLICATE_AUDIT.md)
 

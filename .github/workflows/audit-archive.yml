@@ -12,6 +12,8 @@ on:
       - "catalog/stats.json"
       - "catalog/README.md"
       - "catalog/legacy_markdown_paths.csv"
+      - "catalog/QUESTION_DEDUP.md"
+      - "catalog/reviewed_problem_groups.csv"
       - "metadata/**"
       - "derivative/reviewed/**"
   pull_request:
@@ -33,6 +35,7 @@ jobs:
             scripts
             tests
             index
+            catalog
             metadata
             derivative
             sources.json
