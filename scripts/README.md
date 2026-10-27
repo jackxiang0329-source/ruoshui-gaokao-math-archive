@@ -13,3 +13,7 @@ GitHub Actions 每 30 分钟检查固定快照与索引，实际编译与数学�
 ## 主分支瘦身约定
 
 早期导入/候选的 `index/files.csv`、`index/gaokao-candidates.csv`、`index/derivative-candidates.csv`、`index/INDEX.md` 和 `index/stats.json` 已在 [整理前快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/index) 保留。旧版手工子模块同步可以临时生成这些清单用于本地核验，但不会自动提交回 `main`。当前检索请用 `catalog/documents.csv` 和统一题目级 JSON/CSV。
+
+## 已归档的一次性工具
+
+2026-10-27 起不再在精简主分支保留旧年份候选索引生成器、已完成的 Markdown/证明合并脚本和 2016 年特定 PDF 补录脚本。历史源码仍可从 Git 历史与 [整理前快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/scripts) 找回。现行年份目录由 `build_catalog_fast.py` 直接读取主分支 `papers/` Git 树生成，完整来源记录仍在 `catalog/documents.csv`。

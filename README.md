@@ -10,7 +10,7 @@
 
 ## 按内容检索
 
-[年份总目录](catalog/YEAR_INDEX.md) · [专题分类](catalog/TOPICS.md) · [导数逐题索引](index/DERIVATIVE_PROBLEMS_2010_2026.md) · [逐题 JSON](index/derivative-problems-2010-2026.json) · [逐题 CSV](index/derivative-problems-2010-2026.csv) · [重复题复核](catalog/QUESTION_DEDUP.md) · [文件来源与 SHA](catalog/normalized_files.csv) · [命名规则](catalog/NAMING.md)。
+[775 份真题按年份查找](catalog/YEAR_INDEX.md) · [专题分类](catalog/TOPICS.md) · [导数逐题索引](index/DERIVATIVE_PROBLEMS_2010_2026.md) · [逐题 JSON](index/derivative-problems-2010-2026.json) · [逐题 CSV](index/derivative-problems-2010-2026.csv) · [重复题复核](catalog/QUESTION_DEDUP.md) · [文件来源与 SHA](catalog/normalized_files.csv) · [命名规则](catalog/NAMING.md)。
 
 ## 文件怎么放
 

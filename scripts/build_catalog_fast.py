@@ -88,6 +88,52 @@ def csv_file(path, fields, data):
         writer.writeheader()
         writer.writerows(data)
 
+
+def published_papers():
+    """List actual published exam PDFs from HEAD, even in a sparse checkout."""
+    raw = call("ls-tree", "-r", "-z", "HEAD", "--", "papers/")
+    results = []
+    for entry in raw.split(b"\0"):
+        if not entry:
+            continue
+        meta, name = entry.split(b"\t", 1)
+        _mode, kind, _sha = meta.decode("ascii").split()
+        if kind != "blob":
+            continue
+        path = name.decode("utf-8", "surrogateescape")
+        if not path.endswith(".pdf"):
+            continue
+        match = re.fullmatch(
+            r"papers/(\d{3}0)s/gaokao-(\d{4})-[a-z0-9-]+-"
+            r"(?:general|science|liberal)(?:-spring)?-paper\.pdf", path)
+        if not match or int(match.group(2)) // 10 * 10 != int(match.group(1)):
+            raise ValueError("Invalid published exam PDF path: " + path)
+        results.append({"year": match.group(2), "path": path})
+    return sorted(results, key=lambda row: (row["year"], row["path"]))
+
+
+def render_published_year_index(papers):
+    """Keep all historical year anchors, without repeating upstream TeX inventories."""
+    by_year = defaultdict(list)
+    for row in papers:
+        by_year[row["year"]].append(row["path"])
+    if not by_year:
+        raise ValueError("Published exam PDF list is empty")
+    paths = [path for group in by_year.values() for path in group]
+    if len(paths) != len(set(paths)):
+        raise ValueError("Duplicate published exam PDF path")
+    labels = sorted(by_year)
+    lines = [f"# {labels[0]}—{labels[-1]} 高考数学年份总目录", "",
+             "此页仅列主分支已发布的逐卷真题 PDF；上游 TeX、扫描图及完整来源请查 [文件索引](documents.csv) 和 [原件存档](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)。",
+             "卷别以文件名标识；文件收录不表示原卷真实性或答案已经审核。", "",
+             f"已发布 **{len(paths)} 份 PDF**，跨 **{len(labels)} 个年份**。", ""]
+    for year in labels:
+        lines.extend([f"## {year} 年数学资料", ""])
+        for path in sorted(by_year[year]):
+            lines.append("- [" + Path(path).name + "](../" + quote(path, safe="/") + ")")
+        lines.append("")
+    return "\n".join(lines) + "\n"
+
 def main():
     sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))["repositories"]
     valid = {s["id"] for s in sources}
@@ -129,24 +175,16 @@ def main():
             years[row["year"]].append(row)
         for tag in topics(row["path"]):
             topics_map[tag].append(row)
-    # One canonical Markdown for all 64 years; keep stable anchors.
-    periods = defaultdict(list)
-    for year in sorted(years):
-        periods[f"{int(year)//10*10}s"].append((year, years[year]))
-    redirects = []
-    text = ["# 1952—2026 高考数学年份总目录", "",
-            "按原始 Git Blob SHA 去重；所有年份、卷别和来源路径保留。", ""]
-    for year, group in sorted(years.items()):
-        text.extend([f"## {year} 年数学资料", ""])
-        for row in sorted(group, key=lambda r: (r["source"], r["path"])):
-            text.append("- [" + Path(PUBLISHED_PATHS.get(row["path"], row["path"])).name + "](" +
-                        source_link(row, 1) + ") · " + row["source"])
-        text.append("")
-        redirects.append({"old_path": f"catalog/years/{year}.md",
-                          "new_path": "catalog/YEAR_INDEX.md",
-                          "anchor": f"{year}-年数学资料"})
-    (DEST / "YEAR_INDEX.md").write_text(
-        "\n".join(text) + "\n", encoding="utf-8")
+    # One compact year list for the main-branch published PDFs; preserve all old anchors.
+    published = published_papers()
+    rendered = render_published_year_index(published)
+    redirects = [
+        {"old_path": f"catalog/years/{year}.md",
+         "new_path": "catalog/YEAR_INDEX.md",
+         "anchor": f"{year}-年数学资料"}
+        for year in sorted(years)
+    ]
+    (DEST / "YEAR_INDEX.md").write_text(rendered, encoding="utf-8")
     # Only purge old generated year/decade navigations; reject edited files.
     for old_dir, pattern in [
         (DEST / "years", r"^# (?:19|20)\d{2} 年数学资料\n"),
@@ -192,6 +230,7 @@ def main():
              "exact_duplicate_copies": len(rows) - len(duplicates),
              "exact_duplicate_groups": sum(len(g) > 1 for g in duplicates.values()),
              "canonical_documents": len(documents),
+             "published_exam_pdfs": len(published),
              "year_sections": len(years), "period_volumes": 0, "year_index_volumes": 1,
              "topic_sections": len(topics_map), "topic_volumes": 1,
              "removed_generated_markdown_pages": len(years) + len(topics_map),
@@ -210,8 +249,8 @@ def main():
              "[完整文件索引](documents.csv) · [重复别名与出处](aliases.csv)"
              " · [自动统计](stats.json)", "",
              "## 按年份", ""]
-    lines.append("[1952—2026 全部年份与卷别](YEAR_INDEX.md) · "
-                 "[查看年代分组 PDF](../papers/)")
+    lines.append("[1952—2026 已发布真题 PDF](YEAR_INDEX.md) · "
+                 "[查看年代分组 PDF](../papers/) · [上游全部资料](documents.csv)")
     lines.append("")
     lines += ["## 按专题（合订为一份）", ""]
     for tag, group in sorted(topics_map.items()):

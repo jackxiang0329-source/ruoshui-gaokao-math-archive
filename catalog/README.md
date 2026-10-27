@@ -14,7 +14,7 @@
 
 ## 按年份
 
-[1952—2026 全部年份与卷别](YEAR_INDEX.md) · [查看年代分组 PDF](../papers/)
+[1952—2026 已发布真题 PDF](YEAR_INDEX.md) · [查看年代分组 PDF](../papers/) · [上游全部资料](documents.csv)
 
 ## 按专题（合订为一份）
 

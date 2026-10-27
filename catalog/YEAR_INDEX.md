@@ -1,2009 +1,974 @@
 # 1952—2026 高考数学年份总目录
 
-按原始 Git Blob SHA 去重；所有年份、卷别和来源路径保留。
+此页仅列主分支已发布的逐卷真题 PDF；上游 TeX、扫描图及完整来源请查 [文件索引](documents.csv) 和 [原件存档](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)。
+卷别以文件名标识；文件收录不表示原卷真实性或答案已经审核。
+
+已发布 **775 份 PDF**，跨 **64 个年份**。
 
 ## 1952 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1952/national.tex) · gaokao-math-problems-compilation
-- [1952.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1952.tex) · gaokao-math-problems-compilation
-- [gaokao-1952-unspecified-general-paper.pdf](../papers/1950s/gaokao-1952-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1952-unspecified-general-paper.pdf](../papers/1950s/gaokao-1952-unspecified-general-paper.pdf)
 
 ## 1953 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1953/national.tex) · gaokao-math-problems-compilation
-- [1953.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1953.tex) · gaokao-math-problems-compilation
-- [gaokao-1953-unspecified-general-paper.pdf](../papers/1950s/gaokao-1953-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1953-unspecified-general-paper.pdf](../papers/1950s/gaokao-1953-unspecified-general-paper.pdf)
 
 ## 1954 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1954/national.tex) · gaokao-math-problems-compilation
-- [1954.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1954.tex) · gaokao-math-problems-compilation
-- [gaokao-1954-unspecified-general-paper.pdf](../papers/1950s/gaokao-1954-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1954-unspecified-general-paper.pdf](../papers/1950s/gaokao-1954-unspecified-general-paper.pdf)
 
 ## 1955 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1955/national.tex) · gaokao-math-problems-compilation
-- [1955.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1955.tex) · gaokao-math-problems-compilation
-- [gaokao-1955-unspecified-general-paper.pdf](../papers/1950s/gaokao-1955-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1955-unspecified-general-paper.pdf](../papers/1950s/gaokao-1955-unspecified-general-paper.pdf)
 
 ## 1956 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1956/national.tex) · gaokao-math-problems-compilation
-- [1956.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1956.tex) · gaokao-math-problems-compilation
-- [gaokao-1956-unspecified-general-paper.pdf](../papers/1950s/gaokao-1956-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1956-unspecified-general-paper.pdf](../papers/1950s/gaokao-1956-unspecified-general-paper.pdf)
 
 ## 1957 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1957/national.tex) · gaokao-math-problems-compilation
-- [1957.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1957.tex) · gaokao-math-problems-compilation
-- [gaokao-1957-unspecified-general-paper.pdf](../papers/1950s/gaokao-1957-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1957-unspecified-general-paper.pdf](../papers/1950s/gaokao-1957-unspecified-general-paper.pdf)
 
 ## 1958 年数学资料
 
-- [anhui.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/anhui.tex) · gaokao-math-problems-compilation
-- [beijing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/beijing.tex) · gaokao-math-problems-compilation
-- [guangdong.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/guangdong.tex) · gaokao-math-problems-compilation
-- [hebei.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/hebei.tex) · gaokao-math-problems-compilation
-- [hei_ji_liao.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/hei_ji_liao.tex) · gaokao-math-problems-compilation
-- [hu_min.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/hu_min.tex) · gaokao-math-problems-compilation
-- [hubei.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/hubei.tex) · gaokao-math-problems-compilation
-- [hunan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/hunan.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/jiangsu.tex) · gaokao-math-problems-compilation
-- [sichuan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/sichuan.tex) · gaokao-math-problems-compilation
-- [unknown.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/unknown.tex) · gaokao-math-problems-compilation
-- [yunnan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1958/yunnan.tex) · gaokao-math-problems-compilation
-- [1958.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1958.tex) · gaokao-math-problems-compilation
-- [gaokao-1958-unknown-general-paper.pdf](../papers/1950s/gaokao-1958-unknown-general-paper.pdf) · gaokaomath
-- [gaokao-1958-yunnan-general-paper.pdf](../papers/1950s/gaokao-1958-yunnan-general-paper.pdf) · gaokaomath
-- [gaokao-1958-beijing-general-paper.pdf](../papers/1950s/gaokao-1958-beijing-general-paper.pdf) · gaokaomath
-- [gaokao-1958-east-china-general-paper.pdf](../papers/1950s/gaokao-1958-east-china-general-paper.pdf) · gaokaomath
-- [gaokao-1958-sichuan-general-paper.pdf](../papers/1950s/gaokao-1958-sichuan-general-paper.pdf) · gaokaomath
-- [gaokao-1958-anhui-general-paper.pdf](../papers/1950s/gaokao-1958-anhui-general-paper.pdf) · gaokaomath
-- [gaokao-1958-guangdong-general-paper.pdf](../papers/1950s/gaokao-1958-guangdong-general-paper.pdf) · gaokaomath
-- [gaokao-1958-jiangsu-general-paper.pdf](../papers/1950s/gaokao-1958-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-1958-hebei-general-paper.pdf](../papers/1950s/gaokao-1958-hebei-general-paper.pdf) · gaokaomath
-- [gaokao-1958-hubei-general-paper.pdf](../papers/1950s/gaokao-1958-hubei-general-paper.pdf) · gaokaomath
-- [gaokao-1958-hunan-general-paper.pdf](../papers/1950s/gaokao-1958-hunan-general-paper.pdf) · gaokaomath
-- [gaokao-1958-heilongjiang-jilin-liaoning-general-paper.pdf](../papers/1950s/gaokao-1958-heilongjiang-jilin-liaoning-general-paper.pdf) · gaokaomath
+- [gaokao-1958-anhui-general-paper.pdf](../papers/1950s/gaokao-1958-anhui-general-paper.pdf)
+- [gaokao-1958-beijing-general-paper.pdf](../papers/1950s/gaokao-1958-beijing-general-paper.pdf)
+- [gaokao-1958-east-china-general-paper.pdf](../papers/1950s/gaokao-1958-east-china-general-paper.pdf)
+- [gaokao-1958-guangdong-general-paper.pdf](../papers/1950s/gaokao-1958-guangdong-general-paper.pdf)
+- [gaokao-1958-hebei-general-paper.pdf](../papers/1950s/gaokao-1958-hebei-general-paper.pdf)
+- [gaokao-1958-heilongjiang-jilin-liaoning-general-paper.pdf](../papers/1950s/gaokao-1958-heilongjiang-jilin-liaoning-general-paper.pdf)
+- [gaokao-1958-hubei-general-paper.pdf](../papers/1950s/gaokao-1958-hubei-general-paper.pdf)
+- [gaokao-1958-hunan-general-paper.pdf](../papers/1950s/gaokao-1958-hunan-general-paper.pdf)
+- [gaokao-1958-jiangsu-general-paper.pdf](../papers/1950s/gaokao-1958-jiangsu-general-paper.pdf)
+- [gaokao-1958-sichuan-general-paper.pdf](../papers/1950s/gaokao-1958-sichuan-general-paper.pdf)
+- [gaokao-1958-unknown-general-paper.pdf](../papers/1950s/gaokao-1958-unknown-general-paper.pdf)
+- [gaokao-1958-yunnan-general-paper.pdf](../papers/1950s/gaokao-1958-yunnan-general-paper.pdf)
 
 ## 1959 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1959/national.tex) · gaokao-math-problems-compilation
-- [1959.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1959.tex) · gaokao-math-problems-compilation
-- [gaokao-1959-unspecified-general-paper.pdf](../papers/1950s/gaokao-1959-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1959-unspecified-general-paper.pdf](../papers/1950s/gaokao-1959-unspecified-general-paper.pdf)
 
 ## 1960 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1960/national.tex) · gaokao-math-problems-compilation
-- [1960.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1960.tex) · gaokao-math-problems-compilation
-- [gaokao-1960-unspecified-general-paper.pdf](../papers/1960s/gaokao-1960-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1960-unspecified-general-paper.pdf](../papers/1960s/gaokao-1960-unspecified-general-paper.pdf)
 
 ## 1961 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1961/national.tex) · gaokao-math-problems-compilation
-- [1961.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1961.tex) · gaokao-math-problems-compilation
-- [gaokao-1961-unspecified-general-paper.pdf](../papers/1960s/gaokao-1961-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1961-unspecified-general-paper.pdf](../papers/1960s/gaokao-1961-unspecified-general-paper.pdf)
 
 ## 1962 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1962/national.tex) · gaokao-math-problems-compilation
-- [1962.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1962.tex) · gaokao-math-problems-compilation
-- [gaokao-1962-unspecified-general-paper.pdf](../papers/1960s/gaokao-1962-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1962-unspecified-general-paper.pdf](../papers/1960s/gaokao-1962-unspecified-general-paper.pdf)
 
 ## 1963 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1963/national.tex) · gaokao-math-problems-compilation
-- [1963.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1963.tex) · gaokao-math-problems-compilation
-- [gaokao-1963-unspecified-general-paper.pdf](../papers/1960s/gaokao-1963-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1963-unspecified-general-paper.pdf](../papers/1960s/gaokao-1963-unspecified-general-paper.pdf)
 
 ## 1964 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1964/national.tex) · gaokao-math-problems-compilation
-- [1964.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1964.tex) · gaokao-math-problems-compilation
-- [gaokao-1964-unspecified-general-paper.pdf](../papers/1960s/gaokao-1964-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1964-unspecified-general-paper.pdf](../papers/1960s/gaokao-1964-unspecified-general-paper.pdf)
 
 ## 1965 年数学资料
 
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1965/national.tex) · gaokao-math-problems-compilation
-- [1965.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1965.tex) · gaokao-math-problems-compilation
-- [gaokao-1965-unspecified-general-paper.pdf](../papers/1960s/gaokao-1965-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1965-unspecified-general-paper.pdf](../papers/1960s/gaokao-1965-unspecified-general-paper.pdf)
 
 ## 1977 年数学资料
 
-- [shanghai1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/1977shanghai/shanghai1977.tex) · daxmate-math
-- [beijing1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/beijing1977.tex) · daxmate-math
-- [fujian1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/fujian1977.tex) · daxmate-math
-- [hebei1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/hebei1977.tex) · daxmate-math
-- [heilongjiang1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/heilongjiang1977.tex) · daxmate-math
-- [jiangsu1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/jiangsu1977.tex) · daxmate-math
-- [shanghai1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/shanghai1977.tex) · daxmate-math
-- [tianjing1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/tianjing1977.tex) · daxmate-math
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/chongqing.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/fujian_science.tex) · gaokao-math-problems-compilation
-- [gansu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/gansu.tex) · gaokao-math-problems-compilation
-- [guangdong_hainan_included.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/guangdong_hainan_included.tex) · gaokao-math-problems-compilation
-- [guangxi_baise_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/guangxi_baise_liberal.tex) · gaokao-math-problems-compilation
-- [guangxi_baise_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/guangxi_baise_science.tex) · gaokao-math-problems-compilation
-- [guangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/guangxi_liberal.tex) · gaokao-math-problems-compilation
-- [guangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/guangxi_science.tex) · gaokao-math-problems-compilation
-- [guizhou.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/guizhou.tex) · gaokao-math-problems-compilation
-- [hebei.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/hebei.tex) · gaokao-math-problems-compilation
-- [heilongjiang.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/heilongjiang.tex) · gaokao-math-problems-compilation
-- [heilongjiang_preliminary.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/heilongjiang_preliminary.tex) · gaokao-math-problems-compilation
-- [henan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/henan.tex) · gaokao-math-problems-compilation
-- [hubei.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/hubei.tex) · gaokao-math-problems-compilation
-- [hunan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/hunan.tex) · gaokao-math-problems-compilation
-- [hunan_zhuzhou_pilot.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/hunan_zhuzhou_pilot.tex) · gaokao-math-problems-compilation
-- [inner_mongolia_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/inner_mongolia_liberal.tex) · gaokao-math-problems-compilation
-- [inner_mongolia_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/inner_mongolia_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangsu_changzhou_city.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_changzhou_city.tex) · gaokao-math-problems-compilation
-- [jiangsu_huaiyin_region.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_huaiyin_region.tex) · gaokao-math-problems-compilation
-- [jiangsu_lianyungang_city.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_lianyungang_city.tex) · gaokao-math-problems-compilation
-- [jiangsu_nanjing_city.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_nanjing_city.tex) · gaokao-math-problems-compilation
-- [jiangsu_nantong.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_nantong.tex) · gaokao-math-problems-compilation
-- [jiangsu_nantong_city.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_nantong_city.tex) · gaokao-math-problems-compilation
-- [jiangsu_nantong_region.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_nantong_region.tex) · gaokao-math-problems-compilation
-- [jiangsu_state_farm_system.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_state_farm_system.tex) · gaokao-math-problems-compilation
-- [jiangsu_suzhou_city.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_suzhou_city.tex) · gaokao-math-problems-compilation
-- [jiangsu_suzhou_region.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_suzhou_region.tex) · gaokao-math-problems-compilation
-- [jiangsu_wuxi_city.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_wuxi_city.tex) · gaokao-math-problems-compilation
-- [jiangsu_xuzhou_city_region.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_xuzhou_city_region.tex) · gaokao-math-problems-compilation
-- [jiangsu_yancheng_region.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_yancheng_region.tex) · gaokao-math-problems-compilation
-- [jiangsu_yangzhou_region.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_yangzhou_region.tex) · gaokao-math-problems-compilation
-- [jiangsu_zhenjiang_region.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangsu_zhenjiang_region.tex) · gaokao-math-problems-compilation
-- [jiangxi.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jiangxi.tex) · gaokao-math-problems-compilation
-- [jilin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/jilin.tex) · gaokao-math-problems-compilation
-- [liaoning.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/liaoning.tex) · gaokao-math-problems-compilation
-- [ningxia.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/ningxia.tex) · gaokao-math-problems-compilation
-- [qinghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/qinghai.tex) · gaokao-math-problems-compilation
-- [shaanxi.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/shaanxi.tex) · gaokao-math-problems-compilation
-- [shandong_a.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/shandong_a.tex) · gaokao-math-problems-compilation
-- [shandong_b.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/shandong_b.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanxi.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/shanxi.tex) · gaokao-math-problems-compilation
-- [tianjin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/tianjin.tex) · gaokao-math-problems-compilation
-- [tibet.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/tibet.tex) · gaokao-math-problems-compilation
-- [xinjiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/xinjiang_liberal.tex) · gaokao-math-problems-compilation
-- [xinjiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/xinjiang_science.tex) · gaokao-math-problems-compilation
-- [yunnan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/yunnan.tex) · gaokao-math-problems-compilation
-- [zhejiang.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1977/zhejiang.tex) · gaokao-math-problems-compilation
-- [1977.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1977.tex) · gaokao-math-problems-compilation
-- [gaokao-1977-shanghai-liberal-paper.pdf](../papers/1970s/gaokao-1977-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-1977-shanghai-science-paper.pdf](../papers/1970s/gaokao-1977-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-1977-yunnan-general-paper.pdf](../papers/1970s/gaokao-1977-yunnan-general-paper.pdf) · gaokaomath
-- [gaokao-1977-inner-mongolia-liberal-paper.pdf](../papers/1970s/gaokao-1977-inner-mongolia-liberal-paper.pdf) · gaokaomath
-- [gaokao-1977-inner-mongolia-science-paper.pdf](../papers/1970s/gaokao-1977-inner-mongolia-science-paper.pdf) · gaokaomath
-- [gaokao-1977-beijing-liberal-paper.pdf](../papers/1970s/gaokao-1977-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-1977-beijing-science-paper.pdf](../papers/1970s/gaokao-1977-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-1977-jilin-general-paper.pdf](../papers/1970s/gaokao-1977-jilin-general-paper.pdf) · gaokaomath
-- [gaokao-1977-sichuan-general-paper.pdf](../papers/1970s/gaokao-1977-sichuan-general-paper.pdf) · gaokaomath
-- [gaokao-1977-tianjin-general-paper.pdf](../papers/1970s/gaokao-1977-tianjin-general-paper.pdf) · gaokaomath
-- [gaokao-1977-ningxia-general-paper.pdf](../papers/1970s/gaokao-1977-ningxia-general-paper.pdf) · gaokaomath
-- [gaokao-1977-anhui-liberal-paper.pdf](../papers/1970s/gaokao-1977-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-1977-anhui-science-paper.pdf](../papers/1970s/gaokao-1977-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-1977-shandong-a-general-paper.pdf](../papers/1970s/gaokao-1977-shandong-a-general-paper.pdf) · gaokaomath
-- [gaokao-1977-shandong-b-general-paper.pdf](../papers/1970s/gaokao-1977-shandong-b-general-paper.pdf) · gaokaomath
-- [gaokao-1977-shanxi-general-paper.pdf](../papers/1970s/gaokao-1977-shanxi-general-paper.pdf) · gaokaomath
-- [gaokao-1977-guangdong-general-paper.pdf](../papers/1970s/gaokao-1977-guangdong-general-paper.pdf) · gaokaomath
-- [gaokao-1977-guangxi-liberal-paper.pdf](../papers/1970s/gaokao-1977-guangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-1977-guangxi-science-paper.pdf](../papers/1970s/gaokao-1977-guangxi-science-paper.pdf) · gaokaomath
-- [gaokao-1977-guangxi-baise-liberal-paper.pdf](../papers/1970s/gaokao-1977-guangxi-baise-liberal-paper.pdf) · gaokaomath
-- [gaokao-1977-guangxi-baise-science-paper.pdf](../papers/1970s/gaokao-1977-guangxi-baise-science-paper.pdf) · gaokaomath
-- [gaokao-1977-xinjiang-liberal-paper.pdf](../papers/1970s/gaokao-1977-xinjiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-1977-xinjiang-science-paper.pdf](../papers/1970s/gaokao-1977-xinjiang-science-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-nantong-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-nantong-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangxi-general-paper.pdf](../papers/1970s/gaokao-1977-jiangxi-general-paper.pdf) · gaokaomath
-- [gaokao-1977-hebei-general-paper.pdf](../papers/1970s/gaokao-1977-hebei-general-paper.pdf) · gaokaomath
-- [gaokao-1977-henan-general-paper.pdf](../papers/1970s/gaokao-1977-henan-general-paper.pdf) · gaokaomath
-- [gaokao-1977-zhejiang-general-paper.pdf](../papers/1970s/gaokao-1977-zhejiang-general-paper.pdf) · gaokaomath
-- [gaokao-1977-hubei-general-paper.pdf](../papers/1970s/gaokao-1977-hubei-general-paper.pdf) · gaokaomath
-- [gaokao-1977-hunan-general-paper.pdf](../papers/1970s/gaokao-1977-hunan-general-paper.pdf) · gaokaomath
-- [gaokao-1977-hunan-zhuzhou-general-paper.pdf](../papers/1970s/gaokao-1977-hunan-zhuzhou-general-paper.pdf) · gaokaomath
-- [gaokao-1977-gansu-general-paper.pdf](../papers/1970s/gaokao-1977-gansu-general-paper.pdf) · gaokaomath
-- [gaokao-1977-fujian-liberal-paper.pdf](../papers/1970s/gaokao-1977-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-1977-fujian-science-paper.pdf](../papers/1970s/gaokao-1977-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-1977-tibet-general-paper.pdf](../papers/1970s/gaokao-1977-tibet-general-paper.pdf) · gaokaomath
-- [gaokao-1977-guizhou-general-paper.pdf](../papers/1970s/gaokao-1977-guizhou-general-paper.pdf) · gaokaomath
-- [gaokao-1977-liaoning-general-paper.pdf](../papers/1970s/gaokao-1977-liaoning-general-paper.pdf) · gaokaomath
-- [gaokao-1977-shaanxi-general-paper.pdf](../papers/1970s/gaokao-1977-shaanxi-general-paper.pdf) · gaokaomath
-- [gaokao-1977-qinghai-general-paper.pdf](../papers/1970s/gaokao-1977-qinghai-general-paper.pdf) · gaokaomath
-- [gaokao-1977-heilongjiang-general-paper.pdf](../papers/1970s/gaokao-1977-heilongjiang-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-state-farms-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-state-farms-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-nanjing-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-nanjing-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-nantong-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-nantong-region-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-nantong-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-nantong-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-changzhou-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-changzhou-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-xuzhou-xuzhou-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-xuzhou-xuzhou-region-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-yangzhou-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-yangzhou-region-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-wuxi-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-wuxi-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-huaiyin-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-huaiyin-region-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-yancheng-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-yancheng-region-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-suzhou-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-suzhou-region-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-suzhou-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-suzhou-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-lianyungang-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-lianyungang-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-jiangsu-zhenjiang-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-zhenjiang-region-preliminary-general-paper.pdf) · gaokaomath
-- [gaokao-1977-heilongjiang-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-heilongjiang-preliminary-general-paper.pdf) · gaokaomath
+- [gaokao-1977-anhui-liberal-paper.pdf](../papers/1970s/gaokao-1977-anhui-liberal-paper.pdf)
+- [gaokao-1977-anhui-science-paper.pdf](../papers/1970s/gaokao-1977-anhui-science-paper.pdf)
+- [gaokao-1977-beijing-liberal-paper.pdf](../papers/1970s/gaokao-1977-beijing-liberal-paper.pdf)
+- [gaokao-1977-beijing-science-paper.pdf](../papers/1970s/gaokao-1977-beijing-science-paper.pdf)
+- [gaokao-1977-fujian-liberal-paper.pdf](../papers/1970s/gaokao-1977-fujian-liberal-paper.pdf)
+- [gaokao-1977-fujian-science-paper.pdf](../papers/1970s/gaokao-1977-fujian-science-paper.pdf)
+- [gaokao-1977-gansu-general-paper.pdf](../papers/1970s/gaokao-1977-gansu-general-paper.pdf)
+- [gaokao-1977-guangdong-general-paper.pdf](../papers/1970s/gaokao-1977-guangdong-general-paper.pdf)
+- [gaokao-1977-guangxi-baise-liberal-paper.pdf](../papers/1970s/gaokao-1977-guangxi-baise-liberal-paper.pdf)
+- [gaokao-1977-guangxi-baise-science-paper.pdf](../papers/1970s/gaokao-1977-guangxi-baise-science-paper.pdf)
+- [gaokao-1977-guangxi-liberal-paper.pdf](../papers/1970s/gaokao-1977-guangxi-liberal-paper.pdf)
+- [gaokao-1977-guangxi-science-paper.pdf](../papers/1970s/gaokao-1977-guangxi-science-paper.pdf)
+- [gaokao-1977-guizhou-general-paper.pdf](../papers/1970s/gaokao-1977-guizhou-general-paper.pdf)
+- [gaokao-1977-hebei-general-paper.pdf](../papers/1970s/gaokao-1977-hebei-general-paper.pdf)
+- [gaokao-1977-heilongjiang-general-paper.pdf](../papers/1970s/gaokao-1977-heilongjiang-general-paper.pdf)
+- [gaokao-1977-heilongjiang-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-heilongjiang-preliminary-general-paper.pdf)
+- [gaokao-1977-henan-general-paper.pdf](../papers/1970s/gaokao-1977-henan-general-paper.pdf)
+- [gaokao-1977-hubei-general-paper.pdf](../papers/1970s/gaokao-1977-hubei-general-paper.pdf)
+- [gaokao-1977-hunan-general-paper.pdf](../papers/1970s/gaokao-1977-hunan-general-paper.pdf)
+- [gaokao-1977-hunan-zhuzhou-general-paper.pdf](../papers/1970s/gaokao-1977-hunan-zhuzhou-general-paper.pdf)
+- [gaokao-1977-inner-mongolia-liberal-paper.pdf](../papers/1970s/gaokao-1977-inner-mongolia-liberal-paper.pdf)
+- [gaokao-1977-inner-mongolia-science-paper.pdf](../papers/1970s/gaokao-1977-inner-mongolia-science-paper.pdf)
+- [gaokao-1977-jiangsu-changzhou-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-changzhou-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-general-paper.pdf)
+- [gaokao-1977-jiangsu-huaiyin-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-huaiyin-region-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-lianyungang-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-lianyungang-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-nanjing-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-nanjing-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-nantong-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-nantong-general-paper.pdf)
+- [gaokao-1977-jiangsu-nantong-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-nantong-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-nantong-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-nantong-region-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-state-farms-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-state-farms-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-suzhou-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-suzhou-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-suzhou-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-suzhou-region-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-wuxi-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-wuxi-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-xuzhou-xuzhou-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-xuzhou-xuzhou-region-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-yancheng-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-yancheng-region-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-yangzhou-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-yangzhou-region-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangsu-zhenjiang-region-preliminary-general-paper.pdf](../papers/1970s/gaokao-1977-jiangsu-zhenjiang-region-preliminary-general-paper.pdf)
+- [gaokao-1977-jiangxi-general-paper.pdf](../papers/1970s/gaokao-1977-jiangxi-general-paper.pdf)
+- [gaokao-1977-jilin-general-paper.pdf](../papers/1970s/gaokao-1977-jilin-general-paper.pdf)
+- [gaokao-1977-liaoning-general-paper.pdf](../papers/1970s/gaokao-1977-liaoning-general-paper.pdf)
+- [gaokao-1977-ningxia-general-paper.pdf](../papers/1970s/gaokao-1977-ningxia-general-paper.pdf)
+- [gaokao-1977-qinghai-general-paper.pdf](../papers/1970s/gaokao-1977-qinghai-general-paper.pdf)
+- [gaokao-1977-shaanxi-general-paper.pdf](../papers/1970s/gaokao-1977-shaanxi-general-paper.pdf)
+- [gaokao-1977-shandong-a-general-paper.pdf](../papers/1970s/gaokao-1977-shandong-a-general-paper.pdf)
+- [gaokao-1977-shandong-b-general-paper.pdf](../papers/1970s/gaokao-1977-shandong-b-general-paper.pdf)
+- [gaokao-1977-shanghai-liberal-paper.pdf](../papers/1970s/gaokao-1977-shanghai-liberal-paper.pdf)
+- [gaokao-1977-shanghai-science-paper.pdf](../papers/1970s/gaokao-1977-shanghai-science-paper.pdf)
+- [gaokao-1977-shanxi-general-paper.pdf](../papers/1970s/gaokao-1977-shanxi-general-paper.pdf)
+- [gaokao-1977-sichuan-general-paper.pdf](../papers/1970s/gaokao-1977-sichuan-general-paper.pdf)
+- [gaokao-1977-tianjin-general-paper.pdf](../papers/1970s/gaokao-1977-tianjin-general-paper.pdf)
+- [gaokao-1977-tibet-general-paper.pdf](../papers/1970s/gaokao-1977-tibet-general-paper.pdf)
+- [gaokao-1977-xinjiang-liberal-paper.pdf](../papers/1970s/gaokao-1977-xinjiang-liberal-paper.pdf)
+- [gaokao-1977-xinjiang-science-paper.pdf](../papers/1970s/gaokao-1977-xinjiang-science-paper.pdf)
+- [gaokao-1977-yunnan-general-paper.pdf](../papers/1970s/gaokao-1977-yunnan-general-paper.pdf)
+- [gaokao-1977-zhejiang-general-paper.pdf](../papers/1970s/gaokao-1977-zhejiang-general-paper.pdf)
 
 ## 1978 年数学资料
 
-- [quanguo1978.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/quanguo1978.tex) · daxmate-math
-- [quanguo1978spare.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/quanguo1978spare.tex) · daxmate-math
-- [national.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1978/national.tex) · gaokao-math-problems-compilation
-- [1978.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1978.tex) · gaokao-math-problems-compilation
-- [gaokao-1978-unspecified-general-paper.pdf](../papers/1970s/gaokao-1978-unspecified-general-paper.pdf) · gaokaomath
+- [gaokao-1978-unspecified-general-paper.pdf](../papers/1970s/gaokao-1978-unspecified-general-paper.pdf)
 
 ## 1979 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1979/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1979/national_science.tex) · gaokao-math-problems-compilation
-- [1979.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1979.tex) · gaokao-math-problems-compilation
-- [gaokao-1979-unspecified-liberal-paper.pdf](../papers/1970s/gaokao-1979-unspecified-liberal-paper.pdf) · gaokaomath
-- [gaokao-1979-unspecified-science-paper.pdf](../papers/1970s/gaokao-1979-unspecified-science-paper.pdf) · gaokaomath
+- [gaokao-1979-unspecified-liberal-paper.pdf](../papers/1970s/gaokao-1979-unspecified-liberal-paper.pdf)
+- [gaokao-1979-unspecified-science-paper.pdf](../papers/1970s/gaokao-1979-unspecified-science-paper.pdf)
 
 ## 1980 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1980/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1980/national_science.tex) · gaokao-math-problems-compilation
-- [1980.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1980.tex) · gaokao-math-problems-compilation
-- [gaokao-1980-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1980-unspecified-liberal-paper.pdf) · gaokaomath
-- [gaokao-1980-unspecified-science-paper.pdf](../papers/1980s/gaokao-1980-unspecified-science-paper.pdf) · gaokaomath
+- [gaokao-1980-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1980-unspecified-liberal-paper.pdf)
+- [gaokao-1980-unspecified-science-paper.pdf](../papers/1980s/gaokao-1980-unspecified-science-paper.pdf)
 
 ## 1981 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1981/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1981/national_science.tex) · gaokao-math-problems-compilation
-- [1981.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1981.tex) · gaokao-math-problems-compilation
-- [gaokao-1981-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1981-unspecified-liberal-paper.pdf) · gaokaomath
-- [gaokao-1981-unspecified-science-paper.pdf](../papers/1980s/gaokao-1981-unspecified-science-paper.pdf) · gaokaomath
+- [gaokao-1981-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1981-unspecified-liberal-paper.pdf)
+- [gaokao-1981-unspecified-science-paper.pdf](../papers/1980s/gaokao-1981-unspecified-science-paper.pdf)
 
 ## 1982 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1982/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1982/national_science.tex) · gaokao-math-problems-compilation
-- [1982.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1982.tex) · gaokao-math-problems-compilation
-- [gaokao-1982-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1982-unspecified-liberal-paper.pdf) · gaokaomath
-- [gaokao-1982-unspecified-science-paper.pdf](../papers/1980s/gaokao-1982-unspecified-science-paper.pdf) · gaokaomath
+- [gaokao-1982-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1982-unspecified-liberal-paper.pdf)
+- [gaokao-1982-unspecified-science-paper.pdf](../papers/1980s/gaokao-1982-unspecified-science-paper.pdf)
 
 ## 1983 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1983/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1983/national_science.tex) · gaokao-math-problems-compilation
-- [1983.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1983.tex) · gaokao-math-problems-compilation
-- [gaokao-1983-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1983-unspecified-liberal-paper.pdf) · gaokaomath
-- [gaokao-1983-unspecified-science-paper.pdf](../papers/1980s/gaokao-1983-unspecified-science-paper.pdf) · gaokaomath
+- [gaokao-1983-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1983-unspecified-liberal-paper.pdf)
+- [gaokao-1983-unspecified-science-paper.pdf](../papers/1980s/gaokao-1983-unspecified-science-paper.pdf)
 
 ## 1984 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1984/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1984/national_science.tex) · gaokao-math-problems-compilation
-- [1984.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1984.tex) · gaokao-math-problems-compilation
-- [gaokao-1984-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1984-unspecified-liberal-paper.pdf) · gaokaomath
-- [gaokao-1984-unspecified-science-paper.pdf](../papers/1980s/gaokao-1984-unspecified-science-paper.pdf) · gaokaomath
+- [gaokao-1984-unspecified-liberal-paper.pdf](../papers/1980s/gaokao-1984-unspecified-liberal-paper.pdf)
+- [gaokao-1984-unspecified-science-paper.pdf](../papers/1980s/gaokao-1984-unspecified-science-paper.pdf)
 
 ## 1985 年数学资料
 
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1985/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1985/guangdong_science.tex) · gaokao-math-problems-compilation
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1985/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1985/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1985/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1985/shanghai_science.tex) · gaokao-math-problems-compilation
-- [1985.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1985.tex) · gaokao-math-problems-compilation
-- [gaokao-1985-shanghai-liberal-paper.pdf](../papers/1980s/gaokao-1985-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-1985-shanghai-science-paper.pdf](../papers/1980s/gaokao-1985-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-1985-national-liberal-paper.pdf](../papers/1980s/gaokao-1985-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1985-national-science-paper.pdf](../papers/1980s/gaokao-1985-national-science-paper.pdf) · gaokaomath
-- [gaokao-1985-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1985-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-1985-guangdong-science-paper.pdf](../papers/1980s/gaokao-1985-guangdong-science-paper.pdf) · gaokaomath
+- [gaokao-1985-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1985-guangdong-liberal-paper.pdf)
+- [gaokao-1985-guangdong-science-paper.pdf](../papers/1980s/gaokao-1985-guangdong-science-paper.pdf)
+- [gaokao-1985-national-liberal-paper.pdf](../papers/1980s/gaokao-1985-national-liberal-paper.pdf)
+- [gaokao-1985-national-science-paper.pdf](../papers/1980s/gaokao-1985-national-science-paper.pdf)
+- [gaokao-1985-shanghai-liberal-paper.pdf](../papers/1980s/gaokao-1985-shanghai-liberal-paper.pdf)
+- [gaokao-1985-shanghai-science-paper.pdf](../papers/1980s/gaokao-1985-shanghai-science-paper.pdf)
 
 ## 1986 年数学资料
 
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1986/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1986/guangdong_science.tex) · gaokao-math-problems-compilation
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1986/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1986/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1986/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1986/shanghai_science.tex) · gaokao-math-problems-compilation
-- [1986.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1986.tex) · gaokao-math-problems-compilation
-- [gaokao-1986-shanghai-liberal-paper.pdf](../papers/1980s/gaokao-1986-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-1986-shanghai-science-paper.pdf](../papers/1980s/gaokao-1986-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-1986-national-liberal-paper.pdf](../papers/1980s/gaokao-1986-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1986-national-science-paper.pdf](../papers/1980s/gaokao-1986-national-science-paper.pdf) · gaokaomath
-- [gaokao-1986-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1986-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-1986-guangdong-science-paper.pdf](../papers/1980s/gaokao-1986-guangdong-science-paper.pdf) · gaokaomath
+- [gaokao-1986-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1986-guangdong-liberal-paper.pdf)
+- [gaokao-1986-guangdong-science-paper.pdf](../papers/1980s/gaokao-1986-guangdong-science-paper.pdf)
+- [gaokao-1986-national-liberal-paper.pdf](../papers/1980s/gaokao-1986-national-liberal-paper.pdf)
+- [gaokao-1986-national-science-paper.pdf](../papers/1980s/gaokao-1986-national-science-paper.pdf)
+- [gaokao-1986-shanghai-liberal-paper.pdf](../papers/1980s/gaokao-1986-shanghai-liberal-paper.pdf)
+- [gaokao-1986-shanghai-science-paper.pdf](../papers/1980s/gaokao-1986-shanghai-science-paper.pdf)
 
 ## 1987 年数学资料
 
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1987/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1987/guangdong_science.tex) · gaokao-math-problems-compilation
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1987/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1987/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1987/shanghai.tex) · gaokao-math-problems-compilation
-- [1987.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1987.tex) · gaokao-math-problems-compilation
-- [gaokao-1987-shanghai-general-paper.pdf](../papers/1980s/gaokao-1987-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-1987-national-liberal-paper.pdf](../papers/1980s/gaokao-1987-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1987-national-science-paper.pdf](../papers/1980s/gaokao-1987-national-science-paper.pdf) · gaokaomath
-- [gaokao-1987-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1987-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-1987-guangdong-science-paper.pdf](../papers/1980s/gaokao-1987-guangdong-science-paper.pdf) · gaokaomath
+- [gaokao-1987-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1987-guangdong-liberal-paper.pdf)
+- [gaokao-1987-guangdong-science-paper.pdf](../papers/1980s/gaokao-1987-guangdong-science-paper.pdf)
+- [gaokao-1987-national-liberal-paper.pdf](../papers/1980s/gaokao-1987-national-liberal-paper.pdf)
+- [gaokao-1987-national-science-paper.pdf](../papers/1980s/gaokao-1987-national-science-paper.pdf)
+- [gaokao-1987-shanghai-general-paper.pdf](../papers/1980s/gaokao-1987-shanghai-general-paper.pdf)
 
 ## 1988 年数学资料
 
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1988/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1988/guangdong_science.tex) · gaokao-math-problems-compilation
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1988/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1988/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1988/shanghai.tex) · gaokao-math-problems-compilation
-- [1988.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1988.tex) · gaokao-math-problems-compilation
-- [gaokao-1988-shanghai-general-paper.pdf](../papers/1980s/gaokao-1988-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-1988-national-liberal-paper.pdf](../papers/1980s/gaokao-1988-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1988-national-science-paper.pdf](../papers/1980s/gaokao-1988-national-science-paper.pdf) · gaokaomath
-- [gaokao-1988-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1988-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-1988-guangdong-science-paper.pdf](../papers/1980s/gaokao-1988-guangdong-science-paper.pdf) · gaokaomath
+- [gaokao-1988-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1988-guangdong-liberal-paper.pdf)
+- [gaokao-1988-guangdong-science-paper.pdf](../papers/1980s/gaokao-1988-guangdong-science-paper.pdf)
+- [gaokao-1988-national-liberal-paper.pdf](../papers/1980s/gaokao-1988-national-liberal-paper.pdf)
+- [gaokao-1988-national-science-paper.pdf](../papers/1980s/gaokao-1988-national-science-paper.pdf)
+- [gaokao-1988-shanghai-general-paper.pdf](../papers/1980s/gaokao-1988-shanghai-general-paper.pdf)
 
 ## 1989 年数学资料
 
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1989/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1989/guangdong_science.tex) · gaokao-math-problems-compilation
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1989/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1989/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1989/shanghai.tex) · gaokao-math-problems-compilation
-- [1989.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1989.tex) · gaokao-math-problems-compilation
-- [gaokao-1989-shanghai-general-paper.pdf](../papers/1980s/gaokao-1989-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-1989-national-liberal-paper.pdf](../papers/1980s/gaokao-1989-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1989-national-science-paper.pdf](../papers/1980s/gaokao-1989-national-science-paper.pdf) · gaokaomath
-- [gaokao-1989-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1989-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-1989-guangdong-science-paper.pdf](../papers/1980s/gaokao-1989-guangdong-science-paper.pdf) · gaokaomath
+- [gaokao-1989-guangdong-liberal-paper.pdf](../papers/1980s/gaokao-1989-guangdong-liberal-paper.pdf)
+- [gaokao-1989-guangdong-science-paper.pdf](../papers/1980s/gaokao-1989-guangdong-science-paper.pdf)
+- [gaokao-1989-national-liberal-paper.pdf](../papers/1980s/gaokao-1989-national-liberal-paper.pdf)
+- [gaokao-1989-national-science-paper.pdf](../papers/1980s/gaokao-1989-national-science-paper.pdf)
+- [gaokao-1989-shanghai-general-paper.pdf](../papers/1980s/gaokao-1989-shanghai-general-paper.pdf)
 
 ## 1990 年数学资料
 
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1990/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1990/guangdong_science.tex) · gaokao-math-problems-compilation
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1990/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1990/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1990/shanghai.tex) · gaokao-math-problems-compilation
-- [1990.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1990.tex) · gaokao-math-problems-compilation
-- [gaokao-1990-shanghai-general-paper.pdf](../papers/1990s/gaokao-1990-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-1990-national-liberal-paper.pdf](../papers/1990s/gaokao-1990-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1990-national-science-paper.pdf](../papers/1990s/gaokao-1990-national-science-paper.pdf) · gaokaomath
-- [gaokao-1990-guangdong-liberal-paper.pdf](../papers/1990s/gaokao-1990-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-1990-guangdong-science-paper.pdf](../papers/1990s/gaokao-1990-guangdong-science-paper.pdf) · gaokaomath
+- [gaokao-1990-guangdong-liberal-paper.pdf](../papers/1990s/gaokao-1990-guangdong-liberal-paper.pdf)
+- [gaokao-1990-guangdong-science-paper.pdf](../papers/1990s/gaokao-1990-guangdong-science-paper.pdf)
+- [gaokao-1990-national-liberal-paper.pdf](../papers/1990s/gaokao-1990-national-liberal-paper.pdf)
+- [gaokao-1990-national-science-paper.pdf](../papers/1990s/gaokao-1990-national-science-paper.pdf)
+- [gaokao-1990-shanghai-general-paper.pdf](../papers/1990s/gaokao-1990-shanghai-general-paper.pdf)
 
 ## 1991 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1991/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1991/national_science.tex) · gaokao-math-problems-compilation
-- [sannan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1991/sannan.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1991/shanghai.tex) · gaokao-math-problems-compilation
-- [1991.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1991.tex) · gaokao-math-problems-compilation
-- [gaokao-1991-three-south-general-paper.pdf](../papers/1990s/gaokao-1991-three-south-general-paper.pdf) · gaokaomath
-- [gaokao-1991-shanghai-general-paper.pdf](../papers/1990s/gaokao-1991-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-1991-national-liberal-paper.pdf](../papers/1990s/gaokao-1991-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1991-national-science-paper.pdf](../papers/1990s/gaokao-1991-national-science-paper.pdf) · gaokaomath
+- [gaokao-1991-national-liberal-paper.pdf](../papers/1990s/gaokao-1991-national-liberal-paper.pdf)
+- [gaokao-1991-national-science-paper.pdf](../papers/1990s/gaokao-1991-national-science-paper.pdf)
+- [gaokao-1991-shanghai-general-paper.pdf](../papers/1990s/gaokao-1991-shanghai-general-paper.pdf)
+- [gaokao-1991-three-south-general-paper.pdf](../papers/1990s/gaokao-1991-three-south-general-paper.pdf)
 
 ## 1992 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1992/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1992/national_science.tex) · gaokao-math-problems-compilation
-- [sannan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1992/sannan.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1992/shanghai.tex) · gaokao-math-problems-compilation
-- [1992.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1992.tex) · gaokao-math-problems-compilation
-- [gaokao-1992-three-south-general-paper.pdf](../papers/1990s/gaokao-1992-three-south-general-paper.pdf) · gaokaomath
-- [gaokao-1992-shanghai-general-paper.pdf](../papers/1990s/gaokao-1992-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-1992-national-liberal-paper.pdf](../papers/1990s/gaokao-1992-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1992-national-science-paper.pdf](../papers/1990s/gaokao-1992-national-science-paper.pdf) · gaokaomath
+- [gaokao-1992-national-liberal-paper.pdf](../papers/1990s/gaokao-1992-national-liberal-paper.pdf)
+- [gaokao-1992-national-science-paper.pdf](../papers/1990s/gaokao-1992-national-science-paper.pdf)
+- [gaokao-1992-shanghai-general-paper.pdf](../papers/1990s/gaokao-1992-shanghai-general-paper.pdf)
+- [gaokao-1992-three-south-general-paper.pdf](../papers/1990s/gaokao-1992-three-south-general-paper.pdf)
 
 ## 1993 年数学资料
 
-- [jing_xiang_e_yun_qiong_gui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1993/jing_xiang_e_yun_qiong_gui_liberal.tex) · gaokao-math-problems-compilation
-- [jing_xiang_e_yun_qiong_gui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1993/jing_xiang_e_yun_qiong_gui_science.tex) · gaokao-math-problems-compilation
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1993/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1993/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1993/shanghai.tex) · gaokao-math-problems-compilation
-- [1993.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1993.tex) · gaokao-math-problems-compilation
-- [gaokao-1993-shanghai-general-paper.pdf](../papers/1990s/gaokao-1993-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-1993-new-subject-general-paper.pdf](../papers/1990s/gaokao-1993-new-subject-general-paper.pdf) · gaokaomath
-- [gaokao-1993-new-subject-science-paper.pdf](../papers/1990s/gaokao-1993-new-subject-science-paper.pdf) · gaokaomath
-- [gaokao-1993-old-subject-liberal-paper.pdf](../papers/1990s/gaokao-1993-old-subject-liberal-paper.pdf) · gaokaomath
-- [gaokao-1993-old-subject-science-paper.pdf](../papers/1990s/gaokao-1993-old-subject-science-paper.pdf) · gaokaomath
+- [gaokao-1993-new-subject-general-paper.pdf](../papers/1990s/gaokao-1993-new-subject-general-paper.pdf)
+- [gaokao-1993-new-subject-science-paper.pdf](../papers/1990s/gaokao-1993-new-subject-science-paper.pdf)
+- [gaokao-1993-old-subject-liberal-paper.pdf](../papers/1990s/gaokao-1993-old-subject-liberal-paper.pdf)
+- [gaokao-1993-old-subject-science-paper.pdf](../papers/1990s/gaokao-1993-old-subject-science-paper.pdf)
+- [gaokao-1993-shanghai-general-paper.pdf](../papers/1990s/gaokao-1993-shanghai-general-paper.pdf)
 
 ## 1994 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1994/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1994/national_science.tex) · gaokao-math-problems-compilation
-- [old_subject_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1994/old_subject_liberal.tex) · gaokao-math-problems-compilation
-- [old_subject_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1994/old_subject_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1994/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1994/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1994/shanghai_science.tex) · gaokao-math-problems-compilation
-- [1994.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1994.tex) · gaokao-math-problems-compilation
-- [gaokao-1994-shanghai-general-paper.pdf](../papers/1990s/gaokao-1994-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-1994-shanghai-pilot-textbook-liberal-paper.pdf](../papers/1990s/gaokao-1994-shanghai-pilot-textbook-liberal-paper.pdf) · gaokaomath
-- [gaokao-1994-shanghai-pilot-textbook-science-paper.pdf](../papers/1990s/gaokao-1994-shanghai-pilot-textbook-science-paper.pdf) · gaokaomath
-- [gaokao-1994-national-new-subject-liberal-paper.pdf](../papers/1990s/gaokao-1994-national-new-subject-liberal-paper.pdf) · gaokaomath
-- [gaokao-1994-national-new-subject-science-paper.pdf](../papers/1990s/gaokao-1994-national-new-subject-science-paper.pdf) · gaokaomath
-- [gaokao-1994-old-subject-liberal-paper.pdf](../papers/1990s/gaokao-1994-old-subject-liberal-paper.pdf) · gaokaomath
-- [gaokao-1994-old-subject-science-paper.pdf](../papers/1990s/gaokao-1994-old-subject-science-paper.pdf) · gaokaomath
+- [gaokao-1994-national-new-subject-liberal-paper.pdf](../papers/1990s/gaokao-1994-national-new-subject-liberal-paper.pdf)
+- [gaokao-1994-national-new-subject-science-paper.pdf](../papers/1990s/gaokao-1994-national-new-subject-science-paper.pdf)
+- [gaokao-1994-old-subject-liberal-paper.pdf](../papers/1990s/gaokao-1994-old-subject-liberal-paper.pdf)
+- [gaokao-1994-old-subject-science-paper.pdf](../papers/1990s/gaokao-1994-old-subject-science-paper.pdf)
+- [gaokao-1994-shanghai-general-paper.pdf](../papers/1990s/gaokao-1994-shanghai-general-paper.pdf)
+- [gaokao-1994-shanghai-pilot-textbook-liberal-paper.pdf](../papers/1990s/gaokao-1994-shanghai-pilot-textbook-liberal-paper.pdf)
+- [gaokao-1994-shanghai-pilot-textbook-science-paper.pdf](../papers/1990s/gaokao-1994-shanghai-pilot-textbook-science-paper.pdf)
 
 ## 1995 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1995/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1995/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1995/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1995/shanghai_science.tex) · gaokao-math-problems-compilation
-- [1995.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1995.tex) · gaokao-math-problems-compilation
-- [gaokao-1995-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1995-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-1995-shanghai-science-paper.pdf](../papers/1990s/gaokao-1995-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-1995-national-liberal-paper.pdf](../papers/1990s/gaokao-1995-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1995-national-science-paper.pdf](../papers/1990s/gaokao-1995-national-science-paper.pdf) · gaokaomath
+- [gaokao-1995-national-liberal-paper.pdf](../papers/1990s/gaokao-1995-national-liberal-paper.pdf)
+- [gaokao-1995-national-science-paper.pdf](../papers/1990s/gaokao-1995-national-science-paper.pdf)
+- [gaokao-1995-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1995-shanghai-liberal-paper.pdf)
+- [gaokao-1995-shanghai-science-paper.pdf](../papers/1990s/gaokao-1995-shanghai-science-paper.pdf)
 
 ## 1996 年数学资料
 
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1996/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1996/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1996/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1996/shanghai_science.tex) · gaokao-math-problems-compilation
-- [1996.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1996.tex) · gaokao-math-problems-compilation
-- [gaokao-1996-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1996-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-1996-shanghai-science-paper.pdf](../papers/1990s/gaokao-1996-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-1996-national-liberal-paper.pdf](../papers/1990s/gaokao-1996-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1996-national-science-paper.pdf](../papers/1990s/gaokao-1996-national-science-paper.pdf) · gaokaomath
+- [gaokao-1996-national-liberal-paper.pdf](../papers/1990s/gaokao-1996-national-liberal-paper.pdf)
+- [gaokao-1996-national-science-paper.pdf](../papers/1990s/gaokao-1996-national-science-paper.pdf)
+- [gaokao-1996-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1996-shanghai-liberal-paper.pdf)
+- [gaokao-1996-shanghai-science-paper.pdf](../papers/1990s/gaokao-1996-shanghai-science-paper.pdf)
 
 ## 1997 年数学资料
 
-- [quanguo1997.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/quanguo1997.tex) · daxmate-math
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1997/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1997/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1997/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1997/shanghai_science.tex) · gaokao-math-problems-compilation
-- [1997.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1997.tex) · gaokao-math-problems-compilation
-- [gaokao-1997-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1997-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-1997-shanghai-science-paper.pdf](../papers/1990s/gaokao-1997-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-1997-national-liberal-paper.pdf](../papers/1990s/gaokao-1997-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1997-national-science-paper.pdf](../papers/1990s/gaokao-1997-national-science-paper.pdf) · gaokaomath
+- [gaokao-1997-national-liberal-paper.pdf](../papers/1990s/gaokao-1997-national-liberal-paper.pdf)
+- [gaokao-1997-national-science-paper.pdf](../papers/1990s/gaokao-1997-national-science-paper.pdf)
+- [gaokao-1997-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1997-shanghai-liberal-paper.pdf)
+- [gaokao-1997-shanghai-science-paper.pdf](../papers/1990s/gaokao-1997-shanghai-science-paper.pdf)
 
 ## 1998 年数学资料
 
-- [quanguo1998.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/gaokao/quanguo1998.tex) · daxmate-math
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1998/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1998/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1998/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1998/shanghai_science.tex) · gaokao-math-problems-compilation
-- [1998.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1998.tex) · gaokao-math-problems-compilation
-- [gaokao-1998-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1998-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-1998-shanghai-science-paper.pdf](../papers/1990s/gaokao-1998-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-1998-national-liberal-paper.pdf](../papers/1990s/gaokao-1998-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1998-national-science-paper.pdf](../papers/1990s/gaokao-1998-national-science-paper.pdf) · gaokaomath
+- [gaokao-1998-national-liberal-paper.pdf](../papers/1990s/gaokao-1998-national-liberal-paper.pdf)
+- [gaokao-1998-national-science-paper.pdf](../papers/1990s/gaokao-1998-national-science-paper.pdf)
+- [gaokao-1998-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1998-shanghai-liberal-paper.pdf)
+- [gaokao-1998-shanghai-science-paper.pdf](../papers/1990s/gaokao-1998-shanghai-science-paper.pdf)
 
 ## 1999 年数学资料
 
-- [guangdong.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1999/guangdong.tex) · gaokao-math-problems-compilation
-- [national_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1999/national_liberal.tex) · gaokao-math-problems-compilation
-- [national_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1999/national_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1999/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/1999/shanghai_science.tex) · gaokao-math-problems-compilation
-- [1999.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/1999.tex) · gaokao-math-problems-compilation
-- [gaokao-1999-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1999-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-1999-shanghai-science-paper.pdf](../papers/1990s/gaokao-1999-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-1999-national-liberal-paper.pdf](../papers/1990s/gaokao-1999-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-1999-national-science-paper.pdf](../papers/1990s/gaokao-1999-national-science-paper.pdf) · gaokaomath
-- [gaokao-1999-guangdong-general-paper.pdf](../papers/1990s/gaokao-1999-guangdong-general-paper.pdf) · gaokaomath
+- [gaokao-1999-guangdong-general-paper.pdf](../papers/1990s/gaokao-1999-guangdong-general-paper.pdf)
+- [gaokao-1999-national-liberal-paper.pdf](../papers/1990s/gaokao-1999-national-liberal-paper.pdf)
+- [gaokao-1999-national-science-paper.pdf](../papers/1990s/gaokao-1999-national-science-paper.pdf)
+- [gaokao-1999-shanghai-liberal-paper.pdf](../papers/1990s/gaokao-1999-shanghai-liberal-paper.pdf)
+- [gaokao-1999-shanghai-science-paper.pdf](../papers/1990s/gaokao-1999-shanghai-science-paper.pdf)
 
 ## 2000 年数学资料
 
-- [guangdong.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/guangdong.tex) · gaokao-math-problems-compilation
-- [jing_hui_liberal_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/jing_hui_liberal_spring.tex) · gaokao-math-problems-compilation
-- [jing_hui_science_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/jing_hui_science_spring.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [syllabus_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/syllabus_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2000/syllabus_science.tex) · gaokao-math-problems-compilation
-- [2000.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2000.tex) · gaokao-math-problems-compilation
-- [gaokao-2000-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2000-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2000-beijing-anhui-liberal-spring-paper.pdf](../papers/2000s/gaokao-2000-beijing-anhui-liberal-spring-paper.pdf) · gaokaomath
-- [gaokao-2000-beijing-anhui-science-spring-paper.pdf](../papers/2000s/gaokao-2000-beijing-anhui-science-spring-paper.pdf) · gaokaomath
-- [gaokao-2000-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2000-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2000-shanghai-science-paper.pdf](../papers/2000s/gaokao-2000-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2000-national-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2000-national-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2000-national-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2000-national-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2000-national-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2000-national-old-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2000-national-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2000-national-old-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2000-guangdong-general-paper.pdf](../papers/2000s/gaokao-2000-guangdong-general-paper.pdf) · gaokaomath
+- [gaokao-2000-beijing-anhui-liberal-spring-paper.pdf](../papers/2000s/gaokao-2000-beijing-anhui-liberal-spring-paper.pdf)
+- [gaokao-2000-beijing-anhui-science-spring-paper.pdf](../papers/2000s/gaokao-2000-beijing-anhui-science-spring-paper.pdf)
+- [gaokao-2000-guangdong-general-paper.pdf](../papers/2000s/gaokao-2000-guangdong-general-paper.pdf)
+- [gaokao-2000-national-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2000-national-new-curriculum-liberal-paper.pdf)
+- [gaokao-2000-national-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2000-national-new-curriculum-science-paper.pdf)
+- [gaokao-2000-national-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2000-national-old-curriculum-liberal-paper.pdf)
+- [gaokao-2000-national-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2000-national-old-curriculum-science-paper.pdf)
+- [gaokao-2000-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2000-shanghai-general-spring-paper.pdf)
+- [gaokao-2000-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2000-shanghai-liberal-paper.pdf)
+- [gaokao-2000-shanghai-science-paper.pdf](../papers/2000s/gaokao-2000-shanghai-science-paper.pdf)
 
 ## 2001 年数学资料
 
-- [henan_guangdong.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/henan_guangdong.tex) · gaokao-math-problems-compilation
-- [jing_meng_wan_liberal_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/jing_meng_wan_liberal_spring.tex) · gaokao-math-problems-compilation
-- [jing_meng_wan_science_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/jing_meng_wan_science_spring.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [syllabus_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/syllabus_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2001/syllabus_science.tex) · gaokao-math-problems-compilation
-- [2001.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2001.tex) · gaokao-math-problems-compilation
-- [gaokao-2001-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2001-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2001-beijing-anhui-inner-mongolia-liberal-spring-paper.pdf](../papers/2000s/gaokao-2001-beijing-anhui-inner-mongolia-liberal-spring-paper.pdf) · gaokaomath
-- [gaokao-2001-beijing-anhui-inner-mongolia-science-spring-paper.pdf](../papers/2000s/gaokao-2001-beijing-anhui-inner-mongolia-science-spring-paper.pdf) · gaokaomath
-- [gaokao-2001-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2001-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2001-shanghai-science-paper.pdf](../papers/2000s/gaokao-2001-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2001-national-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2001-national-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2001-national-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2001-national-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2001-national-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2001-national-old-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2001-national-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2001-national-old-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2001-guangdong-henan-general-paper.pdf](../papers/2000s/gaokao-2001-guangdong-henan-general-paper.pdf) · gaokaomath
+- [gaokao-2001-beijing-anhui-inner-mongolia-liberal-spring-paper.pdf](../papers/2000s/gaokao-2001-beijing-anhui-inner-mongolia-liberal-spring-paper.pdf)
+- [gaokao-2001-beijing-anhui-inner-mongolia-science-spring-paper.pdf](../papers/2000s/gaokao-2001-beijing-anhui-inner-mongolia-science-spring-paper.pdf)
+- [gaokao-2001-guangdong-henan-general-paper.pdf](../papers/2000s/gaokao-2001-guangdong-henan-general-paper.pdf)
+- [gaokao-2001-national-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2001-national-new-curriculum-liberal-paper.pdf)
+- [gaokao-2001-national-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2001-national-new-curriculum-science-paper.pdf)
+- [gaokao-2001-national-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2001-national-old-curriculum-liberal-paper.pdf)
+- [gaokao-2001-national-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2001-national-old-curriculum-science-paper.pdf)
+- [gaokao-2001-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2001-shanghai-general-spring-paper.pdf)
+- [gaokao-2001-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2001-shanghai-liberal-paper.pdf)
+- [gaokao-2001-shanghai-science-paper.pdf](../papers/2000s/gaokao-2001-shanghai-science-paper.pdf)
 
 ## 2002 年数学资料
 
-- [beijing_liberal_autumn.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/beijing_liberal_autumn.tex) · gaokao-math-problems-compilation
-- [beijing_science_autumn.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/beijing_science_autumn.tex) · gaokao-math-problems-compilation
-- [jing_meng_wan_liberal_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/jing_meng_wan_liberal_spring.tex) · gaokao-math-problems-compilation
-- [jing_meng_wan_science_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/jing_meng_wan_science_spring.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [syllabus_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/syllabus_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/syllabus_science.tex) · gaokao-math-problems-compilation
-- [yue_yu_su_gui.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2002/yue_yu_su_gui.tex) · gaokao-math-problems-compilation
-- [2002.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2002.tex) · gaokao-math-problems-compilation
-- [gaokao-2002-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2002-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2002-beijing-anhui-inner-mongolia-liberal-spring-paper.pdf](../papers/2000s/gaokao-2002-beijing-anhui-inner-mongolia-liberal-spring-paper.pdf) · gaokaomath
-- [gaokao-2002-beijing-anhui-inner-mongolia-science-spring-paper.pdf](../papers/2000s/gaokao-2002-beijing-anhui-inner-mongolia-science-spring-paper.pdf) · gaokaomath
-- [gaokao-2002-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2002-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2002-shanghai-science-paper.pdf](../papers/2000s/gaokao-2002-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2002-national-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2002-national-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2002-national-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2002-national-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2002-national-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2002-national-old-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2002-national-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2002-national-old-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2002-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2002-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2002-beijing-science-paper.pdf](../papers/2000s/gaokao-2002-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2002-guangdong-henan-jiangsu-guangxi-general-paper.pdf](../papers/2000s/gaokao-2002-guangdong-henan-jiangsu-guangxi-general-paper.pdf) · gaokaomath
+- [gaokao-2002-beijing-anhui-inner-mongolia-liberal-spring-paper.pdf](../papers/2000s/gaokao-2002-beijing-anhui-inner-mongolia-liberal-spring-paper.pdf)
+- [gaokao-2002-beijing-anhui-inner-mongolia-science-spring-paper.pdf](../papers/2000s/gaokao-2002-beijing-anhui-inner-mongolia-science-spring-paper.pdf)
+- [gaokao-2002-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2002-beijing-liberal-paper.pdf)
+- [gaokao-2002-beijing-science-paper.pdf](../papers/2000s/gaokao-2002-beijing-science-paper.pdf)
+- [gaokao-2002-guangdong-henan-jiangsu-guangxi-general-paper.pdf](../papers/2000s/gaokao-2002-guangdong-henan-jiangsu-guangxi-general-paper.pdf)
+- [gaokao-2002-national-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2002-national-new-curriculum-liberal-paper.pdf)
+- [gaokao-2002-national-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2002-national-new-curriculum-science-paper.pdf)
+- [gaokao-2002-national-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2002-national-old-curriculum-liberal-paper.pdf)
+- [gaokao-2002-national-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2002-national-old-curriculum-science-paper.pdf)
+- [gaokao-2002-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2002-shanghai-general-spring-paper.pdf)
+- [gaokao-2002-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2002-shanghai-liberal-paper.pdf)
+- [gaokao-2002-shanghai-science-paper.pdf](../papers/2000s/gaokao-2002-shanghai-science-paper.pdf)
 
 ## 2003 年数学资料
 
-- [beijing_liberal_autumn.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/beijing_liberal_autumn.tex) · gaokao-math-problems-compilation
-- [beijing_science_autumn.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/beijing_science_autumn.tex) · gaokao-math-problems-compilation
-- [henan.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/henan.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/jiangsu.tex) · gaokao-math-problems-compilation
-- [jing_meng_wan_liberal_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/jing_meng_wan_liberal_spring.tex) · gaokao-math-problems-compilation
-- [jing_meng_wan_science_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/jing_meng_wan_science_spring.tex) · gaokao-math-problems-compilation
-- [liaoning.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/liaoning.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [syllabus_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/syllabus_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/syllabus_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/tianjin_science.tex) · gaokao-math-problems-compilation
-- [yue_gui.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2003/yue_gui.tex) · gaokao-math-problems-compilation
-- [2003.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2003.tex) · gaokao-math-problems-compilation
-- [gaokao-2003-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2003-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2003-beijing-liberal-spring-paper.pdf](../papers/2000s/gaokao-2003-beijing-liberal-spring-paper.pdf) · gaokaomath
-- [gaokao-2003-beijing-science-spring-paper.pdf](../papers/2000s/gaokao-2003-beijing-science-spring-paper.pdf) · gaokaomath
-- [gaokao-2003-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2003-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2003-shanghai-science-paper.pdf](../papers/2000s/gaokao-2003-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2003-national-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2003-national-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2003-national-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2003-national-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2003-national-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2003-national-old-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2003-national-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2003-national-old-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2003-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2003-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2003-beijing-science-paper.pdf](../papers/2000s/gaokao-2003-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2003-guangdong-guangxi-general-paper.pdf](../papers/2000s/gaokao-2003-guangdong-guangxi-general-paper.pdf) · gaokaomath
-- [gaokao-2003-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2003-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2003-henan-general-paper.pdf](../papers/2000s/gaokao-2003-henan-general-paper.pdf) · gaokaomath
-- [gaokao-2003-liaoning-general-paper.pdf](../papers/2000s/gaokao-2003-liaoning-general-paper.pdf) · gaokaomath
+- [gaokao-2003-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2003-beijing-liberal-paper.pdf)
+- [gaokao-2003-beijing-liberal-spring-paper.pdf](../papers/2000s/gaokao-2003-beijing-liberal-spring-paper.pdf)
+- [gaokao-2003-beijing-science-paper.pdf](../papers/2000s/gaokao-2003-beijing-science-paper.pdf)
+- [gaokao-2003-beijing-science-spring-paper.pdf](../papers/2000s/gaokao-2003-beijing-science-spring-paper.pdf)
+- [gaokao-2003-guangdong-guangxi-general-paper.pdf](../papers/2000s/gaokao-2003-guangdong-guangxi-general-paper.pdf)
+- [gaokao-2003-henan-general-paper.pdf](../papers/2000s/gaokao-2003-henan-general-paper.pdf)
+- [gaokao-2003-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2003-jiangsu-general-paper.pdf)
+- [gaokao-2003-liaoning-general-paper.pdf](../papers/2000s/gaokao-2003-liaoning-general-paper.pdf)
+- [gaokao-2003-national-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2003-national-new-curriculum-liberal-paper.pdf)
+- [gaokao-2003-national-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2003-national-new-curriculum-science-paper.pdf)
+- [gaokao-2003-national-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2003-national-old-curriculum-liberal-paper.pdf)
+- [gaokao-2003-national-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2003-national-old-curriculum-science-paper.pdf)
+- [gaokao-2003-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2003-shanghai-general-spring-paper.pdf)
+- [gaokao-2003-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2003-shanghai-liberal-paper.pdf)
+- [gaokao-2003-shanghai-science-paper.pdf](../papers/2000s/gaokao-2003-shanghai-science-paper.pdf)
 
 ## 2004 年数学资料
 
-- [anhui_liberal_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/anhui_liberal_spring.tex) · gaokao-math-problems-compilation
-- [anhui_science_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/anhui_science_spring.tex) · gaokao-math-problems-compilation
-- [beijing_liberal_autumn.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/beijing_liberal_autumn.tex) · gaokao-math-problems-compilation
-- [beijing_liberal_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/beijing_liberal_spring.tex) · gaokao-math-problems-compilation
-- [beijing_science_autumn.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/beijing_science_autumn.tex) · gaokao-math-problems-compilation
-- [beijing_science_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/beijing_science_spring.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/guangdong.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/jiangsu.tex) · gaokao-math-problems-compilation
-- [liaoning.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/liaoning.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [national_paper_3_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/national_paper_3_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_3_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/national_paper_3_science.tex) · gaokao-math-problems-compilation
-- [national_paper_4_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/national_paper_4_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_4_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/national_paper_4_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2004/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2004.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2004.tex) · gaokao-math-problems-compilation
-- [gaokao-2004-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2004-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2004-beijing-liberal-spring-paper.pdf](../papers/2000s/gaokao-2004-beijing-liberal-spring-paper.pdf) · gaokaomath
-- [gaokao-2004-beijing-science-spring-paper.pdf](../papers/2000s/gaokao-2004-beijing-science-spring-paper.pdf) · gaokaomath
-- [gaokao-2004-anhui-liberal-spring-paper.pdf](../papers/2000s/gaokao-2004-anhui-liberal-spring-paper.pdf) · gaokaomath
-- [gaokao-2004-anhui-science-spring-paper.pdf](../papers/2000s/gaokao-2004-anhui-science-spring-paper.pdf) · gaokaomath
-- [gaokao-2004-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2004-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-shanghai-science-paper.pdf](../papers/2000s/gaokao-2004-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2004-national-1-liberal-paper.pdf](../papers/2000s/gaokao-2004-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-national-1-science-paper.pdf](../papers/2000s/gaokao-2004-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2004-national-2-liberal-paper.pdf](../papers/2000s/gaokao-2004-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-national-2-science-paper.pdf](../papers/2000s/gaokao-2004-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2004-national-3-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2004-national-3-old-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-national-3-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2004-national-3-old-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2004-national-4-liberal-paper.pdf](../papers/2000s/gaokao-2004-national-4-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-national-4-science-paper.pdf](../papers/2000s/gaokao-2004-national-4-science-paper.pdf) · gaokaomath
-- [gaokao-2004-beijing-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2004-beijing-old-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-beijing-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2004-beijing-old-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2004-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2004-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-tianjin-science-paper.pdf](../papers/2000s/gaokao-2004-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2004-guangdong-general-paper.pdf](../papers/2000s/gaokao-2004-guangdong-general-paper.pdf) · gaokaomath
-- [gaokao-2004-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2004-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2004-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2004-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2004-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2004-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2004-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-hubei-science-paper.pdf](../papers/2000s/gaokao-2004-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2004-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2004-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-hunan-science-paper.pdf](../papers/2000s/gaokao-2004-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2004-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2004-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-fujian-science-paper.pdf](../papers/2000s/gaokao-2004-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2004-liaoning-general-paper.pdf](../papers/2000s/gaokao-2004-liaoning-general-paper.pdf) · gaokaomath
-- [gaokao-2004-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2004-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2004-chongqing-science-paper.pdf](../papers/2000s/gaokao-2004-chongqing-science-paper.pdf) · gaokaomath
+- [gaokao-2004-anhui-liberal-spring-paper.pdf](../papers/2000s/gaokao-2004-anhui-liberal-spring-paper.pdf)
+- [gaokao-2004-anhui-science-spring-paper.pdf](../papers/2000s/gaokao-2004-anhui-science-spring-paper.pdf)
+- [gaokao-2004-beijing-liberal-spring-paper.pdf](../papers/2000s/gaokao-2004-beijing-liberal-spring-paper.pdf)
+- [gaokao-2004-beijing-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2004-beijing-old-curriculum-liberal-paper.pdf)
+- [gaokao-2004-beijing-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2004-beijing-old-curriculum-science-paper.pdf)
+- [gaokao-2004-beijing-science-spring-paper.pdf](../papers/2000s/gaokao-2004-beijing-science-spring-paper.pdf)
+- [gaokao-2004-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2004-chongqing-liberal-paper.pdf)
+- [gaokao-2004-chongqing-science-paper.pdf](../papers/2000s/gaokao-2004-chongqing-science-paper.pdf)
+- [gaokao-2004-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2004-fujian-liberal-paper.pdf)
+- [gaokao-2004-fujian-science-paper.pdf](../papers/2000s/gaokao-2004-fujian-science-paper.pdf)
+- [gaokao-2004-guangdong-general-paper.pdf](../papers/2000s/gaokao-2004-guangdong-general-paper.pdf)
+- [gaokao-2004-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2004-hubei-liberal-paper.pdf)
+- [gaokao-2004-hubei-science-paper.pdf](../papers/2000s/gaokao-2004-hubei-science-paper.pdf)
+- [gaokao-2004-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2004-hunan-liberal-paper.pdf)
+- [gaokao-2004-hunan-science-paper.pdf](../papers/2000s/gaokao-2004-hunan-science-paper.pdf)
+- [gaokao-2004-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2004-jiangsu-general-paper.pdf)
+- [gaokao-2004-liaoning-general-paper.pdf](../papers/2000s/gaokao-2004-liaoning-general-paper.pdf)
+- [gaokao-2004-national-1-liberal-paper.pdf](../papers/2000s/gaokao-2004-national-1-liberal-paper.pdf)
+- [gaokao-2004-national-1-science-paper.pdf](../papers/2000s/gaokao-2004-national-1-science-paper.pdf)
+- [gaokao-2004-national-2-liberal-paper.pdf](../papers/2000s/gaokao-2004-national-2-liberal-paper.pdf)
+- [gaokao-2004-national-2-science-paper.pdf](../papers/2000s/gaokao-2004-national-2-science-paper.pdf)
+- [gaokao-2004-national-3-old-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2004-national-3-old-curriculum-liberal-paper.pdf)
+- [gaokao-2004-national-3-old-curriculum-science-paper.pdf](../papers/2000s/gaokao-2004-national-3-old-curriculum-science-paper.pdf)
+- [gaokao-2004-national-4-liberal-paper.pdf](../papers/2000s/gaokao-2004-national-4-liberal-paper.pdf)
+- [gaokao-2004-national-4-science-paper.pdf](../papers/2000s/gaokao-2004-national-4-science-paper.pdf)
+- [gaokao-2004-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2004-shanghai-general-spring-paper.pdf)
+- [gaokao-2004-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2004-shanghai-liberal-paper.pdf)
+- [gaokao-2004-shanghai-science-paper.pdf](../papers/2000s/gaokao-2004-shanghai-science-paper.pdf)
+- [gaokao-2004-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2004-tianjin-liberal-paper.pdf)
+- [gaokao-2004-tianjin-science-paper.pdf](../papers/2000s/gaokao-2004-tianjin-science-paper.pdf)
+- [gaokao-2004-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2004-zhejiang-liberal-paper.pdf)
+- [gaokao-2004-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2004-zhejiang-science-paper.pdf)
 
 ## 2005 年数学资料
 
-- [beijing_liberal_autumn.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/beijing_liberal_autumn.tex) · gaokao-math-problems-compilation
-- [beijing_liberal_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/beijing_liberal_spring.tex) · gaokao-math-problems-compilation
-- [beijing_science_autumn.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/beijing_science_autumn.tex) · gaokao-math-problems-compilation
-- [beijing_science_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/beijing_science_spring.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/guangdong.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/liaoning.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [national_paper_3_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/national_paper_3_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_3_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/national_paper_3_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2005/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2005.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2005.tex) · gaokao-math-problems-compilation
-- [gaokao-2005-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2005-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2005-beijing-liberal-spring-paper.pdf](../papers/2000s/gaokao-2005-beijing-liberal-spring-paper.pdf) · gaokaomath
-- [gaokao-2005-beijing-science-spring-paper.pdf](../papers/2000s/gaokao-2005-beijing-science-spring-paper.pdf) · gaokaomath
-- [gaokao-2005-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2005-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-shanghai-science-paper.pdf](../papers/2000s/gaokao-2005-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2005-national-1-liberal-paper.pdf](../papers/2000s/gaokao-2005-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-national-1-science-paper.pdf](../papers/2000s/gaokao-2005-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2005-national-2-liberal-paper.pdf](../papers/2000s/gaokao-2005-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-national-2-science-paper.pdf](../papers/2000s/gaokao-2005-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2005-national-3-liberal-paper.pdf](../papers/2000s/gaokao-2005-national-3-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-national-3-science-paper.pdf](../papers/2000s/gaokao-2005-national-3-science-paper.pdf) · gaokaomath
-- [gaokao-2005-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2005-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-beijing-science-paper.pdf](../papers/2000s/gaokao-2005-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2005-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2005-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-tianjin-science-paper.pdf](../papers/2000s/gaokao-2005-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2005-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2005-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-shandong-science-paper.pdf](../papers/2000s/gaokao-2005-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2005-guangdong-general-paper.pdf](../papers/2000s/gaokao-2005-guangdong-general-paper.pdf) · gaokaomath
-- [gaokao-2005-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2005-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2005-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2005-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2005-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2005-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2005-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2005-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2005-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2005-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-hubei-science-paper.pdf](../papers/2000s/gaokao-2005-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2005-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2005-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-hunan-science-paper.pdf](../papers/2000s/gaokao-2005-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2005-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2005-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-fujian-science-paper.pdf](../papers/2000s/gaokao-2005-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2005-liaoning-general-paper.pdf](../papers/2000s/gaokao-2005-liaoning-general-paper.pdf) · gaokaomath
-- [gaokao-2005-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2005-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2005-chongqing-science-paper.pdf](../papers/2000s/gaokao-2005-chongqing-science-paper.pdf) · gaokaomath
+- [gaokao-2005-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2005-beijing-liberal-paper.pdf)
+- [gaokao-2005-beijing-liberal-spring-paper.pdf](../papers/2000s/gaokao-2005-beijing-liberal-spring-paper.pdf)
+- [gaokao-2005-beijing-science-paper.pdf](../papers/2000s/gaokao-2005-beijing-science-paper.pdf)
+- [gaokao-2005-beijing-science-spring-paper.pdf](../papers/2000s/gaokao-2005-beijing-science-spring-paper.pdf)
+- [gaokao-2005-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2005-chongqing-liberal-paper.pdf)
+- [gaokao-2005-chongqing-science-paper.pdf](../papers/2000s/gaokao-2005-chongqing-science-paper.pdf)
+- [gaokao-2005-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2005-fujian-liberal-paper.pdf)
+- [gaokao-2005-fujian-science-paper.pdf](../papers/2000s/gaokao-2005-fujian-science-paper.pdf)
+- [gaokao-2005-guangdong-general-paper.pdf](../papers/2000s/gaokao-2005-guangdong-general-paper.pdf)
+- [gaokao-2005-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2005-hubei-liberal-paper.pdf)
+- [gaokao-2005-hubei-science-paper.pdf](../papers/2000s/gaokao-2005-hubei-science-paper.pdf)
+- [gaokao-2005-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2005-hunan-liberal-paper.pdf)
+- [gaokao-2005-hunan-science-paper.pdf](../papers/2000s/gaokao-2005-hunan-science-paper.pdf)
+- [gaokao-2005-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2005-jiangsu-general-paper.pdf)
+- [gaokao-2005-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2005-jiangxi-liberal-paper.pdf)
+- [gaokao-2005-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2005-jiangxi-science-paper.pdf)
+- [gaokao-2005-liaoning-general-paper.pdf](../papers/2000s/gaokao-2005-liaoning-general-paper.pdf)
+- [gaokao-2005-national-1-liberal-paper.pdf](../papers/2000s/gaokao-2005-national-1-liberal-paper.pdf)
+- [gaokao-2005-national-1-science-paper.pdf](../papers/2000s/gaokao-2005-national-1-science-paper.pdf)
+- [gaokao-2005-national-2-liberal-paper.pdf](../papers/2000s/gaokao-2005-national-2-liberal-paper.pdf)
+- [gaokao-2005-national-2-science-paper.pdf](../papers/2000s/gaokao-2005-national-2-science-paper.pdf)
+- [gaokao-2005-national-3-liberal-paper.pdf](../papers/2000s/gaokao-2005-national-3-liberal-paper.pdf)
+- [gaokao-2005-national-3-science-paper.pdf](../papers/2000s/gaokao-2005-national-3-science-paper.pdf)
+- [gaokao-2005-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2005-shandong-liberal-paper.pdf)
+- [gaokao-2005-shandong-science-paper.pdf](../papers/2000s/gaokao-2005-shandong-science-paper.pdf)
+- [gaokao-2005-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2005-shanghai-general-spring-paper.pdf)
+- [gaokao-2005-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2005-shanghai-liberal-paper.pdf)
+- [gaokao-2005-shanghai-science-paper.pdf](../papers/2000s/gaokao-2005-shanghai-science-paper.pdf)
+- [gaokao-2005-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2005-tianjin-liberal-paper.pdf)
+- [gaokao-2005-tianjin-science-paper.pdf](../papers/2000s/gaokao-2005-tianjin-science-paper.pdf)
+- [gaokao-2005-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2005-zhejiang-liberal-paper.pdf)
+- [gaokao-2005-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2005-zhejiang-science-paper.pdf)
 
 ## 2006 年数学资料
 
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/guangdong.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/liaoning_science.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/sichuan_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2006/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2006.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2006.tex) · gaokao-math-problems-compilation
-- [gaokao-2006-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2006-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2006-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2006-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-shanghai-science-paper.pdf](../papers/2000s/gaokao-2006-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2006-national-1-liberal-paper.pdf](../papers/2000s/gaokao-2006-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-national-1-science-paper.pdf](../papers/2000s/gaokao-2006-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2006-national-2-liberal-paper.pdf](../papers/2000s/gaokao-2006-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-national-2-science-paper.pdf](../papers/2000s/gaokao-2006-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2006-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2006-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-beijing-science-paper.pdf](../papers/2000s/gaokao-2006-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2006-sichuan-liberal-paper.pdf](../papers/2000s/gaokao-2006-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-sichuan-science-paper.pdf](../papers/2000s/gaokao-2006-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2006-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2006-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-tianjin-science-paper.pdf](../papers/2000s/gaokao-2006-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2006-anhui-liberal-paper.pdf](../papers/2000s/gaokao-2006-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-anhui-science-paper.pdf](../papers/2000s/gaokao-2006-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2006-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2006-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-shandong-science-paper.pdf](../papers/2000s/gaokao-2006-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2006-guangdong-general-paper.pdf](../papers/2000s/gaokao-2006-guangdong-general-paper.pdf) · gaokaomath
-- [gaokao-2006-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2006-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2006-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2006-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2006-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2006-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2006-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2006-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2006-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2006-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-hubei-science-paper.pdf](../papers/2000s/gaokao-2006-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2006-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2006-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-hunan-science-paper.pdf](../papers/2000s/gaokao-2006-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2006-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2006-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-fujian-science-paper.pdf](../papers/2000s/gaokao-2006-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2006-liaoning-liberal-paper.pdf](../papers/2000s/gaokao-2006-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-liaoning-science-paper.pdf](../papers/2000s/gaokao-2006-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2006-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2006-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-chongqing-science-paper.pdf](../papers/2000s/gaokao-2006-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2006-shaanxi-liberal-paper.pdf](../papers/2000s/gaokao-2006-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2006-shaanxi-science-paper.pdf](../papers/2000s/gaokao-2006-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2006-anhui-liberal-paper.pdf](../papers/2000s/gaokao-2006-anhui-liberal-paper.pdf)
+- [gaokao-2006-anhui-science-paper.pdf](../papers/2000s/gaokao-2006-anhui-science-paper.pdf)
+- [gaokao-2006-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2006-beijing-liberal-paper.pdf)
+- [gaokao-2006-beijing-science-paper.pdf](../papers/2000s/gaokao-2006-beijing-science-paper.pdf)
+- [gaokao-2006-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2006-chongqing-liberal-paper.pdf)
+- [gaokao-2006-chongqing-science-paper.pdf](../papers/2000s/gaokao-2006-chongqing-science-paper.pdf)
+- [gaokao-2006-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2006-fujian-liberal-paper.pdf)
+- [gaokao-2006-fujian-science-paper.pdf](../papers/2000s/gaokao-2006-fujian-science-paper.pdf)
+- [gaokao-2006-guangdong-general-paper.pdf](../papers/2000s/gaokao-2006-guangdong-general-paper.pdf)
+- [gaokao-2006-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2006-hubei-liberal-paper.pdf)
+- [gaokao-2006-hubei-science-paper.pdf](../papers/2000s/gaokao-2006-hubei-science-paper.pdf)
+- [gaokao-2006-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2006-hunan-liberal-paper.pdf)
+- [gaokao-2006-hunan-science-paper.pdf](../papers/2000s/gaokao-2006-hunan-science-paper.pdf)
+- [gaokao-2006-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2006-jiangsu-general-paper.pdf)
+- [gaokao-2006-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2006-jiangxi-liberal-paper.pdf)
+- [gaokao-2006-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2006-jiangxi-science-paper.pdf)
+- [gaokao-2006-liaoning-liberal-paper.pdf](../papers/2000s/gaokao-2006-liaoning-liberal-paper.pdf)
+- [gaokao-2006-liaoning-science-paper.pdf](../papers/2000s/gaokao-2006-liaoning-science-paper.pdf)
+- [gaokao-2006-national-1-liberal-paper.pdf](../papers/2000s/gaokao-2006-national-1-liberal-paper.pdf)
+- [gaokao-2006-national-1-science-paper.pdf](../papers/2000s/gaokao-2006-national-1-science-paper.pdf)
+- [gaokao-2006-national-2-liberal-paper.pdf](../papers/2000s/gaokao-2006-national-2-liberal-paper.pdf)
+- [gaokao-2006-national-2-science-paper.pdf](../papers/2000s/gaokao-2006-national-2-science-paper.pdf)
+- [gaokao-2006-shaanxi-liberal-paper.pdf](../papers/2000s/gaokao-2006-shaanxi-liberal-paper.pdf)
+- [gaokao-2006-shaanxi-science-paper.pdf](../papers/2000s/gaokao-2006-shaanxi-science-paper.pdf)
+- [gaokao-2006-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2006-shandong-liberal-paper.pdf)
+- [gaokao-2006-shandong-science-paper.pdf](../papers/2000s/gaokao-2006-shandong-science-paper.pdf)
+- [gaokao-2006-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2006-shanghai-general-spring-paper.pdf)
+- [gaokao-2006-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2006-shanghai-liberal-paper.pdf)
+- [gaokao-2006-shanghai-science-paper.pdf](../papers/2000s/gaokao-2006-shanghai-science-paper.pdf)
+- [gaokao-2006-sichuan-liberal-paper.pdf](../papers/2000s/gaokao-2006-sichuan-liberal-paper.pdf)
+- [gaokao-2006-sichuan-science-paper.pdf](../papers/2000s/gaokao-2006-sichuan-science-paper.pdf)
+- [gaokao-2006-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2006-tianjin-liberal-paper.pdf)
+- [gaokao-2006-tianjin-science-paper.pdf](../papers/2000s/gaokao-2006-tianjin-science-paper.pdf)
+- [gaokao-2006-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2006-zhejiang-liberal-paper.pdf)
+- [gaokao-2006-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2006-zhejiang-science-paper.pdf)
 
 ## 2007 年数学资料
 
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/liaoning_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/sichuan_science.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/syllabus_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/syllabus_paper_1_science.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/syllabus_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/syllabus_paper_2_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2007/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2007.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2007.tex) · gaokao-math-problems-compilation
-- [gaokao-2007-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2007-shanghai-general-spring-paper.pdf) · gaokaomath
-- [2002大纲2文(黑龙江,吉林,贵州,新疆,内蒙古,青海,云南,西藏,甘肃).pdf](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokaomath/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2007/2002%E5%A4%A7%E7%BA%B22%E6%96%87%28%E9%BB%91%E9%BE%99%E6%B1%9F%2C%E5%90%89%E6%9E%97%2C%E8%B4%B5%E5%B7%9E%2C%E6%96%B0%E7%96%86%2C%E5%86%85%E8%92%99%E5%8F%A4%2C%E9%9D%92%E6%B5%B7%2C%E4%BA%91%E5%8D%97%2C%E8%A5%BF%E8%97%8F%2C%E7%94%98%E8%82%83%29.pdf) · gaokaomath
-- [2002大纲2理(黑龙江,吉林,贵州,新疆,内蒙古,青海,云南,西藏,甘肃).pdf](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokaomath/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/2007/2002%E5%A4%A7%E7%BA%B22%E7%90%86%28%E9%BB%91%E9%BE%99%E6%B1%9F%2C%E5%90%89%E6%9E%97%2C%E8%B4%B5%E5%B7%9E%2C%E6%96%B0%E7%96%86%2C%E5%86%85%E8%92%99%E5%8F%A4%2C%E9%9D%92%E6%B5%B7%2C%E4%BA%91%E5%8D%97%2C%E8%A5%BF%E8%97%8F%2C%E7%94%98%E8%82%83%29.pdf) · gaokaomath
-- [gaokao-2007-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2007-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-shanghai-science-paper.pdf](../papers/2000s/gaokao-2007-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2007-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2007-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-beijing-science-paper.pdf](../papers/2000s/gaokao-2007-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2007-sichuan-liberal-paper.pdf](../papers/2000s/gaokao-2007-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-sichuan-science-paper.pdf](../papers/2000s/gaokao-2007-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2007-outline-1-liberal-paper.pdf](../papers/2000s/gaokao-2007-outline-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-outline-1-science-paper.pdf](../papers/2000s/gaokao-2007-outline-1-science-paper.pdf) · gaokaomath
-- [gaokao-2007-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2007-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-tianjin-science-paper.pdf](../papers/2000s/gaokao-2007-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2007-anhui-liberal-paper.pdf](../papers/2000s/gaokao-2007-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-anhui-science-paper.pdf](../papers/2000s/gaokao-2007-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2007-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2007-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-shandong-science-paper.pdf](../papers/2000s/gaokao-2007-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2007-guangdong-liberal-paper.pdf](../papers/2000s/gaokao-2007-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-guangdong-science-paper.pdf](../papers/2000s/gaokao-2007-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2007-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2007-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2007-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2007-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2007-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2007-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2007-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2007-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2007-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2007-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2007-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2007-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2007-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-hubei-science-paper.pdf](../papers/2000s/gaokao-2007-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2007-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2007-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-hunan-science-paper.pdf](../papers/2000s/gaokao-2007-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2007-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2007-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-fujian-science-paper.pdf](../papers/2000s/gaokao-2007-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2007-liaoning-liberal-paper.pdf](../papers/2000s/gaokao-2007-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-liaoning-science-paper.pdf](../papers/2000s/gaokao-2007-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2007-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2007-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-chongqing-science-paper.pdf](../papers/2000s/gaokao-2007-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2007-shaanxi-liberal-paper.pdf](../papers/2000s/gaokao-2007-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2007-shaanxi-science-paper.pdf](../papers/2000s/gaokao-2007-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2007-anhui-liberal-paper.pdf](../papers/2000s/gaokao-2007-anhui-liberal-paper.pdf)
+- [gaokao-2007-anhui-science-paper.pdf](../papers/2000s/gaokao-2007-anhui-science-paper.pdf)
+- [gaokao-2007-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2007-beijing-liberal-paper.pdf)
+- [gaokao-2007-beijing-science-paper.pdf](../papers/2000s/gaokao-2007-beijing-science-paper.pdf)
+- [gaokao-2007-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2007-chongqing-liberal-paper.pdf)
+- [gaokao-2007-chongqing-science-paper.pdf](../papers/2000s/gaokao-2007-chongqing-science-paper.pdf)
+- [gaokao-2007-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2007-fujian-liberal-paper.pdf)
+- [gaokao-2007-fujian-science-paper.pdf](../papers/2000s/gaokao-2007-fujian-science-paper.pdf)
+- [gaokao-2007-guangdong-liberal-paper.pdf](../papers/2000s/gaokao-2007-guangdong-liberal-paper.pdf)
+- [gaokao-2007-guangdong-science-paper.pdf](../papers/2000s/gaokao-2007-guangdong-science-paper.pdf)
+- [gaokao-2007-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2007-hubei-liberal-paper.pdf)
+- [gaokao-2007-hubei-science-paper.pdf](../papers/2000s/gaokao-2007-hubei-science-paper.pdf)
+- [gaokao-2007-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2007-hunan-liberal-paper.pdf)
+- [gaokao-2007-hunan-science-paper.pdf](../papers/2000s/gaokao-2007-hunan-science-paper.pdf)
+- [gaokao-2007-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2007-jiangsu-general-paper.pdf)
+- [gaokao-2007-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2007-jiangxi-liberal-paper.pdf)
+- [gaokao-2007-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2007-jiangxi-science-paper.pdf)
+- [gaokao-2007-liaoning-liberal-paper.pdf](../papers/2000s/gaokao-2007-liaoning-liberal-paper.pdf)
+- [gaokao-2007-liaoning-science-paper.pdf](../papers/2000s/gaokao-2007-liaoning-science-paper.pdf)
+- [gaokao-2007-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2007-new-curriculum-liberal-paper.pdf)
+- [gaokao-2007-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2007-new-curriculum-science-paper.pdf)
+- [gaokao-2007-outline-1-liberal-paper.pdf](../papers/2000s/gaokao-2007-outline-1-liberal-paper.pdf)
+- [gaokao-2007-outline-1-science-paper.pdf](../papers/2000s/gaokao-2007-outline-1-science-paper.pdf)
+- [gaokao-2007-shaanxi-liberal-paper.pdf](../papers/2000s/gaokao-2007-shaanxi-liberal-paper.pdf)
+- [gaokao-2007-shaanxi-science-paper.pdf](../papers/2000s/gaokao-2007-shaanxi-science-paper.pdf)
+- [gaokao-2007-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2007-shandong-liberal-paper.pdf)
+- [gaokao-2007-shandong-science-paper.pdf](../papers/2000s/gaokao-2007-shandong-science-paper.pdf)
+- [gaokao-2007-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2007-shanghai-general-spring-paper.pdf)
+- [gaokao-2007-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2007-shanghai-liberal-paper.pdf)
+- [gaokao-2007-shanghai-science-paper.pdf](../papers/2000s/gaokao-2007-shanghai-science-paper.pdf)
+- [gaokao-2007-sichuan-liberal-paper.pdf](../papers/2000s/gaokao-2007-sichuan-liberal-paper.pdf)
+- [gaokao-2007-sichuan-science-paper.pdf](../papers/2000s/gaokao-2007-sichuan-science-paper.pdf)
+- [gaokao-2007-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2007-tianjin-liberal-paper.pdf)
+- [gaokao-2007-tianjin-science-paper.pdf](../papers/2000s/gaokao-2007-tianjin-science-paper.pdf)
+- [gaokao-2007-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2007-zhejiang-liberal-paper.pdf)
+- [gaokao-2007-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2007-zhejiang-science-paper.pdf)
 
 ## 2008 年数学资料
 
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/liaoning_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_ordinary_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/sichuan_ordinary_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_ordinary_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/sichuan_ordinary_science.tex) · gaokao-math-problems-compilation
-- [sichuan_postponed_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/sichuan_postponed_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_postponed_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/sichuan_postponed_science.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/syllabus_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/syllabus_paper_1_science.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/syllabus_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/syllabus_paper_2_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2008/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2008.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2008.tex) · gaokao-math-problems-compilation
-- [gaokao-2008-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2008-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2008-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2008-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-shanghai-science-paper.pdf](../papers/2000s/gaokao-2008-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2008-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2008-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-beijing-science-paper.pdf](../papers/2000s/gaokao-2008-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2008-sichuan-deferred-liberal-paper.pdf](../papers/2000s/gaokao-2008-sichuan-deferred-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-sichuan-deferred-science-paper.pdf](../papers/2000s/gaokao-2008-sichuan-deferred-science-paper.pdf) · gaokaomath
-- [gaokao-2008-sichuan-liberal-paper.pdf](../papers/2000s/gaokao-2008-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-sichuan-science-paper.pdf](../papers/2000s/gaokao-2008-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2008-outline-1-liberal-paper.pdf](../papers/2000s/gaokao-2008-outline-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-outline-1-science-paper.pdf](../papers/2000s/gaokao-2008-outline-1-science-paper.pdf) · gaokaomath
-- [gaokao-2008-outline-2-liberal-paper.pdf](../papers/2000s/gaokao-2008-outline-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-outline-2-science-paper.pdf](../papers/2000s/gaokao-2008-outline-2-science-paper.pdf) · gaokaomath
-- [gaokao-2008-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2008-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-tianjin-science-paper.pdf](../papers/2000s/gaokao-2008-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2008-anhui-liberal-paper.pdf](../papers/2000s/gaokao-2008-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-anhui-science-paper.pdf](../papers/2000s/gaokao-2008-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2008-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2008-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-shandong-science-paper.pdf](../papers/2000s/gaokao-2008-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2008-guangdong-liberal-paper.pdf](../papers/2000s/gaokao-2008-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-guangdong-science-paper.pdf](../papers/2000s/gaokao-2008-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2008-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2008-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2008-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2008-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2008-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2008-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2008-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2008-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2008-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2008-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2008-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2008-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2008-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-hubei-science-paper.pdf](../papers/2000s/gaokao-2008-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2008-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2008-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-hunan-science-paper.pdf](../papers/2000s/gaokao-2008-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2008-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2008-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-fujian-science-paper.pdf](../papers/2000s/gaokao-2008-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2008-liaoning-liberal-paper.pdf](../papers/2000s/gaokao-2008-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-liaoning-science-paper.pdf](../papers/2000s/gaokao-2008-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2008-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2008-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-chongqing-science-paper.pdf](../papers/2000s/gaokao-2008-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2008-shaanxi-liberal-paper.pdf](../papers/2000s/gaokao-2008-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2008-shaanxi-science-paper.pdf](../papers/2000s/gaokao-2008-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2008-anhui-liberal-paper.pdf](../papers/2000s/gaokao-2008-anhui-liberal-paper.pdf)
+- [gaokao-2008-anhui-science-paper.pdf](../papers/2000s/gaokao-2008-anhui-science-paper.pdf)
+- [gaokao-2008-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2008-beijing-liberal-paper.pdf)
+- [gaokao-2008-beijing-science-paper.pdf](../papers/2000s/gaokao-2008-beijing-science-paper.pdf)
+- [gaokao-2008-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2008-chongqing-liberal-paper.pdf)
+- [gaokao-2008-chongqing-science-paper.pdf](../papers/2000s/gaokao-2008-chongqing-science-paper.pdf)
+- [gaokao-2008-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2008-fujian-liberal-paper.pdf)
+- [gaokao-2008-fujian-science-paper.pdf](../papers/2000s/gaokao-2008-fujian-science-paper.pdf)
+- [gaokao-2008-guangdong-liberal-paper.pdf](../papers/2000s/gaokao-2008-guangdong-liberal-paper.pdf)
+- [gaokao-2008-guangdong-science-paper.pdf](../papers/2000s/gaokao-2008-guangdong-science-paper.pdf)
+- [gaokao-2008-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2008-hubei-liberal-paper.pdf)
+- [gaokao-2008-hubei-science-paper.pdf](../papers/2000s/gaokao-2008-hubei-science-paper.pdf)
+- [gaokao-2008-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2008-hunan-liberal-paper.pdf)
+- [gaokao-2008-hunan-science-paper.pdf](../papers/2000s/gaokao-2008-hunan-science-paper.pdf)
+- [gaokao-2008-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2008-jiangsu-general-paper.pdf)
+- [gaokao-2008-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2008-jiangxi-liberal-paper.pdf)
+- [gaokao-2008-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2008-jiangxi-science-paper.pdf)
+- [gaokao-2008-liaoning-liberal-paper.pdf](../papers/2000s/gaokao-2008-liaoning-liberal-paper.pdf)
+- [gaokao-2008-liaoning-science-paper.pdf](../papers/2000s/gaokao-2008-liaoning-science-paper.pdf)
+- [gaokao-2008-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2008-new-curriculum-liberal-paper.pdf)
+- [gaokao-2008-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2008-new-curriculum-science-paper.pdf)
+- [gaokao-2008-outline-1-liberal-paper.pdf](../papers/2000s/gaokao-2008-outline-1-liberal-paper.pdf)
+- [gaokao-2008-outline-1-science-paper.pdf](../papers/2000s/gaokao-2008-outline-1-science-paper.pdf)
+- [gaokao-2008-outline-2-liberal-paper.pdf](../papers/2000s/gaokao-2008-outline-2-liberal-paper.pdf)
+- [gaokao-2008-outline-2-science-paper.pdf](../papers/2000s/gaokao-2008-outline-2-science-paper.pdf)
+- [gaokao-2008-shaanxi-liberal-paper.pdf](../papers/2000s/gaokao-2008-shaanxi-liberal-paper.pdf)
+- [gaokao-2008-shaanxi-science-paper.pdf](../papers/2000s/gaokao-2008-shaanxi-science-paper.pdf)
+- [gaokao-2008-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2008-shandong-liberal-paper.pdf)
+- [gaokao-2008-shandong-science-paper.pdf](../papers/2000s/gaokao-2008-shandong-science-paper.pdf)
+- [gaokao-2008-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2008-shanghai-general-spring-paper.pdf)
+- [gaokao-2008-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2008-shanghai-liberal-paper.pdf)
+- [gaokao-2008-shanghai-science-paper.pdf](../papers/2000s/gaokao-2008-shanghai-science-paper.pdf)
+- [gaokao-2008-sichuan-deferred-liberal-paper.pdf](../papers/2000s/gaokao-2008-sichuan-deferred-liberal-paper.pdf)
+- [gaokao-2008-sichuan-deferred-science-paper.pdf](../papers/2000s/gaokao-2008-sichuan-deferred-science-paper.pdf)
+- [gaokao-2008-sichuan-liberal-paper.pdf](../papers/2000s/gaokao-2008-sichuan-liberal-paper.pdf)
+- [gaokao-2008-sichuan-science-paper.pdf](../papers/2000s/gaokao-2008-sichuan-science-paper.pdf)
+- [gaokao-2008-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2008-tianjin-liberal-paper.pdf)
+- [gaokao-2008-tianjin-science-paper.pdf](../papers/2000s/gaokao-2008-tianjin-science-paper.pdf)
+- [gaokao-2008-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2008-zhejiang-liberal-paper.pdf)
+- [gaokao-2008-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2008-zhejiang-science-paper.pdf)
 
 ## 2009 年数学资料
 
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/liaoning_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/sichuan_science.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/syllabus_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/syllabus_paper_1_science.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/syllabus_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/syllabus_paper_2_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2009/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2009.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2009.tex) · gaokao-math-problems-compilation
-- [gaokao-2009-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2009-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2009-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2009-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-shanghai-science-paper.pdf](../papers/2000s/gaokao-2009-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2009-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2009-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-beijing-science-paper.pdf](../papers/2000s/gaokao-2009-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2009-sichuan-liberal-paper.pdf](../papers/2000s/gaokao-2009-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-sichuan-science-paper.pdf](../papers/2000s/gaokao-2009-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2009-outline-1-liberal-paper.pdf](../papers/2000s/gaokao-2009-outline-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-outline-1-science-paper.pdf](../papers/2000s/gaokao-2009-outline-1-science-paper.pdf) · gaokaomath
-- [gaokao-2009-outline-2-liberal-paper.pdf](../papers/2000s/gaokao-2009-outline-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-outline-2-science-paper.pdf](../papers/2000s/gaokao-2009-outline-2-science-paper.pdf) · gaokaomath
-- [gaokao-2009-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2009-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-tianjin-science-paper.pdf](../papers/2000s/gaokao-2009-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2009-anhui-liberal-paper.pdf](../papers/2000s/gaokao-2009-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-anhui-science-paper.pdf](../papers/2000s/gaokao-2009-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2009-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2009-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-shandong-science-paper.pdf](../papers/2000s/gaokao-2009-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2009-guangdong-liberal-paper.pdf](../papers/2000s/gaokao-2009-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-guangdong-science-paper.pdf](../papers/2000s/gaokao-2009-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2009-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2009-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2009-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2009-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2009-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2009-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2009-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2009-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2009-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2009-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2009-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2009-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2009-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-hubei-science-paper.pdf](../papers/2000s/gaokao-2009-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2009-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2009-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-hunan-science-paper.pdf](../papers/2000s/gaokao-2009-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2009-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2009-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-fujian-science-paper.pdf](../papers/2000s/gaokao-2009-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2009-liaoning-liberal-paper.pdf](../papers/2000s/gaokao-2009-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-liaoning-science-paper.pdf](../papers/2000s/gaokao-2009-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2009-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2009-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-chongqing-science-paper.pdf](../papers/2000s/gaokao-2009-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2009-shaanxi-liberal-paper.pdf](../papers/2000s/gaokao-2009-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2009-shaanxi-science-paper.pdf](../papers/2000s/gaokao-2009-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2009-anhui-liberal-paper.pdf](../papers/2000s/gaokao-2009-anhui-liberal-paper.pdf)
+- [gaokao-2009-anhui-science-paper.pdf](../papers/2000s/gaokao-2009-anhui-science-paper.pdf)
+- [gaokao-2009-beijing-liberal-paper.pdf](../papers/2000s/gaokao-2009-beijing-liberal-paper.pdf)
+- [gaokao-2009-beijing-science-paper.pdf](../papers/2000s/gaokao-2009-beijing-science-paper.pdf)
+- [gaokao-2009-chongqing-liberal-paper.pdf](../papers/2000s/gaokao-2009-chongqing-liberal-paper.pdf)
+- [gaokao-2009-chongqing-science-paper.pdf](../papers/2000s/gaokao-2009-chongqing-science-paper.pdf)
+- [gaokao-2009-fujian-liberal-paper.pdf](../papers/2000s/gaokao-2009-fujian-liberal-paper.pdf)
+- [gaokao-2009-fujian-science-paper.pdf](../papers/2000s/gaokao-2009-fujian-science-paper.pdf)
+- [gaokao-2009-guangdong-liberal-paper.pdf](../papers/2000s/gaokao-2009-guangdong-liberal-paper.pdf)
+- [gaokao-2009-guangdong-science-paper.pdf](../papers/2000s/gaokao-2009-guangdong-science-paper.pdf)
+- [gaokao-2009-hubei-liberal-paper.pdf](../papers/2000s/gaokao-2009-hubei-liberal-paper.pdf)
+- [gaokao-2009-hubei-science-paper.pdf](../papers/2000s/gaokao-2009-hubei-science-paper.pdf)
+- [gaokao-2009-hunan-liberal-paper.pdf](../papers/2000s/gaokao-2009-hunan-liberal-paper.pdf)
+- [gaokao-2009-hunan-science-paper.pdf](../papers/2000s/gaokao-2009-hunan-science-paper.pdf)
+- [gaokao-2009-jiangsu-general-paper.pdf](../papers/2000s/gaokao-2009-jiangsu-general-paper.pdf)
+- [gaokao-2009-jiangxi-liberal-paper.pdf](../papers/2000s/gaokao-2009-jiangxi-liberal-paper.pdf)
+- [gaokao-2009-jiangxi-science-paper.pdf](../papers/2000s/gaokao-2009-jiangxi-science-paper.pdf)
+- [gaokao-2009-liaoning-liberal-paper.pdf](../papers/2000s/gaokao-2009-liaoning-liberal-paper.pdf)
+- [gaokao-2009-liaoning-science-paper.pdf](../papers/2000s/gaokao-2009-liaoning-science-paper.pdf)
+- [gaokao-2009-new-curriculum-liberal-paper.pdf](../papers/2000s/gaokao-2009-new-curriculum-liberal-paper.pdf)
+- [gaokao-2009-new-curriculum-science-paper.pdf](../papers/2000s/gaokao-2009-new-curriculum-science-paper.pdf)
+- [gaokao-2009-outline-1-liberal-paper.pdf](../papers/2000s/gaokao-2009-outline-1-liberal-paper.pdf)
+- [gaokao-2009-outline-1-science-paper.pdf](../papers/2000s/gaokao-2009-outline-1-science-paper.pdf)
+- [gaokao-2009-outline-2-liberal-paper.pdf](../papers/2000s/gaokao-2009-outline-2-liberal-paper.pdf)
+- [gaokao-2009-outline-2-science-paper.pdf](../papers/2000s/gaokao-2009-outline-2-science-paper.pdf)
+- [gaokao-2009-shaanxi-liberal-paper.pdf](../papers/2000s/gaokao-2009-shaanxi-liberal-paper.pdf)
+- [gaokao-2009-shaanxi-science-paper.pdf](../papers/2000s/gaokao-2009-shaanxi-science-paper.pdf)
+- [gaokao-2009-shandong-liberal-paper.pdf](../papers/2000s/gaokao-2009-shandong-liberal-paper.pdf)
+- [gaokao-2009-shandong-science-paper.pdf](../papers/2000s/gaokao-2009-shandong-science-paper.pdf)
+- [gaokao-2009-shanghai-general-spring-paper.pdf](../papers/2000s/gaokao-2009-shanghai-general-spring-paper.pdf)
+- [gaokao-2009-shanghai-liberal-paper.pdf](../papers/2000s/gaokao-2009-shanghai-liberal-paper.pdf)
+- [gaokao-2009-shanghai-science-paper.pdf](../papers/2000s/gaokao-2009-shanghai-science-paper.pdf)
+- [gaokao-2009-sichuan-liberal-paper.pdf](../papers/2000s/gaokao-2009-sichuan-liberal-paper.pdf)
+- [gaokao-2009-sichuan-science-paper.pdf](../papers/2000s/gaokao-2009-sichuan-science-paper.pdf)
+- [gaokao-2009-tianjin-liberal-paper.pdf](../papers/2000s/gaokao-2009-tianjin-liberal-paper.pdf)
+- [gaokao-2009-tianjin-science-paper.pdf](../papers/2000s/gaokao-2009-tianjin-science-paper.pdf)
+- [gaokao-2009-zhejiang-liberal-paper.pdf](../papers/2000s/gaokao-2009-zhejiang-liberal-paper.pdf)
+- [gaokao-2009-zhejiang-science-paper.pdf](../papers/2000s/gaokao-2009-zhejiang-science-paper.pdf)
 
 ## 2010 年数学资料
 
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/liaoning_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/sichuan_science.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/syllabus_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/syllabus_paper_1_science.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/syllabus_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/syllabus_paper_2_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2010/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2010.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2010.tex) · gaokao-math-problems-compilation
-- [gaokao-2010-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2010-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2010-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2010-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-shanghai-science-paper.pdf](../papers/2010s/gaokao-2010-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2010-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2010-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-beijing-science-paper.pdf](../papers/2010s/gaokao-2010-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2010-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2010-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-sichuan-science-paper.pdf](../papers/2010s/gaokao-2010-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2010-outline-1-liberal-paper.pdf](../papers/2010s/gaokao-2010-outline-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-outline-1-science-paper.pdf](../papers/2010s/gaokao-2010-outline-1-science-paper.pdf) · gaokaomath
-- [gaokao-2010-outline-2-liberal-paper.pdf](../papers/2010s/gaokao-2010-outline-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-outline-2-science-paper.pdf](../papers/2010s/gaokao-2010-outline-2-science-paper.pdf) · gaokaomath
-- [gaokao-2010-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2010-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-tianjin-science-paper.pdf](../papers/2010s/gaokao-2010-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2010-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2010-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-anhui-science-paper.pdf](../papers/2010s/gaokao-2010-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2010-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2010-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-shandong-science-paper.pdf](../papers/2010s/gaokao-2010-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2010-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2010-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-guangdong-science-paper.pdf](../papers/2010s/gaokao-2010-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2010-new-curriculum-liberal-paper.pdf](../papers/2010s/gaokao-2010-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-new-curriculum-science-paper.pdf](../papers/2010s/gaokao-2010-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2010-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2010-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2010-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2010-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2010-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2010-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2010-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2010-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2010-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2010-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-hubei-science-paper.pdf](../papers/2010s/gaokao-2010-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2010-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2010-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-hunan-science-paper.pdf](../papers/2010s/gaokao-2010-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2010-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2010-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-fujian-science-paper.pdf](../papers/2010s/gaokao-2010-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2010-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2010-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-liaoning-science-paper.pdf](../papers/2010s/gaokao-2010-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2010-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2010-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-chongqing-science-paper.pdf](../papers/2010s/gaokao-2010-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2010-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2010-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2010-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2010-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2010-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2010-anhui-liberal-paper.pdf)
+- [gaokao-2010-anhui-science-paper.pdf](../papers/2010s/gaokao-2010-anhui-science-paper.pdf)
+- [gaokao-2010-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2010-beijing-liberal-paper.pdf)
+- [gaokao-2010-beijing-science-paper.pdf](../papers/2010s/gaokao-2010-beijing-science-paper.pdf)
+- [gaokao-2010-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2010-chongqing-liberal-paper.pdf)
+- [gaokao-2010-chongqing-science-paper.pdf](../papers/2010s/gaokao-2010-chongqing-science-paper.pdf)
+- [gaokao-2010-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2010-fujian-liberal-paper.pdf)
+- [gaokao-2010-fujian-science-paper.pdf](../papers/2010s/gaokao-2010-fujian-science-paper.pdf)
+- [gaokao-2010-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2010-guangdong-liberal-paper.pdf)
+- [gaokao-2010-guangdong-science-paper.pdf](../papers/2010s/gaokao-2010-guangdong-science-paper.pdf)
+- [gaokao-2010-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2010-hubei-liberal-paper.pdf)
+- [gaokao-2010-hubei-science-paper.pdf](../papers/2010s/gaokao-2010-hubei-science-paper.pdf)
+- [gaokao-2010-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2010-hunan-liberal-paper.pdf)
+- [gaokao-2010-hunan-science-paper.pdf](../papers/2010s/gaokao-2010-hunan-science-paper.pdf)
+- [gaokao-2010-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2010-jiangsu-general-paper.pdf)
+- [gaokao-2010-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2010-jiangxi-liberal-paper.pdf)
+- [gaokao-2010-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2010-jiangxi-science-paper.pdf)
+- [gaokao-2010-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2010-liaoning-liberal-paper.pdf)
+- [gaokao-2010-liaoning-science-paper.pdf](../papers/2010s/gaokao-2010-liaoning-science-paper.pdf)
+- [gaokao-2010-new-curriculum-liberal-paper.pdf](../papers/2010s/gaokao-2010-new-curriculum-liberal-paper.pdf)
+- [gaokao-2010-new-curriculum-science-paper.pdf](../papers/2010s/gaokao-2010-new-curriculum-science-paper.pdf)
+- [gaokao-2010-outline-1-liberal-paper.pdf](../papers/2010s/gaokao-2010-outline-1-liberal-paper.pdf)
+- [gaokao-2010-outline-1-science-paper.pdf](../papers/2010s/gaokao-2010-outline-1-science-paper.pdf)
+- [gaokao-2010-outline-2-liberal-paper.pdf](../papers/2010s/gaokao-2010-outline-2-liberal-paper.pdf)
+- [gaokao-2010-outline-2-science-paper.pdf](../papers/2010s/gaokao-2010-outline-2-science-paper.pdf)
+- [gaokao-2010-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2010-shaanxi-liberal-paper.pdf)
+- [gaokao-2010-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2010-shaanxi-science-paper.pdf)
+- [gaokao-2010-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2010-shandong-liberal-paper.pdf)
+- [gaokao-2010-shandong-science-paper.pdf](../papers/2010s/gaokao-2010-shandong-science-paper.pdf)
+- [gaokao-2010-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2010-shanghai-general-spring-paper.pdf)
+- [gaokao-2010-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2010-shanghai-liberal-paper.pdf)
+- [gaokao-2010-shanghai-science-paper.pdf](../papers/2010s/gaokao-2010-shanghai-science-paper.pdf)
+- [gaokao-2010-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2010-sichuan-liberal-paper.pdf)
+- [gaokao-2010-sichuan-science-paper.pdf](../papers/2010s/gaokao-2010-sichuan-science-paper.pdf)
+- [gaokao-2010-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2010-tianjin-liberal-paper.pdf)
+- [gaokao-2010-tianjin-science-paper.pdf](../papers/2010s/gaokao-2010-tianjin-science-paper.pdf)
+- [gaokao-2010-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2010-zhejiang-liberal-paper.pdf)
+- [gaokao-2010-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2010-zhejiang-science-paper.pdf)
 
 ## 2011 年数学资料
 
-- [2011年江苏卷.zip](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-exam-template/2011%E5%B9%B4%E6%B1%9F%E8%8B%8F%E5%8D%B7.zip) · gaokao-exam-template
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/liaoning_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/sichuan_science.tex) · gaokao-math-problems-compilation
-- [syllabus_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/syllabus_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/syllabus_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2011/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2011.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2011.tex) · gaokao-math-problems-compilation
-- [gaokao-2011-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2011-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2011-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2011-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-shanghai-science-paper.pdf](../papers/2010s/gaokao-2011-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2011-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2011-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-beijing-science-paper.pdf](../papers/2010s/gaokao-2011-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2011-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2011-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-sichuan-science-paper.pdf](../papers/2010s/gaokao-2011-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2011-outline-liberal-paper.pdf](../papers/2010s/gaokao-2011-outline-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-outline-science-paper.pdf](../papers/2010s/gaokao-2011-outline-science-paper.pdf) · gaokaomath
-- [gaokao-2011-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2011-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-tianjin-science-paper.pdf](../papers/2010s/gaokao-2011-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2011-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2011-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-anhui-science-paper.pdf](../papers/2010s/gaokao-2011-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2011-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2011-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-shandong-science-paper.pdf](../papers/2010s/gaokao-2011-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2011-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2011-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-guangdong-science-paper.pdf](../papers/2010s/gaokao-2011-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2011-new-curriculum-liberal-paper.pdf](../papers/2010s/gaokao-2011-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-new-curriculum-science-paper.pdf](../papers/2010s/gaokao-2011-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2011-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2011-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2011-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2011-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2011-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2011-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2011-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2011-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2011-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2011-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-hubei-science-paper.pdf](../papers/2010s/gaokao-2011-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2011-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2011-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-hunan-science-paper.pdf](../papers/2010s/gaokao-2011-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2011-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2011-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-fujian-science-paper.pdf](../papers/2010s/gaokao-2011-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2011-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2011-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-liaoning-science-paper.pdf](../papers/2010s/gaokao-2011-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2011-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2011-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-chongqing-science-paper.pdf](../papers/2010s/gaokao-2011-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2011-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2011-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2011-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2011-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2011-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2011-anhui-liberal-paper.pdf)
+- [gaokao-2011-anhui-science-paper.pdf](../papers/2010s/gaokao-2011-anhui-science-paper.pdf)
+- [gaokao-2011-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2011-beijing-liberal-paper.pdf)
+- [gaokao-2011-beijing-science-paper.pdf](../papers/2010s/gaokao-2011-beijing-science-paper.pdf)
+- [gaokao-2011-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2011-chongqing-liberal-paper.pdf)
+- [gaokao-2011-chongqing-science-paper.pdf](../papers/2010s/gaokao-2011-chongqing-science-paper.pdf)
+- [gaokao-2011-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2011-fujian-liberal-paper.pdf)
+- [gaokao-2011-fujian-science-paper.pdf](../papers/2010s/gaokao-2011-fujian-science-paper.pdf)
+- [gaokao-2011-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2011-guangdong-liberal-paper.pdf)
+- [gaokao-2011-guangdong-science-paper.pdf](../papers/2010s/gaokao-2011-guangdong-science-paper.pdf)
+- [gaokao-2011-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2011-hubei-liberal-paper.pdf)
+- [gaokao-2011-hubei-science-paper.pdf](../papers/2010s/gaokao-2011-hubei-science-paper.pdf)
+- [gaokao-2011-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2011-hunan-liberal-paper.pdf)
+- [gaokao-2011-hunan-science-paper.pdf](../papers/2010s/gaokao-2011-hunan-science-paper.pdf)
+- [gaokao-2011-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2011-jiangsu-general-paper.pdf)
+- [gaokao-2011-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2011-jiangxi-liberal-paper.pdf)
+- [gaokao-2011-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2011-jiangxi-science-paper.pdf)
+- [gaokao-2011-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2011-liaoning-liberal-paper.pdf)
+- [gaokao-2011-liaoning-science-paper.pdf](../papers/2010s/gaokao-2011-liaoning-science-paper.pdf)
+- [gaokao-2011-new-curriculum-liberal-paper.pdf](../papers/2010s/gaokao-2011-new-curriculum-liberal-paper.pdf)
+- [gaokao-2011-new-curriculum-science-paper.pdf](../papers/2010s/gaokao-2011-new-curriculum-science-paper.pdf)
+- [gaokao-2011-outline-liberal-paper.pdf](../papers/2010s/gaokao-2011-outline-liberal-paper.pdf)
+- [gaokao-2011-outline-science-paper.pdf](../papers/2010s/gaokao-2011-outline-science-paper.pdf)
+- [gaokao-2011-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2011-shaanxi-liberal-paper.pdf)
+- [gaokao-2011-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2011-shaanxi-science-paper.pdf)
+- [gaokao-2011-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2011-shandong-liberal-paper.pdf)
+- [gaokao-2011-shandong-science-paper.pdf](../papers/2010s/gaokao-2011-shandong-science-paper.pdf)
+- [gaokao-2011-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2011-shanghai-general-spring-paper.pdf)
+- [gaokao-2011-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2011-shanghai-liberal-paper.pdf)
+- [gaokao-2011-shanghai-science-paper.pdf](../papers/2010s/gaokao-2011-shanghai-science-paper.pdf)
+- [gaokao-2011-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2011-sichuan-liberal-paper.pdf)
+- [gaokao-2011-sichuan-science-paper.pdf](../papers/2010s/gaokao-2011-sichuan-science-paper.pdf)
+- [gaokao-2011-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2011-tianjin-liberal-paper.pdf)
+- [gaokao-2011-tianjin-science-paper.pdf](../papers/2010s/gaokao-2011-tianjin-science-paper.pdf)
+- [gaokao-2011-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2011-zhejiang-liberal-paper.pdf)
+- [gaokao-2011-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2011-zhejiang-science-paper.pdf)
 
 ## 2012 年数学资料
 
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/liaoning_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/new_curriculum_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/new_curriculum_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/sichuan_science.tex) · gaokao-math-problems-compilation
-- [syllabus_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/syllabus_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/syllabus_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2012/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2012.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2012.tex) · gaokao-math-problems-compilation
-- [gaokao-2012-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2012-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2012-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2012-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-shanghai-science-paper.pdf](../papers/2010s/gaokao-2012-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2012-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2012-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-beijing-science-paper.pdf](../papers/2010s/gaokao-2012-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2012-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2012-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-sichuan-science-paper.pdf](../papers/2010s/gaokao-2012-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2012-outline-liberal-paper.pdf](../papers/2010s/gaokao-2012-outline-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-outline-science-paper.pdf](../papers/2010s/gaokao-2012-outline-science-paper.pdf) · gaokaomath
-- [gaokao-2012-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2012-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-tianjin-science-paper.pdf](../papers/2010s/gaokao-2012-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2012-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2012-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-anhui-science-paper.pdf](../papers/2010s/gaokao-2012-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2012-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2012-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-shandong-science-paper.pdf](../papers/2010s/gaokao-2012-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2012-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2012-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-guangdong-science-paper.pdf](../papers/2010s/gaokao-2012-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2012-new-curriculum-liberal-paper.pdf](../papers/2010s/gaokao-2012-new-curriculum-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-new-curriculum-science-paper.pdf](../papers/2010s/gaokao-2012-new-curriculum-science-paper.pdf) · gaokaomath
-- [gaokao-2012-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2012-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2012-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2012-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2012-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2012-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2012-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2012-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2012-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2012-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-hubei-science-paper.pdf](../papers/2010s/gaokao-2012-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2012-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2012-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-hunan-science-paper.pdf](../papers/2010s/gaokao-2012-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2012-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2012-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-fujian-science-paper.pdf](../papers/2010s/gaokao-2012-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2012-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2012-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-liaoning-science-paper.pdf](../papers/2010s/gaokao-2012-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2012-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2012-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-chongqing-science-paper.pdf](../papers/2010s/gaokao-2012-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2012-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2012-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2012-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2012-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2012-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2012-anhui-liberal-paper.pdf)
+- [gaokao-2012-anhui-science-paper.pdf](../papers/2010s/gaokao-2012-anhui-science-paper.pdf)
+- [gaokao-2012-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2012-beijing-liberal-paper.pdf)
+- [gaokao-2012-beijing-science-paper.pdf](../papers/2010s/gaokao-2012-beijing-science-paper.pdf)
+- [gaokao-2012-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2012-chongqing-liberal-paper.pdf)
+- [gaokao-2012-chongqing-science-paper.pdf](../papers/2010s/gaokao-2012-chongqing-science-paper.pdf)
+- [gaokao-2012-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2012-fujian-liberal-paper.pdf)
+- [gaokao-2012-fujian-science-paper.pdf](../papers/2010s/gaokao-2012-fujian-science-paper.pdf)
+- [gaokao-2012-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2012-guangdong-liberal-paper.pdf)
+- [gaokao-2012-guangdong-science-paper.pdf](../papers/2010s/gaokao-2012-guangdong-science-paper.pdf)
+- [gaokao-2012-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2012-hubei-liberal-paper.pdf)
+- [gaokao-2012-hubei-science-paper.pdf](../papers/2010s/gaokao-2012-hubei-science-paper.pdf)
+- [gaokao-2012-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2012-hunan-liberal-paper.pdf)
+- [gaokao-2012-hunan-science-paper.pdf](../papers/2010s/gaokao-2012-hunan-science-paper.pdf)
+- [gaokao-2012-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2012-jiangsu-general-paper.pdf)
+- [gaokao-2012-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2012-jiangxi-liberal-paper.pdf)
+- [gaokao-2012-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2012-jiangxi-science-paper.pdf)
+- [gaokao-2012-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2012-liaoning-liberal-paper.pdf)
+- [gaokao-2012-liaoning-science-paper.pdf](../papers/2010s/gaokao-2012-liaoning-science-paper.pdf)
+- [gaokao-2012-new-curriculum-liberal-paper.pdf](../papers/2010s/gaokao-2012-new-curriculum-liberal-paper.pdf)
+- [gaokao-2012-new-curriculum-science-paper.pdf](../papers/2010s/gaokao-2012-new-curriculum-science-paper.pdf)
+- [gaokao-2012-outline-liberal-paper.pdf](../papers/2010s/gaokao-2012-outline-liberal-paper.pdf)
+- [gaokao-2012-outline-science-paper.pdf](../papers/2010s/gaokao-2012-outline-science-paper.pdf)
+- [gaokao-2012-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2012-shaanxi-liberal-paper.pdf)
+- [gaokao-2012-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2012-shaanxi-science-paper.pdf)
+- [gaokao-2012-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2012-shandong-liberal-paper.pdf)
+- [gaokao-2012-shandong-science-paper.pdf](../papers/2010s/gaokao-2012-shandong-science-paper.pdf)
+- [gaokao-2012-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2012-shanghai-general-spring-paper.pdf)
+- [gaokao-2012-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2012-shanghai-liberal-paper.pdf)
+- [gaokao-2012-shanghai-science-paper.pdf](../papers/2010s/gaokao-2012-shanghai-science-paper.pdf)
+- [gaokao-2012-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2012-sichuan-liberal-paper.pdf)
+- [gaokao-2012-sichuan-science-paper.pdf](../papers/2010s/gaokao-2012-sichuan-science-paper.pdf)
+- [gaokao-2012-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2012-tianjin-liberal-paper.pdf)
+- [gaokao-2012-tianjin-science-paper.pdf](../papers/2010s/gaokao-2012-tianjin-science-paper.pdf)
+- [gaokao-2012-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2012-zhejiang-liberal-paper.pdf)
+- [gaokao-2012-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2012-zhejiang-science-paper.pdf)
 
 ## 2013 年数学资料
 
-- [2013年北京市高级中等学校招生考试数学试卷LaTeX录入by.iC及简单答案.pdf](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-exam-template/2013%E5%B9%B4%E5%8C%97%E4%BA%AC%E5%B8%82%E9%AB%98%E7%BA%A7%E4%B8%AD%E7%AD%89%E5%AD%A6%E6%A0%A1%E6%8B%9B%E7%94%9F%E8%80%83%E8%AF%95%E6%95%B0%E5%AD%A6%E8%AF%95%E5%8D%B7LaTeX%E5%BD%95%E5%85%A5by.iC%E5%8F%8A%E7%AE%80%E5%8D%95%E7%AD%94%E6%A1%88.pdf) · gaokao-exam-template
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/liaoning_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/new_curriculum_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/new_curriculum_paper_1_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/new_curriculum_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/new_curriculum_paper_2_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/sichuan_science.tex) · gaokao-math-problems-compilation
-- [syllabus_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/syllabus_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/syllabus_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2013/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2013.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2013.tex) · gaokao-math-problems-compilation
-- [gaokao-2013-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2013-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2013-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2013-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-shanghai-science-paper.pdf](../papers/2010s/gaokao-2013-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2013-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2013-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-beijing-science-paper.pdf](../papers/2010s/gaokao-2013-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2013-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2013-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-sichuan-science-paper.pdf](../papers/2010s/gaokao-2013-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2013-outline-liberal-paper.pdf](../papers/2010s/gaokao-2013-outline-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-outline-science-paper.pdf](../papers/2010s/gaokao-2013-outline-science-paper.pdf) · gaokaomath
-- [gaokao-2013-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2013-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-tianjin-science-paper.pdf](../papers/2010s/gaokao-2013-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2013-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2013-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-anhui-science-paper.pdf](../papers/2010s/gaokao-2013-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2013-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2013-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-shandong-science-paper.pdf](../papers/2010s/gaokao-2013-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2013-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2013-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-guangdong-science-paper.pdf](../papers/2010s/gaokao-2013-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2013-new-curriculum-1-liberal-paper.pdf](../papers/2010s/gaokao-2013-new-curriculum-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-new-curriculum-1-science-paper.pdf](../papers/2010s/gaokao-2013-new-curriculum-1-science-paper.pdf) · gaokaomath
-- [gaokao-2013-new-curriculum-2-liberal-paper.pdf](../papers/2010s/gaokao-2013-new-curriculum-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-new-curriculum-2-science-paper.pdf](../papers/2010s/gaokao-2013-new-curriculum-2-science-paper.pdf) · gaokaomath
-- [gaokao-2013-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2013-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2013-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2013-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2013-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2013-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2013-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2013-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2013-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2013-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-hubei-science-paper.pdf](../papers/2010s/gaokao-2013-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2013-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2013-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-hunan-science-paper.pdf](../papers/2010s/gaokao-2013-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2013-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2013-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-fujian-science-paper.pdf](../papers/2010s/gaokao-2013-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2013-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2013-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-liaoning-science-paper.pdf](../papers/2010s/gaokao-2013-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2013-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2013-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-chongqing-science-paper.pdf](../papers/2010s/gaokao-2013-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2013-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2013-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2013-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2013-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2013-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2013-anhui-liberal-paper.pdf)
+- [gaokao-2013-anhui-science-paper.pdf](../papers/2010s/gaokao-2013-anhui-science-paper.pdf)
+- [gaokao-2013-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2013-beijing-liberal-paper.pdf)
+- [gaokao-2013-beijing-science-paper.pdf](../papers/2010s/gaokao-2013-beijing-science-paper.pdf)
+- [gaokao-2013-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2013-chongqing-liberal-paper.pdf)
+- [gaokao-2013-chongqing-science-paper.pdf](../papers/2010s/gaokao-2013-chongqing-science-paper.pdf)
+- [gaokao-2013-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2013-fujian-liberal-paper.pdf)
+- [gaokao-2013-fujian-science-paper.pdf](../papers/2010s/gaokao-2013-fujian-science-paper.pdf)
+- [gaokao-2013-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2013-guangdong-liberal-paper.pdf)
+- [gaokao-2013-guangdong-science-paper.pdf](../papers/2010s/gaokao-2013-guangdong-science-paper.pdf)
+- [gaokao-2013-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2013-hubei-liberal-paper.pdf)
+- [gaokao-2013-hubei-science-paper.pdf](../papers/2010s/gaokao-2013-hubei-science-paper.pdf)
+- [gaokao-2013-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2013-hunan-liberal-paper.pdf)
+- [gaokao-2013-hunan-science-paper.pdf](../papers/2010s/gaokao-2013-hunan-science-paper.pdf)
+- [gaokao-2013-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2013-jiangsu-general-paper.pdf)
+- [gaokao-2013-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2013-jiangxi-liberal-paper.pdf)
+- [gaokao-2013-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2013-jiangxi-science-paper.pdf)
+- [gaokao-2013-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2013-liaoning-liberal-paper.pdf)
+- [gaokao-2013-liaoning-science-paper.pdf](../papers/2010s/gaokao-2013-liaoning-science-paper.pdf)
+- [gaokao-2013-new-curriculum-1-liberal-paper.pdf](../papers/2010s/gaokao-2013-new-curriculum-1-liberal-paper.pdf)
+- [gaokao-2013-new-curriculum-1-science-paper.pdf](../papers/2010s/gaokao-2013-new-curriculum-1-science-paper.pdf)
+- [gaokao-2013-new-curriculum-2-liberal-paper.pdf](../papers/2010s/gaokao-2013-new-curriculum-2-liberal-paper.pdf)
+- [gaokao-2013-new-curriculum-2-science-paper.pdf](../papers/2010s/gaokao-2013-new-curriculum-2-science-paper.pdf)
+- [gaokao-2013-outline-liberal-paper.pdf](../papers/2010s/gaokao-2013-outline-liberal-paper.pdf)
+- [gaokao-2013-outline-science-paper.pdf](../papers/2010s/gaokao-2013-outline-science-paper.pdf)
+- [gaokao-2013-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2013-shaanxi-liberal-paper.pdf)
+- [gaokao-2013-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2013-shaanxi-science-paper.pdf)
+- [gaokao-2013-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2013-shandong-liberal-paper.pdf)
+- [gaokao-2013-shandong-science-paper.pdf](../papers/2010s/gaokao-2013-shandong-science-paper.pdf)
+- [gaokao-2013-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2013-shanghai-general-spring-paper.pdf)
+- [gaokao-2013-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2013-shanghai-liberal-paper.pdf)
+- [gaokao-2013-shanghai-science-paper.pdf](../papers/2010s/gaokao-2013-shanghai-science-paper.pdf)
+- [gaokao-2013-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2013-sichuan-liberal-paper.pdf)
+- [gaokao-2013-sichuan-science-paper.pdf](../papers/2010s/gaokao-2013-sichuan-science-paper.pdf)
+- [gaokao-2013-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2013-tianjin-liberal-paper.pdf)
+- [gaokao-2013-tianjin-science-paper.pdf](../papers/2010s/gaokao-2013-tianjin-science-paper.pdf)
+- [gaokao-2013-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2013-zhejiang-liberal-paper.pdf)
+- [gaokao-2013-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2013-zhejiang-science-paper.pdf)
 
 ## 2014 年数学资料
 
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/jiangsu.tex) · gaokao-math-problems-compilation
-- [jiangxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/jiangxi_liberal.tex) · gaokao-math-problems-compilation
-- [jiangxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/jiangxi_science.tex) · gaokao-math-problems-compilation
-- [liaoning_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/liaoning_liberal.tex) · gaokao-math-problems-compilation
-- [liaoning_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/liaoning_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/new_curriculum_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/new_curriculum_paper_1_science.tex) · gaokao-math-problems-compilation
-- [new_curriculum_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/new_curriculum_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [new_curriculum_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/new_curriculum_paper_2_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/sichuan_science.tex) · gaokao-math-problems-compilation
-- [syllabus_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/syllabus_liberal.tex) · gaokao-math-problems-compilation
-- [syllabus_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/syllabus_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2014/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2014.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2014.tex) · gaokao-math-problems-compilation
-- [gaokao-2014-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2014-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2014-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2014-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-shanghai-science-paper.pdf](../papers/2010s/gaokao-2014-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2014-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2014-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-beijing-science-paper.pdf](../papers/2010s/gaokao-2014-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2014-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2014-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-sichuan-science-paper.pdf](../papers/2010s/gaokao-2014-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2014-outline-liberal-paper.pdf](../papers/2010s/gaokao-2014-outline-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-outline-science-paper.pdf](../papers/2010s/gaokao-2014-outline-science-paper.pdf) · gaokaomath
-- [gaokao-2014-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2014-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-tianjin-science-paper.pdf](../papers/2010s/gaokao-2014-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2014-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2014-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-anhui-science-paper.pdf](../papers/2010s/gaokao-2014-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2014-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2014-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-shandong-science-paper.pdf](../papers/2010s/gaokao-2014-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2014-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2014-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-guangdong-science-paper.pdf](../papers/2010s/gaokao-2014-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2014-new-curriculum-1-liberal-paper.pdf](../papers/2010s/gaokao-2014-new-curriculum-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-new-curriculum-1-science-paper.pdf](../papers/2010s/gaokao-2014-new-curriculum-1-science-paper.pdf) · gaokaomath
-- [gaokao-2014-new-curriculum-2-liberal-paper.pdf](../papers/2010s/gaokao-2014-new-curriculum-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-new-curriculum-2-science-paper.pdf](../papers/2010s/gaokao-2014-new-curriculum-2-science-paper.pdf) · gaokaomath
-- [gaokao-2014-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2014-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2014-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2014-jiangxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2014-jiangxi-science-paper.pdf) · gaokaomath
-- [gaokao-2014-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2014-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2014-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2014-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2014-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-hubei-science-paper.pdf](../papers/2010s/gaokao-2014-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2014-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2014-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-hunan-science-paper.pdf](../papers/2010s/gaokao-2014-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2014-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2014-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-fujian-science-paper.pdf](../papers/2010s/gaokao-2014-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2014-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2014-liaoning-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-liaoning-science-paper.pdf](../papers/2010s/gaokao-2014-liaoning-science-paper.pdf) · gaokaomath
-- [gaokao-2014-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2014-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-chongqing-science-paper.pdf](../papers/2010s/gaokao-2014-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2014-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2014-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2014-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2014-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2014-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2014-anhui-liberal-paper.pdf)
+- [gaokao-2014-anhui-science-paper.pdf](../papers/2010s/gaokao-2014-anhui-science-paper.pdf)
+- [gaokao-2014-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2014-beijing-liberal-paper.pdf)
+- [gaokao-2014-beijing-science-paper.pdf](../papers/2010s/gaokao-2014-beijing-science-paper.pdf)
+- [gaokao-2014-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2014-chongqing-liberal-paper.pdf)
+- [gaokao-2014-chongqing-science-paper.pdf](../papers/2010s/gaokao-2014-chongqing-science-paper.pdf)
+- [gaokao-2014-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2014-fujian-liberal-paper.pdf)
+- [gaokao-2014-fujian-science-paper.pdf](../papers/2010s/gaokao-2014-fujian-science-paper.pdf)
+- [gaokao-2014-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2014-guangdong-liberal-paper.pdf)
+- [gaokao-2014-guangdong-science-paper.pdf](../papers/2010s/gaokao-2014-guangdong-science-paper.pdf)
+- [gaokao-2014-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2014-hubei-liberal-paper.pdf)
+- [gaokao-2014-hubei-science-paper.pdf](../papers/2010s/gaokao-2014-hubei-science-paper.pdf)
+- [gaokao-2014-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2014-hunan-liberal-paper.pdf)
+- [gaokao-2014-hunan-science-paper.pdf](../papers/2010s/gaokao-2014-hunan-science-paper.pdf)
+- [gaokao-2014-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2014-jiangsu-general-paper.pdf)
+- [gaokao-2014-jiangxi-liberal-paper.pdf](../papers/2010s/gaokao-2014-jiangxi-liberal-paper.pdf)
+- [gaokao-2014-jiangxi-science-paper.pdf](../papers/2010s/gaokao-2014-jiangxi-science-paper.pdf)
+- [gaokao-2014-liaoning-liberal-paper.pdf](../papers/2010s/gaokao-2014-liaoning-liberal-paper.pdf)
+- [gaokao-2014-liaoning-science-paper.pdf](../papers/2010s/gaokao-2014-liaoning-science-paper.pdf)
+- [gaokao-2014-new-curriculum-1-liberal-paper.pdf](../papers/2010s/gaokao-2014-new-curriculum-1-liberal-paper.pdf)
+- [gaokao-2014-new-curriculum-1-science-paper.pdf](../papers/2010s/gaokao-2014-new-curriculum-1-science-paper.pdf)
+- [gaokao-2014-new-curriculum-2-liberal-paper.pdf](../papers/2010s/gaokao-2014-new-curriculum-2-liberal-paper.pdf)
+- [gaokao-2014-new-curriculum-2-science-paper.pdf](../papers/2010s/gaokao-2014-new-curriculum-2-science-paper.pdf)
+- [gaokao-2014-outline-liberal-paper.pdf](../papers/2010s/gaokao-2014-outline-liberal-paper.pdf)
+- [gaokao-2014-outline-science-paper.pdf](../papers/2010s/gaokao-2014-outline-science-paper.pdf)
+- [gaokao-2014-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2014-shaanxi-liberal-paper.pdf)
+- [gaokao-2014-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2014-shaanxi-science-paper.pdf)
+- [gaokao-2014-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2014-shandong-liberal-paper.pdf)
+- [gaokao-2014-shandong-science-paper.pdf](../papers/2010s/gaokao-2014-shandong-science-paper.pdf)
+- [gaokao-2014-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2014-shanghai-general-spring-paper.pdf)
+- [gaokao-2014-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2014-shanghai-liberal-paper.pdf)
+- [gaokao-2014-shanghai-science-paper.pdf](../papers/2010s/gaokao-2014-shanghai-science-paper.pdf)
+- [gaokao-2014-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2014-sichuan-liberal-paper.pdf)
+- [gaokao-2014-sichuan-science-paper.pdf](../papers/2010s/gaokao-2014-sichuan-science-paper.pdf)
+- [gaokao-2014-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2014-tianjin-liberal-paper.pdf)
+- [gaokao-2014-tianjin-science-paper.pdf](../papers/2010s/gaokao-2014-tianjin-science-paper.pdf)
+- [gaokao-2014-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2014-zhejiang-liberal-paper.pdf)
+- [gaokao-2014-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2014-zhejiang-science-paper.pdf)
 
 ## 2015 年数学资料
 
-- [anhui_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/anhui_liberal.tex) · gaokao-math-problems-compilation
-- [anhui_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/anhui_science.tex) · gaokao-math-problems-compilation
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/beijing_science.tex) · gaokao-math-problems-compilation
-- [chongqing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/chongqing_liberal.tex) · gaokao-math-problems-compilation
-- [chongqing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/chongqing_science.tex) · gaokao-math-problems-compilation
-- [fujian_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/fujian_liberal.tex) · gaokao-math-problems-compilation
-- [fujian_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/fujian_science.tex) · gaokao-math-problems-compilation
-- [guangdong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/guangdong_liberal.tex) · gaokao-math-problems-compilation
-- [guangdong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/guangdong_science.tex) · gaokao-math-problems-compilation
-- [hubei_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/hubei_liberal.tex) · gaokao-math-problems-compilation
-- [hubei_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/hubei_science.tex) · gaokao-math-problems-compilation
-- [hunan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/hunan_liberal.tex) · gaokao-math-problems-compilation
-- [hunan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/hunan_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/jiangsu.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [shaanxi_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/shaanxi_liberal.tex) · gaokao-math-problems-compilation
-- [shaanxi_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/shaanxi_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/sichuan_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2015/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2015.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2015.tex) · gaokao-math-problems-compilation
-- [gaokao-2015-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2015-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2015-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2015-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-shanghai-science-paper.pdf](../papers/2010s/gaokao-2015-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2015-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2015-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-national-1-science-paper.pdf](../papers/2010s/gaokao-2015-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2015-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2015-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-national-2-science-paper.pdf](../papers/2010s/gaokao-2015-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2015-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2015-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-beijing-science-paper.pdf](../papers/2010s/gaokao-2015-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2015-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2015-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-sichuan-science-paper.pdf](../papers/2010s/gaokao-2015-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2015-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2015-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-tianjin-science-paper.pdf](../papers/2010s/gaokao-2015-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2015-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2015-anhui-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-anhui-science-paper.pdf](../papers/2010s/gaokao-2015-anhui-science-paper.pdf) · gaokaomath
-- [gaokao-2015-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2015-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-shandong-science-paper.pdf](../papers/2010s/gaokao-2015-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2015-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2015-guangdong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-guangdong-science-paper.pdf](../papers/2010s/gaokao-2015-guangdong-science-paper.pdf) · gaokaomath
-- [gaokao-2015-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2015-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2015-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2015-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2015-zhejiang-science-paper.pdf) · gaokaomath
-- [gaokao-2015-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2015-hubei-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-hubei-science-paper.pdf](../papers/2010s/gaokao-2015-hubei-science-paper.pdf) · gaokaomath
-- [gaokao-2015-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2015-hunan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-hunan-science-paper.pdf](../papers/2010s/gaokao-2015-hunan-science-paper.pdf) · gaokaomath
-- [gaokao-2015-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2015-fujian-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-fujian-science-paper.pdf](../papers/2010s/gaokao-2015-fujian-science-paper.pdf) · gaokaomath
-- [gaokao-2015-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2015-chongqing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-chongqing-science-paper.pdf](../papers/2010s/gaokao-2015-chongqing-science-paper.pdf) · gaokaomath
-- [gaokao-2015-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2015-shaanxi-liberal-paper.pdf) · gaokaomath
-- [gaokao-2015-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2015-shaanxi-science-paper.pdf) · gaokaomath
+- [gaokao-2015-anhui-liberal-paper.pdf](../papers/2010s/gaokao-2015-anhui-liberal-paper.pdf)
+- [gaokao-2015-anhui-science-paper.pdf](../papers/2010s/gaokao-2015-anhui-science-paper.pdf)
+- [gaokao-2015-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2015-beijing-liberal-paper.pdf)
+- [gaokao-2015-beijing-science-paper.pdf](../papers/2010s/gaokao-2015-beijing-science-paper.pdf)
+- [gaokao-2015-chongqing-liberal-paper.pdf](../papers/2010s/gaokao-2015-chongqing-liberal-paper.pdf)
+- [gaokao-2015-chongqing-science-paper.pdf](../papers/2010s/gaokao-2015-chongqing-science-paper.pdf)
+- [gaokao-2015-fujian-liberal-paper.pdf](../papers/2010s/gaokao-2015-fujian-liberal-paper.pdf)
+- [gaokao-2015-fujian-science-paper.pdf](../papers/2010s/gaokao-2015-fujian-science-paper.pdf)
+- [gaokao-2015-guangdong-liberal-paper.pdf](../papers/2010s/gaokao-2015-guangdong-liberal-paper.pdf)
+- [gaokao-2015-guangdong-science-paper.pdf](../papers/2010s/gaokao-2015-guangdong-science-paper.pdf)
+- [gaokao-2015-hubei-liberal-paper.pdf](../papers/2010s/gaokao-2015-hubei-liberal-paper.pdf)
+- [gaokao-2015-hubei-science-paper.pdf](../papers/2010s/gaokao-2015-hubei-science-paper.pdf)
+- [gaokao-2015-hunan-liberal-paper.pdf](../papers/2010s/gaokao-2015-hunan-liberal-paper.pdf)
+- [gaokao-2015-hunan-science-paper.pdf](../papers/2010s/gaokao-2015-hunan-science-paper.pdf)
+- [gaokao-2015-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2015-jiangsu-general-paper.pdf)
+- [gaokao-2015-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2015-national-1-liberal-paper.pdf)
+- [gaokao-2015-national-1-science-paper.pdf](../papers/2010s/gaokao-2015-national-1-science-paper.pdf)
+- [gaokao-2015-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2015-national-2-liberal-paper.pdf)
+- [gaokao-2015-national-2-science-paper.pdf](../papers/2010s/gaokao-2015-national-2-science-paper.pdf)
+- [gaokao-2015-shaanxi-liberal-paper.pdf](../papers/2010s/gaokao-2015-shaanxi-liberal-paper.pdf)
+- [gaokao-2015-shaanxi-science-paper.pdf](../papers/2010s/gaokao-2015-shaanxi-science-paper.pdf)
+- [gaokao-2015-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2015-shandong-liberal-paper.pdf)
+- [gaokao-2015-shandong-science-paper.pdf](../papers/2010s/gaokao-2015-shandong-science-paper.pdf)
+- [gaokao-2015-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2015-shanghai-general-spring-paper.pdf)
+- [gaokao-2015-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2015-shanghai-liberal-paper.pdf)
+- [gaokao-2015-shanghai-science-paper.pdf](../papers/2010s/gaokao-2015-shanghai-science-paper.pdf)
+- [gaokao-2015-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2015-sichuan-liberal-paper.pdf)
+- [gaokao-2015-sichuan-science-paper.pdf](../papers/2010s/gaokao-2015-sichuan-science-paper.pdf)
+- [gaokao-2015-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2015-tianjin-liberal-paper.pdf)
+- [gaokao-2015-tianjin-science-paper.pdf](../papers/2010s/gaokao-2015-tianjin-science-paper.pdf)
+- [gaokao-2015-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2015-zhejiang-liberal-paper.pdf)
+- [gaokao-2015-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2015-zhejiang-science-paper.pdf)
 
 ## 2016 年数学资料
 
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/beijing_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/jiangsu.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [national_paper_3_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/national_paper_3_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_3_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/national_paper_3_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/shanghai_liberal.tex) · gaokao-math-problems-compilation
-- [shanghai_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/shanghai_science.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [sichuan_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/sichuan_liberal.tex) · gaokao-math-problems-compilation
-- [sichuan_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/sichuan_science.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/zhejiang_liberal.tex) · gaokao-math-problems-compilation
-- [zhejiang_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2016/zhejiang_science.tex) · gaokao-math-problems-compilation
-- [2016.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2016.tex) · gaokao-math-problems-compilation
-- [gaokao-2016-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2016-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2016-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2016-shanghai-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-shanghai-science-paper.pdf](../papers/2010s/gaokao-2016-shanghai-science-paper.pdf) · gaokaomath
-- [gaokao-2016-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2016-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-national-1-science-paper.pdf](../papers/2010s/gaokao-2016-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2016-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2016-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-national-2-science-paper.pdf](../papers/2010s/gaokao-2016-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2016-national-3-liberal-paper.pdf](../papers/2010s/gaokao-2016-national-3-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-national-3-science-paper.pdf](../papers/2010s/gaokao-2016-national-3-science-paper.pdf) · gaokaomath
-- [gaokao-2016-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2016-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-beijing-science-paper.pdf](../papers/2010s/gaokao-2016-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2016-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2016-sichuan-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-sichuan-science-paper.pdf](../papers/2010s/gaokao-2016-sichuan-science-paper.pdf) · gaokaomath
-- [gaokao-2016-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2016-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-tianjin-science-paper.pdf](../papers/2010s/gaokao-2016-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2016-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2016-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-shandong-science-paper.pdf](../papers/2010s/gaokao-2016-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2016-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2016-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2016-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2016-zhejiang-liberal-paper.pdf) · gaokaomath
-- [gaokao-2016-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2016-zhejiang-science-paper.pdf) · gaokaomath
-- [2016-Shanghai-L.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2016/2016-Shanghai-L.tex) · mathpaper
-- [2016四川文科卷.doc](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2016/2016%E5%9B%9B%E5%B7%9D%E6%96%87%E7%A7%91%E5%8D%B7.doc) · mathpaper
+- [gaokao-2016-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2016-beijing-liberal-paper.pdf)
+- [gaokao-2016-beijing-science-paper.pdf](../papers/2010s/gaokao-2016-beijing-science-paper.pdf)
+- [gaokao-2016-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2016-jiangsu-general-paper.pdf)
+- [gaokao-2016-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2016-national-1-liberal-paper.pdf)
+- [gaokao-2016-national-1-science-paper.pdf](../papers/2010s/gaokao-2016-national-1-science-paper.pdf)
+- [gaokao-2016-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2016-national-2-liberal-paper.pdf)
+- [gaokao-2016-national-2-science-paper.pdf](../papers/2010s/gaokao-2016-national-2-science-paper.pdf)
+- [gaokao-2016-national-3-liberal-paper.pdf](../papers/2010s/gaokao-2016-national-3-liberal-paper.pdf)
+- [gaokao-2016-national-3-science-paper.pdf](../papers/2010s/gaokao-2016-national-3-science-paper.pdf)
+- [gaokao-2016-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2016-shandong-liberal-paper.pdf)
+- [gaokao-2016-shandong-science-paper.pdf](../papers/2010s/gaokao-2016-shandong-science-paper.pdf)
+- [gaokao-2016-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2016-shanghai-general-spring-paper.pdf)
+- [gaokao-2016-shanghai-liberal-paper.pdf](../papers/2010s/gaokao-2016-shanghai-liberal-paper.pdf)
+- [gaokao-2016-shanghai-science-paper.pdf](../papers/2010s/gaokao-2016-shanghai-science-paper.pdf)
+- [gaokao-2016-sichuan-liberal-paper.pdf](../papers/2010s/gaokao-2016-sichuan-liberal-paper.pdf)
+- [gaokao-2016-sichuan-science-paper.pdf](../papers/2010s/gaokao-2016-sichuan-science-paper.pdf)
+- [gaokao-2016-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2016-tianjin-liberal-paper.pdf)
+- [gaokao-2016-tianjin-science-paper.pdf](../papers/2010s/gaokao-2016-tianjin-science-paper.pdf)
+- [gaokao-2016-zhejiang-liberal-paper.pdf](../papers/2010s/gaokao-2016-zhejiang-liberal-paper.pdf)
+- [gaokao-2016-zhejiang-science-paper.pdf](../papers/2010s/gaokao-2016-zhejiang-science-paper.pdf)
 
 ## 2017 年数学资料
 
-- [2017quanguo3.pdf](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-exam-template/2017quanguo3.pdf) · gaokao-exam-template
-- [2017quanguo3.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-exam-template/2017quanguo3.tex) · gaokao-exam-template
-- [2017quanguo3hebing.pdf](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-exam-template/2017quanguo3hebing.pdf) · gaokao-exam-template
-- [2017quanguo3hebing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-exam-template/2017quanguo3hebing.tex) · gaokao-exam-template
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/beijing_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/jiangsu.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [national_paper_3_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/national_paper_3_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_3_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/national_paper_3_science.tex) · gaokao-math-problems-compilation
-- [shandong_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/shandong_liberal.tex) · gaokao-math-problems-compilation
-- [shandong_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/shandong_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2017/zhejiang.tex) · gaokao-math-problems-compilation
-- [2017.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2017.tex) · gaokao-math-problems-compilation
-- [gaokao-2017-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2017-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2017-shanghai-general-paper.pdf](../papers/2010s/gaokao-2017-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2017-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2017-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2017-national-1-science-paper.pdf](../papers/2010s/gaokao-2017-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2017-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2017-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2017-national-2-science-paper.pdf](../papers/2010s/gaokao-2017-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2017-national-3-liberal-paper.pdf](../papers/2010s/gaokao-2017-national-3-liberal-paper.pdf) · gaokaomath
-- [gaokao-2017-national-3-science-paper.pdf](../papers/2010s/gaokao-2017-national-3-science-paper.pdf) · gaokaomath
-- [gaokao-2017-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2017-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2017-beijing-science-paper.pdf](../papers/2010s/gaokao-2017-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2017-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2017-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2017-tianjin-science-paper.pdf](../papers/2010s/gaokao-2017-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2017-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2017-shandong-liberal-paper.pdf) · gaokaomath
-- [gaokao-2017-shandong-science-paper.pdf](../papers/2010s/gaokao-2017-shandong-science-paper.pdf) · gaokaomath
-- [gaokao-2017-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2017-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2017-zhejiang-general-paper.pdf](../papers/2010s/gaokao-2017-zhejiang-general-paper.pdf) · gaokaomath
-- [2017-Jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2017/2017-Jiangsu.tex) · mathpaper
-- [2017-SNE-3L.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2017/2017-SNE-3L.tex) · mathpaper
+- [gaokao-2017-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2017-beijing-liberal-paper.pdf)
+- [gaokao-2017-beijing-science-paper.pdf](../papers/2010s/gaokao-2017-beijing-science-paper.pdf)
+- [gaokao-2017-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2017-jiangsu-general-paper.pdf)
+- [gaokao-2017-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2017-national-1-liberal-paper.pdf)
+- [gaokao-2017-national-1-science-paper.pdf](../papers/2010s/gaokao-2017-national-1-science-paper.pdf)
+- [gaokao-2017-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2017-national-2-liberal-paper.pdf)
+- [gaokao-2017-national-2-science-paper.pdf](../papers/2010s/gaokao-2017-national-2-science-paper.pdf)
+- [gaokao-2017-national-3-liberal-paper.pdf](../papers/2010s/gaokao-2017-national-3-liberal-paper.pdf)
+- [gaokao-2017-national-3-science-paper.pdf](../papers/2010s/gaokao-2017-national-3-science-paper.pdf)
+- [gaokao-2017-shandong-liberal-paper.pdf](../papers/2010s/gaokao-2017-shandong-liberal-paper.pdf)
+- [gaokao-2017-shandong-science-paper.pdf](../papers/2010s/gaokao-2017-shandong-science-paper.pdf)
+- [gaokao-2017-shanghai-general-paper.pdf](../papers/2010s/gaokao-2017-shanghai-general-paper.pdf)
+- [gaokao-2017-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2017-shanghai-general-spring-paper.pdf)
+- [gaokao-2017-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2017-tianjin-liberal-paper.pdf)
+- [gaokao-2017-tianjin-science-paper.pdf](../papers/2010s/gaokao-2017-tianjin-science-paper.pdf)
+- [gaokao-2017-zhejiang-general-paper.pdf](../papers/2010s/gaokao-2017-zhejiang-general-paper.pdf)
 
 ## 2018 年数学资料
 
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/beijing_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/jiangsu.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [national_paper_3_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/national_paper_3_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_3_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/national_paper_3_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2018/zhejiang.tex) · gaokao-math-problems-compilation
-- [2018.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2018.tex) · gaokao-math-problems-compilation
-- [gaokao-2018-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2018-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2018-shanghai-general-paper.pdf](../papers/2010s/gaokao-2018-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2018-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2018-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2018-national-1-science-paper.pdf](../papers/2010s/gaokao-2018-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2018-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2018-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2018-national-2-science-paper.pdf](../papers/2010s/gaokao-2018-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2018-national-3-liberal-paper.pdf](../papers/2010s/gaokao-2018-national-3-liberal-paper.pdf) · gaokaomath
-- [gaokao-2018-national-3-science-paper.pdf](../papers/2010s/gaokao-2018-national-3-science-paper.pdf) · gaokaomath
-- [gaokao-2018-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2018-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2018-beijing-science-paper.pdf](../papers/2010s/gaokao-2018-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2018-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2018-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2018-tianjin-science-paper.pdf](../papers/2010s/gaokao-2018-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2018-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2018-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2018-zhejiang-general-paper.pdf](../papers/2010s/gaokao-2018-zhejiang-general-paper.pdf) · gaokaomath
+- [gaokao-2018-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2018-beijing-liberal-paper.pdf)
+- [gaokao-2018-beijing-science-paper.pdf](../papers/2010s/gaokao-2018-beijing-science-paper.pdf)
+- [gaokao-2018-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2018-jiangsu-general-paper.pdf)
+- [gaokao-2018-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2018-national-1-liberal-paper.pdf)
+- [gaokao-2018-national-1-science-paper.pdf](../papers/2010s/gaokao-2018-national-1-science-paper.pdf)
+- [gaokao-2018-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2018-national-2-liberal-paper.pdf)
+- [gaokao-2018-national-2-science-paper.pdf](../papers/2010s/gaokao-2018-national-2-science-paper.pdf)
+- [gaokao-2018-national-3-liberal-paper.pdf](../papers/2010s/gaokao-2018-national-3-liberal-paper.pdf)
+- [gaokao-2018-national-3-science-paper.pdf](../papers/2010s/gaokao-2018-national-3-science-paper.pdf)
+- [gaokao-2018-shanghai-general-paper.pdf](../papers/2010s/gaokao-2018-shanghai-general-paper.pdf)
+- [gaokao-2018-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2018-shanghai-general-spring-paper.pdf)
+- [gaokao-2018-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2018-tianjin-liberal-paper.pdf)
+- [gaokao-2018-tianjin-science-paper.pdf](../papers/2010s/gaokao-2018-tianjin-science-paper.pdf)
+- [gaokao-2018-zhejiang-general-paper.pdf](../papers/2010s/gaokao-2018-zhejiang-general-paper.pdf)
 
 ## 2019 年数学资料
 
-- [svsu2019level1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/svsu2019level1/svsu2019level1.tex) · daxmate-math
-- [beijing_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/beijing_liberal.tex) · gaokao-math-problems-compilation
-- [beijing_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/beijing_science.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/jiangsu.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [national_paper_3_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/national_paper_3_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_3_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/national_paper_3_science.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/tianjin_liberal.tex) · gaokao-math-problems-compilation
-- [tianjin_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/tianjin_science.tex) · gaokao-math-problems-compilation
-- [zhejiang.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2019/zhejiang.tex) · gaokao-math-problems-compilation
-- [2019.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2019.tex) · gaokao-math-problems-compilation
-- [gaokao-2019-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2019-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2019-shanghai-general-paper.pdf](../papers/2010s/gaokao-2019-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2019-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2019-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2019-national-1-science-paper.pdf](../papers/2010s/gaokao-2019-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2019-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2019-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2019-national-2-science-paper.pdf](../papers/2010s/gaokao-2019-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2019-national-3-liberal-paper.pdf](../papers/2010s/gaokao-2019-national-3-liberal-paper.pdf) · gaokaomath
-- [gaokao-2019-national-3-science-paper.pdf](../papers/2010s/gaokao-2019-national-3-science-paper.pdf) · gaokaomath
-- [gaokao-2019-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2019-beijing-liberal-paper.pdf) · gaokaomath
-- [gaokao-2019-beijing-science-paper.pdf](../papers/2010s/gaokao-2019-beijing-science-paper.pdf) · gaokaomath
-- [gaokao-2019-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2019-tianjin-liberal-paper.pdf) · gaokaomath
-- [gaokao-2019-tianjin-science-paper.pdf](../papers/2010s/gaokao-2019-tianjin-science-paper.pdf) · gaokaomath
-- [gaokao-2019-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2019-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2019-zhejiang-general-paper.pdf](../papers/2010s/gaokao-2019-zhejiang-general-paper.pdf) · gaokaomath
+- [gaokao-2019-beijing-liberal-paper.pdf](../papers/2010s/gaokao-2019-beijing-liberal-paper.pdf)
+- [gaokao-2019-beijing-science-paper.pdf](../papers/2010s/gaokao-2019-beijing-science-paper.pdf)
+- [gaokao-2019-jiangsu-general-paper.pdf](../papers/2010s/gaokao-2019-jiangsu-general-paper.pdf)
+- [gaokao-2019-national-1-liberal-paper.pdf](../papers/2010s/gaokao-2019-national-1-liberal-paper.pdf)
+- [gaokao-2019-national-1-science-paper.pdf](../papers/2010s/gaokao-2019-national-1-science-paper.pdf)
+- [gaokao-2019-national-2-liberal-paper.pdf](../papers/2010s/gaokao-2019-national-2-liberal-paper.pdf)
+- [gaokao-2019-national-2-science-paper.pdf](../papers/2010s/gaokao-2019-national-2-science-paper.pdf)
+- [gaokao-2019-national-3-liberal-paper.pdf](../papers/2010s/gaokao-2019-national-3-liberal-paper.pdf)
+- [gaokao-2019-national-3-science-paper.pdf](../papers/2010s/gaokao-2019-national-3-science-paper.pdf)
+- [gaokao-2019-shanghai-general-paper.pdf](../papers/2010s/gaokao-2019-shanghai-general-paper.pdf)
+- [gaokao-2019-shanghai-general-spring-paper.pdf](../papers/2010s/gaokao-2019-shanghai-general-spring-paper.pdf)
+- [gaokao-2019-tianjin-liberal-paper.pdf](../papers/2010s/gaokao-2019-tianjin-liberal-paper.pdf)
+- [gaokao-2019-tianjin-science-paper.pdf](../papers/2010s/gaokao-2019-tianjin-science-paper.pdf)
+- [gaokao-2019-zhejiang-general-paper.pdf](../papers/2010s/gaokao-2019-zhejiang-general-paper.pdf)
 
 ## 2020 年数学资料
 
-- [beijing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/beijing.tex) · gaokao-math-problems-compilation
-- [jiangsu.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/jiangsu.tex) · gaokao-math-problems-compilation
-- [national_paper_1_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/national_paper_1_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_1_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/national_paper_1_science.tex) · gaokao-math-problems-compilation
-- [national_paper_2_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/national_paper_2_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_2_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/national_paper_2_science.tex) · gaokao-math-problems-compilation
-- [national_paper_3_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/national_paper_3_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_3_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/national_paper_3_science.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/new_gaokao_paper_1.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_2.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/new_gaokao_paper_2.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/tianjin.tex) · gaokao-math-problems-compilation
-- [zhejiang.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2020/zhejiang.tex) · gaokao-math-problems-compilation
-- [2020.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2020.tex) · gaokao-math-problems-compilation
-- [gaokao-2020-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2020-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2020-shanghai-general-paper.pdf](../papers/2020s/gaokao-2020-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2020-national-1-liberal-paper.pdf](../papers/2020s/gaokao-2020-national-1-liberal-paper.pdf) · gaokaomath
-- [gaokao-2020-national-1-science-paper.pdf](../papers/2020s/gaokao-2020-national-1-science-paper.pdf) · gaokaomath
-- [gaokao-2020-national-2-liberal-paper.pdf](../papers/2020s/gaokao-2020-national-2-liberal-paper.pdf) · gaokaomath
-- [gaokao-2020-national-2-science-paper.pdf](../papers/2020s/gaokao-2020-national-2-science-paper.pdf) · gaokaomath
-- [gaokao-2020-national-3-liberal-paper.pdf](../papers/2020s/gaokao-2020-national-3-liberal-paper.pdf) · gaokaomath
-- [gaokao-2020-national-3-science-paper.pdf](../papers/2020s/gaokao-2020-national-3-science-paper.pdf) · gaokaomath
-- [gaokao-2020-beijing-general-paper.pdf](../papers/2020s/gaokao-2020-beijing-general-paper.pdf) · gaokaomath
-- [gaokao-2020-tianjin-general-paper.pdf](../papers/2020s/gaokao-2020-tianjin-general-paper.pdf) · gaokaomath
-- [gaokao-2020-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2020-new-gaokao-1-general-paper.pdf) · gaokaomath
-- [gaokao-2020-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2020-new-gaokao-2-general-paper.pdf) · gaokaomath
-- [gaokao-2020-jiangsu-general-paper.pdf](../papers/2020s/gaokao-2020-jiangsu-general-paper.pdf) · gaokaomath
-- [gaokao-2020-zhejiang-general-paper.pdf](../papers/2020s/gaokao-2020-zhejiang-general-paper.pdf) · gaokaomath
-- [2020年全国I卷理科.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2020%E5%B9%B4%E5%85%A8%E5%9B%BDI%E5%8D%B7%E7%90%86%E7%A7%91.docx) · mathpaper
+- [gaokao-2020-beijing-general-paper.pdf](../papers/2020s/gaokao-2020-beijing-general-paper.pdf)
+- [gaokao-2020-jiangsu-general-paper.pdf](../papers/2020s/gaokao-2020-jiangsu-general-paper.pdf)
+- [gaokao-2020-national-1-liberal-paper.pdf](../papers/2020s/gaokao-2020-national-1-liberal-paper.pdf)
+- [gaokao-2020-national-1-science-paper.pdf](../papers/2020s/gaokao-2020-national-1-science-paper.pdf)
+- [gaokao-2020-national-2-liberal-paper.pdf](../papers/2020s/gaokao-2020-national-2-liberal-paper.pdf)
+- [gaokao-2020-national-2-science-paper.pdf](../papers/2020s/gaokao-2020-national-2-science-paper.pdf)
+- [gaokao-2020-national-3-liberal-paper.pdf](../papers/2020s/gaokao-2020-national-3-liberal-paper.pdf)
+- [gaokao-2020-national-3-science-paper.pdf](../papers/2020s/gaokao-2020-national-3-science-paper.pdf)
+- [gaokao-2020-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2020-new-gaokao-1-general-paper.pdf)
+- [gaokao-2020-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2020-new-gaokao-2-general-paper.pdf)
+- [gaokao-2020-shanghai-general-paper.pdf](../papers/2020s/gaokao-2020-shanghai-general-paper.pdf)
+- [gaokao-2020-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2020-shanghai-general-spring-paper.pdf)
+- [gaokao-2020-tianjin-general-paper.pdf](../papers/2020s/gaokao-2020-tianjin-general-paper.pdf)
+- [gaokao-2020-zhejiang-general-paper.pdf](../papers/2020s/gaokao-2020-zhejiang-general-paper.pdf)
 
 ## 2021 年数学资料
 
-- [01.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/01.md) · gaokao-math-corpus
-- [02.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/02.md) · gaokao-math-corpus
-- [03.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/03.md) · gaokao-math-corpus
-- [04.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/04.md) · gaokao-math-corpus
-- [05.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/05.md) · gaokao-math-corpus
-- [06.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/06.md) · gaokao-math-corpus
-- [07.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/07.md) · gaokao-math-corpus
-- [08.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/08.md) · gaokao-math-corpus
-- [09.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/09.md) · gaokao-math-corpus
-- [10.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/10.md) · gaokao-math-corpus
-- [11.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/11.md) · gaokao-math-corpus
-- [12.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/12.md) · gaokao-math-corpus
-- [13.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/13.md) · gaokao-math-corpus
-- [14.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/14.md) · gaokao-math-corpus
-- [15.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/15.md) · gaokao-math-corpus
-- [16.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/16.md) · gaokao-math-corpus
-- [17.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/17.md) · gaokao-math-corpus
-- [18.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/18.md) · gaokao-math-corpus
-- [19.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/19.md) · gaokao-math-corpus
-- [20.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/20.md) · gaokao-math-corpus
-- [21.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/21.md) · gaokao-math-corpus
-- [22.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/items/22.md) · gaokao-math-corpus
-- [paper.yml](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2021/I/paper.yml) · gaokao-math-corpus
-- [beijing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/beijing.tex) · gaokao-math-problems-compilation
-- [national_paper_a_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/national_paper_a_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_a_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/national_paper_a_science.tex) · gaokao-math-problems-compilation
-- [national_paper_b_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/national_paper_b_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_b_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/national_paper_b_science.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/new_gaokao_paper_1.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_2.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/new_gaokao_paper_2.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/tianjin.tex) · gaokao-math-problems-compilation
-- [zhejiang.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2021/zhejiang.tex) · gaokao-math-problems-compilation
-- [2021.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2021.tex) · gaokao-math-problems-compilation
-- [gaokao-2021-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2021-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2021-shanghai-general-paper.pdf](../papers/2020s/gaokao-2021-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2021-national-b-liberal-paper.pdf](../papers/2020s/gaokao-2021-national-b-liberal-paper.pdf) · gaokaomath
-- [gaokao-2021-national-b-science-paper.pdf](../papers/2020s/gaokao-2021-national-b-science-paper.pdf) · gaokaomath
-- [gaokao-2021-national-a-liberal-paper.pdf](../papers/2020s/gaokao-2021-national-a-liberal-paper.pdf) · gaokaomath
-- [gaokao-2021-national-a-science-paper.pdf](../papers/2020s/gaokao-2021-national-a-science-paper.pdf) · gaokaomath
-- [gaokao-2021-beijing-general-paper.pdf](../papers/2020s/gaokao-2021-beijing-general-paper.pdf) · gaokaomath
-- [gaokao-2021-tianjin-general-paper.pdf](../papers/2020s/gaokao-2021-tianjin-general-paper.pdf) · gaokaomath
-- [gaokao-2021-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2021-new-gaokao-1-general-paper.pdf) · gaokaomath
-- [gaokao-2021-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2021-new-gaokao-2-general-paper.pdf) · gaokaomath
-- [gaokao-2021-zhejiang-general-paper.pdf](../papers/2020s/gaokao-2021-zhejiang-general-paper.pdf) · gaokaomath
-- [2021全国乙卷数学（文）.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2021/2021%E5%85%A8%E5%9B%BD%E4%B9%99%E5%8D%B7%E6%95%B0%E5%AD%A6%EF%BC%88%E6%96%87%EF%BC%89.docx) · mathpaper
-- [2021全国乙卷数学（理）.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2021/2021%E5%85%A8%E5%9B%BD%E4%B9%99%E5%8D%B7%E6%95%B0%E5%AD%A6%EF%BC%88%E7%90%86%EF%BC%89.docx) · mathpaper
-- [2021新高考Ⅰ卷.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2021/2021%E6%96%B0%E9%AB%98%E8%80%83%E2%85%A0%E5%8D%B7.docx) · mathpaper
-- [2021新高考Ⅰ卷数学真题及答案.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2021/2021%E6%96%B0%E9%AB%98%E8%80%83%E2%85%A0%E5%8D%B7%E6%95%B0%E5%AD%A6%E7%9C%9F%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88.docx) · mathpaper
+- [gaokao-2021-beijing-general-paper.pdf](../papers/2020s/gaokao-2021-beijing-general-paper.pdf)
+- [gaokao-2021-national-a-liberal-paper.pdf](../papers/2020s/gaokao-2021-national-a-liberal-paper.pdf)
+- [gaokao-2021-national-a-science-paper.pdf](../papers/2020s/gaokao-2021-national-a-science-paper.pdf)
+- [gaokao-2021-national-b-liberal-paper.pdf](../papers/2020s/gaokao-2021-national-b-liberal-paper.pdf)
+- [gaokao-2021-national-b-science-paper.pdf](../papers/2020s/gaokao-2021-national-b-science-paper.pdf)
+- [gaokao-2021-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2021-new-gaokao-1-general-paper.pdf)
+- [gaokao-2021-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2021-new-gaokao-2-general-paper.pdf)
+- [gaokao-2021-shanghai-general-paper.pdf](../papers/2020s/gaokao-2021-shanghai-general-paper.pdf)
+- [gaokao-2021-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2021-shanghai-general-spring-paper.pdf)
+- [gaokao-2021-tianjin-general-paper.pdf](../papers/2020s/gaokao-2021-tianjin-general-paper.pdf)
+- [gaokao-2021-zhejiang-general-paper.pdf](../papers/2020s/gaokao-2021-zhejiang-general-paper.pdf)
 
 ## 2022 年数学资料
 
-- [svsu2022level1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/svsu2022level1/svsu2022level1.tex) · daxmate-math
-- [svsu2022level2.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/daxmate-math/svsu2022level2/svsu2022level2.tex) · daxmate-math
-- [01.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/01.md) · gaokao-math-corpus
-- [02.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/02.md) · gaokao-math-corpus
-- [03.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/03.md) · gaokao-math-corpus
-- [04.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/04.md) · gaokao-math-corpus
-- [05.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/05.md) · gaokao-math-corpus
-- [06.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/06.md) · gaokao-math-corpus
-- [07.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/07.md) · gaokao-math-corpus
-- [08.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/08.md) · gaokao-math-corpus
-- [09.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/09.md) · gaokao-math-corpus
-- [10.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/10.md) · gaokao-math-corpus
-- [11.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/11.md) · gaokao-math-corpus
-- [12.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/12.md) · gaokao-math-corpus
-- [13.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/13.md) · gaokao-math-corpus
-- [14.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/14.md) · gaokao-math-corpus
-- [15.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/15.md) · gaokao-math-corpus
-- [16.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/16.md) · gaokao-math-corpus
-- [17.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/17.md) · gaokao-math-corpus
-- [18.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/18.md) · gaokao-math-corpus
-- [19.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/19.md) · gaokao-math-corpus
-- [20.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/20.md) · gaokao-math-corpus
-- [21.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/21.md) · gaokao-math-corpus
-- [22.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/items/22.md) · gaokao-math-corpus
-- [paper.yml](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/I/paper.yml) · gaokao-math-corpus
-- [01.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/01.md) · gaokao-math-corpus
-- [02.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/02.md) · gaokao-math-corpus
-- [03.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/03.md) · gaokao-math-corpus
-- [04.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/04.md) · gaokao-math-corpus
-- [05.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/05.md) · gaokao-math-corpus
-- [06.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/06.md) · gaokao-math-corpus
-- [07.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/07.md) · gaokao-math-corpus
-- [08.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/08.md) · gaokao-math-corpus
-- [09.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/09.md) · gaokao-math-corpus
-- [10.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/10.md) · gaokao-math-corpus
-- [11.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/11.md) · gaokao-math-corpus
-- [12.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/12.md) · gaokao-math-corpus
-- [13.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/13.md) · gaokao-math-corpus
-- [14.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/14.md) · gaokao-math-corpus
-- [15.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/15.md) · gaokao-math-corpus
-- [16.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/16.md) · gaokao-math-corpus
-- [17.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/17.md) · gaokao-math-corpus
-- [18.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/18.md) · gaokao-math-corpus
-- [19.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/19.md) · gaokao-math-corpus
-- [20.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/20.md) · gaokao-math-corpus
-- [21.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/21.md) · gaokao-math-corpus
-- [22.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/items/22.md) · gaokao-math-corpus
-- [paper.yml](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2022/II/paper.yml) · gaokao-math-corpus
-- [beijing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/beijing.tex) · gaokao-math-problems-compilation
-- [national_paper_a_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/national_paper_a_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_a_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/national_paper_a_science.tex) · gaokao-math-problems-compilation
-- [national_paper_b_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/national_paper_b_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_b_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/national_paper_b_science.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/new_gaokao_paper_1.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_2.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/new_gaokao_paper_2.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/tianjin.tex) · gaokao-math-problems-compilation
-- [zhejiang.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2022/zhejiang.tex) · gaokao-math-problems-compilation
-- [2022.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2022.tex) · gaokao-math-problems-compilation
-- [gaokao-2022-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2022-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2022-shanghai-general-paper.pdf](../papers/2020s/gaokao-2022-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2022-national-b-liberal-paper.pdf](../papers/2020s/gaokao-2022-national-b-liberal-paper.pdf) · gaokaomath
-- [gaokao-2022-national-b-science-paper.pdf](../papers/2020s/gaokao-2022-national-b-science-paper.pdf) · gaokaomath
-- [gaokao-2022-national-a-liberal-paper.pdf](../papers/2020s/gaokao-2022-national-a-liberal-paper.pdf) · gaokaomath
-- [gaokao-2022-national-a-science-paper.pdf](../papers/2020s/gaokao-2022-national-a-science-paper.pdf) · gaokaomath
-- [gaokao-2022-beijing-general-paper.pdf](../papers/2020s/gaokao-2022-beijing-general-paper.pdf) · gaokaomath
-- [gaokao-2022-tianjin-general-paper.pdf](../papers/2020s/gaokao-2022-tianjin-general-paper.pdf) · gaokaomath
-- [gaokao-2022-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2022-new-gaokao-1-general-paper.pdf) · gaokaomath
-- [gaokao-2022-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2022-new-gaokao-2-general-paper.pdf) · gaokaomath
-- [gaokao-2022-zhejiang-general-paper.pdf](../papers/2020s/gaokao-2022-zhejiang-general-paper.pdf) · gaokaomath
-- [2022-SNE-2W.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2022/2022-SNE-2W.tex) · mathpaper
-- [2022新高考Ⅰ卷.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2022/2022%E6%96%B0%E9%AB%98%E8%80%83%E2%85%A0%E5%8D%B7.docx) · mathpaper
-- [（网络收集版）2022年全国乙卷理综高考真题文档版（原卷）.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2022/%EF%BC%88%E7%BD%91%E7%BB%9C%E6%94%B6%E9%9B%86%E7%89%88%EF%BC%892022%E5%B9%B4%E5%85%A8%E5%9B%BD%E4%B9%99%E5%8D%B7%E7%90%86%E7%BB%BC%E9%AB%98%E8%80%83%E7%9C%9F%E9%A2%98%E6%96%87%E6%A1%A3%E7%89%88%EF%BC%88%E5%8E%9F%E5%8D%B7%EF%BC%89.docx) · mathpaper
-- [（网络收集版）2022年全国乙卷理综高考真题文档版（答案）.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/Gaokao/2022/%EF%BC%88%E7%BD%91%E7%BB%9C%E6%94%B6%E9%9B%86%E7%89%88%EF%BC%892022%E5%B9%B4%E5%85%A8%E5%9B%BD%E4%B9%99%E5%8D%B7%E7%90%86%E7%BB%BC%E9%AB%98%E8%80%83%E7%9C%9F%E9%A2%98%E6%96%87%E6%A1%A3%E7%89%88%EF%BC%88%E7%AD%94%E6%A1%88%EF%BC%89.docx) · mathpaper
-- [2022-05-15-解三角形.docx](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/mathpaper/%E4%B8%93%E9%A2%98/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/2022-05-15-%E8%A7%A3%E4%B8%89%E8%A7%92%E5%BD%A2.docx) · mathpaper
+- [gaokao-2022-beijing-general-paper.pdf](../papers/2020s/gaokao-2022-beijing-general-paper.pdf)
+- [gaokao-2022-national-a-liberal-paper.pdf](../papers/2020s/gaokao-2022-national-a-liberal-paper.pdf)
+- [gaokao-2022-national-a-science-paper.pdf](../papers/2020s/gaokao-2022-national-a-science-paper.pdf)
+- [gaokao-2022-national-b-liberal-paper.pdf](../papers/2020s/gaokao-2022-national-b-liberal-paper.pdf)
+- [gaokao-2022-national-b-science-paper.pdf](../papers/2020s/gaokao-2022-national-b-science-paper.pdf)
+- [gaokao-2022-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2022-new-gaokao-1-general-paper.pdf)
+- [gaokao-2022-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2022-new-gaokao-2-general-paper.pdf)
+- [gaokao-2022-shanghai-general-paper.pdf](../papers/2020s/gaokao-2022-shanghai-general-paper.pdf)
+- [gaokao-2022-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2022-shanghai-general-spring-paper.pdf)
+- [gaokao-2022-tianjin-general-paper.pdf](../papers/2020s/gaokao-2022-tianjin-general-paper.pdf)
+- [gaokao-2022-zhejiang-general-paper.pdf](../papers/2020s/gaokao-2022-zhejiang-general-paper.pdf)
 
 ## 2023 年数学资料
 
-- [01.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/01.md) · gaokao-math-corpus
-- [02.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/02.md) · gaokao-math-corpus
-- [03.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/03.md) · gaokao-math-corpus
-- [04.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/04.md) · gaokao-math-corpus
-- [05.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/05.md) · gaokao-math-corpus
-- [06.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/06.md) · gaokao-math-corpus
-- [07.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/07.md) · gaokao-math-corpus
-- [08.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/08.md) · gaokao-math-corpus
-- [09.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/09.md) · gaokao-math-corpus
-- [10.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/10.md) · gaokao-math-corpus
-- [11.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/11.md) · gaokao-math-corpus
-- [12.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/12.md) · gaokao-math-corpus
-- [13.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/13.md) · gaokao-math-corpus
-- [14.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/14.md) · gaokao-math-corpus
-- [15.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/15.md) · gaokao-math-corpus
-- [16.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/16.md) · gaokao-math-corpus
-- [17.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/17.md) · gaokao-math-corpus
-- [18.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/18.md) · gaokao-math-corpus
-- [19.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/19.md) · gaokao-math-corpus
-- [20.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/20.md) · gaokao-math-corpus
-- [21.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/21.md) · gaokao-math-corpus
-- [22.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/items/22.md) · gaokao-math-corpus
-- [paper.yml](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/I/paper.yml) · gaokao-math-corpus
-- [01.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/01.md) · gaokao-math-corpus
-- [02.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/02.md) · gaokao-math-corpus
-- [03.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/03.md) · gaokao-math-corpus
-- [04.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/04.md) · gaokao-math-corpus
-- [05.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/05.md) · gaokao-math-corpus
-- [06.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/06.md) · gaokao-math-corpus
-- [07.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/07.md) · gaokao-math-corpus
-- [08.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/08.md) · gaokao-math-corpus
-- [09.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/09.md) · gaokao-math-corpus
-- [10.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/10.md) · gaokao-math-corpus
-- [11.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/11.md) · gaokao-math-corpus
-- [12.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/12.md) · gaokao-math-corpus
-- [13.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/13.md) · gaokao-math-corpus
-- [14.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/14.md) · gaokao-math-corpus
-- [15.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/15.md) · gaokao-math-corpus
-- [16.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/16.md) · gaokao-math-corpus
-- [17.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/17.md) · gaokao-math-corpus
-- [18.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/18.md) · gaokao-math-corpus
-- [19.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/19.md) · gaokao-math-corpus
-- [20.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/20.md) · gaokao-math-corpus
-- [21.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/21.md) · gaokao-math-corpus
-- [22.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/items/22.md) · gaokao-math-corpus
-- [paper.yml](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2023/II/paper.yml) · gaokao-math-corpus
-- [beijing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/beijing.tex) · gaokao-math-problems-compilation
-- [national_paper_a_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/national_paper_a_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_a_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/national_paper_a_science.tex) · gaokao-math-problems-compilation
-- [national_paper_b_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/national_paper_b_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_b_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/national_paper_b_science.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/new_gaokao_paper_1.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_2.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/new_gaokao_paper_2.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2023/tianjin.tex) · gaokao-math-problems-compilation
-- [2023.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2023.tex) · gaokao-math-problems-compilation
-- [gaokao-2023-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2023-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2023-shanghai-general-paper.pdf](../papers/2020s/gaokao-2023-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2023-national-b-liberal-paper.pdf](../papers/2020s/gaokao-2023-national-b-liberal-paper.pdf) · gaokaomath
-- [gaokao-2023-national-b-science-paper.pdf](../papers/2020s/gaokao-2023-national-b-science-paper.pdf) · gaokaomath
-- [gaokao-2023-national-a-liberal-paper.pdf](../papers/2020s/gaokao-2023-national-a-liberal-paper.pdf) · gaokaomath
-- [gaokao-2023-national-a-science-paper.pdf](../papers/2020s/gaokao-2023-national-a-science-paper.pdf) · gaokaomath
-- [gaokao-2023-beijing-general-paper.pdf](../papers/2020s/gaokao-2023-beijing-general-paper.pdf) · gaokaomath
-- [gaokao-2023-tianjin-general-paper.pdf](../papers/2020s/gaokao-2023-tianjin-general-paper.pdf) · gaokaomath
-- [gaokao-2023-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2023-new-gaokao-1-general-paper.pdf) · gaokaomath
-- [gaokao-2023-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2023-new-gaokao-2-general-paper.pdf) · gaokaomath
+- [gaokao-2023-beijing-general-paper.pdf](../papers/2020s/gaokao-2023-beijing-general-paper.pdf)
+- [gaokao-2023-national-a-liberal-paper.pdf](../papers/2020s/gaokao-2023-national-a-liberal-paper.pdf)
+- [gaokao-2023-national-a-science-paper.pdf](../papers/2020s/gaokao-2023-national-a-science-paper.pdf)
+- [gaokao-2023-national-b-liberal-paper.pdf](../papers/2020s/gaokao-2023-national-b-liberal-paper.pdf)
+- [gaokao-2023-national-b-science-paper.pdf](../papers/2020s/gaokao-2023-national-b-science-paper.pdf)
+- [gaokao-2023-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2023-new-gaokao-1-general-paper.pdf)
+- [gaokao-2023-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2023-new-gaokao-2-general-paper.pdf)
+- [gaokao-2023-shanghai-general-paper.pdf](../papers/2020s/gaokao-2023-shanghai-general-paper.pdf)
+- [gaokao-2023-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2023-shanghai-general-spring-paper.pdf)
+- [gaokao-2023-tianjin-general-paper.pdf](../papers/2020s/gaokao-2023-tianjin-general-paper.pdf)
 
 ## 2024 年数学资料
 
-- [20240608-1.pdf](../topics/gaokao-typeset/20240608-1.pdf) · 2024-china-gaokao-math
-- [20240608-2.pdf](../topics/gaokao-typeset/20240608-2.pdf) · 2024-china-gaokao-math
-- [topic-gaokao-typeset-2024-new-gaokao-1-paper.pdf](../topics/gaokao-typeset/topic-gaokao-typeset-2024-new-gaokao-1-paper.pdf) · 2024-china-gaokao-math
-- [topic-gaokao-typeset-2024-new-gaokao-1-paper.tex](../topics/gaokao-typeset/topic-gaokao-typeset-2024-new-gaokao-1-paper.tex) · 2024-china-gaokao-math
-- [01.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/01.md) · gaokao-math-corpus
-- [02.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/02.md) · gaokao-math-corpus
-- [03.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/03.md) · gaokao-math-corpus
-- [04.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/04.md) · gaokao-math-corpus
-- [05.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/05.md) · gaokao-math-corpus
-- [06.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/06.md) · gaokao-math-corpus
-- [07.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/07.md) · gaokao-math-corpus
-- [08.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/08.md) · gaokao-math-corpus
-- [09.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/09.md) · gaokao-math-corpus
-- [10.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/10.md) · gaokao-math-corpus
-- [11.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/11.md) · gaokao-math-corpus
-- [12.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/12.md) · gaokao-math-corpus
-- [13.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/13.md) · gaokao-math-corpus
-- [14.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/14.md) · gaokao-math-corpus
-- [15.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/15.md) · gaokao-math-corpus
-- [16.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/16.md) · gaokao-math-corpus
-- [17.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/17.md) · gaokao-math-corpus
-- [18.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/18.md) · gaokao-math-corpus
-- [19.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/items/19.md) · gaokao-math-corpus
-- [paper.yml](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/I/paper.yml) · gaokao-math-corpus
-- [01.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/01.md) · gaokao-math-corpus
-- [02.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/02.md) · gaokao-math-corpus
-- [03.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/03.md) · gaokao-math-corpus
-- [04.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/04.md) · gaokao-math-corpus
-- [05.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/05.md) · gaokao-math-corpus
-- [06.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/06.md) · gaokao-math-corpus
-- [07.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/07.md) · gaokao-math-corpus
-- [08.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/08.md) · gaokao-math-corpus
-- [09.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/09.md) · gaokao-math-corpus
-- [10.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/10.md) · gaokao-math-corpus
-- [11.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/11.md) · gaokao-math-corpus
-- [12.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/12.md) · gaokao-math-corpus
-- [13.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/13.md) · gaokao-math-corpus
-- [14.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/14.md) · gaokao-math-corpus
-- [15.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/15.md) · gaokao-math-corpus
-- [16.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/16.md) · gaokao-math-corpus
-- [17.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/17.md) · gaokao-math-corpus
-- [18.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/18.md) · gaokao-math-corpus
-- [19.md](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/items/19.md) · gaokao-math-corpus
-- [paper.yml](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-corpus/corpus/papers/2024/II/paper.yml) · gaokao-math-corpus
-- [beijing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2024/beijing.tex) · gaokao-math-problems-compilation
-- [national_paper_a_liberal.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2024/national_paper_a_liberal.tex) · gaokao-math-problems-compilation
-- [national_paper_a_science.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2024/national_paper_a_science.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2024/new_gaokao_paper_1.tex) · gaokao-math-problems-compilation
-- [new_gaokao_paper_2.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2024/new_gaokao_paper_2.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2024/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2024/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2024/tianjin.tex) · gaokao-math-problems-compilation
-- [2024.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2024.tex) · gaokao-math-problems-compilation
-- [gaokao-2024-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2024-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2024-shanghai-general-paper.pdf](../papers/2020s/gaokao-2024-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2024-national-liberal-paper.pdf](../papers/2020s/gaokao-2024-national-liberal-paper.pdf) · gaokaomath
-- [gaokao-2024-national-science-paper.pdf](../papers/2020s/gaokao-2024-national-science-paper.pdf) · gaokaomath
-- [gaokao-2024-beijing-general-paper.pdf](../papers/2020s/gaokao-2024-beijing-general-paper.pdf) · gaokaomath
-- [gaokao-2024-tianjin-general-paper.pdf](../papers/2020s/gaokao-2024-tianjin-general-paper.pdf) · gaokaomath
-- [gaokao-2024-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2024-new-gaokao-1-general-paper.pdf) · gaokaomath
-- [gaokao-2024-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2024-new-gaokao-2-general-paper.pdf) · gaokaomath
+- [gaokao-2024-beijing-general-paper.pdf](../papers/2020s/gaokao-2024-beijing-general-paper.pdf)
+- [gaokao-2024-national-liberal-paper.pdf](../papers/2020s/gaokao-2024-national-liberal-paper.pdf)
+- [gaokao-2024-national-science-paper.pdf](../papers/2020s/gaokao-2024-national-science-paper.pdf)
+- [gaokao-2024-new-gaokao-1-general-paper.pdf](../papers/2020s/gaokao-2024-new-gaokao-1-general-paper.pdf)
+- [gaokao-2024-new-gaokao-2-general-paper.pdf](../papers/2020s/gaokao-2024-new-gaokao-2-general-paper.pdf)
+- [gaokao-2024-shanghai-general-paper.pdf](../papers/2020s/gaokao-2024-shanghai-general-paper.pdf)
+- [gaokao-2024-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2024-shanghai-general-spring-paper.pdf)
+- [gaokao-2024-tianjin-general-paper.pdf](../papers/2020s/gaokao-2024-tianjin-general-paper.pdf)
 
 ## 2025 年数学资料
 
-- [beijing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2025/beijing.tex) · gaokao-math-problems-compilation
-- [national_paper_1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2025/national_paper_1.tex) · gaokao-math-problems-compilation
-- [national_paper_2.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2025/national_paper_2.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2025/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2025/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2025/tianjin.tex) · gaokao-math-problems-compilation
-- [2025.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2025.tex) · gaokao-math-problems-compilation
-- [gaokao-2025-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2025-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2025-shanghai-general-paper.pdf](../papers/2020s/gaokao-2025-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2025-national-1-general-paper.pdf](../papers/2020s/gaokao-2025-national-1-general-paper.pdf) · gaokaomath
-- [gaokao-2025-national-2-general-paper.pdf](../papers/2020s/gaokao-2025-national-2-general-paper.pdf) · gaokaomath
-- [gaokao-2025-beijing-general-paper.pdf](../papers/2020s/gaokao-2025-beijing-general-paper.pdf) · gaokaomath
-- [gaokao-2025-tianjin-general-paper.pdf](../papers/2020s/gaokao-2025-tianjin-general-paper.pdf) · gaokaomath
+- [gaokao-2025-beijing-general-paper.pdf](../papers/2020s/gaokao-2025-beijing-general-paper.pdf)
+- [gaokao-2025-national-1-general-paper.pdf](../papers/2020s/gaokao-2025-national-1-general-paper.pdf)
+- [gaokao-2025-national-2-general-paper.pdf](../papers/2020s/gaokao-2025-national-2-general-paper.pdf)
+- [gaokao-2025-shanghai-general-paper.pdf](../papers/2020s/gaokao-2025-shanghai-general-paper.pdf)
+- [gaokao-2025-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2025-shanghai-general-spring-paper.pdf)
+- [gaokao-2025-tianjin-general-paper.pdf](../papers/2020s/gaokao-2025-tianjin-general-paper.pdf)
 
 ## 2026 年数学资料
 
-- [2026北京高考真题数学.pdf](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/first-round-review/chapters/examination/%E5%8C%97%E4%BA%AC%E9%AB%98%E8%80%83202606/2026%E5%8C%97%E4%BA%AC%E9%AB%98%E8%80%83%E7%9C%9F%E9%A2%98%E6%95%B0%E5%AD%A6.pdf) · first-round-review
-- [beijing.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2026/beijing.tex) · gaokao-math-problems-compilation
-- [national_paper_1.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2026/national_paper_1.tex) · gaokao-math-problems-compilation
-- [national_paper_2.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2026/national_paper_2.tex) · gaokao-math-problems-compilation
-- [shanghai.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2026/shanghai.tex) · gaokao-math-problems-compilation
-- [shanghai_spring.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2026/shanghai_spring.tex) · gaokao-math-problems-compilation
-- [tianjin.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/content/2026/tianjin.tex) · gaokao-math-problems-compilation
-- [2026.tex](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/full-source-archive/mirror/gaokao-math-problems-compilation/index/2026.tex) · gaokao-math-problems-compilation
-- [gaokao-2026-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2026-shanghai-general-spring-paper.pdf) · gaokaomath
-- [gaokao-2026-shanghai-general-paper.pdf](../papers/2020s/gaokao-2026-shanghai-general-paper.pdf) · gaokaomath
-- [gaokao-2026-national-1-general-paper.pdf](../papers/2020s/gaokao-2026-national-1-general-paper.pdf) · gaokaomath
-- [gaokao-2026-national-2-general-paper.pdf](../papers/2020s/gaokao-2026-national-2-general-paper.pdf) · gaokaomath
-- [gaokao-2026-beijing-general-paper.pdf](../papers/2020s/gaokao-2026-beijing-general-paper.pdf) · gaokaomath
-- [gaokao-2026-tianjin-general-paper.pdf](../papers/2020s/gaokao-2026-tianjin-general-paper.pdf) · gaokaomath
+- [gaokao-2026-beijing-general-paper.pdf](../papers/2020s/gaokao-2026-beijing-general-paper.pdf)
+- [gaokao-2026-national-1-general-paper.pdf](../papers/2020s/gaokao-2026-national-1-general-paper.pdf)
+- [gaokao-2026-national-2-general-paper.pdf](../papers/2020s/gaokao-2026-national-2-general-paper.pdf)
+- [gaokao-2026-shanghai-general-paper.pdf](../papers/2020s/gaokao-2026-shanghai-general-paper.pdf)
+- [gaokao-2026-shanghai-general-spring-paper.pdf](../papers/2020s/gaokao-2026-shanghai-general-spring-paper.pdf)
+- [gaokao-2026-tianjin-general-paper.pdf](../papers/2020s/gaokao-2026-tianjin-general-paper.pdf)
 
