@@ -1,55 +1,43 @@
-name: Build reviewed LaTeX PDFs (manual)
-
+name: Build merged reviewed mathematics PDF
 on:
   workflow_dispatch:
-
+  push:
+    paths:
+      - 'derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex'
+      - '.github/workflows/build-reviewed-pdfs.yml'
 permissions:
   contents: write
-
+concurrency:
+  group: gaokao-reviewed-solutions-pdf
+  cancel-in-progress: false
 jobs:
-  xelatex:
+  compile:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           persist-credentials: true
           fetch-depth: 1
-      - name: Compile independent solutions using XeLaTeX
+      - name: Compile merged XeLaTeX source
         uses: xu-cheng/latex-action@v4
         with:
           os: debian
-          root_file: |
-            derivative/reviewed/gaokao-2010-anhui-liberal-q20-solution.tex
-            derivative/reviewed/gaokao-2010-beijing-science-q18-solution.tex
-            derivative/reviewed/gaokao-2011-anhui-derivative-common-solution.tex
-            derivative/reviewed/gaokao-2013-fujian-science-q17-solution.tex
-            derivative/reviewed/gaokao-2014-anhui-common-q-solution.tex
-            derivative/reviewed/gaokao-2014-chongqing-liberal-q19-solution.tex
-            derivative/reviewed/gaokao-2019-national2-liberal-q21-solution.tex
-            derivative/reviewed/gaokao-2023-beijing-q20-solution.tex
-            derivative/reviewed/gaokao-2023-national-b-liberal-q20-solution.tex
-            derivative/reviewed/gaokao-2023-new-gaokao-1-q19-solution.tex
-            derivative/reviewed/gaokao-2024-two-proofs-solution.tex
-            derivative/reviewed/gaokao-2025-national2-q18-solution.tex
-            derivative/reviewed/gaokao-2025-shanghai-q19-solution.tex
+          root_file: derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex
           latexmk_use_xelatex: true
           continue_on_error: false
-      - name: Verify PDF completeness and push to repository
+      - name: Check output and publish paired PDF
         shell: bash
         run: |
           set -euo pipefail
-          for tex in derivative/reviewed/*.tex; do
-            pdf="${tex%.tex}.pdf"
-            test -s "$pdf" || { echo "PDF missing: $pdf"; exit 1; }
-          done
+          pdf="derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.pdf"
+          test -s "$pdf"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f derivative/reviewed/*.pdf
+          git add -f -- "$pdf"
           if ! git diff --cached --quiet; then
-            git commit -m 'build: publish verified-solution PDFs [skip ci]'
+            git commit -m "build: publish merged reviewed solution PDF [skip ci]"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
-          else
-            echo 'All reviewed PDF files unchanged'
           fi
