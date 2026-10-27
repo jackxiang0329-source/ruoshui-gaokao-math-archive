@@ -6,7 +6,7 @@
 - **确认是不同变式**：1 组（保留为两道不同题）。
 - **待进一步审核**：14 组（不自动合并）。
 
-[完整机器可读核查表](reviewed_problem_groups.csv) · [原有独立核查说明](../index/DUPLICATE_AUDIT.md)
+[完整机器可读核查表](reviewed_problem_groups.csv) · [历史独立核验说明](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/snapshot-before-lean-metadata-20261027/index/DUPLICATE_AUDIT.md)
 
 ## 已确认同题
 
@@ -40,4 +40,4 @@
 - 2014-sichuan-common — [2014-sichuan_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_science.tex#L840) / [2014-sichuan_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_liberal.tex#L442)
 - 2016-national1-derivative-variant — [2016-national_paper_1_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_science.tex#L633) / [2016-national_paper_1_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_liberal.tex#L400)
 
-原题与 PDF 原件均位于 mirror/，绝不因为本索引去重而覆盖或清除；合并仅发生于后续组卷/检索时的**统一题号**。
+原题与 PDF 的完整上游原件保存在 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive) 的 `mirror/` 目录，绝不因为本索引去重而覆盖或清除；合并仅发生于后续组卷/检索时的**统一题号**。

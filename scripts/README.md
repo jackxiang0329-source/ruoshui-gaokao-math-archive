@@ -8,7 +8,7 @@
 - `python3 scripts/build_catalog_fast.py`：从 `full-source-archive` 生成 `catalog/` 搜索索引，已发布资源指向 `papers/` 与 `topics/`。
 - `python3 scripts/verify_source_snapshot.py`：严格核对固定来源的原始 Git Tree SHA。
 
-GitHub Actions 每 30 分钟检查固定快照与索引，实际编译与数学内容核验是不同流程。历史全量导入/子模块脚本仍保留以便需要时使用，但不能把它们产生的历史状态当作当前主分支状态。
+GitHub Actions 每 30 分钟检查固定快照与索引，实际编译与数学内容核验是不同流程。旧全量导入/子模块脚本仅供历史恢复，当前 `main` 不再提供会重新写入旧索引和上游目录的手动同步工作流。不要在精简版主分支运行这些旧脚本；如需恢复原有工程，请从 `full-source-archive` 或 [整理前快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027) 建立独立工作分支。
 
 ## 主分支瘦身约定
 

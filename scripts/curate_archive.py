@@ -273,7 +273,7 @@ def curate(ref,output,limit=1200):
     lines.extend(["","## 相似内容等待人工复核","",
                   f"- [正文相似：{sim_total} 对候选](similar_review.csv)（展示前 {len(sim)} 对）",
                   f"- [PDF/DOC 文件名相似：{len(names)} 对候选](filename_review.csv)",
-                  "- [现有导数题逐题重复核查](../index/DUPLICATE_AUDIT.md)","",
+                  "- [历史独立核验说明](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/snapshot-before-lean-metadata-20261027/index/DUPLICATE_AUDIT.md)","",
                   "## 原则","",
                   "相同 SHA 自动折叠为同一导航入口；规范化后正文相同则折叠文本导航并记录原件出处。",
                   "内容高度相似只进入复核清单，不擅自认定同题，更不删除答案、图片或源仓库。",

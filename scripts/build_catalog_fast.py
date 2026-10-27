@@ -222,7 +222,7 @@ def main():
     lines += ["", "## 题目级去重与相似题复核", "",
               "- [6 组已经独立确认的同题合并索引、1 组明确不同变式及 14 组待审](QUESTION_DEDUP.md)",
               "- [完整题目级核查表](reviewed_problem_groups.csv)",
-              "- [原始人工核验记录](../index/DUPLICATE_AUDIT.md)", "",
+              "- [历史独立核验说明](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/snapshot-before-lean-metadata-20261027/index/DUPLICATE_AUDIT.md)", "",
               "**注意**：文件内容高度相似并不等于题目条件完全一致。"
               "没有经过题干逐问验证的内容不直接合并。", "",
               "本目录由 GitHub Actions 每 30 分钟检查并重建；"
