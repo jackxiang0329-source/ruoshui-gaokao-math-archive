@@ -4,8 +4,8 @@
   "summary": {
     "groups": 21,
     "confirmed_same_problem": 8,
-    "confirmed_variant": 6,
-    "unverified": 7,
+    "confirmed_variant": 8,
+    "unverified": 5,
     "grouped_source_records": 42
   },
   "groups": [
@@ -123,7 +123,7 @@
     },
     {
       "duplicate_group": "2012-beijing-derivative-variant",
-      "status": "unverified",
+      "status": "confirmed_variant",
       "n_records": 2,
       "member_ids": [
         "2012-beijing_science-q18",
@@ -133,7 +133,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_science.tex#L482",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_liberal.tex#L378"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "固定上游北京文理第18题首问同为 f(x)=ax²+1、g(x)=x³+bx 在 x=1 公切求 a,b；理科第二问另设 a²=4b，求 f+g 单调区间及 (-∞,-1] 最大值，文科第二问设 a=3,b=-9，求 [k,2] 最大值为28时 k 的范围。第二问参数条件与问题完全不同，不能合并。"
     },
     {
       "duplicate_group": "2012-guangdong-variant",
@@ -249,7 +249,7 @@
     },
     {
       "duplicate_group": "2016-national1-derivative-variant",
-      "status": "unverified",
+      "status": "confirmed_variant",
       "n_records": 2,
       "member_ids": [
         "2016-national_paper_1_science-q21",
@@ -259,7 +259,7 @@
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_science.tex#L633",
         "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_liberal.tex#L400"
       ],
-      "evidence": "基于题目主题和卷别的疑似重复/变式，尚未逐小问核对全部原题"
+      "evidence": "固定上游全国Ⅰ卷文理第21题都涉及 f(x)=(x−2)e^x+a(x−1)²；理科前提两零点，先求 a>0，再证明两零点 x₁+x₂<2；文科先按 a 讨论单调性，再求两零点参数范围 a>0，不要求两零点位置关系。后续小问不同，属于明确变式。"
     },
     {
       "duplicate_group": "2017-beijing-derivative-common",

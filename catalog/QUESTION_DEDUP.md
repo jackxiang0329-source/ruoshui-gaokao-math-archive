@@ -3,8 +3,8 @@
 **这里进行题目级别的人工核查结果汇总，而不是仅比对文件名和整个 PDF 的哈希。** 原试卷与答案都保留，每组明确记录文理卷、年份、题号及其来源。
 
 - **确认同一题**：8 组（每组两个来源，导航合并但不删除原题）。
-- **确认是不同变式**：6 组（保留为两道不同题）。
-- **待进一步审核**：7 组（不自动合并）。
+- **确认是不同变式**：8 组（保留为两道不同题）。
+- **待进一步审核**：5 组（不自动合并）。
 
 [完整机器可读核查表](reviewed_problem_groups.csv) · [历史独立核验说明](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/blob/snapshot-before-lean-metadata-20261027/index/DUPLICATE_AUDIT.md)
 
@@ -35,14 +35,15 @@
 - **2013-sichuan-common**：[2013-sichuan_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_science.tex#L595) 与 [2013-sichuan_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/sichuan_liberal.tex#L484)。理科第二问要求证明最小值可达 $1$，文科仅证明 $x_2-x_1\ge1$；题目要求不完全相同。
 - **2014-sichuan-common**：[2014-sichuan_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_science.tex#L840) 与 [2014-sichuan_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/sichuan_liberal.tex#L442)。理科第二问要求完整参数范围（必要与充分），文科只要求证明必要不等式 $e-2<a<1$；题目要求不完全相同。
 
+- **2012-beijing-derivative-variant**：[2012-beijing_science-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_science.tex#L482) 与 [2012-beijing_liberal-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_liberal.tex#L378)。首问虽相同，但第二问分别为 $a^2=4b$ 下单调性与最大值、$a=3,b=-9$ 下参数区间 $k$ 的确定。 
+- **2016-national1-derivative-variant**：[2016-national_paper_1_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_science.tex#L633) 与 [2016-national_paper_1_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_liberal.tex#L400)。理科另证两零点位置关系 $x_1+x_2<2$，文科则要求按参数分类单调区间；非同一道完整题。 
+
 ## 待审核、不得直接合并
 
 - 2010-liaoning-variant — [2010-liaoning_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_science.tex#L590) / [2010-liaoning_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/liaoning_liberal.tex#L491)
 - 2010-newcurriculum-derivative-variant — [2010-new_curriculum_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/new_curriculum_science.tex#L691) / [2010-new_curriculum_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/new_curriculum_liberal.tex#L559)
 - 2010-shandong-variant — [2010-shandong_science-q22](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shandong_science.tex#L603) / [2010-shandong_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/shandong_liberal.tex#L528)
 - 2011-newcurriculum-derivative-common — [2011-new_curriculum_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_science.tex#L583) / [2011-new_curriculum_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/new_curriculum_liberal.tex#L473)
-- 2012-beijing-derivative-variant — [2012-beijing_science-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_science.tex#L482) / [2012-beijing_liberal-q18](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_liberal.tex#L378)
 - 2012-guangdong-variant — [2012-guangdong_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/guangdong_science.tex#L375) / [2012-guangdong_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/guangdong_liberal.tex#L594)
-- 2016-national1-derivative-variant — [2016-national_paper_1_science-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_science.tex#L633) / [2016-national_paper_1_liberal-q21](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_liberal.tex#L400)
 
 原题与 PDF 的完整上游原件保存在 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive) 的 `mirror/` 目录，绝不因为本索引去重而覆盖或清除；合并仅发生于后续组卷/检索时的**统一题号**。

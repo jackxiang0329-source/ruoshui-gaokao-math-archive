@@ -62,8 +62,8 @@
 | 2012 | 安徽卷理科 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/anhui_science.tex#L501) | 指数有理函数最小值与切线 | source-identified |
 | 2012 | 安徽卷文科 | [第 17 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/anhui_liberal.tex#L309) | 有理函数最小值与切线反求参数 | source-identified |
 | 2012 | 安徽卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/anhui_liberal.tex#L411) | 三角函数极小值点构成的数列 | source-identified |
-| 2012 | 北京卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_science.tex#L482) | 二次与三次函数公切线、单调及最值 | source-identified · 待复核重复组 |
-| 2012 | 北京卷文科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_liberal.tex#L378) | 二次与三次函数公切线、极值 | source-identified · 待复核重复组 |
+| 2012 | 北京卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_science.tex#L482) | 二次与三次函数公切线、单调及最值 | source-identified · 已确认变式 |
+| 2012 | 北京卷文科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/beijing_liberal.tex#L378) | 二次与三次函数公切线、极值 | source-identified · 已确认变式 |
 | 2012 | 重庆卷理科 | [第 16 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/chongqing_science.tex#L394) | 对数分式函数切线与极值 | source-identified |
 | 2012 | 重庆卷文科 | [第 17 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/chongqing_liberal.tex#L272) | 三次函数驻点参数与极值点 | source-identified |
 | 2012 | 福建卷理科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2012/fujian_science.tex#L690) | 指数二次函数切线与参数讨论 | source-identified |
@@ -149,8 +149,8 @@
 | 2016 | 北京卷理科 | [第 18 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/beijing_science.tex#L359) | 指数型函数切线反求参数与单调性 | source-identified |
 | 2016 | 北京卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/beijing_liberal.tex#L447) | 三次函数切线与三个不同零点的必要条件 | source-identified |
 | 2016 | 江苏卷 | [第 19 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/jiangsu.tex#L319) | 两指数函数不等式与参数 | source-identified |
-| 2016 | 全国Ⅰ卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_science.tex#L633) | 指数二次函数两零点与零点和不等式 | source-identified · 待复核重复组 |
-| 2016 | 全国Ⅰ卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_liberal.tex#L400) | 指数二次函数单调与两零点 | source-identified · 待复核重复组 |
+| 2016 | 全国Ⅰ卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_science.tex#L633) | 指数二次函数两零点与零点和不等式 | source-identified · 已确认变式 |
+| 2016 | 全国Ⅰ卷文科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_1_liberal.tex#L400) | 指数二次函数单调与两零点 | source-identified · 已确认变式 |
 | 2016 | 全国Ⅱ卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_2_science.tex#L695) | 指数函数单调与含参最小值 | source-identified |
 | 2016 | 全国Ⅱ卷文科 | [第 20 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_2_liberal.tex#L553) | 对数函数切线和全区间正值参数 | source-identified |
 | 2016 | 全国Ⅲ卷理科 | [第 21 题](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2016/national_paper_3_science.tex#L470) | 三角多项式导数的界与全局最值 | source-identified |
