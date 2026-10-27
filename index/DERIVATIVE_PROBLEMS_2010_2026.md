@@ -258,6 +258,6 @@
 ## 审核边界
 
 - `source-identified` 只代表题目位置及导数相关性初筛，不代表数学答案正确。
-- `math-checked` 必须有独立证明，已有成果见 [2010 安徽](../derivative/reviewed/2010-anhui-liberal-q20.md)、[2011 安徽](../derivative/reviewed/2011-anhui-derivative-common.md)、[2019 全国Ⅱ卷](../derivative/reviewed/2019-national2-liberal-q21.md)、[2024 新高考Ⅰ、Ⅱ卷](../derivative/reviewed/2024-two-proofs.md)。
+- `math-checked` 必须有独立证明，已有成果见 [2010 安徽](../derivative/reviewed/PROOFS.md#2010-anhui-liberal-q20)、[2011 安徽](../derivative/reviewed/PROOFS.md#2011-anhui-derivative-common)、[2019 全国Ⅱ卷](../derivative/reviewed/PROOFS.md#2019-national2-liberal-q21)、[2024 新高考Ⅰ、Ⅱ卷](../derivative/reviewed/PROOFS.md#2024-two-proofs)。
 - 当前多卷相同题、近似变式未跨源严格去重；总量为 `题目-卷别记录数`，不是独立原创题数。
 - 题干、插图等版权按各原来源许可；不批量复制未经核验的整卷 PDF。

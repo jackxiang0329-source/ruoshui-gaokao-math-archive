@@ -14,9 +14,10 @@
       "scope": "Upstream 2014 Anhui liberal source solution only; not a defect in the statement or science solution",
       "observation": "After f(0)=1 and f(1)=a, source liberal solution ends with an isolated '1' rather than the complete minimizing-point parameter split.",
       "correct_condition": "0<a<1 -> min at x=1; a=1 -> both x=0 and x=1; a>1 -> min at x=0.",
-      "independent_proof": "derivative/reviewed/2014-anhui-common-q.md",
+      "independent_proof": "derivative/reviewed/PROOFS.md",
       "status": "confirmed-by-comparison",
-      "upstream_modified": false
+      "upstream_modified": false,
+      "independent_proof_section": "2014-anhui-common-q"
     },
     {
       "id": "2026-10-24-national2-2025-derivative-sum-typo",
@@ -29,9 +30,10 @@
       "scope": "Upstream solution to 2025 National II Q18, derivative of g(t)=f(x1+t)-f(x1-t)",
       "observation": "An intermediate line writes g'(t)=f'(x1+t)-f'(x1-t), but the chain rule requires a PLUS sign. Subsequent source algebra actually uses the plus sign; this appears to be a local typo rather than an incorrect final inequality.",
       "correct_condition": "g'(t)=f'(x1+t)+f'(x1-t)<0 for 0<t<x1; hence x1<x2<2x1.",
-      "independent_proof": "derivative/reviewed/2025-national2-q18.md",
+      "independent_proof": "derivative/reviewed/PROOFS.md",
       "status": "confirmed-by-independent-derivation",
-      "upstream_modified": false
+      "upstream_modified": false,
+      "independent_proof_section": "2025-national2-q18"
     },
     {
       "id": "2026-10-24-beijing-2025-line-label-order",
@@ -48,9 +50,10 @@
         "https://kaosj.com/papers/2025/06/2025-beijing-gaokao-math-paper/",
         "https://www.yeyulingfeng.com/wendang/166251.html"
       ],
-      "independent_proof": "derivative/reviewed/2025-beijing-q20-transcription-audit.md",
+      "independent_proof": "derivative/reviewed/PROOFS.md",
       "status": "source-inconsistency-confirmed-original-imaging-pending",
-      "upstream_modified": false
+      "upstream_modified": false,
+      "independent_proof_section": "2025-beijing-q20-transcription-audit"
     }
   ]
 }

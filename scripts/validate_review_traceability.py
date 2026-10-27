@@ -40,7 +40,9 @@ def main() -> None:
         assert item["review_status"] == "math-checked", item["question_id"]
         assert item["source_url"] == record["source_url"], item["question_id"]
         assert item["proof_path"].endswith(".md"), item["question_id"]
-        safe_path(item["proof_path"])
+        file = safe_path(item["proof_path"])
+        assert item.get("proof_section"), item["question_id"]
+        assert "## " + item["proof_section"] in file.read_text(encoding="utf-8")
         unique_proofs.add(item["proof_path"])
     assert refs["distinct_proof_documents"] == len(unique_proofs), "proof count mismatch"
 

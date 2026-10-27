@@ -1,120 +1,136 @@
 {
   "schema_version": 1,
   "checked_count": 16,
-  "distinct_proof_documents": 13,
+  "distinct_proof_documents": 1,
   "review_policy": "math-checked means independent mathematical derivation, not compilation or full paper correctness.",
   "entries": [
     {
       "question_id": "2010-anhui_liberal-q20",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/anhui_liberal.tex#L426",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2010-anhui-liberal-q20.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2010-anhui-liberal-q20"
     },
     {
       "question_id": "2010-beijing_science-q18",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2010/beijing_science.tex#L352",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2010-beijing-science-q18.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2010-beijing-science-q18"
     },
     {
       "question_id": "2011-anhui_liberal-q18",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/anhui_liberal.tex#L447",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2011-anhui-derivative-common.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2011-anhui-derivative-common"
     },
     {
       "question_id": "2011-anhui_science-q16",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2011/anhui_science.tex#L362",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2011-anhui-derivative-common.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2011-anhui-derivative-common"
     },
     {
       "question_id": "2013-fujian_science-q17",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2013/fujian_science.tex#L356",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2013-fujian-science-q17.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2013-fujian-science-q17"
     },
     {
       "question_id": "2014-anhui_liberal-q20",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_liberal.tex#L628",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2014-anhui-common-q.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2014-anhui-common-q"
     },
     {
       "question_id": "2014-anhui_science-q18",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/anhui_science.tex#L279",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2014-anhui-common-q.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2014-anhui-common-q"
     },
     {
       "question_id": "2014-chongqing_liberal-q19",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2014/chongqing_liberal.tex#L560",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2014-chongqing-liberal-q19.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2014-chongqing-liberal-q19"
     },
     {
       "question_id": "2019-national_paper_2_liberal-q21",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2019/national_paper_2_liberal.tex#L418",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2019-national2-liberal-q21.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2019-national2-liberal-q21"
     },
     {
       "question_id": "2023-beijing-q20",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/beijing.tex#L627",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2023-beijing-q20.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2023-beijing-q20"
     },
     {
       "question_id": "2023-national_paper_b_liberal-q20",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/national_paper_b_liberal.tex#L246",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2023-national-b-liberal-q20.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2023-national-b-liberal-q20"
     },
     {
       "question_id": "2023-new_gaokao_paper_1-q19",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2023/new_gaokao_paper_1.tex#L554",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2023-new-gaokao-1-q19.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2023-new-gaokao-1-q19"
     },
     {
       "question_id": "2024-new_gaokao_paper_1-q18",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2024/new_gaokao_paper_1.tex#L537",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2024-two-proofs.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2024-two-proofs"
     },
     {
       "question_id": "2024-new_gaokao_paper_2-q16",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2024/new_gaokao_paper_2.tex#L448",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2024-two-proofs.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2024-two-proofs"
     },
     {
       "question_id": "2025-national_paper_2-q18",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/national_paper_2.tex#L496",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2025-national2-q18.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2025-national2-q18"
     },
     {
       "question_id": "2025-shanghai-q19",
       "source_url": "https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/f1ae169b58a75b3db6e35c670b3f0d5c78718188/content/2025/shanghai.tex#L381",
       "review_status": "math-checked",
-      "proof_path": "derivative/reviewed/2025-shanghai-q19.md",
-      "latex_compiled_this_round": false
+      "proof_path": "derivative/reviewed/PROOFS.md",
+      "latex_compiled_this_round": false,
+      "proof_section": "2025-shanghai-q19"
     }
   ]
 }
