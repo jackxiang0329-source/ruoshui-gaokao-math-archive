@@ -22,11 +22,11 @@
 
 ## 仓库结构
 
-- `catalog/`：**整理后的工作区**，按年份、专题浏览，并提供代表文件、别名映射与相似度复核清单。
+- `catalog/`：**整理后的工作区**，64 个年份目录合为 8 个年代卷、7 个专题合为 1 个专题卷；保留原始文件索引、别名映射与题目去重核查。
 - `derivative/`、`materials/`：独立整理及质检通过或待核验的专题资料。
 - `index/`：原有题目级索引与重复题独立核查。
 - `mirror/`、`upstream/`：历史来源镜像与子模块，**保持原件和来源路径不变**。
-- `metadata/`、`scripts/`、`tests/`：审计记录、自动整理程序和回归测试。
+- `metadata/`、`scripts/`、`tests/`：合并的历史报告、自动整理程序和回归测试。
 
 ## 自动化
 
@@ -35,3 +35,12 @@
 **审核边界**：Git SHA 相同只证明原始内容一致；高考试卷真实性、数学证明、图形、PDF 排版以及第三方素材再分发许可，都需要单独质检。
 
 原先首页的完整迁移过程已移至 [迁移、导入与质检合订历史](metadata/HISTORICAL_REPORTS.md)，避免干扰日常检索。
+
+## Markdown 文档合并说明（2026-10-27）
+
+已将本站生成的年份、专题页和重复的历史报告实质合并：仓库 Markdown 文件数从 **338 份降至 258 份**（减少 **80 份**）。
+
+- [年代合订目录](catalog/README.md) · [专题合订文档](catalog/TOPICS.md) · [旧导航页对应表](catalog/legacy_markdown_paths.csv)
+- [历史迁移审计合订](mirror/HISTORICAL_AUDITS.md) · [项目质检报告合订](metadata/HISTORICAL_REPORTS.md) · [导数分期索引合订](index/HISTORICAL_PERIOD_INDEXES.md)
+
+**不改动上游原始仓库中的 215 份 Markdown 文件**，它们属于来源文件树，包括独立题目、README 与数学素材。修改这些文件会破坏固定版本 SHA 核验；数学复核中的独立证明也继续按题保留，避免破坏溯源和 TeX 的一一对应关系。
