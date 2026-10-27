@@ -29,7 +29,7 @@ def call(*args):
                                    stderr=subprocess.PIPE)
 
 def inventory():
-    tree = call("ls-tree", "-r", "-z", "HEAD", "--", "mirror/")
+    tree = call("ls-tree", "-r", "-z", "refs/remotes/origin/full-source-archive", "--", "mirror/")
     rows = []
     for entry in tree.split(b"\0"):
         if not entry:
@@ -58,6 +58,13 @@ def topics(path):
     name = "/".join(path.split("/")[2:]).casefold()
     return [kind for kind, words in TOPICS.items()
             if any(word.casefold() in name for word in words)]
+
+def source_link(row, depth):
+    if row["ext"] in {".md", ".markdown"}:
+        return ("https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive"
+                "/blob/full-source-archive/" + quote(row["path"], safe="/"))
+    return "../" * depth + quote(row["path"], safe="/")
+
 
 def csv_file(path, fields, data):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -92,11 +99,12 @@ def main():
                  "format": r["ext"], "title": Path(r["path"]).stem,
                  "canonical_path": r["path"], "sha": r["sha"],
                  "topic_hints": ";".join(topics(r["path"])),
-                 "review_status": "unreviewed"} for r in documents]
+                 "review_status": "unreviewed",
+                 "source_url": source_link(r, 1)} for r in documents]
     DEST.mkdir(parents=True, exist_ok=True)
     csv_file(DEST / "documents.csv",
              ["year", "source", "format", "title", "canonical_path",
-              "sha", "topic_hints", "review_status"], doc_rows)
+              "sha", "topic_hints", "review_status", "source_url"], doc_rows)
     csv_file(DEST / "aliases.csv",
              ["original_path", "canonical_path", "reason", "blob_sha", "source"],
              sorted(aliases, key=lambda r: r["original_path"]))
@@ -119,8 +127,8 @@ def main():
         for year, group in year_groups:
             text.extend([f"## {year} 年数学资料", ""])
             for row in sorted(group, key=lambda r: (r["source"], r["path"])):
-                text.append("- [" + Path(row["path"]).name + "](../../" +
-                            quote(row["path"], safe="/") + ") · " + row["source"])
+                text.append("- [" + Path(row["path"]).name + "](" +
+                            source_link(row, 2) + ") · " + row["source"])
             text.append("")
             redirects.append({"old_path": f"catalog/years/{year}.md",
                               "new_path": f"catalog/periods/{period}.md",
@@ -142,8 +150,8 @@ def main():
     for tag, group in sorted(topics_map.items()):
         consolidated_topics.extend([f"## {tag}", ""])
         for row in sorted(group, key=lambda r: (r["year"], r["path"])):
-            consolidated_topics.append("- [" + Path(row["path"]).name + "](../" +
-                                       quote(row["path"], safe="/") + ") · " +
+            consolidated_topics.append("- [" + Path(row["path"]).name + "](" +
+                                       source_link(row, 1) + ") · " +
                                        (row["year"] or "未知年份") + " · " + row["source"])
         consolidated_topics.append("")
         redirects.append({"old_path": f"catalog/topics/{tag}.md",
@@ -169,11 +177,12 @@ def main():
              "year_sections": len(years), "period_volumes": len(periods),
              "topic_sections": len(topics_map), "topic_volumes": 1,
              "removed_generated_markdown_pages": len(years) + len(topics_map),
-             "merge_rule": "Exact Git blobs folded in navigation only; raw mirrors untouched"}
+             "source_branch": "full-source-archive",
+             "merge_rule": "Exact source trees are preserved on full-source-archive, while main source MD is consolidated"}
     (DEST / "stats.json").write_text(
         json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     lines = ["# 高考数学 · 统一去重目录", "",
-             "**推荐从这里查找试卷和题目。** 原始文件保持在 mirror/，此目录仅为去重导航。", "",
+             "**推荐从这里查找试卷和题目。** 全量原始文件位于 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)；上游 Markdown 在主分支合并为 [源文合订本](../archive/SOURCE_MARKDOWN.md)。", "",
              f"- 来源仓库：**{len(valid)}**",
              f"- 原始文件：**{len(rows):,}**",
              f"- 不同文件内容：**{len(duplicates):,}**",
