@@ -1,0 +1,132 @@
+{
+  "year": "2025",
+  "source_papers": 6,
+  "question_environments": 121,
+  "figures_present": true,
+  "visual_review": "pending",
+  "mathematics_review": "not_certified",
+  "pdf_pages": 18,
+  "compiled": true,
+  "pdf_QA": "passed",
+  "individual_papers": 6,
+  "all_annual_pages_accounted_for": true,
+  "papers": [
+    {
+      "source": "content/2025/national_paper_1.tex",
+      "title": "2025年全国I卷",
+      "pdf": "typeset/papers/2025/ruoshui-gaokao-2025-national_paper_1.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        1,
+        3
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 3639,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/2025/national_paper_2.tex",
+      "title": "2025年全国II卷",
+      "pdf": "typeset/papers/2025/ruoshui-gaokao-2025-national_paper_2.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        4,
+        6
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1447,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/2025/beijing.tex",
+      "title": "2025年北京卷",
+      "pdf": "typeset/papers/2025/ruoshui-gaokao-2025-beijing.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        7,
+        9
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2650,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/2025/tianjin.tex",
+      "title": "2025年天津卷",
+      "pdf": "typeset/papers/2025/ruoshui-gaokao-2025-tianjin.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        10,
+        12
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2719,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/2025/shanghai.tex",
+      "title": "2025年上海卷（秋）",
+      "pdf": "typeset/papers/2025/ruoshui-gaokao-2025-shanghai.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        13,
+        15
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1928,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/2025/shanghai_spring.tex",
+      "title": "2025年上海卷（春）",
+      "pdf": "typeset/papers/2025/ruoshui-gaokao-2025-shanghai_spring.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        16,
+        18
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1721,
+      "full_chinese_tex_embedded": true
+    }
+  ],
+  "chinese_text_QA": "passed",
+  "chinese_quality_checks": [
+    {
+      "source": "content/2025/national_paper_1.tex",
+      "pdf_chinese_chars": 834,
+      "tex_chinese_chars": 3675,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/2025/national_paper_2.tex",
+      "pdf_chinese_chars": 548,
+      "tex_chinese_chars": 1483,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/2025/beijing.tex",
+      "pdf_chinese_chars": 865,
+      "tex_chinese_chars": 2686,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/2025/tianjin.tex",
+      "pdf_chinese_chars": 578,
+      "tex_chinese_chars": 2755,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/2025/shanghai.tex",
+      "pdf_chinese_chars": 841,
+      "tex_chinese_chars": 1964,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/2025/shanghai_spring.tex",
+      "pdf_chinese_chars": 877,
+      "tex_chinese_chars": 1757,
+      "embedded_cjk_font": true
+    }
+  ]
+}
