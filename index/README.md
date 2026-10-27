@@ -1,12 +1,9 @@
-# 上游文件索引
+# 题目数据索引
 
-运行同步脚本后自动生成：
+**现行题目级数据：** [2010—2026 JSON](derivative-problems-2010-2026.json) · [CSV](derivative-problems-2010-2026.csv) · [人类可读检索](DERIVATIVE_PROBLEMS_2010_2026.md)。
 
-- `INDEX.md` — 11 个来源的 TeX、Markdown、PDF、ZIP 数量与候选命中；
-- `files.csv` — 文件级可追溯索引；
-- `derivative-candidates.csv` — 文件名包含导数相关词的候选；
-- `gaokao-candidates.csv` — 文件名带有高考、年份等的候选。
+旧的 `2010-2014`、`2015-2019`、`2020-2026` 分段 JSON/CSV 和 `2020-2022` CSV 全部是现行总表子集，因此不再重复发布。需要分段结果时，直接按 `year` 列筛选总表；独立旧件可从 Git 历史恢复。
 
-**注意：仅文件名粗筛，不代表逐题核验；完整试卷中的导数题未必能被识别。**
+早期 **2023—2026** 两份数据有历史版本差异，因此仍保留做溯源对比，**不能当作现行数学审核状态**。
 
-分年度阶段索引已合并：[导数题分期历史索引合订本](HISTORICAL_PERIOD_INDEXES.md)；现行题目级数据以 [2010—2026 导数题统一索引](DERIVATIVE_PROBLEMS_2010_2026.md) 和对应 JSON/CSV 为准。
+[历史分期 Markdown 合订](HISTORICAL_PERIOD_INDEXES.md) · [重复题人工复核](DUPLICATE_AUDIT.md) · [上游文件名候选](INDEX.md)。

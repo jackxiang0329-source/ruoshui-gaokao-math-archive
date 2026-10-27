@@ -1,5 +1,7 @@
 # 导数题分期索引：历次候选定位合订本
 
+**注意（2026-10-27）：** 原有分段的导数 JSON/CSV 索引已压缩为现行 [2010—2026 总 JSON](derivative-problems-2010-2026.json) 与 [总 CSV](derivative-problems-2010-2026.csv)，以总表按年份筛选即可恢复分段数据；历史正文中的旧文件名为当时记录。合并前独立副本可从 [整理前提交](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/26bf88293c374c40deebea8f0e6f56b6b152b3fc/index) 恢复。2023—2026 的历史异版仍另行保留，不将其误认为当前审核版本。
+
 此文件合并此前 5 份按时间范围拆开的导数题候选索引。**这些分期记录包含交叉覆盖，不能将条目数量直接相加当作独立题数。** 新查找应优先使用 [统一导数题主索引](DERIVATIVE_PROBLEMS_2010_2026.md)。
 
 ## 源文档对应表
