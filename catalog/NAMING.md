@@ -18,3 +18,12 @@
 ## 第三批：独立解答 TeX 真正合订
 
 2026-10-27 已将 13 份已经独立审核的 TeX 改为 **1 个真实合订源码**：[`derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex`](../derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex)。合订版保留正文、各题标题、原始 Git Blob SHA 与恢复入口；采用同一主文件名生成 `.pdf`。独立原件仍可从 [合订前快照分支](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-tex-merge-2026-10-27/derivative/reviewed) 恢复。此类 `merge` 映射不声称合并文件 SHA 等于某一独立源码 SHA。
+
+
+## 2026-10-27 专题资料第二阶段整理
+
+- 从 `mirror/math-lecture-notes/` 核对出 **136 组同名 TeX/PDF**，仅进行 Git Blob 不变的移位，新的路径为 `topics/<类型>/topic-<类型>-NNN.{tex,pdf}`。
+- `catalog/topic_pairs.csv` 包含 **272 条**原始路径、现路径与 SHA 一一对应关系；原本 6 组 `topics/calculus/` 不动，因此现有总计 **142 组**。
+- 上游原工程依赖的独立碎片 `.tex` 和插图不强行合并为不可编译的单文件，而是集中留在 `full-source-archive`；精简主分支不再复制镜像 `mirror/`。
+- `papers/` 的 775 份 PDF 均为不同 Git SHA；它们与单独来源的高考 TeX 尚不能直接宣称同一编译产物，不人为制造对应 `.tex`。
+- 在 `catalog/` 目录中原始 `mirror/` 路径用于溯源，实际查看原件应使用 `full-source-archive` 分支。

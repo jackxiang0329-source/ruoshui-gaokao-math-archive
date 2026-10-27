@@ -36,13 +36,19 @@ def main():
     papers = [p for p in blobs if p.startswith("papers/")]
     assert len(papers) == 775 and all(PDF.fullmatch(p) for p in papers)
     topic_files = [p for p in blobs if p.startswith("topics/") and p.endswith((".tex",".pdf"))]
-    assert len(topic_files) == 12
+    assert len(topic_files) == 284
     for p in topic_files:
         assert TOPIC.fullmatch(p)
         assert (p[:-4] + (".pdf" if p.endswith(".tex") else ".tex")) in blobs
+    with (ROOT / "catalog" / "topic_pairs.csv").open(encoding="utf-8", newline="") as fh:
+        topic_map = list(csv.DictReader(fh))
+    assert len(topic_map) == 272
+    for r in topic_map:
+        assert r["original_path"] not in blobs
+        assert blobs.get(r["canonical_path"]) == r["blob_sha"]
     assert [p for p in blobs if p.startswith("derivative/reviewed/") and p.endswith(".tex")] == [MASTER]
     assert merged_text.count("% SOURCE_ENTRY path=") == 13
-    print("PASS:",len(mapping),"provenance entries;",len(papers),"exam PDFs; 6 TeX/PDF topic pairs; 13 proof sections")
+    print("PASS:",len(mapping),"provenance entries;",len(papers),"exam PDFs; 142 TeX/PDF topic pairs; 13 proof sections")
 
 if __name__ == "__main__":
     main()

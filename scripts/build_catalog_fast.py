@@ -65,8 +65,11 @@ def published_path_mapping():
     if not path.is_file():
         return {}
     with path.open("r", encoding="utf-8-sig", newline="") as stream:
-        return {r["original_path"]: r["canonical_path"]
-                for r in csv.DictReader(stream)}
+        mapping = {r["original_path"]: r["canonical_path"]
+                   for r in csv.DictReader(stream)}
+    with (DEST / "topic_pairs.csv").open("r", encoding="utf-8", newline="") as f:
+        mapping.update({r["original_path"]: r["canonical_path"] for r in csv.DictReader(f)})
+    return mapping
 
 PUBLISHED_PATHS = published_path_mapping()
 
@@ -74,7 +77,11 @@ def source_link(row, depth):
     if row["ext"] in {".md", ".markdown"}:
         return ("https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive"
                 "/blob/full-source-archive/" + quote(row["path"], safe="/"))
-    return "../" * depth + quote(PUBLISHED_PATHS.get(row["path"], row["path"]), safe="/")
+    published = PUBLISHED_PATHS.get(row["path"])
+    if published:
+        return "../" * depth + quote(published, safe="/")
+    return ("https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive"
+            "/blob/full-source-archive/" + quote(row["path"], safe="/"))
 
 
 def csv_file(path, fields, data):

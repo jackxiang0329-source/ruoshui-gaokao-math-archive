@@ -17,7 +17,7 @@ def git(*args):
 
 def verify():
     manifest = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
-    status = json.loads(git("show", "HEAD:mirror/MIRROR_STATUS.json"))
+    status = json.loads(git("show", REF + ":mirror/MIRROR_STATUS.json"))
     records = {r["id"]: r for r in status["sources"]}
     assert len(records) == len(manifest["repositories"]) == 11
     n = 0
