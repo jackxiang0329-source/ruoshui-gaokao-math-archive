@@ -26,3 +26,10 @@
 ## 第五批：独立讲义与原地编译的真题源码
 
 另将 **2 组独立讲义 TeX/PDF** 放入专题目录（勾股定理、必修二平面向量），现专题共有 **60 组**。对 [2024 新高考Ⅰ卷 LaTeX 工程](../mirror/2024-china-gaokao-math/) 的 `main.tex/main.pdf` 实施**同目录**更名为 `gaokao-2024-new-gaokao-1-general-paper.tex/.pdf`，保留 `.jpg`、嵌入 PDF 及其它样式依赖的相对位置，避免破坏源工程。原件可在完整快照分支恢复。
+
+
+## 第六批：完整精简与中文命名合并
+
+保留此前已有的 60 对中文命名 TeX/PDF，本次增加 **82 对**独立讲义和练习，统一 `topics/<分类>/topic-<分类>-<中文主题>-guide.{tex,pdf}`。另将 2024 新高考Ⅰ卷原排版工程 TeX、PDF 及 4 件图片/嵌入资源一起移到 `topics/gaokao-typeset/`，不破坏相对图片路径。专题总数 **143 对**。
+
+原 `mirror/` 不再重复堆放在 main；全部原始文件在 `full-source-archive`。映射 CSV 的旧路径与 Git Blob SHA 始终可追踪。高考真题 `papers/` 仍有 775 份，PDF-only 不擅自配对 TeX。

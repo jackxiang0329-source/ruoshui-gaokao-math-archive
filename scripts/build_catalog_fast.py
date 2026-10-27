@@ -74,7 +74,11 @@ def source_link(row, depth):
     if row["ext"] in {".md", ".markdown"}:
         return ("https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive"
                 "/blob/full-source-archive/" + quote(row["path"], safe="/"))
-    return "../" * depth + quote(PUBLISHED_PATHS.get(row["path"], row["path"]), safe="/")
+    published = PUBLISHED_PATHS.get(row["path"])
+    if published:
+        return "../" * depth + quote(published, safe="/")
+    return ("https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive"
+            "/blob/full-source-archive/" + quote(row["path"], safe="/"))
 
 
 def csv_file(path, fields, data):
