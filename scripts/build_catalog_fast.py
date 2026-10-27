@@ -114,37 +114,40 @@ def main():
             years[row["year"]].append(row)
         for tag in topics(row["path"]):
             topics_map[tag].append(row)
-    # Merge legacy one-file-per-year pages into decade volumes.
+    # One canonical Markdown for all 64 years; keep stable anchors.
     periods = defaultdict(list)
     for year in sorted(years):
         periods[f"{int(year)//10*10}s"].append((year, years[year]))
     redirects = []
-    period_dir = DEST / "periods"
-    period_dir.mkdir(exist_ok=True)
-    for period, year_groups in sorted(periods.items()):
-        text = ["# " + period + " 高考数学资料合订目录", "",
-                "按原始 Git Blob SHA 去重；各年份条目和原来源路径完整保留。", ""]
-        for year, group in year_groups:
-            text.extend([f"## {year} 年数学资料", ""])
-            for row in sorted(group, key=lambda r: (r["source"], r["path"])):
-                text.append("- [" + Path(row["path"]).name + "](" +
-                            source_link(row, 2) + ") · " + row["source"])
-            text.append("")
-            redirects.append({"old_path": f"catalog/years/{year}.md",
-                              "new_path": f"catalog/periods/{period}.md",
-                              "anchor": f"{year}-年数学资料"})
-        (period_dir / (period + ".md")).write_text(
-            "\n".join(text) + "\n", encoding="utf-8")
-    # Detect hand-written Markdown before pruning any generated old page.
-    legacy_years = DEST / "years"
-    if legacy_years.exists():
-        for old in legacy_years.glob("*.md"):
-            old_text = old.read_text(encoding="utf-8")
-            if not re.match(r"^# (?:19|20)\d{2} 年数学资料\n", old_text):
-                raise RuntimeError("Refusing to delete non-generated year page: " + str(old))
-            old.unlink()
-        if not any(legacy_years.iterdir()):
-            legacy_years.rmdir()
+    text = ["# 1952—2026 高考数学年份总目录", "",
+            "按原始 Git Blob SHA 去重；所有年份、卷别和来源路径保留。", ""]
+    for year, group in sorted(years.items()):
+        text.extend([f"## {year} 年数学资料", ""])
+        for row in sorted(group, key=lambda r: (r["source"], r["path"])):
+            text.append("- [" + Path(row["path"]).name + "](" +
+                        source_link(row, 1) + ") · " + row["source"])
+        text.append("")
+        redirects.append({"old_path": f"catalog/years/{year}.md",
+                          "new_path": "catalog/YEAR_INDEX.md",
+                          "anchor": f"{year}-年数学资料"})
+    (DEST / "YEAR_INDEX.md").write_text(
+        "\n".join(text) + "\n", encoding="utf-8")
+    # Only purge old generated year/decade navigations; reject edited files.
+    for old_dir, pattern in [
+        (DEST / "years", r"^# (?:19|20)\d{2} 年数学资料\n"),
+        (DEST / "periods", r"^# (?:19|20)\d{2}s 高考数学资料合订目录\n"),
+    ]:
+        if old_dir.exists():
+            for old in old_dir.glob("*.md"):
+                if not re.match(pattern, old.read_text(encoding="utf-8")):
+                    raise RuntimeError("Refusing to remove a hand-edited page: " + str(old))
+                if old_dir.name == "periods":
+                    redirects.append({"old_path": "catalog/periods/" + old.name,
+                                      "new_path": "catalog/YEAR_INDEX.md",
+                                      "anchor": ""})
+                old.unlink()
+            if not any(old_dir.iterdir()):
+                old_dir.rmdir()
     consolidated_topics = ["# 专题分类合订目录", "",
                            "只通过原文件名/路径进行初筛；不是对试卷内各题的数学审核。", ""]
     for tag, group in sorted(topics_map.items()):
@@ -174,7 +177,7 @@ def main():
              "exact_duplicate_copies": len(rows) - len(duplicates),
              "exact_duplicate_groups": sum(len(g) > 1 for g in duplicates.values()),
              "canonical_documents": len(documents),
-             "year_sections": len(years), "period_volumes": len(periods),
+             "year_sections": len(years), "period_volumes": 0, "year_index_volumes": 1,
              "topic_sections": len(topics_map), "topic_volumes": 1,
              "removed_generated_markdown_pages": len(years) + len(topics_map),
              "source_branch": "full-source-archive",
@@ -194,15 +197,15 @@ def main():
     keys = sorted(years, reverse=True)
     for i in range(0, len(keys), 10):
         lines.append(" · ".join(
-            "[" + year + "](periods/" + f"{int(year)//10*10}s" +
-            ".md#" + year + "-年数学资料)" for year in keys[i:i+10]))
+            "[" + year + "](YEAR_INDEX.md#" + year + "-年数学资料)"
+            for year in keys[i:i+10]))
         lines.append("")
     lines += ["## 按专题（合订为一份）", ""]
     for tag, group in sorted(topics_map.items()):
         lines.append("- [" + tag + "](TOPICS.md#" + tag + ") · " +
                      str(len(group)) + " 份")
     lines += ["", "[旧 Markdown 路径对应表](legacy_markdown_paths.csv) · "
-              "生成的 64 个年份页和 7 个专题页已实质合并，旧内容均按段保留。", ""]
+              "生成的 64 个年份页、8 份年代页和 7 个专题页已实质合并，旧内容均按段保留。", ""]
     lines += ["", "## 题目级去重与相似题复核", "",
               "- [6 组已经独立确认的同题合并索引、1 组明确不同变式及 14 组待审](QUESTION_DEDUP.md)",
               "- [完整题目级核查表](reviewed_problem_groups.csv)",
