@@ -2,7 +2,7 @@
 
 > 2026-10-24 基于 11 个来源项目固定提交的 Git tree 清单生成；**只按文件名筛选，未逐题数学审核**。
 
-要获取全部上游实体文件，请递归克隆本仓库： `git clone --recurse-submodules https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive.git`。
+全部固定上游实体文件应从 [full-source-archive 完整快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive) 获取。主分支只保留精简后的发布文件与索引。
 
 | 上游来源 | 类别 | TeX | MD | PDF | ZIP | 导数候选 | 高考候选 | 许可状态 |
 |---|---|---:|---:|---:|---:|---:|---:|---|

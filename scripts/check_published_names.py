@@ -6,7 +6,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = re.compile(r"papers/(\d{4})/gaokao-\1-[a-z0-9-]+-(general|science|liberal)(-spring)?-paper\.pdf")
+PDF = re.compile(r"papers/(\d{3}0)s/gaokao-(\d{4})-[a-z0-9-]+-(general|science|liberal)(-spring)?-paper\.pdf")
 TOPIC = re.compile(r"topics/[a-z0-9-]+/topic-[^\s/]+\.(tex|pdf)")
 MASTER = "derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex"
 
@@ -36,7 +36,11 @@ def main():
             assert blobs.get(new) == sha, "Changed blob: " + new
     assert merged == 26, "Expected legacy and normalized proof provenance entries"
     papers = [p for p in blobs if p.startswith("papers/")]
-    assert len(papers) == 775 and all(PDF.fullmatch(p) for p in papers)
+    assert len(papers) == 775, "Published exam PDF count changed"
+    for p in papers:
+        match = PDF.fullmatch(p)
+        assert match and (int(match.group(2)) // 10 * 10 == int(match.group(1))), "Wrong decade/year: " + p
+    assert len({blobs[p] for p in papers}) == 775, "Duplicate exam PDF blobs"
     topic_files = [p for p in blobs if p.startswith("topics/") and Path(p).name.startswith("topic-") and p.endswith((".tex",".pdf"))]
     assets = [p for p in blobs if p.startswith("topics/gaokao-typeset/20240608-")]
     assert len(assets) == 4, "2024 typeset figures and embedded PDFs must remain together"

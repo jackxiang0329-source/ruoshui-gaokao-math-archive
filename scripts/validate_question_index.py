@@ -18,7 +18,6 @@ COLUMNS = (
     "source_id", "source_path", "source_line", "upstream_commit", "source_url",
     "duplicate_group",
 )
-PARTS = ["2010-2014", "2015-2019", "2020-2026"]
 STAGES = {"source-identified", "math-checked"}
 KINDS = {"core", "application", "needs-review"}
 
@@ -57,29 +56,19 @@ def main():
     for group, members in duplicate_groups.items():
         assert len(members) >= 2, "Unpaired duplicate group: " + group
 
-    slices = []
-    for part in PARTS:
-        entries = load_json("derivative-problems-" + part + ".json")
-        for entry in entries:
-            key = entry["id"]
-            assert key in by_id, "Missing canonical ID: " + key
-            assert all(entry.get(k, "") == by_id[key].get(k, "") for k in COLUMNS), (
-                "Mismatch with canonical record: " + key
-            )
-        slices.extend(entries)
-    assert len(slices) == len(all_entries), "Partition total mismatch"
-    assert {item["id"] for item in slices} == set(by_id), "Partition IDs mismatch"
-
-    for part in ["2010-2026", *PARTS]:
-        expected = all_entries if part == "2010-2026" else load_json(
-            "derivative-problems-" + part + ".json"
+    # The three historic slices are now views of one canonical JSON/CSV,
+    # not nine drifting copies of the same underlying question records.
+    spans = [(2010, 2014), (2015, 2019), (2020, 2026)]
+    views = [[r for r in all_entries if low <= r["year"] <= high]
+             for low, high in spans]
+    assert sum(map(len, views)) == len(all_entries), "Partition coverage mismatch"
+    assert set().union(*(set(x["id"] for x in view) for view in views)) == set(by_id)
+    csv_entries = load_csv("derivative-problems-2010-2026.csv")
+    assert len(csv_entries) == len(all_entries), "Canonical CSV/JSON length mismatch"
+    for obj, row in zip(all_entries, csv_entries):
+        assert all(str(obj.get(k, "")) == row[k] for k in COLUMNS), (
+            "Canonical CSV/JSON differs for " + obj["id"]
         )
-        csv_entries = load_csv("derivative-problems-" + part + ".csv")
-        assert len(csv_entries) == len(expected), part + ": CSV length mismatch"
-        for obj, row in zip(expected, csv_entries):
-            assert all(str(obj.get(k, "")) == row[k] for k in COLUMNS), (
-                part + ": CSV/JSON mismatch for " + obj["id"]
-            )
     count = Counter(str(r["year"]) for r in all_entries)
     passed = sum(r["stage"] == "math-checked" for r in all_entries)
     print("PASS:", len(all_entries), "unique IDs,", passed, "math-checked,",

@@ -210,12 +210,9 @@ def main():
              "[完整文件索引](documents.csv) · [重复别名与出处](aliases.csv)"
              " · [自动统计](stats.json)", "",
              "## 按年份", ""]
-    keys = sorted(years, reverse=True)
-    for i in range(0, len(keys), 10):
-        lines.append(" · ".join(
-            "[" + year + "](YEAR_INDEX.md#" + year + "-年数学资料)"
-            for year in keys[i:i+10]))
-        lines.append("")
+    lines.append("[1952—2026 全部年份与卷别](YEAR_INDEX.md) · "
+                 "[查看年代分组 PDF](../papers/)")
+    lines.append("")
     lines += ["## 按专题（合订为一份）", ""]
     for tag, group in sorted(topics_map.items()):
         lines.append("- [" + tag + "](TOPICS.md#" + tag + ") · " +

@@ -1,35 +1,29 @@
-# 高考数学试卷命名与去重规范
+# 高考数学仓库 · 统一命名规范
 
-2026-10-27 主分支整理：将 **775 份**可确认年份的高考试卷 PDF 统一改名并按年份存入 `papers/YYYY/`；另外移除 **91 份** SHA 完全相同且有保留副本的 PDF。**2 份**目录年份与文件名不一致，暂不更名，见 [核验清单](naming_review.csv)。
+## 1. 历年真题
 
-统一文件名：`gaokao-YYYY-<地区或卷别>-<general|liberal|science>[-spring]-paper.pdf`。旧课程、延期考试、初试等特殊差异尽量在中段明确体现；所有适用省份和原始文件名仍由映射保留。
+路径：`papers/<年代>/gaokao-YYYY-<卷别>-<general|liberal|science>[-spring]-paper.pdf`。
 
-[原始路径 → 当前路径、原始 SHA 映射](normalized_files.csv)。内容完全相同不等于所有同名或相似题目都相同；未经人工核验的不同试题和图片没有删除。部分 PDF-only 来源没有 TeX，不能伪造其源文件配对。
+例：`papers/2020s/gaokao-2024-new-gaokao-1-general-paper.pdf`。
 
-11 个原始上游的完整文件、目录和 SHA 保留在 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)，不对其执行删除或重命名。原始多文件 LaTeX 工程和插图依赖暂留原路径，避免破坏编译。
+- **每份真题保留独立 PDF**；文件名自带年份，不再为每一年单独创建文件夹。
+- 共 **775 份**，分别位于 **1950s、1960s、1970s、1980s、1990s、2000s、2010s、2020s** 八个目录。
+- 仅以 Git Blob SHA 完全一致识别文件级重复；同一年份、同名或内容相似，不足以证明卷别和题目一致。
+- 少数元信息与文件名年份有冲突，详见 [待核对清单](naming_review.csv)，不得猜测更名。
+- 未核实同源的 PDF 与 TeX 不能假设为直接编译配对。
 
-## 已整理的配套编译文件（第二批）
+## 2. 非历年真题资料
 
-- 导数专题 **6 组 TeX/PDF（12 个文件）**，统一命名为 `topics/calculus/topic-calculus-<unit>-<guide|test>.{tex,pdf}`。
-- 合并去除与上述专题 TeX 内容完全一致的重复副本 **6 份**。
-- 已审核单题解答 **13 个 TeX** 改名为 `derivative/reviewed/gaokao-YYYY-<卷别及题号>-solution.tex`。配套 PDF 只能在实际编译成功后发布，不能虚构成品。
-- 保留独立多文件上游工程的相对 `\\input` / 图片依赖，暂不贸然将它们拆开合并。
+`topics/<分类>/topic-<分类>-<主题>-<guide|test>.tex` 与同主名 `.pdf` 成对发布。**143 对**已核对文件对应关系；其中的 2024 新高考Ⅰ卷排版示例留在 `topics/gaokao-typeset/`，插图资源与编译入口同目录。
 
-## 第三批：独立解答 TeX 真正合订
+[专题检索](../topics/INDEX.md) 给出各对 TeX/PDF 链接。未经实际重新编译的资料不标注为新编译通过。
 
-2026-10-27 已将 13 份已经独立审核的 TeX 改为 **1 个真实合订源码**：[`derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex`](../derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex)。合订版保留正文、各题标题、原始 Git Blob SHA 与恢复入口；采用同一主文件名生成 `.pdf`。独立原件仍可从 [合订前快照分支](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-tex-merge-2026-10-27/derivative/reviewed) 恢复。此类 `merge` 映射不声称合并文件 SHA 等于某一独立源码 SHA。
+## 3. 已复核数学解答
 
-## 第四批：非真题独立测试卷的同名配对整理
+`derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex` 是 13 份独立解答的合订源码；只有真实编译产生时才添加同名 PDF。
 
-已把 **52 组测试卷、104 个文件**从镜像的测试卷原目录迁移到规范化 `topics/`，每组 TeX/PDF 主文件名一致，Git Blob SHA 不改变。按用途分为初中测试 6 组、培优 20 组、高中章节 17 组、高考满分突破 9 组。源文件均为独立 `\\documentclass` 文档、未检出外部 `\\input` / `\\includegraphics` 等依赖；完整原件可从 `full-source-archive` 恢复。此前 6 组 `topics/calculus/` 配对不变。
+## 4. 去重、溯源和恢复
 
-## 第五批：独立讲义与原地编译的真题源码
+[原路径→规范路径→原 SHA](normalized_files.csv) 用于机器检查，汇总全部 1,190 条历史映射；[来源合订本](../archive/SOURCE_MARKDOWN.md) 保存旧 Markdown，独立上游原件在 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)。
 
-另将 **2 组独立讲义 TeX/PDF** 放入专题目录（勾股定理、必修二平面向量），现专题共有 **60 组**。对 [2024 新高考Ⅰ卷 LaTeX 工程](../mirror/2024-china-gaokao-math/) 的 `main.tex/main.pdf` 实施**同目录**更名为 `gaokao-2024-new-gaokao-1-general-paper.tex/.pdf`，保留 `.jpg`、嵌入 PDF 及其它样式依赖的相对位置，避免破坏源工程。原件可在完整快照分支恢复。
-
-
-## 第六批：完整精简与中文命名合并
-
-保留此前已有的 60 对中文命名 TeX/PDF，本次增加 **82 对**独立讲义和练习，统一 `topics/<分类>/topic-<分类>-<中文主题>-guide.{tex,pdf}`。另将 2024 新高考Ⅰ卷原排版工程 TeX、PDF 及 4 件图片/嵌入资源一起移到 `topics/gaokao-typeset/`，不破坏相对图片路径。专题总数 **143 对**。
-
-原 `mirror/` 不再重复堆放在 main；全部原始文件在 `full-source-archive`。映射 CSV 的旧路径与 Git Blob SHA 始终可追踪。高考真题 `papers/` 仍有 775 份，PDF-only 不擅自配对 TeX。
+曾经分散在多个历史时期的重复统计与索引保留在 Git 历史及 [历史合订说明](../index/HISTORICAL_PERIOD_INDEXES.md)。不擅自删除不同数学变式、依赖图形或尚未审核的来源。
