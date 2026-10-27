@@ -52,7 +52,7 @@ def normalize(raw, ext):
         mark = r"\begin{document}"
         if mark in s:
             s = s.split(mark,1)[1].split(r"\end{document}",1)[0]
-        s = re.sub(r"(?m)^\s*%[^\n]*$", "", s)
+        s = re.sub(r"(?m)^[ \t]*%[^\n]*$", "", s)
         s = re.sub(r"\\(?:left|right|displaystyle|textstyle|quad|qquad)\b","",s)
     return re.sub(r"\s+","",unicodedata.normalize("NFKC",s).casefold())
 
