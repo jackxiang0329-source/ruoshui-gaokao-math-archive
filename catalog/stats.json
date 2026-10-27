@@ -5,7 +5,10 @@
   "exact_duplicate_copies": 198,
   "exact_duplicate_groups": 189,
   "canonical_documents": 2271,
-  "year_pages": 64,
-  "topic_pages": 7,
+  "year_sections": 64,
+  "period_volumes": 8,
+  "topic_sections": 7,
+  "topic_volumes": 1,
+  "removed_generated_markdown_pages": 71,
   "merge_rule": "Exact Git blobs folded in navigation only; raw mirrors untouched"
 }
