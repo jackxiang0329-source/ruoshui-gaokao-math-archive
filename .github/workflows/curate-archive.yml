@@ -35,6 +35,8 @@ jobs:
           sparse-checkout-cone-mode: true
       - name: Run no-loss regression tests
         run: python3 -m unittest discover -s tests -p 'test_curate_archive.py'
+      - name: Fetch full pinned source tree metadata
+        run: git -c protocol.version=2 fetch --no-tags --depth=1 --filter=blob:none origin refs/heads/full-source-archive:refs/remotes/origin/full-source-archive
       - name: Create organized deduplicated index
         run: python3 scripts/build_catalog_fast.py
       - name: Commit generated catalog
