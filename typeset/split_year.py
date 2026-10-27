@@ -31,11 +31,21 @@ for n,ch,i,j in zip(names,chapters,bounds,bounds[1:]):
     writer.add_metadata({"/Title":str(ch.title)})
     with pdf.open("wb") as out:writer.write(out)
     if len(PdfReader(str(pdf)).pages)!=j-i: raise ValueError("PDF page loss")
-    (dest/(name+".tex")).write_text(wrapper.replace(original,r"\input{content/"+a.year+"/"+n+"}"),encoding="utf-8")
+    original_body=(root/"content"/a.year/n).read_text(encoding="utf-8")
+    chinese=sum("\u3400"<=c<="\u9fff" for c in original_body)
+    if chinese<40 or r"\begin{problem}" not in original_body:
+        raise ValueError("Source contains insufficient Chinese question text: "+n)
+    full_tex=wrapper.replace(original,
+      "\n% 原题完整中文正文（附图与 styles.tex 请使用该年度完整源码包）。\n"+
+      original_body+"\n% END CHINESE ORIGINAL CONTENT\n")
+    if original in full_tex or original_body not in full_tex:
+        raise ValueError("Failed to embed Chinese source: "+n)
+    (dest/(name+".tex")).write_text(full_tex,encoding="utf-8")
     rows.append({"source":"content/"+a.year+"/"+n,"title":str(ch.title),
         "pdf":pdf.as_posix().split("project/",1)[-1],
         "pages":j-i,"annual_page_range":[i+1,j],
-        "published_original_pdf_match":"pending"})
+        "published_original_pdf_match":"pending","chinese_source_chars":chinese,
+        "full_chinese_tex_embedded":True})
 meta=Path(a.report)
 record=json.loads(meta.read_text(encoding="utf-8"))
 record.update({"individual_papers":len(rows),"all_annual_pages_accounted_for":True,"papers":rows})

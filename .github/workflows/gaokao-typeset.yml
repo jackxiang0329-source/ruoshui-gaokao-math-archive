@@ -106,6 +106,20 @@ jobs:
             --entry project/typeset/tex/ruoshui-gaokao-${{ steps.pick.outputs.year }}.tex \
             --dest project/typeset/papers/${{ steps.pick.outputs.year }} \
             --report project/typeset/reports/${{ steps.pick.outputs.year }}.json
+      - name: Verify Chinese body in every published TeX and PDF
+        if: steps.pick.outputs.year != ''
+        run: |
+          python3 project/typeset/validate_chinese.py \
+            --project project \
+            --report project/typeset/reports/${{ steps.pick.outputs.year }}.json
+      - name: Package fully compilable Chinese source and original figures
+        if: steps.pick.outputs.year != ''
+        run: |
+          python3 project/typeset/make_source_bundle.py \
+            --root source/mirror/gaokao-math-problems-compilation \
+            --year "${{ steps.pick.outputs.year }}" \
+            --papers project/typeset/papers/${{ steps.pick.outputs.year }} \
+            --out project/typeset/source-bundles/ruoshui-gaokao-${{ steps.pick.outputs.year }}-source.zip
       - uses: actions/upload-artifact@v4
         if: steps.pick.outputs.year != ''
         with:
@@ -115,6 +129,7 @@ jobs:
             project/typeset/tex/ruoshui-gaokao-${{ steps.pick.outputs.year }}.tex
             project/typeset/reports/${{ steps.pick.outputs.year }}.json
             project/typeset/papers/${{ steps.pick.outputs.year }}/
+            project/typeset/source-bundles/ruoshui-gaokao-${{ steps.pick.outputs.year }}-source.zip
           if-no-files-found: error
       - name: Keep original PDFs; publish separately
         if: steps.pick.outputs.year != ''
