@@ -101,14 +101,14 @@ def main():
         for item in group:
             if item["path"] != first["path"]:
                 aliases.append({"original_path": item["path"],
-                                "canonical_path": first["path"],
+                                "canonical_path": PUBLISHED_PATHS.get(first["path"], first["path"]),
                                 "reason": "identical_git_blob",
                                 "blob_sha": sha, "source": item["source"]})
     documents = sorted((r for r in canonical.values() if is_document(r)),
                        key=lambda r: (r["year"] or "9999", r["source"], r["path"]))
     doc_rows = [{"year": r["year"], "source": r["source"],
-                 "format": r["ext"], "title": Path(r["path"]).stem,
-                 "canonical_path": r["path"], "sha": r["sha"],
+                 "format": r["ext"], "title": Path(PUBLISHED_PATHS.get(r["path"], r["path"])).stem,
+                 "canonical_path": PUBLISHED_PATHS.get(r["path"], r["path"]), "sha": r["sha"],
                  "topic_hints": ";".join(topics(r["path"])),
                  "review_status": "unreviewed",
                  "source_url": source_link(r, 1)} for r in documents]
@@ -135,7 +135,7 @@ def main():
     for year, group in sorted(years.items()):
         text.extend([f"## {year} 年数学资料", ""])
         for row in sorted(group, key=lambda r: (r["source"], r["path"])):
-            text.append("- [" + Path(row["path"]).name + "](" +
+            text.append("- [" + Path(PUBLISHED_PATHS.get(row["path"], row["path"])).name + "](" +
                         source_link(row, 1) + ") · " + row["source"])
         text.append("")
         redirects.append({"old_path": f"catalog/years/{year}.md",
@@ -164,7 +164,7 @@ def main():
     for tag, group in sorted(topics_map.items()):
         consolidated_topics.extend([f"## {tag}", ""])
         for row in sorted(group, key=lambda r: (r["year"], r["path"])):
-            consolidated_topics.append("- [" + Path(row["path"]).name + "](" +
+            consolidated_topics.append("- [" + Path(PUBLISHED_PATHS.get(row["path"], row["path"])).name + "](" +
                                        source_link(row, 1) + ") · " +
                                        (row["year"] or "未知年份") + " · " + row["source"])
         consolidated_topics.append("")
@@ -196,6 +196,7 @@ def main():
     (DEST / "stats.json").write_text(
         json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     lines = ["# 高考数学 · 统一去重目录", "",
+             "[命名与去重规范](NAMING.md) · [归档原路径 SHA](normalized_files.csv) · [需要人工核对的 2 份年份异常 PDF](naming_review.csv)", "",
              "**推荐从这里查找试卷和题目。** 全量原始文件位于 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)；上游 Markdown 在主分支合并为 [源文合订本](../archive/SOURCE_MARKDOWN.md)。", "",
              f"- 来源仓库：**{len(valid)}**",
              f"- 原始文件：**{len(rows):,}**",

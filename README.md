@@ -7,8 +7,9 @@
 | 入口 | 用途 |
 |---|---|
 | [统一命名的历年真题 PDF](papers/) | 775 份按年份、卷别、科类归档 |
-| [编译文件命名与去重记录](catalog/NAMING.md) | 897 条路径/SHA 映射、2 份年份异常待核验 |
+| [编译文件命名与去重记录](catalog/NAMING.md) | 910 条路径/SHA 映射、2 份年份异常待核验 |
 | [导数专题配套 TeX/PDF](topics/calculus/) | 6 组源码和 PDF 主文件名统一 |
+| [13 份复核证明 TeX 合订](derivative/reviewed/README.md) | 1 份可编译 TeX，PDF 与源码同名发布 |
 | [按年份统一检索](catalog/YEAR_INDEX.md) | 全部 64 个年份合订为 1 份文档，按原始文件 SHA 去重 |
 | [按专题检索](catalog/TOPICS.md) | 原来的 7 个专题文件合订为 1 份 |
 | [题目级去重审核](catalog/QUESTION_DEDUP.md) | 6 组确认同题、1 组不同变式、14 组仍待核验 |

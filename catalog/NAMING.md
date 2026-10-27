@@ -14,3 +14,7 @@
 - 合并去除与上述专题 TeX 内容完全一致的重复副本 **6 份**。
 - 已审核单题解答 **13 个 TeX** 改名为 `derivative/reviewed/gaokao-YYYY-<卷别及题号>-solution.tex`。配套 PDF 只能在实际编译成功后发布，不能虚构成品。
 - 保留独立多文件上游工程的相对 `\\input` / 图片依赖，暂不贸然将它们拆开合并。
+
+## 第三批：独立解答 TeX 真正合订
+
+2026-10-27 已将 13 份已经独立审核的 TeX 改为 **1 个真实合订源码**：[`derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex`](../derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex)。合订版保留正文、各题标题、原始 Git Blob SHA 与恢复入口；采用同一主文件名生成 `.pdf`。独立原件仍可从 [合订前快照分支](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-tex-merge-2026-10-27/derivative/reviewed) 恢复。此类 `merge` 映射不声称合并文件 SHA 等于某一独立源码 SHA。
