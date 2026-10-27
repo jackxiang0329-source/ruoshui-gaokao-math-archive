@@ -13,9 +13,9 @@ MASTER = "derivative/reviewed/gaokao-2010-2025-calculus-reviewed-solutions.tex"
 def main():
     result = subprocess.check_output(["git", "-C", str(ROOT), "ls-tree", "-r", "-z", "HEAD"])
     blobs = {}
-    for entry in result.split(b"\\0"):
+    for entry in result.split(b"\0"):
         if not entry: continue
-        metadata, path = entry.split(b"\\t", 1)
+        metadata, path = entry.split(b"\t", 1)
         fields = metadata.decode("ascii").split()
         if fields[1] == "blob":
             blobs[path.decode("utf-8", "surrogateescape")] = fields[2]
