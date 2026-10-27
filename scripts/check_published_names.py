@@ -18,6 +18,7 @@ def main():
         metadata, path = ln.split("\t", 1)
         if metadata.split()[1] == "blob":
             blobs[path] = metadata.split()[2]
+    assert not any(p.startswith("mirror/") for p in blobs)
     merged_text = (ROOT / MASTER).read_text(encoding="utf-8")
     with (ROOT / "catalog" / "normalized_files.csv").open(encoding="utf-8-sig", newline="") as fh:
         mapping = list(csv.DictReader(fh))
@@ -36,13 +37,13 @@ def main():
     papers = [p for p in blobs if p.startswith("papers/")]
     assert len(papers) == 775 and all(PDF.fullmatch(p) for p in papers)
     topic_files = [p for p in blobs if p.startswith("topics/") and p.endswith((".tex",".pdf"))]
-    assert len(topic_files) == 120
+    assert len(topic_files) == 286
     for p in topic_files:
         assert TOPIC.fullmatch(p)
         assert (p[:-4] + (".pdf" if p.endswith(".tex") else ".tex")) in blobs
     assert [p for p in blobs if p.startswith("derivative/reviewed/") and p.endswith(".tex")] == [MASTER]
     assert merged_text.count("% SOURCE_ENTRY path=") == 13
-    print("PASS:",len(mapping),"provenance entries;",len(papers),"exam PDFs; 60 TeX/PDF topic pairs; 13 proof sections")
+    print("PASS:",len(mapping),"provenance entries;",len(papers),"exam PDFs; 143 TeX/PDF topic pairs; 13 proof sections")
 
 if __name__ == "__main__":
     main()
