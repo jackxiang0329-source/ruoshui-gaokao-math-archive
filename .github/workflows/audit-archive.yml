@@ -19,10 +19,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Check out metadata (no large submodules)
+      - name: Check out metadata only (avoid upstream symlinks)
         uses: actions/checkout@v4
         with:
+          fetch-depth: 1
           submodules: false
+          sparse-checkout: |
+            .github
+            scripts
+            tests
+            index
+            metadata
+            derivative
+            sources.json
+            .gitmodules
+          sparse-checkout-cone-mode: true
       - name: Confirm all Git links match pinned revisions
         run: python3 scripts/validate_pinned_sources.py --index-only
       - name: Run isolated tests
