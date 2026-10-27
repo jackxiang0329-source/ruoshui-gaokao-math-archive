@@ -82,9 +82,15 @@ jobs:
           pdftotext "$pdf" "$RUNNER_TEMP/typeset.txt"
           test -s "$RUNNER_TEMP/typeset.txt"
           log="$root/__ruoshui_${{ steps.pick.outputs.year }}.log"
-          if test -f "$log" && grep -q 'Missing character:' "$log"; then
-            echo "Missing glyphs - reject PDF" >&2
-            exit 1
+          if test -f "$log"; then
+            # TikZ/PGF layout probing can emit a harmless ';' in nullfont.
+            # Reject only glyphs missing from real output fonts.
+            grep 'Missing character:' "$log" | grep -Fv 'in font nullfont!' > "$RUNNER_TEMP/real-missing-glyphs.txt" || true
+            if test -s "$RUNNER_TEMP/real-missing-glyphs.txt"; then
+              echo "Real output glyphs missing - reject PDF" >&2
+              cat "$RUNNER_TEMP/real-missing-glyphs.txt" >&2
+              exit 1
+            fi
           fi
           mkdir -p project/typeset/annual project/typeset/tex
           cp "$pdf" project/typeset/annual/ruoshui-gaokao-${{ steps.pick.outputs.year }}.pdf
