@@ -36,7 +36,9 @@ def main():
     assert merged == 26, "Expected legacy and normalized proof provenance entries"
     papers = [p for p in blobs if p.startswith("papers/")]
     assert len(papers) == 775 and all(PDF.fullmatch(p) for p in papers)
-    topic_files = [p for p in blobs if p.startswith("topics/") and p.endswith((".tex",".pdf"))]
+    topic_files = [p for p in blobs if p.startswith("topics/") and Path(p).name.startswith("topic-") and p.endswith((".tex",".pdf"))]
+    assets = [p for p in blobs if p.startswith("topics/gaokao-typeset/20240608-")]
+    assert len(assets) == 4, "2024 typeset figures and embedded PDFs must remain together"
     assert len(topic_files) == 286
     for p in topic_files:
         assert TOPIC.fullmatch(p)
