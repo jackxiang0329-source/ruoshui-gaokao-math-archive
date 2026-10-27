@@ -9,3 +9,7 @@
 - `python3 scripts/verify_source_snapshot.py`：严格核对固定来源的原始 Git Tree SHA。
 
 GitHub Actions 每 30 分钟检查固定快照与索引，实际编译与数学内容核验是不同流程。历史全量导入/子模块脚本仍保留以便需要时使用，但不能把它们产生的历史状态当作当前主分支状态。
+
+## 主分支瘦身约定
+
+早期导入/候选的 `index/files.csv`、`index/gaokao-candidates.csv`、`index/derivative-candidates.csv`、`index/INDEX.md` 和 `index/stats.json` 已在 [整理前快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/index) 保留。旧版手工子模块同步可以临时生成这些清单用于本地核验，但不会自动提交回 `main`。当前检索请用 `catalog/documents.csv` 和统一题目级 JSON/CSV。

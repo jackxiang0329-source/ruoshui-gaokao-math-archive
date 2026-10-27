@@ -36,7 +36,8 @@ python3 scripts/scan_derivative_questions.py
 python3 scripts/validate.py
 python3 scripts/validate_question_index.py
 python3 scripts/validate_review_traceability.py
-git add .gitmodules upstream index
+# Legacy filename inventories are for local auditing only; do not republish them.
+git add .gitmodules upstream
 if ! git diff --cached --quiet; then
     git commit -m "chore: synchronize upstream references and refresh indexes [skip ci]"
 else

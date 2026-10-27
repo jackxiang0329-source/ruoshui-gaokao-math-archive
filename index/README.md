@@ -1,9 +1,10 @@
-# 题目数据索引
+# 导数逐题索引与审核数据
 
-**现行题目级数据：** [2010—2026 JSON](derivative-problems-2010-2026.json) · [CSV](derivative-problems-2010-2026.csv) · [人类可读检索](DERIVATIVE_PROBLEMS_2010_2026.md)。
+用于检索当前已整理的 **2010—2026 年来源记录**；历史分期表、旧候选列表不再重复出现在 `main` 中。
 
-旧的 `2010-2014`、`2015-2019`、`2020-2026` 分段 JSON/CSV 和 `2020-2022` CSV 全部是现行总表子集，因此不再重复发布。需要分段结果时，直接按 `year` 列筛选总表；独立旧件可从 Git 历史恢复。
+- [逐题阅读目录](DERIVATIVE_PROBLEMS_2010_2026.md)
+- [统一 JSON（程序调用）](derivative-problems-2010-2026.json) · [统一 CSV（筛选、组卷）](derivative-problems-2010-2026.csv)
+- [重复题审核说明](DUPLICATE_AUDIT.md) · [重复组结构化数据](duplicate-audit.json)
+- [数学审核证明与溯源](../metadata/review-provenance.json)
 
-早期 **2023—2026** 两份数据有历史版本差异，因此仍保留做溯源对比，**不能当作现行数学审核状态**。
-
-[历史分期 Markdown 合订](HISTORICAL_PERIOD_INDEXES.md) · [重复题人工复核](DUPLICATE_AUDIT.md) · [上游文件名候选](INDEX.md)。
+按 `year` 字段筛选即可得到分年题目，不再维护内容交叉重叠的分期副本。旧数据、早期候选表及历史统计完整留在 [整理前快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/index)，其状态不能视作最新审核结论。

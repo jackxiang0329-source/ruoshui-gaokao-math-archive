@@ -196,12 +196,12 @@ def main():
              "topic_sections": len(topics_map), "topic_volumes": 1,
              "removed_generated_markdown_pages": len(years) + len(topics_map),
              "source_branch": "full-source-archive",
-             "merge_rule": "Exact source trees are preserved on full-source-archive, while main source MD is consolidated"}
+             "merge_rule": "Exact source trees are preserved on full-source-archive; historical merged Markdown lives on snapshot-before-lean-metadata-20261027"}
     (DEST / "stats.json").write_text(
         json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     lines = ["# 高考数学 · 统一去重目录", "",
              "[命名与去重规范](NAMING.md) · [归档原路径 SHA](normalized_files.csv) · [需要人工核对的 2 份年份异常 PDF](naming_review.csv)", "",
-             "**推荐从这里查找试卷和题目。** 全量原始文件位于 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)；上游 Markdown 在主分支合并为 [源文合订本](../archive/SOURCE_MARKDOWN.md)。", "",
+             "**推荐从这里查找试卷和题目。** 全量原始文件位于 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)；旧版上游 Markdown 合订本在 [整理前快照](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/snapshot-before-lean-metadata-20261027/archive/SOURCE_MARKDOWN.md)。", "",
              f"- 来源仓库：**{len(valid)}**",
              f"- 原始文件：**{len(rows):,}**",
              f"- 不同文件内容：**{len(duplicates):,}**",
