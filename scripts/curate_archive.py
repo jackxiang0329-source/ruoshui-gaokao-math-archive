@@ -53,6 +53,25 @@ def read_blobs_batch(oids, batch_size=64):
             yield expected_sha, content
 
 
+def batch_blob_sizes(oids):
+    """Ask Git for sizes only for documents and repeated blobs, not all assets."""
+    if not oids:
+        return {}
+    cmd = ["git", "-C", str(ROOT), "cat-file",
+           "--batch-check=%(objectname) %(objecttype) %(objectsize)"]
+    data = ("\n".join(oids) + "\n").encode("ascii")
+    result = subprocess.run(cmd, input=data, capture_output=True, check=True)
+    sizes = {}
+    for line in result.stdout.decode("ascii").splitlines():
+        fields = line.split()
+        if len(fields) != 3 or fields[1] != "blob":
+            raise RuntimeError("Unexpected blob size metadata: " + line)
+        sizes[fields[0]] = int(fields[2])
+    if set(sizes) != set(oids):
+        raise RuntimeError("Git object size list does not match requested blobs")
+    return sizes
+
+
 def year_of(path):
     found = YEAR.search(path)
     return found.group(1) if found else ""
@@ -100,16 +119,16 @@ def dump_csv(path, fields, data):
         writer.writerows(data)
 
 def inventory(ref):
-    raw=git("ls-tree","-l","-r","-z",ref,"--","mirror/")
+    raw=git("ls-tree","-r","-z",ref,"--","mirror/")
     items=[]
     for entry in raw.split(b"\0"):
         if not entry: continue
         meta,name=entry.split(b"\t",1)
-        mode,typ,sha,size=meta.decode("ascii").split()
+        mode,typ,sha=meta.decode("ascii").split()
         path=name.decode("utf-8","surrogateescape")
         if typ!="blob" or len(path.split("/"))<3: continue
         ext=Path(path).suffix.lower()
-        items.append({"path":path,"sha":sha,"mode":mode,"size":int(size),
+        items.append({"path":path,"sha":sha,"mode":mode,"size":0,
                       "ext":ext,"source":path.split("/")[1],"year":year_of(path),
                       "kind":kind_of(path,ext)})
     return sorted(items,key=lambda x:x["path"])
@@ -123,6 +142,12 @@ def curate(ref,output,limit=1200):
         raise RuntimeError("Invalid source paths")
     groups=defaultdict(list)
     for r in items: groups[r["sha"]].append(r)
+    needed = [oid for oid, group in groups.items()
+              if len(group) > 1 or any(r["kind"] == "document" for r in group)]
+    print(f"Reading blob metadata for {len(needed)} relevant objects (of {len(groups)}).", flush=True)
+    sizes = batch_blob_sizes(needed)
+    for r in items:
+        r["size"] = sizes.get(r["sha"], 0)
     representatives={sha:min(g,key=lambda r:(r["kind"]!="document",len(r["path"]),r["path"]))
                      for sha,g in groups.items()}
     docs=[r for r in representatives.values() if r["kind"]=="document"]
