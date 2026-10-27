@@ -1,6 +1,6 @@
 # 高考数学 · 统一去重目录
 
-**推荐从这里查找试卷和题目。** 原始文件保持在 mirror/，此目录仅为去重导航。
+**推荐从这里查找试卷和题目。** 全量原始文件位于 [full-source-archive](https://github.com/jackxiang0329-source/ruoshui-gaokao-math-archive/tree/full-source-archive)；上游 Markdown 在主分支合并为 [源文合订本](../archive/SOURCE_MARKDOWN.md)。
 
 - 来源仓库：**11**
 - 原始文件：**7,222**

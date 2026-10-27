@@ -10,5 +10,6 @@
   "topic_sections": 7,
   "topic_volumes": 1,
   "removed_generated_markdown_pages": 71,
-  "merge_rule": "Exact Git blobs folded in navigation only; raw mirrors untouched"
+  "source_branch": "full-source-archive",
+  "merge_rule": "Exact source trees are preserved on full-source-archive, while main source MD is consolidated"
 }
