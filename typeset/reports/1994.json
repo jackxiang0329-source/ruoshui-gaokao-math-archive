@@ -1,0 +1,151 @@
+{
+  "year": "1994",
+  "source_papers": 7,
+  "question_environments": 178,
+  "figures_present": true,
+  "visual_review": "pending",
+  "mathematics_review": "not_certified",
+  "pdf_pages": 21,
+  "compiled": true,
+  "pdf_QA": "passed",
+  "individual_papers": 7,
+  "all_annual_pages_accounted_for": true,
+  "papers": [
+    {
+      "source": "content/1994/national_science.tex",
+      "title": "1994年新科目组卷（理）",
+      "pdf": "typeset/papers/1994/ruoshui-gaokao-1994-national_science.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        1,
+        3
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2005,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1994/national_liberal.tex",
+      "title": "1994年新科目组卷（文）",
+      "pdf": "typeset/papers/1994/ruoshui-gaokao-1994-national_liberal.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        4,
+        6
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1731,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1994/old_subject_science.tex",
+      "title": "1994年旧科目组卷（理）",
+      "pdf": "typeset/papers/1994/ruoshui-gaokao-1994-old_subject_science.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        7,
+        9
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2039,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1994/old_subject_liberal.tex",
+      "title": "1994年旧科目组卷（文）",
+      "pdf": "typeset/papers/1994/ruoshui-gaokao-1994-old_subject_liberal.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        10,
+        12
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1665,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1994/shanghai_science.tex",
+      "title": "1994年上海卷（理）",
+      "pdf": "typeset/papers/1994/ruoshui-gaokao-1994-shanghai_science.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        13,
+        15
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2430,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1994/shanghai_liberal.tex",
+      "title": "1994年上海卷（文）",
+      "pdf": "typeset/papers/1994/ruoshui-gaokao-1994-shanghai_liberal.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        16,
+        18
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2364,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1994/shanghai.tex",
+      "title": "1994年上海卷",
+      "pdf": "typeset/papers/1994/ruoshui-gaokao-1994-shanghai.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        19,
+        21
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2525,
+      "full_chinese_tex_embedded": true
+    }
+  ],
+  "chinese_text_QA": "passed",
+  "chinese_quality_checks": [
+    {
+      "source": "content/1994/national_science.tex",
+      "pdf_chinese_chars": 709,
+      "tex_chinese_chars": 2041,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1994/national_liberal.tex",
+      "pdf_chinese_chars": 662,
+      "tex_chinese_chars": 1767,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1994/old_subject_science.tex",
+      "pdf_chinese_chars": 678,
+      "tex_chinese_chars": 2075,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1994/old_subject_liberal.tex",
+      "pdf_chinese_chars": 624,
+      "tex_chinese_chars": 1701,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1994/shanghai_science.tex",
+      "pdf_chinese_chars": 810,
+      "tex_chinese_chars": 2466,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1994/shanghai_liberal.tex",
+      "pdf_chinese_chars": 786,
+      "tex_chinese_chars": 2400,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1994/shanghai.tex",
+      "pdf_chinese_chars": 827,
+      "tex_chinese_chars": 2561,
+      "embedded_cjk_font": true
+    }
+  ]
+}
