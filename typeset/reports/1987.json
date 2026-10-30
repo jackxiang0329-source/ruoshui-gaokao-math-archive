@@ -1,0 +1,113 @@
+{
+  "year": "1987",
+  "source_papers": 5,
+  "question_environments": 142,
+  "figures_present": true,
+  "visual_review": "pending",
+  "mathematics_review": "not_certified",
+  "pdf_pages": 14,
+  "compiled": true,
+  "pdf_QA": "passed",
+  "individual_papers": 5,
+  "all_annual_pages_accounted_for": true,
+  "papers": [
+    {
+      "source": "content/1987/national_science.tex",
+      "title": "1987年全国卷（理）",
+      "pdf": "typeset/papers/1987/ruoshui-gaokao-1987-national_science.pdf",
+      "pages": 2,
+      "annual_page_range": [
+        1,
+        2
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1990,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1987/national_liberal.tex",
+      "title": "1987年全国卷（文）",
+      "pdf": "typeset/papers/1987/ruoshui-gaokao-1987-national_liberal.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        3,
+        5
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2088,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1987/shanghai.tex",
+      "title": "1987年上海卷",
+      "pdf": "typeset/papers/1987/ruoshui-gaokao-1987-shanghai.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        6,
+        8
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2779,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1987/guangdong_science.tex",
+      "title": "1987年广东卷（理）",
+      "pdf": "typeset/papers/1987/ruoshui-gaokao-1987-guangdong_science.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        9,
+        11
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 3286,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1987/guangdong_liberal.tex",
+      "title": "1987年广东卷（文）",
+      "pdf": "typeset/papers/1987/ruoshui-gaokao-1987-guangdong_liberal.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        12,
+        14
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1921,
+      "full_chinese_tex_embedded": true
+    }
+  ],
+  "chinese_text_QA": "passed",
+  "chinese_quality_checks": [
+    {
+      "source": "content/1987/national_science.tex",
+      "pdf_chinese_chars": 509,
+      "tex_chinese_chars": 2026,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1987/national_liberal.tex",
+      "pdf_chinese_chars": 511,
+      "tex_chinese_chars": 2124,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1987/shanghai.tex",
+      "pdf_chinese_chars": 781,
+      "tex_chinese_chars": 2815,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1987/guangdong_science.tex",
+      "pdf_chinese_chars": 841,
+      "tex_chinese_chars": 3322,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1987/guangdong_liberal.tex",
+      "pdf_chinese_chars": 704,
+      "tex_chinese_chars": 1957,
+      "embedded_cjk_font": true
+    }
+  ]
+}
