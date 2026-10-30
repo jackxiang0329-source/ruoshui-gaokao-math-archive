@@ -1,0 +1,132 @@
+{
+  "year": "1986",
+  "source_papers": 6,
+  "question_environments": 194,
+  "figures_present": true,
+  "visual_review": "pending",
+  "mathematics_review": "not_certified",
+  "pdf_pages": 19,
+  "compiled": true,
+  "pdf_QA": "passed",
+  "individual_papers": 6,
+  "all_annual_pages_accounted_for": true,
+  "papers": [
+    {
+      "source": "content/1986/national_science.tex",
+      "title": "1986年全国卷（理）",
+      "pdf": "typeset/papers/1986/ruoshui-gaokao-1986-national_science.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        1,
+        3
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1977,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1986/national_liberal.tex",
+      "title": "1986年全国卷（文）",
+      "pdf": "typeset/papers/1986/ruoshui-gaokao-1986-national_liberal.pdf",
+      "pages": 2,
+      "annual_page_range": [
+        4,
+        5
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1772,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1986/shanghai_science.tex",
+      "title": "1986年上海卷（理）",
+      "pdf": "typeset/papers/1986/ruoshui-gaokao-1986-shanghai_science.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        6,
+        8
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2541,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1986/shanghai_liberal.tex",
+      "title": "1986年上海卷（文）",
+      "pdf": "typeset/papers/1986/ruoshui-gaokao-1986-shanghai_liberal.pdf",
+      "pages": 3,
+      "annual_page_range": [
+        9,
+        11
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2411,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1986/guangdong_science.tex",
+      "title": "1986年广东卷（理）",
+      "pdf": "typeset/papers/1986/ruoshui-gaokao-1986-guangdong_science.pdf",
+      "pages": 4,
+      "annual_page_range": [
+        12,
+        15
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 3500,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1986/guangdong_liberal.tex",
+      "title": "1986年广东卷（文）",
+      "pdf": "typeset/papers/1986/ruoshui-gaokao-1986-guangdong_liberal.pdf",
+      "pages": 4,
+      "annual_page_range": [
+        16,
+        19
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 2853,
+      "full_chinese_tex_embedded": true
+    }
+  ],
+  "chinese_text_QA": "passed",
+  "chinese_quality_checks": [
+    {
+      "source": "content/1986/national_science.tex",
+      "pdf_chinese_chars": 675,
+      "tex_chinese_chars": 2013,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1986/national_liberal.tex",
+      "pdf_chinese_chars": 480,
+      "tex_chinese_chars": 1808,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1986/shanghai_science.tex",
+      "pdf_chinese_chars": 840,
+      "tex_chinese_chars": 2577,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1986/shanghai_liberal.tex",
+      "pdf_chinese_chars": 759,
+      "tex_chinese_chars": 2447,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1986/guangdong_science.tex",
+      "pdf_chinese_chars": 1188,
+      "tex_chinese_chars": 3536,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1986/guangdong_liberal.tex",
+      "pdf_chinese_chars": 851,
+      "tex_chinese_chars": 2889,
+      "embedded_cjk_font": true
+    }
+  ]
+}
