@@ -1,0 +1,56 @@
+{
+  "year": "1979",
+  "source_papers": 2,
+  "question_environments": 18,
+  "figures_present": true,
+  "visual_review": "pending",
+  "mathematics_review": "not_certified",
+  "pdf_pages": 2,
+  "compiled": true,
+  "pdf_QA": "passed",
+  "individual_papers": 2,
+  "all_annual_pages_accounted_for": true,
+  "papers": [
+    {
+      "source": "content/1979/national_science.tex",
+      "title": "1979年全国卷（理）",
+      "pdf": "typeset/papers/1979/ruoshui-gaokao-1979-national_science.pdf",
+      "pages": 1,
+      "annual_page_range": [
+        1,
+        1
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1638,
+      "full_chinese_tex_embedded": true
+    },
+    {
+      "source": "content/1979/national_liberal.tex",
+      "title": "1979年全国卷（文）",
+      "pdf": "typeset/papers/1979/ruoshui-gaokao-1979-national_liberal.pdf",
+      "pages": 1,
+      "annual_page_range": [
+        2,
+        2
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 1235,
+      "full_chinese_tex_embedded": true
+    }
+  ],
+  "chinese_text_QA": "passed",
+  "chinese_quality_checks": [
+    {
+      "source": "content/1979/national_science.tex",
+      "pdf_chinese_chars": 360,
+      "tex_chinese_chars": 1674,
+      "embedded_cjk_font": true
+    },
+    {
+      "source": "content/1979/national_liberal.tex",
+      "pdf_chinese_chars": 300,
+      "tex_chinese_chars": 1271,
+      "embedded_cjk_font": true
+    }
+  ]
+}
