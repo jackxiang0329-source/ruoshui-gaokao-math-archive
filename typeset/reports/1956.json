@@ -1,0 +1,37 @@
+{
+  "year": "1956",
+  "source_papers": 1,
+  "question_environments": 5,
+  "figures_present": true,
+  "visual_review": "pending",
+  "mathematics_review": "not_certified",
+  "pdf_pages": 1,
+  "compiled": true,
+  "pdf_QA": "passed",
+  "individual_papers": 1,
+  "all_annual_pages_accounted_for": true,
+  "papers": [
+    {
+      "source": "content/1956/national.tex",
+      "title": "1956年全国卷",
+      "pdf": "typeset/papers/1956/ruoshui-gaokao-1956-national.pdf",
+      "pages": 1,
+      "annual_page_range": [
+        1,
+        1
+      ],
+      "published_original_pdf_match": "pending",
+      "chinese_source_chars": 950,
+      "full_chinese_tex_embedded": true
+    }
+  ],
+  "chinese_text_QA": "passed",
+  "chinese_quality_checks": [
+    {
+      "source": "content/1956/national.tex",
+      "pdf_chinese_chars": 218,
+      "tex_chinese_chars": 986,
+      "embedded_cjk_font": true
+    }
+  ]
+}
